@@ -12,7 +12,16 @@ O dono é o João. Ele acompanha cada post pela notificação e pede para parar 
      inválido, bot parado — gerar token novo"). Com problema de token, não tente publicar;
    - rode `gh run list -R Joaobueno02/cbr-bot --limit 5`. Se algum run das últimas 2 h
      falhou (failure), avise o João na primeira rodada em que perceber (uma vez só por falha);
-   - se o Actions não renderizar/publicar em 8 minutos depois do push, trate como falha.
+   - se o Actions não renderizar/publicar em 8 minutos depois do push, trate como falha;
+   - **dados velhos** (os agendamentos do GitHub atrasam ou falham às vezes): se
+     `radar/atual.json` tiver mais de 70 min, rode `gh workflow run radar.yml -R Joaobueno02/cbr-bot`
+     e espere ~2 min (git pull) antes de pesquisar; se `registro/saude.json` tiver mais de 26 h,
+     rode `gh workflow run manutencao.yml -R Joaobueno02/cbr-bot -f tarefa=saude`; sempre rode
+     `gh workflow run alertas.yml -R Joaobueno02/cbr-bot` no início da rodada (garante o aviso de
+     collab aceita mesmo se o agendamento falhar); na rodada das 23h, se `radar/benchmark.json`
+     tiver mais de 3 h, rode `gh workflow run manutencao.yml -R Joaobueno02/cbr-bot -f tarefa=benchmark`
+     e espere ~2 min antes do dossiê. Se o `gh` não funcionar, siga com o que houver e registre
+     no resumo da rodada.
 1. `git pull`. Leia `registro/posts.jsonl` (o que já saiu) e a fila (`fila/*/post.json`).
    Se houver post com `erro_render`, `erro_publicacao` ou parado em `renderizado` de execução
    anterior, resolva ou descarte (status `descartado` + motivo) antes de pautas novas.
