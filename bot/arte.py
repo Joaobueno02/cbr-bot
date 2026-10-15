@@ -205,6 +205,9 @@ def _marca(ed: str, c: dict, escala_cbr: float = 1.0) -> str:
         base = round(101 - (1 - escala_cbr) * 118 * 0.36, 1)
         lockup = re.sub(r'y="101"( font-family="Unbounded, Archivo, sans-serif" font-weight="900") font-size="118"',
                         f'y="{base}"\\1 font-size="{tam}"', lockup)
+    original = EDITORIAS[ed]["destaque"]
+    if c["destaque"] != original:
+        lockup = lockup.replace(original, c["destaque"])
     return ICONE.format(top=c["icone_top"], cor=c["icone"]) + lockup
 
 
@@ -251,7 +254,12 @@ def _foto_educacao(c: dict, foto_uri: str, recorte: bool, posicao: str, alt: str
 def post_unico(post: dict, foto_uri: str, recorte: bool = False) -> str:
     """Arte de post único (1080x1350) no padrão da editoria."""
     ed = post["editoria"]
-    c = EDITORIAS[ed]
+    c = dict(EDITORIAS[ed])
+    cor_nova = post.get("cor_destaque")
+    if cor_nova:
+        c["destaque"] = cor_nova
+        if c.get("icone") == EDITORIAS[ed]["destaque"]:
+            c["icone"] = cor_nova
     esq = c["esquerda"]
     d = c["destaque"]
     posicao = post.get("foto_posicao", "50% 40%")
@@ -264,7 +272,7 @@ def post_unico(post: dict, foto_uri: str, recorte: bool = False) -> str:
     if c["credito"] == "topo" and credito:
         partes.append(f'<p style="margin:0 0 26px;font-family:Archivo,sans-serif;font-weight:700;font-size:17px;letter-spacing:2px;text-transform:uppercase;color:{c["sub"]}">{html.escape(credito)}</p>')
     if post.get("chapeu"):
-        tam = 60 if c is EDITORIAS["economia"] else 66
+        tam = 60 if ed == "economia" else 66
         partes.append(f'<p style="margin:0 0 14px;font-family:Fraunces,Georgia,serif;font-weight:{min(900, int(post.get("peso_titulo", 800)) + 100)};font-size:{tam}px;line-height:1;letter-spacing:-1px;text-transform:uppercase;color:{d}">{html.escape(post["chapeu"])}</p>')
     maxt = int(post.get("titulo_max", TITULO_MAX[ed]))
     peso = int(post.get("peso_titulo", 800))
@@ -279,7 +287,7 @@ def post_unico(post: dict, foto_uri: str, recorte: bool = False) -> str:
              f'bottom:{H - fundo_bloco}px">{"".join(partes)}</div>')
 
     rodape = ""
-    texto_rodape = post.get("rodape") or (credito if c["credito"] == "rodape" else "")
+    texto_rodape = "" if post.get("sem_rodape") else (post.get("rodape") or (credito if c["credito"] == "rodape" else ""))
     if texto_rodape:
         rodape = (f'<p style="position:absolute;z-index:3;left:{esq}px;right:80px;top:{c["barra_y"]+18}px;margin:0;font-family:Archivo,sans-serif;'
                   f'font-weight:700;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:{c["rodape"]}">{html.escape(texto_rodape)}</p>')
