@@ -37,6 +37,8 @@ def enviar(titulo: str, mensagem: str, link: str | None, tags: list[str]) -> boo
     if not topico:
         print("NTFY_TOPIC ausente; alerta não enviado:", titulo)
         return False
+    if link:
+        mensagem = f"{mensagem}\n\n{link}"
     corpo = {"topic": topico, "title": titulo, "message": mensagem, "tags": tags, "priority": 4}
     if link:
         corpo["click"] = link
