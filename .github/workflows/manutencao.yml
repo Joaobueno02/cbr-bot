@@ -5,10 +5,11 @@ on:
     - cron: "40 9 * * *"    # 6h40 (Brasília): saúde do token + limpeza da fila
     - cron: "40 10 * * 1"   # segunda 7h40: relatório semanal
     - cron: "15 6 1 * *"    # dia 1, 3h15: compacta o histórico do repositório
+    - cron: "45 1 * * *"    # 22h45: coleta para o dossiê do dia (páginas de referência + CBR)
   workflow_dispatch:
     inputs:
       tarefa:
-        description: "saude | relatorio | historico"
+        description: "saude | relatorio | historico | benchmark"
         required: true
         default: saude
 
@@ -33,6 +34,7 @@ jobs:
             "40 9 * * *")  echo "tarefa=saude" >> "$GITHUB_OUTPUT" ;;
             "40 10 * * 1") echo "tarefa=relatorio" >> "$GITHUB_OUTPUT" ;;
             "15 6 1 * *")  echo "tarefa=historico" >> "$GITHUB_OUTPUT" ;;
+            "45 1 * * *")  echo "tarefa=benchmark" >> "$GITHUB_OUTPUT" ;;
             *)             echo "tarefa=${{ github.event.inputs.tarefa }}" >> "$GITHUB_OUTPUT" ;;
           esac
 
@@ -51,6 +53,12 @@ jobs:
           python bot/saude.py
           python bot/limpeza.py
 
+      - name: Coleta para o dossiê
+        if: steps.t.outputs.tarefa == 'benchmark'
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: python bot/benchmark.py
+
       - name: Relatório semanal
         if: steps.t.outputs.tarefa == 'relatorio'
         env:
@@ -64,7 +72,7 @@ jobs:
         run: |
           git config user.name "cbr-bot"
           git config user.email "cbr-bot@users.noreply.github.com"
-          git add -A fila registro
+          git add -A fila registro radar dossies
           arquivos=$(git diff --cached --name-only --diff-filter=AM)
           [ -z "$(git diff --cached --name-only)" ] && { echo "nada mudou"; exit 0; }
           [ -n "$arquivos" ] && python bot/checar_vazamento.py $arquivos
