@@ -27,7 +27,18 @@ O dono é o João. Ele acompanha cada post pela notificação e pede para parar 
    post). Ainda não saiu: deixe `aguardando` e confira na próxima rodada; se passar 24 h, marque
    `encerrado`. Ao achar um evento futuro relevante durante a pesquisa, acrescente na lista
    (evento, quando em UTC, editoria, onde_checar, obs). Este arquivo você pode editar.
-2. Pesquise as notícias desde a última execução (seção 2). Escolha **no máximo 2** pautas.
+2. Pesquise as notícias desde a última execução (seção 2). **Comece pelo radar**:
+   - `radar/atual.json` (atualizado às :50 de cada hora): todas as manchetes de ~60 veículos e
+     buscas do Google Notícias nas últimas 26 h, agrupadas por assunto. `temperatura` = quantos
+     veículos diferentes deram o assunto. Leia os 60 primeiros grupos e todo grupo cuja
+     `primeira_vez` caiu na janela desta rodada; assunto quente que a CBR ainda não cobriu é
+     candidato forte. O radar é ponto de partida, não fonte: a apuração (seção 3) continua
+     obrigatória, nas matérias e documentos originais;
+   - `radar/parceiros.json`: o que a BFC e a Luz postaram nas últimas 48 h e com que
+     velocidade de engajamento. Assunto que está rendendo lá e a CBR não cobriu também é
+     candidato (com apuração e arte próprias, nunca cópia);
+   - depois complete com a busca na web, principalmente para fatos das últimas 1–2 h, que
+     podem ainda não estar no radar. Escolha **no máximo 2** pautas.
    Se nada passar no filtro, não publique nada. Volume varia com o que acontece.
 3. Para cada pauta: apure (seção 3), escreva o `post.json` (seção 4) com `status: "renderizar"`,
    commit e push. O GitHub Actions baixa a foto e gera a arte.
