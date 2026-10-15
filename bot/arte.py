@@ -238,7 +238,7 @@ def post_unico(post: dict, foto_uri: str, recorte: bool = False) -> str:
     if post.get("subtitulo"):
         partes.append(f'<p style="margin:26px 0 0;font-family:Archivo,sans-serif;font-size:22px;line-height:1.42;color:{c["sub"]}">{marcar(post["subtitulo"], d, c["texto"])}</p>')
 
-    fundo_bloco = c["barra_y"] - 40
+    fundo_bloco = c["barra_y"] - 40 - int(post.get("bloco_subir", 0))
     limite = 300  # o bloco nunca sobe acima disso
     bloco = (f'<div id="bloco" data-limite="{limite}" style="position:absolute;z-index:3;left:{esq}px;right:50px;'
              f'bottom:{H - fundo_bloco}px">{"".join(partes)}</div>')
