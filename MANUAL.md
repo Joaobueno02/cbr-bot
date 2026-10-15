@@ -40,15 +40,18 @@ O dono é o João. Ele acompanha cada post pela notificação e pede para parar 
    rodada das 11h, o que saiu entre 10h e 11h; na das 7h, desde as 23h da véspera). Filtre o que
    é mais importante ou merece visibilidade **com a lente de uma página socialista** (seção 2) e
    publique ainda nesta rodada. **Comece pelo radar**:
-   - `radar/atual.json` (atualizado às :50 de cada hora): todas as manchetes de ~60 veículos e
-     buscas do Google Notícias nas últimas 26 h, agrupadas por assunto. `temperatura` = quantos
-     veículos diferentes deram o assunto. Leia os 60 primeiros grupos e todo grupo cuja
-     `primeira_vez` caiu na janela desta rodada; assunto quente que a CBR ainda não cobriu é
-     candidato forte. O radar é ponto de partida, não fonte: a apuração (seção 3) continua
-     obrigatória, nas matérias e documentos originais;
-   - `radar/parceiros.json`: o que a BFC e a Luz postaram nas últimas 48 h e com que
-     velocidade de engajamento. Assunto que está rendendo lá e a CBR não cobriu também é
-     candidato (com apuração e arte próprias, nunca cópia);
+   - **`radar/pauta.md` primeiro, lido INTEIRO com a ferramenta Read** (nunca por WebFetch, que
+     resume e perde itens). Atualizado às :20 e :50. Tem três partes: (A) tudo que a BFC e a Luz
+     postaram hoje, cruzado com o radar; (B) assuntos em alta (ganharam veículos nas últimas 3 h,
+     mesmo que tenham começado ontem); (C) novos das últimas 3 h com vagas para Brasil,
+     internacional, pesquisa e universidades. **Todo item de A e B com "na pauta desde" depois da
+     rodada anterior precisa ser avaliado nesta rodada**: publique, ou registre no resumo da
+     rodada por que descartou. A regra da janela vale para o fato novo, mas assunto que estourou
+     agora (B) ou que os parceiros deram hoje (A) entra mesmo que tenha começado antes;
+   - `radar/atual.json` (~150 fontes nacionais, internacionais, institutos e universidades, últimas
+     26 h, agrupado por assunto; `temperatura` = veículos diferentes) é o acervo completo: use
+     para aprofundar um assunto (todos os veículos e links), não para varrer. O radar é ponto de
+     partida, não fonte: a apuração (seção 3) continua obrigatória;
    - depois complete com a busca na web, principalmente para fatos das últimas 1–2 h, que
      podem ainda não estar no radar. Escolha **no máximo 2** pautas.
    Se nada passar no filtro, não publique nada. Volume varia com o que acontece.
