@@ -34,43 +34,60 @@ METRICAS_CBR = ["reach", "views", "total_interactions", "shares", "saved", "like
 
 
 def perfil(user: str) -> dict:
-    r = chamar("GET", CONFIG["ig_user_id"],
-               fields=f"business_discovery.username({user}){{username,followers_count,media_count,media.limit(90){{{CAMPOS}}}}}")
-    bd = r.get("business_discovery", {})
-    seguidores = bd.get("followers_count") or 0
+    # pagina até cobrir 24 h (a API devolve no máximo ~40 por página)
+    midias, cursor, seguidores = [], None, 0
+    for _ in range(5):
+        pag = f".after({cursor})" if cursor else ""
+        r = chamar("GET", CONFIG["ig_user_id"],
+                   fields=f"business_discovery.username({user}){{followers_count,media{pag}.limit(40){{{CAMPOS}}}}}")
+        bd = r.get("business_discovery", {})
+        seguidores = bd.get("followers_count") or seguidores
+        lote = bd.get("media", {}).get("data", [])
+        midias += lote
+        cursor = bd.get("media", {}).get("paging", {}).get("cursors", {}).get("after")
+        if not lote or not cursor:
+            break
+        ultimo = datetime.strptime(lote[-1]["timestamp"], "%Y-%m-%dT%H:%M:%S%z")
+        if (datetime.now(timezone.utc) - ultimo).total_seconds() > 24 * 3600:
+            break
     posts = []
-    for m in bd.get("media", {}).get("data", []):
+    for m in midias:
         t = datetime.strptime(m["timestamp"], "%Y-%m-%dT%H:%M:%S%z")
         horas = (datetime.now(timezone.utc) - t).total_seconds() / 3600
         if horas > 24:
             continue
         leg = m.get("caption") or ""
+        ocultas = m.get("like_count") is None   # perfil escondeu as curtidas
         inter = (m.get("like_count") or 0) + (m.get("comments_count") or 0)
         posts.append({
-            "id": m["id"], "link": m.get("permalink"),
-            "hora": t.astimezone(BRT).strftime("%H:%M"),
+            "id": m["id"], "link": m.get("permalink"), "curtidas_ocultas": ocultas,
+            "quando": t.astimezone(BRT).strftime("%d/%m %H:%M"), "_ts": t.timestamp(),
             "formato": m.get("media_product_type") or m.get("media_type"),
             "tipo_midia": m.get("media_type"),
             "curtidas": m.get("like_count"), "comentarios": m.get("comments_count"),
             "interacoes": inter, "por_mil_seguidores": round(1000 * inter / seguidores, 2) if seguidores else None,
             "legenda_caracteres": len(leg), "legenda_linhas": leg.count("\n") + 1 if leg else 0,
             "hashtags": re.findall(r"#\w+", leg)[:15], "emojis": len(re.findall(r"[\U0001F300-\U0001FAFF☀-➿]", leg)),
-            "inicio_legenda": " ".join(leg.split())[:220],
+            "inicio_legenda": " ".join(leg.split())[:600],
+            "fim_legenda": " ".join(leg.split())[-250:] if len(leg) > 850 else "",
             "_img": m.get("media_url") if m.get("media_type") != "VIDEO" else m.get("thumbnail_url"),
         })
     posts.sort(key=lambda p: -p["interacoes"])
     resumo = {}
-    if posts:
+    validos = [p for p in posts if not p["curtidas_ocultas"]]
+    if validos:
         por_formato = {}
-        for p in posts:
+        for p in validos:
             por_formato.setdefault(p["formato"], []).append(p["interacoes"])
         resumo = {
-            "posts_24h": len(posts),
-            "mediana_interacoes": median(p["interacoes"] for p in posts),
+            "posts_24h": len(posts), "com_curtidas_ocultas": len(posts) - len(validos),
+            "mediana_interacoes": median(p["interacoes"] for p in validos),
             "por_formato": {k: {"posts": len(v), "mediana": median(v)} for k, v in por_formato.items()},
             "mediana_legenda_caracteres": median(p["legenda_caracteres"] for p in posts),
-            "horarios": sorted(p["hora"] for p in posts),
+            "horarios": [p["quando"] for p in sorted(posts, key=lambda p: p["_ts"])],
         }
+    for p in posts:
+        p.pop("_ts", None)
     return {"seguidores": seguidores, "resumo": resumo, "posts": posts}
 
 
