@@ -1,0 +1,46 @@
+name: Radar de notícias e parceiros
+
+on:
+  schedule:
+    - cron: "50 0-2,9-23 * * *"   # de hora em hora, das 6h50 às 23h50 (Brasília), antes das rodadas
+  workflow_dispatch:
+
+concurrency:
+  group: pipeline-cbr
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Dependências
+        run: pip install feedparser requests pillow
+      - name: Radar de manchetes
+        run: python bot/radar.py
+      - name: Feed da BFC e da Luz
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: python bot/parceiros.py
+      - name: Trava anti-vazamento e commit
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: |
+          git config user.name "cbr-bot"
+          git config user.email "cbr-bot@users.noreply.github.com"
+          git add radar
+          [ -z "$(git diff --cached --name-only)" ] && { echo "nada mudou"; exit 0; }
+          python bot/checar_vazamento.py $(git diff --cached --name-only)
+          git commit -m "radar $(date -u +%FT%TZ)"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            sleep 5
+          done
+          exit 1
