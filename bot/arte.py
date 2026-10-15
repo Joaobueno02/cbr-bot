@@ -169,10 +169,17 @@ html,body{{margin:0;padding:0;background:{bg}}}
 </style></head><body>{corpo}<script>{FIT_JS}</script></body></html>"""
 
 
-def _marca(ed: str, c: dict) -> str:
+def _marca(ed: str, c: dict, escala_cbr: float = 1.0) -> str:
     if c["marca"] == "simples":
         return MARCA_SIMPLES.format(cor=c["texto"])
-    return ICONE.format(top=c["icone_top"], cor=c["icone"]) + LOCKUPS[ed]
+    lockup = LOCKUPS[ed]
+    if escala_cbr != 1.0:
+        # reduz só o "CBR" grande, mantendo-o centrado na altura do nome da editoria
+        tam = round(118 * escala_cbr, 1)
+        base = round(101 - (1 - escala_cbr) * 118 * 0.36, 1)
+        lockup = re.sub(r'y="101"( font-family="Unbounded, Archivo, sans-serif" font-weight="900") font-size="118"',
+                        f'y="{base}"\\1 font-size="{tam}"', lockup)
+    return ICONE.format(top=c["icone_top"], cor=c["icone"]) + lockup
 
 
 def _papel(c: dict) -> str:
@@ -251,7 +258,7 @@ def post_unico(post: dict, foto_uri: str, recorte: bool = False) -> str:
                   f'font-weight:700;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:{c["rodape"]}">{html.escape(texto_rodape)}</p>')
 
     corpo = (f'<div style="width:{W}px;height:{H}px;position:relative;overflow:hidden;background:{c["bg"]};color:{c["texto"]};font-family:Archivo,sans-serif">'
-             f'{foto}{_marca(ed, c)}{bloco}{_barra(c, esq, bool(post.get("barra_invertida")))}{rodape}{_papel(c)}</div>')
+             f'{foto}{_marca(ed, c, float(post.get("cbr_escala", 1.0)))}{bloco}{_barra(c, esq, bool(post.get("barra_invertida")))}{rodape}{_papel(c)}</div>')
     return _pagina(corpo, c["bg"])
 
 
