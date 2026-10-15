@@ -1,0 +1,83 @@
+name: Pipeline CBR (renderizar e publicar)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "fila/**/post.json"
+      - "config.json"
+  workflow_dispatch:
+
+concurrency:
+  group: pipeline-cbr
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Ver o que há na fila
+        id: fila
+        run: |
+          r=$(grep -l '"status": "renderizar"' fila/*/post.json 2>/dev/null | wc -l)
+          p=$(grep -l '"status": "publicar"' fila/*/post.json 2>/dev/null | wc -l)
+          echo "renderizar=$r" >> "$GITHUB_OUTPUT"
+          echo "publicar=$p" >> "$GITHUB_OUTPUT"
+          echo "renderizar: $r · publicar: $p"
+
+      - uses: actions/setup-python@v5
+        if: steps.fila.outputs.renderizar != '0' || steps.fila.outputs.publicar != '0'
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar dependências
+        if: steps.fila.outputs.renderizar != '0' || steps.fila.outputs.publicar != '0'
+        run: pip install -r requirements.txt
+
+      - name: Cache do Chromium e do modelo de recorte
+        if: steps.fila.outputs.renderizar != '0'
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/ms-playwright
+            ~/.u2net
+          key: render-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
+
+      - name: Instalar Chromium
+        if: steps.fila.outputs.renderizar != '0'
+        run: python -m playwright install --with-deps chromium
+
+      - name: Renderizar artes
+        if: steps.fila.outputs.renderizar != '0'
+        run: python bot/render.py
+
+      - name: Publicar
+        if: steps.fila.outputs.publicar != '0'
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: python bot/publicar.py
+
+      - name: Trava anti-vazamento e commit
+        if: steps.fila.outputs.renderizar != '0' || steps.fila.outputs.publicar != '0'
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: |
+          git config user.name "cbr-bot"
+          git config user.email "cbr-bot@users.noreply.github.com"
+          git add fila registro
+          arquivos=$(git diff --cached --name-only)
+          [ -z "$arquivos" ] && { echo "nada mudou"; exit 0; }
+          python bot/checar_vazamento.py $arquivos
+          git commit -m "bot: render/publicação $(date -u +%FT%TZ)"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            sleep 5
+          done
+          exit 1
