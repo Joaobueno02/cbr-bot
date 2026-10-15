@@ -36,7 +36,10 @@ O dono é o João. Ele acompanha cada post pela notificação e pede para parar 
    post). Ainda não saiu: deixe `aguardando` e confira na próxima rodada; se passar 24 h, marque
    `encerrado`. Ao achar um evento futuro relevante durante a pesquisa, acrescente na lista
    (evento, quando em UTC, editoria, onde_checar, obs). Este arquivo você pode editar.
-2. Pesquise as notícias desde a última execução (seção 2). **Comece pelo radar**:
+2. Pesquise as notícias **da janela desta rodada**: desde a rodada anterior até agora (ex.: na
+   rodada das 11h, o que saiu entre 10h e 11h; na das 7h, desde as 23h da véspera). Filtre o que
+   é mais importante ou merece visibilidade **com a lente de uma página socialista** (seção 2) e
+   publique ainda nesta rodada. **Comece pelo radar**:
    - `radar/atual.json` (atualizado às :50 de cada hora): todas as manchetes de ~60 veículos e
      buscas do Google Notícias nas últimas 26 h, agrupadas por assunto. `temperatura` = quantos
      veículos diferentes deram o assunto. Leia os 60 primeiros grupos e todo grupo cuja
@@ -66,33 +69,27 @@ formato, faixa de horário e collab, e no máximo 3 sugestões de ajuste com o n
 sustenta. Não mude o manual por conta própria: as sugestões dependem do OK dele. Se o relatório
 vier com aviso de permissão, avise que falta gerar o token com `instagram_manage_insights`.
 
-**Intervalo e spam (reforçado em 15/10/2026, a pedido do João)**: o erro 4/2207051 no
-`media_publish` é o anti-spam da Meta por **comportamento** (ritmo de publicação de uma conta nova),
-não falta de cota; a API responde erro mas quase sempre publica. Para não piorar a reputação da
-conta, o publicador aplica sozinho:
-- no mínimo **60 min** entre posts e no máximo **8 posts por dia** (`config.json`); acima do teto o
-  post volta a `agendado` para as 7h do dia seguinte;
-- a cada 2207051 seguido, espaça mais: **90, 180 e 240 min** (`registro/estado.json` >
-  `avisos_seguidos` e `pausa_ate`); um post limpo zera a contagem. Tudo fica em
-  `registro/avisos_api.jsonl`;
-- pausa aleatória de 20–45 s antes do `media_publish` e polling do container mais espaçado;
-- confere no perfil **antes** de publicar (mesmo texto já no ar = não reenvia) e **depois** de erro.
-Post que cair no intervalo volta a `agendado` com o novo `publicar_apos`; publique na rodada seguinte.
+**Ritmo e erro da Meta (regra do João, 15/10/2026)**: notícia boa sai **na rodada em que foi
+apurada**, sem segurar para depois. Esperar demais tira a cara de noticiário e abre espaço para
+acusação de cópia. O erro 4/2207051 no `media_publish` é o anti-spam da Meta: a API responde erro
+mas quase sempre publica. O publicador cuida sozinho:
+- confere no perfil **antes** de publicar (mesmo texto já no ar = não reenvia);
+- depois de erro, confere se o post saiu; se não saiu, faz o **"tentar novamente"** que o João fazia
+  à mão: até 2 novas tentativas (após 1 min e após 2,5 min), sempre conferindo antes o perfil e o
+  status do container, para nunca duplicar;
+- mínimo de **15 min** entre posts e teto de **12 posts/dia** (`config.json`); pausa aleatória de
+  20–45 s antes de publicar. Os avisos ficam em `registro/avisos_api.jsonl` (para o dossiê).
 O que cabe à rodada:
-- **Antes de criar post novo**, leia `registro/estado.json`. Com `pausa_ate` no futuro, só prepare
-  post se a notícia ainda valer depois desse horário (deixe `agendado` com `publicar_apos` =
-  `pausa_ate`); não gaste a pauta;
-- com `avisos_seguidos` ≥ 2, **no máximo 1 post por rodada** e só pauta com nota ≥ 5. Prefira
-  qualidade a volume até um post sair limpo;
-- nunca publique dois posts na mesma rodada em sequência, nem tente "furar" o intervalo mudando
-  `publicar_apos` à mão;
-- 2207051 com o post publicado (`publicacao.aviso_api` "o post saiu; conferido no perfil") é
-  **aviso, não falha**: siga normal e não avise o João por isso. 2207051 **sem** o post sair vira
-  `erro_publicacao` e o publicador segura tudo por 4 h: avise o João. Se isso acontecer duas vezes
-  no mesmo dia, pare de publicar até ele responder;
-- nunca reenvie um post com `erro_publicacao` sem antes conferir (dispare `teste-conexao.yml` e
-  veja `status/teste-conexao.json` > `recentes`) se ele já não está no ar;
-- no dossiê das 23h, informe quantos avisos 2207051 houve no dia e se diminuíram.
+- até 2 posts por rodada. Publique o primeiro assim que o revisor aprovar. O segundo vai a
+  `publicar` quando passarem 15 min do primeiro, **na mesma rodada** (espere com `git pull`); se
+  o publicador devolver `agendado` por intervalo, espere o horário e mude para `publicar`;
+- `agendado` só para notícia apurada de madrugada (publicar às 7h) ou para o teto diário;
+- 2207051 com o post publicado é **aviso, não falha**: siga normal e não avise o João por isso;
+- `erro_publicacao` mesmo depois das tentativas: confira se o post não está no ar (dispare
+  `teste-conexao.yml` e veja `status/teste-conexao.json` > `recentes`). Se não está, mude de novo
+  para `publicar` **uma vez** na mesma rodada. Falhou de novo: avise o João e deixe para a próxima
+  rodada. Duas rodadas seguidas com `erro_publicacao`: pare de publicar e avise o João;
+- no dossiê das 23h, informe quantos avisos 2207051 houve no dia.
 `gh workflow run` não funciona nas sessões do Claude (GraphQL bloqueado); use
 `gh api -X POST repos/Joaobueno02/cbr-bot/actions/workflows/<arquivo>.yml/dispatches -f ref=main`
 (com `-f "inputs[tarefa]=saude"` etc. quando o workflow pede entrada).
@@ -122,6 +119,13 @@ não carregarem, a arte dá erro_render: renderize de novo, nunca publique arte 
 Notícia fora desses eixos (esporte, celebridade, crime comum sem ligação política) fica de fora.
 
 ### Critério de escolha
+A CBR é uma página socialista: escolha pensando em quem trabalha. Têm prioridade: direitos e
+condições de trabalho (salário, jornada, emprego, aposentadoria), serviços públicos (SUS, educação
+pública, transporte, moradia), desigualdade e quem paga a conta (impostos, juros, privilégios),
+vitórias de trabalhadores e movimentos sociais, e contradições, escândalos e ataques a direitos
+vindos da direita e da extrema-direita. Notícia que só interessa ao mercado ou a celebridade
+fica de fora, a não ser que mexa no bolso de quem trabalha. A lente decide **o que** cobrir e o
+tom da legenda; os fatos seguem a seção 3 à risca.
 Pontue cada candidata de 0 a 3 nos dois eixos e fique com as de maior soma (mínimo 4):
 - **Impacto**: afeta muita gente, bolso, direito, serviço público, ou o resultado da eleição.
 - **Potencial de viralizar**: conflito claro, número forte, contradição de político,

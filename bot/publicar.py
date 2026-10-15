@@ -32,11 +32,12 @@ ESTADO = RAIZ / "registro" / "estado.json"
 REGISTRO = RAIZ / "registro" / "posts.jsonl"
 PENDENTES = RAIZ / "registro" / "collabs_pendentes.json"
 API = f"https://graph.facebook.com/{CONFIG['api']}"
-# Anti-spam da Meta (4/2207051): é um bloqueio por comportamento, não cota. A API responde erro
-# mas costuma publicar. Para não piorar a reputação da conta: espaçamento crescente a cada aviso
-# seguido (90, 180, 240 min), teto de posts por dia, pausa aleatória antes do media_publish e
-# checagem de duplicata antes e depois de publicar.
-PAUSAS_AVISO_MIN = [90, 180, 240]
+# Anti-spam da Meta (4/2207051): a API responde erro mas quase sempre publica. Regra do João
+# (15/10/2026): notícia sai na hora, sem pausas longas. O publicador faz o que ele fazia à mão:
+# confere se saiu e, se não saiu, "tenta novamente" (até 2 vezes, com espera curta), sem nunca
+# duplicar: confere o perfil e o status do container antes de cada nova tentativa.
+TENTATIVAS_EXTRA = 2
+ESPERA_TENTATIVA_S = [60, 150]
 AVISOS = RAIZ / "registro" / "avisos_api.jsonl"
 PADRAO_TOKEN = re.compile(r"EAA[A-Za-z0-9]{20,}")
 
@@ -183,16 +184,38 @@ def publicar_container(cid: str, legenda: str) -> dict:
     import random
     time.sleep(random.uniform(20, 45))  # não publicar no mesmo segundo em que o container fica pronto
     inicio = time.time()
-    try:
-        mid = chamar("POST", f"{CONFIG['ig_user_id']}/media_publish", creation_id=cid)["id"]
-    except ErroAPI as e:
-        achado = ja_saiu(legenda, inicio)
-        if achado:
-            achado["aviso_api"] = f"a API devolveu erro ({e}), mas o post saiu; conferido no perfil"
-            return achado
-        raise
-    link = chamar("GET", mid, fields="permalink").get("permalink")
-    return {"media_id": mid, "permalink": link}
+    erros = []
+    for tentativa in range(1 + TENTATIVAS_EXTRA):
+        try:
+            mid = chamar("POST", f"{CONFIG['ig_user_id']}/media_publish", creation_id=cid)["id"]
+            link = chamar("GET", mid, fields="permalink").get("permalink")
+            res = {"media_id": mid, "permalink": link}
+            if erros:
+                res["aviso_api"] = f"publicado na {tentativa + 1}ª tentativa (antes: {'; '.join(erros)})"
+            return res
+        except ErroAPI as e:
+            erros.append(str(e))
+            achado = ja_saiu(legenda, inicio)
+            if achado:
+                achado["aviso_api"] = f"a API devolveu erro ({e}), mas o post saiu; conferido no perfil"
+                return achado
+            if tentativa >= TENTATIVAS_EXTRA:
+                raise
+            # "tentar novamente": espera curta e, antes, confirma que o container não foi usado
+            time.sleep(ESPERA_TENTATIVA_S[tentativa])
+            try:
+                st = chamar("GET", cid, fields="status_code").get("status_code")
+            except ErroAPI:
+                st = None
+            achado = ja_saiu(legenda, inicio)
+            if achado:
+                achado["aviso_api"] = f"a API devolveu erro ({e}), mas o post saiu; conferido no perfil"
+                return achado
+            if st == "PUBLISHED":
+                raise ErroAPI(f"container já publicado mas o post não apareceu no perfil ({e}); conferir à mão")
+            if st in ("ERROR", "EXPIRED"):
+                raise
+    raise ErroAPI("; ".join(erros))
 
 
 def criar_e_publicar(post: dict, pasta: str, legenda: str, collab: list[str]) -> dict:
@@ -246,8 +269,6 @@ def processar(arq: Path, estado: dict) -> None:
             minimo = timedelta(minutes=CONFIG.get("intervalo_minimo_min", 45))
             liberado = t_ult + minimo
             # depois de um aviso 2207051 (Meta desconfiou de spam, mas publicou), espaça mais o próximo
-            if estado.get("pausa_ate"):
-                liberado = max(liberado, datetime.strptime(estado["pausa_ate"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc))
             if datetime.now(timezone.utc) < liberado:
                 quando = liberado.strftime("%Y-%m-%dT%H:%M:%SZ")
                 post["status"] = "agendado"
@@ -296,17 +317,9 @@ def processar(arq: Path, estado: dict) -> None:
             estado["ultima_publicacao"] = agora()
             estado["hoje"] = estado.get("hoje", 0) + 1
             if "2207051" in str(res.get("aviso_api", "")):
-                n = estado.get("avisos_seguidos", 0) + 1
-                estado["avisos_seguidos"] = n
-                minutos = PAUSAS_AVISO_MIN[min(n, len(PAUSAS_AVISO_MIN)) - 1]
-                estado["pausa_ate"] = (datetime.now(timezone.utc) + timedelta(minutes=minutos)).strftime("%Y-%m-%dT%H:%M:%SZ")
-                res["obs"] = f"aviso 2207051 ({n}º seguido): próximo post só depois de {estado['pausa_ate']}"
                 with AVISOS.open("a", encoding="utf-8") as f:
-                    f.write(json.dumps({"quando": agora(), "id": pasta, "seguidos": n, "pausa_min": minutos,
-                                        "publicado": True}, ensure_ascii=False) + "\n")
-            else:
-                estado["avisos_seguidos"] = 0
-                estado.pop("pausa_ate", None)
+                    f.write(json.dumps({"quando": agora(), "id": pasta, "publicado": True,
+                                        "aviso": res["aviso_api"][:200]}, ensure_ascii=False) + "\n")
             if res.get("collab"):
                 pend = json.loads(PENDENTES.read_text(encoding="utf-8")) if PENDENTES.exists() else []
                 pend.append({"id": pasta, "media_id": res["media_id"], "quando": res["quando"],
@@ -326,11 +339,10 @@ def processar(arq: Path, estado: dict) -> None:
     except Exception as e:
         post["status"] = "erro_publicacao"
         res["erro"] = limpar(f"{type(e).__name__}: {e}")
-        if "2207051" in res["erro"]:  # bloqueio sem o post sair: segura tudo por 4 h
-            estado["pausa_ate"] = (datetime.now(timezone.utc) + timedelta(minutes=PAUSAS_AVISO_MIN[-1])).strftime("%Y-%m-%dT%H:%M:%SZ")
+        if "2207051" in res["erro"]:
             with AVISOS.open("a", encoding="utf-8") as f:
-                f.write(json.dumps({"quando": agora(), "id": pasta, "pausa_min": PAUSAS_AVISO_MIN[-1],
-                                    "publicado": False}, ensure_ascii=False) + "\n")
+                f.write(json.dumps({"quando": agora(), "id": pasta, "publicado": False,
+                                    "aviso": res["erro"][:200]}, ensure_ascii=False) + "\n")
     post["publicacao"] = res
     arq.write_text(json.dumps(post, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"{pasta}: {post['status']} {res.get('permalink') or res.get('erro') or res.get('obs','')}")
