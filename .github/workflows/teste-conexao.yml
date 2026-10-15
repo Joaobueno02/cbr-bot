@@ -1,0 +1,57 @@
+name: Teste de conexão (só leitura)
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/teste-conexao.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  teste:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Ler dados da conta (token só no cabeçalho, só campos escolhidos)
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: "17841441580120105"
+        run: |
+          set -uo pipefail
+          API="https://graph.facebook.com/v26.0"
+          mkdir -p status
+          conta=$(curl -sS -H "Authorization: Bearer $IG_TOKEN" \
+            "$API/$IG_USER_ID?fields=username,media_count")
+          cota=$(curl -sS -H "Authorization: Bearer $IG_TOKEN" \
+            "$API/$IG_USER_ID/content_publishing_limit?fields=quota_usage,config")
+          jq -n --argjson conta "$conta" --argjson cota "$cota" --arg quando "$(date -u +%FT%TZ)" '{
+            quando: $quando,
+            ok: ($conta.error == null),
+            username: $conta.username,
+            media_count: $conta.media_count,
+            erro: ($conta.error | if . then {code, error_subcode, type, message} else null end),
+            cota_usada: $cota.data[0].quota_usage,
+            cota_total: $cota.data[0].config.quota_total
+          }' > status/teste-conexao.json
+
+      - name: Trava se houver qualquer coisa parecida com token
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: |
+          if grep -rqE 'EAA[A-Za-z0-9]{20,}|access_token' status/ \
+             || { [ -n "$IG_TOKEN" ] && grep -rqF "$IG_TOKEN" status/; }; then
+            echo "Possível token no output. Abortando sem commit."
+            rm -rf status/
+            exit 1
+          fi
+
+      - name: Gravar resultado no repositório
+        run: |
+          git config user.name "cbr-bot"
+          git config user.email "cbr-bot@users.noreply.github.com"
+          git add status/teste-conexao.json
+          git commit -m "status: teste de conexão" || exit 0
+          git push
