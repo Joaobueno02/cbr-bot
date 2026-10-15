@@ -71,8 +71,15 @@ publicação nossa como possível spam, erro 4/2207051). Se um post cair no inte
 `agendado` com o novo `publicar_apos`; publique na rodada seguinte. Se a API der erro na hora de
 publicar, o publicador confere no perfil se o post saiu mesmo assim antes de marcar erro. Nunca
 reenvie um post com `erro_publicacao` sem antes conferir (`gh workflow run teste-conexao.yml` e
-`status/teste-conexao.json` > `recentes`) se ele já não está no ar. Se o erro 2207051 se repetir
-no mesmo dia, pare de publicar e avise o João.
+`status/teste-conexao.json` > `recentes`) se ele já não está no ar.
+O 2207051 que vem com o post publicado (campo `publicacao.aviso_api`, "o post saiu; conferido no
+perfil") é **aviso, não falha**: o publicador sozinho espaça o próximo post para 90 min
+(`registro/estado.json` > `pausa_ate`) e a rodada segue normal, sem avisar o João. Só pare de
+publicar e avise o João se o 2207051 vier **sem** o post sair (status `erro_publicacao`) duas
+vezes no mesmo dia. (Decisão do João, 15/10/2026.)
+`gh workflow run` não funciona nas sessões do Claude (GraphQL bloqueado); use
+`gh api -X POST repos/Joaobueno02/cbr-bot/actions/workflows/<arquivo>.yml/dispatches -f ref=main`
+(com `-f inputs[tarefa]=saude` etc. quando o workflow pede entrada).
 
 Nunca publique por outro caminho. Numa execução agendada, **nunca edite** `config.json`,
 `registro/`, `.github/`, `bot/` (código), `assets/` (fontes e textura) nem `referencias/`; só o

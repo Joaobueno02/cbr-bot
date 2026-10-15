@@ -32,6 +32,7 @@ ESTADO = RAIZ / "registro" / "estado.json"
 REGISTRO = RAIZ / "registro" / "posts.jsonl"
 PENDENTES = RAIZ / "registro" / "collabs_pendentes.json"
 API = f"https://graph.facebook.com/{CONFIG['api']}"
+PAUSA_APOS_AVISO_MIN = 90  # após 4/2207051 com post publicado, espera 90 min em vez de 45
 PADRAO_TOKEN = re.compile(r"EAA[A-Za-z0-9]{20,}")
 
 
@@ -221,8 +222,12 @@ def processar(arq: Path, estado: dict) -> None:
         if ultimo and CONFIG.get("publicacao_ativa"):
             t_ult = datetime.strptime(ultimo, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
             minimo = timedelta(minutes=CONFIG.get("intervalo_minimo_min", 45))
-            if datetime.now(timezone.utc) - t_ult < minimo:
-                quando = (t_ult + minimo).strftime("%Y-%m-%dT%H:%M:%SZ")
+            liberado = t_ult + minimo
+            # depois de um aviso 2207051 (Meta desconfiou de spam, mas publicou), espaça mais o próximo
+            if estado.get("pausa_ate"):
+                liberado = max(liberado, datetime.strptime(estado["pausa_ate"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc))
+            if datetime.now(timezone.utc) < liberado:
+                quando = liberado.strftime("%Y-%m-%dT%H:%M:%SZ")
                 post["status"] = "agendado"
                 post["publicar_apos"] = quando
                 res["obs"] = f"intervalo mínimo entre posts: reagendado para {quando}"
@@ -252,6 +257,11 @@ def processar(arq: Path, estado: dict) -> None:
             post["status"] = "publicado"
             estado["publicados"] = numero
             estado["ultima_publicacao"] = agora()
+            if "2207051" in str(res.get("aviso_api", "")):
+                estado["pausa_ate"] = (datetime.now(timezone.utc) + timedelta(minutes=PAUSA_APOS_AVISO_MIN)).strftime("%Y-%m-%dT%H:%M:%SZ")
+                res["obs"] = f"aviso 2207051: próximo post só depois de {estado['pausa_ate']}"
+            else:
+                estado.pop("pausa_ate", None)
             if res.get("collab"):
                 pend = json.loads(PENDENTES.read_text(encoding="utf-8")) if PENDENTES.exists() else []
                 pend.append({"id": pasta, "media_id": res["media_id"], "quando": res["quando"],
