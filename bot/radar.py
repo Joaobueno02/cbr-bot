@@ -12,6 +12,10 @@ Saídas (pasta radar/):
   top.md             os 150 assuntos mais quentes das últimas 26 h
   saude_fontes.json  feeds que falharam ou vieram vazios
   vistos.json        memória do radar (link → quando foi visto pela 1ª vez), 30 h
+  pauta.md           O ARQUIVO CURTO QUE SE LÊ PRIMEIRO: parceiros de hoje cruzados com o radar,
+                     assuntos em alta (ganharam veículos em 3 h) e novos por seção, com
+                     "na pauta desde" para quem roda de hora em hora saber o que é novo para ele
+  pauta_estado.json  memória da pauta (temperatura por assunto, entrada na pauta)
 """
 from __future__ import annotations
 
@@ -43,11 +47,15 @@ PARADAS = set("a o e de do da dos das em no na nos nas um uma para por com que s
 
 # seção de cada fonte, pelo nome em fontes.json
 INTERNACIONAL = ("nyt", "guardian", "france 24", "al jazeera", "el país", "bbc mundo", "rfi",
-                 "le monde (inglês)", "inglês", "espanhol", "eua", "reuters", "ap brasil",
-                 "bloomberg", "ft brasil", "wsj", "mundo", "dw brasil")
+                 "le monde", "inglês", "espanhol", "eua", "reuters", "ap brasil", "bloomberg",
+                 "ft brasil", "wsj", "mundo", "dw brasil", "washington", "cnn internacional",
+                 "economist", "afp", "página/12", "clarín", "la jornada", "infobae", "telesur",
+                 "prensa latina", "venezuela", "argentina", "china", "oriente", "rússia", "europa")
 PESQUISA = ("fapesp", "ciência", "bori", "ibge", "ipea", "fiocruz", "inpe", "embrapa", "capes",
-            "pesquisa científica", "institutos de pesquisa")
-UNIVERSIDADE = ("universidade", "unesp", "usp", "unicamp")
+            "pesquisa científica", "institutos de pesquisa", "dieese", "fgv", "(dados)", "(órgãos)",
+            "clima e ambiente", "sbpc")
+UNIVERSIDADE = ("universidade", "unesp", "usp", "unicamp", "institutos federais", "hospitais universitários",
+                "descobertas")
 SECOES = [("nacional", "Brasil"), ("internacional", "Internacional"),
           ("pesquisa", "Pesquisa, ciência e institutos"), ("universidades", "Universidades")]
 
@@ -132,8 +140,12 @@ def agrupar(itens: list[dict]) -> list[dict]:
         datas = [i["quando"] for i in g["itens"] if i["quando"]]
         secoes = Counter(i["secao"] for i in g["itens"])
         secao = max(secoes, key=lambda s: (secoes[s], s != "nacional"))
+        recentes = {i["veiculo"] for i in g["itens"] if (i["quando"] or "") >= CORTE_3H}
+        diretos = [i["link"] for i in g["itens"] if i["link"] and "news.google." not in i["link"]]
         saida.append({
-            "manchete": g["itens"][0]["titulo"], "secao": secao,
+            "sig": chave(g["itens"][0]), "manchete": g["itens"][0]["titulo"], "secao": secao,
+            "veiculos_3h": len(recentes), "link_direto": diretos[0] if diretos else None,
+            "_tok": sorted(g["_tok"]),
             "veiculos": veiculos, "temperatura": len(veiculos),
             "primeira_vez": min(datas) if datas else None, "ultima_vez": max(datas) if datas else None,
             "detectado": min(i["_visto"] for i in g["itens"]),
@@ -176,6 +188,113 @@ def markdown(titulo: str, grupos: list[dict], por_secao: bool) -> str:
     return "\n".join(out) + "\n"
 
 
+CORTE_3H = (datetime.now(timezone.utc) - timedelta(hours=3)).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+# ---------------------------------------------------------------- pauta.md
+# O arquivo curto que o boletim e a CBR leem PRIMEIRO (cabe inteiro numa leitura).
+#   A. o que a BFC e a Luz postaram hoje, cruzado com o radar (cobertura obrigatória)
+#   B. em alta: assuntos que ganharam veículos nas últimas 3 h, mesmo que tenham começado antes
+#   C. novos nas últimas 3 h, com vagas garantidas para internacional, pesquisa e universidades
+# Cada linha traz "na pauta desde": quando o assunto entrou numa dessas seções pela 1ª vez.
+
+def _link(g: dict) -> str:
+    return g.get("link_direto") or g["links"][0]["link"]
+
+
+def _cruzar_parceiros(grupos: list[dict]) -> list[dict]:
+    arq = PASTA / "parceiros.json"
+    if not arq.exists():
+        return []
+    dados = json.loads(arq.read_text(encoding="utf-8"))
+    inicio = datetime.now(BRT).replace(hour=0, minute=0, second=0, microsecond=0)
+    saida = []
+    for user, v in dados.get("perfis", {}).items():
+        for p in v.get("posts", []):
+            t = datetime.strptime(p["quando"], "%Y-%m-%dT%H:%M:%S%z")
+            if t < inicio:
+                continue
+            tok = normalizar(p.get("legenda", "")[:300])
+            melhor, nota = None, 0.0
+            for g in grupos[:4000]:
+                # compara com cada manchete do grupo (não com o acumulado, que casa com tudo)
+                for l in g["links"]:
+                    tt = normalizar(l["titulo"])
+                    inter = len(tok & tt)
+                    if inter < 3 or not tt:
+                        continue
+                    r = inter / len(tt)
+                    if r >= 0.4 and (r, g["temperatura"]) > (nota, melhor["temperatura"] if melhor else -1):
+                        melhor, nota = g, r
+            saida.append({"perfil": user, "quando": t, "link": p.get("link"), "velocidade": p.get("velocidade"),
+                          "legenda": " ".join(p.get("legenda", "").split())[:160], "grupo": melhor})
+    saida.sort(key=lambda x: -(x["velocidade"] or 0))
+    return saida
+
+
+def _pauta(grupos: list[dict], agora_dt: datetime) -> str:
+    arq_estado = PASTA / "pauta_estado.json"
+    try:
+        estado = json.loads(arq_estado.read_text(encoding="utf-8"))
+    except Exception:
+        estado = {}
+    agora = agora_dt.strftime("%Y-%m-%dT%H:%M:%SZ")
+    hist = estado.setdefault("temperaturas", {})
+    desde = estado.setdefault("na_pauta_desde", {})
+
+    def delta(g):
+        h = hist.get(g["sig"], [])
+        antigo = [t for q, t in h if q <= (agora_dt - timedelta(hours=2, minutes=40)).strftime("%Y-%m-%dT%H:%M:%SZ")]
+        base = antigo[-1] if antigo else (0 if g["detectado"] >= CORTE_3H else (h[0][1] if h else g["temperatura"]))
+        return g["temperatura"] - base
+
+    parceiros = _cruzar_parceiros(grupos)
+    em_alta = [g for g in grupos if g["temperatura"] >= 5 and (delta(g) >= 3 or g["veiculos_3h"] >= 4)]
+    em_alta.sort(key=lambda g: (-g["veiculos_3h"], -g["temperatura"]))
+    em_alta = em_alta[:40]
+    novos = [g for g in grupos if g["detectado"] >= CORTE_3H]
+    vagas = {"nacional": 30, "internacional": 15, "pesquisa": 12, "universidades": 12}
+    novos_sel = []
+    for sec, n in vagas.items():
+        novos_sel += [g for g in novos if g["secao"] == sec][:n]
+
+    for g in [p["grupo"] for p in parceiros if p["grupo"]] + em_alta + novos_sel:
+        desde.setdefault(g["sig"], agora)
+
+    def lin(g, extra=""):
+        v = ", ".join(g["veiculos"][:4]) + (f" +{len(g['veiculos']) - 4}" if len(g["veiculos"]) > 4 else "")
+        return (f"- [{g['temperatura']}|+{g['veiculos_3h']} em 3h] {g['manchete']} — {v} · "
+                f"publicado {hora(g['primeira_vez'])} · na pauta desde {hora(desde.get(g['sig']))}{extra} · {_link(g)}")
+
+    out = [f"# Pauta do radar — {hora(agora)}", "",
+           "Leia INTEIRO. [N|+M em 3h] = N veículos no total, M nas últimas 3 h. \"na pauta desde\" = quando o",
+           "assunto entrou nesta lista pela 1ª vez: tudo que entrou depois da rodada anterior é candidato,",
+           "mesmo que a notícia tenha começado antes.", "",
+           f"## A. O que a BFC e a Luz postaram hoje ({len(parceiros)}) — cobertura obrigatória se confirmado", ""]
+    for p in parceiros:
+        cab = f"- @{p['perfil']} {p['quando'].astimezone(BRT).strftime('%Hh%M')} ({int(p['velocidade'] or 0)} interações/h) {p['link']}\n  \"{p['legenda']}\""
+        out.append(cab)
+        out.append("  " + (lin(p["grupo"]) if p["grupo"] else "- sem correspondência no radar: procure na busca da web"))
+    out += ["", f"## B. Em alta agora ({len(em_alta)}) — ganharam veículos nas últimas 3 h", ""]
+    out += [lin(g) for g in em_alta]
+    nomes = dict(SECOES)
+    for sec in vagas:
+        lista = [g for g in novos_sel if g["secao"] == sec]
+        out += ["", f"## C. Novos nas últimas 3 h — {nomes[sec]} ({len(lista)} de {len([g for g in novos if g['secao'] == sec])})", ""]
+        out += [lin(g) for g in lista]
+
+    # memória: temperatura por assunto (8 h) e entrada na pauta (30 h)
+    lim_h = (agora_dt - timedelta(hours=8)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    vivos = {g["sig"] for g in grupos}
+    for g in grupos[:4000]:
+        hist.setdefault(g["sig"], []).append([agora, g["temperatura"]])
+    estado["temperaturas"] = {k: [x for x in v if x[0] >= lim_h][-10:] for k, v in hist.items() if k in vivos}
+    lim_d = (agora_dt - timedelta(hours=30)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    estado["na_pauta_desde"] = {k: v for k, v in desde.items() if v >= lim_d}
+    arq_estado.write_text(json.dumps(estado, separators=(",", ":")) + "\n", encoding="utf-8")
+    return "\n".join(out) + "\n"
+
+
 def main() -> None:
     PASTA.mkdir(exist_ok=True)
     tarefas = [(n, u, False) for n, u in FONTES["rss"].items()] + \
@@ -214,7 +333,8 @@ def main() -> None:
     grupos = agrupar(unicos)
     (PASTA / "atual.json").write_text(json.dumps({
         "quando": agora, "janela_horas": 26, "manchetes": len(unicos), "assuntos": len(grupos),
-        "grupos": grupos}, ensure_ascii=False, indent=0) + "\n", encoding="utf-8")
+        "grupos": [{k: v for k, v in g.items() if k != "_tok"} for g in grupos]},
+        ensure_ascii=False, indent=0) + "\n", encoding="utf-8")
 
     corte = (agora_dt - timedelta(hours=NOVOS_HORAS)).strftime("%Y-%m-%dT%H:%M:%SZ")
     novos = [g for g in grupos if g["detectado"] >= corte]
@@ -224,6 +344,10 @@ def main() -> None:
     (PASTA / "top.md").write_text(markdown(
         f"Radar CBR — os {TOP} assuntos mais quentes das últimas 26 h (gerado {hora(agora)})",
         grupos[:TOP], False), encoding="utf-8")
+
+    (PASTA / "pauta.md").write_text(_pauta(grupos, agora_dt), encoding="utf-8")
+    for g in grupos:
+        g.pop("_tok", None)
 
     total = len(tarefas)
     (PASTA / "saude_fontes.json").write_text(json.dumps({
