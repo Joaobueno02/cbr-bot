@@ -129,7 +129,20 @@ def marcar(texto: str, destaque: str, cor_negrito: str, titulo: bool = False, pe
     t = _sem_quebra(html.escape(texto or "", quote=False))
     t = re.sub(r"==(.+?)==", lambda m: f'<span style="{MARCA_TEXTO}">{m.group(1)}</span>', t)
     t = re.sub(r"\*\*(.+?)\*\*", lambda m: f'<b style="color:{cor_negrito};font-weight:700">{m.group(1)}</b>', t)
-    if estilo == "marca":
+    if estilo == "marca_inclinada":
+        # faixa de marca-texto inclinada (só a faixa; a letra continua reta), palavra por palavra
+        rgb = tuple(int(destaque[i:i + 2], 16) for i in (1, 3, 5))
+        cor = f"rgba({rgb[0]},{rgb[1]},{rgb[2]},.9)"
+        def faixa_inclinada(m):
+            palavras = m.group(1).split(" ")
+            pedacos = []
+            for i, w in enumerate(palavras):
+                ult = i == len(palavras) - 1
+                pedacos.append(f'<span class="mk{" mk-ult" if ult else ""}">{w}</span>')
+            return (f'<span style="font-weight:{peso_destaque};--mk:{cor};--mk-top:{faixa[0]}%;--mk-bot:{100 - faixa[1]}%'
+                    f'{_nowrap(m.group(1))}">{" ".join(pedacos)}</span>')
+        t = re.sub(r"\*(.+?)\*", faixa_inclinada, t)
+    elif estilo == "marca":
         # marca-texto na cor da editoria; o texto mantém a cor do título
         rgb = tuple(int(destaque[i:i + 2], 16) for i in (1, 3, 5))
         fundo = (f"background:linear-gradient(to bottom,rgba({rgb[0]},{rgb[1]},{rgb[2]},0) {faixa[0]}%,"
@@ -176,6 +189,9 @@ html,body{{margin:0;padding:0;background:{bg}}}
 [style*="Fraunces"]{{font-variation-settings:'SOFT' 0,'WONK' 0}}
 .grade{{background-image:linear-gradient(rgba(86,98,44,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(86,98,44,.16) 1px,transparent 1px);background-size:40px 40px}}
 #titulo{{text-wrap:pretty}}
+.mk{{position:relative;z-index:0}}
+.mk::before{{content:'';position:absolute;z-index:-1;left:-.08em;right:-.32em;top:var(--mk-top);bottom:var(--mk-bot);background:var(--mk);transform:skewX(-16deg)}}
+.mk-ult::before{{right:-.1em}}
 </style></head><body>{corpo}<script>{FIT_JS}</script></body></html>"""
 
 
