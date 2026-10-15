@@ -2,7 +2,7 @@
 
 Cada editoria reproduz o layout dos posts de referência (pasta referencias/).
 Marcação permitida nos textos:
-  *texto*    -> cor de destaque da editoria (peso 900)
+  *texto*    -> cor de destaque da editoria (peso do título + 100)
   ==texto==  -> marca-texto amarelo
   **texto**  -> negrito (subtítulo e corpo)
   |          -> quebra de linha forçada no título
@@ -124,11 +124,11 @@ def _nowrap(trecho: str) -> str:
     return ";white-space:nowrap" if len(trecho) <= 22 else ""
 
 
-def marcar(texto: str, destaque: str, cor_negrito: str, titulo: bool = False) -> str:
+def marcar(texto: str, destaque: str, cor_negrito: str, titulo: bool = False, peso_destaque: int = 900) -> str:
     t = _sem_quebra(html.escape(texto or "", quote=False))
     t = re.sub(r"==(.+?)==", lambda m: f'<span style="{MARCA_TEXTO}">{m.group(1)}</span>', t)
     t = re.sub(r"\*\*(.+?)\*\*", lambda m: f'<b style="color:{cor_negrito};font-weight:700">{m.group(1)}</b>', t)
-    t = re.sub(r"\*(.+?)\*", lambda m: f'<span style="font-weight:900;color:{destaque}{_nowrap(m.group(1))}">{m.group(1)}</span>', t)
+    t = re.sub(r"\*(.+?)\*", lambda m: f'<span style="font-weight:{peso_destaque};color:{destaque}{_nowrap(m.group(1))}">{m.group(1)}</span>', t)
     if titulo:
         t = t.replace("|", "<br>")
     return t
@@ -239,10 +239,11 @@ def post_unico(post: dict, foto_uri: str, recorte: bool = False) -> str:
         partes.append(f'<p style="margin:0 0 26px;font-family:Archivo,sans-serif;font-weight:700;font-size:17px;letter-spacing:2px;text-transform:uppercase;color:{c["sub"]}">{html.escape(credito)}</p>')
     if post.get("chapeu"):
         tam = 60 if c is EDITORIAS["economia"] else 66
-        partes.append(f'<p style="margin:0 0 14px;font-family:Fraunces,Georgia,serif;font-weight:900;font-size:{tam}px;line-height:1;letter-spacing:-1px;text-transform:uppercase;color:{d}">{html.escape(post["chapeu"])}</p>')
+        partes.append(f'<p style="margin:0 0 14px;font-family:Fraunces,Georgia,serif;font-weight:{min(900, int(post.get("peso_titulo", 800)) + 100)};font-size:{tam}px;line-height:1;letter-spacing:-1px;text-transform:uppercase;color:{d}">{html.escape(post["chapeu"])}</p>')
     maxt = int(post.get("titulo_max", TITULO_MAX[ed]))
-    partes.append(f'<p id="titulo" data-max="{maxt}" data-min="44" style="margin:0;font-family:Fraunces,Georgia,serif;font-weight:800;font-size:{maxt}px;line-height:1.05;letter-spacing:-1px;color:{c["texto"]}">'
-                  f'{marcar(post["titulo"], d, c["texto"], titulo=True)}</p>')
+    peso = int(post.get("peso_titulo", 800))
+    partes.append(f'<p id="titulo" data-max="{maxt}" data-min="44" style="margin:0;font-family:Fraunces,Georgia,serif;font-weight:{peso};font-size:{maxt}px;line-height:1.05;letter-spacing:-1px;color:{c["texto"]}">'
+                  f'{marcar(post["titulo"], d, c["texto"], titulo=True, peso_destaque=min(900, peso + 100))}</p>')
     if post.get("subtitulo"):
         partes.append(f'<p style="margin:26px 0 0;font-family:Archivo,sans-serif;font-size:22px;line-height:1.42;color:{c["sub"]}">{marcar(post["subtitulo"], d, c["texto"])}</p>')
 
