@@ -103,13 +103,15 @@ a menos que haja fato novo relevante. Prefira notícia das últimas horas.
   `==trecho==` com marca-texto (Economia/Educação), `|` força quebra de linha.
 - **subtitulo**: 1 ou 2 frases com o dado que sustenta o título e a negativa, se houver.
   Até ~260 caracteres. `**negrito**` para números. Em Política pode ficar vazio.
-- **credito_foto**: em Eleições/Saúde vai no rodapé; em Gerais/Economia/Educação vai
-  acima do título. Formato: "Foto: <fonte>" ou "<quem aparece> · Foto: <fonte>".
-  **Política não tem rodapé**: o crédito vai na última linha da legenda, junto das fontes
-  ("Fontes: ... Foto: <fonte>."). Isso vale sempre que a arte sair sem crédito visível.
-- Padrão visual da Política (aprovado em 15/10): título menor e mais fino, bloco de texto mais
-  alto, destaque em marca-texto vermelho inclinado, vermelho #D0021B, barra com vermelho
-  predominante, CBR do topo 25% menor. Já está no gerador; não precisa preencher nada.
+- **credito_foto**: em Gerais/Economia/Educação vai acima do título. Formato: "Foto: <fonte>"
+  ou "<quem aparece> · Foto: <fonte>". Política, Eleições e Saúde **não têm rodapé**: nelas o
+  crédito vai só na legenda. Em **todas** as editorias, a última linha da legenda traz fontes e
+  crédito: "Fontes: ... Foto: <fonte>."
+- Padrão visual (aprovado em 15/10, vale para todas as editorias, cada uma na sua cor): título
+  menor e mais fino, bloco de texto mais alto, destaque `*...*` em marca-texto inclinado na cor da
+  editoria (no fundo claro, mais baixo e translúcido), barra com a cor predominante, CBR do topo
+  25% menor, sem texto abaixo da barra. Vermelho de Política e Gerais: #D0021B. Já está no
+  gerador; não precisa preencher nada.
 - O renderizador diminui o título até caber. Se der `erro_render` por texto, encurte.
 
 ### Carrossel (só quando necessário: posts críticos, explicações com dados)

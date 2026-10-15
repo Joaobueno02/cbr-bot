@@ -125,14 +125,14 @@ def _nowrap(trecho: str) -> str:
 
 
 def marcar(texto: str, destaque: str, cor_negrito: str, titulo: bool = False, peso_destaque: int = 900,
-           estilo: str = "cor", faixa: tuple = (55, 95)) -> str:
+           estilo: str = "cor", faixa: tuple = (55, 95), opacidade: float = 0.9) -> str:
     t = _sem_quebra(html.escape(texto or "", quote=False))
     t = re.sub(r"==(.+?)==", lambda m: f'<span style="{MARCA_TEXTO}">{m.group(1)}</span>', t)
     t = re.sub(r"\*\*(.+?)\*\*", lambda m: f'<b style="color:{cor_negrito};font-weight:700">{m.group(1)}</b>', t)
     if estilo == "marca_inclinada":
         # faixa de marca-texto inclinada (só a faixa; a letra continua reta), palavra por palavra
         rgb = tuple(int(destaque[i:i + 2], 16) for i in (1, 3, 5))
-        cor = f"rgba({rgb[0]},{rgb[1]},{rgb[2]},.9)"
+        cor = f"rgba({rgb[0]},{rgb[1]},{rgb[2]},{opacidade})"
         def faixa_inclinada(m):
             palavras = m.group(1).split(" ")
             pedacos = []
@@ -190,7 +190,7 @@ html,body{{margin:0;padding:0;background:{bg}}}
 .grade{{background-image:linear-gradient(rgba(86,98,44,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(86,98,44,.16) 1px,transparent 1px);background-size:40px 40px}}
 #titulo{{text-wrap:pretty}}
 .mk{{position:relative;z-index:0}}
-.mk::before{{content:'';position:absolute;z-index:-1;left:-.08em;right:-.32em;top:var(--mk-top);bottom:var(--mk-bot);background:var(--mk);transform:skewX(-16deg)}}
+.mk::before{{content:'';position:absolute;z-index:-1;left:-.04em;right:-.21em;top:var(--mk-top);bottom:var(--mk-bot);background:var(--mk);transform:skewX(-16deg)}}
 .mk-ult::before{{right:-.1em}}
 </style></head><body>{corpo}<script>{FIT_JS}</script></body></html>"""
 
@@ -253,12 +253,19 @@ def _foto_educacao(c: dict, foto_uri: str, recorte: bool, posicao: str, alt: str
 
 # Padrão visual aprovado pelo João em 15/10/2026 (post da PEC da Segurança).
 # Cada editoria pode ter os seus; o post.json ainda pode sobrescrever qualquer item.
+PADRAO_COMUM = {
+    "titulo_max": 52, "bloco_subir": 110, "barra_invertida": True, "cbr_escala": 0.75,
+    "peso_titulo": 640, "destaque_estilo": "marca_inclinada", "destaque_faixa": [55, 95],
+    "sem_rodape": True,
+}
 PADROES = {
-    "politica": {
-        "titulo_max": 52, "bloco_subir": 110, "barra_invertida": True, "cbr_escala": 0.75,
-        "peso_titulo": 640, "destaque_estilo": "marca_inclinada", "destaque_faixa": [55, 95],
-        "cor_destaque": "#D0021B", "sem_rodape": True,
-    },
+    "politica": {**PADRAO_COMUM, "cor_destaque": "#D0021B"},
+    "gerais":   {**PADRAO_COMUM, "cor_destaque": "#D0021B"},
+    "eleicoes": {**PADRAO_COMUM},
+    "saude":    {**PADRAO_COMUM},
+    # fundo claro: faixa mais baixa e translúcida, senão parece texto riscado
+    "economia": {**PADRAO_COMUM, "destaque_faixa": [64, 100], "destaque_opacidade": 0.45},
+    "educacao": {**PADRAO_COMUM, "destaque_faixa": [64, 100], "destaque_opacidade": 0.45},
 }
 
 
@@ -289,7 +296,8 @@ def post_unico(post: dict, foto_uri: str, recorte: bool = False) -> str:
     maxt = int(post.get("titulo_max", TITULO_MAX[ed]))
     peso = int(post.get("peso_titulo", 800))
     partes.append(f'<p id="titulo" data-max="{maxt}" data-min="44" style="margin:0;font-family:Fraunces,Georgia,serif;font-weight:{peso};font-size:{maxt}px;line-height:1.05;letter-spacing:-1px;color:{c["texto"]}">'
-                  f'{marcar(post["titulo"], d, c["texto"], titulo=True, peso_destaque=min(900, peso + 100), estilo=post.get("destaque_estilo", "cor"), faixa=tuple(post.get("destaque_faixa", (55, 95))))}</p>')
+                  f'{marcar(post["titulo"], d, c["texto"], titulo=True, peso_destaque=min(900, peso + 100), estilo=post.get("destaque_estilo", "cor"), faixa=tuple(post.get("destaque_faixa", (55, 95))),
+                         opacidade=float(post.get("destaque_opacidade", 0.9)))}</p>')
     if post.get("subtitulo"):
         partes.append(f'<p style="margin:26px 0 0;font-family:Archivo,sans-serif;font-size:22px;line-height:1.42;color:{c["sub"]}">{marcar(post["subtitulo"], d, c["texto"])}</p>')
 
