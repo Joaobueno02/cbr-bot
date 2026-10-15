@@ -175,10 +175,18 @@ async function encaixar(){
   const topo=bloco.getBoundingClientRect().top;
   const foto=document.getElementById('foto');
   if(foto){ const minimo=parseFloat(foto.dataset.min); foto.style.height=Math.max(minimo, topo+40)+'px'; }
-  window.__fit={ok:ok, tamanho:t, topo_bloco:Math.round(topo)};
+  const carregadas=new Set(); document.fonts.forEach(f=>{ if(f.status==='loaded') carregadas.add(f.family.replace(/["']/g,'')); });
+  const fontes_ok=['Fraunces','Archivo','Unbounded'].every(n=>carregadas.has(n));
+  window.__fit={ok:ok && fontes_ok, tamanho:t, topo_bloco:Math.round(topo), fontes_ok:fontes_ok, fontes:[...carregadas]};
 }
 encaixar();
 """
+
+
+SONDA_FONTES = ('<div aria-hidden="true" style="position:absolute;left:-9999px;top:0;font-size:10px">'
+                '<span style="font-family:Fraunces;font-weight:640">a</span>'
+                '<span style="font-family:Archivo">a</span>'
+                '<span style="font-family:Unbounded;font-weight:900">a</span></div>')
 
 
 def _pagina(corpo: str, bg: str) -> str:
@@ -192,7 +200,7 @@ html,body{{margin:0;padding:0;background:{bg}}}
 .mk{{position:relative;z-index:0}}
 .mk::before{{content:'';position:absolute;z-index:-1;left:-.04em;right:-.21em;top:var(--mk-top);bottom:var(--mk-bot);background:var(--mk);transform:skewX(-16deg)}}
 .mk-ult::before{{right:-.1em}}
-</style></head><body>{corpo}<script>{FIT_JS}</script></body></html>"""
+</style></head><body>{corpo}{SONDA_FONTES}<script>{FIT_JS}</script></body></html>"""
 
 
 def _marca(ed: str, c: dict, escala_cbr: float = 1.0) -> str:
@@ -271,7 +279,11 @@ PADROES = {
 
 def post_unico(post: dict, foto_uri: str, recorte: bool = False) -> str:
     """Arte de post único (1080x1350) no padrão da editoria."""
-    post = {**PADROES.get(post["editoria"], {}), **post}
+    # o padrão da editoria SEMPRE vence: o post.json não consegue mudar tamanho, peso, cor,
+    # posição, barra ou rodapé (trava contra arte fora da identidade no meio do dia)
+    padrao = PADROES.get(post["editoria"], {})
+    ignoradas = sorted(k for k in post if k in padrao and post[k] != padrao[k])
+    post = {**post, **padrao, "_ignoradas": ignoradas}
     ed = post["editoria"]
     c = dict(EDITORIAS[ed])
     cor_nova = post.get("cor_destaque")
@@ -324,7 +336,7 @@ def post_unico(post: dict, foto_uri: str, recorte: bool = False) -> str:
 #   lista  -> chamada + título + itens numerados
 #   barras -> chamada + título + barras horizontais (rotulo, valor, pct 0-100, destaque)
 
-VERMELHO = "#E0302A"
+VERMELHO = "#D0021B"
 VERMELHO_CLARO = "#A60D19"
 OURO = "#E3AD16"
 
@@ -347,9 +359,10 @@ def slide(s: dict, foto_uri: str | None = None) -> str:
     dest = VERMELHO if escuro else VERMELHO_CLARO
     chamada = (f'<p style="margin:0;font-family:Archivo,sans-serif;font-weight:700;font-size:20px;letter-spacing:3px;text-transform:uppercase;color:{dest}">'
                f'{html.escape(s.get("chamada", ""))}</p>') if s.get("chamada") else ""
-    maxt = int(s.get("titulo_max", 84 if tipo != "capa" else 76))
-    titulo = (f'<p id="titulo" data-max="{maxt}" data-min="44" style="margin:18px 0 0;font-family:Fraunces,Georgia,serif;font-weight:900;'
-              f'font-size:{maxt}px;line-height:0.98;letter-spacing:-2px;color:{tx}">{_marcar_carrossel(s.get("titulo", ""), dest, tx)}</p>')
+    maxt = 72 if tipo != "capa" else 66   # fixo: o post.json não muda o tamanho
+    titulo = (f'<p id="titulo" data-max="{maxt}" data-min="44" style="margin:18px 0 0;font-family:Fraunces,Georgia,serif;font-weight:640;'
+              f'font-size:{maxt}px;line-height:1.02;letter-spacing:-1.5px;color:{tx}">'
+              f'{marcar(s.get("titulo", ""), dest, tx, titulo=True, peso_destaque=740, estilo="marca_inclinada", faixa=(55, 95) if escuro else (64, 100), opacidade=0.9 if escuro else 0.45)}</p>')
     apoio = (f'<p style="margin:22px 0 0;font-family:Archivo,sans-serif;font-size:26px;line-height:1.4;color:{sub}">'
              f'{marcar(s.get("texto", ""), dest, tx)}</p>') if s.get("texto") else ""
 
@@ -378,7 +391,7 @@ def slide(s: dict, foto_uri: str | None = None) -> str:
         foto = (f'<div id="foto" data-min="760" style="position:absolute;left:0;right:0;top:0;height:930px;overflow:hidden">'
                 f'<img src="{foto_uri}" alt="{html.escape(s.get("alt", ""))}" style="display:block;width:100%;height:100%;object-fit:cover;object-position:{s.get("foto_posicao","50% 40%")};filter:contrast(1.05) saturate(.85)">'
                 f'<div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(16,16,16,.55) 0%,rgba(16,16,16,0) 16%,rgba(16,16,16,0) 48%,rgba(16,16,16,.85) 80%,#101010 100%)"></div></div>') if foto_uri else ""
-        bloco = f'<div id="bloco" data-limite="420" style="position:absolute;z-index:2;left:80px;right:80px;bottom:170px">{chamada}{titulo}{apoio}</div>'
+        bloco = f'<div id="bloco" data-limite="420" style="position:absolute;z-index:2;left:80px;right:80px;bottom:200px">{chamada}{titulo}{apoio}</div>'
     else:
         foto = ""
         bloco = f'<div id="bloco" data-limite="160" style="position:absolute;z-index:2;left:80px;right:80px;top:168px">{chamada}{titulo}{apoio}{extra}</div>'

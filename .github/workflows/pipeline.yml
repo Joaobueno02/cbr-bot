@@ -72,6 +72,7 @@ jobs:
         if: steps.fila.outputs.publicar != '0'
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: python bot/publicar.py
 
       - name: Trava anti-vazamento e commit

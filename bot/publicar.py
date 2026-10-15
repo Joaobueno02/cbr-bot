@@ -89,6 +89,31 @@ def legenda_final(post: dict) -> str:
     return texto
 
 
+ARQUIVOS_VISUAIS = ["bot/arte.py", "bot/render.py"]
+
+
+def impressao_visual() -> str:
+    """sha256 do gerador de arte + renderizador + fontes + textura. Muda se qualquer um mudar."""
+    import hashlib
+    h = hashlib.sha256()
+    arquivos = [RAIZ / a for a in ARQUIVOS_VISUAIS] + sorted((RAIZ / "assets").rglob("*"))
+    for a in arquivos:
+        if a.is_file():
+            h.update(a.relative_to(RAIZ).as_posix().encode())
+            h.update(a.read_bytes())
+    return h.hexdigest()[:16]
+
+
+def avisar_celular(titulo: str, mensagem: str) -> None:
+    topico = os.environ.get("NTFY_TOPIC", "").strip()
+    if topico:
+        try:
+            requests.post("https://ntfy.sh/", json={"topic": topico, "title": titulo, "message": mensagem,
+                                                    "tags": ["warning"], "priority": 5}, timeout=20)
+        except Exception:
+            pass
+
+
 def decidir_collab(post: dict, numero: int) -> list[str]:
     inst = (post.get("instituicao_ig") or post.get("universidade_ig") or "").lstrip("@").strip()
     bfc = CONFIG["collab_padrao"][0]
@@ -213,6 +238,19 @@ def processar(arq: Path, estado: dict) -> None:
 
 
 def main() -> None:
+    aprovada, atual = CONFIG.get("visual_aprovado"), impressao_visual()
+    if CONFIG.get("publicacao_ativa") and aprovada and aprovada != atual:
+        msg = (f"O código visual mudou sem aprovação (esperado {aprovada}, atual {atual}). "
+               "Nada foi publicado. Fale com o Claude para revisar e reaprovar o visual.")
+        print("TRAVA VISUAL:", msg)
+        avisar_celular("CBR: publicação travada", msg)
+        for arq in sorted((RAIZ / "fila").glob("*/post.json")):
+            post = json.loads(arq.read_text(encoding="utf-8"))
+            if post.get("status") == "publicar":
+                post["status"] = "erro_publicacao"
+                post["publicacao"] = {"quando": agora(), "erro": msg}
+                arq.write_text(json.dumps(post, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        return
     estado = json.loads(ESTADO.read_text(encoding="utf-8"))
     alvos = sorted((RAIZ / "fila").glob("*/post.json"))
     for arq in alvos:

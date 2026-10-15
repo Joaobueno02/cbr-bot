@@ -28,7 +28,7 @@ import arte  # noqa: E402
 RAIZ = Path(__file__).resolve().parent.parent
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/141.0 Safari/537.36")
-LARGURA_MIN = 1000
+LARGURA_MIN = 1000   # abaixo disso a foto é recusada (fica borrada no 1080 px)
 
 
 def agora() -> str:
@@ -58,7 +58,9 @@ def baixar_foto(url: str, destino: Path) -> dict:
     im = im.convert("RGB")
     im.save(destino, "JPEG", quality=95)
     w, h = im.size
-    return {"largura": w, "altura": h, "aviso": None if w >= LARGURA_MIN else f"foto pequena ({w}x{h}); pode ficar borrada"}
+    if w < LARGURA_MIN:
+        raise ValueError(f"foto com {w}x{h}; o mínimo é {LARGURA_MIN} px de largura. Escolha outra foto (use a sonda).")
+    return {"largura": w, "altura": h, "aviso": None}
 
 
 def recortar(foto: Path, destino: Path) -> bool:
@@ -159,8 +161,16 @@ def processar(pasta: Path, pagina) -> None:
                 html_path.write_text(arte.slide(s, uri), encoding="utf-8")
                 fit = capturar(pagina, html_path, pasta / f"arte-{i}.jpg")
                 rel["artes"].append({"arquivo": f"arte-{i}.jpg", **fit})
-        estouros = [a["arquivo"] for a in rel["artes"] if not a.get("ok")]
-        if estouros:
+        sem_fonte = [a["arquivo"] for a in rel["artes"] if a.get("fontes_ok") is False]
+        estouros = [a["arquivo"] for a in rel["artes"] if not a.get("ok") and a.get("fontes_ok") is not False]
+        ign = sorted({k for k in post if k in ("titulo_max", "bloco_subir", "barra_invertida", "cbr_escala", "peso_titulo",
+                                              "destaque_estilo", "destaque_faixa", "destaque_opacidade", "cor_destaque", "sem_rodape")})
+        if ign:
+            rel["avisos"].append(f"campos visuais ignorados (o padrão da editoria vence): {', '.join(ign)}")
+        if sem_fonte:
+            post["status"] = "erro_render"
+            rel["erro"] = f"fontes da identidade não carregaram em {', '.join(sem_fonte)}; a arte sairia com outra fonte. Renderize de novo."
+        elif estouros:
             post["status"] = "erro_render"
             rel["erro"] = f"texto não coube mesmo no tamanho mínimo: {', '.join(estouros)}. Encurte título/apoio."
         else:

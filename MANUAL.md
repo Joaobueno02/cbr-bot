@@ -57,8 +57,13 @@ formato, faixa de horário e collab, e no máximo 3 sugestões de ajuste com o n
 sustenta. Não mude o manual por conta própria: as sugestões dependem do OK dele. Se o relatório
 vier com aviso de permissão, avise que falta gerar o token com `instagram_manage_insights`.
 
-Nunca publique por outro caminho. Nunca edite `config.json`, `registro/` ou o workflow
-durante uma execução agendada; só o João autoriza isso numa conversa.
+Nunca publique por outro caminho. Numa execução agendada, **nunca edite** `config.json`,
+`registro/`, `.github/`, `bot/` (código), `assets/` (fontes e textura) nem `referencias/`; só o
+João autoriza isso numa conversa. O visual é travado: o publicador compara a impressão digital
+do código visual com a aprovada e, se não bater, não publica nada e avisa o João. Os campos
+visuais (tamanho, peso, cor, posição, barra, rodapé) vêm do padrão da editoria e qualquer valor
+diferente no post.json é ignorado. Foto com menos de 1000 px de largura é recusada. Se as fontes
+não carregarem, a arte dá erro_render: renderize de novo, nunca publique arte sem as fontes.
 
 ## 2. Pauta
 
