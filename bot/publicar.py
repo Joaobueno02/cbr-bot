@@ -21,7 +21,7 @@ import os
 import re
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import requests
@@ -144,6 +144,34 @@ def url_arte(pasta: str, arquivo: str) -> str:
     return f"{CONFIG['repo_raw']}/fila/{pasta}/{arquivo}"
 
 
+def ja_saiu(legenda: str, desde: float) -> dict | None:
+    """Procura no perfil um post com a mesma legenda publicado depois de `desde` (epoch).
+    A API às vezes devolve erro (ex.: 4/2207051) e publica assim mesmo."""
+    alvo = " ".join(legenda.split())[:80]
+    for _ in range(3):
+        time.sleep(15)
+        dados = chamar("GET", f"{CONFIG['ig_user_id']}/media", fields="id,caption,timestamp,permalink", limit=5).get("data", [])
+        for m in dados:
+            t = datetime.strptime(m["timestamp"], "%Y-%m-%dT%H:%M:%S%z").timestamp()
+            if t >= desde - 60 and " ".join((m.get("caption") or "").split())[:80] == alvo:
+                return {"media_id": m["id"], "permalink": m.get("permalink")}
+    return None
+
+
+def publicar_container(cid: str, legenda: str) -> dict:
+    inicio = time.time()
+    try:
+        mid = chamar("POST", f"{CONFIG['ig_user_id']}/media_publish", creation_id=cid)["id"]
+    except ErroAPI as e:
+        achado = ja_saiu(legenda, inicio)
+        if achado:
+            achado["aviso_api"] = f"a API devolveu erro ({e}), mas o post saiu; conferido no perfil"
+            return achado
+        raise
+    link = chamar("GET", mid, fields="permalink").get("permalink")
+    return {"media_id": mid, "permalink": link}
+
+
 def criar_e_publicar(post: dict, pasta: str, legenda: str, collab: list[str]) -> dict:
     ig = CONFIG["ig_user_id"]
     artes = [a["arquivo"] for a in post["render"]["artes"]]
@@ -161,9 +189,7 @@ def criar_e_publicar(post: dict, pasta: str, legenda: str, collab: list[str]) ->
             params["audio_configuration"] = json.dumps({"audio_id": musica["audio_id"], "audio_volume": 100, "video_volume": 0})
         cid = chamar("POST", f"{ig}/media", **params)["id"]
         esperar_container(cid, limite=600)
-        mid = chamar("POST", f"{ig}/media_publish", creation_id=cid)["id"]
-        link = chamar("GET", mid, fields="permalink").get("permalink")
-        return {"media_id": mid, "permalink": link, "musica": musica}
+        return {**publicar_container(cid, legenda), "musica": musica}
     if len(artes) == 1:
         cid = chamar("POST", f"{ig}/media", image_url=url_arte(pasta, artes[0]), caption=legenda, **extra)["id"]
     else:
@@ -174,9 +200,7 @@ def criar_e_publicar(post: dict, pasta: str, legenda: str, collab: list[str]) ->
             filhos.append(f)
         cid = chamar("POST", f"{ig}/media", media_type="CAROUSEL", children=",".join(filhos), caption=legenda, **extra)["id"]
     esperar_container(cid)
-    mid = chamar("POST", f"{ig}/media_publish", creation_id=cid)["id"]
-    link = chamar("GET", mid, fields="permalink").get("permalink")
-    return {"media_id": mid, "permalink": link}
+    return publicar_container(cid, legenda)
 
 
 def processar(arq: Path, estado: dict) -> None:
@@ -192,6 +216,20 @@ def processar(arq: Path, estado: dict) -> None:
             raise ValueError("post sem arte renderizada")
         legenda = legenda_final(post)
 
+        # intervalo mínimo entre publicações (a Meta marcou como possível spam publicar em sequência)
+        ultimo = estado.get("ultima_publicacao")
+        if ultimo and CONFIG.get("publicacao_ativa"):
+            t_ult = datetime.strptime(ultimo, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+            minimo = timedelta(minutes=CONFIG.get("intervalo_minimo_min", 45))
+            if datetime.now(timezone.utc) - t_ult < minimo:
+                quando = (t_ult + minimo).strftime("%Y-%m-%dT%H:%M:%SZ")
+                post["status"] = "agendado"
+                post["publicar_apos"] = quando
+                res["obs"] = f"intervalo mínimo entre posts: reagendado para {quando}"
+                post["publicacao"] = res
+                arq.write_text(json.dumps(post, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+                print(f"{pasta}: agendado {quando} (intervalo mínimo)")
+                return
         numero = estado["publicados"] + 1
         collab = decidir_collab(post, numero)
         res["numero"] = numero
@@ -213,6 +251,7 @@ def processar(arq: Path, estado: dict) -> None:
                     raise
             post["status"] = "publicado"
             estado["publicados"] = numero
+            estado["ultima_publicacao"] = agora()
             if res.get("collab"):
                 pend = json.loads(PENDENTES.read_text(encoding="utf-8")) if PENDENTES.exists() else []
                 pend.append({"id": pasta, "media_id": res["media_id"], "quando": res["quando"],

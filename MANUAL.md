@@ -66,6 +66,14 @@ formato, faixa de horário e collab, e no máximo 3 sugestões de ajuste com o n
 sustenta. Não mude o manual por conta própria: as sugestões dependem do OK dele. Se o relatório
 vier com aviso de permissão, avise que falta gerar o token com `instagram_manage_insights`.
 
+**Intervalo e spam**: o publicador mantém no mínimo 45 min entre posts (a Meta já marcou uma
+publicação nossa como possível spam, erro 4/2207051). Se um post cair no intervalo, ele volta a
+`agendado` com o novo `publicar_apos`; publique na rodada seguinte. Se a API der erro na hora de
+publicar, o publicador confere no perfil se o post saiu mesmo assim antes de marcar erro. Nunca
+reenvie um post com `erro_publicacao` sem antes conferir (`gh workflow run teste-conexao.yml` e
+`status/teste-conexao.json` > `recentes`) se ele já não está no ar. Se o erro 2207051 se repetir
+no mesmo dia, pare de publicar e avise o João.
+
 Nunca publique por outro caminho. Numa execução agendada, **nunca edite** `config.json`,
 `registro/`, `.github/`, `bot/` (código), `assets/` (fontes e textura) nem `referencias/`; só o
 João autoriza isso numa conversa. O visual é travado: o publicador compara a impressão digital
