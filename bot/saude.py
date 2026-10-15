@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from publicar import CONFIG, RAIZ, ErroAPI, agora, chamar  # noqa: E402
+from publicar import CONFIG, RAIZ, ErroAPI, agora, chamar, impressao_visual  # noqa: E402
 
 SAUDE = RAIZ / "registro" / "saude.json"
 SEGUIDORES = RAIZ / "registro" / "seguidores.jsonl"
@@ -35,6 +35,10 @@ def main() -> None:
         res["problemas"].append(f"token ou API com erro: {e}")
     except Exception as e:  # rede etc.
         res["problemas"].append(f"falha na checagem: {type(e).__name__}")
+    atual = impressao_visual()
+    res["visual"] = {"aprovada": CONFIG.get("visual_aprovado"), "atual": atual}
+    if CONFIG.get("visual_aprovado") and CONFIG["visual_aprovado"] != atual:
+        res["problemas"].append(f"código visual diferente do aprovado ({atual} ≠ {CONFIG['visual_aprovado']}): publicação travada")
     if not CONFIG.get("publicacao_ativa"):
         res["problemas"].append("publicação está desligada em config.json")
     res["ok"] = not res["problemas"]
