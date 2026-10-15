@@ -124,11 +124,21 @@ def _nowrap(trecho: str) -> str:
     return ";white-space:nowrap" if len(trecho) <= 22 else ""
 
 
-def marcar(texto: str, destaque: str, cor_negrito: str, titulo: bool = False, peso_destaque: int = 900) -> str:
+def marcar(texto: str, destaque: str, cor_negrito: str, titulo: bool = False, peso_destaque: int = 900,
+           estilo: str = "cor", faixa: tuple = (55, 95)) -> str:
     t = _sem_quebra(html.escape(texto or "", quote=False))
     t = re.sub(r"==(.+?)==", lambda m: f'<span style="{MARCA_TEXTO}">{m.group(1)}</span>', t)
     t = re.sub(r"\*\*(.+?)\*\*", lambda m: f'<b style="color:{cor_negrito};font-weight:700">{m.group(1)}</b>', t)
-    t = re.sub(r"\*(.+?)\*", lambda m: f'<span style="font-weight:{peso_destaque};color:{destaque}{_nowrap(m.group(1))}">{m.group(1)}</span>', t)
+    if estilo == "marca":
+        # marca-texto na cor da editoria; o texto mantém a cor do título
+        rgb = tuple(int(destaque[i:i + 2], 16) for i in (1, 3, 5))
+        fundo = (f"background:linear-gradient(to bottom,rgba({rgb[0]},{rgb[1]},{rgb[2]},0) {faixa[0]}%,"
+                 f"rgba({rgb[0]},{rgb[1]},{rgb[2]},.9) {faixa[0]}%,rgba({rgb[0]},{rgb[1]},{rgb[2]},.9) {faixa[1]}%,"
+                 f"rgba({rgb[0]},{rgb[1]},{rgb[2]},0) {faixa[1]}%);padding:0 .08em;margin:0 -.04em;"
+                 f"-webkit-box-decoration-break:clone;box-decoration-break:clone")
+        t = re.sub(r"\*(.+?)\*", lambda m: f'<span style="font-weight:{peso_destaque};{fundo}{_nowrap(m.group(1))}">{m.group(1)}</span>', t)
+    else:
+        t = re.sub(r"\*(.+?)\*", lambda m: f'<span style="font-weight:{peso_destaque};color:{destaque}{_nowrap(m.group(1))}">{m.group(1)}</span>', t)
     if titulo:
         t = t.replace("|", "<br>")
     return t
@@ -243,7 +253,7 @@ def post_unico(post: dict, foto_uri: str, recorte: bool = False) -> str:
     maxt = int(post.get("titulo_max", TITULO_MAX[ed]))
     peso = int(post.get("peso_titulo", 800))
     partes.append(f'<p id="titulo" data-max="{maxt}" data-min="44" style="margin:0;font-family:Fraunces,Georgia,serif;font-weight:{peso};font-size:{maxt}px;line-height:1.05;letter-spacing:-1px;color:{c["texto"]}">'
-                  f'{marcar(post["titulo"], d, c["texto"], titulo=True, peso_destaque=min(900, peso + 100))}</p>')
+                  f'{marcar(post["titulo"], d, c["texto"], titulo=True, peso_destaque=min(900, peso + 100), estilo=post.get("destaque_estilo", "cor"), faixa=tuple(post.get("destaque_faixa", (55, 95))))}</p>')
     if post.get("subtitulo"):
         partes.append(f'<p style="margin:26px 0 0;font-family:Archivo,sans-serif;font-size:22px;line-height:1.42;color:{c["sub"]}">{marcar(post["subtitulo"], d, c["texto"])}</p>')
 
