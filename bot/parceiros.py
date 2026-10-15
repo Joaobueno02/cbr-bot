@@ -7,6 +7,7 @@ tipo, link, imagem e uma "velocidade" (interações por hora desde a publicaçã
 from __future__ import annotations
 
 import json
+import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -15,7 +16,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from publicar import CONFIG, RAIZ, ErroAPI, agora, chamar  # noqa: E402
 
 PARCEIROS = ["brasilforadacaverna", "luzmanifesto"]
-CAMPOS = "id,caption,like_count,comments_count,media_type,media_product_type,permalink,timestamp,media_url,thumbnail_url"
+CAMPOS = "id,username,caption,like_count,comments_count,media_type,media_product_type,permalink,timestamp,media_url,thumbnail_url"
 
 
 def main() -> None:
@@ -32,8 +33,14 @@ def main() -> None:
                 if horas > 48:
                     continue
                 inter = (m.get("like_count") or 0) + (m.get("comments_count") or 0)
+                dono = m.get("username")
+                mencoes = sorted(set(re.findall(r"@([A-Za-z0-9_.]{3,30})", m.get("caption") or "")) - {user})
                 posts.append({
-                    "id": m["id"], "quando": m["timestamp"], "horas": round(horas, 1),
+                    "id": m["id"], "dono": dono,
+                    # collab confirmada: o post está no feed do parceiro mas pertence a outra página
+                    "collab_confirmada": bool(dono and dono.lower() != user),
+                    "mencoes": mencoes,
+                    "quando": m["timestamp"], "horas": round(horas, 1),
                     "tipo": m.get("media_product_type") or m.get("media_type"),
                     "curtidas": m.get("like_count"), "comentarios": m.get("comments_count"),
                     "velocidade": round(inter / horas, 1), "link": m.get("permalink"),
