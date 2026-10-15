@@ -49,6 +49,23 @@ Pontue cada candidata de 0 a 3 nos dois eixos e fique com as de maior soma (mín
 Descarte o que já está em `registro/posts.jsonl` (mesmo fato, mesmo que com outra manchete),
 a menos que haja fato novo relevante. Prefira notícia das últimas horas.
 
+**Madrugada**: as execuções vão das 7h às 23h. A primeira do dia (7h) cobre tudo o que
+aconteceu desde a última da noite e publica as melhores logo cedo.
+
+### Bombástica (vira Reels)
+Marque `"bombastica": true` quando a notícia tiver potencial de mídia muito acima do normal:
+nota 3 em impacto **e** 3 em viralização, ou um fato que domina o noticiário do dia
+(escândalo novo com documento, virada de pesquisa, decisão histórica, contradição gritante de
+candidato). Não há teto por dia: depende do dia. Mas não banalize; se tudo é bombástico,
+nada é. Bombástica:
+- sai como **Reels** (a arte vira um vídeo vertical de 12 s com zoom lento), no lugar do post
+  de foto, e aparece no feed também;
+- leva **música da biblioteca do Instagram**, escolhida pela API. Preencha `musica_busca`
+  com 1 a 3 palavras do clima desejado (ex.: "tensão", "suspense", "épico", "triunfo");
+  sem isso, vai uma música em alta. Evite clima alegre em notícia grave;
+- sempre leva **collab** (seção 10).
+Só bombástica tem música. Posts comuns e carrosséis continuam sem.
+
 ### Não publique
 - Fato não confirmado (seção 3), boato, print de rede social como única base.
 - Tragédia em andamento com vítimas, ataques, crimes violentos.
@@ -91,7 +108,9 @@ a menos que haja fato novo relevante. Prefira notícia das últimas horas.
   "legenda": "texto da legenda, sem as hashtags",
   "hashtags": ["#SUS", "#FlávioBolsonaro", "#Eleições2026", "#Saúde", "#ComunaBrasileira"],
   "fontes": [{"veiculo": "Folha de S.Paulo", "url": "https://..."}, {"veiculo": "Ipea", "url": "https://..."}],
-  "universidade_ig": null,
+  "instituicao_ig": null,
+  "bombastica": false,
+  "musica_busca": null,
   "corrige": null
 }
 ```
@@ -210,11 +229,21 @@ o erro (o texto já vem sem token).
 
 ## 10. Collab
 
-Automática no publicador: o 5º, 10º, 15º... post publicado leva convite para
-@brasilforadacaverna e @luzmanifesto. Se o post envolver uma universidade, preencha
-`universidade_ig` com o @ oficial **só depois de confirmar** no site oficial da universidade
-(link para o Instagram no rodapé do site) ou no selo de verificado; aí, se for a vez da
-collab, o convite vai só para a universidade.
+O publicador decide sozinho, nesta ordem:
+1. **Bombástica envolvendo instituição** → a instituição + @brasilforadacaverna.
+2. **Bombástica** → @brasilforadacaverna + @luzmanifesto.
+3. **Notícia que envolve instituição** (universidade, instituto federal, instituto de pesquisa,
+   Fiocruz, Butantan, Embrapa, hospital universitário etc.) → **sempre** convida o perfil
+   oficial da instituição, e só ele.
+4. **A cada 3 posts publicados** (3º, 6º, 9º...) → @brasilforadacaverna + @luzmanifesto.
+
+Para os casos 1 e 3, preencha `instituicao_ig` com o @ oficial **só depois de confirmar**:
+link para o Instagram no site oficial da instituição (rodapé ou página de contato) ou selo de
+verificado. Na dúvida, deixe vazio e diga na notificação que a collab da instituição ficou de
+fora por falta de confirmação. Não convide a instituição quando a notícia for crítica a ela.
+
+**Stories**: de hora em hora o GitHub confere os convites dos últimos 2 dias. Quando um
+colaborador aceita, a versão vertical do post vai para os Stories automaticamente, uma vez.
 
 ## 11. Correção (errata)
 

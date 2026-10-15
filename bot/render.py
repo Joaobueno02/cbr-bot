@@ -77,6 +77,33 @@ def recortar(foto: Path, destino: Path) -> bool:
         return False
 
 
+def quadro_vertical(arte_jpg: Path, saida: Path) -> None:
+    """Arte 1080x1350 centralizada num quadro 1080x1920 (Story/Reels), com a própria arte
+    desfocada e escurecida preenchendo o fundo. No grid do perfil (4:5) aparece só a arte."""
+    from PIL import ImageEnhance, ImageFilter
+    arte_im = Image.open(arte_jpg).convert("RGB")
+    fundo = arte_im.resize((1536, 1920)).crop((228, 0, 1308, 1920))
+    fundo = fundo.filter(ImageFilter.GaussianBlur(40))
+    fundo = ImageEnhance.Brightness(fundo).enhance(0.35)
+    fundo.paste(arte_im, (0, 285))
+    fundo.save(saida, "JPEG", quality=95)
+
+
+def gerar_reels(quadro: Path, saida: Path, segundos: int = 12) -> None:
+    """Vídeo 1080x1920 com zoom lento sobre o quadro vertical, H.264 + faixa de áudio muda
+    (a música entra pela API do Instagram na publicação)."""
+    import subprocess
+    quadros = segundos * 30
+    filtro = (f"scale=2160:3840,zoompan=z='1+0.035*on/{quadros}':x='iw/2-(iw/zoom/2)':"
+              f"y='ih/2-(ih/zoom/2)':d={quadros}:s=1080x1920:fps=30,format=yuv420p")
+    cmd = ["ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-i", str(quadro),
+           "-f", "lavfi", "-i", "anullsrc=channel_layout=stereo:sample_rate=44100",
+           "-t", str(segundos), "-vf", filtro, "-c:v", "libx264", "-profile:v", "high",
+           "-preset", "medium", "-crf", "18", "-c:a", "aac", "-b:a", "128k",
+           "-movflags", "+faststart", "-shortest", str(saida)]
+    subprocess.run(cmd, check=True)
+
+
 def capturar(pagina, html_path: Path, saida: Path) -> dict:
     pagina.goto(html_path.as_uri())
     pagina.wait_for_function("window.__fit !== undefined", timeout=30000)
@@ -91,8 +118,9 @@ def processar(pasta: Path, pagina) -> None:
     post = json.loads(arq.read_text(encoding="utf-8"))
     rel = {"quando": agora(), "artes": [], "avisos": []}
     try:
-        for velha in pasta.glob("arte-*.jpg"):
-            velha.unlink()
+        for padrao in ("arte-*.jpg", "story.jpg", "reels.mp4"):
+            for velha in pasta.glob(padrao):
+                velha.unlink()
         rod = post.get("rodape") or ""
         if len(rod) > 95:
             raise ValueError(f"rodapé com {len(rod)} caracteres; o máximo é 95 (uma linha)")
@@ -113,6 +141,12 @@ def processar(pasta: Path, pagina) -> None:
             html_path.write_text(arte.post_unico(post, uri, recorte), encoding="utf-8")
             fit = capturar(pagina, html_path, pasta / "arte-1.jpg")
             rel["artes"].append({"arquivo": "arte-1.jpg", **fit})
+            # versão vertical: vai para os Stories quando a collab for aceita, e é a base do Reels
+            quadro_vertical(pasta / "arte-1.jpg", pasta / "story.jpg")
+            rel["story"] = "story.jpg"
+            if post.get("bombastica"):
+                gerar_reels(pasta / "story.jpg", pasta / "reels.mp4")
+                rel["reels"] = {"video": "reels.mp4", "capa": "story.jpg"}
         else:
             for i, s in enumerate(post["slides"], start=1):
                 uri = None

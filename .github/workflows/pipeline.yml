@@ -8,6 +8,8 @@ on:
       - "fila/**/sondar.json"
       - "config.json"
   workflow_dispatch:
+  schedule:
+    - cron: "23 * * * *"   # de hora em hora: confere collabs aceitas e posta nos Stories
 
 concurrency:
   group: pipeline-cbr
@@ -32,7 +34,9 @@ jobs:
           echo "renderizar=$r" >> "$GITHUB_OUTPUT"
           echo "publicar=$p" >> "$GITHUB_OUTPUT"
           echo "sondar=$s" >> "$GITHUB_OUTPUT"
-          echo "algo=$(( r + p + s ))" >> "$GITHUB_OUTPUT"
+          st=$(python3 -c "import json;print(len(json.load(open('registro/collabs_pendentes.json'))))" 2>/dev/null || echo 0)
+          echo "stories=$st" >> "$GITHUB_OUTPUT"
+          echo "algo=$(( r + p + s + st ))" >> "$GITHUB_OUTPUT"
           echo "renderizar: $r · publicar: $p · sondar: $s"
 
       - uses: actions/setup-python@v5
@@ -58,9 +62,11 @@ jobs:
             ~/.u2net
           key: render-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
 
-      - name: Instalar Chromium
+      - name: Instalar Chromium e ffmpeg
         if: steps.fila.outputs.renderizar != '0'
-        run: python -m playwright install --with-deps chromium
+        run: |
+          python -m playwright install --with-deps chromium
+          command -v ffmpeg || (sudo apt-get update && sudo apt-get install -y ffmpeg)
 
       - name: Renderizar artes
         if: steps.fila.outputs.renderizar != '0'
@@ -71,6 +77,12 @@ jobs:
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
         run: python bot/publicar.py
+
+      - name: Stories das collabs aceitas
+        if: steps.fila.outputs.stories != '0'
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: python bot/stories.py
 
       - name: Trava anti-vazamento e commit
         if: steps.fila.outputs.algo != '0'

@@ -4,8 +4,14 @@ Regras:
   - só publica se config.json tiver "publicacao_ativa": true; senão marca "simulado"
     e registra o que teria acontecido (inclusive a decisão de collab)
   - exige revisão aprovada (post["revisao"]["aprovado"] == true) e arte renderizada
-  - collab: o N-ésimo post publicado leva convite quando N % collab_a_cada == 0;
-    se o post tiver "universidade_ig", convida só a universidade; senão, os perfis padrão
+  - collab (regras do João, 15/10/2026):
+      bombástica + instituição  -> instituição + @brasilforadacaverna
+      bombástica                -> perfis padrão (BFC + Luz)
+      instituição               -> só a instituição
+      N-ésimo post, N % 3 == 0  -> perfis padrão
+  - bombástica sai como Reels com música da biblioteca do Instagram (Audio API)
+  - posts com collab entram em registro/collabs_pendentes.json; quando o convite é aceito,
+    stories.py posta a versão vertical nos Stories
   - o token vai só no cabeçalho Authorization; nada da resposta bruta é gravado
 """
 from __future__ import annotations
@@ -24,6 +30,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 CONFIG = json.loads((RAIZ / "config.json").read_text(encoding="utf-8"))
 ESTADO = RAIZ / "registro" / "estado.json"
 REGISTRO = RAIZ / "registro" / "posts.jsonl"
+PENDENTES = RAIZ / "registro" / "collabs_pendentes.json"
 API = f"https://graph.facebook.com/{CONFIG['api']}"
 PADRAO_TOKEN = re.compile(r"EAA[A-Za-z0-9]{20,}")
 
@@ -82,6 +89,32 @@ def legenda_final(post: dict) -> str:
     return texto
 
 
+def decidir_collab(post: dict, numero: int) -> list[str]:
+    inst = (post.get("instituicao_ig") or post.get("universidade_ig") or "").lstrip("@").strip()
+    bfc = CONFIG["collab_padrao"][0]
+    if post.get("bombastica"):
+        return [inst, bfc] if inst else list(CONFIG["collab_padrao"])
+    if inst:
+        return [inst]
+    if numero % CONFIG["collab_a_cada"] == 0:
+        return list(CONFIG["collab_padrao"])
+    return []
+
+
+def escolher_musica(busca: str | None) -> dict | None:
+    """Busca na biblioteca do Instagram (Audio API). Sem termo, pega as músicas em alta."""
+    params = {"audio_type": "music", "user_id": CONFIG["ig_user_id"]}
+    if busca:
+        params["search_query"] = busca
+    dados = chamar("GET", "ig_audio", **params).get("data", [])
+    if not dados and busca:
+        dados = chamar("GET", "ig_audio", audio_type="music", user_id=CONFIG["ig_user_id"]).get("data", [])
+    if not dados:
+        return None
+    m = dados[0]
+    return {"audio_id": m.get("audio_id"), "titulo": m.get("title"), "artista": m.get("display_artist")}
+
+
 def url_arte(pasta: str, arquivo: str) -> str:
     return f"{CONFIG['repo_raw']}/fila/{pasta}/{arquivo}"
 
@@ -90,6 +123,22 @@ def criar_e_publicar(post: dict, pasta: str, legenda: str, collab: list[str]) ->
     ig = CONFIG["ig_user_id"]
     artes = [a["arquivo"] for a in post["render"]["artes"]]
     extra = {"collaborators": json.dumps(collab)} if collab else {}
+    musica = None
+    if post.get("bombastica") and post.get("render", {}).get("reels"):
+        params = dict(media_type="REELS", video_url=url_arte(pasta, post["render"]["reels"]["video"]),
+                      cover_url=url_arte(pasta, post["render"]["reels"]["capa"]),
+                      share_to_feed="true", caption=legenda, **extra)
+        try:
+            musica = escolher_musica(post.get("musica_busca"))
+        except ErroAPI:
+            musica = None
+        if musica and musica.get("audio_id"):
+            params["audio_configuration"] = json.dumps({"audio_id": musica["audio_id"], "audio_volume": 100, "video_volume": 0})
+        cid = chamar("POST", f"{ig}/media", **params)["id"]
+        esperar_container(cid, limite=600)
+        mid = chamar("POST", f"{ig}/media_publish", creation_id=cid)["id"]
+        link = chamar("GET", mid, fields="permalink").get("permalink")
+        return {"media_id": mid, "permalink": link, "musica": musica}
     if len(artes) == 1:
         cid = chamar("POST", f"{ig}/media", image_url=url_arte(pasta, artes[0]), caption=legenda, **extra)["id"]
     else:
@@ -119,11 +168,10 @@ def processar(arq: Path, estado: dict) -> None:
         legenda = legenda_final(post)
 
         numero = estado["publicados"] + 1
-        collab: list[str] = []
-        if numero % CONFIG["collab_a_cada"] == 0:
-            collab = [post["universidade_ig"]] if post.get("universidade_ig") else list(CONFIG["collab_padrao"])
+        collab = decidir_collab(post, numero)
         res["numero"] = numero
         res["collab"] = collab
+        res["formato"] = "reels" if post.get("bombastica") else ("carrossel" if len(post["render"]["artes"]) > 1 else "feed")
 
         if not CONFIG.get("publicacao_ativa"):
             post["status"] = "simulado"
@@ -140,12 +188,19 @@ def processar(arq: Path, estado: dict) -> None:
                     raise
             post["status"] = "publicado"
             estado["publicados"] = numero
+            if res.get("collab") and post.get("render", {}).get("story"):
+                pend = json.loads(PENDENTES.read_text(encoding="utf-8")) if PENDENTES.exists() else []
+                pend.append({"id": pasta, "media_id": res["media_id"], "quando": res["quando"],
+                             "convidados": res["collab"], "story": post["render"]["story"]})
+                PENDENTES.write_text(json.dumps(pend, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             with REGISTRO.open("a", encoding="utf-8") as f:
                 f.write(json.dumps({
                     "id": pasta, "quando": res["quando"], "numero": numero, "editoria": post.get("editoria"),
                     "titulo": post.get("titulo") or post.get("slides", [{}])[0].get("titulo"),
                     "permalink": res.get("permalink"), "media_id": res.get("media_id"),
-                    "collab": res.get("collab"), "fontes": post.get("fontes", []),
+                    "collab": res.get("collab"), "formato": res.get("formato"),
+                    "bombastica": bool(post.get("bombastica")), "musica": res.get("musica"),
+                    "fontes": post.get("fontes", []),
                     "corrige": post.get("corrige"),
                 }, ensure_ascii=False) + "\n")
     except Exception as e:
