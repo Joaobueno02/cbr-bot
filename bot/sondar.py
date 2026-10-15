@@ -76,10 +76,25 @@ def sondar(pasta: Path) -> None:
         tipo = r.headers.get("content-type", "")
         if tipo.startswith("image/"):
             candidatos = [(url, "direta", 0)]
+        elif "json" in tipo and '"imageinfo"' in r.text:
+            # busca da API do Wikimedia Commons: guarda autor e licença como "origem"
+            candidatos = []
+            for pg in (r.json().get("query", {}).get("pages", {}) or {}).values():
+                for ii in pg.get("imageinfo", []):
+                    meta = ii.get("extmetadata", {})
+                    autor = re.sub(r"<[^>]+>", "", meta.get("Artist", {}).get("value", "")).strip()
+                    lic = meta.get("LicenseShortName", {}).get("value", "")
+                    alvo = ii.get("thumburl") or ii.get("url")
+                    if alvo:
+                        candidatos.append((alvo, f"commons · {pg.get('title','')} · {autor} · {lic}"[:240], 0))
         else:
             c = Coletor(url)
             c.feed(r.text)
             candidatos = sorted(c.achados, key=lambda x: -x[2])
+            # respostas JSON (ex.: API do Wikimedia) ou páginas sem <img>: pega URLs de imagem soltas no texto
+            soltas = re.findall(r"https?://[^\s\"'<>,]+\.(?:jpe?g|png|webp)(?:\?[^\s\"'<>,]*)?", r.text.replace("\\/", "/"), re.I)
+            # no Wikimedia, fica só com as miniaturas grandes (2000px), não com o original de 20 MB
+            candidatos += [(u, "texto", 0) for u in soltas if "upload.wikimedia" not in u or "/thumb/" in u]
         n = 0
         for cand, origem, _ in candidatos:
             if cand in vistos or re.search(r"\.(svg|gif)(\?|$)|logo|icon|sprite|avatar|banner", cand, re.I):
