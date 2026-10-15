@@ -91,10 +91,10 @@ MARCA_SIMPLES = (
 )
 
 ESCURO = dict(bg="#101010", texto="#FFFFFF", sub="#C9C6C0", rodape="#8C8984",
-              barra="rgba(255,255,255,0.22)", barra_y=1262, papel="overlay", papel_op=0.35,
+              barra="rgba(255,255,255,0.22)", barra_solida="#484848", barra_y=1262, papel="overlay", papel_op=0.35,
               grad_rgb="16,16,16")
 CLARO = dict(bg="#ECEAE5", texto="#101010", sub="#4E4B47", rodape="#4E4B47",
-             barra="rgba(16,16,16,0.16)", barra_y=1278, papel="multiply", papel_op=0.16,
+             barra="rgba(16,16,16,0.16)", barra_solida="#CBC9C4", barra_y=1278, papel="multiply", papel_op=0.16,
              grad_rgb="236,234,229")
 
 EDITORIAS = {
@@ -180,12 +180,13 @@ def _papel(c: dict) -> str:
             f'mix-blend-mode:{c["papel"]};opacity:{c["papel_op"]};pointer-events:none">')
 
 
-def _barra(c: dict, esquerda: int) -> str:
+def _barra(c: dict, esquerda: int, invertida: bool = False) -> str:
     y = c["barra_y"]
     largura = 1000 - esquerda - 40  # termina em x=960 (120) ou 1000 (80)
     fim = esquerda + largura
-    return (f'<div style="position:absolute;z-index:3;left:{esquerda}px;width:{largura}px;top:{y}px;height:4px;background:{c["barra"]}"></div>'
-            f'<div style="position:absolute;z-index:3;left:{fim-110}px;width:110px;top:{y}px;height:4px;background:{c["destaque"]}"></div>')
+    base, ponta = (c["destaque"], c["barra_solida"]) if invertida else (c["barra"], c["destaque"])
+    return (f'<div style="position:absolute;z-index:3;left:{esquerda}px;width:{largura}px;top:{y}px;height:4px;background:{base}"></div>'
+            f'<div style="position:absolute;z-index:3;left:{fim-110}px;width:110px;top:{y}px;height:4px;background:{ponta}"></div>')
 
 
 def _foto_padrao(c: dict, foto_uri: str, posicao: str, alt: str) -> str:
@@ -250,7 +251,7 @@ def post_unico(post: dict, foto_uri: str, recorte: bool = False) -> str:
                   f'font-weight:700;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:{c["rodape"]}">{html.escape(texto_rodape)}</p>')
 
     corpo = (f'<div style="width:{W}px;height:{H}px;position:relative;overflow:hidden;background:{c["bg"]};color:{c["texto"]};font-family:Archivo,sans-serif">'
-             f'{foto}{_marca(ed, c)}{bloco}{_barra(c, esq)}{rodape}{_papel(c)}</div>')
+             f'{foto}{_marca(ed, c)}{bloco}{_barra(c, esq, bool(post.get("barra_invertida")))}{rodape}{_papel(c)}</div>')
     return _pagina(corpo, c["bg"])
 
 
