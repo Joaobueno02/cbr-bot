@@ -87,6 +87,9 @@ def parceiros(estado: dict) -> None:
     hoje = datetime.now(BRT)
     if not 7 <= hoje.hour <= 23:
         return
+    # menos chamadas à API na mesma conta que publica: parceiros só a cada 30 min (collab segue a cada 10)
+    if hoje.minute % 30 >= 10 and "--parceiros" not in sys.argv:
+        return
     dia = hoje.strftime("%Y-%m-%d")
     if estado.get("dia") != dia:
         estado["dia"] = dia

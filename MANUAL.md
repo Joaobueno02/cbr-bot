@@ -66,20 +66,36 @@ formato, faixa de horário e collab, e no máximo 3 sugestões de ajuste com o n
 sustenta. Não mude o manual por conta própria: as sugestões dependem do OK dele. Se o relatório
 vier com aviso de permissão, avise que falta gerar o token com `instagram_manage_insights`.
 
-**Intervalo e spam**: o publicador mantém no mínimo 45 min entre posts (a Meta já marcou uma
-publicação nossa como possível spam, erro 4/2207051). Se um post cair no intervalo, ele volta a
-`agendado` com o novo `publicar_apos`; publique na rodada seguinte. Se a API der erro na hora de
-publicar, o publicador confere no perfil se o post saiu mesmo assim antes de marcar erro. Nunca
-reenvie um post com `erro_publicacao` sem antes conferir (`gh workflow run teste-conexao.yml` e
-`status/teste-conexao.json` > `recentes`) se ele já não está no ar.
-O 2207051 que vem com o post publicado (campo `publicacao.aviso_api`, "o post saiu; conferido no
-perfil") é **aviso, não falha**: o publicador sozinho espaça o próximo post para 90 min
-(`registro/estado.json` > `pausa_ate`) e a rodada segue normal, sem avisar o João. Só pare de
-publicar e avise o João se o 2207051 vier **sem** o post sair (status `erro_publicacao`) duas
-vezes no mesmo dia. (Decisão do João, 15/10/2026.)
+**Intervalo e spam (reforçado em 15/10/2026, a pedido do João)**: o erro 4/2207051 no
+`media_publish` é o anti-spam da Meta por **comportamento** (ritmo de publicação de uma conta nova),
+não falta de cota; a API responde erro mas quase sempre publica. Para não piorar a reputação da
+conta, o publicador aplica sozinho:
+- no mínimo **60 min** entre posts e no máximo **8 posts por dia** (`config.json`); acima do teto o
+  post volta a `agendado` para as 7h do dia seguinte;
+- a cada 2207051 seguido, espaça mais: **90, 180 e 240 min** (`registro/estado.json` >
+  `avisos_seguidos` e `pausa_ate`); um post limpo zera a contagem. Tudo fica em
+  `registro/avisos_api.jsonl`;
+- pausa aleatória de 20–45 s antes do `media_publish` e polling do container mais espaçado;
+- confere no perfil **antes** de publicar (mesmo texto já no ar = não reenvia) e **depois** de erro.
+Post que cair no intervalo volta a `agendado` com o novo `publicar_apos`; publique na rodada seguinte.
+O que cabe à rodada:
+- **Antes de criar post novo**, leia `registro/estado.json`. Com `pausa_ate` no futuro, só prepare
+  post se a notícia ainda valer depois desse horário (deixe `agendado` com `publicar_apos` =
+  `pausa_ate`); não gaste a pauta;
+- com `avisos_seguidos` ≥ 2, **no máximo 1 post por rodada** e só pauta com nota ≥ 5. Prefira
+  qualidade a volume até um post sair limpo;
+- nunca publique dois posts na mesma rodada em sequência, nem tente "furar" o intervalo mudando
+  `publicar_apos` à mão;
+- 2207051 com o post publicado (`publicacao.aviso_api` "o post saiu; conferido no perfil") é
+  **aviso, não falha**: siga normal e não avise o João por isso. 2207051 **sem** o post sair vira
+  `erro_publicacao` e o publicador segura tudo por 4 h: avise o João. Se isso acontecer duas vezes
+  no mesmo dia, pare de publicar até ele responder;
+- nunca reenvie um post com `erro_publicacao` sem antes conferir (dispare `teste-conexao.yml` e
+  veja `status/teste-conexao.json` > `recentes`) se ele já não está no ar;
+- no dossiê das 23h, informe quantos avisos 2207051 houve no dia e se diminuíram.
 `gh workflow run` não funciona nas sessões do Claude (GraphQL bloqueado); use
 `gh api -X POST repos/Joaobueno02/cbr-bot/actions/workflows/<arquivo>.yml/dispatches -f ref=main`
-(com `-f inputs[tarefa]=saude` etc. quando o workflow pede entrada).
+(com `-f "inputs[tarefa]=saude"` etc. quando o workflow pede entrada).
 
 Nunca publique por outro caminho. Numa execução agendada, **nunca edite** `config.json`,
 `registro/`, `.github/`, `bot/` (código), `assets/` (fontes e textura) nem `referencias/`; só o
