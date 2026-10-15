@@ -9,6 +9,10 @@ O dono é o João. Ele acompanha cada post pela notificação e pede para parar 
 1. `git pull`. Leia `registro/posts.jsonl` (o que já saiu) e a fila (`fila/*/post.json`).
    Se houver post com `erro_render`, `erro_publicacao` ou parado em `renderizado` de execução
    anterior, resolva ou descarte (status `descartado` + motivo) antes de pautas novas.
+   Post com `status: "agendado"` e `publicar_apos` (UTC) já vencido: confira se a notícia
+   continua valendo (nada mudou, não ficou velha nem foi desmentida); se sim, mude para
+   `publicar`; se não, corrija ou descarte. Use `agendado` para notícia apurada de madrugada
+   ou fora do horário de pico, com `publicar_apos` às 7h (10:00Z).
 2. Pesquise as notícias desde a última execução (seção 2). Escolha **no máximo 2** pautas.
    Se nada passar no filtro, não publique nada. Volume varia com o que acontece.
 3. Para cada pauta: apure (seção 3), escreva o `post.json` (seção 4) com `status: "renderizar"`,
