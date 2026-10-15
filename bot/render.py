@@ -99,7 +99,7 @@ def gerar_reels(quadro: Path, saida: Path, segundos: int = 12) -> None:
     cmd = ["ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-i", str(quadro),
            "-f", "lavfi", "-i", "anullsrc=channel_layout=stereo:sample_rate=44100",
            "-t", str(segundos), "-vf", filtro, "-c:v", "libx264", "-profile:v", "high",
-           "-preset", "medium", "-crf", "18", "-c:a", "aac", "-b:a", "128k",
+           "-preset", "medium", "-crf", "21", "-c:a", "aac", "-b:a", "128k",
            "-movflags", "+faststart", "-shortest", str(saida)]
     subprocess.run(cmd, check=True)
 

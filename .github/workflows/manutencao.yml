@@ -1,0 +1,88 @@
+name: Manutenção CBR (saúde, limpeza, relatório, histórico)
+
+on:
+  schedule:
+    - cron: "40 9 * * *"    # 6h40 (Brasília): saúde do token + limpeza da fila
+    - cron: "40 10 * * 1"   # segunda 7h40: relatório semanal
+    - cron: "15 6 1 * *"    # dia 1, 3h15: compacta o histórico do repositório
+  workflow_dispatch:
+    inputs:
+      tarefa:
+        description: "saude | relatorio | historico"
+        required: true
+        default: saude
+
+concurrency:
+  group: pipeline-cbr
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  manutencao:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Qual tarefa
+        id: t
+        run: |
+          case "${{ github.event.schedule }}" in
+            "40 9 * * *")  echo "tarefa=saude" >> "$GITHUB_OUTPUT" ;;
+            "40 10 * * 1") echo "tarefa=relatorio" >> "$GITHUB_OUTPUT" ;;
+            "15 6 1 * *")  echo "tarefa=historico" >> "$GITHUB_OUTPUT" ;;
+            *)             echo "tarefa=${{ github.event.inputs.tarefa }}" >> "$GITHUB_OUTPUT" ;;
+          esac
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Dependências
+        run: pip install requests pillow
+
+      - name: Saúde e limpeza
+        if: steps.t.outputs.tarefa == 'saude'
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: |
+          python bot/saude.py
+          python bot/limpeza.py
+
+      - name: Relatório semanal
+        if: steps.t.outputs.tarefa == 'relatorio'
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: python bot/relatorio.py
+
+      - name: Trava anti-vazamento e commit
+        if: steps.t.outputs.tarefa != 'historico'
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: |
+          git config user.name "cbr-bot"
+          git config user.email "cbr-bot@users.noreply.github.com"
+          git add -A fila registro
+          arquivos=$(git diff --cached --name-only --diff-filter=AM)
+          [ -z "$(git diff --cached --name-only)" ] && { echo "nada mudou"; exit 0; }
+          [ -n "$arquivos" ] && python bot/checar_vazamento.py $arquivos
+          git commit -m "bot: manutenção $(date -u +%FT%TZ)"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            sleep 5
+          done
+          exit 1
+
+      - name: Compactar histórico (um commit só com o estado atual)
+        if: steps.t.outputs.tarefa == 'historico'
+        run: |
+          git config user.name "cbr-bot"
+          git config user.email "cbr-bot@users.noreply.github.com"
+          git fetch --depth 1 origin main
+          git reset --hard origin/main
+          git checkout --orphan compacto
+          git add -A
+          git commit -m "Histórico compactado em $(date -u +%F) (estado atual preservado)"
+          git push --force origin compacto:main

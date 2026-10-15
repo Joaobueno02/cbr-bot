@@ -6,6 +6,13 @@ O dono é o João. Ele acompanha cada post pela notificação e pede para parar 
 
 ## 1. O que cada execução faz
 
+0. **Saúde** (toda rodada, antes de tudo):
+   - leia `registro/saude.json` (checagem diária às 6h40). Se `ok` for false, ou se o arquivo
+     tiver mais de 26 h, mande PushNotification ao João com o problema (ex.: "CBR: token
+     inválido, bot parado — gerar token novo"). Com problema de token, não tente publicar;
+   - rode `gh run list -R Joaobueno02/cbr-bot --limit 5`. Se algum run das últimas 2 h
+     falhou (failure), avise o João na primeira rodada em que perceber (uma vez só por falha);
+   - se o Actions não renderizar/publicar em 8 minutos depois do push, trate como falha.
 1. `git pull`. Leia `registro/posts.jsonl` (o que já saiu) e a fila (`fila/*/post.json`).
    Se houver post com `erro_render`, `erro_publicacao` ou parado em `renderizado` de execução
    anterior, resolva ou descarte (status `descartado` + motivo) antes de pautas novas.
@@ -13,6 +20,13 @@ O dono é o João. Ele acompanha cada post pela notificação e pede para parar 
    continua valendo (nada mudou, não ficou velha nem foi desmentida); se sim, mude para
    `publicar`; se não, corrija ou descarte. Use `agendado` para notícia apurada de madrugada
    ou fora do horário de pico, com `publicar_apos` às 7h (10:00Z).
+   **Pauta de acompanhamento** (`pautas/acompanhamento.json`): eventos marcados cujo desfecho
+   vale post (votações, julgamentos, debates, pesquisas com data de divulgação). Para cada item
+   `aguardando` com `quando` já passado, procure o resultado. Saiu e está confirmado: o post do
+   desfecho tem **prioridade** sobre pautas novas (status do item vira `publicado` com o id do
+   post). Ainda não saiu: deixe `aguardando` e confira na próxima rodada; se passar 24 h, marque
+   `encerrado`. Ao achar um evento futuro relevante durante a pesquisa, acrescente na lista
+   (evento, quando em UTC, editoria, onde_checar, obs). Este arquivo você pode editar.
 2. Pesquise as notícias desde a última execução (seção 2). Escolha **no máximo 2** pautas.
    Se nada passar no filtro, não publique nada. Volume varia com o que acontece.
 3. Para cada pauta: apure (seção 3), escreva o `post.json` (seção 4) com `status: "renderizar"`,
@@ -24,6 +38,13 @@ O dono é o João. Ele acompanha cada post pela notificação e pede para parar 
 7. Mude o status para `publicar`, commit e push. O Actions publica e grava o resultado em
    `publicacao` (link do post, collab) e em `registro/posts.jsonl`.
 8. Confira o resultado e mande a notificação (seção 9).
+
+**Segunda-feira, primeira rodada depois das 7h40**: leia o relatório mais recente em
+`registro/relatorios/`. Mande ao João (SendUserMessage) um resumo curto: seguidores no
+início e no fim da semana, os 3 posts de maior alcance, o que funcionou melhor por editoria,
+formato, faixa de horário e collab, e no máximo 3 sugestões de ajuste com o número que as
+sustenta. Não mude o manual por conta própria: as sugestões dependem do OK dele. Se o relatório
+vier com aviso de permissão, avise que falta gerar o token com `instagram_manage_insights`.
 
 Nunca publique por outro caminho. Nunca edite `config.json`, `registro/` ou o workflow
 durante uma execução agendada; só o João autoriza isso numa conversa.
