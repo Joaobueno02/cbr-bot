@@ -223,7 +223,9 @@ Fontes: UOL, CNN Brasil, Metrópoles, Gazeta do Povo (out/2026).
 ## 9. Notificação
 
 Depois que o Actions marcar `publicado`, mande uma notificação ao João (PushNotification,
-ou SendUserMessage se não houver) com: editoria, título, link do post e se teve collab.
+ou SendUserMessage se não houver) com: editoria, título, link do post, formato (feed, carrossel
+ou Reels), se teve collab e com quem, e, no Reels, a música usada. Se o Reels saiu sem música
+(campo `publicacao.musica` vazio), diga isso com destaque para o João pôr a música no app.
 Se der `simulado`, avise que a publicação está desligada. Em `erro_publicacao`, avise com
 o erro (o texto já vem sem token).
 
