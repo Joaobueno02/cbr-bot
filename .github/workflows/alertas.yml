@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "*/10 0-2,10-23 * * *"   # a cada 10 min, das 7h às 23h50 (Brasília)
   workflow_dispatch:
+    inputs:
+      teste:
+        description: "true = só manda um alerta de teste"
+        required: false
+        default: "false"
 
 concurrency:
   group: alertas-cbr
@@ -26,7 +31,8 @@ jobs:
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
-        run: python bot/alertas.py
+        run: |
+          if [ "${{ github.event.inputs.teste }}" = "true" ]; then python bot/alertas.py --teste; else python bot/alertas.py; fi
       - name: Trava anti-vazamento e commit
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}

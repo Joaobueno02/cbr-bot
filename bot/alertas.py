@@ -130,6 +130,11 @@ def parceiros(estado: dict) -> None:
 
 
 def main() -> None:
+    if "--teste" in sys.argv:
+        ok = enviar("CBR: teste de alerta", "Se você está lendo isto, os avisos de collab aceita e de posts fortes da BFC/Luz vão chegar aqui.",
+                    "https://www.instagram.com/comunabrasileira_/", ["white_check_mark"])
+        print("teste enviado" if ok else "falha no envio do teste")
+        sys.exit(0 if ok else 1)
     if not CONFIG.get("publicacao_ativa"):
         print("publicação desligada; sem alertas")
         return
