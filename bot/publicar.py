@@ -11,7 +11,7 @@ Regras:
       N-ésimo post, N % 3 == 0  -> perfis padrão
   - bombástica sai como Reels com música da biblioteca do Instagram (Audio API)
   - posts com collab entram em registro/collabs_pendentes.json; quando o convite é aceito,
-    stories.py posta a versão vertical nos Stories
+    alertas.py avisa o João no celular (ntfy) para ele compartilhar nos Stories pelo app
   - o token vai só no cabeçalho Authorization; nada da resposta bruta é gravado
 """
 from __future__ import annotations
@@ -188,10 +188,11 @@ def processar(arq: Path, estado: dict) -> None:
                     raise
             post["status"] = "publicado"
             estado["publicados"] = numero
-            if res.get("collab") and post.get("render", {}).get("story"):
+            if res.get("collab"):
                 pend = json.loads(PENDENTES.read_text(encoding="utf-8")) if PENDENTES.exists() else []
                 pend.append({"id": pasta, "media_id": res["media_id"], "quando": res["quando"],
-                             "convidados": res["collab"], "story": post["render"]["story"]})
+                             "convidados": res["collab"], "permalink": res.get("permalink"),
+                             "titulo": post.get("titulo") or (post.get("slides") or [{}])[0].get("titulo")})
                 PENDENTES.write_text(json.dumps(pend, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             with REGISTRO.open("a", encoding="utf-8") as f:
                 f.write(json.dumps({

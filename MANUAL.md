@@ -280,8 +280,10 @@ link para o Instagram no site oficial da instituição (rodapé ou página de co
 verificado. Na dúvida, deixe vazio e diga na notificação que a collab da instituição ficou de
 fora por falta de confirmação. Não convide a instituição quando a notícia for crítica a ela.
 
-**Stories**: de hora em hora o GitHub confere os convites dos últimos 2 dias. Quando um
-colaborador aceita, a versão vertical do post vai para os Stories automaticamente, uma vez.
+**Stories** (feitos à mão pelo João, para sair com o "Adicionar ao story" clicável; a API não
+oferece essa função): o GitHub confere a cada 10 min e manda alerta no celular dele (ntfy)
+quando (a) uma collab nossa é aceita e (b) um post da BFC ou da Luz está com engajamento
+forte (até 5 por perfil por dia). O bot não publica nada nos Stories.
 
 ## 11. Correção (errata)
 

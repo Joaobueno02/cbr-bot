@@ -1,0 +1,46 @@
+name: Alertas no celular (collab aceita e posts fortes dos parceiros)
+
+on:
+  schedule:
+    - cron: "*/10 0-2,10-23 * * *"   # a cada 10 min, das 7h às 23h50 (Brasília)
+  workflow_dispatch:
+
+concurrency:
+  group: alertas-cbr
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  alertas:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Conferir e avisar
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python bot/alertas.py
+      - name: Trava anti-vazamento e commit
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: |
+          git config user.name "cbr-bot"
+          git config user.email "cbr-bot@users.noreply.github.com"
+          git add registro
+          [ -z "$(git diff --cached --name-only)" ] && { echo "nada mudou"; exit 0; }
+          python bot/checar_vazamento.py $(git diff --cached --name-only)
+          if [ -n "$NTFY_TOPIC" ] && grep -rqF "$NTFY_TOPIC" registro; then echo "tópico vazaria"; exit 1; fi
+          git commit -m "alertas $(date -u +%FT%TZ)"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            sleep 5
+          done
+          exit 1
