@@ -29,7 +29,9 @@ jobs:
             "$API/$IG_USER_ID/content_publishing_limit?fields=quota_usage,config")
           ultimo=$(curl -sS -H "Authorization: Bearer $IG_TOKEN" "$API/$IG_USER_ID/media?fields=id&limit=1" | jq -r '.data[0].id // empty')
           ins=$(curl -sS -H "Authorization: Bearer $IG_TOKEN" "$API/$ultimo/insights?metric=reach")
-          jq -n --argjson conta "$conta" --argjson cota "$cota" --argjson ins "$ins" --arg quando "$(date -u +%FT%TZ)" '{
+          recente=$(curl -sS -H "Authorization: Bearer $IG_TOKEN" "$API/$IG_USER_ID/media?fields=id,timestamp,permalink,media_type,caption&limit=3" | jq '[.data[] | {id, timestamp, permalink, media_type, inicio: (.caption // "" | .[0:90])}]')
+          jq -n --argjson conta "$conta" --argjson cota "$cota" --argjson ins "$ins" --argjson recente "$recente" --arg quando "$(date -u +%FT%TZ)" '{
+            recentes: $recente,
             insights_ok: ($ins.error == null),
             insights_erro: ($ins.error | if . then {code, message} else null end),
             quando: $quando,
