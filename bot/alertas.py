@@ -6,8 +6,8 @@
    Convites com mais de 48 h sem aceite saem da lista.
 
 2. Post forte dos parceiros: lê o feed da BFC e da Luz (Business Discovery). Um post vira alerta
-   quando tem entre 1 h e 24 h de vida e engajamento por hora no quartil de cima dos posts do
-   próprio perfil nas últimas 48 h. Máximo de 5 alertas por perfil por dia, só das 7h às 23h.
+   quando foi publicado no mesmo dia a partir das 7h, tem pelo menos 1 h de vida e engajamento
+   por hora no quartil de cima dos posts do próprio perfil nas últimas 48 h (régua de comparação). Máximo de 5 alertas por perfil por dia, só das 7h às 23h.
 
 O tópico do ntfy fica no secret NTFY_TOPIC (o repositório é público). Sem ele, nada é enviado.
 Estado em registro/alertas.json.
@@ -114,7 +114,11 @@ def parceiros(estado: dict) -> None:
         vels = sorted(p["vel"] for p in posts)
         corte = vels[int(len(vels) * 0.75)]
         avisados = set(estado.setdefault("avisados_parceiros", []))
-        candidatos = sorted([p for p in posts if 1 <= p["horas"] <= 24 and p["vel"] >= corte and p["id"] not in avisados],
+        # só posts publicados hoje a partir das 7h (Brasília); o que saiu antes fica de fora
+        inicio_dia = hoje.replace(hour=7, minute=0, second=0, microsecond=0)
+        candidatos = sorted([p for p in posts
+                             if datetime.strptime(p["timestamp"], "%Y-%m-%dT%H:%M:%S%z") >= inicio_dia
+                             and p["horas"] >= 1 and p["vel"] >= corte and p["id"] not in avisados],
                             key=lambda p: -p["vel"])
         for p in candidatos:
             if estado["contagem"].get(user, 0) >= MAX_DIA:
