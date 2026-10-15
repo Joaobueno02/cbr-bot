@@ -103,9 +103,13 @@ a menos que haja fato novo relevante. Prefira notícia das últimas horas.
   `==trecho==` com marca-texto (Economia/Educação), `|` força quebra de linha.
 - **subtitulo**: 1 ou 2 frases com o dado que sustenta o título e a negativa, se houver.
   Até ~260 caracteres. `**negrito**` para números. Em Política pode ficar vazio.
-- **credito_foto**: em Política/Eleições/Saúde vai no rodapé; em Gerais/Economia/Educação vai
+- **credito_foto**: em Eleições/Saúde vai no rodapé; em Gerais/Economia/Educação vai
   acima do título. Formato: "Foto: <fonte>" ou "<quem aparece> · Foto: <fonte>".
-  Pode usar o campo `rodape` para um texto de rodapé diferente (ex.: "PEC 221/2019 · Aprovada por 75 × 1 · Foto: Agência Senado").
+  **Política não tem rodapé**: o crédito vai na última linha da legenda, junto das fontes
+  ("Fontes: ... Foto: <fonte>."). Isso vale sempre que a arte sair sem crédito visível.
+- Padrão visual da Política (aprovado em 15/10): título menor e mais fino, bloco de texto mais
+  alto, destaque em marca-texto vermelho inclinado, vermelho #D0021B, barra com vermelho
+  predominante, CBR do topo 25% menor. Já está no gerador; não precisa preencher nada.
 - O renderizador diminui o título até caber. Se der `erro_render` por texto, encurte.
 
 ### Carrossel (só quando necessário: posts críticos, explicações com dados)

@@ -251,8 +251,20 @@ def _foto_educacao(c: dict, foto_uri: str, recorte: bool, posicao: str, alt: str
             f'</div>')
 
 
+# Padrão visual aprovado pelo João em 15/10/2026 (post da PEC da Segurança).
+# Cada editoria pode ter os seus; o post.json ainda pode sobrescrever qualquer item.
+PADROES = {
+    "politica": {
+        "titulo_max": 52, "bloco_subir": 110, "barra_invertida": True, "cbr_escala": 0.75,
+        "peso_titulo": 640, "destaque_estilo": "marca_inclinada", "destaque_faixa": [55, 95],
+        "cor_destaque": "#D0021B", "sem_rodape": True,
+    },
+}
+
+
 def post_unico(post: dict, foto_uri: str, recorte: bool = False) -> str:
     """Arte de post único (1080x1350) no padrão da editoria."""
+    post = {**PADROES.get(post["editoria"], {}), **post}
     ed = post["editoria"]
     c = dict(EDITORIAS[ed])
     cor_nova = post.get("cor_destaque")
