@@ -35,7 +35,7 @@ METRICAS_CBR = ["reach", "views", "total_interactions", "shares", "saved", "like
 
 def perfil(user: str) -> dict:
     r = chamar("GET", CONFIG["ig_user_id"],
-               fields=f"business_discovery.username({user}){{username,followers_count,media_count,media.limit(40){{{CAMPOS}}}}}")
+               fields=f"business_discovery.username({user}){{username,followers_count,media_count,media.limit(90){{{CAMPOS}}}}}")
     bd = r.get("business_discovery", {})
     seguidores = bd.get("followers_count") or 0
     posts = []

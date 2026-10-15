@@ -290,6 +290,47 @@ oferece essa função): o GitHub confere a cada 10 min e manda alerta no celular
 quando (a) uma collab nossa é aceita e (b) um post da BFC ou da Luz está com engajamento
 forte (até 5 por perfil por dia). O bot não publica nada nos Stories.
 
+## 10b. Dossiê do dia (rodada das 23h)
+
+Na última rodada do dia (a que começa às 23h), depois do trabalho normal, monte o **dossiê de
+melhorias** e mande ao João com SendUserMessage. Salve também em `dossies/AAAA-MM-DD.md`
+(commit e push). Antes de escrever, leia os dossiês dos últimos 7 dias para não repetir
+sugestão já feita (se repetir, diga que é reforço e por quê).
+
+**Dados** (não sugira nada sem dado ou exemplo):
+- `radar/benchmark.json` (22h45): posts das últimas 24 h de ~13 páginas de notícia, com
+  engajamento, formato, horário, tamanho e começo da legenda, hashtags. A **BFC é a referência
+  principal**. Abra as miniaturas em `radar/benchmark/img/` (ferramenta Read) para analisar o
+  design dos posts que mais renderam. Compare engajamento por mil seguidores entre páginas de
+  tamanhos diferentes;
+- o bloco `cbr` do mesmo arquivo: nossos posts do dia com alcance, interações, compartilhamentos e
+  salvos;
+- `registro/posts.jsonl`, `registro/saude.json`, `radar/saude_fontes.json`, os post.json do dia
+  (descartes, `historico_revisao`, erros de render/publicação) e
+  `gh run list -R Joaobueno02/cbr-bot --limit 60` para falhas.
+
+**Estrutura** (direto, sem enrolação, no máximo ~900 palavras):
+1. **O dia em números**: posts publicados, os 2 de melhor e pior desempenho (com link e o porquê
+   provável), seguidores, collabs aceitas.
+2. **Página** (cada item com o exemplo concreto, link e número que sustenta):
+   - *O que as outras páginas fizeram que funcionou* (BFC primeiro): formatos, ganchos de título,
+     temas, horários, frequência.
+   - *Novos tópicos ou séries*: eixos novos além de Política, Eleições 2026, Economia, Educação,
+     Saúde e Gerais (ex.: Trabalho, Meio ambiente, Internacional, "Checagem", séries fixas), com o
+     que já rende nas referências e como entraria na identidade visual.
+   - *Design dos posts*: o que as artes que mais renderam têm que as nossas não têm (sem copiar
+     identidade de ninguém; sempre adaptado ao padrão da CBR).
+   - *Legendas*: tamanho, gancho da primeira linha, chamada para ação, hashtags, comparando com
+     as legendas de quem rendeu mais.
+   - *Como e o que postar*: horários, mix de formatos (feed, carrossel, Reels), frequência.
+3. **Sistema**: falhas e gargalos do dia (erros, descartes por foto ruim, revisões reprovadas,
+   fontes fora do ar, atrasos), e melhorias técnicas concretas.
+4. **Top 3 para amanhã**: as três mudanças de maior impacto, em ordem, cada uma com o esforço
+   (pequeno/médio/grande).
+
+Regras: separe fato (número) de interpretação; não trate correlação de um dia como regra;
+**não aplique nada** por conta própria: toda mudança depende do OK do João numa conversa.
+
 ## 11. Correção (errata)
 
 Se descobrir erro em post já publicado (seu ou apontado nos comentários):
