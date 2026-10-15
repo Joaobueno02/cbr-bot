@@ -119,11 +119,16 @@ def _sem_quebra(t: str) -> str:
     return t
 
 
+def _nowrap(trecho: str) -> str:
+    """Só segura numa linha destaques curtos (valores, 1-3 palavras); longos podem quebrar."""
+    return ";white-space:nowrap" if len(trecho) <= 22 else ""
+
+
 def marcar(texto: str, destaque: str, cor_negrito: str, titulo: bool = False) -> str:
     t = _sem_quebra(html.escape(texto or "", quote=False))
     t = re.sub(r"==(.+?)==", lambda m: f'<span style="{MARCA_TEXTO}">{m.group(1)}</span>', t)
     t = re.sub(r"\*\*(.+?)\*\*", lambda m: f'<b style="color:{cor_negrito};font-weight:700">{m.group(1)}</b>', t)
-    t = re.sub(r"\*(.+?)\*", lambda m: f'<span style="font-weight:900;color:{destaque};white-space:nowrap">{m.group(1)}</span>', t)
+    t = re.sub(r"\*(.+?)\*", lambda m: f'<span style="font-weight:900;color:{destaque}{_nowrap(m.group(1))}">{m.group(1)}</span>', t)
     if titulo:
         t = t.replace("|", "<br>")
     return t

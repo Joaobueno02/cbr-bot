@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "fila/**/post.json"
+      - "fila/**/sondar.json"
       - "config.json"
   workflow_dispatch:
 
@@ -27,19 +28,26 @@ jobs:
         run: |
           r=$(grep -l '"status": "renderizar"' fila/*/post.json 2>/dev/null | wc -l)
           p=$(grep -l '"status": "publicar"' fila/*/post.json 2>/dev/null | wc -l)
+          s=$(grep -l '"status": "sondar"' fila/*/sondar.json 2>/dev/null | wc -l)
           echo "renderizar=$r" >> "$GITHUB_OUTPUT"
           echo "publicar=$p" >> "$GITHUB_OUTPUT"
-          echo "renderizar: $r · publicar: $p"
+          echo "sondar=$s" >> "$GITHUB_OUTPUT"
+          echo "algo=$(( r + p + s ))" >> "$GITHUB_OUTPUT"
+          echo "renderizar: $r · publicar: $p · sondar: $s"
 
       - uses: actions/setup-python@v5
-        if: steps.fila.outputs.renderizar != '0' || steps.fila.outputs.publicar != '0'
+        if: steps.fila.outputs.algo != '0'
         with:
           python-version: "3.12"
           cache: pip
 
       - name: Instalar dependências
-        if: steps.fila.outputs.renderizar != '0' || steps.fila.outputs.publicar != '0'
+        if: steps.fila.outputs.algo != '0'
         run: pip install -r requirements.txt
+
+      - name: Sondar fotos candidatas
+        if: steps.fila.outputs.sondar != '0'
+        run: python bot/sondar.py
 
       - name: Cache do Chromium e do modelo de recorte
         if: steps.fila.outputs.renderizar != '0'
@@ -65,7 +73,7 @@ jobs:
         run: python bot/publicar.py
 
       - name: Trava anti-vazamento e commit
-        if: steps.fila.outputs.renderizar != '0' || steps.fila.outputs.publicar != '0'
+        if: steps.fila.outputs.algo != '0'
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
         run: |

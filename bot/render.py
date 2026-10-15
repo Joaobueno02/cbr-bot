@@ -93,6 +93,9 @@ def processar(pasta: Path, pagina) -> None:
     try:
         for velha in pasta.glob("arte-*.jpg"):
             velha.unlink()
+        rod = post.get("rodape") or ""
+        if len(rod) > 95:
+            raise ValueError(f"rodapé com {len(rod)} caracteres; o máximo é 95 (uma linha)")
         if post.get("formato", "unico") == "unico":
             meta = baixar_foto(post["foto_url"], pasta / "foto.jpg")
             rel["foto"] = meta
