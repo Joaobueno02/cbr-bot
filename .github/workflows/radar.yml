@@ -3,6 +3,7 @@ name: Radar de notícias e parceiros
 on:
   schedule:
     - cron: "50 0-2,9-23 * * *"   # de hora em hora, das 6h50 às 23h50 (Brasília), antes das rodadas
+    - cron: "20 0-2,9-23 * * *"   # meia hora depois: só manchetes, sem gastar chamadas do Instagram
   workflow_dispatch:
 
 concurrency:
@@ -15,7 +16,7 @@ permissions:
 jobs:
   radar:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -26,6 +27,7 @@ jobs:
       - name: Radar de manchetes
         run: python bot/radar.py
       - name: Feed da BFC e da Luz
+        if: github.event.schedule != '20 0-2,9-23 * * *'
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
         run: python bot/parceiros.py

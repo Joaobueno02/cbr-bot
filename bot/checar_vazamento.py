@@ -10,6 +10,11 @@ import sys
 from pathlib import Path
 
 PADROES = [re.compile(r"EAA[A-Za-z0-9]{20,}"), re.compile(r"access_token", re.I)]
+# arquivos do radar de manchetes: gerados por bot/radar.py, que nunca toca no token. Os links do
+# Google Notícias são códigos longos que às vezes contêm "EAA..." por acaso, então ali só vale a
+# checagem do token exato e de "access_token".
+SO_TOKEN_EXATO = {"radar/atual.json", "radar/novos.md", "radar/top.md", "radar/vistos.json",
+                  "radar/saude_fontes.json"}
 
 
 def main() -> int:
@@ -23,6 +28,8 @@ def main() -> int:
         if token and token in txt:
             achados.append(f"{nome}: contém o IG_TOKEN")
         for pad in PADROES:
+            if nome in SO_TOKEN_EXATO and pad is PADROES[0]:
+                continue
             if pad.search(txt):
                 achados.append(f"{nome}: padrão suspeito {pad.pattern}")
     if achados:
