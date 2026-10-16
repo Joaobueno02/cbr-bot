@@ -176,7 +176,7 @@ def conferir(pasta: Path, pagina) -> None:
         return
     if (post.get("design_auto") or {}).get("render_quando") == rel.get("quando"):
         return
-    artes, graves, avisos = [], [], []
+    artes, avisos = [], []
     if post.get("formato", "unico") == "unico":
         artes.append(conferir_arte(pagina, pasta, 1, post, None))
     else:

@@ -374,7 +374,7 @@ Se reprovar, corrija (texto, `foto_posicao` ou outra foto), renderize de novo e 
 design de novo. Máximo 3 renders; depois, descarte com o motivo. Para posts a partir de 16/10, o
 publicador recusa post sem `revisao_design.aprovado == true`.
 
-## 7. Revisor independente (obrigatório)
+## 7. Revisor da notícia (obrigatório, independente)
 
 Depois da arte pronta, chame um subagente (ferramenta Agent) que **não escreveu o post**,
 passando o caminho da pasta do post e este manual. Instrução ao revisor:

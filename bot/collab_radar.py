@@ -171,6 +171,7 @@ def rodar(enviar=None) -> dict:
                       f"siga a página antes, pelo app (a API não segue por nós).",
                       f"https://www.instagram.com/{u}/", ["busts_in_silhouette"]):
                 estado["alertas_seguir"] += 1
+                vistas.add(c["link"])  # o alerta de "siga" já leva a chamada; não repete
 
     # alertas no celular
     for c in sorted(chamadas, key=lambda c: c["quando"] or "", reverse=True):
