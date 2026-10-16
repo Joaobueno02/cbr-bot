@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       tarefa:
-        description: "saude | relatorio | historico | benchmark"
+        description: "saude | relatorio | historico | benchmark | movimentos"
         required: true
         default: saude
 
@@ -52,6 +52,12 @@ jobs:
         run: |
           python bot/saude.py
           python bot/limpeza.py
+
+      - name: Movimentos sociais (confirma os @ e mede horários de postagem)
+        if: steps.t.outputs.tarefa == 'movimentos'
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: python bot/parceiros.py --horarios
 
       - name: Coleta para o dossiê
         if: steps.t.outputs.tarefa == 'benchmark'

@@ -81,6 +81,58 @@ def coletar_movimentos() -> dict:
     return perfis
 
 
+CANDIDATOS_MOVIMENTOS = {
+    "MST": ["movimentosemterra", "mst_oficial", "mstoficial"],
+    "MTST": ["mtst", "mtst_oficial", "mtstbrasil"],
+    "CUT": ["cutbrasil", "cut_brasil", "cutnacional"],
+    "UNE": ["uneoficial", "une_oficial", "unebrasil"],
+    "Apib": ["apiboficial", "apib_oficial"],
+    "Sleeping Giants": ["slpng_giants_pt"],
+    "Greenpeace Brasil": ["greenpeacebrasil", "greenpeacebr"],
+    "MAB": ["mabnacional", "mab_nacional"],
+    "Levante Popular da Juventude": ["levantepopulardajuventude", "levantepopular"],
+    "Contag": ["contagbrasil", "contag_oficial"],
+}
+
+
+def horarios() -> None:
+    """Uma vez, à mão (manutencao.yml tarefa=movimentos): confirma os @ dos movimentos e mede
+    em que horas (Brasília) cada perfil mais posta e quando os posts rendem mais.
+    Grava radar/movimentos_horarios.json."""
+    from collections import Counter, defaultdict
+    from datetime import timedelta
+    saida = {"quando": agora(), "perfis": {}}
+    for nome, cands in CANDIDATOS_MOVIMENTOS.items():
+        for user in cands:
+            try:
+                r = chamar("GET", CONFIG["ig_user_id"],
+                           fields=f"business_discovery.username({user}){{username,followers_count,media_count,"
+                                  f"media.limit(60){{timestamp,like_count,comments_count}}}}")
+            except ErroAPI as e:
+                saida["perfis"].setdefault(nome, {"testados": []})["testados"].append({"user": user, "erro": str(e)[:160]})
+                continue
+            bd = r.get("business_discovery", {})
+            horas, inter = Counter(), defaultdict(list)
+            datas = []
+            for m in bd.get("media", {}).get("data", []):
+                t = datetime.strptime(m["timestamp"], "%Y-%m-%dT%H:%M:%S%z").astimezone(timezone(timedelta(hours=-3)))
+                datas.append(t)
+                horas[t.hour] += 1
+                inter[t.hour].append((m.get("like_count") or 0) + (m.get("comments_count") or 0))
+            dias = max(1, (max(datas) - min(datas)).days) if datas else 1
+            saida["perfis"][nome] = {
+                "user": user, "seguidores": bd.get("followers_count"), "posts_analisados": len(datas),
+                "periodo_dias": dias, "posts_por_dia": round(len(datas) / dias, 1),
+                "posts_por_hora": {f"{h:02d}h": horas[h] for h in sorted(horas)},
+                "mediana_interacoes_por_hora": {f"{h:02d}h": sorted(v)[len(v) // 2] for h, v in sorted(inter.items())},
+                "testados": saida["perfis"].get(nome, {}).get("testados", []),
+            }
+            break
+    destino = RAIZ / "radar" / "movimentos_horarios.json"
+    destino.write_text(json.dumps(saida, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print({k: v.get("user", "não achado") for k, v in saida["perfis"].items()})
+
+
 def main() -> None:
     perfis = {}
     for user in PARCEIROS:
@@ -93,4 +145,7 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    if "--horarios" in sys.argv:
+        horarios()
+    else:
+        main()
