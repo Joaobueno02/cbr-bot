@@ -42,13 +42,18 @@ O dono é o João. Ele acompanha cada post pela notificação e pede para parar 
    publique ainda nesta rodada. **Comece pelo radar**:
    - **`radar/pauta.md` primeiro, lido INTEIRO com a ferramenta Read** (nunca por WebFetch, que
      resume e perde itens). Atualizado às :20 e :50. Tem três partes: (A) tudo que a BFC e a Luz
-     postaram hoje, cruzado com o radar; (B) assuntos em alta (ganharam veículos nas últimas 3 h,
-     mesmo que tenham começado ontem); (C) novos das últimas 3 h com vagas para Brasil,
-     internacional, pesquisa e universidades. **Todo item de A e B com "na pauta desde" depois da
+     postaram hoje, cruzado com o radar; (B) assuntos em alta (desde 16/10, **2 veículos já bastam**
+     para entrar; ganharam veículos nas últimas 3 h, mesmo que tenham começado ontem); (C) novos das
+     últimas 3 h com vagas para Brasil, internacional, pesquisa e universidades; (D) os eixos
+     **América Latina** e **Da Terra** (campo, agricultura familiar, reforma agrária, alimento), das
+     últimas 6 h. **Todo item de A e B com "na pauta desde" depois da
      rodada anterior precisa ser avaliado nesta rodada**: publique, ou registre no resumo da
      rodada por que descartou. A regra da janela vale para o fato novo, mas assunto que estourou
      agora (B) ou que os parceiros deram hoje (A) entra mesmo que tenha começado antes;
-   - `radar/atual.json` (~150 fontes nacionais, internacionais, institutos e universidades, últimas
+   - **Monitor da BFC/Luz**: `radar/parceiros.json` é atualizado a cada 20 min (alertas.yml). Se a
+     seção A parecer atrasada, leia direto o parceiros.json (posts de hoje, com legenda e link);
+   - `radar/atual.json` (~215 fontes: nacionais, imprensa de esquerda, regionais, Europa e EUA
+     sobre Brasil e América Latina, latino-americanas, campo, institutos e universidades, últimas
      26 h, agrupado por assunto; `temperatura` = veículos diferentes) é o acervo completo: use
      para aprofundar um assunto (todos os veículos e links), não para varrer. O radar é ponto de
      partida, não fonte: a apuração (seção 3) continua obrigatória;
@@ -118,6 +123,13 @@ não carregarem, a arte dá erro_render: renderize de novo, nunca publique arte 
 - `gerais` — **Notícias gerais e posts críticos**: denúncias e casos que envolvem figuras
   políticas mas não são do processo eleitoral (ex.: o caso Willer Tomaz/INSS), e análises
   críticas (ex.: o carrossel das abstenções).
+
+- **Eixos novos (16/10/2026), design aguardando aprovação do João**: `america_latina`
+  (América Latina: governos, eleições, protestos, EUA na região, Mercosul) e `terra` (Da Terra:
+  agricultura familiar, reforma agrária, MST, agroecologia, agrotóxico, preço do alimento, fome,
+  conflito no campo). Enquanto o design não for aprovado e entrar no gerador, publique América
+  Latina em `gerais` e Da Terra em `economia` (preço/alimento) ou `gerais` (luta, conflito). Os
+  protótipos estão em `prototipos/eixos/`.
 
 Notícia fora desses eixos (esporte, celebridade, crime comum sem ligação política) fica de fora.
 
