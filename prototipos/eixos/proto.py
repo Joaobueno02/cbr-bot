@@ -226,6 +226,41 @@ def render(nome: str, html_txt: str) -> Path:
     return j
 
 
+# ------------------------------------------------------------------ CAMPO, com nome escrito à mão
+FONTES_MAO = {
+    "PermanentMarker": "fonts/fontsource-permanent-marker-5.3.0/package/files/permanent-marker-latin-400-normal.woff2",
+    "CaveatBrush": "fonts/fontsource-caveat-brush-5.3.0/package/files/caveat-brush-latin-400-normal.woff2",
+}
+
+
+def marca_mao(nome: str, fonte: str, cor_cbr: str, cor_mao: str, tam_mao: int) -> str:
+    uri = (Path(__file__).resolve().parent.parent / FONTES_MAO[fonte]).as_uri()
+    ff = f"<style>@font-face{{font-family:'{fonte}';src:url('{uri}') format('woff2')}}</style>"
+    # traço à mão sob o nome (curva levemente torta)
+    risco = (f'<svg style="position:absolute;left:-6px;bottom:-18px" width="100%" height="18" viewBox="0 0 300 18" preserveAspectRatio="none">'
+             f'<path d="M3 11 C 60 4, 120 15, 180 8 S 270 6, 297 10" fill="none" stroke="{cor_mao}" stroke-width="4.5" stroke-linecap="round"/></svg>')
+    return (ff + f'<div style="position:absolute;z-index:6;left:80px;top:46px;line-height:1">'
+            f'<div style="font-family:Unbounded,Archivo,sans-serif;font-weight:900;font-size:84px;letter-spacing:-4px;color:{cor_cbr}">CBR</div>'
+            f'<div style="position:relative;display:inline-block;margin:-8px 0 0 64px;font-family:{fonte};font-size:{tam_mao}px;'
+            f'color:#F6F0E4;text-shadow:0 2px 10px rgba(0,0,0,.55);transform:rotate(-5deg);transform-origin:left center;white-space:nowrap">{html.escape(nome)}{risco}</div></div>')
+
+
+def campo_mao(p: dict, uri: str) -> str:
+    bg, tx, sub, dest, verde = "#17130E", "#F6F0E4", "#CFC4B2", "#E9A23B", "#9BC45A"
+    esq = 120
+    partes = [chapeu(p["chapeu"], dest), titulo(p, tx, dest)]
+    if p.get("subtitulo"):
+        partes.append(subtitulo(p["subtitulo"], sub, dest, tx))
+    marca = marca_mao(p["nome_eixo"], p["fonte_mao"], dest, verde, p.get("tam_mao", 54))
+    sulcos = "".join(
+        f'<div style="position:absolute;z-index:3;left:{esq + i * 22}px;top:1272px;width:12px;height:4px;border-radius:2px;background:{verde};opacity:{.9 - i * .07:.2f}"></div>'
+        for i in range(12))
+    corpo = (f'<div style="width:{W}px;height:{H}px;position:relative;overflow:hidden;background:{bg};color:{tx}">'
+             f'{foto_cheia(uri, p.get("foto_posicao", "50% 40%"), "23,19,14", bg, 800, "filter:saturate(1.08) sepia(.12) contrast(1.04)")}{marca}'
+             f'{bloco(partes, esq, 1262 - 40 - 110)}{barra(1258, esq, dest, "#3B342A")}{sulcos}{papel("overlay", .4)}</div>')
+    return _pagina(corpo, bg)
+
+
 if __name__ == "__main__":
     cfg = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
     for item in cfg:

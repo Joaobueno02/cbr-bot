@@ -73,6 +73,14 @@ LOCKUPS = {
         '<text x="0" y="74" font-family="Archivo, sans-serif" font-weight="600" font-size="46" letter-spacing="1" fill="#101010"><tspan font-family="Unbounded, Archivo, sans-serif" font-weight="900" font-size="49" fill="#56622C">E</tspan>DUCAÇÃO</text>'
         '<g mask="url(#cbrmask)"><text x="0" y="74" font-family="Archivo, sans-serif" font-weight="600" font-size="46" letter-spacing="1" fill="#FFFFFF"><tspan font-family="Unbounded, Archivo, sans-serif" font-weight="900" font-size="49" fill="#FFFFFF">E</tspan>DUCAÇÃO</text></g></svg>'
     ),
+    # aprovado pelo João em 16/10/2026 (opção A, "Pátria Grande")
+    "america_latina": (
+        '<svg style="position:absolute;z-index:6;left:128px;top:50px" width="473" height="96" viewBox="0 0 690 140" role="img" aria-label="América Latina CBR">'
+        '<defs><clipPath id="cbrclip"><text x="372" y="101" font-family="Unbounded, Archivo, sans-serif" font-weight="900" font-size="118" letter-spacing="-4">CBR</text></clipPath></defs>'
+        '<text x="372" y="101" font-family="Unbounded, Archivo, sans-serif" font-weight="900" font-size="118" letter-spacing="-4" fill="#FF5A1F">CBR</text>'
+        '<text x="0" y="74" font-family="Archivo, sans-serif" font-weight="600" font-size="46" letter-spacing="1" fill="#FFFFFF">AMÉRICA LATINA</text>'
+        '<g clip-path="url(#cbrclip)"><text x="0" y="74" font-family="Archivo, sans-serif" font-weight="600" font-size="46" letter-spacing="1" fill="#101010">AMÉRICA LATINA</text></g></svg>'
+    ),
     "saude": (
         '<svg style="position:absolute;z-index:6;left:128px;top:52px" width="387" height="76" viewBox="0 0 580 114" role="img" aria-label="Saúde CBR">'
         '<text x="152" y="101" font-family="Unbounded, Archivo, sans-serif" font-weight="900" font-size="118" letter-spacing="-4" fill="#14D9C4">CBR</text>'
@@ -102,11 +110,12 @@ EDITORIAS = {
     "eleicoes": dict(ESCURO, destaque="#FED700", icone="#FED700", icone_top=70, marca="lockup", esquerda=120, credito="rodape", foto_min=780),
     "saude":    dict(ESCURO, destaque="#14D9C4", icone="#E3AD16", icone_top=72, marca="lockup", esquerda=120, credito="rodape", foto_min=780),
     "gerais":   dict(ESCURO, destaque="#E0302A", icone=None, icone_top=60, marca="simples", esquerda=120, credito="topo", foto_min=760),
+    "america_latina": dict(ESCURO, destaque="#FF5A1F", icone="#FF5A1F", icone_top=70, marca="lockup", esquerda=120, credito="rodape", foto_min=800),
     "economia": dict(CLARO, destaque="#1646E0", icone="#E3AD16", icone_top=72, marca="lockup", esquerda=120, credito="topo", foto_min=760),
     "educacao": dict(CLARO, destaque="#56622C", icone="#E3AD16", icone_top=72, marca="lockup", esquerda=120, credito="topo", foto_min=780),
 }
 
-TITULO_MAX = {"politica": 70, "eleicoes": 58, "saude": 60, "gerais": 58, "economia": 60, "educacao": 76}
+TITULO_MAX = {"politica": 70, "eleicoes": 58, "saude": 60, "gerais": 58, "economia": 60, "educacao": 76, "america_latina": 58}
 
 MARCA_TEXTO = "background:linear-gradient(to bottom,rgba(227,173,22,0) 58%,rgba(227,173,22,.6) 58%,rgba(227,173,22,.6) 92%,rgba(227,173,22,0) 92%)"
 
@@ -233,6 +242,29 @@ def _barra(c: dict, esquerda: int, invertida: bool = False) -> str:
             f'<div style="position:absolute;z-index:3;left:{fim-110}px;width:110px;top:{y}px;height:4px;background:{ponta}"></div>')
 
 
+CORES_CONTINENTE = ["#FF5A1F", "#FED700", "#2BA84A", "#1E88E5", "#8E3FBF", "#E53935"]
+
+
+def _barra_tecida(c: dict, esquerda: int, alto: int = 8) -> str:
+    """América Latina: faixa de blocos coloridos, como uma barra de tecido andino."""
+    larg = 1000 - esquerda - 40
+    blocos, x, i = [], 0, 0
+    padrao = [26, 10, 26, 10, 54, 10]
+    while x < larg:
+        w = min(padrao[i % len(padrao)], larg - x)
+        blocos.append(f'<div style="position:absolute;left:{x}px;top:0;width:{w}px;height:{alto}px;background:{CORES_CONTINENTE[i % len(CORES_CONTINENTE)]}"></div>')
+        x += w + 4
+        i += 1
+    return f'<div style="position:absolute;z-index:3;left:{esquerda}px;top:{c["barra_y"] - 4}px;width:{larg}px;height:{alto}px">{"".join(blocos)}</div>'
+
+
+def _selo_pais(pais: str, cor: str, texto: str) -> str:
+    return (f'<div><p style="margin:0 0 20px;display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 12px;'
+            f'border:2px solid {cor};border-radius:40px;font-family:Archivo,sans-serif;font-weight:700;font-size:19px;'
+            f'letter-spacing:3px;text-transform:uppercase;color:{texto}">'
+            f'<span style="width:12px;height:12px;border-radius:50%;background:{cor};display:inline-block"></span>{html.escape(pais)}</p></div>')
+
+
 def _foto_padrao(c: dict, foto_uri: str, posicao: str, alt: str) -> str:
     g = c["grad_rgb"]
     return (f'<div id="foto" data-min="{c["foto_min"]}" style="position:absolute;z-index:1;left:0;right:0;top:0;height:{c["foto_min"]}px;overflow:hidden">'
@@ -271,6 +303,7 @@ PADROES = {
     "gerais":   {**PADRAO_COMUM, "cor_destaque": "#D0021B"},
     "eleicoes": {**PADRAO_COMUM},
     "saude":    {**PADRAO_COMUM},
+    "america_latina": {**PADRAO_COMUM},
     # fundo claro: faixa mais baixa e translúcida, senão parece texto riscado
     "economia": {**PADRAO_COMUM, "destaque_faixa": [64, 100], "destaque_opacidade": 0.45},
     "educacao": {**PADRAO_COMUM, "destaque_faixa": [64, 100], "destaque_opacidade": 0.45},
@@ -302,6 +335,8 @@ def post_unico(post: dict, foto_uri: str, recorte: bool = False) -> str:
     credito = post.get("credito_foto", "")
     if c["credito"] == "topo" and credito:
         partes.append(f'<p style="margin:0 0 26px;font-family:Archivo,sans-serif;font-weight:700;font-size:17px;letter-spacing:2px;text-transform:uppercase;color:{c["sub"]}">{html.escape(credito)}</p>')
+    if ed == "america_latina" and post.get("pais"):
+        partes.append(_selo_pais(post["pais"], d, c["texto"]))
     if post.get("chapeu"):
         tam = 60 if ed == "economia" else 66
         partes.append(f'<p style="margin:0 0 14px;font-family:Fraunces,Georgia,serif;font-weight:{min(900, int(post.get("peso_titulo", 800)) + 100)};font-size:{tam}px;line-height:1;letter-spacing:-1px;text-transform:uppercase;color:{d}">{html.escape(post["chapeu"])}</p>')
@@ -325,7 +360,8 @@ def post_unico(post: dict, foto_uri: str, recorte: bool = False) -> str:
                   f'font-weight:700;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:{c["rodape"]}">{html.escape(texto_rodape)}</p>')
 
     corpo = (f'<div style="width:{W}px;height:{H}px;position:relative;overflow:hidden;background:{c["bg"]};color:{c["texto"]};font-family:Archivo,sans-serif">'
-             f'{foto}{_marca(ed, c, float(post.get("cbr_escala", 1.0)))}{bloco}{_barra(c, esq, bool(post.get("barra_invertida")))}{rodape}{_papel(c)}</div>')
+             f'{foto}{_marca(ed, c, float(post.get("cbr_escala", 1.0)))}{bloco}'
+             f'{_barra_tecida(c, esq) if ed == "america_latina" else _barra(c, esq, bool(post.get("barra_invertida")))}{rodape}{_papel(c)}</div>')
     return _pagina(corpo, c["bg"])
 
 

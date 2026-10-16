@@ -31,6 +31,9 @@ CONFIG = json.loads((RAIZ / "config.json").read_text(encoding="utf-8"))
 ESTADO = RAIZ / "registro" / "estado.json"
 REGISTRO = RAIZ / "registro" / "posts.jsonl"
 PENDENTES = RAIZ / "registro" / "collabs_pendentes.json"
+# regras do João de 16/10/2026 (revisão de design separada e apuração comparada) valem para
+# posts com id a partir deste
+REGRAS_16_10 = "20261016-0600"
 API = f"https://graph.facebook.com/{CONFIG['api']}"
 # Anti-spam da Meta (4/2207051): a API responde erro mas quase sempre publica. Regra do João
 # (15/10/2026): notícia sai na hora, sem pausas longas. O publicador faz o que ele fazia à mão:
@@ -258,6 +261,14 @@ def processar(arq: Path, estado: dict) -> None:
             return
         if not post.get("revisao", {}).get("aprovado"):
             raise ValueError("revisão independente não aprovou este post")
+        if re.match(r"^\d{8}-\d{4}", pasta) and pasta >= REGRAS_16_10:
+            if not post.get("revisao_design", {}).get("aprovado"):
+                raise ValueError("revisão de design não aprovou este post")
+            if (post.get("design_auto") or {}).get("graves"):
+                raise ValueError("a conferência automática de design achou problema grave; corrija e renderize de novo")
+            ap = post.get("apuracao") or {}
+            if len(ap.get("versoes", [])) < 2 and not ap.get("fonte_primaria"):
+                raise ValueError("apuração sem comparação de duas versões da notícia (ou fonte primária)")
         if not post.get("render", {}).get("artes"):
             raise ValueError("post sem arte renderizada")
         legenda = legenda_final(post)

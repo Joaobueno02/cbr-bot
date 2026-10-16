@@ -68,6 +68,10 @@ jobs:
         if: steps.fila.outputs.renderizar != '0'
         run: python bot/render.py
 
+      - name: Conferir design (medidas para o revisor de design)
+        if: steps.fila.outputs.renderizar != '0'
+        run: python bot/conferir_design.py
+
       - name: Publicar
         if: steps.fila.outputs.publicar != '0'
         env:

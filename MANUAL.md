@@ -45,7 +45,7 @@ O dono é o João. Ele acompanha cada post pela notificação e pede para parar 
      postaram hoje, cruzado com o radar; (B) assuntos em alta (desde 16/10, **2 veículos já bastam**
      para entrar; ganharam veículos nas últimas 3 h, mesmo que tenham começado ontem); (C) novos das
      últimas 3 h com vagas para Brasil, internacional, pesquisa e universidades; (D) os eixos
-     **América Latina** e **Da Terra** (campo, agricultura familiar, reforma agrária, alimento), das
+     **América Latina**, **Campo e alimento** (agricultura familiar, reforma agrária) e **Famosos e a eleição**, das
      últimas 6 h. **Todo item de A e B com "na pauta desde" depois da
      rodada anterior precisa ser avaliado nesta rodada**: publique, ou registre no resumo da
      rodada por que descartou. A regra da janela vale para o fato novo, mas assunto que estourou
@@ -64,8 +64,9 @@ O dono é o João. Ele acompanha cada post pela notificação e pede para parar 
    commit e push. O GitHub Actions baixa a foto e gera a arte.
 4. Espere a arte (`git pull` a cada ~30 s; leva de 1 a 4 min). Status vira `renderizado`
    ou `erro_render` (o motivo está em `render.erro`).
-5. Abra a arte (`arte-1.jpg` etc.) e compare com `referencias/<editoria>.jpg` (seção 6).
-6. Rode o **revisor independente** (seção 7). Só segue se ele aprovar.
+5. **Revisão de design** (seção 6): leia `design_auto` no post.json (medidas automáticas), confira
+   a arte você mesmo contra `referencias/<editoria>.jpg` e rode o **revisor de design** (subagente).
+6. Rode o **revisor da notícia** (seção 7). As duas revisões são obrigatórias e independentes.
 7. Mude o status para `publicar`, commit e push. O Actions publica e grava o resultado em
    `publicacao` (link do post, collab) e em `registro/posts.jsonl`.
 8. Confira o resultado e mande a notificação (seção 9).
@@ -123,13 +124,18 @@ não carregarem, a arte dá erro_render: renderize de novo, nunca publique arte 
 - `gerais` — **Notícias gerais e posts críticos**: denúncias e casos que envolvem figuras
   políticas mas não são do processo eleitoral (ex.: o caso Willer Tomaz/INSS), e análises
   críticas (ex.: o carrossel das abstenções).
-
-- **Eixos novos (16/10/2026), design aguardando aprovação do João**: `america_latina`
-  (América Latina: governos, eleições, protestos, EUA na região, Mercosul) e `terra` (Da Terra:
-  agricultura familiar, reforma agrária, MST, agroecologia, agrotóxico, preço do alimento, fome,
-  conflito no campo). Enquanto o design não for aprovado e entrar no gerador, publique América
-  Latina em `gerais` e Da Terra em `economia` (preço/alimento) ou `gerais` (luta, conflito). Os
-  protótipos estão em `prototipos/eixos/`.
+- `america_latina` — **América Latina** (aprovada em 16/10/2026, laranja #FF5A1F, faixa colorida
+  embaixo): governos, eleições, protestos, repressão, EUA na região, Mercosul. **Preencha `pais`**
+  (ex.: "Argentina"), que vira o selo acima do chapéu. Notícia de vários países: "América Latina".
+- **Eixo do campo (design em aprovação)**: agricultura familiar, reforma agrária, MST,
+  agroecologia, agrotóxico, preço do alimento, fome, conflito no campo. Até o João escolher o
+  nome e o design (protótipos em `prototipos/eixos/`), publique em `economia` (preço, alimento,
+  crédito) ou `gerais` (luta, conflito).
+- **Famosos e a eleição** (até o 2º turno): artista, atleta ou influenciador grande que declara
+  voto ou apoio. Vai em `eleicoes`. Só com a declaração confirmada na fonte (vídeo ou post do
+  próprio famoso, ou veículo profissional que o mostre); "indireta" só se o próprio veículo
+  tratar como declaração, e o título diz o que ele falou, sem exagerar. A seção D da pauta junta
+  esses assuntos.
 
 Notícia fora desses eixos (esporte, celebridade, crime comum sem ligação política) fica de fora.
 
@@ -151,6 +157,20 @@ a menos que haja fato novo relevante. Prefira notícia das últimas horas.
 
 **Madrugada**: as execuções vão das 7h às 23h. A primeira do dia (7h) cobre tudo o que
 aconteceu desde a última da noite e publica as melhores logo cedo.
+
+### Formato: feed, carrossel ou Reels (regra do João, 16/10/2026)
+Depois de pontuar Impacto (I) e Viralização (V), pontue também **Profundidade (P)**, de 0 a 3:
+quanto a notícia rende para destrinchar (números para comparar, linha do tempo, quem é quem,
+"o que muda pra você", vários lados, antes x depois). Conte os blocos com informação própria e
+verificada: 4 blocos ou mais = P 3; 3 = P 2; 2 = P 1.
+- **Reels** (`bombastica: true`): I = 3 **e** V = 3, ou o fato domina o noticiário do dia.
+  É a notícia que explode sozinha, não precisa ser explicada.
+- **Carrossel**: não é Reels, I + V ≥ 5 **e** P ≥ 2. É a notícia que fica melhor contada em
+  partes: a pessoa salva e manda no grupo. Capa que prende sozinha, 4 a 8 slides, último com
+  chamada (salvar, compartilhar, seguir). Até 3 carrosséis por dia.
+- **Feed (post único)**: o resto que passou no filtro (I + V ≥ 4).
+Na dúvida entre carrossel e Reels: se o valor está no **choque** do fato, Reels; se está na
+**explicação**, carrossel. Registre a nota no resumo da rodada (ex.: "I3 V2 P3 → carrossel").
 
 ### Bombástica (vira Reels)
 Marque `"bombastica": true` quando a notícia tiver potencial de mídia muito acima do normal:
@@ -175,6 +195,31 @@ Só bombástica tem música. Posts comuns e carrosséis continuam sem.
 
 ## 3. Apuração
 
+**Checagem comparada (regra do João, 16/10/2026)**: achou uma notícia boa numa fonte? Procure a
+mesma notícia nas outras fontes, compare as versões e escreva a **nossa** a partir delas.
+1. Rode `python bot/cruzar.py "palavras da notícia"`: mostra todos os veículos do radar que deram o
+   mesmo assunto (os marcados com * são candidatos a versão independente). Se o radar não tiver,
+   procure na web pelas mesmas palavras.
+2. Abra **pelo menos 2 versões independentes** (veículos diferentes, com apuração própria; não
+   vale republicação de agência nem agregador). Se uma delas for fonte primária oficial (Diário
+   Oficial, TSE, decisão judicial, nota do órgão, Agência Senado/Câmara), uma versão de veículo basta.
+3. Compare e grave em `post.json`:
+   ```json
+   "apuracao": {
+     "versoes": [{"veiculo": "UOL", "url": "...", "resumo": "o que essa versão diz, em 1-2 frases"},
+                 {"veiculo": "Folha", "url": "...", "resumo": "..."}],
+     "em_comum": ["fatos e números que as versões confirmam"],
+     "divergencias": ["onde discordam e o que escolhemos"],
+     "so_numa_versao": ["fato que só uma traz (entra só na legenda, com 'segundo X')"],
+     "fonte_primaria": null
+   }
+   ```
+4. **Escreva a nossa versão** juntando as duas, com as nossas palavras (nunca copiar frase de
+   ninguém): título e subtítulo só com o que está em `em_comum` (ou na fonte primária); o que só
+   uma versão traz vai na legenda com "segundo X"; número divergente → use o mais conservador
+   e diga que há outra conta. A linha "Fontes:" da legenda cita as versões comparadas.
+   Para posts a partir de 16/10, o publicador recusa post sem `apuracao` com 2 versões (ou
+   `fonte_primaria` preenchida com o link).
 - Todo fato precisa de **duas fontes independentes** com apuração própria, ou de uma fonte
   primária oficial (Diário Oficial, TSE, Agência Senado/Câmara, nota do órgão, decisão judicial).
 - Confira números, datas e aspas na origem. Não arredonde para cima.
@@ -262,28 +307,59 @@ De 4 a 8 slides. A capa precisa prender sozinha. O último slide chama para aç�
 - Educação recorta a pessoa automaticamente; prefira foto com pessoas bem destacadas do fundo.
   Se o recorte falhar, a foto vai dentro do círculo verde.
 
-## 6. Conferência visual (obrigatória, toda arte)
+## 6. Revisão de design (obrigatória, toda arte, tão rigorosa quanto a da notícia)
 
-Abra a arte e a referência da editoria lado a lado (`referencias/<editoria>.jpg`) e confira:
-- marca da editoria no topo correta, nas cores certas; Gerais tem só "CBR";
-- fundo certo (escuro em Política/Eleições/Saúde/Gerais; claro em Economia/Educação);
-- foto nítida, bem enquadrada, rosto não cortado, sem texto de outro veículo;
-- chapéu na cor da editoria, título legível, sem palavra órfã feia ou número quebrado;
-- crédito no lugar certo; barra com o segmento colorido; nada sobreposto ou cortado.
-Se algo destoar, ajuste `foto_posicao`, o texto ou a foto e renderize de novo
-(volte o status para `renderizar`). Máximo 3 tentativas; depois, descarte.
+Regra do João (16/10/2026): a estética é o que faz a página ser reconhecida. A revisão do design
+é **separada** da revisão da notícia e tão minuciosa quanto ela. Arte "quase certa" não sai.
+
+**a) Conferência automática** (`design_auto`, gravada pelo Actions logo depois do render): mede
+linhas e palavra órfã do título e do subtítulo, chapéu quebrado, título no tamanho mínimo, número
+quebrado entre linhas, texto saindo da margem, contraste da marca do topo com a foto, ampliação e
+nitidez da foto. `graves` > 0 = corrija e renderize de novo (o publicador recusa). Leia também os
+`avisos`: cada um precisa de uma decisão (corrigir ou justificar no `revisao_design`).
+
+**b) A sua conferência**, com a arte e `referencias/<editoria>.jpg` abertas lado a lado, e depois
+**em recortes ampliados** (corte com PIL e abra com Read: topo 0-260 px, foto inteira, bloco de
+texto, barra 1180-1350 px):
+- marca do topo: editoria certa, cores certas, legível sobre a foto (sem sumir no céu claro);
+- fundo: escuro em Política/Eleições/Saúde/Gerais/América Latina; claro em Economia/Educação;
+- foto: nítida (sem borrão, sem serrilhado de ampliação), bem enquadrada, rosto inteiro e sem
+  corte na testa ou queixo, olhar com espaço, sem texto/logo de outro veículo, sem elemento
+  estranho colado na marca ou no texto, tom de cor coerente com a editoria;
+- texto: chapéu em 1 linha, na cor da editoria; título sem palavra órfã, sem número/valor
+  quebrado, destaque `*...*` no número ou palavra-chave e em no máximo 2 linhas; subtítulo sem
+  órfã; alinhamento à esquerda igual ao da referência; nada encostando na margem;
+- barra: na altura da referência, segmento colorido certo (América Latina: faixa colorida);
+- nada sobreposto, cortado, desalinhado ou com espaçamento diferente da referência.
+
+**c) Revisor de design** (subagente pela ferramenta Agent, diferente do revisor da notícia):
+
+> Você é o revisor de design da CBR. Leia a seção 6 do MANUAL.md e fila/<id>/post.json
+> (inclusive `design_auto`). Abra fila/<id>/arte-*.jpg e referencias/<editoria>.jpg e compare
+> lado a lado; depois corte e amplie com PIL (topo 0-260, foto, bloco de texto, barra 1180-1350)
+> e abra cada recorte. Confira um por um os itens da seção 6b. Seja rigoroso: qualquer diferença
+> de padrão em relação à referência, palavra órfã, marca pouco legível, foto borrada ou mal
+> enquadrada reprova. Responda só com JSON:
+> {"aprovado": true|false, "problemas": ["..."], "correcoes": ["..."]}.
+
+Grave em `post.json` como `"revisao_design": {"aprovado": ..., "problemas": [...], "quando": "..."}`.
+Se reprovar, corrija (texto, `foto_posicao` ou outra foto), renderize de novo e rode o revisor de
+design de novo. Máximo 3 renders; depois, descarte com o motivo. Para posts a partir de 16/10, o
+publicador recusa post sem `revisao_design.aprovado == true`.
 
 ## 7. Revisor independente (obrigatório)
 
 Depois da arte pronta, chame um subagente (ferramenta Agent) que **não escreveu o post**,
 passando o caminho da pasta do post e este manual. Instrução ao revisor:
 
-> Você é o revisor da CBR. Leia MANUAL.md e fila/<id>/post.json, abra as artes
-> (arte-*.jpg) e a referência referencias/<editoria>.jpg, e abra cada URL de `fontes`.
-> Verifique: (1) cada fato, número, data e aspa do título, subtítulo e legenda está nas
-> fontes; (2) o título não é mais conclusivo que as fontes; (3) acusações têm quem acusa e
-> a negativa; (4) nada viola a seção 3 ou "Não publique"; (5) a arte segue a referência
-> (seção 6); (6) a legenda segue a seção 8 e tem 5 hashtags; (7) a editoria está certa.
+> Você é o revisor da notícia da CBR. Leia MANUAL.md e fila/<id>/post.json, abra a arte
+> (arte-*.jpg, só para conferir o texto que aparece nela) e abra cada URL de `fontes` e de
+> `apuracao.versoes`. Verifique: (1) cada fato, número, data e aspa do título, subtítulo e
+> legenda está nas fontes; (2) a `apuracao` compara de verdade 2 versões independentes (ou tem
+> fonte primária) e o título/subtítulo só usam o que está em `em_comum`; (3) o título não é mais
+> conclusivo que as fontes; (4) acusações têm quem acusa e a negativa; (5) nada viola a seção 3
+> ou "Não publique"; (6) a legenda segue a seção 8 e tem 5 hashtags; (7) a editoria e o formato
+> (feed, carrossel, Reels) seguem a seção 2.
 > Responda só com JSON: {"aprovado": true|false, "problemas": ["..."], "correcoes": ["..."]}.
 
 Grave o veredito em `post.json` como `"revisao": {"aprovado": ..., "problemas": [...], "quando": "..."}`.

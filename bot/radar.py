@@ -71,7 +71,7 @@ TEMAS = {
         "argentine", "mexique", "colombie", "bresil"},
         ("america latina", "latin america", "america do sul", "south america", "el salvador", "buenos aires",
          "amerique latine", "america central")),
-    "terra": ("Da Terra (campo e alimento)", {
+    "terra": ("Campo e alimento (agricultura familiar, reforma agrária)", {
         "agricultor", "agricultores", "agricultora", "agricultoras", "pronaf", "mst", "assentamento",
         "assentamentos", "assentados", "incra", "agroecologia", "agroecologico", "agroecologica", "organicos",
         "agrotoxico", "agrotoxicos", "conab", "quilombola", "quilombolas", "grilagem", "grileiros", "contag",
@@ -80,6 +80,11 @@ TEMAS = {
         ("agricultura familiar", "pequeno produtor", "pequenos produtores", "reforma agraria", "sem terra",
          "plano safra", "cesta basica", "preco dos alimentos", "seguranca alimentar", "trabalho escravo",
          "terra indigena", "terras indigenas", "conflito no campo", "desenvolvimento agrario", "fome")),
+    # famosos declarando voto/apoio no 2º turno (pedido do João, 16/10/2026)
+    "famosos": ("Famosos e a eleição (declaração de voto, apoio)", {
+        "influenciador", "influenciadora", "cantor", "cantora", "atriz", "fisiculturista", "rapper", "funkeiro"},
+        ("declara voto", "declarou voto", "declara apoio", "declarou apoio", "anuncia apoio", "anunciou apoio",
+         "manifesta apoio", "faz o l", "fez o l", "vota em lula", "vota em flavio", "voto em lula", "voto em flavio")),
 }
 
 
@@ -89,8 +94,14 @@ def temas_do_grupo(g: dict) -> list[str]:
     t = " " + re.sub(r"[^a-z0-9 ]", " ", "".join(c for c in t if not unicodedata.combining(c))) + " "
     t = re.sub(r"\s+", " ", t)
     pal = set(t.split())
-    return [k for k, (_, palavras, frases) in TEMAS.items()
-            if pal & palavras or any(f" {f} " in t for f in frases)]
+    saida = []
+    for k, (_, palavras, frases) in TEMAS.items():
+        por_palavra = bool(pal & palavras)
+        if k == "famosos":  # famoso só conta se a manchete também falar da eleição
+            por_palavra = por_palavra and bool(pal & {"lula", "flavio", "bolsonaro", "voto", "eleicao", "turno"})
+        if por_palavra or any(f" {f} " in t for f in frases):
+            saida.append(k)
+    return saida
 
 
 def secao_da_fonte(nome: str) -> str:
@@ -313,7 +324,7 @@ def _pauta(grupos: list[dict], agora_dt: datetime) -> str:
     out = [f"# Pauta do radar — {hora(agora)}", "",
            "Leia INTEIRO. [N|+M em 3h] = N veículos no total, M nas últimas 3 h. \"na pauta desde\" = quando o",
            "assunto entrou nesta lista pela 1ª vez: tudo que entrou depois da rodada anterior é candidato,",
-           "mesmo que a notícia tenha começado antes. Em alta = 2+ veículos. D = eixos América Latina e Da Terra.", "",
+           "mesmo que a notícia tenha começado antes. Em alta = 2+ veículos. D = América Latina, Campo e Famosos.", "",
            f"## A. O que a BFC e a Luz postaram hoje ({len(parceiros)}) — cobertura obrigatória se confirmado", ""]
     for p in parceiros:
         cab = f"- @{p['perfil']} {p['quando'].astimezone(BRT).strftime('%Hh%M')} ({int(p['velocidade'] or 0)} interações/h) {p['link']}\n  \"{p['legenda']}\""
