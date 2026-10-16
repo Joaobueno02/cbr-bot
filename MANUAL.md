@@ -441,6 +441,13 @@ O publicador decide sozinho, nesta ordem:
    Fiocruz, Butantan, Embrapa, hospital universitário etc.) → **sempre** convida o perfil
    oficial da instituição, e só ele.
 4. **A cada 3 posts publicados** (3º, 6º, 9º...) → @brasilforadacaverna + @luzmanifesto.
+5. **Rodízio de páginas progressistas** (16/10/2026): página que **pediu collab** (achada pelo
+   radar de collab, com 1.000+ seguidores) entra no rodízio e passa a ser convidada nos próximos
+   posts: sozinha nos posts sem collab, ou como 3ª convidada junto da BFC e da Luz. Regras: 1 h de
+   carência depois de achada (o João recebe "Siga @fulano agora" no celular, porque a API não
+   segue perfis), no máximo 1 convite por página a cada 24 h, e sai do rodízio depois de 3
+   convites sem aceite ou se a API recusar o convite. Notícia de instituição continua só com a
+   instituição. Controle em `registro/collab_rodizio.json` (convites e aceites por página).
 
 Para os casos 1 e 3, preencha `instituicao_ig` com o @ oficial **só depois de confirmar**:
 link para o Instagram no site oficial da instituição (rodapé ou página de contato) ou selo de
@@ -454,8 +461,8 @@ descobre páginas novas (marcadas nesses posts ou que fizeram collab com BFC/Luz
 alerta no celular do João com o link (até 4 por dia): ele comenta com o @ da CBR ou manda direct.
 A API não comenta nem manda direct por nós. Resultado em `radar/collab_oportunidades.json`
 (chamadas e páginas com seguidores). No dossiê, liste as chamadas do dia e as páginas novas
-mais promissoras (seguidores, se fazem collab, se o tema bate com a CBR). Página que aceitar
-parceria com o João pode entrar no rodízio de convites de collab (só com o OK dele).
+mais promissoras (seguidores, se fazem collab, se o tema bate com a CBR). Quem pediu collab entra
+sozinho no rodízio (regra 5 acima).
 
 **Stories** (feitos à mão pelo João, para sair com o "Adicionar ao story" clicável; a API não
 oferece essa função): o GitHub confere a cada 10 min e manda alerta no celular dele (ntfy)

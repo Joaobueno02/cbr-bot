@@ -143,10 +143,36 @@ def rodar(enviar=None) -> dict:
         except ErroAPI as e:
             conhecidas[u] = {"origem": "marcada", "seguidores": None, "erro": str(e)[:120], "lida": agora()}
 
-    # alertas no celular
+    # rodízio: quem PEDIU collab (autor da chamada) entra nos próximos posts como convidado, depois
+    # de 1 h de carência para o João seguir a página (a API não segue perfis por nós)
     hoje = datetime.now(BRT).strftime("%Y-%m-%d")
     if estado.get("dia") != hoje:
-        estado["dia"], estado["alertas_hoje"] = hoje, 0
+        estado["dia"], estado["alertas_hoje"], estado["alertas_seguir"] = hoje, 0, 0
+    estado.setdefault("alertas_seguir", 0)
+    minimo = CONFIG.get("collab_rodizio_min_seguidores", 1000)
+    for c in chamadas:
+        u = c["perfil"]
+        if u.startswith("#") or u in IGNORAR or u in CONFIG["collab_padrao"] or u in grandes:
+            continue
+        d = conhecidas.setdefault(u, {"origem": "pediu collab", "seguidores": None})
+        if d.get("seguidores") is None:
+            try:
+                d["seguidores"], _ = _posts_pagina(u)
+            except ErroAPI as e:
+                d["erro"] = str(e)[:120]
+                continue
+        if d.get("rodizio") or (d.get("seguidores") or 0) < minimo:
+            continue
+        d.update(rodizio=True, desde=agora(), chamada=c["link"])
+        entra = (datetime.now(BRT) + timedelta(minutes=CONFIG.get("collab_rodizio_carencia_min", 60))).strftime("%Hh%M")
+        if enviar and estado["alertas_seguir"] < 8:
+            if enviar(f"Siga @{u} agora",
+                      f"@{u} ({d.get('seguidores')} seguidores) pediu collab. Ela entra no rodízio de convites às {entra}: "
+                      f"siga a página antes, pelo app (a API não segue por nós).",
+                      f"https://www.instagram.com/{u}/", ["busts_in_silhouette"]):
+                estado["alertas_seguir"] += 1
+
+    # alertas no celular
     for c in sorted(chamadas, key=lambda c: c["quando"] or "", reverse=True):
         if c["link"] in vistas or estado["alertas_hoje"] >= MAX_ALERTAS_DIA or not enviar:
             continue

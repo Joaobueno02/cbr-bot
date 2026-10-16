@@ -126,16 +126,75 @@ def avisar_celular(titulo: str, mensagem: str) -> None:
             pass
 
 
+# Rodízio de collab (pedido do João, 16/10/2026): página progressista que pediu parceria (achada
+# pelo bot/collab_radar.py) entra nos próximos posts como convidada. Carência de 1 h depois de
+# achada (tempo para o João seguir a página), no máximo 1 convite por página a cada 24 h, e sai
+# do rodízio depois de 3 convites sem nenhum aceite.
+RODIZIO_PAGINAS = RAIZ / "radar" / "collab_paginas.json"
+RODIZIO_REG = RAIZ / "registro" / "collab_rodizio.json"
+
+
+def _ler(arq: Path, padrao):
+    try:
+        return json.loads(arq.read_text(encoding="utf-8"))
+    except Exception:
+        return padrao
+
+
+def proximo_rodizio(excluir: list[str]) -> str | None:
+    paginas = _ler(RODIZIO_PAGINAS, {}).get("paginas", {})
+    reg = _ler(RODIZIO_REG, {})
+    agora_dt = datetime.now(timezone.utc)
+    carencia = timedelta(minutes=CONFIG.get("collab_rodizio_carencia_min", 60))
+    intervalo = timedelta(hours=CONFIG.get("collab_rodizio_intervalo_h", 24))
+    max_sem = CONFIG.get("collab_rodizio_max_sem_aceite", 3)
+    cands = []
+    for user, d in paginas.items():
+        if not d.get("rodizio") or user in excluir or user in CONFIG["collab_padrao"]:
+            continue
+        r = reg.get(user, {})
+        if r.get("status") in ("erro", "sem_resposta"):
+            continue
+        if len(r.get("convites", [])) >= max_sem and not r.get("aceites"):
+            continue
+        desde = datetime.strptime(d.get("desde", "2000-01-01T00:00:00Z"), "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+        if agora_dt - desde < carencia:
+            continue
+        ult = r.get("ultimo_convite")
+        if ult and agora_dt - datetime.strptime(ult, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc) < intervalo:
+            continue
+        cands.append((len(r.get("convites", [])), -(r.get("aceites") or 0), -(d.get("seguidores") or 0), user))
+    return sorted(cands)[0][3] if cands else None
+
+
+def registrar_rodizio(convidados: list[str], pasta: str, erro: str | None = None) -> None:
+    paginas = _ler(RODIZIO_PAGINAS, {}).get("paginas", {})
+    reg = _ler(RODIZIO_REG, {})
+    for u in convidados:
+        if not paginas.get(u, {}).get("rodizio"):
+            continue
+        r = reg.setdefault(u, {"convites": [], "aceites": 0})
+        if erro:
+            r.update(status="erro", erro=erro[:160])
+        else:
+            r["convites"].append(pasta)
+            r["ultimo_convite"] = agora()
+    RODIZIO_REG.write_text(json.dumps(reg, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
 def decidir_collab(post: dict, numero: int) -> list[str]:
     inst = (post.get("instituicao_ig") or post.get("universidade_ig") or "").lstrip("@").strip()
     bfc = CONFIG["collab_padrao"][0]
     if post.get("bombastica"):
-        return [inst, bfc] if inst else list(CONFIG["collab_padrao"])
-    if inst:
-        return [inst]
-    if numero % CONFIG["collab_a_cada"] == 0:
-        return list(CONFIG["collab_padrao"])
-    return []
+        base = [inst, bfc] if inst else list(CONFIG["collab_padrao"])
+    elif inst:
+        return [inst]   # notícia de instituição: só ela (regra da seção 10)
+    elif numero % CONFIG["collab_a_cada"] == 0:
+        base = list(CONFIG["collab_padrao"])
+    else:
+        base = []
+    extra = proximo_rodizio(base) if len(base) < 3 else None
+    return base + ([extra] if extra else [])
 
 
 def escolher_musica(busca: str | None) -> dict | None:
@@ -319,8 +378,21 @@ def processar(arq: Path, estado: dict) -> None:
             except ErroAPI as e:
                 if collab and "collab" in str(e).lower():  # cobre "collaborator(s)"
                     res["collab_erro"] = str(e)
-                    res["collab"] = []
-                    res.update(criar_e_publicar(post, pasta, legenda, []))
+                    rod = [u for u in collab if _ler(RODIZIO_PAGINAS, {}).get("paginas", {}).get(u, {}).get("rodizio")]
+                    if rod:  # o problema costuma ser a página do rodízio: tira só ela e tenta de novo
+                        registrar_rodizio(rod, pasta, erro=str(e))
+                        res["collab"] = [u for u in collab if u not in rod]
+                        try:
+                            res.update(criar_e_publicar(post, pasta, legenda, res["collab"]))
+                        except ErroAPI as e2:
+                            if res["collab"] and "collab" in str(e2).lower():
+                                res["collab"] = []
+                                res.update(criar_e_publicar(post, pasta, legenda, []))
+                            else:
+                                raise
+                    else:
+                        res["collab"] = []
+                        res.update(criar_e_publicar(post, pasta, legenda, []))
                 else:
                     raise
             post["status"] = "publicado"
@@ -332,6 +404,7 @@ def processar(arq: Path, estado: dict) -> None:
                     f.write(json.dumps({"quando": agora(), "id": pasta, "publicado": True,
                                         "aviso": res["aviso_api"][:200]}, ensure_ascii=False) + "\n")
             if res.get("collab"):
+                registrar_rodizio(res["collab"], pasta)
                 pend = json.loads(PENDENTES.read_text(encoding="utf-8")) if PENDENTES.exists() else []
                 pend.append({"id": pasta, "media_id": res["media_id"], "quando": res["quando"],
                              "convidados": res["collab"], "permalink": res.get("permalink"),

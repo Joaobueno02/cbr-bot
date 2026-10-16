@@ -72,6 +72,17 @@ def collabs(estado: dict) -> None:
         ja = set(item.get("avisados", []))
         novos = [a for a in aceitos if a not in ja]
         if novos:
+            # rodízio de collab: conta o aceite (página que aceita continua sendo convidada)
+            reg_arq = RAIZ / "registro" / "collab_rodizio.json"
+            try:
+                reg = json.loads(reg_arq.read_text(encoding="utf-8"))
+            except Exception:
+                reg = {}
+            if any(a in reg for a in novos):
+                for a in novos:
+                    if a in reg:
+                        reg[a]["aceites"] = reg[a].get("aceites", 0) + 1
+                reg_arq.write_text(json.dumps(reg, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             quem = ", ".join(f"@{a}" for a in novos)
             ok = enviar("Collab aceita: põe nos Stories",
                         f"{quem} aceitou o post \"{(item.get('titulo') or '')[:90]}\". Toque para abrir e use \"Adicionar ao story\".",
