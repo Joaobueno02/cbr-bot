@@ -5,7 +5,8 @@
    link do post para o João compartilhar nos Stories pelo app ("Adicionar ao story").
    Convites com mais de 48 h sem aceite saem da lista.
 
-2. Post forte dos parceiros: lê o feed da BFC e da Luz (Business Discovery). Um post vira alerta
+2. Post forte dos parceiros: a cada 20 min lê o feed da BFC e da Luz (Business Discovery), grava
+   radar/parceiros.json (monitor da BFC usado pela pauta) e Um post vira alerta
    quando foi publicado no mesmo dia a partir das 7h, tem pelo menos 1 h de vida e engajamento
    por hora no quartil de cima dos posts do próprio perfil nas últimas 48 h (régua de comparação). Máximo de 5 alertas por perfil por dia, só das 7h às 23h.
 
@@ -24,6 +25,7 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from publicar import CONFIG, PENDENTES, RAIZ, ErroAPI, agora, chamar  # noqa: E402
+from parceiros import coletar, gravar  # noqa: E402
 
 ESTADO = RAIZ / "registro" / "alertas.json"
 BRT = timezone(timedelta(hours=-3))
@@ -84,57 +86,53 @@ def collabs(estado: dict) -> None:
 
 
 def parceiros(estado: dict) -> None:
+    """Monitor da BFC e da Luz (pedido do João, 16/10/2026): a cada 20 min lê o feed dos dois,
+    grava radar/parceiros.json (a pauta e as rodadas leem dali) e manda alerta de post forte.
+    Uma chamada por perfil; o radar das :50 não chama mais a API (mesmo gasto, dado mais novo)."""
     hoje = datetime.now(BRT)
     if not 7 <= hoje.hour <= 23:
         return
-    # menos chamadas à API na mesma conta que publica: parceiros só a cada 30 min (collab segue a cada 10)
-    if hoje.minute % 30 >= 10 and "--parceiros" not in sys.argv:
+    if hoje.minute % 20 >= 10 and "--parceiros" not in sys.argv:
         return
     dia = hoje.strftime("%Y-%m-%d")
     if estado.get("dia") != dia:
         estado["dia"] = dia
         estado["contagem"] = {}
-    campos = "id,like_count,comments_count,media_product_type,permalink,timestamp,caption"
+    perfis = {}
     for user in PARCEIROS:
-        if estado["contagem"].get(user, 0) >= MAX_DIA:
-            continue
         try:
-            r = chamar("GET", CONFIG["ig_user_id"],
-                       fields=f"business_discovery.username({user}){{media.limit(30){{{campos}}}}}")
+            perfis[user] = coletar(user)
         except ErroAPI as e:
+            perfis[user] = {"erro": str(e)}
             estado["log"].append({"quando": agora(), "tipo": "erro_parceiro", "perfil": user, "erro": str(e)})
+    gravar(perfis)
+    for user, dados in perfis.items():
+        if "posts" not in dados or estado["contagem"].get(user, 0) >= MAX_DIA:
             continue
-        posts = []
-        for m in r.get("business_discovery", {}).get("media", {}).get("data", []):
-            t = datetime.strptime(m["timestamp"], "%Y-%m-%dT%H:%M:%S%z")
-            horas = (datetime.now(timezone.utc) - t).total_seconds() / 3600
-            if horas > 48:
-                continue
-            inter = (m.get("like_count") or 0) + (m.get("comments_count") or 0)
-            posts.append({**m, "horas": horas, "vel": inter / max(horas, 1)})
+        posts = dados["posts"]
         if len(posts) < 4:
             continue
-        vels = sorted(p["vel"] for p in posts)
+        vels = sorted(p["velocidade"] for p in posts)
         corte = vels[int(len(vels) * 0.75)]
         avisados = set(estado.setdefault("avisados_parceiros", []))
         # só posts publicados hoje a partir das 7h (Brasília); o que saiu antes fica de fora
         inicio_dia = hoje.replace(hour=7, minute=0, second=0, microsecond=0)
         candidatos = sorted([p for p in posts
-                             if datetime.strptime(p["timestamp"], "%Y-%m-%dT%H:%M:%S%z") >= inicio_dia
-                             and p["horas"] >= 1 and p["vel"] >= corte and p["id"] not in avisados],
-                            key=lambda p: -p["vel"])
+                             if datetime.strptime(p["quando"], "%Y-%m-%dT%H:%M:%S%z") >= inicio_dia
+                             and p["horas"] >= 1 and p["velocidade"] >= corte and p["id"] not in avisados],
+                            key=lambda p: -p["velocidade"])
         for p in candidatos:
             if estado["contagem"].get(user, 0) >= MAX_DIA:
                 break
-            resumo = " ".join((p.get("caption") or "").split())[:110]
+            resumo = " ".join((p.get("legenda") or "").split())[:110]
             ok = enviar(f"Post forte da @{user}",
-                        f"{int(p['vel'])} interações/h ({p.get('like_count') or 0} curtidas em {p['horas']:.0f} h). {resumo}",
-                        p.get("permalink"), ["fire"])
+                        f"{int(p['velocidade'])} interações/h ({p.get('curtidas') or 0} curtidas em {p['horas']:.0f} h). {resumo}",
+                        p.get("link"), ["fire"])
             if ok:
                 estado["contagem"][user] = estado["contagem"].get(user, 0) + 1
                 avisados.add(p["id"])
                 estado["log"].append({"quando": agora(), "tipo": "parceiro", "perfil": user, "id": p["id"],
-                                      "link": p.get("permalink")})
+                                      "link": p.get("link")})
         estado["avisados_parceiros"] = sorted(avisados)[-300:]
 
 

@@ -26,11 +26,7 @@ jobs:
         run: pip install feedparser requests pillow
       - name: Radar de manchetes
         run: python bot/radar.py
-      - name: Feed da BFC e da Luz
-        if: github.event.schedule != '20 0-2,9-23 * * *'
-        env:
-          IG_TOKEN: ${{ secrets.IG_TOKEN }}
-        run: python bot/parceiros.py
+      # o feed da BFC e da Luz (radar/parceiros.json) agora é lido a cada 20 min pelo alertas.yml
       - name: Trava anti-vazamento e commit
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}

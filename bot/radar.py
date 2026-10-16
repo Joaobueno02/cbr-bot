@@ -59,6 +59,39 @@ UNIVERSIDADE = ("universidade", "unesp", "usp", "unicamp", "institutos federais"
 SECOES = [("nacional", "Brasil"), ("internacional", "Internacional"),
           ("pesquisa", "Pesquisa, ciência e institutos"), ("universidades", "Universidades")]
 
+# Temas por palavra-chave na manchete (independem da fonte). Viram as seções C de
+# América Latina e Da Terra na pauta (eixos novos pedidos pelo João em 16/10/2026).
+TEMAS = {
+    "america_latina": ("América Latina", {
+        "argentina", "argentino", "argentinos", "milei", "venezuela", "venezuelano", "maduro", "colombia",
+        "colombiano", "petro", "chile", "chileno", "boric", "kast", "mexico", "mexicano", "sheinbaum",
+        "bolivia", "boliviano", "peru", "peruano", "equador", "ecuador", "cuba", "cubano", "haiti", "uruguai",
+        "uruguay", "paraguai", "paraguay", "nicaragua", "honduras", "guatemala", "panama", "bukele", "caribe",
+        "caracas", "bogota", "mercosul", "mercosur", "celac", "latinoamerica", "latinoamericano", "colombia",
+        "argentine", "mexique", "colombie", "bresil"},
+        ("america latina", "latin america", "america do sul", "south america", "el salvador", "buenos aires",
+         "amerique latine", "america central")),
+    "terra": ("Da Terra (campo e alimento)", {
+        "agricultor", "agricultores", "agricultora", "agricultoras", "pronaf", "mst", "assentamento",
+        "assentamentos", "assentados", "incra", "agroecologia", "agroecologico", "agroecologica", "organicos",
+        "agrotoxico", "agrotoxicos", "conab", "quilombola", "quilombolas", "grilagem", "grileiros", "contag",
+        "camponeses", "campones", "latifundio", "agronegocio", "ruralistas", "ruralista", "sementes",
+        "pequenos produtores", "feirantes", "agrario", "agraria"},
+        ("agricultura familiar", "pequeno produtor", "pequenos produtores", "reforma agraria", "sem terra",
+         "plano safra", "cesta basica", "preco dos alimentos", "seguranca alimentar", "trabalho escravo",
+         "terra indigena", "terras indigenas", "conflito no campo", "desenvolvimento agrario", "fome")),
+}
+
+
+def temas_do_grupo(g: dict) -> list[str]:
+    texto = " ".join([g["manchete"]] + [l["titulo"] for l in g.get("links", [])])
+    t = unicodedata.normalize("NFKD", texto.lower())
+    t = " " + re.sub(r"[^a-z0-9 ]", " ", "".join(c for c in t if not unicodedata.combining(c))) + " "
+    t = re.sub(r"\s+", " ", t)
+    pal = set(t.split())
+    return [k for k, (_, palavras, frases) in TEMAS.items()
+            if pal & palavras or any(f" {f} " in t for f in frases)]
+
 
 def secao_da_fonte(nome: str) -> str:
     n = nome.lower()
@@ -152,6 +185,8 @@ def agrupar(itens: list[dict]) -> list[dict]:
             "resumo": next((i["resumo"] for i in g["itens"] if i["resumo"]), "")[:200],
             "links": [{"veiculo": i["veiculo"], "titulo": i["titulo"], "link": i["link"]} for i in g["itens"][:8]],
         })
+    for g in saida:
+        g["temas"] = temas_do_grupo(g)
     saida.sort(key=lambda g: g["ultima_vez"] or "", reverse=True)   # mais recente primeiro...
     saida.sort(key=lambda g: -g["temperatura"])                       # ...dentro da mesma temperatura
     return saida
@@ -249,27 +284,36 @@ def _pauta(grupos: list[dict], agora_dt: datetime) -> str:
         return g["temperatura"] - base
 
     parceiros = _cruzar_parceiros(grupos)
-    em_alta = [g for g in grupos if g["temperatura"] >= 5 and (delta(g) >= 3 or g["veiculos_3h"] >= 4)]
+    # regra do João (16/10/2026): 2 veículos já bastam para o assunto entrar em alta (era 5)
+    em_alta = [g for g in grupos if g["temperatura"] >= 2 and (delta(g) >= 2 or g["veiculos_3h"] >= 2)]
     em_alta.sort(key=lambda g: (-g["veiculos_3h"], -g["temperatura"]))
-    em_alta = em_alta[:40]
+    em_alta = em_alta[:60]
     novos = [g for g in grupos if g["detectado"] >= CORTE_3H]
-    vagas = {"nacional": 30, "internacional": 15, "pesquisa": 12, "universidades": 12}
+    vagas = {"nacional": 40, "internacional": 15, "pesquisa": 12, "universidades": 12}
     novos_sel = []
     for sec, n in vagas.items():
         novos_sel += [g for g in novos if g["secao"] == sec][:n]
+    # eixos novos: América Latina e Da Terra (assuntos das últimas 6 h, qualquer fonte, 2+ veículos primeiro)
+    corte_tema = (agora_dt - timedelta(hours=6)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    por_tema = {}
+    for k in TEMAS:
+        lista = [g for g in grupos if k in g.get("temas", []) and (g["ultima_vez"] or "") >= corte_tema]
+        lista.sort(key=lambda g: (-min(g["temperatura"], 2), -(g["veiculos_3h"]), -g["temperatura"]))
+        por_tema[k] = lista[:15]
 
-    for g in [p["grupo"] for p in parceiros if p["grupo"]] + em_alta + novos_sel:
+    for g in [p["grupo"] for p in parceiros if p["grupo"]] + em_alta + novos_sel + [g for l in por_tema.values() for g in l]:
         desde.setdefault(g["sig"], agora)
 
     def lin(g, extra=""):
         v = ", ".join(g["veiculos"][:4]) + (f" +{len(g['veiculos']) - 4}" if len(g["veiculos"]) > 4 else "")
         return (f"- [{g['temperatura']}|+{g['veiculos_3h']} em 3h] {g['manchete']} — {v} · "
-                f"publicado {hora(g['primeira_vez'])} · na pauta desde {hora(desde.get(g['sig']))}{extra} · {_link(g)}")
+                f"publicado {hora(g['primeira_vez'])} · na pauta desde {hora(desde.get(g['sig']))}{extra}"
+                + "".join(f" · #{t}" for t in g.get("temas", [])) + f" · {_link(g)}")
 
     out = [f"# Pauta do radar — {hora(agora)}", "",
            "Leia INTEIRO. [N|+M em 3h] = N veículos no total, M nas últimas 3 h. \"na pauta desde\" = quando o",
            "assunto entrou nesta lista pela 1ª vez: tudo que entrou depois da rodada anterior é candidato,",
-           "mesmo que a notícia tenha começado antes.", "",
+           "mesmo que a notícia tenha começado antes. Em alta = 2+ veículos. D = eixos América Latina e Da Terra.", "",
            f"## A. O que a BFC e a Luz postaram hoje ({len(parceiros)}) — cobertura obrigatória se confirmado", ""]
     for p in parceiros:
         cab = f"- @{p['perfil']} {p['quando'].astimezone(BRT).strftime('%Hh%M')} ({int(p['velocidade'] or 0)} interações/h) {p['link']}\n  \"{p['legenda']}\""
@@ -281,6 +325,9 @@ def _pauta(grupos: list[dict], agora_dt: datetime) -> str:
     for sec in vagas:
         lista = [g for g in novos_sel if g["secao"] == sec]
         out += ["", f"## C. Novos nas últimas 3 h — {nomes[sec]} ({len(lista)} de {len([g for g in novos if g['secao'] == sec])})", ""]
+        out += [lin(g) for g in lista]
+    for k, lista in por_tema.items():
+        out += ["", f"## D. {TEMAS[k][0]} — últimas 6 h ({len(lista)})", ""]
         out += [lin(g) for g in lista]
 
     # memória: temperatura por assunto (8 h) e entrada na pauta (30 h)

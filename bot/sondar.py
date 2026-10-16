@@ -3,7 +3,8 @@ abre cada URL (página de matéria ou imagem direta), encontra as imagens e mede
 
 Resultado em fila/<id>/fotos.json: lista ordenada por área, cada item com url, largura, altura,
 origem (og:image, srcset, img...) e a página de onde veio. Também salva miniaturas
-fila/<id>/candidatas/NN.jpg (600 px) para conferir o conteúdo da foto.
+fila/<id>/candidatas/NN.jpg (600 px) para conferir o conteúdo da foto. Com "grande": N no
+pedido, guarda também as N maiores em até 1600 px (NN-grande.jpg), para protótipos de design.
 """
 from __future__ import annotations
 
@@ -110,8 +111,14 @@ def sondar(pasta: Path) -> None:
     resultados.sort(key=lambda m: -(m["largura"] * m["altura"]))
     (pasta / "candidatas").mkdir(exist_ok=True)
     saida = []
+    grandes = int(pedido.get("grande", 0) or 0)   # opcional: guarda também as N maiores em até 1600 px
     for i, m in enumerate(resultados[:15], start=1):
         im = m.pop("_im").convert("RGB")
+        if i <= grandes:
+            g = im.copy()
+            g.thumbnail((1600, 1600))
+            g.save(pasta / "candidatas" / f"{i:02d}-grande.jpg", quality=86)
+            m["grande"] = f"candidatas/{i:02d}-grande.jpg"
         im.thumbnail((600, 600))
         im.save(pasta / "candidatas" / f"{i:02d}.jpg", quality=80)
         m["miniatura"] = f"candidatas/{i:02d}.jpg"
