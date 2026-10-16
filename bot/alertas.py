@@ -101,6 +101,13 @@ def parceiros(estado: dict) -> None:
             coletar_movimentos()
         except Exception as e:
             estado["log"].append({"quando": agora(), "tipo": "erro_movimentos", "erro": str(e)[:200]})
+    # radar de collab (páginas progressistas chamando parceria): 11h40 e 19h40
+    if (hoje.hour in (11, 19) and 40 <= hoje.minute < 50) or "--collab" in sys.argv:
+        try:
+            from collab_radar import rodar
+            rodar(enviar)
+        except Exception as e:
+            estado["log"].append({"quando": agora(), "tipo": "erro_collab_radar", "erro": str(e)[:200]})
     if hoje.minute % 20 >= 10 and "--parceiros" not in sys.argv:
         return
     dia = hoje.strftime("%Y-%m-%d")

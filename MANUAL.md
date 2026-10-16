@@ -447,6 +447,16 @@ link para o Instagram no site oficial da instituição (rodapé ou página de co
 verificado. Na dúvida, deixe vazio e diga na notificação que a collab da instituição ficou de
 fora por falta de confirmação. Não convide a instituição quando a notícia for crítica a ela.
 
+**Radar de collab** (pedido do João, 16/10/2026: movimento de páginas progressistas que se ajudam
+na visibilidade): às 11h40 e 19h40 o `bot/collab_radar.py` procura posts de páginas de esquerda
+chamando parceria ("chama na collab", "divulgue sua página progressista", #esquerdasegueesquerda),
+descobre páginas novas (marcadas nesses posts ou que fizeram collab com BFC/Luz/movimentos) e manda
+alerta no celular do João com o link (até 4 por dia): ele comenta com o @ da CBR ou manda direct.
+A API não comenta nem manda direct por nós. Resultado em `radar/collab_oportunidades.json`
+(chamadas e páginas com seguidores). No dossiê, liste as chamadas do dia e as páginas novas
+mais promissoras (seguidores, se fazem collab, se o tema bate com a CBR). Página que aceitar
+parceria com o João pode entrar no rodízio de convites de collab (só com o OK dele).
+
 **Stories** (feitos à mão pelo João, para sair com o "Adicionar ao story" clicável; a API não
 oferece essa função): o GitHub confere a cada 10 min e manda alerta no celular dele (ntfy)
 quando (a) uma collab nossa é aceita e (b) um post da BFC ou da Luz está com engajamento
@@ -488,7 +498,8 @@ para melhorar**. No máximo ~1.200 palavras, 80% delas propositivas):
    - gargalos do dia (descartes, revisões reprovadas, foto ruim, atraso de agendamento, fontes fora
      do ar, perfis de movimentos com erro) e a correção técnica proposta;
    - automação nova que pouparia tempo ou créditos, fonte nova que faltou, processo de revisão;
-   - custo: quantas chamadas/rodadas o dia gastou e onde dá para economizar.
+   - custo: quantas chamadas/rodadas o dia gastou e onde dá para economizar;
+   - collab: chamadas de parceria do dia e páginas progressistas novas (radar de collab, seção 10).
 5. **Experimentos para amanhã**: até 3, cada um com hipótese, como medir e esforço
    (pequeno/médio/grande). Ex.: "Reels com 1ª frase em texto grande: mais alcance que o post de foto
    da mesma editoria? Medir alcance em 24 h."
