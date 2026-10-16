@@ -90,6 +90,26 @@ LOCKUPS = {
     ),
 }
 
+# "da roça" (aprovada pelo João em 16/10/2026, paleta café e folha): CBR com o nome escrito à mão embaixo
+def _marca_roca(c: dict) -> str:
+    fonte = (FONTS_DIR / "permanent-marker-latin-400-normal.woff2").as_uri()
+    risco = (f'<svg style="position:absolute;left:-6px;bottom:-18px" width="100%" height="18" viewBox="0 0 300 18" preserveAspectRatio="none">'
+             f'<path d="M3 11 C 60 4, 120 15, 180 8 S 270 6, 297 10" fill="none" stroke="{c["risco"]}" stroke-width="4.5" stroke-linecap="round"/></svg>')
+    return (f"<style>@font-face{{font-family:'PermanentMarker';src:url('{fonte}') format('woff2')}}</style>"
+            f'<div style="position:absolute;z-index:6;left:80px;top:46px;line-height:1">'
+            f'<div style="font-family:Unbounded,Archivo,sans-serif;font-weight:900;font-size:84px;letter-spacing:-4px;color:{c["destaque"]}">CBR</div>'
+            f'<div id="mao" style="position:relative;display:inline-block;margin:-8px 0 0 64px;font-family:PermanentMarker,cursive;font-size:58px;'
+            f'color:{c["destaque"]};text-shadow:0 2px 10px rgba(0,0,0,.55);transform:rotate(-5deg);transform-origin:left center;white-space:nowrap">'
+            f'da roça{risco}</div></div>')
+
+
+def _sulcos(c: dict, esquerda: int) -> str:
+    """Da roça: linhas de plantio sob a barra."""
+    return "".join(
+        f'<div style="position:absolute;z-index:3;left:{esquerda + i * 22}px;top:{c["barra_y"] + 10}px;width:12px;height:4px;'
+        f'border-radius:2px;background:{c["risco"]};opacity:{.9 - i * .07:.2f}"></div>' for i in range(12))
+
+
 MARCA_SIMPLES = (
     '<div style="position:absolute;z-index:6;left:80px;top:60px;display:flex;align-items:center;gap:12px">'
     '<svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="#E3AD16" stroke-linecap="round">'
@@ -111,11 +131,15 @@ EDITORIAS = {
     "saude":    dict(ESCURO, destaque="#14D9C4", icone="#E3AD16", icone_top=72, marca="lockup", esquerda=120, credito="rodape", foto_min=780),
     "gerais":   dict(ESCURO, destaque="#E0302A", icone=None, icone_top=60, marca="simples", esquerda=120, credito="topo", foto_min=760),
     "america_latina": dict(ESCURO, destaque="#FF5A1F", icone="#FF5A1F", icone_top=70, marca="lockup", esquerda=120, credito="rodape", foto_min=800),
+    "roca": dict(ESCURO, bg="#1E1610", texto="#F6F0E4", sub="#CFC4B2", barra_solida="#3A2E24", papel_op=0.4,
+                 grad_rgb="30,22,16", destaque="#B8D86B", risco="#E7DCC4", icone=None, icone_top=70, marca="roca",
+                 esquerda=120, credito="rodape", foto_min=800,
+                 foto_filtro="filter:saturate(1.08) sepia(.12) contrast(1.04)"),
     "economia": dict(CLARO, destaque="#1646E0", icone="#E3AD16", icone_top=72, marca="lockup", esquerda=120, credito="topo", foto_min=760),
     "educacao": dict(CLARO, destaque="#56622C", icone="#E3AD16", icone_top=72, marca="lockup", esquerda=120, credito="topo", foto_min=780),
 }
 
-TITULO_MAX = {"politica": 70, "eleicoes": 58, "saude": 60, "gerais": 58, "economia": 60, "educacao": 76, "america_latina": 58}
+TITULO_MAX = {"politica": 70, "eleicoes": 58, "saude": 60, "gerais": 58, "economia": 60, "educacao": 76, "america_latina": 58, "roca": 58}
 
 MARCA_TEXTO = "background:linear-gradient(to bottom,rgba(227,173,22,0) 58%,rgba(227,173,22,.6) 58%,rgba(227,173,22,.6) 92%,rgba(227,173,22,0) 92%)"
 
@@ -215,6 +239,8 @@ html,body{{margin:0;padding:0;background:{bg}}}
 def _marca(ed: str, c: dict, escala_cbr: float = 1.0) -> str:
     if c["marca"] == "simples":
         return MARCA_SIMPLES.format(cor=c["texto"])
+    if c["marca"] == "roca":
+        return _marca_roca(c)
     lockup = LOCKUPS[ed]
     if escala_cbr != 1.0:
         # reduz só o "CBR" grande, mantendo-o centrado na altura do nome da editoria
@@ -268,7 +294,8 @@ def _selo_pais(pais: str, cor: str, texto: str) -> str:
 def _foto_padrao(c: dict, foto_uri: str, posicao: str, alt: str) -> str:
     g = c["grad_rgb"]
     return (f'<div id="foto" data-min="{c["foto_min"]}" style="position:absolute;z-index:1;left:0;right:0;top:0;height:{c["foto_min"]}px;overflow:hidden">'
-            f'<img src="{foto_uri}" alt="{html.escape(alt)}" style="display:block;width:100%;height:100%;object-fit:cover;object-position:{posicao}">'
+            f'<img src="{foto_uri}" alt="{html.escape(alt)}" style="display:block;width:100%;height:100%;object-fit:cover;object-position:{posicao}'
+            f'{";" + c["foto_filtro"] if c.get("foto_filtro") else ""}">'
             f'<div style="position:absolute;left:0;right:0;top:0;height:240px;background:linear-gradient(to bottom,rgba({g},.8) 0%,rgba({g},0) 100%)"></div>'
             f'<div style="position:absolute;left:0;right:0;bottom:0;height:300px;background:linear-gradient(to bottom,rgba({g},0) 0%,rgba({g},.85) 60%,{c["bg"]} 100%)"></div>'
             f'</div>')
@@ -304,6 +331,7 @@ PADROES = {
     "eleicoes": {**PADRAO_COMUM},
     "saude":    {**PADRAO_COMUM},
     "america_latina": {**PADRAO_COMUM},
+    "roca": {**PADRAO_COMUM},
     # fundo claro: faixa mais baixa e translúcida, senão parece texto riscado
     "economia": {**PADRAO_COMUM, "destaque_faixa": [64, 100], "destaque_opacidade": 0.45},
     "educacao": {**PADRAO_COMUM, "destaque_faixa": [64, 100], "destaque_opacidade": 0.45},
@@ -361,7 +389,8 @@ def post_unico(post: dict, foto_uri: str, recorte: bool = False) -> str:
 
     corpo = (f'<div style="width:{W}px;height:{H}px;position:relative;overflow:hidden;background:{c["bg"]};color:{c["texto"]};font-family:Archivo,sans-serif">'
              f'{foto}{_marca(ed, c, float(post.get("cbr_escala", 1.0)))}{bloco}'
-             f'{_barra_tecida(c, esq) if ed == "america_latina" else _barra(c, esq, bool(post.get("barra_invertida")))}{rodape}{_papel(c)}</div>')
+             f'{_barra_tecida(c, esq) if ed == "america_latina" else _barra(c, esq, bool(post.get("barra_invertida")))}'
+             f'{_sulcos(c, esq) if ed == "roca" else ""}{rodape}{_papel(c)}</div>')
     return _pagina(corpo, c["bg"])
 
 

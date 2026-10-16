@@ -92,8 +92,11 @@ def parceiros(estado: dict) -> None:
     hoje = datetime.now(BRT)
     if not 7 <= hoje.hour <= 23:
         return
-    # movimentos sociais: 3 vezes por dia (8h, 13h e 18h), para gastar pouco da cota da API
-    if (hoje.hour in (8, 13, 18) and hoje.minute < 10) or "--movimentos" in sys.argv:
+    # movimentos sociais: 3 vezes por dia, 30 min depois dos picos de postagem medidos em 16/10/2026
+    # (radar/movimentos_horarios.json: ondas às 9-12h, 15-18h e 21h); horários em config.json
+    agora_hm = [(int(x[:2]), int(x[3:])) for x in CONFIG.get("movimentos_horarios", ["12:30", "18:30", "21:30"])]
+    na_janela = any(hoje.hour == h and m <= hoje.minute < m + 10 for h, m in agora_hm)
+    if na_janela or "--movimentos" in sys.argv:
         try:
             coletar_movimentos()
         except Exception as e:

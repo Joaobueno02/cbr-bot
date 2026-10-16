@@ -52,7 +52,7 @@ O dono é o João. Ele acompanha cada post pela notificação e pede para parar 
      agora (B) ou que os parceiros deram hoje (A) entra mesmo que tenha começado antes;
    - **Monitor da BFC/Luz**: `radar/parceiros.json` é atualizado a cada 20 min (alertas.yml). Se a
      seção A parecer atrasada, leia direto o parceiros.json (posts de hoje, com legenda e link);
-   - **Movimentos sociais** (seção A2 da pauta; `radar/movimentos.json`, lido às 8h, 13h e 18h):
+   - **Movimentos sociais** (seção A2 da pauta; `radar/movimentos.json`, lido às 12h30, 18h30 e 21h30, meia hora depois dos picos de postagem deles):
      MST, MTST, CUT, UNE, Apib, Sleeping Giants, Greenpeace Brasil (lista em `config.json` >
      `movimentos`). É pauta que não sai em jornal: post deles é **ponto de partida**, nunca fonte
      única; confirme com veículo profissional ou fonte oficial (seção 3). Perfil com "erro" no
@@ -135,10 +135,9 @@ não carregarem, a arte dá erro_render: renderize de novo, nunca publique arte 
 - `america_latina` — **América Latina** (aprovada em 16/10/2026, laranja #FF5A1F, faixa colorida
   embaixo): governos, eleições, protestos, repressão, EUA na região, Mercosul. **Preencha `pais`**
   (ex.: "Argentina"), que vira o selo acima do chapéu. Notícia de vários países: "América Latina".
-- **Eixo do campo (design em aprovação)**: agricultura familiar, reforma agrária, MST,
-  agroecologia, agrotóxico, preço do alimento, fome, conflito no campo. Até o João escolher o
-  nome e o design (protótipos em `prototipos/eixos/`), publique em `economia` (preço, alimento,
-  crédito) ou `gerais` (luta, conflito).
+- `roca` — **da roça** (aprovada em 16/10/2026, paleta café e folha, "da roça" escrito à mão sob
+  o CBR): agricultura familiar, reforma agrária, MST, agroecologia, agrotóxico, preço do
+  alimento, fome, conflito no campo, trabalho escravo no campo. Hashtag de editoria: `#DaRoça`.
 - **Famosos e a eleição** (até o 2º turno): artista, atleta ou influenciador grande que declara
   voto ou apoio. Vai em `eleicoes`. Só com a declaração confirmada na fonte (vídeo ou post do
   próprio famoso, ou veículo profissional que o mostre); "indireta" só se o próprio veículo
@@ -179,6 +178,26 @@ verificada: 4 blocos ou mais = P 3; 3 = P 2; 2 = P 1.
 - **Feed (post único)**: o resto que passou no filtro (I + V ≥ 4).
 Na dúvida entre carrossel e Reels: se o valor está no **choque** do fato, Reels; se está na
 **explicação**, carrossel. Registre a nota no resumo da rodada (ex.: "I3 V2 P3 → carrossel").
+
+### Carrossel "Entenda" (explicativo)
+Não é semanal fixo: só quando aparece uma pauta **muito chamativa e complicada**, que o público
+precisa entender (ex.: fim da 6x1 — a jornada não cai para 40 h de uma vez, é gradual; quando
+começa; o que muda no contracheque; quem votou contra; a pressão de empresários para Flávio rever).
+Critério: I = 3, V ≥ 2 e P = 3. No máximo **2 por semana**. Estrutura: capa com a pergunta
+("Fim da 6x1: o que muda pra você?"), linha do tempo, números, "o que muda pra você", os riscos
+e quem está contra, último slide com chamada (salvar, compartilhar, seguir). Sai de manhã
+(9h–11h), de preferência num dia de pouca notícia. Mesma apuração comparada (seção 3) e as duas
+revisões, como qualquer post.
+
+### Calendário de datas (`pautas/calendario.json`)
+Datas que a página sabe com antecedência, para posts de conscientização e críticos (ex.:
+Consciência Negra, Dia pela Eliminação da Violência contra a Mulher, Direitos Humanos, AI-5).
+Cada item tem data, nome, editoria, ângulo, formato e fontes sugeridas. **Na rodada das 18h da
+véspera**, leia o calendário: para cada item do dia seguinte com `status: "pendente"`, apure com
+dados atuais (seção 3), monte o post, passe pelas duas revisões e deixe `status: "agendado"` com
+`publicar_apos` às 9h (12:00Z). No calendário, o item vira `"preparado"` com o id do post. Data
+que perdeu o sentido (ex.: notícia maior no dia) pode ser pulada: registre o motivo. Ao achar
+uma data relevante nova na pesquisa, acrescente no arquivo (você pode editá-lo).
 
 ### Bombástica (vira Reels)
 Marque `"bombastica": true` quando a notícia tiver potencial de mídia muito acima do normal:
@@ -452,24 +471,27 @@ sugestão já feita (se repetir, diga que é reforço e por quê).
   (descartes, `historico_revisao`, erros de render/publicação) e
   `gh run list -R Joaobueno02/cbr-bot --limit 60` para falhas.
 
-**Estrutura** (direto, sem enrolação, no máximo ~900 palavras):
-1. **O dia em números**: posts publicados, os 2 de melhor e pior desempenho (com link e o porquê
-   provável), seguidores, collabs aceitas.
-2. **Página** (cada item com o exemplo concreto, link e número que sustenta):
-   - *O que as outras páginas fizeram que funcionou* (BFC primeiro): formatos, ganchos de título,
-     temas, horários, frequência.
-   - *Novos tópicos ou séries*: eixos novos além de Política, Eleições 2026, Economia, Educação,
-     Saúde e Gerais (ex.: Trabalho, Meio ambiente, Internacional, "Checagem", séries fixas), com o
-     que já rende nas referências e como entraria na identidade visual.
-   - *Design dos posts*: o que as artes que mais renderam têm que as nossas não têm (sem copiar
-     identidade de ninguém; sempre adaptado ao padrão da CBR).
-   - *Legendas*: tamanho, gancho da primeira linha, chamada para ação, hashtags, comparando com
-     as legendas de quem rendeu mais.
-   - *Como e o que postar*: horários, mix de formatos (feed, carrossel, Reels), frequência.
-3. **Sistema**: falhas e gargalos do dia (erros, descartes por foto ruim, revisões reprovadas,
-   fontes fora do ar, atrasos), e melhorias técnicas concretas.
-4. **Top 3 para amanhã**: as três mudanças de maior impacto, em ordem, cada uma com o esforço
-   (pequeno/médio/grande).
+**Estrutura** (regra do João, 16/10/2026: o que foi feito em poucas linhas; o foco é **o que fazer
+para melhorar**. No máximo ~1.200 palavras, 80% delas propositivas):
+1. **O dia em 5 linhas**: posts publicados, melhor e pior (link e número), seguidores, collabs
+   aceitas, falhas do sistema. Só isso.
+2. **Tendências** (o que está crescendo lá fora, com exemplo, link e número):
+   - temas que subiram nas páginas de referência e no radar (o que ganhou veículos e engajamento);
+   - formatos e ganchos que estão rendendo (Reels com fala, carrossel "entenda", lista, print,
+     antes x depois), músicas/áudios em alta quando aparecerem;
+   - o que a BFC fez hoje que funcionou e nós não fizemos, e por quê.
+3. **Conteúdo: o que postar e como** (propostas concretas para os próximos dias):
+   - pautas e séries para testar (com o porquê e o número que sustenta);
+   - formato, título, primeira linha da legenda, horário, mix feed/carrossel/Reels;
+   - datas do calendário que vêm aí e o ângulo sugerido.
+4. **Bastidores: gestão e sistema** (o que melhorar no "motor" da página):
+   - gargalos do dia (descartes, revisões reprovadas, foto ruim, atraso de agendamento, fontes fora
+     do ar, perfis de movimentos com erro) e a correção técnica proposta;
+   - automação nova que pouparia tempo ou créditos, fonte nova que faltou, processo de revisão;
+   - custo: quantas chamadas/rodadas o dia gastou e onde dá para economizar.
+5. **Experimentos para amanhã**: até 3, cada um com hipótese, como medir e esforço
+   (pequeno/médio/grande). Ex.: "Reels com 1ª frase em texto grande: mais alcance que o post de foto
+   da mesma editoria? Medir alcance em 24 h."
 
 Regras: separe fato (número) de interpretação; não trate correlação de um dia como regra;
 **não aplique nada** por conta própria: toda mudança depende do OK do João numa conversa.

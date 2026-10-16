@@ -72,7 +72,7 @@ MEDIR_JS = r"""
 
 # esconde marca e ícone (z-index 6) para medir o fundo atrás deles
 SEM_MARCA_JS = "() => { for (const e of document.querySelectorAll('[style*=\"z-index:6\"]')) e.style.visibility='hidden'; }"
-ESCURAS = {"politica", "eleicoes", "saude", "gerais", "america_latina"}
+ESCURAS = {"politica", "eleicoes", "saude", "gerais", "america_latina", "roca"}
 
 
 def luminancia(im: Image.Image) -> tuple[float, float]:
@@ -129,6 +129,10 @@ def conferir_arte(pagina, pasta: Path, n: int, post: dict, slide: dict | None) -
         graves.append(f"texto passa da margem direita (x={m['mais_direita']})")
     if not fit.get("ok"):
         graves.append("o encaixe do texto falhou (fit.ok = false)")
+    if post.get("editoria") == "roca" and slide is None:
+        carregadas = pagina.evaluate("[...document.fonts].filter(f => f.status === 'loaded').map(f => f.family.replace(/[\"']/g, ''))")
+        if "PermanentMarker" not in carregadas:
+            graves.append("a letra manuscrita do \"da roça\" não carregou: renderize de novo")
 
     # contraste da marca do topo
     medidas = {"titulo_tamanho": fit.get("tamanho"), "titulo_linhas": len(lin), "subtitulo_linhas": len(sl),
