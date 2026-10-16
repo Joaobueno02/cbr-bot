@@ -168,8 +168,8 @@ def terra_a(p: dict, uri: str) -> str:
         f'<div style="position:absolute;z-index:3;left:{esq + i * 22}px;top:1272px;width:12px;height:4px;border-radius:2px;background:{verde};opacity:{.9 - i * .07:.2f}"></div>'
         for i in range(12))
     corpo = (f'<div style="width:{W}px;height:{H}px;position:relative;overflow:hidden;background:{bg};color:{tx}">'
-             f'{foto_cheia(uri, p.get("foto_posicao", "50% 40%"), "23,19,14", bg, 800, "filter:saturate(1.08) sepia(.12) contrast(1.04)")}{marca}'
-             f'{bloco(partes, esq, 1262 - 40 - 110)}{barra(1258, esq, dest, "#3B342A")}{sulcos}{papel("overlay", .4)}</div>')
+             f'{foto_cheia(uri, p.get("foto_posicao", "50% 40%"), rgb, bg, 800, "filter:saturate(1.08) sepia(.12) contrast(1.04)")}{marca}'
+             f'{bloco(partes, esq, 1262 - 40 - 110)}{barra(1258, esq, dest, cores["base_barra"])}{sulcos}{papel("overlay", .4)}</div>')
     return _pagina(corpo, bg)
 
 
@@ -233,7 +233,7 @@ FONTES_MAO = {
 }
 
 
-def marca_mao(nome: str, fonte: str, cor_cbr: str, cor_mao: str, tam_mao: int) -> str:
+def marca_mao(nome: str, fonte: str, cor_cbr: str, cor_mao: str, tam_mao: int, cor_mao_txt: str = "#F6F0E4") -> str:
     uri = (Path(__file__).resolve().parent.parent / FONTES_MAO[fonte]).as_uri()
     ff = f"<style>@font-face{{font-family:'{fonte}';src:url('{uri}') format('woff2')}}</style>"
     # traço à mão sob o nome (curva levemente torta)
@@ -242,22 +242,25 @@ def marca_mao(nome: str, fonte: str, cor_cbr: str, cor_mao: str, tam_mao: int) -
     return (ff + f'<div style="position:absolute;z-index:6;left:80px;top:46px;line-height:1">'
             f'<div style="font-family:Unbounded,Archivo,sans-serif;font-weight:900;font-size:84px;letter-spacing:-4px;color:{cor_cbr}">CBR</div>'
             f'<div style="position:relative;display:inline-block;margin:-8px 0 0 64px;font-family:{fonte};font-size:{tam_mao}px;'
-            f'color:#F6F0E4;text-shadow:0 2px 10px rgba(0,0,0,.55);transform:rotate(-5deg);transform-origin:left center;white-space:nowrap">{html.escape(nome)}{risco}</div></div>')
+            f'color:{cor_mao_txt};text-shadow:0 2px 10px rgba(0,0,0,.55);transform:rotate(-5deg);transform-origin:left center;white-space:nowrap">{html.escape(nome)}{risco}</div></div>')
 
 
 def campo_mao(p: dict, uri: str) -> str:
-    bg, tx, sub, dest, verde = "#17130E", "#F6F0E4", "#CFC4B2", "#E9A23B", "#9BC45A"
+    cores = {"bg": "#17130E", "tx": "#F6F0E4", "sub": "#CFC4B2", "dest": "#E9A23B", "verde": "#9BC45A",
+             "base_barra": "#3B342A", "mao": "#F6F0E4", **p.get("cores", {})}
+    bg, tx, sub, dest, verde = cores["bg"], cores["tx"], cores["sub"], cores["dest"], cores["verde"]
+    rgb = ",".join(str(int(bg[i:i + 2], 16)) for i in (1, 3, 5))
     esq = 120
     partes = [chapeu(p["chapeu"], dest), titulo(p, tx, dest)]
     if p.get("subtitulo"):
         partes.append(subtitulo(p["subtitulo"], sub, dest, tx))
-    marca = marca_mao(p["nome_eixo"], p["fonte_mao"], dest, verde, p.get("tam_mao", 54))
+    marca = marca_mao(p["nome_eixo"], p["fonte_mao"], dest, verde, p.get("tam_mao", 54), cores["mao"])
     sulcos = "".join(
         f'<div style="position:absolute;z-index:3;left:{esq + i * 22}px;top:1272px;width:12px;height:4px;border-radius:2px;background:{verde};opacity:{.9 - i * .07:.2f}"></div>'
         for i in range(12))
     corpo = (f'<div style="width:{W}px;height:{H}px;position:relative;overflow:hidden;background:{bg};color:{tx}">'
-             f'{foto_cheia(uri, p.get("foto_posicao", "50% 40%"), "23,19,14", bg, 800, "filter:saturate(1.08) sepia(.12) contrast(1.04)")}{marca}'
-             f'{bloco(partes, esq, 1262 - 40 - 110)}{barra(1258, esq, dest, "#3B342A")}{sulcos}{papel("overlay", .4)}</div>')
+             f'{foto_cheia(uri, p.get("foto_posicao", "50% 40%"), rgb, bg, 800, "filter:saturate(1.08) sepia(.12) contrast(1.04)")}{marca}'
+             f'{bloco(partes, esq, 1262 - 40 - 110)}{barra(1258, esq, dest, cores["base_barra"])}{sulcos}{papel("overlay", .4)}</div>')
     return _pagina(corpo, bg)
 
 

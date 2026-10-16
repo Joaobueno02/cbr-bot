@@ -65,6 +65,22 @@ def gravar(perfis: dict) -> None:
                        encoding="utf-8")
 
 
+def coletar_movimentos() -> dict:
+    """Perfis de movimentos sociais (config.json > movimentos), 3 vezes por dia (pedido do João,
+    16/10/2026): pauta que não sai em jornal. Grava radar/movimentos.json. Perfil que não for
+    conta comercial/criador ou tiver o @ errado aparece com "erro" (corrija o @ no config.json)."""
+    perfis = {}
+    for user in CONFIG.get("movimentos", []):
+        try:
+            perfis[user] = coletar(user)
+        except ErroAPI as e:
+            perfis[user] = {"erro": str(e)[:200]}
+    destino = RAIZ / "radar" / "movimentos.json"
+    destino.write_text(json.dumps({"quando": agora(), "perfis": perfis}, ensure_ascii=False, indent=2) + "\n",
+                       encoding="utf-8")
+    return perfis
+
+
 def main() -> None:
     perfis = {}
     for user in PARCEIROS:

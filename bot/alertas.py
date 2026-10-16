@@ -25,7 +25,7 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from publicar import CONFIG, PENDENTES, RAIZ, ErroAPI, agora, chamar  # noqa: E402
-from parceiros import coletar, gravar  # noqa: E402
+from parceiros import coletar, coletar_movimentos, gravar  # noqa: E402
 
 ESTADO = RAIZ / "registro" / "alertas.json"
 BRT = timezone(timedelta(hours=-3))
@@ -92,6 +92,12 @@ def parceiros(estado: dict) -> None:
     hoje = datetime.now(BRT)
     if not 7 <= hoje.hour <= 23:
         return
+    # movimentos sociais: 3 vezes por dia (8h, 13h e 18h), para gastar pouco da cota da API
+    if (hoje.hour in (8, 13, 18) and hoje.minute < 10) or "--movimentos" in sys.argv:
+        try:
+            coletar_movimentos()
+        except Exception as e:
+            estado["log"].append({"quando": agora(), "tipo": "erro_movimentos", "erro": str(e)[:200]})
     if hoje.minute % 20 >= 10 and "--parceiros" not in sys.argv:
         return
     dia = hoje.strftime("%Y-%m-%d")

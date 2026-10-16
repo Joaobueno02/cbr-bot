@@ -40,10 +40,10 @@ jobs:
         run: |
           git config user.name "cbr-bot"
           git config user.email "cbr-bot@users.noreply.github.com"
-          git add registro radar/parceiros.json
+          git add registro radar
           [ -z "$(git diff --cached --name-only)" ] && { echo "nada mudou"; exit 0; }
           python bot/checar_vazamento.py $(git diff --cached --name-only)
-          if [ -n "$NTFY_TOPIC" ] && grep -rqF "$NTFY_TOPIC" registro radar/parceiros.json; then echo "tópico vazaria"; exit 1; fi
+          if [ -n "$NTFY_TOPIC" ] && grep -rqF "$NTFY_TOPIC" registro radar/; then echo "tópico vazaria"; exit 1; fi
           git commit -m "alertas $(date -u +%FT%TZ)"
           for i in 1 2 3; do
             git pull --rebase origin main && git push && exit 0

@@ -52,8 +52,16 @@ O dono é o João. Ele acompanha cada post pela notificação e pede para parar 
      agora (B) ou que os parceiros deram hoje (A) entra mesmo que tenha começado antes;
    - **Monitor da BFC/Luz**: `radar/parceiros.json` é atualizado a cada 20 min (alertas.yml). Se a
      seção A parecer atrasada, leia direto o parceiros.json (posts de hoje, com legenda e link);
-   - `radar/atual.json` (~215 fontes: nacionais, imprensa de esquerda, regionais, Europa e EUA
-     sobre Brasil e América Latina, latino-americanas, campo, institutos e universidades, últimas
+   - **Movimentos sociais** (seção A2 da pauta; `radar/movimentos.json`, lido às 8h, 13h e 18h):
+     MST, MTST, CUT, UNE, Apib, Sleeping Giants, Greenpeace Brasil (lista em `config.json` >
+     `movimentos`). É pauta que não sai em jornal: post deles é **ponto de partida**, nunca fonte
+     única; confirme com veículo profissional ou fonte oficial (seção 3). Perfil com "erro" no
+     movimentos.json = @ errado ou conta não comercial: avise o João no dossiê;
+   - `radar/atual.json` (~235 fontes: nacionais, imprensa de esquerda, regionais; imprensa
+     internacional sobre Brasil e América Latina de EUA (NYT, WSJ, Washington Post), Europa
+     (Guardian, Le Monde, El País, FT, DW, Euronews), Oriente Médio (Al Jazeera, Middle East Eye,
+     Al Mayadeen), Ásia (SCMP, Xinhua, The Hindu), África (Africanews, Mail & Guardian, AllAfrica)
+     e agências (Reuters, AP, AFP, EFE); latino-americanas, campo, institutos e universidades, últimas
      26 h, agrupado por assunto; `temperatura` = veículos diferentes) é o acervo completo: use
      para aprofundar um assunto (todos os veículos e links), não para varrer. O radar é ponto de
      partida, não fonte: a apuração (seção 3) continua obrigatória;

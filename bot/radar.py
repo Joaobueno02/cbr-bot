@@ -248,8 +248,8 @@ def _link(g: dict) -> str:
     return g.get("link_direto") or g["links"][0]["link"]
 
 
-def _cruzar_parceiros(grupos: list[dict]) -> list[dict]:
-    arq = PASTA / "parceiros.json"
+def _cruzar_parceiros(grupos: list[dict], nome_arq: str = "parceiros.json") -> list[dict]:
+    arq = PASTA / nome_arq
     if not arq.exists():
         return []
     dados = json.loads(arq.read_text(encoding="utf-8"))
@@ -295,6 +295,7 @@ def _pauta(grupos: list[dict], agora_dt: datetime) -> str:
         return g["temperatura"] - base
 
     parceiros = _cruzar_parceiros(grupos)
+    movimentos = _cruzar_parceiros(grupos, "movimentos.json")
     # regra do João (16/10/2026): 2 veículos já bastam para o assunto entrar em alta (era 5)
     em_alta = [g for g in grupos if g["temperatura"] >= 2 and (delta(g) >= 2 or g["veiculos_3h"] >= 2)]
     em_alta.sort(key=lambda g: (-g["veiculos_3h"], -g["temperatura"]))
@@ -312,7 +313,7 @@ def _pauta(grupos: list[dict], agora_dt: datetime) -> str:
         lista.sort(key=lambda g: (-min(g["temperatura"], 2), -(g["veiculos_3h"]), -g["temperatura"]))
         por_tema[k] = lista[:15]
 
-    for g in [p["grupo"] for p in parceiros if p["grupo"]] + em_alta + novos_sel + [g for l in por_tema.values() for g in l]:
+    for g in [p["grupo"] for p in parceiros + movimentos if p["grupo"]] + em_alta + novos_sel + [g for l in por_tema.values() for g in l]:
         desde.setdefault(g["sig"], agora)
 
     def lin(g, extra=""):
@@ -330,6 +331,11 @@ def _pauta(grupos: list[dict], agora_dt: datetime) -> str:
         cab = f"- @{p['perfil']} {p['quando'].astimezone(BRT).strftime('%Hh%M')} ({int(p['velocidade'] or 0)} interações/h) {p['link']}\n  \"{p['legenda']}\""
         out.append(cab)
         out.append("  " + (lin(p["grupo"]) if p["grupo"] else "- sem correspondência no radar: procure na busca da web"))
+    if movimentos:
+        out += ["", f"## A2. Movimentos sociais hoje ({len(movimentos)}) — MST, MTST, CUT, UNE, Apib... (pauta fora do jornal; confirme antes)", ""]
+        for p in movimentos:
+            out.append(f"- @{p['perfil']} {p['quando'].astimezone(BRT).strftime('%Hh%M')} ({int(p['velocidade'] or 0)} interações/h) {p['link']}\n  \"{p['legenda']}\"")
+            out.append("  " + (lin(p["grupo"]) if p["grupo"] else "- sem correspondência no radar"))
     out += ["", f"## B. Em alta agora ({len(em_alta)}) — ganharam veículos nas últimas 3 h", ""]
     out += [lin(g) for g in em_alta]
     nomes = dict(SECOES)
