@@ -1,4 +1,4 @@
-"""Triagem da pauta por IA (GPT, pela API da OpenAI), para economizar o Claude.
+"""Triagem da pauta por IA (GPT pelo GitHub Models, de graça), para economizar o Claude.
 
 Roda no radar.yml logo depois de bot/radar.py. Lê radar/pauta_itens.json (a pauta em JSON),
 dá nota a cada assunto com a régua do MANUAL.md (seção 2: editoria, Impacto, Viralização,
@@ -10,8 +10,11 @@ Profundidade, "Não publique") e grava:
   radar/triagem_estado.json  memória (assunto -> nota), para não pagar de novo pelo mesmo assunto
 
 A triagem só PROPÕE. Apuração, texto, arte e as revisões continuam com o Claude e o manual.
-Sem a chave (secret OPENAI_API_KEY) ou com erro na API, grava "ok": false e a rodada usa a
-pauta.md como antes. A chave nunca é gravada nem impressa.
+Usa o GitHub Models (cota gratuita da conta do GitHub, sem cartão e sem chave nova): o próprio
+GITHUB_TOKEN do Actions autentica, com "permissions: models: read" no workflow. Cota grátis dos
+modelos "low" (gpt-4.1-mini, gpt-4o-mini): ~15 pedidos/min, ~150/dia, ~8 mil tokens de entrada por
+pedido; por isso os lotes são pequenos e há um teto diário próprio (TETO_DIA). Estourou a cota ou deu
+erro: grava "ok": false e a rodada usa a pauta.md como antes. O token nunca é gravado nem impresso.
 """
 from __future__ import annotations
 
@@ -28,9 +31,10 @@ PASTA = Path("radar")
 SAIDA = PASTA / "triagem.json"
 ESTADO = PASTA / "triagem_estado.json"
 POSTS = Path("registro/posts.jsonl")
-URL = "https://api.openai.com/v1/chat/completions"
-MODELOS = [m for m in [os.environ.get("OPENAI_MODEL", "").strip(), "gpt-5-mini", "gpt-4.1-mini"] if m]
-LOTE = 50
+URL = "https://models.github.ai/inference/chat/completions"
+MODELOS = [m for m in [os.environ.get("TRIAGEM_MODELO", "").strip(), "openai/gpt-4.1-mini", "openai/gpt-4o-mini"] if m]
+LOTE = 25       # cabe folgado no limite de ~8 mil tokens de entrada da cota grátis
+TETO_DIA = 120  # pedidos por dia (UTC), abaixo dos ~150 da cota grátis
 CORTE = 4  # I + V mínimo (manual, seção 2)
 
 EDITORIAS = ["eleicoes", "politica", "economia", "educacao", "saude", "gerais", "america_latina", "roca", "fora"]
@@ -91,6 +95,13 @@ ESQUEMA = {
 }
 
 
+PEDIDOS = [0]
+FORMATO_SIMPLES = """
+
+Formato da resposta: {"avaliacoes": [{"id": 0, "editoria": "...", "I": 0, "V": 0, "P": 0,
+"formato": "feed|carrossel|reels", "repetido": false, "risco": "", "motivo": "..."}]}"""
+
+
 def agora_iso(dt: datetime | None = None) -> str:
     return (dt or datetime.now(timezone.utc)).strftime("%Y-%m-%dT%H:%M:%SZ")
 
@@ -121,12 +132,12 @@ def chamar(itens: list[dict], publicados: list[str], chave: str) -> tuple[list[d
     erro = ""
     for modelo in MODELOS:
         corpo = {"model": modelo, "messages": [{"role": "system", "content": REGUA}, {"role": "user", "content": usuario}],
-                 "response_format": {"type": "json_schema", "json_schema": ESQUEMA}}
-        if modelo.startswith(("gpt-5", "o")):
-            corpo["reasoning_effort"] = "low"
+                 "response_format": {"type": "json_schema", "json_schema": ESQUEMA}, "temperature": 0.2}
         for tentativa in range(2):
             try:
-                r = requests.post(URL, headers={"Authorization": f"Bearer {chave}"}, json=corpo, timeout=180)
+                r = requests.post(URL, headers={"Authorization": f"Bearer {chave}", "Accept": "application/json",
+                                                "X-GitHub-Api-Version": "2022-11-28"}, json=corpo, timeout=180)
+                PEDIDOS[0] += 1
             except requests.RequestException as e:
                 erro = f"{modelo}: {type(e).__name__}"
                 time.sleep(5)
@@ -140,10 +151,14 @@ def chamar(itens: list[dict], publicados: list[str], chave: str) -> tuple[list[d
             except Exception:
                 msg = ""
             erro = f"{modelo}: HTTP {r.status_code} {msg}"
-            if r.status_code == 400 and "reasoning_effort" in corpo and "reasoning" in msg:
-                corpo.pop("reasoning_effort")
+            if r.status_code == 400 and corpo["response_format"]["type"] == "json_schema":
+                # modelo sem suporte a json_schema: pede JSON simples (o esquema já está descrito na régua)
+                corpo["response_format"] = {"type": "json_object"}
+                corpo["messages"][0]["content"] = REGUA + FORMATO_SIMPLES
                 continue
-            if r.status_code in (429, 500, 502, 503):
+            if r.status_code == 429:
+                break  # cota grátis estourada: não insiste (tenta o outro modelo, que tem cota própria)
+            if r.status_code in (500, 502, 503):
                 time.sleep(10)
                 continue
             break
@@ -182,11 +197,21 @@ def main() -> int:
         if not antigo or it.get("veiculos", 0) >= max(3, 2 * antigo.get("veiculos", 0)):
             pendentes.append(it)
 
-    chave = os.environ.get("OPENAI_API_KEY", "").strip()
+    chave = os.environ.get("GITHUB_TOKEN", "").strip()
+    hoje = agora.strftime("%Y-%m-%d")
+    cota = estado.pop("_cota", {})
+    usados = cota.get("pedidos", 0) if cota.get("dia") == hoje else 0
+    cortados = 0
+    if usados + -(-len(pendentes) // LOTE) > TETO_DIA:
+        cabe = max(0, (TETO_DIA - usados) * LOTE)
+        cortados, pendentes = len(pendentes) - cabe, pendentes[:cabe]
     resultado = {"quando": agora_iso(agora), "pauta_quando": pauta.get("quando"), "ok": True, "erro": None,
                  "modelo": None, "avaliados_agora": len(pendentes), "em_cache": len(itens) - len(pendentes)}
+    if cortados:
+        resultado.update(ok=False, erro=f"teto diário da cota grátis: {cortados} assuntos ficaram sem nota; "
+                                        "leia radar/pauta.md como antes")
     if pendentes and not chave:
-        resultado.update(ok=False, avaliados_agora=0, erro="sem OPENAI_API_KEY: leia radar/pauta.md como antes")
+        resultado.update(ok=False, avaliados_agora=0, erro="sem GITHUB_TOKEN: leia radar/pauta.md como antes")
     elif pendentes:
         publicados = ja_publicados()
         try:
@@ -239,11 +264,13 @@ def main() -> int:
                                       "I": d["I"], "V": d["V"], "repetido": d["repetido"], "motivo": d["motivo"]}
                                      for d in descartes[:15]],
     })
+    resultado["pedidos_hoje"] = usados + PEDIDOS[0]
     SAIDA.write_text(json.dumps(resultado, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
     # memória de 30 h
     lim = agora_iso(agora - timedelta(hours=30))
     estado = {k: v for k, v in estado.items() if v.get("quando", "") >= lim}
+    estado["_cota"] = {"dia": hoje, "pedidos": usados + PEDIDOS[0]}
     ESTADO.write_text(json.dumps(estado, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     print(f"triagem: {len(itens)} assuntos, {len(pendentes)} avaliados agora, {len(candidatos)} candidatos, "
           f"ok={resultado['ok']}" + (f" ({resultado['erro']})" if resultado["erro"] else ""))

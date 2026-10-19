@@ -10,8 +10,9 @@ import sys
 from pathlib import Path
 
 PADROES = [re.compile(r"EAA[A-Za-z0-9]{20,}"), re.compile(r"access_token", re.I),
-           re.compile(r"\bsk-(?:proj-)?[A-Za-z0-9_-]{30,}")]  # chave da OpenAI (triagem, 19/10/2026)
-PARECIDOS = (0, 2)  # padrões "parecidos com chave" que links longos podem casar por acaso
+           re.compile(r"\bsk-(?:proj-)?[A-Za-z0-9_-]{30,}"),   # chave da OpenAI
+           re.compile(r"\bgh[pousr]_[A-Za-z0-9]{30,}")]         # token do GitHub (triagem, 19/10/2026)
+PARECIDOS = (0, 2, 3)  # padrões "parecidos com chave" que links longos podem casar por acaso
 # arquivos do radar de manchetes: gerados por bot/radar.py, que nunca toca no token. Os links do
 # Google Notícias são códigos longos que às vezes contêm "EAA..." por acaso, então ali só vale a
 # checagem do token exato e de "access_token".
@@ -23,6 +24,7 @@ SO_TOKEN_EXATO = {"radar/atual.json", "radar/novos.md", "radar/top.md", "radar/v
 def main() -> int:
     token = os.environ.get("IG_TOKEN", "")
     chave_ia = os.environ.get("OPENAI_API_KEY", "")
+    token_gh = os.environ.get("GITHUB_TOKEN", "")
     achados = []
     for nome in sys.argv[1:]:
         p = Path(nome)
@@ -33,6 +35,8 @@ def main() -> int:
             achados.append(f"{nome}: contém o IG_TOKEN")
         if chave_ia and chave_ia in txt:
             achados.append(f"{nome}: contém a OPENAI_API_KEY")
+        if token_gh and token_gh in txt:
+            achados.append(f"{nome}: contém o GITHUB_TOKEN")
         for pad in PADROES:
             if nome in SO_TOKEN_EXATO and PADROES.index(pad) in PARECIDOS:
                 continue
