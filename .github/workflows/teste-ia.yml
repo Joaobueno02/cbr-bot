@@ -11,7 +11,7 @@ jobs:
       - env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          exec > status/teste-ia.txt 2>&1
+          set +e +o pipefail; exec > status/teste-ia.txt 2>&1
           B='{"model":"openai/gpt-4.1-mini","messages":[{"role":"user","content":"Responda em JSON {\"x\":1}"}]}'
           for H in "application/json" "application/vnd.github+json"; do
             echo "== Accept $H"
@@ -21,7 +21,8 @@ jobs:
           done
           echo "== catalogo"
           curl -sS https://models.github.ai/catalog/models -H "Accept: application/vnd.github+json" | python3 -c "import json,sys;[print(m['id'],m.get('rate_limit_tier')) for m in json.load(sys.stdin) if 'openai' in m['id']]"
-      - run: |
+      - if: always()
+        run: |
           git config user.name cbr-bot; git config user.email cbr-bot@users.noreply.github.com
           grep -v -i -e "bearer" -e "ghs_" status/teste-ia.txt > /tmp/t && mv /tmp/t status/teste-ia.txt
           git add status/teste-ia.txt && git commit -m "teste ia" && git pull --rebase && git push
