@@ -1,0 +1,21 @@
+name: Teste IA (temporário)
+on: workflow_dispatch
+permissions:
+  contents: read
+  models: read
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          B='{"model":"openai/gpt-4.1-mini","messages":[{"role":"user","content":"Responda em JSON {\"x\":1}"}]}'
+          for H in "application/json" "application/vnd.github+json"; do
+            echo "== Accept $H"
+            curl -sS -i -X POST https://models.github.ai/inference/chat/completions \
+              -H "Authorization: Bearer $GITHUB_TOKEN" -H "Accept: $H" -H "Content-Type: application/json" \
+              -H "X-GitHub-Api-Version: 2022-11-28" -d "$B" | grep -iv -e authorization -e set-cookie | head -c 900; echo
+          done
+          echo "== catalogo"
+          curl -sS https://models.github.ai/catalog/models -H "Accept: application/vnd.github+json" | python3 -c "import json,sys;[print(m['id'],m.get('rate_limit_tier')) for m in json.load(sys.stdin) if 'openai' in m['id']]"
