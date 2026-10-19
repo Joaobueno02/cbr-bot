@@ -143,8 +143,16 @@ def chamar(itens: list[dict], publicados: list[str], chave: str) -> tuple[list[d
                 time.sleep(5)
                 continue
             if r.status_code == 200:
-                conteudo = r.json()["choices"][0]["message"]["content"]
-                return json.loads(conteudo)["avaliacoes"], modelo
+                try:
+                    conteudo = (r.json()["choices"][0]["message"]["content"] or "").strip()
+                    if conteudo.startswith("```"):
+                        conteudo = conteudo.strip("`").removeprefix("json").strip()
+                    return json.loads(conteudo)["avaliacoes"], modelo
+                except Exception as e:
+                    # diagnóstico curto (sem cabeçalhos, sem token): tipo e começo do corpo
+                    erro = (f"{modelo}: resposta 200 ilegível ({type(e).__name__}; "
+                            f"{r.headers.get('content-type', '?')}; {r.text[:120]!r})")
+                    break
             # nunca grava a resposta bruta: só o código e a mensagem curta do erro
             try:
                 msg = r.json().get("error", {}).get("message", "")[:160]
