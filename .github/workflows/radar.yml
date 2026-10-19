@@ -26,10 +26,18 @@ jobs:
         run: pip install feedparser requests pillow
       - name: Radar de manchetes
         run: python bot/radar.py
+      # triagem por IA (GPT): dá nota a cada assunto da pauta e grava radar/triagem.json, que a rodada
+      # do Claude lê primeiro. Sem a chave ou com erro, grava "ok": false e não derruba o radar.
+      - name: Triagem da pauta (GPT)
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+        run: python bot/triagem.py || echo "triagem falhou; a rodada usa a pauta.md"
       # o feed da BFC e da Luz (radar/parceiros.json) agora é lido a cada 20 min pelo alertas.yml
       - name: Trava anti-vazamento e commit
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           git config user.name "cbr-bot"
           git config user.email "cbr-bot@users.noreply.github.com"

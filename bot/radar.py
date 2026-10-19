@@ -16,6 +16,7 @@ Saídas (pasta radar/):
                      assuntos em alta (ganharam veículos em 3 h) e novos por seção, com
                      "na pauta desde" para quem roda de hora em hora saber o que é novo para ele
   pauta_estado.json  memória da pauta (temperatura por assunto, entrada na pauta)
+  pauta_itens.json   a mesma pauta em JSON, para a triagem por IA (bot/triagem.py)
 """
 from __future__ import annotations
 
@@ -316,6 +317,16 @@ def _pauta(grupos: list[dict], agora_dt: datetime) -> str:
     for g in [p["grupo"] for p in parceiros + movimentos if p["grupo"]] + em_alta + novos_sel + [g for l in por_tema.values() for g in l]:
         desde.setdefault(g["sig"], agora)
 
+    itens = []  # versão estruturada da pauta, lida pela triagem (bot/triagem.py)
+
+    def reg(secao, g, parceiro=None):
+        d = {"secao": secao, "sig": g["sig"] if g else None, "parceiro": parceiro}
+        if g:
+            d.update({"manchete": g["manchete"], "veiculos": len(g["veiculos"]), "veiculos_3h": g["veiculos_3h"],
+                      "exemplos": g["veiculos"][:4], "publicado": g["primeira_vez"],
+                      "na_pauta_desde": desde.get(g["sig"]), "temas": g.get("temas", []), "link": _link(g)})
+        itens.append(d)
+
     def lin(g, extra=""):
         v = ", ".join(g["veiculos"][:4]) + (f" +{len(g['veiculos']) - 4}" if len(g["veiculos"]) > 4 else "")
         return (f"- [{g['temperatura']}|+{g['veiculos_3h']} em 3h] {g['manchete']} — {v} · "
@@ -331,21 +342,33 @@ def _pauta(grupos: list[dict], agora_dt: datetime) -> str:
         cab = f"- @{p['perfil']} {p['quando'].astimezone(BRT).strftime('%Hh%M')} ({int(p['velocidade'] or 0)} interações/h) {p['link']}\n  \"{p['legenda']}\""
         out.append(cab)
         out.append("  " + (lin(p["grupo"]) if p["grupo"] else "- sem correspondência no radar: procure na busca da web"))
+        reg("A", p["grupo"], {"perfil": p["perfil"], "quando": p["quando"].astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                              "legenda": p["legenda"], "link": p["link"]})
     if movimentos:
         out += ["", f"## A2. Movimentos sociais hoje ({len(movimentos)}) — MST, MTST, CUT, UNE, Apib... (pauta fora do jornal; confirme antes)", ""]
         for p in movimentos:
             out.append(f"- @{p['perfil']} {p['quando'].astimezone(BRT).strftime('%Hh%M')} ({int(p['velocidade'] or 0)} interações/h) {p['link']}\n  \"{p['legenda']}\"")
             out.append("  " + (lin(p["grupo"]) if p["grupo"] else "- sem correspondência no radar"))
+            reg("A2", p["grupo"], {"perfil": p["perfil"], "quando": p["quando"].astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                                   "legenda": p["legenda"], "link": p["link"]})
     out += ["", f"## B. Em alta agora ({len(em_alta)}) — ganharam veículos nas últimas 3 h", ""]
     out += [lin(g) for g in em_alta]
+    for g in em_alta:
+        reg("B", g)
     nomes = dict(SECOES)
     for sec in vagas:
         lista = [g for g in novos_sel if g["secao"] == sec]
         out += ["", f"## C. Novos nas últimas 3 h — {nomes[sec]} ({len(lista)} de {len([g for g in novos if g['secao'] == sec])})", ""]
         out += [lin(g) for g in lista]
+        for g in lista:
+            reg("C-" + sec, g)
     for k, lista in por_tema.items():
         out += ["", f"## D. {TEMAS[k][0]} — últimas 6 h ({len(lista)})", ""]
         out += [lin(g) for g in lista]
+        for g in lista:
+            reg("D-" + k, g)
+    (PASTA / "pauta_itens.json").write_text(json.dumps({"quando": agora, "itens": itens}, ensure_ascii=False) + "\n",
+                                            encoding="utf-8")
 
     # memória: temperatura por assunto (8 h) e entrada na pauta (30 h)
     lim_h = (agora_dt - timedelta(hours=8)).strftime("%Y-%m-%dT%H:%M:%SZ")

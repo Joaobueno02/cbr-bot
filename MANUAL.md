@@ -39,7 +39,24 @@ O dono é o João. Ele acompanha cada post pela notificação e pede para parar 
 2. Pesquise as notícias **da janela desta rodada**: desde a rodada anterior até agora (ex.: na
    rodada das 11h, o que saiu entre 10h e 11h; na das 7h, desde as 23h da véspera). Filtre o que
    é mais importante ou merece visibilidade **com a lente de uma página socialista** (seção 2) e
-   publique ainda nesta rodada. **Comece pelo radar**:
+   publique ainda nesta rodada. **Comece pela triagem** (regra do João, 19/10/2026, para gastar menos):
+   - **`radar/triagem.json` primeiro** (Read, é curto). O GPT, no radar.yml, já deu nota a todos os
+     itens da pauta (A, A2, B, C e D) com a régua desta seção: `candidatos` (I+V ≥ 4, dentro das
+     editorias, não repetidos, já ordenados), `obrigatorios` (posts da BFC/Luz/movimentos de hoje) e
+     `descartados_mais_quentes` (os descartes com mais veículos, com o motivo). A nota do GPT é
+     **sugestão**: você confirma a nota, a editoria e o formato, e a apuração e as revisões continuam
+     iguais. Corrija o GPT quando ele errar (ex.: descartou algo quente que é pauta nossa) e registre
+     no resumo da rodada;
+   - **Rodada curta**: se `ok` for true, nenhum candidato ou obrigatório tem `na_pauta_desde` depois
+     da rodada anterior, nada nos descartes mais quentes merece revisão, e não há pendência (fila,
+     acompanhamento, calendário das 18h, dossiê das 23h, relatório de segunda), **encerre a rodada**
+     sem ler a pauta.md nem buscar na web. O resumo da rodada diz "triagem sem candidatos novos";
+   - com candidatos, trabalhe só sobre eles: aprofunde com `bot/cruzar.py` e `radar/atual.json` e
+     complete com a busca na web. **Não leia a pauta.md inteira** quando a triagem está ok; o item
+     de A, A2 e B "avaliado nesta rodada" passa a ser o que a triagem avaliou;
+   - se `ok` for false (sem chave, erro da API) ou o arquivo tiver mais de 70 min, siga o caminho
+     antigo abaixo, a partir da pauta.md, e cite o erro no resumo.
+   **Caminho antigo (só sem triagem)**:
    - **`radar/pauta.md` primeiro, lido INTEIRO com a ferramenta Read** (nunca por WebFetch, que
      resume e perde itens). Atualizado às :20 e :50. Tem três partes: (A) tudo que a BFC e a Luz
      postaram hoje, cruzado com o radar; (B) assuntos em alta (desde 16/10, **2 veículos já bastam**
