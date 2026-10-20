@@ -1,287 +1,255 @@
-"""Triagem da pauta por IA (GPT pelo GitHub Models, de graça), para economizar o Claude.
+"""Triagem da pauta por regras (sem IA, sem custo), para economizar o Claude.
 
-Roda no radar.yml logo depois de bot/radar.py. Lê radar/pauta_itens.json (a pauta em JSON),
-dá nota a cada assunto com a régua do MANUAL.md (seção 2: editoria, Impacto, Viralização,
-Profundidade, "Não publique") e grava:
+Roda no radar.yml logo depois de bot/radar.py. Lê radar/pauta_itens.json (a pauta em JSON) e faz
+o filtro grosso que o Claude fazia lendo a pauta.md inteira (~25 mil tokens por rodada):
 
-  radar/triagem.json         o que a rodada do Claude lê PRIMEIRO (curto): candidatos com nota
-                             I + V >= 4, os itens obrigatórios (BFC/Luz/movimentos) e um resumo
-                             dos descartes. Se não houver candidato, a rodada termina cedo.
-  radar/triagem_estado.json  memória (assunto -> nota), para não pagar de novo pelo mesmo assunto
+  - descarta o que está fora dos eixos (esporte, entretenimento, crime comum, tragédia, curiosidade);
+  - adivinha a editoria por palavras-chave (eleicoes, politica, economia, saude, educacao,
+    america_latina, roca, gerais);
+  - dá uma nota de CALOR (quantos veículos, quantos nas últimas 3 h) e de LENTE (palavras da linha
+    da página: trabalho, salário, SUS, fome, direita, investigação...);
+  - tira o que já publicamos (registro/posts.jsonl) e junta manchetes do mesmo assunto.
 
-A triagem só PROPÕE. Apuração, texto, arte e as revisões continuam com o Claude e o manual.
-Usa o GitHub Models (cota gratuita da conta do GitHub, sem cartão e sem chave nova): o próprio
-GITHUB_TOKEN do Actions autentica, com "permissions: models: read" no workflow. Cota grátis dos
-modelos "low" (gpt-4.1-mini, gpt-4o-mini): ~15 pedidos/min, ~150/dia, ~8 mil tokens de entrada por
-pedido; por isso os lotes são pequenos e há um teto diário próprio (TETO_DIA). Estourou a cota ou deu
-erro: grava "ok": false e a rodada usa a pauta.md como antes. O token nunca é gravado nem impresso.
+Grava radar/triagem.json (curto): `candidatos` (até 15, ordenados), `obrigatorios` (posts da BFC,
+Luz e movimentos de hoje), `descartados_mais_quentes` (para o Claude conferir se a regra errou) e
+`novos_3h` (quantos candidatos entraram na pauta nas últimas 3 h). A nota editorial final (impacto,
+viralização, profundidade, formato) continua com o Claude, só sobre esses itens.
+Regras ajustáveis no topo do arquivo; o dossiê das 23h aponta os erros da triagem para ajustar.
 """
 from __future__ import annotations
 
 import json
-import os
+import re
 import sys
-import time
+import unicodedata
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-import requests
-
 PASTA = Path("radar")
 SAIDA = PASTA / "triagem.json"
-ESTADO = PASTA / "triagem_estado.json"
 POSTS = Path("registro/posts.jsonl")
-URL = "https://models.github.ai/inference/chat/completions"
-MODELOS = [m for m in [os.environ.get("TRIAGEM_MODELO", "").strip(), "openai/gpt-4.1-mini", "openai/gpt-4o-mini"] if m]
-LOTE = 25       # cabe folgado no limite de ~8 mil tokens de entrada da cota grátis
-TETO_DIA = 120  # pedidos por dia (UTC), abaixo dos ~150 da cota grátis
-CORTE = 4  # I + V mínimo (manual, seção 2)
+NOTA_MINIMA = 4  # calor + lente + editoria (+1 se a BFC/Luz/movimento deu)
+MAX_CANDIDATOS = 20
 
-EDITORIAS = ["eleicoes", "politica", "economia", "educacao", "saude", "gerais", "america_latina", "roca", "fora"]
 
-REGUA = """Você faz a triagem de pauta da CBR – Comuna Brasileira, página de notícias no Instagram com linha
-socialista. Para cada assunto (manchete + quantos veículos deram), decida se vale post e dê notas.
+def norm(t: str) -> str:
+    t = unicodedata.normalize("NFKD", (t or "").lower())
+    return " " + re.sub(r"[^a-z0-9%$ ]+", " ", "".join(c for c in t if not unicodedata.combining(c))) + " "
 
-Editorias: eleicoes (todo o processo eleitoral de 2026: TSE, pesquisas, debates, campanha, propaganda,
-fake news eleitoral, famoso declarando voto), politica (Congresso, governo, STF, partidos, leis, operações
-fora do processo eleitoral), economia (emprego, salário, preços, impostos, contas públicas), educacao
-(universidades, escolas, ciência, MEC), saude (SUS, vacinas, hospitais), gerais (denúncias e casos que
-envolvem figuras políticas fora da eleição; posts críticos), america_latina (governos, eleições, protestos,
-repressão, EUA na região), roca (agricultura familiar, reforma agrária, MST, agrotóxico, preço do alimento,
-fome, conflito no campo, trabalho escravo no campo). "fora" = esporte, celebridade, crime comum sem ligação
-política, curiosidade, tragédia, ou qualquer coisa fora desses eixos.
 
-Lente: pense em quem trabalha. Prioridade para direitos e condições de trabalho (salário, jornada, emprego,
-aposentadoria), serviços públicos (SUS, educação pública, transporte, moradia), desigualdade e quem paga a
-conta (impostos, juros, privilégios), vitórias de trabalhadores e movimentos sociais, contradições,
-escândalos e ataques a direitos vindos da direita e da extrema-direita. O que só interessa ao mercado ou a
-celebridade fica fora, a não ser que mexa no bolso de quem trabalha.
+def tem(txt: str, termos) -> list[str]:
+    """termos com espaço nas pontas casam palavra inteira; sem espaço, casam prefixo de palavra."""
+    achados = []
+    for t in termos:
+        t = t.strip()
+        if (f" {t} " in txt) if not t.endswith("*") else (f" {t[:-1]}" in txt):
+            achados.append(t.rstrip("*"))
+    return achados
 
-Notas de 0 a 3:
-- I (impacto): afeta muita gente, bolso, direito, serviço público, ou o resultado da eleição.
-- V (viralizar): conflito claro, número forte, contradição de político, vitória concreta de quem trabalha,
-  algo que a pessoa quer mandar no grupo. Mais veículos = sinal de assunto quente.
-- P (profundidade): quanto rende para destrinchar em partes (números, linha do tempo, quem é quem,
-  o que muda pra você). 3 = 4+ blocos de informação própria; 2 = 3; 1 = 2; 0 = só o fato.
-Formato: "reels" se I=3 e V=3 (ou domina o noticiário do dia); "carrossel" se I+V>=5 e P>=2; senão "feed".
 
-Marque "repetido": true se o mesmo fato já está na lista de posts já publicados (mesmo com outra manchete)
-e não há fato novo relevante.
-
-"risco": vazio, ou uma frase curta quando houver cuidado especial: acusação de crime (precisa de fonte
-oficial ou reportagem com documento, e da negativa), tragédia com vítimas, menor de idade, boato/rede social
-como única base, pesquisa eleitoral (precisa de instituto, data, margem e registro). Tragédia em andamento
-com vítimas, crime violento e menor identificável: I e V = 0 e editoria "fora".
-
-"motivo": até 15 palavras, em português, dizendo por que sim ou por que não.
-Não invente fatos: avalie só pela manchete. Responda só com o JSON pedido."""
-
-ESQUEMA = {
-    "name": "triagem",
-    "strict": True,
-    "schema": {
-        "type": "object", "additionalProperties": False, "required": ["avaliacoes"],
-        "properties": {"avaliacoes": {"type": "array", "items": {
-            "type": "object", "additionalProperties": False,
-            "required": ["id", "editoria", "I", "V", "P", "formato", "repetido", "risco", "motivo"],
-            "properties": {
-                "id": {"type": "integer"},
-                "editoria": {"type": "string", "enum": EDITORIAS},
-                "I": {"type": "integer"}, "V": {"type": "integer"}, "P": {"type": "integer"},
-                "formato": {"type": "string", "enum": ["feed", "carrossel", "reels"]},
-                "repetido": {"type": "boolean"},
-                "risco": {"type": "string"},
-                "motivo": {"type": "string"}}}}}},
+# ----------------------------------------------------------------- regras (ajustáveis)
+FORA = {
+    "esporte": ["futebol", "flamengo", "palmeiras", "corinthians", "sao paulo fc", "vasco", "botafogo", "gremio",
+                "brasileirao", "campeonato", "champions", "libertadores", "copa do mundo", "tecnico do*", "atacante",
+                "zagueiro", "goleiro", "gol", "gols", "ufc", "luta*", "tenis", "ranking mundial", "challenger",
+                "formula 1", "f1", "nba", "manchester", "barca", "psg", "real madrid", "cristiano ronaldo", "neymar",
+                "messi", "selecao brasileira", "jogador", "jogadora", "olimpiad*", "afcon", "maratona"],
+    "entretenimento": ["bbb", "a fazenda", "reality", "novela", "netflix", "streaming", "victoria s secret", "desfil*",
+                       "simpsons", "filme", "serie", "album", "turne", "famosa", "famoso", "influenciadora fitness",
+                       "horoscopo", "signo*", "receita de", "loteria", "mega sena", "lotofacil", "quina"],
+    "crime ou tragedia": ["assassin*", "homicidio", "mata ", "matar", "matou", "morto", "mortos", "morre", "morreu",
+                          "morte", "muerte", "dies", "dead", "killed", "estupr*", "agride", "agrediu", "agressao",
+                          "esfaque*", "tiroteio", "baleado", "acidente", "afoga*", "desaparecid*", "sequestr*",
+                          "atacada", "atacado", "incendio em base", "naufrag*", "capsized", "missing"],
+    "curiosidade": ["dinossaur*", "ornitorrinco", "recorde mundial", "repulsa", "creatina", "paozinho", "patrimonio cultural",
+                    "astronom*", "curiosidade"],
 }
+# nome de político ou termo eleitoral salva a manchete da lista FORA (ex.: deputado detido, morte de candidato)
+SALVA_FORA = ["lula", "flavio", "bolsonaro", "deputado", "deputada", "senador", "senadora", "ministro", "ministra",
+              "candidato", "candidata", "prefeito", "governador", "pl ", "stf", "policia federal", "pf ", "vorcaro",
+              "master", "tse"]
+
+EDITORIAS = {
+    "eleicoes": ["eleica*", "eleitora*", "segundo turno", "2o turno", "debate", "tse", "candidat*", "campanha",
+                 "datafolha", "quaest", "atlasintel", "atlas intel", "ipec", "paranna", "voto", "votos", "eleitor*",
+                 "urna*", "propaganda eleitoral", "declara apoio", "declarou apoio", "anuncia apoio", "apoio a lula",
+                 "apoio a flavio", "election", "vote", "pesquisa eleitoral", "ato de flavio", "ato de lula", "plano de governo"],
+    "politica": ["stf", "supremo", "camara", "senado", "congresso", "pec", "projeto de lei", "ministro", "ministra",
+                 "planalto", "governo federal", "policia federal", "pf", "cpi", "inquerito", "deputad*", "senador*",
+                 "tcu", "cgu", "ministerio publico", "governador", "prefeito", "orcamento", "decreto", "lei ",
+                 "investigad*", "indiciad*", "operacao", "lavagem", "corrupca*", "vorcaro", "master"],
+    "economia": ["salario*", "salario minimo", "inflacao", "ipca", "juros", "selic", "imposto*", "isencao", "emprego*",
+                 "desemprego", "demissa*", "demite", "trabalhador*", "greve", "preco*", "gasolina", "diesel", "conta de luz",
+                 "bolsa familia", "inss", "aposentad*", "previdencia", "6x1", "jornada", "fgts", "cesta basica", "aluguel",
+                 "banco central", "divida", "fiscal", "tarifa*", "pib", "renda", "bilionari*", "taxacao", "congelar"],
+    "saude": ["sus", "saude", "anvisa", "vacina*", "hospita*", "dengue", "hiv", "cancer", "medicamento*", "remedio*",
+              "farmacia popular", "mais medicos", "plano de saude", "ans", "fiocruz", "butantan", "epidemia", "surto"],
+    "educacao": ["universidade*", "enem", "mec", "escola*", "professor*", "capes", "cnpq", "fundeb", "merenda",
+                 "licenciatura", "estudante*", "ensino", "instituto federal", "ciencia", "pesquisador*", "bolsas de",
+                 "unifesp", "usp", "unicamp", "unesp", "ufrj", "ufmg", "ufscar", "creche*"],
+    "roca": ["agricultura familiar", "reforma agraria", "mst", "assentament*", "agrotoxic*", "agroecolog*", "plano safra",
+             "safra", "fome", "cesta basica", "preco dos alimentos", "alimento*", "granja", "incra", "quilombo*",
+             "terra indigena", "trabalho escravo", "grilage*", "agronegocio", "ruralista*", "pronaf", "conab"],
+    "gerais": ["incendio*", "queimada*", "desmatamento", "seca", "enchente*", "clima", "ambienta*", "meio ambiente",
+               "racismo", "feminicidio", "violencia policial", "chacina", "milicia*", "fake news", "desinformacao"],
+    "america_latina": ["cuba", "cuban*", "castro", "mexic*", "venezuel*", "maduro", "argentin*", "milei", "colombi*",
+                       "petro", "chile*", "kast", "boric", "bolivia*", "peru", "perua*", "equador", "ecuador", "haiti",
+                       "uruguai", "paraguai", "nicaragua", "honduras", "guatemala", "el salvador", "bukele", "sheinbaum"],
+}
+# outros países: sem citar o Brasil nem a América Latina, fica de fora
+OUTROS_PAISES = ["israel", "eua", "estados unidos", "russia", "ucrania", "china", "gaza", "cisjordania", "canada",
+                 "portugal", "franca", "alemanha", "reino unido", "japao", "india", "ira", "iran", "quenia", "arabia",
+                 "qatar", "houthi*", "netanyahu", "zelensky", "putin", "europa", "otan", "noruega", "siria", "libano"]
+# assunto estrangeiro só entra se for América Latina (tema do radar) ou citar o Brasil
+BRASIL = ["brasil", "brazil", "brasileir*", "lula", "bolsonaro", "flavio", "sao paulo", "rio de janeiro", "brasilia",
+          "amazonia", "amazon"]
+ESTRANGEIRO = ["the ", "of ", "and ", " el ", " la ", " los ", " las ", " del ", " por ", " para "]
+
+LENTE = ["trabalhador*", "salario*", "greve", "direito*", "6x1", "jornada", "aposentad*", "inss", "bolsa familia", "sus",
+         "fome", "cesta basica", "moradia", "despejo*", "privatiza*", "bilionari*", "super ricos", "isencao", "taxacao",
+         "corte*", "congel*", "demissa*", "desemprego", "bolsonar*", "flavio", "extrema direita", "golpe*", "pl ",
+         "investigad*", "inquerito", "lavagem", "corrupca*", "detido", "preso", "mst", "mtst", "indigena*", "quilombola*",
+         "desmatamento", "incendio*", "queimada*", "ice", "trump", "milei", "imperialis*", "repressa*", "protesto*",
+         "racismo", "feminicidio", "violencia policial", "chacina", "agrotoxic*", "vorcaro", "master", "propina",
+         "orcamento", "educacao publica", "universidade publica", "piso", "precariza*", "uber", "aplicativo*",
+         "lucro*", "banco*", "juros", "aluguel", "tarifa zero", "passe livre", "transporte publico"]
+
+STOP = set("a o os as de da do das dos e em no na nos nas um uma para por com que se ao aos sobre apos diz "
+           "the of and to in on for la el los las del y en".split())
 
 
-PEDIDOS = [0]
-FORMATO_SIMPLES = """
-
-Formato da resposta: {"avaliacoes": [{"id": 0, "editoria": "...", "I": 0, "V": 0, "P": 0,
-"formato": "feed|carrossel|reels", "repetido": false, "risco": "", "motivo": "..."}]}"""
+def tokens(t: str) -> set[str]:
+    return {(w[:-1] if len(w) > 4 and w.endswith("s") else w) for w in norm(t).split() if len(w) > 2 and w not in STOP}
 
 
-def agora_iso(dt: datetime | None = None) -> str:
-    return (dt or datetime.now(timezone.utc)).strftime("%Y-%m-%dT%H:%M:%SZ")
+def parecido(a: set[str], b: set[str], corte: float = 0.5) -> bool:
+    return bool(a and b) and len(a & b) / min(len(a), len(b)) >= corte
 
 
-def chave_item(it: dict) -> str:
-    if it.get("sig"):
-        return it["sig"]
-    return "p:" + (it.get("parceiro") or {}).get("link", "") or it.get("manchete", "")
-
-
-def ja_publicados() -> list[str]:
+def ja_publicados() -> list[tuple[str, set[str]]]:
     if not POSTS.exists():
         return []
     linhas = [json.loads(l) for l in POSTS.read_text(encoding="utf-8").splitlines() if l.strip()]
-    return [f"{p.get('quando', '')[:10]} {p.get('titulo', '').replace('*', '')}" for p in linhas[-40:]]
+    return [(p.get("id", ""), tokens(p.get("titulo", "").replace("*", ""))) for p in linhas[-60:]]
 
 
-def chamar(itens: list[dict], publicados: list[str], chave: str) -> tuple[list[dict], str]:
-    linhas = []
-    for i, it in enumerate(itens):
-        par = it.get("parceiro")
-        txt = it.get("manchete") or ""
+def avaliar(it: dict, publicados) -> dict:
+    texto = it.get("manchete") or ""
+    par = it.get("parceiro")
+    if par:
+        texto += " " + (par.get("legenda") or "")
+    t = norm(texto)
+    temas = it.get("temas") or []
+    v, v3 = it.get("veiculos", 0) or 0, it.get("veiculos_3h", 0) or 0
+
+    salva = tem(t, SALVA_FORA)
+    for motivo, termos in FORA.items():
+        achou = tem(t, termos)
+        if achou and not salva:
+            return {"ok": False, "motivo": f"fora: {motivo} ({achou[0]})"}
+
+    eds = {ed: len(tem(t, termos)) for ed, termos in EDITORIAS.items()}
+    if "america_latina" in temas:
+        eds["america_latina"] = max(3, eds["america_latina"])
+    if "terra" in temas:
+        eds["roca"] = eds.get("roca", 0) + 2
+    if "famosos" in temas:
+        eds["eleicoes"] = eds.get("eleicoes", 0) + 2
+    editoria = max(eds, key=lambda k: eds[k]) if max(eds.values()) > 0 else None
+    estrangeiro = (sum(1 for w in ESTRANGEIRO if w in t) >= 2 or str(it.get("secao", "")).startswith("C-internacional")
+                   or bool(tem(t, OUTROS_PAISES)))
+    if estrangeiro and not eds["america_latina"] and not tem(t, BRASIL):
+        return {"ok": False, "motivo": "fora: internacional sem Brasil nem América Latina"}
+    if not editoria:
         if par:
-            txt = f"post de @{par['perfil']}: \"{par.get('legenda', '')}\"" + (f" | radar: {txt}" if txt else "")
-        linhas.append(f"{i}. [{it.get('veiculos', 0)} veículos, +{it.get('veiculos_3h', 0)} em 3h] {txt}")
-    usuario = ("Posts já publicados pela CBR (para marcar repetido):\n" + "\n".join(publicados or ["(nenhum)"]) +
-               "\n\nAssuntos para avaliar (avalie TODOS, usando o número como id):\n" + "\n".join(linhas))
-    erro = ""
-    for modelo in MODELOS:
-        corpo = {"model": modelo, "messages": [{"role": "system", "content": REGUA}, {"role": "user", "content": usuario}],
-                 "response_format": {"type": "json_schema", "json_schema": ESQUEMA}, "temperature": 0.2}
-        for tentativa in range(2):
-            try:
-                r = requests.post(URL, headers={"Authorization": f"Bearer {chave}", "Accept": "application/json",
-                                                "X-GitHub-Api-Version": "2022-11-28"}, json=corpo, timeout=180)
-                PEDIDOS[0] += 1
-            except requests.RequestException as e:
-                erro = f"{modelo}: {type(e).__name__}"
-                time.sleep(5)
-                continue
-            if r.status_code == 200:
-                try:
-                    conteudo = (r.json()["choices"][0]["message"]["content"] or "").strip()
-                    if conteudo.startswith("```"):
-                        conteudo = conteudo.strip("`").removeprefix("json").strip()
-                    return json.loads(conteudo)["avaliacoes"], modelo
-                except Exception as e:
-                    # diagnóstico curto (sem cabeçalhos, sem token): tipo e começo do corpo
-                    erro = (f"{modelo}: resposta 200 ilegível ({type(e).__name__}; "
-                            f"{r.headers.get('content-type', '?')}; {r.text[:120]!r})")
-                    break
-            # nunca grava a resposta bruta: só o código e a mensagem curta do erro
-            try:
-                msg = r.json().get("error", {}).get("message", "")[:160]
-            except Exception:
-                msg = ""
-            erro = f"{modelo}: HTTP {r.status_code} {msg}"
-            if r.status_code == 400 and corpo["response_format"]["type"] == "json_schema":
-                # modelo sem suporte a json_schema: pede JSON simples (o esquema já está descrito na régua)
-                corpo["response_format"] = {"type": "json_object"}
-                corpo["messages"][0]["content"] = REGUA + FORMATO_SIMPLES
-                continue
-            if r.status_code == 429:
-                break  # cota grátis estourada: não insiste (tenta o outro modelo, que tem cota própria)
-            if r.status_code in (500, 502, 503):
-                time.sleep(10)
-                continue
-            break
-    raise RuntimeError(erro or "sem resposta")
+            editoria = "gerais"
+        else:
+            return {"ok": False, "motivo": "sem editoria"}
+    if editoria == "politica" and eds.get("eleicoes", 0) >= 1 and tem(t, ["lula", "flavio", "candidat*", "turno"]):
+        editoria = "eleicoes"
+
+    calor = 0 if v < 2 else 1 if v < 5 else 2 if v < 15 else 3
+    if v3 >= 3:
+        calor = min(3, calor + 1)
+    lente_hits = tem(t, LENTE)
+    lente = min(3, len(lente_hits))
+    nota = calor + lente + min(2, eds[editoria] if editoria in eds else 0) + (1 if par else 0)
+
+    tok = tokens(it.get("manchete") or texto)
+    for pid, ptok in publicados:
+        if parecido(tok, ptok, 0.6):
+            return {"ok": False, "motivo": f"repetido ({pid})", "editoria": editoria, "nota": nota}
+    if nota < NOTA_MINIMA and not par:
+        return {"ok": False, "motivo": f"fraco (calor {calor}, lente {lente})", "editoria": editoria, "nota": nota}
+    return {"ok": True, "editoria": editoria, "nota": nota, "calor": calor, "lente": lente_hits[:4]}
 
 
 def main() -> int:
     agora = datetime.now(timezone.utc)
+    iso = agora.strftime("%Y-%m-%dT%H:%M:%SZ")
     try:
         pauta = json.loads((PASTA / "pauta_itens.json").read_text(encoding="utf-8"))
     except Exception as e:
-        SAIDA.write_text(json.dumps({"quando": agora_iso(agora), "ok": False, "erro": f"sem pauta_itens.json ({e})"},
+        SAIDA.write_text(json.dumps({"quando": iso, "ok": False, "erro": f"sem pauta_itens.json ({e})"},
                                     ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
         return 0
-    try:
-        estado = json.loads(ESTADO.read_text(encoding="utf-8"))
-    except Exception:
-        estado = {}
+    publicados = ja_publicados()
 
     # junta o mesmo assunto que aparece em várias seções
     por_chave: dict[str, dict] = {}
     for it in pauta["itens"]:
-        k = chave_item(it)
+        k = it.get("sig") or ("p:" + ((it.get("parceiro") or {}).get("link") or ""))
         if k in por_chave:
             por_chave[k]["secoes"].append(it["secao"])
             if it.get("parceiro") and not por_chave[k].get("parceiro"):
                 por_chave[k]["parceiro"] = it["parceiro"]
         else:
-            por_chave[k] = dict(it, secoes=[it["secao"]], chave=k)
-    itens = list(por_chave.values())
+            por_chave[k] = dict(it, secoes=[it["secao"]])
 
-    # só paga pelo que é novo ou que esquentou muito desde a última nota
-    pendentes = []
-    for it in itens:
-        antigo = estado.get(it["chave"])
-        if not antigo or it.get("veiculos", 0) >= max(3, 2 * antigo.get("veiculos", 0)):
-            pendentes.append(it)
-
-    chave = os.environ.get("GITHUB_TOKEN", "").strip()
-    hoje = agora.strftime("%Y-%m-%d")
-    cota = estado.pop("_cota", {})
-    usados = cota.get("pedidos", 0) if cota.get("dia") == hoje else 0
-    cortados = 0
-    if usados + -(-len(pendentes) // LOTE) > TETO_DIA:
-        cabe = max(0, (TETO_DIA - usados) * LOTE)
-        cortados, pendentes = len(pendentes) - cabe, pendentes[:cabe]
-    resultado = {"quando": agora_iso(agora), "pauta_quando": pauta.get("quando"), "ok": True, "erro": None,
-                 "modelo": None, "avaliados_agora": len(pendentes), "em_cache": len(itens) - len(pendentes)}
-    if cortados:
-        resultado.update(ok=False, erro=f"teto diário da cota grátis: {cortados} assuntos ficaram sem nota; "
-                                        "leia radar/pauta.md como antes")
-    if pendentes and not chave:
-        resultado.update(ok=False, avaliados_agora=0, erro="sem GITHUB_TOKEN: leia radar/pauta.md como antes")
-    elif pendentes:
-        publicados = ja_publicados()
-        try:
-            for i in range(0, len(pendentes), LOTE):
-                lote = pendentes[i:i + LOTE]
-                avals, modelo = chamar(lote, publicados, chave)
-                resultado["modelo"] = modelo
-                for a in avals:
-                    if 0 <= a["id"] < len(lote):
-                        it = lote[a["id"]]
-                        nota = {k: a[k] for k in ("editoria", "I", "V", "P", "formato", "repetido", "risco", "motivo")}
-                        for k in ("I", "V", "P"):
-                            nota[k] = max(0, min(3, int(nota[k])))
-                        nota.update(veiculos=it.get("veiculos", 0), quando=agora_iso(agora))
-                        estado[it["chave"]] = nota
-        except Exception as e:
-            resultado.update(ok=False, erro=f"API: {e}"[:220])
-
-    # monta a saída curta com o que tem nota (novas + memória)
-    candidatos, obrigatorios, descartes, sem_nota = [], [], [], 0
-    for it in itens:
-        n = estado.get(it["chave"])
+    candidatos, descartes, obrigatorios = [], [], []
+    for it in por_chave.values():
+        r = avaliar(it, publicados)
         base = {"manchete": it.get("manchete"), "secoes": it["secoes"], "veiculos": it.get("veiculos", 0),
                 "veiculos_3h": it.get("veiculos_3h", 0), "na_pauta_desde": it.get("na_pauta_desde"),
-                "publicado": it.get("publicado"), "link": it.get("link"), "sig": it.get("sig")}
+                "link": it.get("link"), "editoria": r.get("editoria"), "nota": r.get("nota")}
         if it.get("parceiro"):
-            base["parceiro"] = it["parceiro"]
-        if not n:
-            sem_nota += 1
-            if it.get("parceiro"):
-                obrigatorios.append(base)
-            continue
-        base.update({k: n[k] for k in ("editoria", "I", "V", "P", "formato", "repetido", "risco", "motivo")})
-        base["soma"] = n["I"] + n["V"]
-        if it.get("parceiro"):
-            obrigatorios.append(base)
-        if base["soma"] >= CORTE and n["editoria"] != "fora" and not n["repetido"]:
-            candidatos.append(base)
+            p = it["parceiro"]
+            obrigatorios.append(dict(base, parceiro={k: p.get(k) for k in ("perfil", "quando", "legenda", "link")},
+                                     triagem=("candidato" if r["ok"] else r["motivo"])))
+        if r["ok"]:
+            candidatos.append(dict(base, lente=r["lente"], _tok=tokens(it.get("manchete") or "")))
         else:
-            descartes.append(base)
-    candidatos.sort(key=lambda c: (-c["soma"], -c["P"], -c["veiculos_3h"], -c["veiculos"]))
-    descartes.sort(key=lambda c: -c["veiculos"])
-    resultado.update({
-        "regra": "Candidatos = I+V >= 4, dentro das editorias e não repetidos. É sugestão: a apuração e as "
-                 "revisões do manual continuam obrigatórias. Obrigatórios = posts da BFC/Luz/movimentos de hoje.",
-        "total_assuntos": len(itens), "sem_nota": sem_nota,
-        "candidatos": candidatos[:15],
-        "obrigatorios": obrigatorios,
-        "descartados_mais_quentes": [{"manchete": d["manchete"], "veiculos": d["veiculos"], "editoria": d["editoria"],
-                                      "I": d["I"], "V": d["V"], "repetido": d["repetido"], "motivo": d["motivo"]}
-                                     for d in descartes[:15]],
-    })
-    resultado["pedidos_hoje"] = usados + PEDIDOS[0]
-    SAIDA.write_text(json.dumps(resultado, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+            descartes.append(dict(base, motivo=r["motivo"]))
 
-    # memória de 30 h
-    lim = agora_iso(agora - timedelta(hours=30))
-    estado = {k: v for k, v in estado.items() if v.get("quando", "") >= lim}
-    estado["_cota"] = {"dia": hoje, "pedidos": usados + PEDIDOS[0]}
-    ESTADO.write_text(json.dumps(estado, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
-    print(f"triagem: {len(itens)} assuntos, {len(pendentes)} avaliados agora, {len(candidatos)} candidatos, "
-          f"ok={resultado['ok']}" + (f" ({resultado['erro']})" if resultado["erro"] else ""))
+    # junta manchetes do mesmo assunto entre os candidatos (ex.: 3 versões da mesma notícia)
+    candidatos.sort(key=lambda c: (-c["nota"], -c["veiculos_3h"], -c["veiculos"]))
+    unicos = []
+    for c in candidatos:
+        irmao = next((u for u in unicos if parecido(c["_tok"], u["_tok"], 0.5)), None)
+        if irmao:
+            irmao["outras_manchetes"] = irmao.get("outras_manchetes", 0) + 1
+        else:
+            unicos.append(c)
+    for c in unicos:
+        c.pop("_tok", None)
+
+    corte3h = (agora - timedelta(hours=3)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    quentes = sorted([d for d in descartes if not d["motivo"].startswith("fraco")], key=lambda d: -d["veiculos"])
+    resultado = {
+        "quando": iso, "pauta_quando": pauta.get("quando"), "ok": True, "erro": None, "metodo": "regras",
+        "regra": "Filtro grosso por regras (sem IA). Candidatos: dentro das editorias, não repetidos, nota = calor "
+                 "(veículos) + lente (palavras da linha da página) >= 3. A nota editorial (I, V, P, formato) é do "
+                 "Claude. Confira os descartes quentes: a regra erra. Obrigatórios = BFC/Luz/movimentos de hoje.",
+        "total_assuntos": len(por_chave),
+        "novos_3h": sum(1 for c in unicos[:MAX_CANDIDATOS] if (c.get("na_pauta_desde") or "") >= corte3h),
+        "candidatos": unicos[:MAX_CANDIDATOS],
+        "obrigatorios": obrigatorios,
+        "descartados_mais_quentes": [{k: d[k] for k in ("manchete", "veiculos", "veiculos_3h", "motivo")}
+                                     for d in quentes[:10]],
+    }
+    SAIDA.write_text(json.dumps(resultado, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    print(f"triagem: {len(por_chave)} assuntos, {len(unicos)} candidatos ({resultado['novos_3h']} novos em 3 h), "
+          f"{len(obrigatorios)} obrigatórios")
     return 0
 
 

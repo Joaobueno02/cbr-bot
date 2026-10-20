@@ -12,7 +12,6 @@ concurrency:
 
 permissions:
   contents: write
-  models: read   # triagem pelo GitHub Models (cota grátis, usa o GITHUB_TOKEN)
 
 jobs:
   radar:
@@ -27,18 +26,14 @@ jobs:
         run: pip install feedparser requests pillow
       - name: Radar de manchetes
         run: python bot/radar.py
-      # triagem por IA (GPT pelo GitHub Models, sem custo): dá nota a cada assunto da pauta e grava radar/triagem.json, que a rodada
-      # do Claude lê primeiro. Sem a chave ou com erro, grava "ok": false e não derruba o radar.
-      - name: Triagem da pauta (GPT pelo GitHub Models, grátis)
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TRIAGEM_MODELO: ${{ vars.TRIAGEM_MODELO }}
+      # triagem por regras (sem IA, sem custo): filtra a pauta e grava radar/triagem.json, que a rodada
+      # do Claude lê primeiro. Com erro, a rodada usa a pauta.md como antes; o radar não cai.
+      - name: Triagem da pauta (regras)
         run: python bot/triagem.py || echo "triagem falhou; a rodada usa a pauta.md"
       # o feed da BFC e da Luz (radar/parceiros.json) agora é lido a cada 20 min pelo alertas.yml
       - name: Trava anti-vazamento e commit
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "cbr-bot"
           git config user.email "cbr-bot@users.noreply.github.com"

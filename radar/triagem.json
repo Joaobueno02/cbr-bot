@@ -1,16 +1,384 @@
 {
- "quando": "2026-10-19T17:51:07Z",
+ "quando": "2026-10-20T04:12:50Z",
  "pauta_quando": "2026-10-19T17:51:07Z",
- "ok": false,
- "erro": "API: openai/gpt-4o-mini: resposta 200 ilegível (JSONDecodeError; text/plain; 'OK\\r\\n')",
- "modelo": null,
- "avaliados_agora": 128,
- "em_cache": 0,
- "regra": "Candidatos = I+V >= 4, dentro das editorias e não repetidos. É sugestão: a apuração e as revisões do manual continuam obrigatórias. Obrigatórios = posts da BFC/Luz/movimentos de hoje.",
+ "ok": true,
+ "erro": null,
+ "metodo": "regras",
+ "regra": "Filtro grosso por regras (sem IA). Candidatos: dentro das editorias, não repetidos, nota = calor (veículos) + lente (palavras da linha da página) >= 3. A nota editorial (I, V, P, formato) é do Claude. Confira os descartes quentes: a regra erra. Obrigatórios = BFC/Luz/movimentos de hoje.",
  "total_assuntos": 128,
- "sem_nota": 128,
- "candidatos": [],
+ "novos_3h": 0,
+ "candidatos": [
+  {
+   "manchete": "Volkswagen planeja congelar salários até 2030, diz conselho de trabalhadores",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 8,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-10-19T15:07:47Z",
+   "link": "https://g1.globo.com/carros/noticia/2026/10/19/volkswagen-planeja-congelar-salarios-ate-2030.ghtml",
+   "editoria": "economia",
+   "nota": 8,
+   "lente": [
+    "trabalhador",
+    "salario",
+    "congel"
+   ]
+  },
+  {
+   "manchete": "Gusttavo Lima declarou apoio a Flávio Bolsonaro (PL) durante show realizado na noite deste domingo (18), em Assis Chateaubriand, no Paraná. Com a bandeira do Brasil nas mãos, o cantor afirmou que \"no próximo dia 25 é 22\", em referência ao número da",
+   "secoes": [
+    "B",
+    "D-famosos"
+   ],
+   "veiculos": 16,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-10-19T16:30:40Z",
+   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBmM0s2OHl0ODBXeHAxbGVYZWRlMGdUVzF0QWhlbGFYNnlYekItbXp6UmlncTlBNWpmNVJyQ25yYWUyMjB0WjNCeVNfZUszNHBYM2I2cmJ3?oc=5",
+   "editoria": "eleicoes",
+   "nota": 8,
+   "lente": [
+    "bolsonar",
+    "flavio",
+    "pl"
+   ]
+  },
+  {
+   "manchete": "Flávio Bolsonaro é investigado em 2º inquérito no STF para apurar suspeitas de lavagem com advogado",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 28,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-19T00:32:53Z",
+   "link": "https://www.gazetadopovo.com.br/republica/moraes-sera-relator-de-novo-inquerito-contra-flavio-bolsonaro-no-stf/",
+   "editoria": "politica",
+   "nota": 8,
+   "lente": [
+    "bolsonar",
+    "flavio",
+    "investigad",
+    "inquerito"
+   ]
+  },
+  {
+   "manchete": "Lula e Flávio trocam acusações de corrupção e debate da Band termina 'caótico': veja como foi",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 827,
+   "veiculos_3h": 452,
+   "na_pauta_desde": "2026-10-18T20:49:50Z",
+   "link": "https://www.bbc.co.uk/portuguese/live/c693zk97yz74t?at_medium=RSS&at_campaign=rss",
+   "editoria": "eleicoes",
+   "nota": 6,
+   "lente": [
+    "flavio",
+    "corrupca"
+   ]
+  },
+  {
+   "manchete": "Deputado do PL é detido após disparar arma em balada de SP, segundo testemunhas",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 24,
+   "veiculos_3h": 13,
+   "na_pauta_desde": "2026-10-19T17:50:00Z",
+   "link": "https://www.congressoemfoco.com.br/noticia/123365/deputado-do-pl-e-detido-em-sp-apos-disparo-de-arma-de-fogo-em-boate",
+   "editoria": "politica",
+   "nota": 6,
+   "lente": [
+    "pl",
+    "detido"
+   ]
+  },
+  {
+   "manchete": "Brazil's Bolsonaro, Lula head into first debate a week before vote",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 74,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-10-19T17:50:00Z",
+   "link": "https://www.france24.com/en/americas/20261019-brazil-lula-bolsonaro-debate-election-runoff",
+   "editoria": "eleicoes",
+   "nota": 6,
+   "lente": [
+    "bolsonar"
+   ]
+  },
+  {
+   "manchete": "Anvisa proíbe lotes de botox e medicamento contra câncer falsificados",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 20,
+   "veiculos_3h": 14,
+   "na_pauta_desde": "2026-10-19T11:07:36Z",
+   "link": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-10/anvisa-proibe-lotes-de-medicamento-para-tratar-cancer",
+   "editoria": "saude",
+   "nota": 5,
+   "lente": [],
+   "outras_manchetes": 1
+  },
+  {
+   "manchete": "Internet do CV: Mãe do rapper Oruam é presa em operação da PF no RJ",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 47,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-10-19T15:07:47Z",
+   "link": "https://www.gazetadopovo.com.br/brasil/pf-prende-19-bloqueia-558-milhoes-comando-vermelho-rj/",
+   "editoria": "politica",
+   "nota": 5,
+   "lente": []
+  },
+  {
+   "manchete": "Brazil election court gives Meta 24 hrs to prove Lula, Bolsonaro get equal treatment",
+   "secoes": [
+    "B",
+    "C-internacional"
+   ],
+   "veiculos": 9,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-10-19T17:50:00Z",
+   "link": "https://www.france24.com/en/americas/20261019-brazil-court-orders-meta-prove-gives-lula-bolsonaro-campaign-content-equal-treatment",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "lente": [
+    "bolsonar"
+   ]
+  },
+  {
+   "manchete": "Lula repete Bolsonaro ao antecipar pagamentos do Bolsa Família antes de 2º turno das eleições",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-10-19T17:50:00Z",
+   "link": "https://www1.folha.uol.com.br/mercado/2026/10/lula-repete-bolsonaro-ao-antecipar-pagamentos-do-bolsa-familia-antes-de-2o-turno-das-eleicoes.shtml",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "lente": [
+    "bolsa familia",
+    "bolsonar"
+   ]
+  },
+  {
+   "manchete": "USP estima que 71,9 mil pessoas participaram de ato de Flávio na Avenida Paulista",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 41,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-19T17:50:00Z",
+   "link": "https://midianinja.org/ato-estudantes-com-lula-reune-1-milhao-de-pessoas-segundo-organizadores-da-candelaria-a-cinelandia/",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "lente": [
+    "flavio"
+   ]
+  },
+  {
+   "manchete": "Forças Armadas vão reforçar combate aos incêndios no AM, anuncia ministro da Justiça",
+   "secoes": [
+    "B",
+    "D-famosos"
+   ],
+   "veiculos": 10,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-19T16:30:40Z",
+   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxObHdGNnVpT1RSMFFKTjNvaXBxb1pkLTJCMUNKWWwyN3oyN0VCRldNN0FrcVJsMEswOW00WjFUbVhTNkdVMkxlcDhJVGNVM3BxTFNYNUZ2ZUlEdzc0dUthMHpYTXBBak9tOUxOb0VfUlJMLW80ZGo5bVozWlhRcDN5TGw1MzFHM0Z4ay0wTFZHaFM5SFhETWdzdnRhQWZPTFZyekJNTUNyT3g3c1BGakpIRG9YOXdZUENLU2c?oc=5",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "lente": [
+    "incendio"
+   ]
+  },
+  {
+   "manchete": "Crédito rural: o que Flávio Bolsonaro e Lula propõem para o Plano Safra",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-19T15:07:47Z",
+   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOVkduQVFCVU1EMlg2V1pQeENBaHN1ZjNtNWhRRnJXdUFzaGNUY3k3OGhUd2VKVjdKNVhzSGhmMkxwSzhHSGhZRHpmZVc5QlFyNmYtdS1HMzJHNjNvQTM0SHExaUFMa2JxRmxCZW9yeFB3VDlnLXQwYkotT21pNkNTZmpGdklkbThmZWNCQXd6UFFhVUtCWGZPVG9NR245RDQ?oc=5",
+   "editoria": "roca",
+   "nota": 5,
+   "lente": [
+    "bolsonar",
+    "flavio"
+   ]
+  },
+  {
+   "manchete": "Ministério confirma caso de doença de Newcastle em granja comercial em SC",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 7,
+   "veiculos_3h": 7,
+   "na_pauta_desde": "2026-10-19T16:39:21Z",
+   "link": "https://g1.globo.com/sc/santa-catarina/noticia/2026/10/19/ministerio-da-agricultura-confirma-foco-da-doenca-de-newcastle-em-sc.ghtml",
+   "editoria": "roca",
+   "nota": 4,
+   "lente": []
+  },
+  {
+   "manchete": "Injeção semestral contra HIV custará até R$ 20,9 mil no Brasil",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-10-19T16:30:40Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/equilibrioesaude/2026/10/injecao-semestral-contra-hiv-custara-ate-r-209-mil-no-brasil.shtml",
+   "editoria": "saude",
+   "nota": 4,
+   "lente": []
+  },
+  {
+   "manchete": "Flórida responsabiliza ex-presidente cubano Raúl Castro por derrubada de aviões em 1996",
+   "secoes": [
+    "B",
+    "C-nacional",
+    "D-america_latina"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-10-19T16:30:40Z",
+   "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOVTlHcW4yU0hhdVhLaEZWYmxlLWVpcGY1VEZ4dGFET2xud0oyQmtLT3NUczZIYmtJc2pkNzlBeUx5eWJVWVNhYmhnQllRYzg0ZjBVa3FXN2REbkVkMWZ0cGtITFRIMnRSbXdsRVFuTV9PSkRIaEVuM1M1X2VjbTBESk5zenplRThwcFNhU1RmUjhqVUkycnVkeHN4V0RlTzVOb3lMdVoxSXNtcm5HajgtejdaT1lRWUg5SkFMYzJ2MGZXeWdUSGlzVzltaV9CY1pi?oc=5",
+   "editoria": "america_latina",
+   "nota": 4,
+   "lente": []
+  },
+  {
+   "manchete": "Snell & Wilmer nabs Pérez-Llorca partner quartet for Mexico City launch",
+   "secoes": [
+    "B",
+    "C-internacional",
+    "D-america_latina"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-10-19T16:30:40Z",
+   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNRmJJSkhrT0dPcEdLQndqUWt5NFNuR3dDNVRhQ2xja1F1Zk9UZDJ4eTQ0Zy14ZHFzNThZY2pLVzFhcmpVWkNVLWMwY01WSE81eHVFTzdmQkNpZ2s3WjNJX1VUUE9hU0Y1SGtzQnI2VTZzeFdhcWxWbFkyZFdkbEVfRXpySWdJZERvaS1aLXZ5SlJ5d1FxS0Y5ZFVzSkVSQQ?oc=5",
+   "editoria": "america_latina",
+   "nota": 4,
+   "lente": []
+  },
+  {
+   "manchete": "Detienen al exfiscal de Chihuahua por operativo con agentes de la CIA",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-10-19T17:50:00Z",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPT0ppU2E5ejJrR0RaRGozYU40YVZZY1NXQ09uTmptRW5GRlltekg5RWtDdnFQRl9MYktuLU1MNzRrOV9lb012MDRwd25mbnRncWd3SDBXa3BzSVhtc1lRSmVGdUJJUEN1enJjaVBqOVM4cjdfbVBkRVljQXJnQ3N2Sl9abmZURlRBR192VXNRX3BYelA2WTNIUHEyMUg0ZC04T2tpOW5qdFgtQ3RycWNqTjhFRW5MTzQ?oc=5",
+   "editoria": "america_latina",
+   "nota": 4,
+   "lente": []
+  },
+  {
+   "manchete": "Trump’s Latin America allies deepen ties with Washington lenders",
+   "secoes": [
+    "D-america_latina"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-19T16:39:21Z",
+   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxObTdUa1Z0LXY1eVBncUFxTzR3bEQ0RGdXcmZzeHhIdEh2bXRuZkp1RGxXSHo0ZmxlQTZHanBMYWZ5bTN4eU5lc2Z5WjhRUHRzeENtSFBoUVZ3bDBBNzR3R2JIUEZvTzFxcFFXWDFNVC1sUWhXRy1KWVpkNnJaelpwR3R0Q20xTm9NSDMzLUd3WEJOdWpGb3JDMDd2akowbXhLV3VMTGE3LWw5ZUJLRVhwVW5BRW1Td9IBuwFBVV95cUxQa19RT3Zjd0JxWXJDbUswSGhOek5CeHJPWUNOZWpPQ1A2VWc2SE1SVDFOckYxR2NCTWF6OFEwZU9jNW9xaEl4RENQOUlPX2M5anU3aEJvWTlPT2tRN0N4Yi01TUYwNUc1RHpVYlowdzBtblZSU0p1OEM5N3FoLVBNU0lQXzZFQV93NVdPNFh1cldKUVI1NWJEVVJnekZOQzQ0UTNvTl9lN0g3ajJkN1duSWZjU1FGXy1IZUtj?oc=5",
+   "editoria": "america_latina",
+   "nota": 4,
+   "lente": [
+    "trump"
+   ]
+  },
+  {
+   "manchete": "Forbes inclui sete mulheres de Mato Grosso entre as 100 mais poderosas do agro",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 6,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-19T15:07:47Z",
+   "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPUWVUSlZ6QmFNc0E3V1BHcms4RkZYZ25lUUN3X2c0OUFpWnFzQndrZUxoQjFLZF8xb0I2S3JFRHR4ZDdUMGJtME5UdmFqM1dFTEtNcm1uQTVOWlh2M2lEZjlSZTZGMm9ndTloMHBHMzRKaUktN3FTV01HbldadlhvV3BpX3U0VS1OZ0ZNM3R1RDRaNkJGYThBM084NENuU0RPZlV1bVI2a0NmSXZRWmZpQVdR?oc=5",
+   "editoria": "roca",
+   "nota": 4,
+   "lente": []
+  }
+ ],
  "obrigatorios": [],
- "descartados_mais_quentes": [],
- "pedidos_hoje": 3
+ "descartados_mais_quentes": [
+  {
+   "manchete": "Trump afirma que não quer afastar Rússia de negociações e acusa Zelensky de prolongar guerra",
+   "veiculos": 21,
+   "veiculos_3h": 1,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Donald Trump declara apoio a Netanyahu na eleição de Israel",
+   "veiculos": 17,
+   "veiculos_3h": 0,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Sacerdote morre durante missa em Guayaquil, no Equador, após queda de uma cruz",
+   "veiculos": 14,
+   "veiculos_3h": 1,
+   "motivo": "fora: crime ou tragedia (morre)"
+  },
+  {
+   "manchete": "Israel prende 10 suspeitos de ataques contra diplomatas na Cisjordânia",
+   "veiculos": 12,
+   "veiculos_3h": 4,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "El Programa Mundial de Alimentos dejará de asistir a 500.000 personas en Gaza por falta de fondos",
+   "veiculos": 12,
+   "veiculos_3h": 3,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Canada PM Carney confirms four dead in fire at a military base",
+   "veiculos": 9,
+   "veiculos_3h": 2,
+   "motivo": "fora: crime ou tragedia (dead)"
+  },
+  {
+   "manchete": "Coast Guard Halts Search for Survivors of Capsized Boat Off Mexico",
+   "veiculos": 9,
+   "veiculos_3h": 2,
+   "motivo": "fora: crime ou tragedia (capsized)"
+  },
+  {
+   "manchete": "Criança de 8 anos é atacada por onça em terra indígena no Pará",
+   "veiculos": 8,
+   "veiculos_3h": 0,
+   "motivo": "fora: crime ou tragedia (atacada)"
+  },
+  {
+   "manchete": "Incêndio em base militar no Canadá deixa 4 mortos; governo descarta terrorismo",
+   "veiculos": 7,
+   "veiculos_3h": 3,
+   "motivo": "fora: crime ou tragedia (mortos)"
+  },
+  {
+   "manchete": "Quais brasileiras vão desfilar no Victoria’s Secret Fashion Show 2026?",
+   "veiculos": 6,
+   "veiculos_3h": 2,
+   "motivo": "fora: entretenimento (victoria s secret)"
+  }
+ ]
 }
