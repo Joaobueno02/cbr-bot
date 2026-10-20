@@ -12,7 +12,7 @@ from pathlib import Path
 PADROES = [re.compile(r"EAA[A-Za-z0-9]{20,}"), re.compile(r"access_token", re.I),
            re.compile(r"\bsk-(?:proj-)?[A-Za-z0-9_-]{30,}"),   # chave da OpenAI
            re.compile(r"\bgh[pousr]_[A-Za-z0-9]{30,}"),         # token do GitHub
-           re.compile(r"AIza[0-9A-Za-z_-]{35}")]                 # chave do Gemini (triagem, 20/10/2026)
+           re.compile(r"(?:AIza[0-9A-Za-z_-]{35}|\bAQ\.[0-9A-Za-z_-]{40,})")]  # chave do Gemini (dois formatos)
 PARECIDOS = (0, 2, 3, 4)  # padrões "parecidos com chave" que links longos podem casar por acaso
 # arquivos do radar de manchetes: gerados por bot/radar.py, que nunca toca no token. Os links do
 # Google Notícias são códigos longos que às vezes contêm "EAA..." por acaso, então ali só vale a
