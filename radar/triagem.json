@@ -1,66 +1,29 @@
 {
- "quando": "2026-10-20T04:31:19Z",
- "pauta_quando": "2026-10-20T04:31:19Z",
+ "quando": "2026-10-20T04:32:52Z",
+ "pauta_quando": "2026-10-20T04:32:51Z",
  "ok": true,
  "erro": null,
- "metodo": "regras",
+ "metodo": "regras + gemini",
  "ia": {
   "ia": "gemini",
-  "ok": false,
-  "erro": "Gemini: gemini-2.5-flash-lite: HTTP 404 This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for",
-  "modelo": null,
-  "avaliados_agora": 0,
-  "pedidos_hoje": 2
+  "ok": true,
+  "erro": null,
+  "modelo": "gemini-3.5-flash-lite",
+  "avaliados_agora": 25,
+  "pedidos_hoje": 9
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 126,
+ "total_assuntos": 121,
  "novos_3h": 16,
  "esquentaram": 0,
  "candidatos": [
-  {
-   "manchete": "Flávio Bolsonaro é investigado pela PF por suspeita de lavagem de dinheiro com advogado Willer Tomaz",
-   "secoes": [
-    "B",
-    "C-nacional"
-   ],
-   "veiculos": 9,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-10-20T04:31:19Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/10/inquerito-sobre-suspeita-de-lavagem-de-flavio-bolsonaro-tambem-investiga-claudio-castro-e-ramagem.shtml",
-   "editoria": "politica",
-   "nota": 8,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio",
-    "investigad",
-    "lavagem"
-   ]
-  },
-  {
-   "manchete": "Gusttavo Lima declara apoio a Flávio Bolsonaro durante show",
-   "secoes": [
-    "D-famosos"
-   ],
-   "veiculos": 22,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-20T04:31:19Z",
-   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPQ0ZWejBvdDliX2ZqZU5ZUVpjNUpNVVJMUVJfV2hXejlQOUo2aVd6OUJVeWtlRTJLWGFkeThUUV92QWZkS0RWNUwwWXk1M20tVzJPeU0zbi1CaU9CTjllblM1bXYtRWpJYVl2VTBiUm9qZHA1V2s3RWtlaTliZS1ndUxENlE4U2hsN3lieFpucHlqN1ZwaGdCTm9BNVRhU0xBVVEydkZya0ZxVXJWb0dMdjJhU0hNWmhBaFQzSXhISEJqODRpN1HSAcsBQVVfeXFMT1czc3RXSkhLaVRjbFJxS3Rmby1MclIyNktweElmQWdqbnBqZ1EzYUhpeWg1MVk2eUp3Z2EtRDNtMDR1MmxDTFlNaHZEOWZnMUtobVpvWW15SG53QXczbmpfb2l1NzlwQk9CR1AzTUk2RUJLVVN0ZEdNRkJLbzJSSVpxWm5DelJILVVrWTNyOE5YU0hKTDRuN0l6U0Y5TFVKWXFxZkpkTnFtUTNfbEtuNThqZ0NibEVJUTl6d29qbjRKNjQ1RW9mbm53UXM?oc=5",
-   "editoria": "eleicoes",
-   "nota": 7,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ]
-  },
   {
    "manchete": "Vorcaro, lobista e filho de Lula viram temas de Lula e Flávio em debate; veja como foi em 10 pontos",
    "secoes": [
     "B"
    ],
-   "veiculos": 328,
-   "veiculos_3h": 104,
+   "veiculos": 580,
+   "veiculos_3h": 130,
    "na_pauta_desde": "2026-10-20T04:31:19Z",
    "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/10/vorcaro-lobista-e-filho-de-lula-viram-temas-de-lula-e-flavio-em-debate-veja-como-foi-em-10-pontos.shtml",
    "editoria": "eleicoes",
@@ -69,148 +32,25 @@
    "lente": [
     "flavio",
     "vorcaro"
-   ]
-  },
-  {
-   "manchete": "Agenda de Flávio Bolsonaro e Lula: Veja os Compromissos de Campanha para Eleições 2026 Nesta Segunda (19/10)",
-   "secoes": [
-    "B"
    ],
-   "veiculos": 48,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-20T04:31:19Z",
-   "link": "https://www.gazetadopovo.com.br/eleicoes/2026/do-debate-da-globo-aos-atos-de-rua-agenda-final-flavio-bolsonaro-antes-do-segundo-turno/",
-   "editoria": "eleicoes",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ]
-  },
-  {
-   "manchete": "Brazil's Lula, Bolsonaro clash in bitter debate ahead of election run-off",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 39,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-20T04:31:19Z",
-   "link": "https://www.france24.com/en/americas/20261019-brazil-lula-bolsonaro-debate-election-runoff",
-   "editoria": "eleicoes",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "bolsonar"
-   ]
-  },
-  {
-   "manchete": "Bolsa Família antecipa pagamento com reajuste antes da eleição",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 27,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-20T04:31:19Z",
-   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/10/bolsa-familia-com-reajuste-de-15-comeca-a-ser-pago-nesta-segunda-feira-veja-calendario.shtml",
-   "editoria": "eleicoes",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "bolsa familia",
-    "reajuste"
-   ]
-  },
-  {
-   "manchete": "Kassab recebia comissão por aplicação em letras do Master, diz Vorcaro",
-   "secoes": [
-    "B",
-    "C-nacional"
-   ],
-   "veiculos": 12,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-20T04:31:19Z",
-   "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQWDdYSUdiR3RiU3N1cmJuYmRQU042QlFZcV9QNExXSDBrUGxJS1ZIQzF3ckFaQ2dtTk5WR1ZjRzFkTkxGcTgtQUh5QU1tZGNOZjloNG41S09xcU0tV21iSTAteWFjZ1d2Z3kxdTBTZDlvTjdILTJ3RUFiRUllT216dU9UaF8?oc=5",
-   "editoria": "politica",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "vorcaro",
-    "master"
-   ]
-  },
-  {
-   "manchete": "Criança de 8 anos é atacada por onça em terra indígena no Pará",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 20,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-20T04:31:19Z",
-   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxORDdFOURTZEhlNnlNNVgzVmRaTi1WR3paR3oxUXRON0MtNENJYm11alNZYnUxVVNhaFc1dHVhU0dYWFlUSEExU0xsdUxMUTVyX0doRlEyRzB4QWt2U0VpZnFRWkFUbWxWY0c0cGp5TWZYSjNHUzE0X2NILXEzMHR4MmN4RlI3MUN2VlktMUdFNi1Ec2pEaV9z?oc=5",
-   "editoria": "roca",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "indigena"
-   ]
-  },
-  {
-   "manchete": "Projeto prevê isenção de Imposto de Renda para aposentados com sequelas neurológicas permanentes",
-   "secoes": [
-    "C-nacional"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-20T04:31:19Z",
-   "link": "https://www.camara.leg.br/noticias/1309526-projeto-preve-isencao-de-imposto-de-renda-para-aposentados-com-sequelas-neurologicas-permanentes",
-   "editoria": "economia",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "aposentad",
-    "isencao",
-    "isencao"
-   ]
-  },
-  {
-   "manchete": "Brazil election court gives Meta 24 hrs to prove Lula, Bolsonaro get equal treatment",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 15,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-10-19T17:50:00Z",
-   "link": "https://www.france24.com/en/americas/20261019-brazil-court-orders-meta-prove-gives-lula-bolsonaro-campaign-content-equal-treatment",
-   "editoria": "eleicoes",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "bolsonar"
-   ]
-  },
-  {
-   "manchete": "México suspende importação de frango do Brasil após surto de doença aviária",
-   "secoes": [
-    "B",
-    "C-nacional",
-    "D-america_latina"
-   ],
-   "veiculos": 6,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-10-20T04:31:19Z",
-   "link": "https://noticias.uol.com.br/ultimas-noticias/afp/2026/10/19/mexico-suspende-importacao-de-frango-brasileiro-apos-surto-de-doenca-aviaria.htm",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": []
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 3,
+    "V": 3,
+    "P": 3,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Debate presidencial de grande repercussão com múltiplos temas quentes.",
+    "soma": 6
+   }
   },
   {
    "manchete": "Bolsonaro se lanza contra Lula en un primer debate muy bronco",
    "secoes": [
     "B"
    ],
-   "veiculos": 49,
+   "veiculos": 58,
    "veiculos_3h": 4,
    "na_pauta_desde": "2026-10-20T04:31:19Z",
    "link": "https://elpais.com/america/2026-10-19/bolsonaro-se-lanza-contra-lula-en-un-primer-debate-muy-bronco.html",
@@ -219,22 +59,72 @@
    "esquentou": false,
    "lente": [
     "bolsonar"
-   ]
+   ],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Repercussão internacional do debate eleitoral brasileiro.",
+    "soma": 6
+   }
   },
   {
-   "manchete": "Juíza da Flórida emite mandado de prisão contra Raúl Castro",
+   "manchete": "Bolsa Família 2026: pagamento de outubro, o primeiro com novos valores, começa nesta segunda",
    "secoes": [
-    "B",
-    "D-america_latina"
+    "B"
    ],
-   "veiculos": 26,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-10-19T17:51:07Z",
-   "link": "https://www.gazetadopovo.com.br/mundo/juiza-florida-emite-mandado-prisao-contra-raul-castro/",
-   "editoria": "america_latina",
+   "veiculos": 44,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-20T04:32:51Z",
+   "link": "https://g1.globo.com/economia/noticia/2026/10/19/bolsa-familia-2026-pagamento-de-outubro-o-primeiro-com-novos-valores-comeca-nesta-segunda.ghtml",
+   "editoria": "economia",
    "nota": 5,
    "esquentou": false,
-   "lente": []
+   "lente": [
+    "bolsa familia"
+   ],
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 2,
+    "P": 1,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Calendário e novos valores do Bolsa Família afetam milhões.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Brazil election court gives Meta 24 hrs to prove Lula, Bolsonaro get equal treatment",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 14,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-10-19T17:50:00Z",
+   "link": "https://www.france24.com/en/americas/20261019-brazil-court-orders-meta-prove-gives-lula-bolsonaro-campaign-content-equal-treatment",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "bolsonar"
+   ],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "TSE cobra igualdade de tratamento das Big Techs nas eleições.",
+    "soma": 4
+   }
   },
   {
    "manchete": "Maiores Assembleias de Deus explicitam apoio a Flávio Bolsonaro, e Universal permanece neutra",
@@ -252,143 +142,490 @@
    "lente": [
     "bolsonar",
     "flavio"
-   ]
-  },
-  {
-   "manchete": "Anvisa proíbe lotes de botox e medicamento contra câncer falsificados",
-   "secoes": [
-    "B"
    ],
-   "veiculos": 59,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-19T11:07:36Z",
-   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQUE1NdTU5NGJ0d283RUVPX05wWFBwMnpJSnZ2YTNPdlo3SmZUSW1XcV94ajFWaURBQUk4Y2YyYUg5d0huakRqSFJKQzFEWkFocmU4TXdoR041bjNKU1huby1iX3UyYWdRb1h2Ymc0LUtXcGlHR0FjYjhpOHFGNjh6OE5uSzQ1eGlYbGw0UXVIZEkzQ1JqUUdMWmVXbzcweUxicDkxLWhR?oc=5",
-   "editoria": "saude",
-   "nota": 5,
-   "esquentou": false,
-   "lente": []
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Apoio de lideranças religiosas impacta fortemente o eleitorado.",
+    "soma": 4
+   }
   },
   {
-   "manchete": "Internet do CV: Mãe do rapper Oruam é presa em operação da PF no RJ",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 57,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-19T15:07:47Z",
-   "link": "https://www.gazetadopovo.com.br/brasil/pf-prende-19-bloqueia-558-milhoes-comando-vermelho-rj/",
-   "editoria": "politica",
-   "nota": 5,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Trump Again Demands New Mexico Change Name to New America",
+   "manchete": "Flávio promete acabar com 'entraves ambientais' e diz que produtor poderá fazer 'o que quiser' em sua terra no Pará",
    "secoes": [
     "B",
-    "C-internacional",
-    "D-america_latina"
-   ],
-   "veiculos": 6,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-20T04:31:19Z",
-   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPWHYxTGY3eFlIckhiMU44ZW1nWVFFNDNETDlEeFJYVC1LM19vQmFxZWN4VjVmRTQ5cnBwY3FTeEtJSzlyczhRQWJFM28wVEtacmFfSGpZUE54b21QOGZXTDFrcHlQcDhOQjRWdmZ1R3VaOUFrSjNGUjZxQXVrYzlSdXBTb25iWWJJOGRIRWR1Z25fVEFJcTlEMmVuWkZFSWVyZ3c?oc=5",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "trump"
-   ],
-   "outras_manchetes": 1
-  },
-  {
-   "manchete": "Master: PGR diz não ver abuso de autoridade de Mendonça apontado por Moraes em pedido de investigação",
-   "secoes": [
     "C-nacional"
    ],
-   "veiculos": 28,
+   "veiculos": 10,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-20T04:31:19Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/10/19/caso-master-pgr-diz-nao-ver-abuso-de-autoridade-de-mendonca-em-relatorio-de-inteligencia.ghtml",
-   "editoria": "politica",
-   "nota": 5,
+   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/10/flavio-bolsonaro-critica-entraves-ambientais-e-diz-que-produtor-vai-fazer-o-que-quiser-na-sua-terra.shtml",
+   "editoria": "gerais",
+   "nota": 4,
    "esquentou": false,
    "lente": [
-    "master"
-   ]
-  },
-  {
-   "manchete": "Chile registra 110 detidos após protestos no aniversário da revolta social de 2019",
-   "secoes": [
-    "C-nacional"
+    "flavio"
    ],
-   "veiculos": 6,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-20T04:31:19Z",
-   "link": "https://g1.globo.com/mundo/noticia/2026/10/19/chile-prende-110-pessoas-em-protestos-no-aniversario-da-revolta-social-de-2019.ghtml",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "protesto"
-   ]
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Propostas ambientais para a Amazônia afetam conflitos no campo.",
+    "soma": 4
+   }
   },
   {
-   "manchete": "Governo Milei lança plano de demissão voluntária para cortar 20 mil cargos públicos",
+   "manchete": "Kassab recebia comissão por aplicação em letras do Master, diz Vorcaro",
    "secoes": [
     "C-nacional"
    ],
    "veiculos": 4,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-20T04:31:19Z",
-   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPT05ETXU4YXRMaG10TmRxaWhIQVV6V3lxMWp5anlsTVBLMVNIRFZjYnB4SXVWcDYxSFk0d0tFQ3FNVm9SOWFGdk8zM09xMjg2dnJsbVM5SEUzOUpVU0w2Q1JXUkgwSGlIcXFUV2lCTWppb0VrWWFaM2hHYXA4bUludkkxNnVDQkVTWm14X1A2OE5KY0JGU3p4OW1keS1ZMmlFZjdXLXFwa3drVWRWTHc2aHkzWUxiVUk?oc=5",
-   "editoria": "america_latina",
+   "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQWDdYSUdiR3RiU3N1cmJuYmRQU042QlFZcV9QNExXSDBrUGxJS1ZIQzF3ckFaQ2dtTk5WR1ZjRzFkTkxGcTgtQUh5QU1tZGNOZjloNG41S09xcU0tV21iSTAteWFjZ1d2Z3kxdTBTZDlvTjdILTJ3RUFiRUllT216dU9UaF8?oc=5",
+   "editoria": "politica",
    "nota": 5,
    "esquentou": false,
    "lente": [
-    "demissa",
-    "milei"
+    "vorcaro",
+    "master"
+   ],
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Novos desdobramentos sobre escândalo financeiro envolvendo figuras políticas.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Brazil's Lula, Bolsonaro clash in bitter debate ahead of election run-off",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 42,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-10-20T04:31:19Z",
+   "link": "https://www.france24.com/en/americas/20261019-brazil-lula-bolsonaro-debate-election-runoff",
+   "editoria": "eleicoes",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "bolsonar"
+   ],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 2,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Cobertura internacional de debate já tratada em outros ângulos.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Gusttavo Lima declara apoio a Flávio Bolsonaro durante show",
+   "secoes": [
+    "D-famosos"
+   ],
+   "veiculos": 18,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-20T04:31:19Z",
+   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPQ0ZWejBvdDliX2ZqZU5ZUVpjNUpNVVJMUVJfV2hXejlQOUo2aVd6OUJVeWtlRTJLWGFkeThUUV92QWZkS0RWNUwwWXk1M20tVzJPeU0zbi1CaU9CTjllblM1bXYtRWpJYVl2VTBiUm9qZHA1V2s3RWtlaTliZS1ndUxENlE4U2hsN3lieFpucHlqN1ZwaGdCTm9BNVRhU0xBVVEydkZya0ZxVXJWb0dMdjJhU0hNWmhBaFQzSXhISEJqODRpN1HSAcsBQVVfeXFMT1czc3RXSkhLaVRjbFJxS3Rmby1MclIyNktweElmQWdqbnBqZ1EzYUhpeWg1MVk2eUp3Z2EtRDNtMDR1MmxDTFlNaHZEOWZnMUtobVpvWW15SG53QXczbmpfb2l1NzlwQk9CR1AzTUk2RUJLVVN0ZEdNRkJLbzJSSVpxWm5DelJILVVrWTNyOE5YU0hKTDRuN0l6U0Y5TFVKWXFxZkpkTnFtUTNfbEtuNThqZ0NibEVJUTl6d29qbjRKNjQ1RW9mbm53UXM?oc=5",
+   "editoria": "eleicoes",
+   "nota": 7,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio"
+   ],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 2,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Famoso declarando voto mobiliza seguidores na reta final.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Espírito Santo afasta educador de assentamento; MST denuncia perseguição",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-20T04:31:19Z",
+   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNd3FObUZIZVZRbGZLOElxam51MDFTYmRENk9SdlM0NUVSQlB6alFrVFJzRFdwOFdmV0dUV1ZfN1k5M2JuWnplZ0pqTmpCZEtyWURVZGdoYkNuRkU1SU1hX0NPQkVPbHFxNW5Xdl9mQURHQ2loeFdXZVRHWVp4NXpyZkpRSWloNlVGRWhNSlZSS2FTQmlySmxyaXVVRFhsM0xxemFqMGpFM1FIdw?oc=5",
+   "editoria": "roca",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "mst"
+   ]
+  },
+  {
+   "manchete": "Além de 'Grey's Anatomy': websérie revela rotina no SUS em Curitiba",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-20T04:32:51Z",
+   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPZkVGaEFpWkFFaHN0NjVpbVYyUWhocFdoWm5aSWZkaVJqOURQWEhTLUhkcW1PRXltZHNZZjgtSFpRMnpZZ2hFT05KblM4VnZubFZwTmJMek55bmFZeFktb2EwRF9EWGg0NWlENFVGVGd6LUx4cFRENE1RYUY3YURuZHJnOWVUdHc4LXZoR3lfNmF4N1ZTakNfYi1Ibl9qMWt3ZnRmaU9HUjZUcmt2QmdSZmdJRGFTbFNnZEE?oc=5",
+   "editoria": "saude",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "sus"
+   ]
+  },
+  {
+   "manchete": "Mensagens de Roberto Justus a Daniel Vorcaro revelam cobrança por aporte na SteelCorp",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-20T04:32:51Z",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOV29lQ1ltUGhrNERRSlFIZ1haVncxR1c0YllDVWxmcUJxYndVOElwaEl2SlpJSUZwQmJST1VuSnVpcEZZTC1RTS11VzEyUV9icHZFalJFVDhvbFozcF85ZzlNd1U1Zlp4UWF6VUR3TTZsMlR0SUtYVlZ1NGRJTEhTQ0NOelNoRHEyTnAtS0x5ZXFSU0hEVVhtWg?oc=5",
+   "editoria": "politica",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "vorcaro"
+   ]
+  },
+  {
+   "manchete": "Amazonas registra mais de 5.300 focos de incêndio",
+   "secoes": [
+    "C-pesquisa"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-20T04:31:19Z",
+   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNOFpZVWNhTTdDNEFld1pqUXkzUFFEbVE2ai1KS1RTOFMweUxGenpYd2IzZ1dieV9YMUsyX0JvemkzQ1k5Vk1xeU1vSWFUQzlCalhjUURzTnhSV1g4eno4clJ3MWpncU45UjhCd1N3aWVuRXdnRndXdmg0Z284R0JEc3ZTMWJVMEotcl81MllWZXhsQWpiTjFoZXY0bWlrSVk2T2xRRXU5NEhDQ1NNTG16eTkzODRrVFZxX3hjdw?oc=5",
+   "editoria": "gerais",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "incendio"
+   ]
+  },
+  {
+   "manchete": "Ganhos globais e locais da queda do desmatamento no Brasil",
+   "secoes": [
+    "C-pesquisa"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-20T04:31:19Z",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQaWxBOFVVVk5qRU56Q2h4WVdldVhjX2tud1B4NHprcHZaQnZ5Y1FRMjlMd1EzVW5pSjU3Wm5raldPRkxHUW0td1JDNFh4SGx4OGFUdEVFUnBwTTFKSC1FMmx2NEswT0pabkNoMEduWThkeHNKdDFwYWdHeFYwRU5FY3B6elZBUVl2SVlKQjFzcTNabThMUS14UQ?oc=5",
+   "editoria": "gerais",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "desmatamento"
+   ]
+  },
+  {
+   "manchete": "Ciência de Dados, Software e IA: mais de 240 vagas em cursos semipresenciais são abertas pela UFMT",
+   "secoes": [
+    "C-universidades"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-20T04:32:51Z",
+   "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPcHJmM1hfMjZKaFNWelFpZW1aVDhyNE1FbDdKeXdyZ0pCdG8xdFk2MWowcERmQU9NeERsdEQ4WFpGM3BEVS1mWlRfVURDYzM4aE4zMkoyTkpURHhQS1lBNEFsV1JISkR6M1hVa1ZTT0VXdmxFRnp1TldLcXRsTkZYbGlxYXV1QlgyYmJBMUI3M0tqcWxVMHVCbl9oUGx4YTJ4M2daemU0WlNxbUxwaHpIaDFfTFgtQlUxVEwwdzF0V3VvVWwyMDNwZm9tbmJUUTI2TVE?oc=5",
+   "editoria": "educacao",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "vagas"
+   ]
+  },
+  {
+   "manchete": "G1 em 1 minuto - Santos: Justiça condena invasor de terra indígena que destruiu vegetação",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-20T04:31:19Z",
+   "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPSFZ0R0hSdzNXWHNIRW1oWnZvNFRMeV9EUEdCcHBTWmhDZG5qSVVoODA2ajhlY0J0dG9aVUl5d1ZTOU5mcUl1QjB1Q2gzWUl0NWVvSnZTUUpJVm1pcWtxT2RabjJVQkFld3VYN2pmRjRKMnljVFA1OFZJYnpfdFBlcWtZU1l3NHk2RGZHNmJHSVdGM0ZYX2lVMUZ2RXYxaTd3dXo2Y2dPMzlmR1RVSEo0WVRBWlFlSHRVbEtVMTZkV2dMZXRWUUx5WWp2R0lHd2F5UUQzQ0lab3dmVEVTWUktaDNlbXcxeDBuYlpTWdIB7AFBVV95cUxPSFZ0R0hSdzNXWHNIRW1oWnZvNFRMeV9EUEdCcHBTWmhDZG5qSVVoODA2ajhlY0J0dG9aVUl5d1ZTOU5mcUl1QjB1Q2gzWUl0NWVvSnZTUUpJVm1pcWtxT2RabjJVQkFld3VYN2pmRjRKMnljVFA1OFZJYnpfdFBlcWtZU1l3NHk2RGZHNmJHSVdGM0ZYX2lVMUZ2RXYxaTd3dXo2Y2dPMzlmR1RVSEo0WVRBWlFlSHRVbEtVMTZkV2dMZXRWUUx5WWp2R0lHd2F5UUQzQ0lab3dmVEVTWUktaDNlbXcxeDBuYlpTWQ?oc=5",
+   "editoria": "roca",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "indigena"
+   ]
+  },
+  {
+   "manchete": "Florianópolis, Lages e Itajaí estão entre cidades com mais famílias em risco de passar fome",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-20T04:31:19Z",
+   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNU25xVHp0RlZQa1lRdW0xTFlWNzgybU9nVG1lN2ZWZnZHQ2hYc04zeVVWT3RjU1FfX1lRRUljVXV4dFhMSXFrYUY4MU1JYnNsQURiVzNJLTRfdUtob0hRNnlRMG9YLW52Z1RLYmRPSXlvMVZ1aUtsbzc0RE9JSmFLdG1odnJYcC04Z2k1NnpVQ24zZzNZQ0R5TF9TdVQzanN5MURQeENhbEk4OUZ3Q0t4bFJKeXp1TzViMDdFTlVKTUtVQTJBYkE?oc=5",
+   "editoria": "roca",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "fome"
    ]
   }
  ],
- "rebaixados": [],
+ "rebaixados": [
+  {
+   "manchete": "Juros altos e economia mais fraca pressionam balanços do 3º trimestre",
+   "veiculos": 3,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-20T04:31:19Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Impacto de juros altos na economia real e nos trabalhadores.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Ricardo Henriques, um dos arquitetos do Bolsa Família, defende programa social: \"Resultados são exemplares\"",
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-20T04:31:19Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Defesa de programa social essencial para a população de baixa renda.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Governo federal anuncia ampliação de aeronaves para combater queimadas no Amazonas",
+   "veiculos": 16,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-20T04:32:51Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Ações de combate a queimadas na Amazônia.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Projeto prevê isenção de Imposto de Renda para aposentados com sequelas neurológicas permanentes",
+   "veiculos": 4,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-20T04:31:19Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Isenção de IR afeta diretamente aposentados com doenças graves.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Juíza da Flórida emite mandado de prisão contra Raúl Castro",
+   "veiculos": 23,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-19T17:51:07Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Decisão judicial estrangeira sem efeito prático imediato no Brasil.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "La Fiscalía captura a cuatro policías por abuso de autoridad y violencia policial en la muerte de Donovan Balanta",
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-20T04:32:51Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Violência policial na Colômbia, fora do eixo principal.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Criança de 8 anos é atacada por onça em terra indígena no Pará",
+   "veiculos": 18,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-20T04:31:19Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "gerais",
+    "I": 1,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "Tragédia com vítimas",
+    "motivo": "Crime comum/acidente sem vínculo político direto.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Chile registra 110 detidos após protestos no aniversário da revolta social de 2019",
+   "veiculos": 6,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-20T04:31:19Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Protestos no Chile em aniversário de revolta.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Colombia judge orders protection of historical artifacts after museum purge sparks protests",
+   "veiculos": 7,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-20T04:31:19Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 0,
+    "V": 0,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Proteção de artefatos na Colômbia.",
+    "soma": 0
+   }
+  },
+  {
+   "manchete": "Justiça da Flórida manda prender Raúl Castro por derrubada de aviões em 1996",
+   "veiculos": 9,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-20T04:32:51Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": true,
+    "risco": "",
+    "motivo": "Mesmo fato sobre mandado de prisão contra Raúl Castro.",
+    "soma": 2
+   }
+  }
+ ],
  "obrigatorios": [],
  "descartados_mais_quentes": [
   {
-   "manchete": "Americanas: Justiça do Rio decreta fim da recuperação judicial",
-   "veiculos": 17,
-   "veiculos_3h": 3,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Petróleo fecha em queda calibrando guerra no Oriente Médio e alívio de sanções à Rússia",
+   "manchete": "Líder de seita no Quênia é condenado por 191 homicídios após ordenar que pais deixassem filhos morrer de fome",
    "veiculos": 12,
-   "veiculos_3h": 0,
+   "veiculos_3h": 1,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
    "manchete": "Notícias - Internacional - Trump acusa Zelensky de não querer \"acabar com a guerra\" na Ucrânia",
-   "veiculos": 10,
+   "veiculos": 11,
    "veiculos_3h": 2,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Japão lança foguete para possível primeira missão do mundo a uma lua de Marte",
-   "veiculos": 10,
+   "manchete": "Petróleo fecha em queda calibrando guerra no Oriente Médio e alívio de sanções à Rússia",
+   "veiculos": 11,
    "veiculos_3h": 0,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Rebeca se classifica para a final do salto e Brasil disputa cinco medalhas no Mundial de Ginástica",
-   "veiculos": 6,
+   "manchete": "Japão lança foguete para possível primeira missão do mundo a uma lua de Marte",
+   "veiculos": 8,
+   "veiculos_3h": 0,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "França decreta toque de recolher após fim de semana de saques",
+   "veiculos": 7,
+   "veiculos_3h": 1,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Lula faz caminhada em Porto Alegre",
+   "veiculos": 7,
    "veiculos_3h": 0,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Aprovação de Trump cai para mínima histórica às vésperas das eleições legislativas",
-   "veiculos": 6,
+   "manchete": "Rubio nega 'pausa' na troca de informações com a Ucrânia após fala de Zelensky: 'Ele deve se concentrar em dar fim à guerra'",
+   "veiculos": 7,
    "veiculos_3h": 0,
    "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Palestinian activist Mahmoud Khalil asks US Supreme Court to hear case seeking to avoid re-arrest",
+   "veiculos": 5,
+   "veiculos_3h": 1,
+   "motivo": "sem editoria"
   },
   {
    "manchete": "Ex-namorada de Justin Bieber, Sahara Ray morre aos 34 anos",
@@ -401,18 +638,6 @@
    "veiculos": 4,
    "veiculos_3h": 3,
    "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Palestinian activist Mahmoud Khalil asks US to review deportation case",
-   "veiculos": 4,
-   "veiculos_3h": 1,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Deslizamento de terra em mina de ouro ilegal na Colômbia deixa nove mortos",
-   "veiculos": 4,
-   "veiculos_3h": 0,
-   "motivo": "fora: crime ou tragedia (mortos)"
   }
  ]
 }
