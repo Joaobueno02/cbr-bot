@@ -572,7 +572,12 @@ para melhorar**. No máximo ~1.200 palavras, 80% delas propositivas):
      a taxa de aceite por página e o ganho de seguidores depois das collabs aceitas (`radar/collabs.json`);
    - formatos: quantos Reels comuns saíram e o alcance deles contra o feed do mesmo dia (bloco `cbr`
      do benchmark), para saber se a meta de 2 Reels por dia está trazendo gente nova.
-5. **Experimentos para amanhã**: até 3, cada um com hipótese, como medir e esforço
+5. **Riscos** (pedido do João, 20/10/2026; 3 a 5 linhas, só o que mudou ou piorou, com número):
+   avisos 2207051 e queda brusca de alcance (sinal de spam); taxa de aceite das collabs (convites sem
+   aceite seguidos); posts do dia com foto de veículo/agência paga em vez de licença aberta; posts com
+   acusação de crime ou sobre o resultado eleitoral; pautas boas que a triagem perdeu; falhas do Gemini;
+   token (dias até o acesso vencer). Se algum risco ficou alto, diga o que propõe, sem aplicar.
+6. **Experimentos para amanhã**: até 3, cada um com hipótese, como medir e esforço
    (pequeno/médio/grande). Ex.: "Reels com 1ª frase em texto grande: mais alcance que o post de foto
    da mesma editoria? Medir alcance em 24 h."
 
