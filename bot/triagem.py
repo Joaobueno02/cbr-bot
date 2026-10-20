@@ -10,7 +10,10 @@ o filtro grosso que o Claude fazia lendo a pauta.md inteira (~25 mil tokens por 
     da página: trabalho, salário, SUS, fome, direita, investigação...);
   - tira o que já publicamos (registro/posts.jsonl) e junta manchetes do mesmo assunto.
 
-Grava radar/triagem.json (curto): `candidatos` (até 15, ordenados), `obrigatorios` (posts da BFC,
+Depois das regras, o Gemini (bot/triagem_ia.py, API grátis) dá a nota editorial I/V/P a cada candidato.
+Para os 3 melhores, já separa os veículos independentes do radar (pré-apuração, sem IA).
+
+Grava radar/triagem.json (curto): `candidatos` (até 20, ordenados), `obrigatorios` (posts da BFC,
 Luz e movimentos de hoje), `descartados_mais_quentes` (para o Claude conferir se a regra errou) e
 `novos_3h` (quantos candidatos entraram na pauta nas últimas 3 h). A nota editorial final (impacto,
 viralização, profundidade, formato) continua com o Claude, só sobre esses itens.
@@ -27,6 +30,7 @@ from pathlib import Path
 
 PASTA = Path("radar")
 SAIDA = PASTA / "triagem.json"
+ESTADO = PASTA / "triagem_estado.json"
 POSTS = Path("registro/posts.jsonl")
 NOTA_MINIMA = 4  # calor + lente + editoria (+1 se a BFC/Luz/movimento deu)
 MAX_CANDIDATOS = 20
@@ -67,7 +71,8 @@ FORA = {
 # nome de político ou termo eleitoral salva a manchete da lista FORA (ex.: deputado detido, morte de candidato)
 SALVA_FORA = ["lula", "flavio", "bolsonaro", "deputado", "deputada", "senador", "senadora", "ministro", "ministra",
               "candidato", "candidata", "prefeito", "governador", "pl ", "stf", "policia federal", "pf ", "vorcaro",
-              "master", "tse"]
+              "master", "tse", "policia*", "policial", "operacao", "chacina", "indigena*", "quilombola*",
+              "trabalhador*", "ice", "sem terra", "mst", "repressa*", "militar*", "milicia*"]
 
 EDITORIAS = {
     "eleicoes": ["eleica*", "eleitora*", "segundo turno", "2o turno", "debate", "tse", "candidat*", "campanha",
@@ -103,7 +108,7 @@ OUTROS_PAISES = ["israel", "eua", "estados unidos", "russia", "ucrania", "china"
 # assunto estrangeiro só entra se for América Latina (tema do radar) ou citar o Brasil
 BRASIL = ["brasil", "brazil", "brasileir*", "lula", "bolsonaro", "flavio", "sao paulo", "rio de janeiro", "brasilia",
           "amazonia", "amazon"]
-ESTRANGEIRO = ["the ", "of ", "and ", " el ", " la ", " los ", " las ", " del ", " por ", " para "]
+ESTRANGEIRO = [" the ", " of ", " and ", " to ", " el ", " la ", " los ", " las ", " del ", " y ", " una "]
 
 LENTE = ["trabalhador*", "salario*", "greve", "direito*", "6x1", "jornada", "aposentad*", "inss", "bolsa familia", "sus",
          "fome", "cesta basica", "moradia", "despejo*", "privatiza*", "bilionari*", "super ricos", "isencao", "taxacao",
@@ -112,7 +117,10 @@ LENTE = ["trabalhador*", "salario*", "greve", "direito*", "6x1", "jornada", "apo
          "desmatamento", "incendio*", "queimada*", "ice", "trump", "milei", "imperialis*", "repressa*", "protesto*",
          "racismo", "feminicidio", "violencia policial", "chacina", "agrotoxic*", "vorcaro", "master", "propina",
          "orcamento", "educacao publica", "universidade publica", "piso", "precariza*", "uber", "aplicativo*",
-         "lucro*", "banco*", "juros", "aluguel", "tarifa zero", "passe livre", "transporte publico"]
+         "lucro*", "banco*", "juros", "aluguel", "tarifa zero", "passe livre", "transporte publico", "merenda",
+         "fundeb", "auxilio*", "incentivo", "bolsas", "piso salarial", "vagas", "cotas", "reajuste", "dispara",
+         "mais caro", "mais cara", "encarece", "rombo", "isencao", "conta de luz", "saneamento", "favela*",
+         "periferia*", "violencia policial", "operacao policial", "letalidade"]
 
 STOP = set("a o os as de da do das dos e em no na nos nas um uma para por com que se ao aos sobre apos diz "
            "the of and to in on for la el los las del y en".split())
@@ -179,7 +187,7 @@ def avaliar(it: dict, publicados) -> dict:
     for pid, ptok in publicados:
         if parecido(tok, ptok, 0.6):
             return {"ok": False, "motivo": f"repetido ({pid})", "editoria": editoria, "nota": nota}
-    if nota < NOTA_MINIMA and not par:
+    if nota < (NOTA_MINIMA - 1 if lente_hits else NOTA_MINIMA) and not par:
         return {"ok": False, "motivo": f"fraco (calor {calor}, lente {lente})", "editoria": editoria, "nota": nota}
     return {"ok": True, "editoria": editoria, "nota": nota, "calor": calor, "lente": lente_hits[:4]}
 
@@ -194,6 +202,11 @@ def main() -> int:
                                     ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
         return 0
     publicados = ja_publicados()
+    try:
+        estado = json.loads(ESTADO.read_text(encoding="utf-8"))
+    except Exception:
+        estado = {}
+    vistos = estado.setdefault("vistos", {})  # assunto -> [quando entrou, veículos naquele momento]
 
     # junta o mesmo assunto que aparece em várias seções
     por_chave: dict[str, dict] = {}
@@ -216,8 +229,12 @@ def main() -> int:
             p = it["parceiro"]
             obrigatorios.append(dict(base, parceiro={k: p.get(k) for k in ("perfil", "quando", "legenda", "link")},
                                      triagem=("candidato" if r["ok"] else r["motivo"])))
+        chave = it.get("sig") or base["link"] or base["manchete"]
+        v0 = vistos.setdefault(chave, [iso, base["veiculos"]])[1]
+        base["esquentou"] = base["veiculos"] >= max(v0 + 3, 2 * v0)
         if r["ok"]:
-            candidatos.append(dict(base, lente=r["lente"], _tok=tokens(it.get("manchete") or "")))
+            candidatos.append(dict(base, chave=chave, sig=it.get("sig"), parceiro=it.get("parceiro"),
+                                   lente=r["lente"], _tok=tokens(it.get("manchete") or "")))
         else:
             descartes.append(dict(base, motivo=r["motivo"]))
 
@@ -233,23 +250,78 @@ def main() -> int:
     for c in unicos:
         c.pop("_tok", None)
 
+    # 2ª camada: nota editorial do Gemini (grátis); sem chave ou com erro, fica só a regra
+    import triagem_ia
+    titulos = [f"{pid}" for pid, _ in publicados]
+    try:
+        titulos = [json.loads(l).get("titulo", "").replace("*", "")
+                   for l in POSTS.read_text(encoding="utf-8").splitlines()[-40:] if l.strip()]
+    except Exception:
+        pass
+    info_ia = triagem_ia.avaliar(unicos, titulos, estado, iso)
+
+    def ordem(c):
+        ia = c.get("ia")
+        fora = ia and (ia["editoria"] == "fora" or ia["repetido"])
+        return (bool(fora), -(ia["soma"] if ia else c["nota"] - 1), -(ia["P"] if ia else 0), -c["veiculos_3h"],
+                -c["veiculos"])
+    unicos.sort(key=ordem)
+    rebaixados = [c for c in unicos if c.get("ia") and (c["ia"]["editoria"] == "fora" or c["ia"]["repetido"]
+                                                         or c["ia"]["soma"] < 4)]
+    unicos = [c for c in unicos if c not in rebaixados]
+
+    # pré-apuração (sem IA): veículos independentes do radar para os 3 melhores
+    pre = []
+    try:
+        grupos = {g["sig"]: g for g in json.loads((PASTA / "atual.json").read_text(encoding="utf-8"))["grupos"]}
+        agreg = ("msn", "yahoo", "terra", "bol", "uol notícias", "istoé dinheiro", "google")
+        for c in unicos[:3]:
+            g = grupos.get(c.get("sig"))
+            if not g:
+                continue
+            versoes, ja = [], set()
+            for l in g.get("links", []):
+                v = l["veiculo"]
+                if v in ja or any(x in v.lower() for x in agreg):
+                    continue
+                ja.add(v)
+                versoes.append({"veiculo": v, "titulo": l["titulo"], "link": l["link"]})
+            pre.append({"manchete": c["manchete"], "veiculos_independentes": versoes[:10]})
+    except Exception:
+        pass
+    (PASTA / "pre_apuracao.json").write_text(json.dumps({"quando": iso, "assuntos": pre}, ensure_ascii=False,
+                                                        indent=1) + "\n", encoding="utf-8")
+    for c in unicos + rebaixados:
+        for k in ("chave", "sig", "parceiro"):
+            c.pop(k, None)
+
     corte3h = (agora - timedelta(hours=3)).strftime("%Y-%m-%dT%H:%M:%SZ")
     quentes = sorted([d for d in descartes if not d["motivo"].startswith("fraco")], key=lambda d: -d["veiculos"])
     resultado = {
-        "quando": iso, "pauta_quando": pauta.get("quando"), "ok": True, "erro": None, "metodo": "regras",
-        "regra": "Filtro grosso por regras (sem IA). Candidatos: dentro das editorias, não repetidos, nota = calor "
-                 "(veículos) + lente (palavras da linha da página) >= 3. A nota editorial (I, V, P, formato) é do "
-                 "Claude. Confira os descartes quentes: a regra erra. Obrigatórios = BFC/Luz/movimentos de hoje.",
+        "quando": iso, "pauta_quando": pauta.get("quando"), "ok": True, "erro": None,
+        "metodo": "regras + gemini" if info_ia["ok"] else "regras", "ia": info_ia,
+        "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em "
+                 "`ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou "
+                 "fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. "
+                 "`esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. "
+                 "Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
         "total_assuntos": len(por_chave),
         "novos_3h": sum(1 for c in unicos[:MAX_CANDIDATOS] if (c.get("na_pauta_desde") or "") >= corte3h),
+        "esquentaram": sum(1 for c in unicos[:MAX_CANDIDATOS] if c.get("esquentou")),
         "candidatos": unicos[:MAX_CANDIDATOS],
+        "rebaixados": [{k: c.get(k) for k in ("manchete", "veiculos", "veiculos_3h", "na_pauta_desde", "esquentou", "ia")}
+                       for c in rebaixados[:10]],
         "obrigatorios": obrigatorios,
         "descartados_mais_quentes": [{k: d[k] for k in ("manchete", "veiculos", "veiculos_3h", "motivo")}
                                      for d in quentes[:10]],
     }
     SAIDA.write_text(json.dumps(resultado, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    lim = (agora - timedelta(hours=30)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    estado["vistos"] = {k: v for k, v in vistos.items() if v[0] >= lim}
+    estado["ia"] = {k: v for k, v in estado.get("ia", {}).items() if v.get("quando", "") >= lim}
+    ESTADO.write_text(json.dumps(estado, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     print(f"triagem: {len(por_chave)} assuntos, {len(unicos)} candidatos ({resultado['novos_3h']} novos em 3 h), "
-          f"{len(obrigatorios)} obrigatórios")
+          f"{len(obrigatorios)} obrigatórios; IA: {info_ia['ok']} {info_ia.get('erro') or ''}")
     return 0
 
 

@@ -37,27 +37,34 @@ O dono é o João. Ele acompanha cada post pela notificação e pede para parar 
    `encerrado`. Ao achar um evento futuro relevante durante a pesquisa, acrescente na lista
    (evento, quando em UTC, editoria, onde_checar, obs). Este arquivo você pode editar.
 2. Pesquise as notícias **da janela desta rodada**: desde a rodada anterior até agora (ex.: na
-   rodada das 12h, o que saiu entre 9h e 12h; na das 7h, desde as 23h da véspera). Filtre o que
+   rodada das 11h, o que saiu entre 10h e 11h; na das 7h, desde as 23h da véspera). Filtre o que
    é mais importante ou merece visibilidade **com a lente de uma página socialista** (seção 2) e
-   publique ainda nesta rodada. **Comece pela triagem** (regra do João, 19/10/2026, para gastar menos):
-   - **`radar/triagem.json` primeiro** (Read, é curto). O `bot/triagem.py`, no radar.yml, já passou
-     **regras sem IA** em todos os itens da pauta (A, A2, B, C e D): tirou o que está fora dos eixos
-     (esporte, entretenimento, crime comum, tragédia, internacional sem Brasil nem América Latina), o que
-     já publicamos, juntou manchetes do mesmo assunto e deu uma nota grossa (calor + lente + editoria).
-     Traz `candidatos` (até 20, ordenados), `obrigatorios` (posts da BFC/Luz/movimentos de hoje),
-     `novos_3h` e `descartados_mais_quentes` (os descartes com mais veículos e o motivo). Regra erra:
-     **a nota editorial (I, V, P, formato) é sua**, sobre os candidatos; confira os descartes quentes e
-     resgate o que for pauta nossa (registre no resumo, para o dossiê propor ajuste nas regras);
-   - **Rodada curta**: se `ok` for true, nenhum candidato ou obrigatório tem `na_pauta_desde` depois
-     da rodada anterior, nada nos descartes quentes merece resgate, e não há pendência (fila,
-     acompanhamento, calendário das 18h, dossiê das 23h, relatório de segunda), **encerre a rodada**
-     sem ler a pauta.md nem buscar na web. O resumo da rodada diz "triagem sem candidatos novos";
-   - com candidatos, pontue I/V/P só sobre eles e aprofunde os melhores com `bot/cruzar.py`,
-     `radar/atual.json` e a busca na web. **Não leia a pauta.md inteira** quando a triagem está ok;
-     o item de A, A2 e B "avaliado nesta rodada" passa a ser o que a triagem filtrou mais a sua nota;
+   publique ainda nesta rodada. **Comece pela triagem** (regra do João, 20/10/2026, para gastar menos):
+   - **`radar/triagem.json` primeiro** (Read, é curto). No radar.yml, o `bot/triagem.py` passa em todos os
+     itens da pauta (A, A2, B, C e D): **regras** (sem IA) tiram o que está fora dos eixos (esporte,
+     entretenimento, crime comum, tragédia, internacional sem Brasil nem América Latina) e o que já
+     publicamos e juntam manchetes do mesmo assunto; depois o **Gemini** (API grátis) dá a nota I/V/P,
+     editoria, formato e risco a cada candidato (campo `ia`). Traz `candidatos` (ordenados pela nota do
+     Gemini), `rebaixados` (o Gemini achou fraco, fora ou repetido), `descartados_mais_quentes` (a regra
+     tirou), `obrigatorios` (BFC/Luz/movimentos de hoje), `esquentou`/`esquentaram` (assunto que ganhou
+     muitos veículos desde que entrou) e `ia.ok`/`ia.erro`. **A nota final é sua**: o Gemini só leu a
+     manchete e erra; confira os rebaixados e os descartes quentes e resgate o que for pauta nossa
+     (registre no resumo, para o dossiê propor ajuste);
+   - **`radar/pre_apuracao.json`**: os veículos independentes do radar para os 3 primeiros candidatos.
+     Comece a apuração por ele (ainda abra as matérias e preencha `apuracao`; `bot/cruzar.py` continua
+     valendo para os outros);
+   - **Rodada curta**: se `ok` for true, nenhum candidato ou obrigatório tem `na_pauta_desde` depois da
+     rodada anterior, nenhum `esquentou`, nada nos rebaixados e descartes quentes merece resgate, e não há
+     pendência (fila, acompanhamento, calendário das 18h, dossiê das 23h, relatório de segunda), **encerre
+     a rodada** sem ler a pauta.md nem buscar na web. O resumo da rodada diz "triagem sem candidatos novos";
+   - com candidatos, trabalhe só sobre eles: confirme a nota, aprofunde os melhores com a pré-apuração,
+     `bot/cruzar.py`, `radar/atual.json` e a busca na web. **Não leia a pauta.md inteira** quando a triagem
+     está ok; o item de A, A2 e B "avaliado nesta rodada" passa a ser o que a triagem avaliou mais a sua nota;
    - se `ok` for false ou o arquivo tiver mais de 70 min, siga o caminho antigo abaixo, a partir da
-     pauta.md, e cite o erro no resumo.
-   **Rodadas** (19/10/2026): 7h, 9h, 12h, 15h, 18h, 20h e 23h. "Rodada anterior" é a última dessa lista.
+     pauta.md, e cite o erro no resumo. Com `ia.ok` false (sem chave, cota), a triagem vale só com as
+     regras: dê você a nota a todos os candidatos;
+   - **Boletim de notícias e tendências do dossiê** saem pelo ChatGPT do João (tarefas agendadas dele,
+     lendo este radar público). Não é tarefa da rodada.
    **Caminho antigo (só sem triagem)**:
    - **`radar/pauta.md` primeiro, lido INTEIRO com a ferramenta Read** (nunca por WebFetch, que
      resume e perde itens). Atualizado às :20 e :50. Tem três partes: (A) tudo que a BFC e a Luz

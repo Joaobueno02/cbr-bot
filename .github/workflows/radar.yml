@@ -26,14 +26,19 @@ jobs:
         run: pip install feedparser requests pillow
       - name: Radar de manchetes
         run: python bot/radar.py
-      # triagem por regras (sem IA, sem custo): filtra a pauta e grava radar/triagem.json, que a rodada
-      # do Claude lê primeiro. Com erro, a rodada usa a pauta.md como antes; o radar não cai.
-      - name: Triagem da pauta (regras)
+      # triagem: regras (sem IA) + nota do Gemini (API grátis do AI Studio) e pré-apuração dos 3 melhores.
+      # Grava radar/triagem.json, que a rodada do Claude lê primeiro. Sem a chave, fica só a regra;
+      # com erro, a rodada usa a pauta.md como antes; o radar não cai.
+      - name: Triagem da pauta (regras + Gemini)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
         run: python bot/triagem.py || echo "triagem falhou; a rodada usa a pauta.md"
       # o feed da BFC e da Luz (radar/parceiros.json) agora é lido a cada 20 min pelo alertas.yml
       - name: Trava anti-vazamento e commit
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           git config user.name "cbr-bot"
           git config user.email "cbr-bot@users.noreply.github.com"
