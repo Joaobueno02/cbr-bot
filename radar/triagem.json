@@ -1,6 +1,6 @@
 {
- "quando": "2026-10-20T18:45:53Z",
- "pauta_quando": "2026-10-20T18:45:49Z",
+ "quando": "2026-10-20T19:23:11Z",
+ "pauta_quando": "2026-10-20T19:23:08Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,56 +9,27 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 12,
-  "falhas_antes": "gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in",
-  "pedidos_hoje": 21
+  "avaliados_agora": 16,
+  "falhas_antes": null,
+  "pedidos_hoje": 22
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 171,
+ "total_assuntos": 178,
  "novos_3h": 17,
- "esquentaram": 2,
+ "esquentaram": 3,
  "candidatos": [
-  {
-   "manchete": "Lula anuncia ofício ao TSE abrindo sigilos dele e de 5 filhos e exigindo o mesmo de Flávio Bolsonaro",
-   "secoes": [
-    "A",
-    "B"
-   ],
-   "veiculos": 28,
-   "veiculos_3h": 20,
-   "na_pauta_desde": "2026-10-20T17:06:33Z",
-   "link": "https://www.gazetadopovo.com.br/eleicoes/2026/lula-anuncia-autorizacao-ao-tse-para-quebra-de-sigilos-dele-e-dos-filhos-e-desafia-flavio/",
-   "editoria": "eleicoes",
-   "nota": 7,
-   "esquentou": true,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ],
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 3,
-    "V": 3,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Lula desafia adversário abrindo sigilos e exigindo o mesmo.",
-    "soma": 6
-   }
-  },
   {
    "manchete": "Coordenadora econômica de Flávio propõe transição de dois anos para saída do Bolsa Família",
    "secoes": [
     "B"
    ],
-   "veiculos": 30,
-   "veiculos_3h": 7,
+   "veiculos": 95,
+   "veiculos_3h": 49,
    "na_pauta_desde": "2026-10-20T18:07:19Z",
    "link": "https://www.gazetadopovo.com.br/eleicoes/2026/coordenadora-economica-de-flavio-propoe-transicao-de-dois-anos-para-saida-do-bolsa-familia/",
    "editoria": "economia",
    "nota": 6,
-   "esquentou": false,
+   "esquentou": true,
    "lente": [
     "bolsa familia",
     "flavio"
@@ -71,55 +42,27 @@
     "formato": "reels",
     "repetido": false,
     "risco": "",
-    "motivo": "Inquérito contra Flávio mobiliza redes, mas já há posts anteriores sobre investigações.",
+    "motivo": "Proposta de cortar Bolsa Família atinge diretamente a base trabalhadora.",
     "soma": 6
    }
   },
   {
-   "manchete": "Último debate do 2º turno reunirá Lula e Flávio Bolsonaro na TV Globo; veja quando será",
+   "manchete": "Goiânia tem cesta básica de R$ 808 e trabalhador gasta mais da metade do salário com comida",
    "secoes": [
-    "B"
+    "C-pesquisa",
+    "D-terra"
    ],
-   "veiculos": 36,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-10-20T18:45:49Z",
-   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/10/confira-as-regras-do-debate-entre-lula-e-flavio-bolsonaro-na-globo-na-sexta-feira-23.shtml",
-   "editoria": "eleicoes",
-   "nota": 7,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ],
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 3,
-    "V": 3,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Último debate presidencial define rumos da eleição e atrai enorme audiência.",
-    "soma": 6
-   }
-  },
-  {
-   "manchete": "Brasil: Lula adelanta el pago del subsidio Bolsa Familia en la recta final al balotaje y estalla una polémica con Bolsonaro",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 12,
+   "veiculos": 2,
    "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-20T18:07:19Z",
-   "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNWjdSY1MzSkFMT0hUREFRdjFuazdEaHdUbUVqTGc0ZkV1dnN1MWpFWFlicS1FZldnMzVqRFhCX1JmNEFtWnl1QjY2MlU3ZTJWSUZFUEFVa2IxMVhVZ2V2Q0UwMEtheXM5YmhMdEF3UXN5S1Q1bHZnOFZ1bmU4Vjc4ZWVfUEZ5UDFwWDlwb3k1Rjc0dEY5VVR3VHdya1owVGdYNFFETlJSM3JVcmF3N2ZMSVFHSEs5X3czR1laM1o0QmlydTV5NWptM21JX0V5TzJ4MFZ2RVdaTjBCTUk?oc=5",
-   "editoria": "politica",
-   "nota": 7,
+   "na_pauta_desde": "2026-10-20T19:23:08Z",
+   "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPRVhrdDhnR2g4b1dkUUg0VEMtTU5UcEpqcXJhM2RSejUtb25CbWlzTTdCdmZOZWR2YXgzUm1SX1FVZ3lpamhEQmhzdUl1OGR5SUc0U3pQa2hSZmYtWGl1cklpVGZGaWlQS1UzUDY4OFAtcC1zVF9FcHFLbWVZTUVXeFBXT0o1ZWpqWUFDa0tWOTVtZ3F6Vkh5VV9EeFoxcjdHMmdGczRiSS00OVBaQ0FiRUlxU2c0RmhyZ3Y0TF81eUdUUTI4WjhlclVwYlFkT3JJTkE?oc=5",
+   "editoria": "economia",
+   "nota": 6,
    "esquentou": false,
    "lente": [
-    "bolsa familia",
-    "bolsonar",
-    "flavio",
-    "inquerito"
+    "trabalhador",
+    "salario",
+    "cesta basica"
    ],
    "ia": {
     "editoria": "economia",
@@ -129,7 +72,63 @@
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Antecipação do Bolsa Família gera polêmica eleitoral e afeta beneficiários.",
+    "motivo": "Cesta básica cara consome mais da metade do salário em Goiânia.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "PoderData: Flávio retoma liderança com 52% dos votos válidos; Lula tem 48%",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 59,
+   "veiculos_3h": 18,
+   "na_pauta_desde": "2026-10-20T19:23:08Z",
+   "link": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-presidente-outubro-2026-segundo-turno/",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "flavio"
+   ],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 3,
+    "V": 3,
+    "P": 1,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Pesquisa PoderData mostra reviravolta na liderança da disputa presidencial.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Institutos divulgam pesquisas diárias antes do segundo turno entre Lula e Flávio Bolsonaro",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 47,
+   "veiculos_3h": 14,
+   "na_pauta_desde": "2026-10-20T19:23:08Z",
+   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/10/incredula-com-forca-de-flavio-eleitora-de-lula-diz-que-democracia-esta-em-jogo.shtml",
+   "editoria": "eleicoes",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio"
+   ],
+   "outras_manchetes": 1,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 3,
+    "V": 3,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Pesquisas diárias mostram acirramento na reta final da eleição presidencial.",
     "soma": 6
    }
   },
@@ -139,10 +138,10 @@
     "B",
     "D-famosos"
    ],
-   "veiculos": 29,
-   "veiculos_3h": 8,
+   "veiculos": 35,
+   "veiculos_3h": 11,
    "na_pauta_desde": "2026-10-20T18:45:49Z",
-   "link": "https://www.gazetadopovo.com.br/eleicoes/2026/convergencia-brasil-declara-apoio-a-flavio-bolsonaro-e-cobra-mudanca-na-politica-fiscal/",
+   "link": "https://www.gazetadopovo.com.br/eleicoes/2026/parana-2026/rafael-greca-sinaliza-apoio-a-lula-e-diverge-de-aliados-politicos-no-parana-no-2o-turno/",
    "editoria": "eleicoes",
    "nota": 7,
    "esquentou": false,
@@ -160,6 +159,33 @@
     "risco": "",
     "motivo": "Famoso declarando voto em candidato polariza muito e viraliza rápido.",
     "soma": 6
+   }
+  },
+  {
+   "manchete": "SUS começa a ofertar nove medicamentos para o câncer em estreia de nova política; saiba quais são",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 16,
+   "veiculos_3h": 8,
+   "na_pauta_desde": "2026-10-20T19:23:08Z",
+   "link": "https://redir.folha.com.br/redir/online/equilibrioesaude/rss091/*https://www1.folha.uol.com.br/equilibrioesaude/2026/10/sus-comeca-a-ofertar-nove-medicamentos-para-o-cancer-em-estreia-de-nova-politica-saiba-quais-sao.shtml",
+   "editoria": "saude",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "sus"
+   ],
+   "ia": {
+    "editoria": "saude",
+    "I": 3,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Ampliação de remédios para câncer no SUS melhora atendimento público.",
+    "soma": 5
    }
   },
   {
@@ -192,40 +218,12 @@
    }
   },
   {
-   "manchete": "Flávio Bolsonaro diz que vai retomar benefício fiscal a eventos criado na pandemia e criticado pelo governo Lula",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 10,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-10-20T18:45:49Z",
-   "link": "https://www1.folha.uol.com.br/mercado/2026/10/flavio-bolsonaro-diz-que-vai-retomar-beneficio-fiscal-a-eventos-criado-na-pandemia-e-criticado-pelo-governo-lula.shtml",
-   "editoria": "economia",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Proposta de benefício fiscal opõe projetos econômicos dos candidatos.",
-    "soma": 4
-   }
-  },
-  {
    "manchete": "Master: PGR diz não ver abuso de autoridade de Mendonça apontado por Moraes em pedido de investigação",
    "secoes": [
     "B"
    ],
    "veiculos": 22,
-   "veiculos_3h": 4,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-10-20T04:31:19Z",
    "link": "https://g1.globo.com/politica/noticia/2026/10/19/caso-master-pgr-diz-nao-ver-abuso-de-autoridade-de-mendonca-em-relatorio-de-inteligencia.ghtml",
    "editoria": "politica",
@@ -247,47 +245,19 @@
    }
   },
   {
-   "manchete": "PF mira ex-servidor do STJ suspeito de vazar dados a advogado ligado a Flávio Bolsonaro",
+   "manchete": "TSE dá 24 horas para Meta comprovar tratamento igualitário a Lula e Flávio Bolsonaro",
    "secoes": [
     "B"
    ],
-   "veiculos": 24,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-10-20T18:45:49Z",
-   "link": "https://www.gazetadopovo.com.br/republica/pf-ex-servidor-stj-suspeito-vazar-dados-advogado-flavio/",
-   "editoria": "politica",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Investigação da PF envolvendo aliados políticos atinge bastidores da eleição.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Flávio trabalhista, Lula punitivista: o segundo turno da conveniência",
-   "secoes": [
-    "A",
-    "B"
-   ],
-   "veiculos": 235,
-   "veiculos_3h": 159,
-   "na_pauta_desde": "2026-10-20T18:07:19Z",
-   "link": "https://www.gazetadopovo.com.br/vozes/instituto-sivis/flavio-trabalhista-lula-punitivista-o-segundo-turno-da-conveniencia/",
+   "veiculos": 46,
+   "veiculos_3h": 16,
+   "na_pauta_desde": "2026-10-20T19:23:08Z",
+   "link": "https://www.congressoemfoco.com.br/noticia/123415/meta-responde-ao-tse-e-nega-tratamento-desigual-entre-lula-e-flavio",
    "editoria": "eleicoes",
    "nota": 6,
    "esquentou": false,
    "lente": [
+    "bolsonar",
     "flavio"
    ],
    "ia": {
@@ -298,7 +268,63 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Debate sobre estratégias de campanha e alianças no segundo turno.",
+    "motivo": "TSE cobra imparcialidade da Meta em caso envolvendo Lula e Flávio.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Mãe de Luciano Huck declara voto em Lula em apoio à filho gay",
+   "secoes": [
+    "B",
+    "D-famosos"
+   ],
+   "veiculos": 13,
+   "veiculos_3h": 12,
+   "na_pauta_desde": "2026-10-20T18:45:49Z",
+   "link": "https://www.diariodocentrodomundo.com.br/video-mae-de-luciano-huck-declara-voto-em-lula-flavio-bolsonaro-e-retrocesso/",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Declaração de voto de figura pública repercute na reta final.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "GloboNews Debate recebe coordenadores das campanhas de Lula e Flávio Bolsonaro nesta segunda-feira",
+   "secoes": [
+    "A",
+    "A",
+    "B"
+   ],
+   "veiculos": 19,
+   "veiculos_3h": 8,
+   "na_pauta_desde": "2026-10-20T18:45:49Z",
+   "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/10/19/globonews-debate-recebe-coordenadores-das-campanhas-de-lula-e-flavio-bolsonaro.ghtml",
+   "editoria": "eleicoes",
+   "nota": 7,
+   "esquentou": true,
+   "lente": [
+    "bolsonar",
+    "flavio"
+   ],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Filho de Lula abre sigilos voluntariamente em meio à disputa eleitoral.",
     "soma": 4
    }
   },
@@ -308,8 +334,8 @@
     "B",
     "D-america_latina"
    ],
-   "veiculos": 33,
-   "veiculos_3h": 11,
+   "veiculos": 32,
+   "veiculos_3h": 6,
    "na_pauta_desde": "2026-10-20T11:09:18Z",
    "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/10/19/mexico-suspende-importacao-de-frango-do-brasil-apos-foco-da-doenca-de-newcastle-em-sc.ghtml",
    "editoria": "america_latina",
@@ -329,39 +355,12 @@
    }
   },
   {
-   "manchete": "Mãe de Luciano Huck declara voto em Lula em apoio à filho gay",
-   "secoes": [
-    "B",
-    "C-nacional",
-    "D-famosos"
-   ],
-   "veiculos": 7,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-10-20T18:45:49Z",
-   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQOU0wWW9GV0ZSOWlnQ3hzX2FvYjF6MFVDNnptbTlqb0tubU1tbWN3ZkhwX0pMRFAzbHRzWDh5S01VdFplRTBwbWhxYzY5eDAyQm5Oa0JaUmFqanZYT3J6cS1VeHlLSV9qNlk2eHNYR0pxRjlVOHllcVVEV0wwczluT1oyZHl1b0ZGMXhjYXhpVWhma2FydG8yUGJNNFgwa3V5ZklrUi1QZTc0dF9PV0hXb21LVQ?oc=5",
-   "editoria": "eleicoes",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Declaração de voto de figura pública repercute na reta final.",
-    "soma": 4
-   }
-  },
-  {
    "manchete": "Lula and Bolsonaro Clash in Debate a Week Before Brazil Presidential Runoff",
    "secoes": [
     "B"
    ],
-   "veiculos": 18,
-   "veiculos_3h": 5,
+   "veiculos": 19,
+   "veiculos_3h": 6,
    "na_pauta_desde": "2026-10-20T18:07:19Z",
    "link": "https://www.theguardian.com/world/2026/oct/20/flavio-bolsonaro-corrupto-viral-meme-brazil-election-runoff",
    "editoria": "eleicoes",
@@ -383,17 +382,46 @@
    }
   },
   {
+   "manchete": "Ex-secretário do STJ é investigado por suposto vazamento de decisões para amigo de Flávio Bolsonaro",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-20T19:23:08Z",
+   "link": "https://www.diariodocentrodomundo.com.br/pf-investiga-se-advogado-amigo-de-flavio-bolsonaro-usou-mae-como-laranja/",
+   "editoria": "politica",
+   "nota": 8,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio",
+    "pl",
+    "investigad"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Envolve aliado de Flávio Bolsonaro em esquema de depósitos suspeitos.",
+    "soma": 4
+   }
+  },
+  {
    "manchete": "Randolfe denuncia Flávio Bolsonaro no Conselho de Ética do Senado por pedido de R$ 134 milhões a Vorcaro",
    "secoes": [
-    "B",
     "C-nacional"
    ],
    "veiculos": 5,
-   "veiculos_3h": 5,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-10-20T18:07:19Z",
    "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/colunas/painel/2026/10/randolfe-denuncia-flavio-bolsonaro-no-conselho-de-etica-do-senado-por-pedido-de-r-134-milhoes-a-vorcaro.shtml",
    "editoria": "politica",
-   "nota": 8,
+   "nota": 7,
    "esquentou": false,
    "lente": [
     "bolsonar",
@@ -413,145 +441,103 @@
    }
   },
   {
-   "manchete": "Petistas assinam CPI sobre Lulinha e desafiam bolsonaristas a assinarem comissão que mira Flávio e Vorcaro",
+   "manchete": "Indígenas, quilombolas e pessoas trans têm seleção especial para entrar na UFG em 2027",
    "secoes": [
-    "C-nacional"
+    "D-terra"
    ],
    "veiculos": 3,
    "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-20T17:06:33Z",
-   "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxOYmNpcGhWOGNnYmpHYlQ1eEtuMWtTamtWeXQ3NHpmT2pCMjZzWUdBenI4Qlp2N3ltZDBXTnlvWXBoVFdpd0stdWZNclBpTjU3cXZfYzdqbXJKTG91SlBKSXItTW9tN1JrbW4zWnc0T0pmSjg5SWcwbWNlTE1HSXluMXlSWU84ZXhvTm5BTEhGcXJGdXRlMW1YSFU4ekVyRGlna3hBNmVoQTd0RGVKWnNoNlc3MjBueHVwTDNSNVBpMTgtY0ZrR1dncDVfWXFhNU1HQmpmV0ZVVENxN19LQjBBc0JGWUJEQVZFbHd5c0VrYWc1eVF3MzdneXFGX3XSAYsCQVVfeXFMUHNnUmFQYVpTS0tCd0JaeFBGRlMxQUVuX0Q1OW5QTWo0b1l1b0tLdDQxZFJuSDZFaEhULXVpWXc5cDJVb1YxcjJscFB6VHN6Y0VHbjNVbmhLSXBXb25CRGk5M0dQZTh4MXFfVGhPOTRLaEVUYWZWQ0xwSVZaVWVmUkhvd0FxSHBZZ0paZjVockFrd2treUxFaTJweGtLc2pBWlk0WU1DeWRVV1JUVWdqcTBybS1ZbXRmN0IxcFB3TUdxY2lUemVfanFSUW1GeUUwWGlwNkd1X0RKZWxUbFNiRUsyOHFJX1VpS1laYWplN2MteEVTY0JzRW5GbUNHUGpTS3FVRU5wc0k5c2VJ?oc=5",
-   "editoria": "politica",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio",
-    "vorcaro"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Disputa cruzada de CPIs entre petistas e bolsonaristas.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "GloboNews Debate recebe coordenadores das campanhas de Lula e Flávio Bolsonaro nesta segunda-feira",
-   "secoes": [
-    "A",
-    "A"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-20T18:45:49Z",
-   "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/10/19/globonews-debate-recebe-coordenadores-das-campanhas-de-lula-e-flavio-bolsonaro.ghtml",
-   "editoria": "eleicoes",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ],
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Abertura voluntária de sigilos mexe com a narrativa de campanha.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Flávio promete acabar com \"entraves ambientais por razões ideológicas\"",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-20T14:10:05Z",
-   "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPb0NNZU43ZjVIYkxnNkd5Z3BlMnB0OW1LRjJvN2ROTVRBNmwwRGV3dWFBNjNCQV92c3BoUHM4OFhUcEtScGRrQnVQelNWSkRobzRBRFdla2tDUFlvdWo2dEpCOFJKUE56bDZZTEJxeGQyR19uaDl3cGdTVFNXTVI5NF9OYnA0MFNyWGNaREdpY0RzM1pUeDZpOTdEejlJQWtxMFpaX0ZYckF6VnAySTFLcUFrLTZNcVFhMmI1b1Z4SmQ3TC1oVHBCSmVHdHV4N21VT21MSnp2ck1MbHJoRE91MDNOT1c4c3RuYVBV?oc=5",
-   "editoria": "eleicoes",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio",
-    "pl"
-   ],
-   "ia": {
-    "editoria": "roca",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Promessa de afrouxar leis ambientais atinge interesse da bancada ruralista.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Conab diz que tem sofrido ataques cibernéticos",
-   "secoes": [
-    "B",
-    "C-nacional",
-    "D-terra"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-10-20T17:06:33Z",
-   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNNXB6b1RaX1pGVXR2X2NvdHNjWG9DX0RYZTk0ekFLNEFZc0JZQURFYkgtNU9nQlNvVzlMcGY1VHh2cDNnWVB5eFl5bHBNbURmaGNnVENjdEFNLVEweU1OSUNCVmJ0Rno1Wk82RXg3dnQ2RGQtQ2V0TXZJdWNTeldmTXVKM2JxTVM0WjRMWDk2Zm8?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPcG42SExUM1l6d0pEZXY1VFhjcWhmMHppSzNkTjlGWEUyU3NTYm51ZXhLWTJIQ1ZqU0NxemhkMnFtT1BCZUcwcldBYWtmUTVYdWpBWkEzWmhSejc5dkJMZ2ZjYnVheG1XdXVyOFpvWmJHQXBkRndKRndHWV9KU0szX1dPN0Nfb1VDbU5JNUNyWXRheXVlNzJmVmxPNkVfVDZaNkpCZ05CYVB0MGxOS2ZLUVJ4R3ZkUlM4RWNLTXRnVlhhNGdoQXJjeURhcGFPSGM0a0Rv?oc=5",
    "editoria": "roca",
    "nota": 5,
    "esquentou": false,
+   "lente": [
+    "indigena",
+    "quilombola"
+   ],
+   "ia": {
+    "editoria": "educacao",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Ações afirmativas para ingresso universitário.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Doença de Crohn: exame não invasivo é incluído no SUS",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 6,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-10-20T19:23:08Z",
+   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOZEZJeDlnM3kxVHAwYlhzNzBnRVl5UWJTd0hiMjRBYXJTc21kdTkzVUFpLTVKUU50bkk3MHJLVzI4YjdYamhYU2JSVnROMWgyUHZpaWZVMlBSVFRSNXdUNmZRQnpoRkdYMUJUakRXX05lNEJleHJiTVNKb2tsTGdDSnFUWDdBMEdUQV9YMl81VnVjSmYtZ18zUTZIcEhzX3BFMVJYRFJSazZlVTkzMEVBNDZZRVI1Vzl3QjAyddIBywFBVV95cUxQM3FMOXZRcVpfRFBncDZncGxoMkNhWEtwT2JmUWM3VjZGYU52U1h5cVlVRnZFLU1nNDZ3Y2R5akZQeGN5MVM1bVhsdlVGOHhhZ2EtWWhnalIwem1pdVktbEh5MTV4Tjg4czVXQ0sxbC1TNVhYZjRkcFdsNkNnQUthX0tkREJMY3gyODVzcDBwSUlzRFNtc1ZkTjVjYXBtMU5Na05LakR6aHM5QklqQ185VlhmVWpuRTYzbzYxTFhxZ3pyR3ZxcjkxRU1lUQ?oc=5",
+   "editoria": "saude",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "sus"
+   ]
+  },
+  {
+   "manchete": "Superintendencia de Pensiones inicia proceso contra las siete AFP que apostaron con el fondo E",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 9,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-10-20T17:06:33Z",
+   "link": "https://news.google.com/rss/articles/CBMihwJBVV95cUxOVlFsQTZKOTJhWUdFb280R1UyYmlfaXhaWlZ1dFNzbnBIRERfc0g2Mk5zMFdtLVp2WHB4cldZQUN5cEJiTDZoX2FNam5BU1RIQXBUTll2aGQwX0FMYkR2VkZnMHh2bThFSDJhX2l2elFscV9YbjlldzFqaENJdU1SdTlXQVI1SXN5VWRlYjB4Zmgtb1A5dXZrcWRaSEdqcE4xXzRyMnJnZGE3UW1rbnVsNWVuTHRYeUxuNVc5M1FrZ21JYUh2NFpfSmp6SnpVTk02VXI2SjJpVkNHZHBOWjBGbVE3VVpTbGlVQkdZVHV5c0EyRUpWMVJYekVYSk8wZ21XZWZLcy1fSQ?oc=5",
+   "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": false,
    "lente": []
+  },
+  {
+   "manchete": "Fim da escala 6×1: entenda o que muda na jornada de trabalho e no descanso",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 6,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-10-20T19:23:08Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/10/tudo-o-que-voce-precisa-saber-sobre-o-fim-da-escala-6x1.shtml",
+   "editoria": "economia",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "jornada"
+   ]
   },
   {
    "manchete": "Debate na Band: Dezenas de países noticiaram primeiro confronto entre Flávio e Lula",
    "secoes": [
     "B"
    ],
-   "veiculos": 5,
+   "veiculos": 6,
    "veiculos_3h": 4,
    "na_pauta_desde": "2026-10-20T18:07:19Z",
-   "link": "https://www.rfi.fr/br/brasil/20261020-debate-med%C3%ADocre-como-a-imprensa-francesa-viu-o-primeiro-confronto-entre-lula-e-fl%C3%A1vio-bolsonaro",
+   "link": "https://www.gazetadopovo.com.br/ideias/duelos-debate-tv-flavio-lula/",
    "editoria": "eleicoes",
    "nota": 5,
    "esquentou": false,
    "lente": [
     "flavio"
    ]
-  },
-  {
-   "manchete": "Justiça Americana ordena prisão de Raúl Castro, ex-ditador de Cuba",
-   "secoes": [
-    "B",
-    "D-america_latina"
-   ],
-   "veiculos": 41,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-10-20T18:45:49Z",
-   "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/10/florida-emite-mandado-de-prisao-contra-raul-castro-por-derrubada-de-avioes-em-1996.shtml",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": []
   }
  ],
  "rebaixados": [
   {
    "manchete": "TCU recua e aprova contas do BC sem esperar julgamento do caso Master",
-   "veiculos": 9,
-   "veiculos_3h": 6,
+   "veiculos": 10,
+   "veiculos_3h": 7,
    "na_pauta_desde": "2026-10-20T18:07:19Z",
    "esquentou": false,
    "ia": {
@@ -568,8 +554,8 @@
   },
   {
    "manchete": "'Caótico' e 'tenso': o que imprensa internacional disse sobre debate entre Lula e Flávio Bolsonaro",
-   "veiculos": 12,
-   "veiculos_3h": 1,
+   "veiculos": 4,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-20T18:45:49Z",
    "esquentou": false,
    "ia": {
@@ -581,24 +567,6 @@
     "repetido": false,
     "risco": "",
     "motivo": "Críticas à equipe econômica de candidato exigem contexto técnico.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Ibama aplica R$ 2 milhões em multas por incêndios ilegais na Amazônia",
-   "veiculos": 7,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-10-20T18:07:19Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Multas por crimes ambientais na Amazônia cobram fiscalização.",
     "soma": 3
    }
   },
@@ -621,27 +589,9 @@
    }
   },
   {
-   "manchete": "MP Eleitoral cobra transporte público gratuito e sem redução de linhas no segundo turno no RN",
-   "veiculos": 7,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-10-20T18:45:49Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Garantia de transporte público no dia da eleição protege direito ao voto.",
-    "soma": 3
-   }
-  },
-  {
    "manchete": "Lula insiste en desafiar a Bolsonaro a abrir sus cuentas bancarias y listado de llamadas",
-   "veiculos": 4,
-   "veiculos_3h": 1,
+   "veiculos": 3,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-20T18:45:49Z",
    "esquentou": false,
    "ia": {
@@ -657,10 +607,28 @@
    }
   },
   {
-   "manchete": "Voto no segundo turno também vale como Prova de Vida no INSS — Instituto Nacional do Seguro Social - INSS",
-   "veiculos": 12,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-10-20T18:07:19Z",
+   "manchete": "Milei ironiza Lula após debate com Flávio: A esquerda chora",
+   "veiculos": 55,
+   "veiculos_3h": 10,
+   "na_pauta_desde": "2026-10-20T19:23:08Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 2,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Ataques de Milei a Lula repercutem na reta final da eleição.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Voto no 2º turno vale como prova de vida do INSS; veja como",
+   "veiculos": 17,
+   "veiculos_3h": 8,
+   "na_pauta_desde": "2026-10-20T19:23:08Z",
    "esquentou": false,
    "ia": {
     "editoria": "gerais",
@@ -670,77 +638,96 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Voto no segundo turno valer como prova de vida no INSS.",
+    "motivo": "Mudança prática no voto do segundo turno para aposentados do INSS.",
     "soma": 3
    }
   },
   {
-   "manchete": "PF faz operação contra rede clandestina de importação de eletrônicos em São Paulo — Polícia Federal",
-   "veiculos": 15,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-10-20T16:07:50Z",
+   "manchete": "Sabará terá vagas em concurso do IFMG para professores com salários de até R$ 14,9 mil",
+   "veiculos": 18,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-10-20T19:23:08Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "educacao",
+    "I": 2,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Concurso público para professores com bons salários no IFMG.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Performance de Flávio Bolsonaro em debate revela inspiração em Marçal, Trump e Jair",
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-20T19:23:08Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Opinião sobre inquérito de Flávio Bolsonaro e sua chapa.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "André Janones segue na UTI após arritmia cardíaca e pode ter alta em 48 horas",
+   "veiculos": 29,
+   "veiculos_3h": 14,
+   "na_pauta_desde": "2026-10-20T18:07:19Z",
    "esquentou": false,
    "ia": {
     "editoria": "gerais",
     "I": 1,
     "V": 1,
-    "P": 1,
+    "P": 0,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Operação policial de rotina contra contrabandistas.",
+    "motivo": "Atualização sobre estado de saúde do deputado André Janones.",
     "soma": 2
    }
   },
   {
-   "manchete": "Prudential Financial announces sale of Prudential of Brazil and Prudential of Mexico to CNP Assurances",
-   "veiculos": 12,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-10-20T14:23:08Z",
+   "manchete": "Cláudio Ferreira critica juros altos e prejuízo ao agro ao reforçar apoio a Flávio Bolsonaro: “é a mudança que nós precisamos”",
+   "veiculos": 5,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-20T19:23:08Z",
    "esquentou": false,
    "ia": {
-    "editoria": "economia",
+    "editoria": "roca",
     "I": 1,
     "V": 1,
-    "P": 1,
+    "P": 0,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Venda de empresa no setor financeiro.",
+    "motivo": "Crítica aos juros altos pelo agro em apoio a Flávio.",
     "soma": 2
-   }
-  },
-  {
-   "manchete": "Abertura de sigilo: Lula protocola no TSE autorização e desafia Flávio; siga as notícias do 2º turno",
-   "veiculos": 22,
-   "veiculos_3h": 12,
-   "na_pauta_desde": "2026-10-20T18:07:19Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 3,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": true,
-    "risco": "",
-    "motivo": "Fato repetido sobre quebra de sigilo e desafio no TSE.",
-    "soma": 5
    }
   }
  ],
  "obrigatorios": [
   {
-   "manchete": "Brasil: Lula adelanta el pago del subsidio Bolsa Familia en la recta final al balotaje y estalla una polémica con Bolsonaro",
+   "manchete": "Performance de Flávio Bolsonaro em debate revela inspiração em Marçal, Trump e Jair",
    "secoes": [
+    "A",
     "A"
    ],
-   "veiculos": 12,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-20T18:07:19Z",
-   "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNWjdSY1MzSkFMT0hUREFRdjFuazdEaHdUbUVqTGc0ZkV1dnN1MWpFWFlicS1FZldnMzVqRFhCX1JmNEFtWnl1QjY2MlU3ZTJWSUZFUEFVa2IxMVhVZ2V2Q0UwMEtheXM5YmhMdEF3UXN5S1Q1bHZnOFZ1bmU4Vjc4ZWVfUEZ5UDFwWDlwb3k1Rjc0dEY5VVR3VHdya1owVGdYNFFETlJSM3JVcmF3N2ZMSVFHSEs5X3czR1laM1o0QmlydTV5NWptM21JX0V5TzJ4MFZ2RVdaTjBCTUk?oc=5",
-   "editoria": "politica",
-   "nota": 7,
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-20T19:23:08Z",
+   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/10/performance-de-flavio-bolsonaro-em-debate-revela-inspiracao-em-marcal-trump-e-jair.shtml",
+   "editoria": "eleicoes",
+   "nota": 6,
    "parceiro": {
     "perfil": "luzmanifesto",
     "quando": "2026-10-20T10:54:15Z",
@@ -750,16 +737,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Guia de Programação: a grade dos canais da TV aberta desta terça-feira, dia 20 de outubro de 2026",
+   "manchete": null,
    "secoes": [
     "A"
    ],
-   "veiculos": 4,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-20T18:07:19Z",
-   "link": "https://g1.globo.com/ac/acre/playlist/videos-bom-dia-acre-desta-terca-feira-20-de-outubro-de-2026.ghtml",
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
    "editoria": "gerais",
-   "nota": 2,
+   "nota": 1,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-10-20T18:00:06Z",
@@ -769,14 +756,14 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Semana do Conhecimento chega ao campus de Alegre nesta terça-feira, 20. Veja a programação",
+   "manchete": "Previsão do tempo: temperaturas caem em São Paulo nesta terça, 19; saiba a mínima",
    "secoes": [
     "A"
    ],
    "veiculos": 2,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-20T18:45:49Z",
-   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOR2F5MlFCdHFBclZ5eGpzTk5nRXJyaDN4MnlOekVxMUFqVFZTYWNRUkFsZHlsNzE5WTVGTlllcXdpQVBQd1pIaEd1eFlROWNRWUpHTTVhZWY2UmZxZnVYY0cyZm9XVDlzdVRpaGxMeDM5NGw3NExCY2JVd0ladXlKTGthRDEwRzhvZ3Z4U2RuS2NYWHFsTWxmd0tXUjBaNUZzaV9zSUoxV3dzVUV6aUJiaQ?oc=5",
+   "na_pauta_desde": "2026-10-20T19:23:08Z",
+   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNSmctYnp1UjhMeEpqTEp2RDZKUXliV1VMMEllamdVc0Y1a2ttbVlZWUJlZjZPQV9YTE1xbTdTMG04Z1RsRy1CN3d4endaVVFrWW5OdGtVOFBPZDVKa2Uxd0h1XzRRSnk4T1lmR0lDLXluOXU2d3NiTGw4TzVPVDVWZXNWeDdnUUFWNjFRamxYQ1NrVjlOSkJCbVJkYmY3MDRUalBuLXRkdWhPM0cydGdmWThnMkNDdEcxbUE?oc=5",
    "editoria": "gerais",
    "nota": 2,
    "parceiro": {
@@ -788,14 +775,33 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Fim dos concursos? Coordenadora econômica de Flávio Bolsonaro quer trocar servidores públicos por IA",
+   "manchete": "'Caótico' e 'tenso': o que imprensa internacional disse sobre debate entre Lula e Flávio Bolsonaro",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-20T18:45:49Z",
+   "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/10/caotico-e-tenso-o-que-imprensa-internacional-disse-sobre-debate-entre-lula-e-flavio-bolsonaro.shtml",
+   "editoria": "eleicoes",
+   "nota": 6,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-20T18:45:21Z",
+    "legenda": "Aliados próximos de Flávio Bolsonaro (PL) afirmam que o senador não pretende autorizar a abertura dos próprios sigilos bancário, fiscal e telefônico nem dos dad",
+    "link": "https://www.instagram.com/p/DeugeQUEmHL/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Falas atabalhoadas de Daniella irritam campanha de Flávio",
    "secoes": [
     "A"
    ],
    "veiculos": 1,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-20T18:07:19Z",
-   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPUU9qQ1F6cmJ5Zm5zYUlLbkJZQVF4MGhUYnRuWWlVdnlNdmFJbDRXTnJyTF9pUkhhMG1HdEY0SkFJNkh5MHhjR0w4clFXNVNfNThXNGQ1bV9BSHpjeDc4M0RtMmJOT2ZFZTgycHhKSm1mUVp2UDQ5ZmZBbjZXdE1aZGR6eDR1ZjM5T1BmR1RHVHFsOGkycW9zSTFXemVmSXBpVXdIaTNSY05XS0hWVmxXdEpaRjBJVU95V1Rzc0g1N3ZJVE8xVWdIdA?oc=5",
+   "na_pauta_desde": "2026-10-20T17:06:33Z",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNdUUwR25mQnh4YWtCbl84V2NtMk5qZ0R3ZF9VZngwb3k4VGxZMm90TVV5bF81UmZJakRfVkRocXRzckswN2g2SC14LXdjRmRPUlNtZlRObmpqYnUxaENFeXZsdjZWZzE0U3VPVjZBd1R5bmhhZUhtWWZlcTVUTGZ6T19TSUtoZThyYVp0TGZtdmtncG5sQmlXdS1OaXIyc0k3VlFYQ0tHbVRuX0tv?oc=5",
    "editoria": "eleicoes",
    "nota": 5,
    "parceiro": {
@@ -807,40 +813,21 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Apoiadores fazem caminhada a favor da reeleição de Lula em Teresina",
+   "manchete": "Motociata: entregadores de app realizam ato em apoio a Lula na quarta-feira (21) em SP",
    "secoes": [
     "A"
    ],
-   "veiculos": 3,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-20T18:45:49Z",
-   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOTWR0NzM5RkE5ZWlsQWVPN2s4ZWpCOFRGTDJHMGhmRnQxTmxlVTJ0NXNINnlEUEhVUWxfYjYzOG5SMjZfVTZ1cGVzbTVPZmVFVTRGNmZ4aVcwMkVJUFVGNVVFMEpiR2pmWFA5Z1Mta2FfS0FXM3k0bjQ3SGw0VVJJV09jeWZnZWwtZl9id0JBMzNUZGRTODdBZktQWVZFM25HaU1BWWt30gG0AUFVX3lxTFA5Vmk3M2pXOFU2TzdPUmtPWTJpR2dqUkxZQWtJbU10OTlyOTJaamtUVFdnN3ZjazVkM1ZiWEhvMjNWNTJGZG1ySHdQc0VlYy1scWZZbnFfMXJNYTRwekxBRjZEOTZhbnhpY25FdW1QcXQ1SktHMUFHdndha1ZmenBTSXRWZ3hIQmdYREpXeFJxTDg1WjA3bThaWXFxa0RPZXcyTWQtSGhWV0dNcjI1S3F3SnVrLQ?oc=5",
-   "editoria": "gerais",
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-20T19:23:08Z",
+   "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNMTNkQVBYTTJnVDF6a1B3c0lud2lJbmhJQmZDeU9wMEdxeUh1aGNPTkwybEViaWdqX2l6ZmlvcnQ5UWNuVFFkYUFjVTdHVXA5cE5DMHh1OTRyWG9LekZBaVVLdGxzTXR6dmtlWGFEZ3U2YzBpcTFMaFk0U05zcnF5MmZSLXBRMGt1bDdYYUFsdHJfa2JTV1FCWjJHbVRHeDJRQVdqQXJwa2FHdG5mWUlfa25LdTQtQjlkQzdtY0stQlhQbVhDYzlLb0t3?oc=5",
+   "editoria": "eleicoes",
    "nota": 3,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-10-20T16:30:06Z",
     "legenda": "Entregadores de aplicativos preparam motociatas para esta quarta-feira (21), em diferentes regiões do Brasil, em apoio à reeleição do presidente Luiz Inácio Lul",
     "link": "https://www.instagram.com/p/DeuQ_n_kn2n/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Flávio promete acabar com \"entraves ambientais por razões ideológicas\"",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-20T14:10:05Z",
-   "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPb0NNZU43ZjVIYkxnNkd5Z3BlMnB0OW1LRjJvN2ROTVRBNmwwRGV3dWFBNjNCQV92c3BoUHM4OFhUcEtScGRrQnVQelNWSkRobzRBRFdla2tDUFlvdWo2dEpCOFJKUE56bDZZTEJxeGQyR19uaDl3cGdTVFNXTVI5NF9OYnA0MFNyWGNaREdpY0RzM1pUeDZpOTdEejlJQWtxMFpaX0ZYckF6VnAySTFLcUFrLTZNcVFhMmI1b1Z4SmQ3TC1oVHBCSmVHdHV4N21VT21MSnp2ck1MbHJoRE91MDNOT1c4c3RuYVBV?oc=5",
-   "editoria": "eleicoes",
-   "nota": 6,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-20T11:54:38Z",
-    "legenda": "O candidato à Presidência da República Flávio Bolsonaro (PL) prometeu, nesta segunda-feira (19), acabar com o que chamou de “entraves ambientais” e permitir que",
-    "link": "https://www.instagram.com/reel/DetxO2tRNLt/"
    },
    "triagem": "candidato"
   },
@@ -864,86 +851,6 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "GloboNews Debate recebe coordenadores das campanhas de Lula e Flávio Bolsonaro nesta segunda-feira",
-   "secoes": [
-    "A",
-    "A"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-20T18:45:49Z",
-   "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/10/19/globonews-debate-recebe-coordenadores-das-campanhas-de-lula-e-flavio-bolsonaro.ghtml",
-   "editoria": "eleicoes",
-   "nota": 6,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-20T15:00:08Z",
-    "legenda": "Fábio Luís Lula da Silva, o Lulinha, filho do presidente Luiz Inácio Lula da Silva (PT), colocou voluntariamente seus sigilos fiscal, bancário e telemático à di",
-    "link": "https://www.instagram.com/p/DeuGsu0mUL1/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Lula anuncia ofício ao TSE abrindo sigilos dele e de 5 filhos e exigindo o mesmo de Flávio Bolsonaro",
-   "secoes": [
-    "A",
-    "B"
-   ],
-   "veiculos": 28,
-   "veiculos_3h": 20,
-   "na_pauta_desde": "2026-10-20T17:06:33Z",
-   "link": "https://www.gazetadopovo.com.br/eleicoes/2026/lula-anuncia-autorizacao-ao-tse-para-quebra-de-sigilos-dele-e-dos-filhos-e-desafia-flavio/",
-   "editoria": "eleicoes",
-   "nota": 7,
-   "parceiro": {
-    "perfil": "luzmanifesto",
-    "quando": "2026-10-20T16:15:22Z",
-    "legenda": "Postem no seu story, para que seus seguidores Bolsonaristas possam começar a cobrança para que Flávio abra suas contas e desmascare Lula e toda sua família. Man",
-    "link": "https://www.instagram.com/p/DeuPT33kTIZ/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Flávio trabalhista, Lula punitivista: o segundo turno da conveniência",
-   "secoes": [
-    "A",
-    "B"
-   ],
-   "veiculos": 235,
-   "veiculos_3h": 159,
-   "na_pauta_desde": "2026-10-20T18:07:19Z",
-   "link": "https://www.gazetadopovo.com.br/vozes/instituto-sivis/flavio-trabalhista-lula-punitivista-o-segundo-turno-da-conveniencia/",
-   "editoria": "eleicoes",
-   "nota": 6,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-20T17:03:27Z",
-    "legenda": "Rafael Greca - rafaelgrecaoficial, ex-prefeito de Curitiba, realizou um apelo devoto e veemente aos brasileiros ao apoiar a cultura, a arte, a educação e os pri",
-    "link": "https://www.instagram.com/reel/DeuUnD2FDGe/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "'Caótico' e 'tenso': o que imprensa internacional disse sobre debate entre Lula e Flávio Bolsonaro",
-   "secoes": [
-    "A",
-    "A"
-   ],
-   "veiculos": 12,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-20T18:45:49Z",
-   "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/10/caotico-e-tenso-o-que-imprensa-internacional-disse-sobre-debate-entre-lula-e-flavio-bolsonaro.shtml",
-   "editoria": "eleicoes",
-   "nota": 7,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-20T18:15:04Z",
-    "legenda": "Um parecer do Ministério da Economia aprovado em 15 de junho de 2020 por Alexandre Messa, hoje integrante da equipe econômica de Flávio Bolsonaro (PL), contesto",
-    "link": "https://www.instagram.com/p/DeudAcekbFc/"
-   },
-   "triagem": "candidato"
-  },
-  {
    "manchete": null,
    "secoes": [
     "A"
@@ -959,6 +866,85 @@
     "quando": "2026-10-20T18:30:05Z",
     "legenda": "🔥💭",
     "link": "https://www.instagram.com/p/DeueudMmlE8/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "GloboNews Debate recebe coordenadores das campanhas de Lula e Flávio Bolsonaro nesta segunda-feira",
+   "secoes": [
+    "A",
+    "A",
+    "B"
+   ],
+   "veiculos": 19,
+   "veiculos_3h": 8,
+   "na_pauta_desde": "2026-10-20T18:45:49Z",
+   "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/10/19/globonews-debate-recebe-coordenadores-das-campanhas-de-lula-e-flavio-bolsonaro.ghtml",
+   "editoria": "eleicoes",
+   "nota": 7,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-20T15:00:08Z",
+    "legenda": "Fábio Luís Lula da Silva, o Lulinha, filho do presidente Luiz Inácio Lula da Silva (PT), colocou voluntariamente seus sigilos fiscal, bancário e telemático à di",
+    "link": "https://www.instagram.com/p/DeuGsu0mUL1/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 3,
+   "parceiro": {
+    "perfil": "luzmanifesto",
+    "quando": "2026-10-20T16:15:22Z",
+    "legenda": "Postem no seu story, para que seus seguidores Bolsonaristas possam começar a cobrança para que Flávio abra suas contas e desmascare Lula e toda sua família. Man",
+    "link": "https://www.instagram.com/p/DeuPT33kTIZ/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Agregador: Distância entre Lula e Flávio cai para 2,6 pontos no 2° turno",
+   "secoes": [
+    "A",
+    "B"
+   ],
+   "veiculos": 11,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-10-20T19:23:08Z",
+   "link": "https://noticias.uol.com.br/eleicoes/2026/10/20/agregador-distancia-entre-lula-e-flavio-cai-para-26-pontos-no-2-turno.ghtm",
+   "editoria": "politica",
+   "nota": 6,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-20T17:03:27Z",
+    "legenda": "Rafael Greca - rafaelgrecaoficial, ex-prefeito de Curitiba, realizou um apelo devoto e veemente aos brasileiros ao apoiar a cultura, a arte, a educação e os pri",
+    "link": "https://www.instagram.com/reel/DeuUnD2FDGe/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Brasil: agencia de verificación desmonta mentiras de Flávio Bolsonaro en debate presidencial",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-20T19:23:08Z",
+   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5UdEtYVUNrbzkxOXlyQ3lSV2NNcjlsdS1LanZGT01qb3BEbjY5dnoyNFF2NE5OTlNSUEtsc0Z3VVRmV2pRV0RzTUxJVDcwd2Q3S2tyU3pBa3JuNjdmVENoMGNKSm1JUUVnQ1hXUWczaWxsOVlF?oc=5",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "parceiro": {
+    "perfil": "luzmanifesto",
+    "quando": "2026-10-20T17:53:18Z",
+    "legenda": "Flávio, chegou a oportunidade que você sempre sonhou. Agora poderá desmascarar Lula e sua família. Mostre sua inocência, o Brasil todo quer ver sua honestidade.",
+    "link": "https://www.instagram.com/reel/DeuaOZDhCuy/"
    },
    "triagem": "candidato"
   },
@@ -982,12 +968,31 @@
    "triagem": "candidato"
   },
   {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-20T18:37:18Z",
+    "legenda": "Pega a moral do BFC! Recado importante do vice-presidente geraldoalckmin_ direto de Curitiba (PR) 🔥",
+    "link": "https://www.instagram.com/reel/DeufU9cB1PM/"
+   },
+   "triagem": "candidato"
+  },
+  {
    "manchete": "Pablo Marçal ajudou a defender negócio bilionário do Banco Master nas redes",
    "secoes": [
     "A"
    ],
    "veiculos": 1,
-   "veiculos_3h": 1,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-20T18:45:49Z",
    "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOcWR3VXNpZVAzdXdRVF8zZ2hfRjdLempiTU1DT3lFMFZhcFN3eFJCYWVJQW1XLWZVY01LRVd2MmU0RE5saTRqV0V3NEZGZS1yWFZLNE5ZSmpSUDNzRXpvcVBxZ0Ntd0NwVWtQcWpuSXZ6dHNiWHRWX29LYmxidXVEU1JhSV9tWmdJdE1sS1pzZDdJYjlVcWtaUGZUakFmeWppZjIxUVZYNkM4aUhRWnpLaHpaQjZwR240Mzg5bXVyVHltXy1DM2h5MDdWdm44V253a0JratIB1AFBVV95cUxOcWR3VXNpZVAzdXdRVF8zZ2hfRjdLempiTU1DT3lFMFZhcFN3eFJCYWVJQW1XLWZVY01LRVd2MmU0RE5saTRqV0V3NEZGZS1yWFZLNE5ZSmpSUDNzRXpvcVBxZ0Ntd0NwVWtQcWpuSXZ6dHNiWHRWX29LYmxidXVEU1JhSV9tWmdJdE1sS1pzZDdJYjlVcWtaUGZUakFmeWppZjIxUVZYNkM4aUhRWnpLaHpaQjZwR240Mzg5bXVyVHltXy1DM2h5MDdWdm44V253a0Jrag?oc=5",
    "editoria": "eleicoes",
@@ -1020,16 +1025,17 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Em Porto Alegre, Lula reforça que autorizará abertura de seu sigilo telefônico e bancário",
+   "manchete": "Lula diz que vai entregar ao TSE autorização para quebra de sigilo bancário e telefônico dele e da família",
    "secoes": [
-    "A"
+    "A",
+    "B"
    ],
-   "veiculos": 8,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-20T18:07:19Z",
-   "link": "https://jornalggn.com.br/eleicoes/lula-quebra-seu-sigilo-bancario-e-telefonico/",
-   "editoria": "gerais",
-   "nota": 3,
+   "veiculos": 39,
+   "veiculos_3h": 21,
+   "na_pauta_desde": "2026-10-20T14:23:08Z",
+   "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/10/19/lula-tse-quebra-sigilo.ghtml",
+   "editoria": "eleicoes",
+   "nota": 5,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-10-20T15:15:05Z",
@@ -1058,18 +1064,17 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "PF abre 2º inquérito sobre Flávio Bolsonaro, sobre suspeita de lavagem de dinheiro",
+   "manchete": "Inquérito sobre suspeita de lavagem de Flávio Bolsonaro também investiga Cláudio Castro e Ramagem",
    "secoes": [
     "A",
-    "A",
-    "D-terra"
+    "B"
    ],
-   "veiculos": 9,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-20T12:06:47Z",
+   "veiculos": 6,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-10-20T19:23:08Z",
    "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/10/inquerito-sobre-suspeita-de-lavagem-de-flavio-bolsonaro-tambem-investiga-claudio-castro-e-ramagem.shtml",
    "editoria": "politica",
-   "nota": 8,
+   "nota": 9,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-10-20T15:30:05Z",
@@ -1121,8 +1126,8 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 4,
-   "veiculos_3h": 1,
+   "veiculos": 3,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-20T18:45:49Z",
    "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQZy1XbVNYSG41cVU4OHFZajhQR3RPd043TFlXZEpSQ1VhY2VHZ295Zms5ZlphNUw4NXkyUFpvSVEtN0Z5QTZLYTIxMF9nM2ljZEpVWEJHMUNRaGhkeGwxaVc0S2luZlJ4c0hXSUduYnhmZF8wbndJbDItcDRGWWdLVDIxbkNGUHFGZUV2dGVhSUhucEh5ZFlJVk5mbnZvRGhscFowY3BZZUNoVkFZME10NzBUVk1Cd1hqVDZXQ0tVSGRZa3VQLTVTSXM1Ml9JemZmNl92MWxGMC1DeG52S3h2NVEwUDU5Y0Rxa21zWlJmandNVlHSAfMBQVVfeXFMUGctV21TWEhuNXFVODhxWWo4UEd0T3dON0xZV2RKUkNVYWNlR2dveWZrOWZaYTVMODV5MlBab0lRLTdGeUE2S2EyMTBfZzNpY2RKVVhCRzFDUWhoZHhsMWlXNEtpbmZSeHNIV0lHbmJ4ZmRfMG53SWwyLXA0RllnS1QyMW5DRlBxRmVFdnRlYUlIbnBIeWRZSVZOZm52b0RobHBaMGNwWWVDaFZBWTBNdDcwVFZNQndYalQ2V0NLVUhkWWt1UC01U0lzNTJfSXpmZjZfdjFsRjAtQ3hudkt4djVRMFA1OWNEcWttc1pSZmp3TVZR?oc=5",
    "editoria": "saude",
@@ -1132,6 +1137,25 @@
     "quando": "2026-10-20T13:16:23Z",
     "legenda": "Um vídeo de 2019 de Claudio Lottenberg, preferido de Flávio Bolsonaro (PL-RJ) para assumir o Ministério da Saúde, voltou a viralizar nesta segunda-feira (19). N",
     "link": "https://www.instagram.com/reel/Det6xQxEjzs/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Ex-secretário do STJ é investigado por suposto vazamento de decisões para amigo de Flávio Bolsonaro",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-20T19:23:08Z",
+   "link": "https://www.diariodocentrodomundo.com.br/pf-investiga-se-advogado-amigo-de-flavio-bolsonaro-usou-mae-como-laranja/",
+   "editoria": "politica",
+   "nota": 8,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-20T14:00:08Z",
+    "legenda": "O advogado Willer Tomaz, amigo e sócio do senador Flávio Bolsonaro (PL), foi identificado como a pessoa física que mais depositou dinheiro em plataformas de apo",
+    "link": "https://www.instagram.com/p/Det_1LNCIVA/"
    },
    "triagem": "candidato"
   },
@@ -1178,8 +1202,8 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 6,
-   "veiculos_3h": 0,
+   "veiculos": 7,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-10-20T18:45:49Z",
    "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/10/quem-nao-votou-no-1o-turno-pode-votar-no-2o-tire-essa-e-outras-duvidas.shtml",
    "editoria": "eleicoes",
@@ -1195,10 +1219,11 @@
   {
    "manchete": "André Janones segue na UTI após arritmia cardíaca e pode ter alta em 48 horas",
    "secoes": [
-    "A"
+    "A",
+    "B"
    ],
-   "veiculos": 19,
-   "veiculos_3h": 1,
+   "veiculos": 29,
+   "veiculos_3h": 14,
    "na_pauta_desde": "2026-10-20T18:07:19Z",
    "link": "https://www.gazetadopovo.com.br/eleicoes/2026/janones-internado-uti-com-arritmia-cardiaca-apos-debate-band/",
    "editoria": "politica",
@@ -1258,15 +1283,15 @@
    "veiculos_3h": 0,
    "na_pauta_desde": null,
    "link": null,
-   "editoria": "gerais",
-   "nota": 1,
+   "editoria": null,
+   "nota": null,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-10-20T16:45:05Z",
-    "legenda": "Um mês de muito trabalho e de resultados históricos 🔥 Obrigado, meu amores!",
-    "link": "https://www.instagram.com/p/DeuStYVl768/"
+    "quando": "2026-10-20T18:52:05Z",
+    "legenda": "Queridos amigos, o Maringá, clube de futebol do Estado do Paraná, não gostou da brincadeira que um parceiro nosso fez com os torcedores progressistas do clube, ",
+    "link": "https://www.instagram.com/p/DeugS6CB9NI/"
    },
-   "triagem": "candidato"
+   "triagem": "fora: esporte (futebol)"
   },
   {
    "manchete": null,
@@ -1281,9 +1306,9 @@
    "nota": 1,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-10-20T18:37:18Z",
-    "legenda": "Pega a moral do BFC! Recado importante do vice-presidente geraldoalckmin_ direto de Curitiba (PR) 🔥",
-    "link": "https://www.instagram.com/reel/DeufU9cB1PM/"
+    "quando": "2026-10-20T16:45:05Z",
+    "legenda": "Um mês de muito trabalho e de resultados históricos 🔥 Obrigado, meu amores!",
+    "link": "https://www.instagram.com/p/DeuStYVl768/"
    },
    "triagem": "candidato"
   },
@@ -1293,7 +1318,7 @@
     "A",
     "B"
    ],
-   "veiculos": 18,
+   "veiculos": 19,
    "veiculos_3h": 4,
    "na_pauta_desde": "2026-10-20T18:07:19Z",
    "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/10/secretario-de-queimados-morre-baleado-na-avenida-brasil-no-rio.shtml",
@@ -1306,25 +1331,6 @@
     "link": "https://www.instagram.com/p/Det8ZWNHaGz/"
    },
    "triagem": "fora: crime ou tragedia (morre)"
-  },
-  {
-   "manchete": "Relatório aponta irregularidades em hospital",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-20T18:07:19Z",
-   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPaTRYYlNHVHNkV3JsWmo5V2YxX3RtZEdKUW5GOFU3aklDZFpndXFEbFUzeUx5M1NmM0JnY19EOWc0Tks0Vi1rX2d1S3pzTjFWOTVvQ3BMTXpwYnlob1hMeWJDYVREVjRGOHlYUWY2RHlvMy1lYUREVVlhak51WnFha2RMMFhRT3BTSlVPeQ?oc=5",
-   "editoria": "politica",
-   "nota": 2,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-20T11:32:54Z",
-    "legenda": "Uma auditoria do Tribunal de Contas do Município (TCM) de São Paulo identificou indícios de irregularidades em contratos firmados entre a gestão do prefeito Ric",
-    "link": "https://www.instagram.com/p/Detu-YsRLGH/"
-   },
-   "triagem": "candidato"
   },
   {
    "manchete": null,
@@ -1350,7 +1356,7 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 2,
+   "veiculos": 4,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-20T18:45:49Z",
    "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQNzNBVGU2Q240VjdDYXQ5N20xLUgtRm9NdHppMUMwOW56azRGWHRjZEN4ZE1KYmtUS3dVZzJpNHVaV3pRWkhDbUFpc2MyN0I0REZjbHV4bjhDdEd6OUFlaUFKQXFsYTNmbWFfV3NNM0tJUUxuR0xhUjFTZkhZbHJtRG54OGVPMDJ2UzJaYnpUWkVEaFlBR0RkaGdWaC1iaEZXUVZuOG4xYllxME1zVmNaT1hZZnZrVEtPQWfSAb8BQVVfeXFMTXZfQkljMEtCTlBDM3ctZlR0SUhnN2xqZWk5ME9CSHpVZkhiN1l5eGE0Y2hJUXRHMmJxSllsRkNnVHVFTTJrVGV1enJseTFWZlJFWnF0WW45Z0hjcUw2X2dWdzhaRTNLRUs3VmxxNzE2OTdNeHJLWGV1b2hOVUZjOTcxNks5aE5mMzdnaklweHNHQjJMeWZVMnYxbEN4SDRPNXMxVmx2eHZwbWc5b0V4RjU1THdUMm13NTBYM21naDA?oc=5",
@@ -1386,16 +1392,40 @@
  ],
  "descartados_mais_quentes": [
   {
-   "manchete": "Brazilian court orders Meta to prove Lula and Bolsonaro get equal treatment - Al Jazeera",
-   "veiculos": 23,
-   "veiculos_3h": 9,
+   "manchete": "Transporte gratuito será financiado com emendas, diz Lula",
+   "veiculos": 28,
+   "veiculos_3h": 13,
    "motivo": "sem editoria"
   },
   {
+   "manchete": "Trump diz que Ucrânia precisa querer chegar a um acordo para pôr fim à guerra",
+   "veiculos": 23,
+   "veiculos_3h": 3,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Como está a pesquisa para presidente hoje? Veja porcentagem de Lula e Flávio",
+   "veiculos": 21,
+   "veiculos_3h": 6,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Protesto fecha Louvre, e governo anuncia toques de recolher para conter onda de violência na França",
+   "veiculos": 21,
+   "veiculos_3h": 4,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
    "manchete": "Secretário de Queimados morre baleado por PM na avenida Brasil, no Rio",
-   "veiculos": 18,
+   "veiculos": 19,
    "veiculos_3h": 4,
    "motivo": "fora: crime ou tragedia (morre)"
+  },
+  {
+   "manchete": "A seis días de las elecciones de Brasil",
+   "veiculos": 17,
+   "veiculos_3h": 8,
+   "motivo": "sem editoria"
   },
   {
    "manchete": "Justiça encerra recuperação judicial da Americanas",
@@ -1404,46 +1434,22 @@
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Ato político na UFRN termina em confusão entre grupos de direita e esquerda",
-   "veiculos": 14,
+   "manchete": "La justicia electoral de Brasil da 24 horas a Meta para demostrar que trata igual a Lula y a Bolsonaro",
+   "veiculos": 15,
    "veiculos_3h": 7,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "A seis días de las elecciones de Brasil",
-   "veiculos": 14,
-   "veiculos_3h": 5,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Transporte gratuito será financiado com emendas, diz Lula",
-   "veiculos": 13,
-   "veiculos_3h": 3,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Toques de recolher entram em vigor em cidades francesas após saques e confrontos",
-   "veiculos": 13,
-   "veiculos_3h": 3,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "PF abre 2º inquérito sobre Flávio Bolsonaro, sobre suspeita de lavagem de dinheiro",
+   "manchete": "Trump diz que 'é hora de outra pessoa' negociar em nome da Ucrânia",
    "veiculos": 9,
-   "veiculos_3h": 2,
-   "motivo": "repetido (20261020-0815-flavio-inquerito-lavagem)"
-  },
-  {
-   "manchete": "Fuvest divulga locais de prova: saiba como conferir",
-   "veiculos": 7,
-   "veiculos_3h": 1,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "ONU condena “todos os atos de violência” em manifestações na Europa",
-   "veiculos": 6,
-   "veiculos_3h": 6,
+   "veiculos_3h": 4,
    "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Museu nos EUA fecha ao público após morte de reitor da PUC-PR durante visita",
+   "veiculos": 9,
+   "veiculos_3h": 3,
+   "motivo": "fora: crime ou tragedia (morte)"
   }
  ]
 }
