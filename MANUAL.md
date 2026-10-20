@@ -518,7 +518,8 @@ sugestão já feita (se repetir, diga que é reforço e por quê).
 para melhorar**. No máximo ~1.200 palavras, 80% delas propositivas):
 1. **O dia em 5 linhas**: posts publicados, melhor e pior (link e número), seguidores, collabs
    aceitas, falhas do sistema. Só isso.
-2. **Tendências** (o que está crescendo lá fora, com exemplo, link e número):
+2. **Tendências** (desde 20/10/2026 a análise completa sai pelo ChatGPT do João às 22h50, lendo o
+   `radar/benchmark.json`; aqui, só 2 ou 3 linhas com o que muda a nossa pauta ou o nosso sistema):
    - temas que subiram nas páginas de referência e no radar (o que ganhou veículos e engajamento);
    - formatos e ganchos que estão rendendo (Reels com fala, carrossel "entenda", lista, print,
      antes x depois), músicas/áudios em alta quando aparecerem;
