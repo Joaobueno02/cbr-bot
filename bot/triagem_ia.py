@@ -61,7 +61,7 @@ Responda só com JSON: {"avaliacoes": [{"id": 0, "editoria": "...", "I": 0, "V":
 CAMPOS = ("editoria", "I", "V", "P", "formato", "repetido", "risco", "motivo")
 
 
-def _chamar(itens: list[dict], publicados: list[str], chave: str) -> tuple[list[dict], str, int]:
+def _chamar(itens: list[dict], publicados: list[str], chave: str) -> tuple[list[dict], str, int, str]:
     linhas = []
     for i, it in enumerate(itens):
         txt = it.get("manchete") or ""
@@ -88,7 +88,7 @@ def _chamar(itens: list[dict], publicados: list[str], chave: str) -> tuple[list[
                     txt = (r.json()["choices"][0]["message"]["content"] or "").strip()
                     if txt.startswith("```"):
                         txt = txt.strip("`").removeprefix("json").strip()
-                    return json.loads(txt)["avaliacoes"], modelo, pedidos
+                    return json.loads(txt)["avaliacoes"], modelo, pedidos, erro
                 except Exception as e:
                     erro = f"{modelo}: resposta ilegível ({type(e).__name__})"
                     break
@@ -128,9 +128,9 @@ def avaliar(candidatos: list[dict], publicados: list[str], estado: dict, agora_i
             info.update(ok=False, erro="teto diário da cota grátis (só regras até amanhã)")
         else:
             try:
-                avals, modelo, n = _chamar(pendentes, publicados, chave)
+                avals, modelo, n, falhas = _chamar(pendentes, publicados, chave)
                 cota["pedidos"] += n
-                info.update(modelo=modelo, avaliados_agora=len(pendentes))
+                info.update(modelo=modelo, avaliados_agora=len(pendentes), falhas_antes=falhas or None)
                 for a in avals:
                     i = a.get("id")
                     if not isinstance(i, int) or not 0 <= i < len(pendentes):
