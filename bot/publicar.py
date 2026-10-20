@@ -211,6 +211,21 @@ def escolher_musica(busca: str | None) -> dict | None:
     return {"audio_id": m.get("audio_id"), "titulo": m.get("title"), "artista": m.get("display_artist")}
 
 
+def eh_reels(post: dict) -> bool:
+    """Bombástica sempre vira Reels; desde 20/10/2026 o Claude também marca "reels": true em post único forte."""
+    return bool(post.get("bombastica") or post.get("reels")) and post.get("formato", "unico") == "unico"
+
+
+def comentar(media_id: str, texto: str) -> dict:
+    """Primeiro comentário do post (pergunta para puxar conversa). Precisa de instagram_manage_comments
+    no token; sem a permissão, só registra o aviso: o post já saiu e não é refeito."""
+    try:
+        cid = chamar("POST", f"{media_id}/comments", message=texto[:300])["id"]
+        return {"comentario_id": cid}
+    except ErroAPI as e:
+        return {"comentario_erro": str(e)[:200]}
+
+
 def url_arte(pasta: str, arquivo: str) -> str:
     return f"{CONFIG['repo_raw']}/fila/{pasta}/{arquivo}"
 
@@ -285,7 +300,7 @@ def criar_e_publicar(post: dict, pasta: str, legenda: str, collab: list[str]) ->
     artes = [a["arquivo"] for a in post["render"]["artes"]]
     extra = {"collaborators": json.dumps(collab)} if collab else {}
     musica = None
-    if post.get("bombastica") and post.get("render", {}).get("reels"):
+    if eh_reels(post) and post.get("render", {}).get("reels"):
         params = dict(media_type="REELS", video_url=url_arte(pasta, post["render"]["reels"]["video"]),
                       cover_url=url_arte(pasta, post["render"]["reels"]["capa"]),
                       share_to_feed="true", caption=legenda, **extra)
@@ -366,7 +381,7 @@ def processar(arq: Path, estado: dict) -> None:
         collab = decidir_collab(post, numero)
         res["numero"] = numero
         res["collab"] = collab
-        res["formato"] = "reels" if post.get("bombastica") else ("carrossel" if len(post["render"]["artes"]) > 1 else "feed")
+        res["formato"] = "reels" if eh_reels(post) else ("carrossel" if len(post["render"]["artes"]) > 1 else "feed")
 
         if not CONFIG.get("publicacao_ativa"):
             post["status"] = "simulado"
@@ -395,6 +410,9 @@ def processar(arq: Path, estado: dict) -> None:
                         res.update(criar_e_publicar(post, pasta, legenda, []))
                 else:
                     raise
+            if post.get("comentario") and res.get("media_id") and not achado:
+                time.sleep(20)
+                res.update(comentar(res["media_id"], post["comentario"]))
             post["status"] = "publicado"
             estado["publicados"] = numero
             estado["ultima_publicacao"] = agora()

@@ -198,6 +198,14 @@ quanto a notícia rende para destrinchar (números para comparar, linha do tempo
 verificada: 4 blocos ou mais = P 3; 3 = P 2; 2 = P 1.
 - **Reels** (`bombastica: true`): I = 3 **e** V = 3, ou o fato domina o noticiário do dia.
   É a notícia que explode sozinha, não precisa ser explicada.
+- **Reels comum** (`"reels": true`, regra do João, 20/10/2026, para alcançar quem não segue: post de
+  feed só aparece para seguidor, Reels e carrossel são recomendados para fora). Post único com
+  I + V ≥ 5 e foto forte (rosto ou cena que se entende em 1 segundo) vira Reels comum. **Meta: 2 por dia**
+  (um até as 14h, outro depois das 17h), no máximo 4; na dúvida entre feed e Reels comum, Reels. É a
+  **mesma arte aprovada** (o vídeo é o quadro vertical com zoom lento, idêntico ao da bombástica),
+  então passa pela mesma revisão de design; confira também `story.jpg` (é a capa do Reels e o que
+  aparece na grade do perfil: a arte inteira tem de ficar visível no recorte 4:5 central, sem nada
+  cortado). Leva música (ver "Bombástica") e segue a regra comum de collab (não força BFC + Luz).
 - **Carrossel**: não é Reels, I + V ≥ 5 **e** P ≥ 2. É a notícia que fica melhor contada em
   partes: a pessoa salva e manda no grupo. Capa que prende sozinha, 4 a 8 slides, último com
   chamada (salvar, compartilhar, seguir). Até 3 carrosséis por dia.
@@ -233,11 +241,24 @@ candidato). Não há teto por dia: depende do dia. Mas não banalize; se tudo é
 nada é. Bombástica:
 - sai como **Reels** (a arte vira um vídeo vertical de 12 s com zoom lento), no lugar do post
   de foto, e aparece no feed também;
-- leva **música da biblioteca do Instagram**, escolhida pela API. Preencha `musica_busca`
+- leva **música da biblioteca do Instagram**, escolhida pela API (vale também para o Reels comum). Preencha `musica_busca`
   com 1 a 3 palavras do clima desejado (ex.: "tensão", "suspense", "épico", "triunfo");
   sem isso, vai uma música em alta. Evite clima alegre em notícia grave;
 - sempre leva **collab** (seção 10).
-Só bombástica tem música. Posts comuns e carrosséis continuam sem.
+Só Reels tem música (bombástica e Reels comum). Feed e carrossel continuam sem.
+
+### Modo eleição (até o 2º turno, 25/10/2026)
+- Prioridade de pauta: debate, pesquisa registrada no TSE, propaganda e fake news da campanha, decisões
+  do TSE, apoios relevantes. Na dúvida entre duas pautas de mesmo peso, a eleitoral.
+- **Domingo, 25/10**: além das rodadas de hora em hora, há rodadas extras às :34 das 17h às 23h (tarefa
+  "CBR – noite da eleição"). Os desfechos estão em `pautas/acompanhamento.json`: fim da votação (17h),
+  primeiras parciais do TSE, **resultado** (quando o TSE ou a imprensa projetarem matematicamente), discurso
+  do eleito e do derrotado. O post do resultado é **bombástica (Reels)**, com o número do TSE (percentual
+  de votos válidos e urnas apuradas no momento) e a hora da apuração; nada de "venceu" antes de o TSE ou
+  a apuração tornarem matematicamente impossível a virada. Fonte primária: resultados.tse.jus.br.
+- Pesquisa de boca de urna só com instituto, registro e margem, e dita como pesquisa, não resultado.
+- Depois do resultado: reação de movimentos sociais e da BFC/Luz entra pela seção A/A2 normalmente.
+- Segunda, 26/10: este bloco deixa de valer (a rodada lê e ignora).
 
 ### Não publique
 - Fato não confirmado (seção 3), boato, print de rede social como única base.
@@ -309,9 +330,18 @@ mesma notícia nas outras fontes, compare as versões e escreva a **nossa** a pa
   "instituicao_ig": null,
   "bombastica": false,
   "musica_busca": null,
-  "corrige": null
+  "corrige": null,
+  "reels": false,
+  "comentario": "Você sabia que o SUS tem piso garantido por lei? Conta aqui o que mudaria na sua cidade."
 }
 ```
+- **reels**: `true` para Reels comum (seção 2, "Formato"). Só em post único.
+- **comentario**: o primeiro comentário, que o bot faz logo depois de publicar (20/10/2026). Uma
+  pergunta curta e concreta sobre o assunto, que a pessoa consiga responder com a própria experiência
+  ou opinião ("Na sua cidade o ônibus já é de graça no domingo?"). Sem link, sem hashtag, sem repetir a
+  legenda, no máximo 1 emoji, nunca pergunta que ofenda o eleitor do outro lado. A API não deixa fixar;
+  sem a permissão `instagram_manage_comments` no token, o bot só registra `comentario_erro` e o post
+  segue normal. Opcional em errata.
 
 - **chapeu**: 1 a 3 palavras, chamativo ("FINALMENTE", "FAKE NEWS", "QUASE LÁ", "FIM DO SUS!").
   Opcional em `gerais` e `educacao`.
@@ -480,6 +510,11 @@ link para o Instagram no site oficial da instituição (rodapé ou página de co
 verificado. Na dúvida, deixe vazio e diga na notificação que a collab da instituição ficou de
 fora por falta de confirmação. Não convide a instituição quando a notícia for crítica a ela.
 
+**Números das collabs** (20/10/2026): `radar/collabs.json`, gerado às 22h45, traz por página
+convidada os convites, aceites e a taxa de aceite dos últimos 14 dias, e por post com collab o ganho
+de seguidores entre as medidas antes e depois (sinal, não prova). O dossiê usa para dizer quais
+parceiras valem insistir e quais não aceitam.
+
 **Radar de collab** (pedido do João, 16/10/2026: movimento de páginas progressistas que se ajudam
 na visibilidade): às 11h40 e 19h40 o `bot/collab_radar.py` procura posts de páginas de esquerda
 chamando parceria ("chama na collab", "divulgue sua página progressista", #esquerdasegueesquerda),
@@ -533,7 +568,10 @@ para melhorar**. No máximo ~1.200 palavras, 80% delas propositivas):
      do ar, perfis de movimentos com erro) e a correção técnica proposta;
    - automação nova que pouparia tempo ou créditos, fonte nova que faltou, processo de revisão;
    - custo: quantas chamadas/rodadas o dia gastou e onde dá para economizar;
-   - collab: chamadas de parceria do dia e páginas progressistas novas (radar de collab, seção 10).
+   - collab: chamadas de parceria do dia e páginas progressistas novas (radar de collab, seção 10);
+     a taxa de aceite por página e o ganho de seguidores depois das collabs aceitas (`radar/collabs.json`);
+   - formatos: quantos Reels comuns saíram e o alcance deles contra o feed do mesmo dia (bloco `cbr`
+     do benchmark), para saber se a meta de 2 Reels por dia está trazendo gente nova.
 5. **Experimentos para amanhã**: até 3, cada um com hipótese, como medir e esforço
    (pequeno/médio/grande). Ex.: "Reels com 1ª frase em texto grande: mais alcance que o post de foto
    da mesma editoria? Medir alcance em 24 h."

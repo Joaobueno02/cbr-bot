@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import json
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -31,6 +32,28 @@ def main() -> None:
         res["cota_total"] = (cota.get("config") or {}).get("quota_total")
         if res["cota_usada"] is not None and res["cota_total"] and res["cota_usada"] >= 0.8 * res["cota_total"]:
             res["problemas"].append(f"cota de publicação quase no fim ({res['cota_usada']}/{res['cota_total']})")
+        # validade e permissões do token (20/10/2026): avisa antes de vencer, em vez de descobrir parado
+        try:
+            import os
+            tk = os.environ.get("IG_TOKEN", "")
+            info = chamar("GET", "debug_token", input_token=tk).get("data", {})
+            exp = info.get("data_access_expires_at"), info.get("expires_at")
+            res["token"] = {"tipo": info.get("type"), "valido": info.get("is_valid"),
+                            "expira": None if not exp[1] else datetime.fromtimestamp(exp[1], timezone.utc).strftime("%Y-%m-%dT%H:%MZ"),
+                            "acesso_a_dados_ate": None if not exp[0] else datetime.fromtimestamp(exp[0], timezone.utc).strftime("%Y-%m-%dT%H:%MZ"),
+                            "permissoes": sorted(info.get("scopes", []))}
+            agora_ts = datetime.now(timezone.utc).timestamp()
+            for nome, ts in (("token", exp[1]), ("acesso aos dados do token", exp[0])):
+                if ts and ts - agora_ts < 7 * 86400:
+                    dias = max(0, int((ts - agora_ts) // 86400))
+                    res["problemas"].append(f"{nome} vence em {dias} dia(s): gerar token novo")
+            if info.get("is_valid") is False:
+                res["problemas"].append("token marcado como inválido pelo Facebook")
+            falta = [p for p in ("instagram_basic", "instagram_content_publish") if p not in info.get("scopes", [])]
+            if info.get("scopes") and falta:
+                res["problemas"].append(f"token sem permissão: {', '.join(falta)}")
+        except ErroAPI as e:
+            res["token"] = {"erro": str(e)[:160]}
     except ErroAPI as e:
         res["problemas"].append(f"token ou API com erro: {e}")
     except Exception as e:  # rede etc.

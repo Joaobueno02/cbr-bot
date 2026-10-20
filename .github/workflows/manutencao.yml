@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       tarefa:
-        description: "saude | relatorio | historico | benchmark | movimentos"
+        description: "saude | relatorio | historico | benchmark | movimentos | collabs"
         required: true
         default: saude
 
@@ -63,7 +63,16 @@ jobs:
         if: steps.t.outputs.tarefa == 'benchmark'
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
-        run: python bot/benchmark.py
+        run: |
+          python bot/benchmark.py
+          python bot/saude.py || true
+          python bot/collab_metricas.py || echo "números das collabs falharam (o dossiê segue sem eles)"
+
+      - name: Números das collabs (avulso)
+        if: steps.t.outputs.tarefa == 'collabs'
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: python bot/collab_metricas.py
 
       - name: Relatório semanal
         if: steps.t.outputs.tarefa == 'relatorio'

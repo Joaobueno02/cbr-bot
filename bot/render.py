@@ -146,7 +146,7 @@ def processar(pasta: Path, pagina) -> None:
             # versão vertical: vai para os Stories quando a collab for aceita, e é a base do Reels
             quadro_vertical(pasta / "arte-1.jpg", pasta / "story.jpg")
             rel["story"] = "story.jpg"
-            if post.get("bombastica"):
+            if post.get("bombastica") or post.get("reels"):  # Reels comum (20/10/2026) usa o mesmo quadro aprovado
                 gerar_reels(pasta / "story.jpg", pasta / "reels.mp4")
                 rel["reels"] = {"video": "reels.mp4", "capa": "story.jpg"}
         else:
