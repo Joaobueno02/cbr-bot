@@ -19,8 +19,9 @@ import time
 import requests
 
 URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
-MODELOS = [m for m in [os.environ.get("GEMINI_MODEL", "").strip(), "gemini-3.8-flash", "gemini-3.5-flash",
-                       "gemini-flash-latest", "gemini-3.5-flash-lite"] if m]
+# 3.5-flash-lite respondeu no teste de 20/10/2026 (os outros falharam na conta nova); fica primeiro
+MODELOS = [m for m in [os.environ.get("GEMINI_MODEL", "").strip(), "gemini-3.5-flash-lite", "gemini-3.8-flash",
+                       "gemini-3.5-flash", "gemini-flash-latest"] if m]
 LOTE = 25
 TETO_DIA = 200
 EDITORIAS = ["eleicoes", "politica", "economia", "educacao", "saude", "gerais", "america_latina", "roca", "fora"]
