@@ -406,22 +406,34 @@ VERMELHO_CLARO = "#A60D19"
 OURO = "#E3AD16"
 
 
-def _rodape_carrossel(fonte: str, escuro: bool) -> str:
+def _rodape_carrossel(fonte: str, escuro: bool, seg_cor: str | None = None) -> str:
     cor = "#C9C6C0" if escuro else "#4E4B47"
     linha = "rgba(255,255,255,0.3)" if escuro else "rgba(16,16,16,0.3)"
-    seg = OURO if escuro else VERMELHO_CLARO
+    seg = seg_cor or (OURO if escuro else VERMELHO_CLARO)
     txt = f'<p style="margin:0 0 16px;font-family:Archivo,sans-serif;font-size:18px;line-height:1.4;color:{cor}">{html.escape(fonte)}</p>' if fonte else ""
     return (f'<div style="position:absolute;z-index:4;left:80px;right:80px;bottom:56px">{txt}'
             f'<div style="position:relative;height:1px;background:{linha}"><div style="position:absolute;left:0;top:-1px;width:96px;height:3px;background:{seg}"></div></div></div>')
 
 
-def slide(s: dict, foto_uri: str | None = None) -> str:
+def slide(s: dict, foto_uri: str | None = None, editoria: str = "gerais") -> str:
+    """Slide de carrossel. Gerais: modelo crítico (vermelho, CBR simples).
+    Demais editorias (regra do João, 20/10/2026): mesma estética do post único da editoria
+    (marca, cor de destaque e fundo), em qualquer formato."""
     tipo = s.get("tipo", "texto")
-    escuro = s.get("fundo", "escuro") != "claro" or tipo == "capa"
-    bg = "#101010" if escuro else "#ECEAE5"
-    tx = "#FFFFFF" if escuro else "#101010"
-    sub = "#C9C6C0" if escuro else "#4E4B47"
-    dest = VERMELHO if escuro else VERMELHO_CLARO
+    ed = editoria if editoria in EDITORIAS else "gerais"
+    propria = ed != "gerais"
+    if propria:
+        # todos os slides no fundo da editoria (escuro em Saúde/Eleições/AL/roça, claro em Economia/Educação)
+        c = dict(EDITORIAS[ed])
+        escuro = c["bg"] != CLARO["bg"]
+        bg, tx, sub, dest = c["bg"], c["texto"], c["sub"], c["destaque"]
+    else:
+        c = None
+        escuro = s.get("fundo", "escuro") != "claro" or tipo == "capa"
+        bg = "#101010" if escuro else "#ECEAE5"
+        tx = "#FFFFFF" if escuro else "#101010"
+        sub = "#C9C6C0" if escuro else "#4E4B47"
+        dest = VERMELHO if escuro else VERMELHO_CLARO
     chamada = (f'<p style="margin:0;font-family:Archivo,sans-serif;font-weight:700;font-size:20px;letter-spacing:3px;text-transform:uppercase;color:{dest}">'
                f'{html.escape(s.get("chamada", ""))}</p>') if s.get("chamada") else ""
     maxt = 72 if tipo != "capa" else 66   # fixo: o post.json não muda o tamanho
@@ -453,18 +465,23 @@ def slide(s: dict, foto_uri: str | None = None) -> str:
         extra = f'<div style="margin-top:44px;display:flex;flex-direction:column;gap:20px">{"".join(linhas)}</div>'
 
     if tipo == "capa":
+        g = c["grad_rgb"] if c else "16,16,16"
+        topo_op = ".8" if c else ".55"
+        filtro = (c.get("foto_filtro") or "filter:contrast(1.05) saturate(.85)") if c else "filter:contrast(1.05) saturate(.85)"
         foto = (f'<div id="foto" data-min="760" style="position:absolute;left:0;right:0;top:0;height:930px;overflow:hidden">'
-                f'<img src="{foto_uri}" alt="{html.escape(s.get("alt", ""))}" style="display:block;width:100%;height:100%;object-fit:cover;object-position:{s.get("foto_posicao","50% 40%")};filter:contrast(1.05) saturate(.85)">'
-                f'<div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(16,16,16,.55) 0%,rgba(16,16,16,0) 16%,rgba(16,16,16,0) 48%,rgba(16,16,16,.85) 80%,#101010 100%)"></div></div>') if foto_uri else ""
+                f'<img src="{foto_uri}" alt="{html.escape(s.get("alt", ""))}" style="display:block;width:100%;height:100%;object-fit:cover;object-position:{s.get("foto_posicao","50% 40%")};{filtro}">'
+                f'<div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba({g},{topo_op}) 0%,rgba({g},0) {"20" if c else "16"}%,rgba({g},0) 48%,rgba({g},.85) 80%,{bg} 100%)"></div></div>') if foto_uri else ""
         bloco = f'<div id="bloco" data-limite="420" style="position:absolute;z-index:2;left:80px;right:80px;bottom:200px">{chamada}{titulo}{apoio}</div>'
     else:
         foto = ""
-        bloco = f'<div id="bloco" data-limite="160" style="position:absolute;z-index:2;left:80px;right:80px;top:168px">{chamada}{titulo}{apoio}{extra}</div>'
+        topo_int = 168 if not c else (230 if ed == "roca" else 190)
+        bloco = f'<div id="bloco" data-limite="160" style="position:absolute;z-index:2;left:80px;right:80px;top:{topo_int}px">{chamada}{titulo}{apoio}{extra}</div>'
 
     papel = (f'<img src="{PAPEL.as_uri()}" alt="" style="position:absolute;z-index:5;left:0;top:0;width:{W}px;height:{H}px;'
              f'mix-blend-mode:{"overlay" if escuro else "multiply"};opacity:{0.35 if escuro else 0.55};pointer-events:none">')
     corpo = (f'<div style="width:{W}px;height:{H}px;position:relative;overflow:hidden;background:{bg};color:{tx};font-family:Archivo,sans-serif">'
-             f'{foto}{bloco}{_rodape_carrossel(s.get("fonte", ""), escuro)}{papel}{MARCA_SIMPLES.format(cor=tx)}</div>')
+             f'{foto}{bloco}{_rodape_carrossel(s.get("fonte", ""), escuro, dest if c else None)}{papel}'
+             f'{_marca(ed, c, 0.75) if c else MARCA_SIMPLES.format(cor=tx)}</div>')
     pagina = _pagina(corpo, bg)
     if tipo != "capa":
         # slides internos crescem de cima pra baixo: o encaixe mede o fim do bloco contra o rodapé

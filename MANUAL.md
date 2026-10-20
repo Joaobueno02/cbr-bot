@@ -374,6 +374,9 @@ mesma notícia nas outras fontes, compare as versões e escreva a **nossa** a pa
   "legenda": "...", "hashtags": ["...5..."], "fontes": [...]
 }
 ```
+**Visual do carrossel (regra do João, 20/10/2026)**: o carrossel segue a estética da editoria, como o post único
+(marca, cor de destaque e fundo da editoria: Saúde em turquesa, Eleições em amarelo, Economia/Educação no fundo claro etc.).
+Só Gerais usa o modelo crítico vermelho com o CBR simples. O campo `fundo` dos slides é ignorado fora de Gerais.
 De 4 a 8 slides. A capa precisa prender sozinha. O último slide chama para ação
 (salvar, compartilhar, seguir).
 

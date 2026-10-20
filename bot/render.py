@@ -158,7 +158,7 @@ def processar(pasta: Path, pagina) -> None:
                         rel["avisos"].append(f"slide {i}: {meta['aviso']}")
                     uri = (pasta / f"foto-{i}.jpg").as_uri()
                 html_path = pasta / f"arte-{i}.html"
-                html_path.write_text(arte.slide(s, uri), encoding="utf-8")
+                html_path.write_text(arte.slide(s, uri, post.get("editoria", "gerais")), encoding="utf-8")
                 fit = capturar(pagina, html_path, pasta / f"arte-{i}.jpg")
                 rel["artes"].append({"arquivo": f"arte-{i}.jpg", **fit})
         sem_fonte = [a["arquivo"] for a in rel["artes"] if a.get("fontes_ok") is False]
