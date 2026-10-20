@@ -19,8 +19,8 @@ import time
 import requests
 
 URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
-MODELOS = [m for m in [os.environ.get("GEMINI_MODEL", "").strip(), "gemini-2.5-flash", "gemini-flash-latest",
-                       "gemini-2.5-flash-lite"] if m]
+MODELOS = [m for m in [os.environ.get("GEMINI_MODEL", "").strip(), "gemini-3.8-flash", "gemini-3.5-flash",
+                       "gemini-flash-latest", "gemini-3.5-flash-lite"] if m]
 LOTE = 25
 TETO_DIA = 200
 EDITORIAS = ["eleicoes", "politica", "economia", "educacao", "saude", "gerais", "america_latina", "roca", "fora"]
@@ -98,7 +98,7 @@ def _chamar(itens: list[dict], publicados: list[str], chave: str) -> tuple[list[
                 msg = str(j.get("error", {}).get("message", ""))[:140]
             except Exception:
                 msg = ""
-            erro = f"{modelo}: HTTP {r.status_code} {msg}".strip()
+            erro = (erro + " | " if erro else "") + f"{modelo}: HTTP {r.status_code} {msg[:60]}".strip()
             if r.status_code in (500, 502, 503):
                 time.sleep(8)
                 continue
