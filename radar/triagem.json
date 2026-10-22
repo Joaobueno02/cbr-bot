@@ -1,6 +1,6 @@
 {
- "quando": "2026-10-22T14:35:12Z",
- "pauta_quando": "2026-10-22T14:35:11Z",
+ "quando": "2026-10-22T14:42:08Z",
+ "pauta_quando": "2026-10-22T14:42:07Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -8,15 +8,15 @@
   "ia": "gemini",
   "ok": true,
   "erro": null,
-  "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 23,
-  "falhas_antes": null,
-  "pedidos_hoje": 4
+  "modelo": "gemini-3.5-flash",
+  "avaliados_agora": 10,
+  "falhas_antes": "gemini-3.8-flash: ReadTimeout | gemini-3.5-flash: HTTP 503 This model is currently experiencing high demand. Spikes in",
+  "pedidos_hoje": 8
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 146,
- "novos_3h": 16,
- "esquentaram": 3,
+ "total_assuntos": 149,
+ "novos_3h": 17,
+ "esquentaram": 2,
  "candidatos": [
   {
    "manchete": "Flávio Bolsonaro deve ignorar desafio de quebra de sigilo proposto por Lula",
@@ -24,8 +24,8 @@
     "B",
     "D-famosos"
    ],
-   "veiculos": 264,
-   "veiculos_3h": 199,
+   "veiculos": 431,
+   "veiculos_3h": 314,
    "na_pauta_desde": "2026-10-22T14:35:11Z",
    "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/10/flavio-bolsonaro-deve-ignorar-desafio-de-quebra-de-sigilo-proposto-por-lula.shtml",
    "editoria": "eleicoes",
@@ -48,41 +48,16 @@
    }
   },
   {
-   "manchete": "Às vésperas da eleição, Angélica declara voto em Lula e diz: 'Não sou petista'",
-   "secoes": [
-    "D-famosos"
-   ],
-   "veiculos": 20,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-22T14:35:11Z",
-   "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPQl9Md2l2V2RWdTRFUW9tQXhJZWxCRkdrV0tXei1Cd2JIZXJMWEE4am1ySjU1VUlSMnNyTkNGWVc3ajNad1A1b1FFc0Vld2lPWlFmZmN2cnFNRHlPWnBHWmpqXzY3cE1GWUlNX2tVRFB0QUc0YnpONmxfZC1Mbkl2M2syeWNFTnlMbVJNMXhtbDZNNXhNaWludjhJckgtbWRwVS1FejNXVFlnN2l4Rnhza0phTGFRaEdZMHlVVi16R1cyUlBYRm16WnRB?oc=5",
-   "editoria": "eleicoes",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 3,
-    "V": 3,
-    "P": 1,
-    "formato": "reels",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Famosos declarando voto geram forte engajamento na reta final.",
-    "soma": 6
-   }
-  },
-  {
    "manchete": "INSS: Justiça libera R$ 2,9 bilhões em atrasados; veja quem tem direito a receber e como consultar",
    "secoes": [
     "B"
    ],
-   "veiculos": 14,
-   "veiculos_3h": 5,
+   "veiculos": 10,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-10-22T14:35:11Z",
    "link": "https://g1.globo.com/economia/noticia/2026/10/21/inss-justica-libera-r-29-bilhoes-em-atrasados-veja-quem-tem-direito-a-receber-e-como-consultar.ghtml",
    "editoria": "economia",
-   "nota": 6,
+   "nota": 5,
    "esquentou": false,
    "lente": [
     "direito",
@@ -101,46 +76,75 @@
    }
   },
   {
-   "manchete": "Kassio e Mendonça fizeram minuta para vetar canais políticos de WhatsApp antes do 2º turno; chefe do TSE descarta medida",
+   "manchete": "Angélica declara voto em Lula e revela por que estava em silêncio",
    "secoes": [
-    "B"
+    "B",
+    "D-famosos"
    ],
-   "veiculos": 29,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-21T22:47:08Z",
-   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/10/kassio-e-mendonca-propoem-proibir-canais-de-whatsapp-politicos-nas-48-horas-antes-do-segundo-turno.shtml",
+   "veiculos": 38,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-10-22T05:02:53Z",
+   "link": "https://g1.globo.com/trabalho-e-carreira/concursos/noticia/2026/10/22/qual-o-futuro-dos-concursos-publicos-veja-o-que-propoem-lula-e-flavio-bolsonaro.ghtml",
    "editoria": "eleicoes",
    "nota": 5,
-   "esquentou": false,
+   "esquentou": true,
    "lente": [],
+   "outras_manchetes": 1,
    "ia": {
     "editoria": "eleicoes",
-    "I": 3,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
+    "I": 2,
+    "V": 3,
+    "P": 1,
+    "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "TSE decide sobre regulação de redes sociais na reta final.",
+    "motivo": "Apoio de celebridades gera forte engajamento e repercussão na reta final da eleição.",
     "soma": 5
    }
   },
   {
-   "manchete": "Governo Trump vai usar Itaipu para abastecer empresas norte-americanas de tecnologia",
+   "manchete": "Plano de Milei gera superávit fiscal, mas agrava crise social, inadimplência e fome. Modelo serve ao Brasil?",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-22T14:35:11Z",
+   "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOQVFZSFhzZlpsbWdmZWE4NGxnM3R4bEJhcXdGRGIyUFo0bmZmU3FkejdYZmVLNVlIZk9jbnlHYnAxWGhBRnQ2VkFKU3FrcWdvYl8yeTIxV2l2RkJpWVI2ZXV3a1puci1mNGY4RW5ybDVBbTNYekNPSVJkcDVzaUxabkV4OVFLaWZadm1zT1IwUTBDZnZRc1BJYTRmZ2NWbWRpempUSk0zb25OS3ZjNC01dmlHSWw1MllCMHNDb3NPdWhBenlDSTdvSG9IT25qSWpmNkZ6LXhB?oc=5",
+   "editoria": "roca",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "fome",
+    "milei"
+   ],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 3,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Exemplo do custo humano do arrocho de Milei para alertar contra políticas neoliberais.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Ex-candidata à Presidência do Equador Luisa González é presa",
    "secoes": [
     "B",
+    "C-nacional",
     "D-america_latina"
    ],
-   "veiculos": 13,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-10-21T22:47:08Z",
-   "link": "https://g1.globo.com/mundo/noticia/2026/10/21/governo-trump-avalia-usar-itaipu-para-abastecer-empresas-norte-americanas-de-tecnologia.ghtml",
+   "veiculos": 7,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-10-22T14:42:07Z",
+   "link": "https://www.cartacapital.com.br/mundo/ex-candidata-presidencial-de-esquerda-luisa-gonzalez-e-detida-no-equador/",
    "editoria": "america_latina",
-   "nota": 6,
-   "esquentou": true,
-   "lente": [
-    "trump"
-   ],
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
    "ia": {
     "editoria": "america_latina",
     "I": 2,
@@ -148,8 +152,8 @@
     "P": 2,
     "formato": "feed",
     "repetido": false,
-    "risco": "",
-    "motivo": "Envolve soberania energética e os EUA na América Latina.",
+    "risco": "Confirmar acusações oficiais antes de apontar perseguição política",
+    "motivo": "Prisão de liderança da esquerda equatoriana gera impacto na política latino-americana.",
     "soma": 4
    }
   },
@@ -181,29 +185,30 @@
    }
   },
   {
-   "manchete": "Flávio aciona TSE para cobrar explicações da Meta sobre 'Exército do Lula'",
+   "manchete": "Governo Trump vai usar Itaipu para abastecer empresas norte-americanas de tecnologia",
    "secoes": [
-    "B"
+    "B",
+    "D-america_latina"
    ],
-   "veiculos": 52,
-   "veiculos_3h": 8,
-   "na_pauta_desde": "2026-10-22T14:35:11Z",
-   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/10/lula-mira-aumento-na-rejeicao-de-flavio-bolsonaro-na-reta-final-com-pressao-por-abertura-de-sigilo.shtml",
-   "editoria": "eleicoes",
+   "veiculos": 10,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-21T22:47:08Z",
+   "link": "https://g1.globo.com/mundo/noticia/2026/10/21/governo-trump-avalia-usar-itaipu-para-abastecer-empresas-norte-americanas-de-tecnologia.ghtml",
+   "editoria": "america_latina",
    "nota": 5,
-   "esquentou": false,
+   "esquentou": true,
    "lente": [
-    "flavio"
+    "trump"
    ],
    "ia": {
-    "editoria": "eleicoes",
+    "editoria": "america_latina",
     "I": 2,
     "V": 2,
-    "P": 1,
+    "P": 2,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Disputa de narrativas e fake news eleitorais.",
+    "motivo": "Envolve soberania energética e os EUA na América Latina.",
     "soma": 4
    }
   },
@@ -212,8 +217,8 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 10,
-   "veiculos_3h": 8,
+   "veiculos": 7,
+   "veiculos_3h": 5,
    "na_pauta_desde": "2026-10-22T14:35:11Z",
    "link": "https://noticias.uol.com.br/eleicoes/2026/10/22/campanha-de-flavio-poe-deltan-para-analisar-dados-de-sigilos-de-lula.ghtm",
    "editoria": "eleicoes",
@@ -231,35 +236,6 @@
     "repetido": false,
     "risco": "",
     "motivo": "Uso político de dados e sigilos na campanha.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Ex-candidata à Presidência do Equador Luisa González é presa em investigação sobre lavagem de dinheiro",
-   "secoes": [
-    "B",
-    "C-nacional",
-    "D-america_latina"
-   ],
-   "veiculos": 6,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-10-22T14:35:11Z",
-   "link": "https://www.cartacapital.com.br/mundo/ex-candidata-presidencial-de-esquerda-luisa-gonzalez-e-detida-no-equador/",
-   "editoria": "america_latina",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "lavagem"
-   ],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Prisão de oposicionista no Equador mobiliza a região.",
     "soma": 4
    }
   },
@@ -291,172 +267,179 @@
    }
   },
   {
-   "manchete": "PF encontra sala secreta em hangar de amigo de Flávio",
+   "manchete": "Mutirões ampliam acesso a cirurgias pelo SUS no Hospital São José",
    "secoes": [
-    "B"
-   ],
-   "veiculos": 12,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-10-22T14:35:11Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/10/21/pf-diz-que-encontrou-sala-secreta-com-maquina-de-contar-dinheiro-no-hangar-de-willer-tomaz-veja-imagens.ghtml",
-   "editoria": "politica",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "flavio"
-   ],
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Investigação atinge diretamente o entorno de candidato.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Plano de Milei gera superávit fiscal, mas agrava crise social, inadimplência e fome. Modelo serve ao Brasil?",
-   "secoes": [
-    "D-terra"
+    "C-nacional"
    ],
    "veiculos": 2,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-22T14:35:11Z",
-   "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOQVFZSFhzZlpsbWdmZWE4NGxnM3R4bEJhcXdGRGIyUFo0bmZmU3FkejdYZmVLNVlIZk9jbnlHYnAxWGhBRnQ2VkFKU3FrcWdvYl8yeTIxV2l2RkJpWVI2ZXV3a1puci1mNGY4RW5ybDVBbTNYekNPSVJkcDVzaUxabkV4OVFLaWZadm1zT1IwUTBDZnZRc1BJYTRmZ2NWbWRpempUSk0zb25OS3ZjNC01dmlHSWw1MllCMHNDb3NPdWhBenlDSTdvSG9IT25qSWpmNkZ6LXhB?oc=5",
-   "editoria": "roca",
-   "nota": 5,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-22T14:42:07Z",
+   "link": "https://g1.globo.com/sc/santa-catarina/especial-publicitario/hospital-sao-jose/noticia/2026/10/22/mutiroes-ampliam-acesso-a-cirurgias-pelo-sus-no-hospital-sao-jose.ghtml",
+   "editoria": "saude",
+   "nota": 4,
    "esquentou": false,
    "lente": [
-    "fome",
-    "milei"
+    "sus"
    ]
   },
   {
-   "manchete": "Britânica passa por transplante de fígado após usar ashwagandha; Anvisa alerta sobre proibição de erva no Brasil",
+   "manchete": "Dia Nacional da Alimentação Escolar, celebrado em 21 de outubro, destaca investimentos de Gurupi na agricultura familiar",
    "secoes": [
-    "B"
+    "D-terra"
    ],
-   "veiculos": 9,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-10-21T22:47:08Z",
-   "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNOTctM2tSVnJkUF96Y3djRWowVG80SEc3MmVobDBwMjAxMDRDMkcyejA0VV9aSHVXSWhlZlFFUkRsaEFta1BhQkNjTmlBQ3JNN2s1cnlrWkM3LVJpY0p3NTd2MUlLMzVUTXJ6Z0NhODJvU0VjbFlVdk1IZFhBMm5PM3BFdTZ3a2ItakZBLWFQSFRNWFlHWTNoVkZNaU93RnExQ1Q2VnN2VWdNa2pDRmJsOG5QaUhubDBaTEM2YUFQblBuWkd5Q2JCanJIZ3lYMmR6SEVVN1RGRjN4NVNEVHNWVTdaVmExWEYycDRPalo4UmNGSHRmS3fSAYQCQVVfeXFMUG00c0RXTkNYUHRIdkhuZWJiWUc2a3BWV2tXQVhfMER3T0xXeXhOMWlvckhoc0pjOXZqQk4yZ2tYLUxpRFBjcmhfT3FtNjVVVzVqMHJpekR5ZjhXYkxqNFFDdWY0RG53NjE4MnFWd0lxLWZkdHVuWVJ0Z21lTm5yVzV4bHdhalNxRDJsWEs4UEE4MTQzbUMwbzVSVHFnZDR0YzFlZkk0aUo2OHJIT1N4WHBnZEd6WGZMYWVyeWVLby1mTktPczk5LUFZYWJDQks1c2tjM3hIeTdtT2RGaGVjS2F2ajdZYWtCcWNzVVNWT2FKRHBoa2xpc21VMjhYOG1NeHJQLWQ?oc=5",
-   "editoria": "saude",
-   "nota": 4,
-   "esquentou": true,
-   "lente": []
-  },
-  {
-   "manchete": "Termina hoje prazo para realização de comícios e ações de campanha",
-   "secoes": [
-    "B",
-    "C-nacional"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-10-22T14:35:11Z",
-   "link": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/termina-hoje-prazo-para-realizacao-de-comicios-e-acoes-de-campanha",
-   "editoria": "eleicoes",
+   "veiculos": 14,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-22T14:42:07Z",
+   "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPR1UzTHNndTBreEpMblFMYlhnUUlCc1N4clFzd1kxN3R4MW9MZXBQRHdBeTlSSkRiMFcwaHVhTGFxUWg5YXcyckU5MUM4bkhrUGQxNU0yNTg2VE1QRFBNSEJzN290ekRMTm1SdjRCZ0JEWmRrQzQ0RlRpNlhaRElvd0ltMWtzWldKeGh4bGgxdE04bkRiUU5MSEE3VzJQcGd4elFuX20zOHlIdmJvbVVOaENvQl9mYXhNWVA3TDN4cFN1WndsUWNESU1HdXVud3Y1d0E0Zk8zZ0JOWjluZnpMLWRJenBNOHpOZDNWa3JxTEUxWGRkcFVkbGVVNk53LTlpdzFZ?oc=5",
+   "editoria": "roca",
    "nota": 4,
    "esquentou": false,
    "lente": []
   },
   {
-   "manchete": "Brazil's Congress's shift to the right could change Latin America's powerhouse. Here’s what to know",
+   "manchete": "Cuba denuncia presiones \"inéditas\" de EEUU para restar apoyos a una votación contra el embargo en la ONU",
    "secoes": [
-    "B",
-    "C-internacional",
     "D-america_latina"
    ],
-   "veiculos": 4,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-10-22T14:35:11Z",
-   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPNFAwYWV0TlBOQk5yRDhueUxMWloxWXpnZlpRazVPZE5VNk9sbjNjcEZSRkJ5S0hheFdaZ1hwQUVFc0k0OE1abWh3Snh0MVJTMDRMcU0tYmFnNXlfVHE1Rktqd3ZTMDNBZWIzMTlmT18ycnhiN2h1dWpMaHNzVTlTdzBoSDUyclNMY0dpa2NsMm1JOTRBM3V6c0NKR0JrV0JNdjFTc005UQ?oc=5",
+   "veiculos": 8,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-22T14:42:07Z",
+   "link": "https://www.nodal.am/2026/10/cuba-canciller-denuncia-presiones-de-eeuu-contra-la-votacion-de-la-resolucion-sobre-el-bloqueo-en-la-onu/",
    "editoria": "america_latina",
    "nota": 4,
    "esquentou": false,
    "lente": []
   },
   {
-   "manchete": "IAT vai investir R$ 39,1 milhões em 13 projetos de agroecologia no Paraná",
+   "manchete": "Chile suspende importação de produtos avícolas de Santa Catarina após caso de Newcastle",
    "secoes": [
-    "B",
-    "C-nacional",
+    "D-america_latina"
+   ],
+   "veiculos": 7,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-22T14:42:07Z",
+   "link": "https://g1.globo.com/sc/santa-catarina/noticia/2026/10/22/doenca-newcastle-6-mil-aves-abatidas-granja-oeste-sc.ghtml",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "ALMT aprova projetos de apoio à agricultura familiar, saúde e educação em sessão ordinária",
+   "secoes": [
     "D-terra"
    ],
-   "veiculos": 4,
-   "veiculos_3h": 4,
+   "veiculos": 6,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-10-22T14:35:11Z",
-   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOcTZOQmV0X2RYeUYzanVPWjA4bEhGdTFvRG5FN2VPTy04bWdWMGR6SFZseXZyQTE3Y3F0eng0R2ZVVVpRU1JWekxsTHRqUnZya2h6VGhISG1OSldIZ2Z1c1Bjd1dpRlNZbXFvVTI4TXMyN0YycXdrTktxbkhyWmItZ2xhS3dOR3ZCVW5JZ1FwdEVPUFVna2tQUmEzcDlCNVZQSVpkcHV3bnhnYWNYNXhfT0pWdXlvUQ?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQRmNJZmc2N2ZIdkJ1ZFVnclVVY1hTX0tHcUFseVp0WG1pNjR6OEdFUkhjTFM0QUVsUk10QVdOemJram1STV9mTGhETmc5OXdsMjl0NnEwbVo4eUJSZ0NyNWJGTE9DT1pRWm9FZk94dWRTcUZIakpQRTQ1dmg1Y1dCWDNxMUd0YVJLR2tzU25WUlV2OFhNalVvTVN6NXljVkE4TlJMTlJvWTVQTUN0VzNWQTVkcjhhRjhUbV8xMjVtMGVaeGlTYzZlbHFQRFYxVHlyR1lj?oc=5",
    "editoria": "roca",
    "nota": 4,
    "esquentou": false,
    "lente": []
   },
   {
-   "manchete": "STF – Inclusão do PIS e da Cofins na base de cálculo do ISS – 21/10/2026",
+   "manchete": "Relatora defende resgate da dignidade humana no combate à fome",
    "secoes": [
-    "B"
+    "D-terra"
    ],
-   "veiculos": 23,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-10-21T16:08:15Z",
-   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/10/governo-perde-no-stf-julgamento-sobre-iss-e-piscofins-mas-pode-escapar-de-restituicao.shtml",
-   "editoria": "politica",
-   "nota": 4,
-   "esquentou": true,
-   "lente": []
-  },
-  {
-   "manchete": "Os números da pesquisa Palver para presidente no 2º turno",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 18,
-   "veiculos_3h": 3,
+   "veiculos": 2,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-10-22T14:35:11Z",
-   "link": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/palver-presidente-outubro-2026-segundo-turno/",
-   "editoria": "eleicoes",
+   "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE05cldITWxTRnE5TUo5ZVBxSVZvMlFXSTNLdG14SWJ6X0RXdE5JaVplT2FUNFFOXzE4bGpUMGR1ZlVhTE1CbTBDcHl2elVhMk1kRlRfdTNSMA?oc=5",
+   "editoria": "roca",
    "nota": 4,
    "esquentou": false,
-   "lente": []
+   "lente": [
+    "fome"
+   ]
   },
   {
-   "manchete": "Câncer do Papa Leão XIV não se espalhou e não exigirá tratamento adicional, diz Vaticano",
+   "manchete": "Campanha Natal Sem Fome 2026 inclui panetone e beneficia 2.800 famílias do Viva Leite",
    "secoes": [
-    "B"
+    "D-terra"
    ],
-   "veiculos": 12,
-   "veiculos_3h": 3,
+   "veiculos": 4,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-22T14:35:11Z",
-   "link": "https://g1.globo.com/mundo/noticia/2026/10/21/cancer-do-papa-leao-xiv-estava-localizado-e-nao-exigira-tratamento-adicional-diz-vaticano.ghtml",
-   "editoria": "saude",
+   "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNaG5kMWxWQWI1TVBleWxSZ3pkZGt5WHVtODdjRU1IeUhReEo3azRDNGRRNWtwLTlvZW1sNlFGS2lNNWtiV2YzNExfc1ZLTmt1cHRNeWducnJKQVVkUTl3RXBweHRqY2xqWldtLUF3dUYybDBkLVItTnZWTkdnX1NaN1ZmQ1dzWTlrQW5kcGNmVXBXcUtQVWNYZE9ZTjRlZDY0aV9zRzVWcVY4YXdNc3lmN1FXLXBvZVlxRGZvQXpQdnRvTmxHS2hvbzk5Y3paRUNnY2pFUlBWS09SY1hM?oc=5",
+   "editoria": "roca",
    "nota": 4,
    "esquentou": false,
-   "lente": []
+   "lente": [
+    "fome"
+   ]
   },
   {
-   "manchete": "Unicamp divulga gabarito oficial da primeira fase do vestibular 2027",
+   "manchete": "MPF processa ex-prefeito de Boca do Acre (AM) e construtora por extração ilegal de minério em terra indígena",
    "secoes": [
-    "B"
+    "D-terra"
    ],
-   "veiculos": 19,
+   "veiculos": 3,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-21T23:26:59Z",
+   "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOdDcyZFVZdmx1Tkp1MHJHaklfZzhhcmVXdFhqVGtIbDlLV214bTdNd0lCdjdSQ0Y5ZlkwTTJzZ0Zzd2tWWWxGcGVNVnBVektXcmN1Nzl6eG1Xd0tsVGd2MndRYnZKY040N25jQzJuUHNKWUlOVzlCdElYa29vUDRmYkJsbmhMTWpMSlA5T3ZDTGhQNnkwbGpncDRRRC13MGp1XzM0azgwbnhHWXFqSEtDVE1lSUJXRVpQbjdUUy1XOHhMQXVsOEdpczhhY0dRbjAySVNmMjRB?oc=5",
+   "editoria": "roca",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "indigena"
+   ]
+  },
+  {
+   "manchete": "Carrefour anuncia venda de 22 lojas ao Pátria Investimentos e passa a pagar aluguel para continuar operando; entenda",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 2,
    "veiculos_3h": 2,
    "na_pauta_desde": "2026-10-22T14:35:11Z",
-   "link": "https://redir.folha.com.br/redir/online/educacao/rss091/*https://www1.folha.uol.com.br/educacao/2026/10/unicamp-divulga-gabarito-oficial-da-primeira-fase-do-vestibular-2027.shtml",
-   "editoria": "educacao",
-   "nota": 4,
+   "link": "https://g1.globo.com/economia/negocios/noticia/2026/10/22/carrefour-patria-investimentos.ghtml",
+   "editoria": "economia",
+   "nota": 3,
    "esquentou": false,
-   "lente": []
+   "lente": [
+    "aluguel"
+   ]
+  },
+  {
+   "manchete": "Saiba quando entra em vigor nova jornada de trabalho",
+   "secoes": [
+    "C-pesquisa"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-22T14:42:07Z",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQT1lmT0NHVmcyMzkydXJBQ1hiRHJKRFh3aDM0M1pLNHFYTUVZT196Rk9fdmhnNzc2c3hZblA2ak9lb0NRSUZ4dWptTUFYZnJsd0toQzdoZHNuTFpncVNJaGdiU0dJV0lsZ1VPS2Vkc2g4Mm5RTEtoLWtzN0xtTGFlamJzYjg2WnUtcHo5VFJRbUN2dXR3V0dWeQ?oc=5",
+   "editoria": "economia",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "jornada"
+   ]
+  },
+  {
+   "manchete": "Altamira decreta situação de emergência por incêndios florestais no Pará",
+   "secoes": [
+    "C-pesquisa"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-22T14:35:11Z",
+   "link": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/chuvas-defesa-civil-decreta-situacao-de-emergencia-em-cidades-do-sul",
+   "editoria": "gerais",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "incendio"
+   ]
   }
  ],
  "rebaixados": [
   {
    "manchete": "Nova edição da Revista – A nova onda de reformas previdenciárias na América Latina*",
-   "veiculos": 11,
-   "veiculos_3h": 6,
+   "veiculos": 9,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-10-22T14:35:11Z",
    "esquentou": false,
    "ia": {
@@ -468,6 +451,24 @@
     "repetido": false,
     "risco": "",
     "motivo": "Análise profunda sobre reformas neoliberais na região.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Brazil's Congress's shift to the right could change Latin America's powerhouse. Here’s what to know",
+   "veiculos": 5,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-10-22T14:35:11Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 1,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Análise sobre o avanço conservador no Congresso e impactos na geopolítica regional.",
     "soma": 3
    }
   },
@@ -491,8 +492,8 @@
   },
   {
    "manchete": "Governo Trump fecha acordo para usar energia de Itaipu e enviar agentes ao Paraguai",
-   "veiculos": 10,
-   "veiculos_3h": 1,
+   "veiculos": 13,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-10-22T00:57:21Z",
    "esquentou": false,
    "ia": {
@@ -504,42 +505,6 @@
     "repetido": false,
     "risco": "",
     "motivo": "Acordo energético envolvendo Itaipu e presença dos EUA na região.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "STF referenda suspensão de decreto que ampliou terra indígena em Mato Grosso quanto à Fazenda Rival",
-   "veiculos": 2,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-22T05:02:53Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 1,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Decisão do STF sobre demarcação de terra indígena.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "PF faz operação em 5 estados contra pirâmide de criptomoedas e mira bloqueio de R$ 100 milhões",
-   "veiculos": 10,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-10-22T14:35:11Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "economia",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Operação contra golpes financeiros e pirâmides.",
     "soma": 3
    }
   },
@@ -562,8 +527,26 @@
    }
   },
   {
+   "manchete": "Termina hoje prazo para realização de comícios e ações de campanha",
+   "veiculos": 5,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-10-22T14:35:11Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Aviso de serviço importante sobre os prazos finais das campanhas eleitorais.",
+    "soma": 3
+   }
+  },
+  {
    "manchete": "Senado peruano dá a Keiko Fujimori poder para promulgar leis contra o crime organizado sem passar pelo Congresso",
-   "veiculos": 19,
+   "veiculos": 20,
    "veiculos_3h": 4,
    "na_pauta_desde": "2026-10-22T14:35:11Z",
    "esquentou": false,
@@ -580,26 +563,8 @@
    }
   },
   {
-   "manchete": "SAF entrega 35 toneladas de alimentos a 26 entidades em Teresina",
-   "veiculos": 6,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-10-22T14:35:11Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "roca",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Ações de combate à fome e distribuição de alimentos.",
-    "soma": 3
-   }
-  },
-  {
    "manchete": "Lula y Bolsonaro buscan anular sus candidaturas en Brasil con acusaciones de tretas en redes",
-   "veiculos": 13,
+   "veiculos": 14,
    "veiculos_3h": 2,
    "na_pauta_desde": "2026-10-22T14:35:11Z",
    "esquentou": false,
@@ -616,20 +581,38 @@
    }
   },
   {
-   "manchete": "Tereza Cristina defende virada no Brasil para destravar o Nordeste e convoca eleitores a eleger Flávio Bolsonaro em ato no Recife",
-   "veiculos": 6,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-22T00:57:21Z",
+   "manchete": "Governo de SC promove aulões preparatórios do Enem para mais de 11 mil estudantes da rede estadual - Secretaria de Estado da Educação",
+   "veiculos": 8,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-21T22:47:08Z",
    "esquentou": true,
    "ia": {
-    "editoria": "eleicoes",
+    "editoria": "educacao",
     "I": 2,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Movimentação de campanha no Nordeste.",
+    "motivo": "Aulões para o Enem ajudam estudantes da rede pública.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "PF faz operação em 5 estados contra pirâmide de criptomoedas e mira bloqueio de R$ 100 milhões",
+   "veiculos": 6,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-22T14:35:11Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Operação contra golpes financeiros e pirâmides.",
     "soma": 3
    }
   }
@@ -637,16 +620,16 @@
  "obrigatorios": [],
  "descartados_mais_quentes": [
   {
-   "manchete": "Lula sanciona perdão de dívidas de MEIs e envia ao Congresso PEC do transporte gratuito a 4 dias do segundo turno",
-   "veiculos": 99,
-   "veiculos_3h": 21,
-   "motivo": "repetido (20261021-1515-mei-sancao)"
+   "manchete": "Lula envia ao Congresso PEC da tarifa zero em fins de semana",
+   "veiculos": 58,
+   "veiculos_3h": 11,
+   "motivo": "repetido (20261016-0845-tarifa-zero-fds-v2)"
   },
   {
-   "manchete": "Zelensky diz apoiar encontro trilateral com Rússia e EUA",
-   "veiculos": 22,
-   "veiculos_3h": 6,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
+   "manchete": "Emissões de gases-estufa caem pelo terceiro ano consecutivo no Brasil",
+   "veiculos": 19,
+   "veiculos_3h": 2,
+   "motivo": "sem editoria"
   },
   {
    "manchete": "Richarlison rebate advogado amigo de Flávio Bolsonaro em disputa por ilha",
@@ -655,34 +638,16 @@
    "motivo": "sem editoria"
   },
   {
-   "manchete": "França registra primeiro caso humano do vírus Shamonda, comum em gado; autoridades descartam risco à população",
+   "manchete": "EUA, Rússia e Ucrânia retomarão negociações trilaterais pelo fim da guerra, diz agência",
    "veiculos": 16,
-   "veiculos_3h": 10,
+   "veiculos_3h": 2,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Palmeiras toma susto contra Fluminense, mas passa para a final nos pênaltis",
-   "veiculos": 11,
-   "veiculos_3h": 3,
-   "motivo": "fora: esporte (palmeiras)"
-  },
-  {
-   "manchete": "Trump diz que CEO da Google rejeitou pedido para renomear Oceano Atlântico para 'Oceano das Américas'; VÍDEO",
-   "veiculos": 10,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Austrália abre ação coletiva contra Meta por danos a crianças",
-   "veiculos": 9,
-   "veiculos_3h": 5,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Flávio Bolsonaro fez festa em lancha com lobistas e prostitutas durante a pandemia, diz revista",
-   "veiculos": 9,
-   "veiculos_3h": 4,
-   "motivo": "sem editoria"
+   "manchete": "França registra primeiro caso humano do vírus Shamonda, comum em gado; autoridades descartam risco à população",
+   "veiculos": 15,
+   "veiculos_3h": 10,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
    "manchete": "Pivetta manda licitar túnel do Portão do Inferno e duplicação da MT-251 mesmo sem aval do Ibama: ‘se embargar, vamos recorrer à justiça’",
@@ -691,10 +656,28 @@
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Encuestas de las elecciones en Brasil 2026: así están Lula y Bolsonaro en los sondeos",
+   "manchete": "Austrália abre ação coletiva contra Meta por danos a crianças",
    "veiculos": 9,
+   "veiculos_3h": 3,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Flávio Bolsonaro fez festa em lancha com lobistas e prostitutas durante a pandemia, diz revista",
+   "veiculos": 8,
    "veiculos_3h": 4,
    "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Meta é condenada a pagar US$ 25 bi em processo relacionado à Cambridge Analytica",
+   "veiculos": 8,
+   "veiculos_3h": 2,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Quarto acusado da morte de Mãe Bernadete é condenado",
+   "veiculos": 8,
+   "veiculos_3h": 1,
+   "motivo": "fora: crime ou tragedia (morte)"
   }
  ]
 }
