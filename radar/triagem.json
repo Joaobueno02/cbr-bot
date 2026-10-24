@@ -1,6 +1,6 @@
 {
- "quando": "2026-10-24T13:24:25Z",
- "pauta_quando": "2026-10-24T13:24:24Z",
+ "quando": "2026-10-24T13:36:58Z",
+ "pauta_quando": "2026-10-24T13:36:58Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,27 +9,27 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 21,
+  "avaliados_agora": 7,
   "falhas_antes": null,
-  "pedidos_hoje": 5
+  "pedidos_hoje": 6
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 135,
- "novos_3h": 11,
- "esquentaram": 3,
+ "total_assuntos": 134,
+ "novos_3h": 8,
+ "esquentaram": 2,
  "candidatos": [
   {
    "manchete": "Ministro de Lula diz que Nunes Marques atua como assessor jurídico de Flávio",
    "secoes": [
     "B"
    ],
-   "veiculos": 64,
-   "veiculos_3h": 2,
+   "veiculos": 37,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-10-24T01:42:04Z",
-   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/10/ministro-do-tse-atende-a-campanha-do-pt-e-barra-suspensao-de-canal-exercito-do-lula-na-vespera-da-eleicao.shtml",
+   "link": "https://g1.globo.com/politica/noticia/2026/10/23/ministro-do-tse-barra-nova-suspensao-do-canal-exercito-do-lula.ghtml",
    "editoria": "politica",
    "nota": 5,
-   "esquentou": true,
+   "esquentou": false,
    "lente": [
     "flavio"
    ],
@@ -46,42 +46,45 @@
    }
   },
   {
-   "manchete": "Cármen Lúcia nega pedido da campanha de Lula para garantir transporte interestadual gratuito no 2º turno",
+   "manchete": "Salvador terá atos políticos pró-Lula e Flávio Bolsonaro na véspera do segundo turno; confira programação",
    "secoes": [
-    "B"
+    "B",
+    "D-famosos"
    ],
-   "veiculos": 17,
-   "veiculos_3h": 2,
+   "veiculos": 429,
+   "veiculos_3h": 202,
    "na_pauta_desde": "2026-10-24T13:24:24Z",
-   "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/10/23/carmen-lucia-nega-pedido-da-campanha-de-lula-para-garantir-transporte-interestadual-gratuito-no-2o-turno.ghtml",
+   "link": "https://www.congressoemfoco.com.br/noticia/123557/flavio-e-lula-quem-sao-os-candidatos-a-presidente-no-segundo-turno",
    "editoria": "eleicoes",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [],
+   "nota": 7,
+   "esquentou": true,
+   "lente": [
+    "bolsonar",
+    "flavio"
+   ],
    "ia": {
     "editoria": "eleicoes",
-    "I": 3,
+    "I": 2,
     "V": 3,
     "P": 2,
-    "formato": "reels",
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Decisão do STF afeta diretamente o acesso ao voto dos trabalhadores.",
-    "soma": 6
+    "motivo": "Atos de campanha na véspera da eleição em capital importante.",
+    "soma": 5
    }
   },
   {
    "manchete": "Preço dos alimentos: o que ficou mais caro e o que barateou na prévia da inflação de outubro",
    "secoes": [
-    "B",
     "D-terra"
    ],
-   "veiculos": 14,
+   "veiculos": 4,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-10-23T18:44:55Z",
    "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/10/23/preco-dos-alimentos-o-que-ficou-mais-caro-e-o-que-barateou-na-previa-da-inflacao-de-outubro.ghtml",
    "editoria": "roca",
-   "nota": 5,
+   "nota": 4,
    "esquentou": false,
    "lente": [
     "mais caro"
@@ -95,33 +98,6 @@
     "repetido": false,
     "risco": "",
     "motivo": "Inflação de alimentos afeta diretamente o custo de vida.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Alimentação e supermercado pesam no orçamento de 59% dos brasileiros, aponta Serasa",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-24T00:03:19Z",
-   "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxObURsQ3VRaGpRR2hNNXFUdmpvYk9vdU8yYzZpemtUMUV3RUpQNzhLZzVWYjltczd0SzhnNDJzbC1CUGJXYmhSYmxCMTRNTWg3dzlrdFBXREpSaVVrZDhzSGRqaXBiUEk0eG9VempSWDhOTjM2M2hZbmkyN2hUcm5PZVNXS2ZjS1N4dVA5bTJhNEN3S1F5VmN1TVd5NTBXR1lDbGZkdlJKVnk2a3ZPLWd0QTZYbVNjMzJNazdRZ3IyblBEWkFqcnl3QzdtT1FzWHVDRUhVU0pKS3gteExQRFRB0gHkAUFVX3lxTE83d2lnNHQ5SHVZWU0taVowOFlON1pBSnMzMGdoVzUyUURmeXc2UmZIRlo3U0tYOVVZZzh1eTVLMmhLSkNnTFQ5Z2VGWDdQbVhhZlk4UzY0cGpBMWVKQnBoRjBOUXQ3ZU5NQTRiTlV4a0pHZlRwU3pMVkREVnBLblNRczZneUdEWnpibzJWcm5RMmpyN2Nyb2FjM1BYMTJzNFAtSll6dTUxMEtJaHM4eWxtWDRYUzV0OEZvenFBZzY0QTBqTUV2U015eUVQWnJUZGUyUk9zUFlYZWRPNjN4cm1ZVmpoTA?oc=5",
-   "editoria": "politica",
-   "nota": 3,
-   "esquentou": true,
-   "lente": [
-    "orcamento"
-   ],
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Custo de vida elevado esmaga o orçamento da maioria dos brasileiros.",
     "soma": 5
    }
   },
@@ -158,8 +134,8 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 27,
-   "veiculos_3h": 3,
+   "veiculos": 26,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-10-24T13:24:24Z",
    "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/10/flavio-bolsonaro-advogou-durante-campanha-para-cliente-de-willer-e-peticionou-em-dia-da-votacao-da-6x1.shtml",
    "editoria": "eleicoes",
@@ -183,58 +159,27 @@
    }
   },
   {
-   "manchete": "Salvador terá atos políticos pró-Lula e Flávio Bolsonaro na véspera do segundo turno; confira programação",
-   "secoes": [
-    "B",
-    "D-famosos"
-   ],
-   "veiculos": 154,
-   "veiculos_3h": 52,
-   "na_pauta_desde": "2026-10-24T13:24:24Z",
-   "link": "https://www.congressoemfoco.com.br/noticia/123557/flavio-e-lula-quem-sao-os-candidatos-a-presidente-no-segundo-turno",
-   "editoria": "eleicoes",
-   "nota": 7,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ],
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Atos de campanha na véspera do segundo turno mobilizam a reta final.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Transporte coletivo de Maringá terá tarifa zero neste domingo (25), segundo turno das eleições",
+   "manchete": "Campanha de Lula se mobiliza contra possível retirada do canal Exército do Lula do ar; TSE nega ter determinado suspensão",
    "secoes": [
     "B"
    ],
-   "veiculos": 49,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-10-24T13:24:24Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/10/onibus-sera-gratuito-em-ao-menos-23-estados-no-domingo-de-eleicao.shtml",
+   "veiculos": 27,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-24T13:36:58Z",
+   "link": "https://g1.globo.com/politica/blog/natuza-nery/post/2026/10/23/campanha-lula-retirada-canal-exercito-do-lula.ghtml",
    "editoria": "eleicoes",
    "nota": 5,
    "esquentou": false,
-   "lente": [
-    "tarifa zero"
-   ],
+   "lente": [],
    "ia": {
     "editoria": "eleicoes",
     "I": 2,
     "V": 2,
-    "P": 1,
-    "formato": "feed",
+    "P": 2,
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Tarifa zero no domingo de eleição facilita o direito ao voto.",
+    "motivo": "Disputa sobre fake news e atuação da Justiça Eleitoral.",
     "soma": 4
    }
   },
@@ -269,7 +214,7 @@
     "B"
    ],
    "veiculos": 14,
-   "veiculos_3h": 2,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-10-24T01:42:04Z",
    "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/10/23/ministro-do-tse-manda-meta-revisar-retirada-de-video-de-mc-cabelinho-contra-flavio-bolsonaro.ghtml",
    "editoria": "eleicoes",
@@ -296,7 +241,7 @@
    "secoes": [
     "D-america_latina"
    ],
-   "veiculos": 20,
+   "veiculos": 19,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-10-24T01:42:04Z",
    "link": "https://g1.globo.com/mundo/noticia/2026/10/23/trump-diz-que-eua-vao-cuidar-de-cuba-depois-de-lidarem-com-ira.ghtml",
@@ -319,22 +264,6 @@
    }
   },
   {
-   "manchete": "TJDFT garante medicamento para esclerose múltipla não fornecido pelo SUS",
-   "secoes": [
-    "C-nacional"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-24T13:24:24Z",
-   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOM2VXdmpycEV1aGlZalhiX3ZNWnBrQkcyd2Z5cW5rQ3VUbF9FVlRQdGcyQVR0MFk5bDFQa0ZYU01acXJXcGp3ZWJ0blJXa094eFp5S3hFMmZ2MUN3WEwtUEpsRFctNTZPaEVJN1llcnJibllIaHl4Q1RyNVRpc1hzVDk0RWxDVkVVQ2FfRXJOZC1MRWtCb3piOHJRTzg3UU96?oc=5",
-   "editoria": "saude",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [
-    "sus"
-   ]
-  },
-  {
    "manchete": "Relatório da Unioeste aponta aumento de 3,20% no preço da cesta básica em Toledo",
    "secoes": [
     "C-nacional",
@@ -352,54 +281,6 @@
    ]
   },
   {
-   "manchete": "UEL oferece 497 bolsas de R$ 640 para estudantes de graduação em 2027",
-   "secoes": [
-    "C-universidades"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-24T13:24:24Z",
-   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOWG5BQUFBTTRZdUxLcDJSTjZMQWE5SVlWZE1PM3NONzN6WVZ6d0ZOOUNRQjR2c2x0SThPN1dHcWxScjFiTmh0YUF5TUVkeUVUZGlUdmdXXzQ4RjVKSUxZZmdDeVZpNTVXcDY4WDJpSk9HeGNpckV4TzczZ3ZUWWV0Tkk4QlpMQU9OUUdDU1RKX3NtVWJqZmdBM2ExVU1ZdXFIUjlDV0FKTDhoUnRBYjVxdkZvRmc?oc=5",
-   "editoria": "educacao",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [
-    "bolsas"
-   ]
-  },
-  {
-   "manchete": "Uma panela de arroz para 17 pessoas: a fome ameaça milhões na Somália",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-24T13:24:24Z",
-   "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPQU9vakEyVnZmd2RlUHo1YWlORUZVclNSSWJCb0VHQVhvVmIyTVQ1UUlWVTBZZnhISTNIQTJfM3d3NHp4U0NEZTdnS29QQnowc25obHVsSVNsWVZ5TUR0eGFkWWttR2x3T24tNUNfVmhYSDRITFZNMVVPc0dsYTM3dC1rT2ZKNG0xRXdiSjh0V3JhN0hxMS04cTVFLXJ6TS1MRGNrZ254VEVPVlQxSTlhejdHdTJVNm0tTjNMTnJkU0g2SnpFbmh2QUJVa0xQcS16TmZIZ1VoVkhQa3JoZlkyYg?oc=5",
-   "editoria": "roca",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [
-    "fome"
-   ]
-  },
-  {
-   "manchete": "Desocupação da Terra Indígena Urubu Branco deve atingir cerca de 150 famílias em Confresa (MT)",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-24T13:24:24Z",
-   "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOWE8wdS1FeDBxMWxlYkptOHhwSndOeHlsT3hDV1lXbVRqQkQwMnk1R1V1XzFhblRPbHVUYS1vREozQUdVY2ZBWFg4M2t6WVBuX3B5NFI5YzNOTEV3NkFUNmUzVUQxNFdTSmYwR1NCeEZzdmo5OFlibktxRHBsUnlOVHRWRmlyVDdycU9sRHM3UWtQQVlpY0MzTDF0dm1wdXlEd2g5Z2EyNjBheFloZG82OHFNZGVvNW4wT2pYREdtOFBoTmgzbGE1cG1ySm5wMVU2SUtzUG1yRElFbVVVUUN3eEhvSDd1cXpzaEtF?oc=5",
-   "editoria": "roca",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [
-    "indigena"
-   ]
-  },
-  {
    "manchete": "Fogo e desmatamento transformam amazônia em fonte de carbono para a atmosfera",
    "secoes": [
     "C-nacional"
@@ -413,6 +294,38 @@
    "esquentou": false,
    "lente": [
     "desmatamento"
+   ]
+  },
+  {
+   "manchete": "Desocupação da Terra Indígena Urubu Branco deve atingir cerca de 150 famílias em Confresa (MT)",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-24T13:24:24Z",
+   "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOWE8wdS1FeDBxMWxlYkptOHhwSndOeHlsT3hDV1lXbVRqQkQwMnk1R1V1XzFhblRPbHVUYS1vREozQUdVY2ZBWFg4M2t6WVBuX3B5NFI5YzNOTEV3NkFUNmUzVUQxNFdTSmYwR1NCeEZzdmo5OFlibktxRHBsUnlOVHRWRmlyVDdycU9sRHM3UWtQQVlpY0MzTDF0dm1wdXlEd2g5Z2EyNjBheFloZG82OHFNZGVvNW4wT2pYREdtOFBoTmgzbGE1cG1ySm5wMVU2SUtzUG1yRElFbVVVUUN3eEhvSDd1cXpzaEtF?oc=5",
+   "editoria": "roca",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "indigena"
+   ]
+  },
+  {
+   "manchete": "Mulungu do Morro: Cultura quilombola ganha espaço com edital da Pnab para realização de encontro comunitário",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-24T13:36:58Z",
+   "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNcHBGMTJ2MmdsWTZSZkJZaDZFZXJ5RmROekRRYXlKWkZvWlVQSkRqOVE0TTRTTWgyclVzQkFfY3JhOG05WDhoSThVZzdxWjY0TjRlUjN0QlU2LUFLN3J1OU9JeG1QaHpET002YUZyMGdjTWg4TGNHVnBKUEVaZUR1ODY5VlM0MGItSmFVZHI0bTVSTF9hM2VEcHdtNUFfcEpNN0taODdmeFg4NDVwWm5taVo2WXl4UDRkd09IWVV5ay1tRkRLUkxaanRhcFJvclZJWGpzRmt3?oc=5",
+   "editoria": "roca",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "quilombola"
    ]
   }
  ],
@@ -472,28 +385,10 @@
    }
   },
   {
-   "manchete": "Qual a chance de Lula ganhar a eleição de 2026? Veja as últimas pesquisas eleitorais",
-   "veiculos": 12,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-10-24T13:24:24Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Resumo de pesquisas eleitorais na reta final do segundo turno.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Anvisa proíbe venda de tiras de glicemia Accu-Chek Active falsificadas na Amazon",
-   "veiculos": 26,
+   "manchete": "Anvisa proíbe venda de produtos de limpeza sem regularização sanitária",
+   "veiculos": 22,
    "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-24T13:24:24Z",
+   "na_pauta_desde": "2026-10-24T13:36:58Z",
    "esquentou": false,
    "ia": {
     "editoria": "saude",
@@ -503,25 +398,7 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Alerta de saúde pública sobre produtos falsificados essenciais para diabéticos.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "SUS detecta HPV de alto risco em 9,9 mil amostras e amplia teste que identifica o vírus antes do câncer",
-   "veiculos": 2,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-24T13:24:24Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "saude",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Ampliação de teste preventivo no SUS protege a saúde da população.",
+    "motivo": "Medida sanitária da Anvisa sobre produtos de limpeza.",
     "soma": 3
    }
   },
@@ -544,9 +421,27 @@
    }
   },
   {
+   "manchete": "SUS detecta HPV de alto risco em 9,9 mil amostras e amplia teste que identifica o vírus antes do câncer",
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-24T13:24:24Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "saude",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Ampliação de teste preventivo no SUS protege a saúde da população.",
+    "soma": 3
+   }
+  },
+  {
    "manchete": "Eleições 2026: saiba a ordem de votação para governador e presidente no segundo turno",
-   "veiculos": 29,
-   "veiculos_3h": 4,
+   "veiculos": 32,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-10-24T13:24:24Z",
    "esquentou": false,
    "ia": {
@@ -559,24 +454,6 @@
     "risco": "",
     "motivo": "Serviço de utilidade pública sobre a ordem de votação.",
     "soma": 3
-   }
-  },
-  {
-   "manchete": "Quem é o pai do Bolsa Família? Veja a história do programa que tirou o Brasil do Mapa da Fome",
-   "veiculos": 4,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-24T13:24:24Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "politica",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Resgate histórico de programa social de combate à fome.",
-    "soma": 2
    }
   },
   {
@@ -596,27 +473,81 @@
     "motivo": "Justiça argentina descarta causa contra Milei.",
     "soma": 2
    }
+  },
+  {
+   "manchete": "Enviado de Trump diz que governo Milei é o mais alinhado aos EUA em todo o mundo",
+   "veiculos": 4,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-24T13:36:58Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Alinhamento internacional da Argentina com os EUA.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Quem é o pai do Bolsa Família? Veja a história do programa que tirou o Brasil do Mapa da Fome",
+   "veiculos": 4,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-24T13:24:24Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "politica",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Resgate histórico de programa social de combate à fome.",
+    "soma": 2
+   }
   }
  ],
  "obrigatorios": [],
  "descartados_mais_quentes": [
   {
    "manchete": "Flávio Bolsonaro está nu como o rei da fábula",
-   "veiculos": 267,
-   "veiculos_3h": 139,
+   "veiculos": 37,
+   "veiculos_3h": 5,
    "motivo": "sem editoria"
   },
   {
    "manchete": "Após pedido de Nunes Marques, Google e X dizem não terem identificado irregularidades em atuação coordenada de integrantes do canal 'Exército do Lula'",
-   "veiculos": 17,
+   "veiculos": 16,
    "veiculos_3h": 1,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Mega-sena sorteia R$ 230 milhões no sábado (24); veja os maiores prêmios da história",
+   "manchete": "Guarulhos x Monte Carmelo ao vivo: onde assistir, horário e detalhes da Superliga Masculina",
+   "veiculos": 8,
+   "veiculos_3h": 1,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Incêndio atinge 'Ninho da Águia', antigo refúgio de Hitler em montanha na Alemanha",
    "veiculos": 7,
    "veiculos_3h": 4,
-   "motivo": "fora: entretenimento (mega sena)"
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Apoiadores de Lula reagem a ataque de Flávio Bolsonaro sobre nove dedos durante caminhada no Rio",
+   "veiculos": 7,
+   "veiculos_3h": 4,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Brazil Holds Runoff Sunday Between Flávio Bolsonaro and Luiz Inácio Lula da Silva: how 14 outlets framed it",
+   "veiculos": 7,
+   "veiculos_3h": 2,
+   "motivo": "sem editoria"
   },
   {
    "manchete": "Fire engulfs Hitler’s ‘Eagle’s Nest’ mountain retreat",
@@ -625,40 +556,22 @@
    "motivo": "sem editoria"
   },
   {
-   "manchete": "North Korea's Kim crosses new bridge into China as trade ties warm",
+   "manchete": "Mega-sena sorteia R$ 230 milhões no sábado (24); veja os maiores prêmios da história",
    "veiculos": 6,
-   "veiculos_3h": 3,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
+   "veiculos_3h": 5,
+   "motivo": "fora: entretenimento (mega sena)"
   },
   {
-   "manchete": "UFC Vegas 123: Moicano x Nolan | Card completo, horário e onde assistir",
-   "veiculos": 6,
-   "veiculos_3h": 3,
-   "motivo": "fora: esporte (ufc)"
-  },
-  {
-   "manchete": "França vai mobilizar 70 mil agentes de segurança para conter protestos, afirma ministro",
-   "veiculos": 6,
+   "manchete": "Video: Palestinian Gunmen Kill Two Israeli Soldiers in the West Bank",
+   "veiculos": 5,
    "veiculos_3h": 2,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
+   "motivo": "sem editoria"
   },
   {
-   "manchete": "What to know as Brazilians choose between Lula and Flávio Bolsonaro on Sunday",
+   "manchete": "North Korea's Kim crosses new bridge into China as trade ties warm",
    "veiculos": 5,
    "veiculos_3h": 1,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Ucrânia diz que restrições à velocidade da Starlink foram suspensas",
-   "veiculos": 4,
-   "veiculos_3h": 2,
    "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Apac e Cemaden firmam acordo para fortalecer o monitoramento e a prevenção de riscos de desastres em Pernambuco",
-   "veiculos": 4,
-   "veiculos_3h": 1,
-   "motivo": "sem editoria"
   }
  ]
 }
