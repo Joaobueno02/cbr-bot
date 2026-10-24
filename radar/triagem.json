@@ -1,6 +1,6 @@
 {
- "quando": "2026-10-24T16:59:53Z",
- "pauta_quando": "2026-10-24T16:59:51Z",
+ "quando": "2026-10-24T17:30:16Z",
+ "pauta_quando": "2026-10-24T17:30:14Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,58 +9,141 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 18,
+  "avaliados_agora": 21,
   "falhas_antes": null,
-  "pedidos_hoje": 7
+  "pedidos_hoje": 8
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 151,
- "novos_3h": 14,
- "esquentaram": 0,
+ "total_assuntos": 157,
+ "novos_3h": 17,
+ "esquentaram": 2,
  "candidatos": [
   {
-   "manchete": "Flávio e Lula: Quem são os candidatos a presidente no segundo turno",
+   "manchete": "Debate da Globo: Lula e Flávio Bolsonaro discutem dívidas dos brasileiros, salário mínimo e SUS e trocam ofensas e ataques com 'nove dedos' e 'miliciano'",
    "secoes": [
-    "B",
-    "D-famosos"
+    "D-america_latina"
    ],
-   "veiculos": 524,
-   "veiculos_3h": 259,
-   "na_pauta_desde": "2026-10-24T16:59:51Z",
-   "link": "https://www.congressoemfoco.com.br/noticia/123557/flavio-e-lula-quem-sao-os-candidatos-a-presidente-no-segundo-turno",
-   "editoria": "eleicoes",
-   "nota": 6,
+   "veiculos": 18,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-24T17:30:14Z",
+   "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/10/23/debate-da-globo.ghtml",
+   "editoria": "america_latina",
+   "nota": 8,
    "esquentou": false,
    "lente": [
+    "salario",
+    "sus",
+    "bolsonar",
     "flavio"
    ],
    "ia": {
     "editoria": "eleicoes",
     "I": 3,
     "V": 3,
-    "P": 2,
+    "P": 3,
     "formato": "reels",
     "repetido": false,
     "risco": "",
-    "motivo": "Perfil dos presidenciáveis no segundo turno, tema central.",
+    "motivo": "Debate decisivo com propostas de salário e SUS e alto conflito.",
     "soma": 6
    }
   },
   {
-   "manchete": "Lula versus Bolsonaro: Este viernes es el último debate a dos días de las elecciones presidenciales",
+   "manchete": "Flávio fez transações financeiras incompatíveis com a renda, movimentou R$ 1,3 milhão em três meses e usou repasse de escritório de advocacia para quitar mansão, diz Coaf",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-10-24T17:30:14Z",
+   "link": "https://www.diariodocentrodomundo.com.br/coaf-flavio-bolsonaro-movimentacoes-renda-declarada/",
+   "editoria": "economia",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "flavio"
+   ],
+   "ia": {
+    "editoria": "gerais",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "Acusação formal com dados do Coaf",
+    "motivo": "Relatório do Coaf aponta transações suspeitas de figura política.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Transporte público em Minas Gerais será gratuito no segundo turno das eleições",
    "secoes": [
     "B"
    ],
-   "veiculos": 6,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-24T16:59:51Z",
-   "link": "https://ladiaria.com.uy/mundo/articulo/2026/10/el-viernes-debatieron-lula-y-bolsonaro/",
-   "editoria": "america_latina",
+   "veiculos": 49,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-24T17:30:14Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/10/onibus-sera-gratuito-em-ao-menos-23-estados-no-domingo-de-eleicao.shtml",
+   "editoria": "eleicoes",
    "nota": 5,
    "esquentou": false,
    "lente": [
-    "bolsonar"
+    "transporte publico"
    ],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Garantia de transporte público gratuito facilita o voto de trabalhadores.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Tesouraço de Flávio Bolsonaro pode eliminar 2,2 milhões de empregos, aponta Dieese",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 7,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-24T17:30:14Z",
+   "link": "https://operamundi.uol.com.br/eleicoes-2026-brasil/tesouraco-de-flavio-bolsonaro-deve-reduzir-22-milhoes-de-empregod-e-reduzir-aposentadoria-diz-dieese/",
+   "editoria": "economia",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio"
+   ],
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Estudo do Dieese sobre impacto de corte em empregos.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Pesquisa CNT/MDA hoje (24) para presidente: veja números do segundo turno",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 39,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-10-24T17:30:14Z",
+   "link": "https://noticias.uol.com.br/eleicoes/2026/10/24/pesquisa-cntmda-hoje-24-para-presidente-veja-numeros-do-segundo-turno.ghtm",
+   "editoria": "eleicoes",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
    "ia": {
     "editoria": "eleicoes",
     "I": 3,
@@ -69,8 +152,62 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Último debate presidencial antes das eleições.",
+    "motivo": "Pesquisa eleitoral de grande instituto na reta final.",
     "soma": 6
+   }
+  },
+  {
+   "manchete": "Ministro do TSE impede Nunes Marques de suspender canal ‘Exército do Lula’ sem aval do plenário",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 432,
+   "veiculos_3h": 229,
+   "na_pauta_desde": "2026-10-24T17:30:14Z",
+   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/10/ministro-do-tse-atende-a-campanha-do-pt-e-barra-suspensao-de-canal-exercito-do-lula-na-vespera-da-eleicao.shtml",
+   "editoria": "eleicoes",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 3,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Decisão do TSE envolvendo liberdade de expressão na eleição.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "João Doria declara apoio a Flávio Bolsonaro no segundo turno",
+   "secoes": [
+    "B",
+    "D-famosos"
+   ],
+   "veiculos": 89,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-10-24T17:30:14Z",
+   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/colunas/painel/2026/10/cientistas-sociais-divulgam-apoio-a-lula-em-manifesto.shtml",
+   "editoria": "eleicoes",
+   "nota": 7,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio"
+   ],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 3,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Apoio de figura política de peso repercute fortemente na reta final.",
+    "soma": 5
    }
   },
   {
@@ -129,19 +266,18 @@
    }
   },
   {
-   "manchete": "Flávio Bolsonaro advogou durante campanha para cliente de Willer e peticionou em dia da votação da 6x1",
+   "manchete": "Flávio Bolsonaro: as investigações e acusações que podem pesar contra o senador na eleição",
    "secoes": [
     "B"
    ],
-   "veiculos": 34,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-10-24T13:24:24Z",
-   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/10/flavio-bolsonaro-advogou-durante-campanha-para-cliente-de-willer-e-peticionou-em-dia-da-votacao-da-6x1.shtml",
+   "veiculos": 17,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-24T17:30:14Z",
+   "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/10/23/eduardo-bolsonaro-diz-em-podcast-dos-eua-que-urnas-brasileiras-podem-ser-fraudadas-e-defende-que-flavio-deixe-o-pais-se-perder-eleicao.ghtml",
    "editoria": "eleicoes",
-   "nota": 7,
+   "nota": 6,
    "esquentou": false,
    "lente": [
-    "6x1",
     "bolsonar",
     "flavio"
    ],
@@ -153,51 +289,25 @@
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Contradição de Flávio Bolsonaro envolvendo advocacia e votação de interesse popular.",
+    "motivo": "Resumo das investigações pesando contra candidato na eleição.",
     "soma": 4
    }
   },
   {
-   "manchete": "Campanha de Lula se mobiliza contra possível retirada do canal Exército do Lula do ar; TSE nega ter determinado suspensão",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 34,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-24T13:36:58Z",
-   "link": "https://g1.globo.com/politica/blog/natuza-nery/post/2026/10/23/campanha-lula-retirada-canal-exercito-do-lula.ghtml",
-   "editoria": "eleicoes",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Disputa sobre fake news e atuação da Justiça Eleitoral.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "In Brazil’s Runoff, Lula Faces Bolsonaro, Trump—and Big Tech",
+   "manchete": "Lula versus Bolsonaro: Este viernes es el último debate a dos días de las elecciones presidenciales",
    "secoes": [
     "B",
     "D-america_latina"
    ],
-   "veiculos": 39,
-   "veiculos_3h": 17,
+   "veiculos": 18,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-10-24T16:59:51Z",
-   "link": "https://www.nytimes.com/2026/10/24/world/americas/lula-brazil-election-president.html",
+   "link": "https://ladiaria.com.uy/mundo/articulo/2026/10/el-viernes-debatieron-lula-y-bolsonaro/",
    "editoria": "america_latina",
-   "nota": 7,
-   "esquentou": false,
+   "nota": 6,
+   "esquentou": true,
    "lente": [
-    "bolsonar",
-    "trump"
+    "bolsonar"
    ],
    "ia": {
     "editoria": "eleicoes",
@@ -207,23 +317,55 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Impacto internacional na eleição brasileira, atrai interesse.",
+    "motivo": "Cobertura internacional sobre o último debate presidencial.",
     "soma": 4
    }
   },
   {
-   "manchete": "Veja as cidades com transporte gratuito no 2º turno no Ceará",
+   "manchete": "Lula, Bolsonaro lock horns in final debate before Brazil vote",
    "secoes": [
     "B"
    ],
-   "veiculos": 57,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-10-24T16:59:51Z",
-   "link": "https://www.gazetadopovo.com.br/eleicoes/2026/tudo-o-que-o-eleitor-precisa-saber-antes-de-votar-no-2o-turno/",
+   "veiculos": 28,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-24T05:03:46Z",
+   "link": "https://www.aljazeera.com/news/longform/2026/10/24/do-abstaining-voters-hold-the-key-to-brazils-2026-presidential-election?traffic_source=rss",
    "editoria": "eleicoes",
-   "nota": 4,
+   "nota": 6,
+   "esquentou": true,
+   "lente": [
+    "bolsonar"
+   ],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Repercussão internacional do confronto final entre os candidatos.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "O SUS padrão Flávio Bolsonaro: médico do Einstein rejeita “petistas vagabundos”",
+   "secoes": [
+    "B",
+    "C-internacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-24T17:30:14Z",
+   "link": "https://www.diariodocentrodomundo.com.br/o-sus-padrao-flavio-bolsonaro-medico-do-einstein-rejeita-petistas-vagabundos/",
+   "editoria": "saude",
+   "nota": 5,
    "esquentou": false,
-   "lente": [],
+   "lente": [
+    "sus",
+    "bolsonar",
+    "flavio"
+   ],
    "ia": {
     "editoria": "gerais",
     "I": 2,
@@ -232,33 +374,7 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Passe livre no segundo turno facilita acesso ao voto.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Apoiadores chegam para ato de Lula na avenida Paulista",
-   "secoes": [
-    "A",
-    "B"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-24T16:59:51Z",
-   "link": "https://www1.folha.uol.com.br/poder/2026/10/apoiadores-chegam-para-ato-de-lula-na-avenida-paulista.shtml",
-   "editoria": "eleicoes",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Mobilização de campanha na reta final.",
+    "motivo": "Declaração preconceituosa de médico gera revolta.",
     "soma": 4
    }
   },
@@ -291,123 +407,12 @@
    }
   },
   {
-   "manchete": "Nem Lula, nem Flávio Bolsonaro 'têm estômago' para reforma que Brasil precisa, diz Economist",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 31,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-24T16:59:51Z",
-   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/10/nem-lula-nem-flavio-bolsonaro-tem-estomago-para-reforma-que-brasil-precisa-diz-economist.shtml",
-   "editoria": "gerais",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ],
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Crítica ao bolsonarismo e debate econômico.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Flávio Bolsonaro entra com ação no TSE contra candidatura de Lula por suposto abuso nas redes",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 16,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-24T01:42:04Z",
-   "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOVFpRSGJ2TlVfdVU5NGgyU2RNbHBDM3J1c2dDWkdJX2sxSG56bUM1LUYtSEx4UXBsVWJPRVNsWlRLYTJtTzJHYzA3aDRTOXpWNEYwRUxxSkhKYlExMlVQZlN3S3dCYlJyUnI3UTZkY0JSTm9Sb3F5RUkwbGtJRzZPUTRxQ05sNWFtQXZrekx6U0tndmtCbTVncUZPb3ppYnZ5SlgwTTVBN0ljTnRZamd4XzZaUXZLNmF2dDAxVlNaZXVROEJVeTRLUzJ3cmQ?oc=5",
-   "editoria": "eleicoes",
-   "nota": 7,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ],
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Ação judicial entre campanhas na reta final.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Amoêdo votará em Lula pelo 'risco que representa um governo Bolsonaro'",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 10,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-24T16:59:51Z",
-   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOSXV4RGQySWljMUtsMnotLXVzZEpnOXdtZmNOakpGLWpiMklkbm15TUxsQTFkZU1kUnliR3lNdmNURGRhdjUxQlo1SXQ0ck9YalE5bkYwZ0lOcFRURjlPNEpjQktLcXVXLXZIMWx4cmxMQWtDbExrQW8yOEdCQVl6a0dOWEpNa2I1WTVTWVVHakQwa2lSQV8ydUZaS1VYSWp6VUZLajJUeEVUaDlwZU4tRFAwRUFiN05rTDFJdNIBwgFBVV95cUxOdVUtMXhwY0lCeXRITkM2dzRYTWx2bWJiNm5TRlJLX0V4dmh6X0F3UVpVWWxLeDMzNWtKZ1IwbEI5b1lXaTlkNHN1M0xCS0xNT0JKRkpGQXpWaHMwUFJPMU93Yld2ZlhJQXFGUnl3RGozMmhOelhONWhBMklYYURTWGNPVk5HSVBjcjROYnpCS2dUczBwaWxpLUlRQnFiRDhvV1p2TkpwdHBXZ0haZGpwN3oxYTJ2cWFocTkwS21yU1NHdw?oc=5",
-   "editoria": "eleicoes",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "bolsonar"
-   ],
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Apoio de figura liberal a Lula repercute na disputa.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Vereadora denuncia ônibus municipal circulando com adesivos de campanha de Flávio Bolsonaro em Santa Cruz",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-24T16:59:51Z",
-   "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5wYlFRMUlxZWpVMU9jcFBTV0QtMWliZm1HcFFvMVNMZjc3WFItaW9tbzdOVkJtNU0yOUhJYzNPNDVVc1FDZG51a3R5dDc1RkxrckFiWGFsNUcyQWdCUGlEVVliZXowZnVqR3JZY256ekhCUUctQkZuWUg4NA?oc=5",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ],
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Denúncia de uso político de transporte público.",
-    "soma": 4
-   }
-  },
-  {
    "manchete": "Trump diz que os EUA vão \"cuidar de Cuba\" após lidar com Irã",
    "secoes": [
     "B",
     "D-america_latina"
    ],
-   "veiculos": 24,
+   "veiculos": 23,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-10-24T01:42:04Z",
    "link": "https://g1.globo.com/mundo/noticia/2026/10/23/trump-diz-que-eua-vao-cuidar-de-cuba-depois-de-lidarem-com-ira.ghtml",
@@ -430,6 +435,72 @@
    }
   },
   {
+   "manchete": "FURG participa da Jornada de Jovens Investigadores da AUGM com 27 estudantes e dois prêmios - Universidade Federal do Rio Grande",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-24T17:30:14Z",
+   "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOSGE4SUprby1JTk5qRFVnYVhsNXpXMEFsRTNTZE5QeDR5ekFoaW95dGtNSVJ0dlNvb0ZYOWt5MHlnS0xLQVJnM2ktVUV6emcxVTduSHVxWm5hTFMzb0lIV295UzB5Y3huSGdBSGFtSDlwOEZRbTJlRXJkOEVxeDA3TS1qSnIwWEVaNHh4bGV4bEFoa2l4R01Ycy04V1hrRTItR3k3WWhQRmlSUlFCWVpzS2lwblJ1VDJ5QmsySnJwcU1wYjU3MlpTU2ItQWdrdTJycjhvUHJSZ1F5M0E?oc=5",
+   "editoria": "educacao",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "jornada",
+    "investigad"
+   ]
+  },
+  {
+   "manchete": "Quais são as propostas de Lula e Flávio Bolsonaro? Compare os planos de governo",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-24T17:30:14Z",
+   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOLTZrZW55dXZ6Z0g3ZTN0Rk1JYjZZLUlZVVBSU083OFFHNXVpZ0dhbGh5eTBnZi1EWlBqWDhERHdlWVVIQ2d4ZlJSX1VIMHJLOWhiT1JCcEhzdmYzbXpIbkEtZzFpb3ZubEVQQlBZdVNuV3IzVmk4LTU4X2ZoNXVtdVhJREpHUjVIYWpycndySGc3TExT?oc=5",
+   "editoria": "gerais",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio"
+   ]
+  },
+  {
+   "manchete": "Francia se prepara para vivir una nueva jornada de protestas",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-24T17:30:14Z",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPanpRY3RMSnhzYndqRTZ6ZExJWHhsVGE5UHkxNWJza09lblVtSXRPWDhkQ2paZllpTFNHQjNZbWZVaXZpVHVHWkRZVEpLWm9mZzE4S1ZqdU5Kbm05U3FuV2FDWTEzLVdOak5xZkxVZE91VGZDeHZ3eW1SMms4M1piRnpONVJaOEo1YmVoVFBQcTVjLXd2NERSaNIBmAFBVV95cUxPUjN0My1KRVI5cUMtMmp5aG5SQjBXVGtIZzhOQjk2T3VfRTM0dzYzbGR6VmV6WGJ1TWZzM0J0WWxyRVA5MWxPMm81TjhrNEdnWHlGVUNId2NPTkMzN0Jrd29YUlhLZ21KaWs3MHJqS3k0ZEUzdkFKcFFxaG9XeWJhR0dabW1yOU9aazB1YXVVOElDdHRGQmUxMQ?oc=5",
+   "editoria": "economia",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "jornada"
+   ]
+  },
+  {
+   "manchete": "Governo federal vai reforçar combate a incêndios no Oeste do Pará; Santarém terá seis aviões de apoio",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-24T17:30:14Z",
+   "link": "https://g1.globo.com/pa/santarem-regiao/noticia/2026/10/24/avioes-de-combate-a-incendios-chegam-a-santarem-para-conter-fogo-no-oeste-do-para.ghtml",
+   "editoria": "politica",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "incendio"
+   ]
+  },
+  {
    "manchete": "A 2 dias da eleição, Flávio assina petição a Comissão Interamericana de DH em favor de ex-assessor",
    "secoes": [
     "B",
@@ -445,96 +516,48 @@
    "lente": [
     "flavio"
    ]
-  },
-  {
-   "manchete": "INSS paga benefícios de outubro a partir de 26/10",
-   "secoes": [
-    "B",
-    "C-nacional"
-   ],
-   "veiculos": 2,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-24T16:59:51Z",
-   "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQbXA4NVdBeTJhWjRYRXFvZ3dhUlNTNC1zV0dGb3hxUUZDd19DTmUwSHQ0cEktX3J1N3M5Yi1tcEVEbVk4dld3SWhpZFVwVEcwNEtUUnJXdF8xVkg0RlRXdkNIcTBxNkRjXzlfTlhSNWZaVlU1WURyZG40QVVNZ2NHajR5MGcwLW1Qck4xMW5QbWpTM1E?oc=5",
-   "editoria": "economia",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [
-    "inss"
-   ]
-  },
-  {
-   "manchete": "Em BH, Flávio se abraça em deputada que recebia mesada na Farra do INSS",
-   "secoes": [
-    "C-nacional"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-24T16:59:51Z",
-   "link": "https://www.metropoles.com/colunas/ramiro-brites/flavio-farra-inss",
-   "editoria": "politica",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [
-    "inss",
-    "flavio"
-   ]
-  },
-  {
-   "manchete": "Banco Central aprova novas regras de proteção e oferta de crédito em transação Pix",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-24T01:42:04Z",
-   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOaFNqT2x3V1J5SEx6dW9uRkZYeFEzM2JjdWQ5RHBseExwcmd3TVlqRnF1X2tyb3MzS0djZlQ5Nm1PczFqd3AyOUx4dnVjVGxKZkxRdWhRVDFfSi1oODFJM1ZnNXBWdTZjaUdWNS1MUHcyNzkxWnhJMnVaeDFjWDNoRXhON1RiRHN0TkRpWFREVzItVHhCVDY5T0NRTDVlRmlMSzkzbzlfQmMtMzk4NnpzMnoydENlSE9FM3hEeEUzLU5LYlVT?oc=5",
-   "editoria": "economia",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [
-    "banco"
-   ]
-  },
-  {
-   "manchete": "Univasf oferta 20 vagas para Doutorado Profissional em Agroecologia e Desenvolvimento Territorial",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-24T16:59:51Z",
-   "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQWklEanVDN1hEenBkNWtKWHBWVTkzVVowcmRUdmVFLXVWSHMzYTVCQllOVTBsa3kwNjVPMmNwdEZ4QjZCXzdYdld6Qm5lbGxueEMtbzl0T3JQMzl6SW5POVRlTHNBX1RsWXUyV0lxY0hLX1ZVSUVyNmxiZ1U3MTJodDlZMmdIMlBjZ1FITXVDd01GWmMtVVA3RmNFdXkyTEF6RDQ2MElGdG9uMkJtV0l1dUlqYzFodGpiZ3ExMzB3T1hEOHRjSDhWMmhDaXJkcWV6?oc=5",
-   "editoria": "roca",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [
-    "vagas"
-   ]
   }
  ],
  "rebaixados": [
   {
-   "manchete": "Debate: Flávio e Lula miram votos de eleitorado acima de 70 anos",
-   "veiculos": 5,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-24T16:59:51Z",
+   "manchete": "Quatro homens são presos após corte ilegal de árvores nativas na Terra Indígena Nonoai",
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-24T17:30:14Z",
    "esquentou": false,
    "ia": {
-    "editoria": "eleicoes",
+    "editoria": "roca",
     "I": 2,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Estratégia de campanha voltada para idosos.",
+    "motivo": "Crime ambiental e exploração ilegal em terra indígena.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "SUS detecta HPV de alto risco em 9,9 mil amostras e amplia teste que identifica o vírus antes do câncer",
+   "veiculos": 4,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-24T13:24:24Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "saude",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Ampliação de teste preventivo no SUS protege a saúde da população.",
     "soma": 3
    }
   },
   {
    "manchete": "Preço dos alimentos pressiona inflação em outubro, mas IPCA-15 não inclui o Acre no levantamento\" - O",
-   "veiculos": 4,
+   "veiculos": 3,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-24T16:59:51Z",
    "esquentou": false,
@@ -551,147 +574,129 @@
    }
   },
   {
-   "manchete": "Campanha Natal Sem Fome terá mutirão drive-thru neste sábado em 12 pontos de Prudente",
-   "veiculos": 4,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-24T01:42:04Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "roca",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Ação de combate à fome.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Incêndio atinge área da UFRN próximo ao NUPLAM e mobiliza Corpo de Bombeiros",
-   "veiculos": 14,
+   "manchete": "The New York Times. . Flávio Bolsonaro, the right-wing presidential candidate in Brazil, recently outperformed polls, ahead of the leftist President Luiz Inácio Lula da Silva, prompting a runoff on Sunday. A visit to Nanuque, a small town with big agricultural busi",
+   "veiculos": 13,
    "veiculos_3h": 5,
-   "na_pauta_desde": "2026-10-24T16:59:51Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "educacao",
-    "I": 1,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Incêndio em universidade federal, impacto local.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "FAB intercepta e destrói helicóptero clandestino vindo da Venezuela",
-   "veiculos": 8,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-24T16:59:51Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "gerais",
-    "I": 1,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Ação da FAB na fronteira.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "La justicia argentina sobresee a Milei y su hermana en la causa por la presunta estafa con una criptomoneda",
-   "veiculos": 4,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-24T16:59:51Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Justiça argentina arquiva caso envolvendo Milei.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Carlos Bolsonaro diz que pai ressurge das cinzas 'mais forte ainda' com resultado de Flávio na eleição",
-   "veiculos": 2,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-24T16:59:51Z",
+   "na_pauta_desde": "2026-10-24T17:30:14Z",
    "esquentou": false,
    "ia": {
     "editoria": "eleicoes",
     "I": 1,
     "V": 1,
-    "P": 0,
+    "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Declaração da família Bolsonaro sobre eleição.",
+    "motivo": "Visão da imprensa internacional sobre a eleição brasileira.",
     "soma": 2
    }
   },
   {
-   "manchete": "Argentine judge dismisses case against Milei over alleged crypto scam",
-   "veiculos": 2,
+   "manchete": "MP Eleitoral pede encerramento do processo sobre sigilo de Lula e de Flávio",
+   "veiculos": 10,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-10-24T17:30:14Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Movimentação jurídica sobre sigilos na reta final da eleição.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Piloto ateia fogo em avião e foge após perseguição da FAB em MT",
+   "veiculos": 4,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-10-24T17:30:14Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "gerais",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Ação policial contra voo clandestino.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Helicóptero vindo da Venezuela é interceptado e destruído em Roraima",
+   "veiculos": 10,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-24T17:30:14Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "gerais",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Apreensão de aeronave em região de fronteira.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "DW News. . Listening to right-wing presidential candidate Flavio Bolsonaro, one would think the incumbent left-wing President Lula da Silva has brought Brazil's democracy to the brink. But how much of that rhetoric is true? #dwfactcheck",
+   "veiculos": 5,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-24T17:30:14Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Fact-check da mídia alemã sobre retórica eleitoral.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Justiça argentina arquiva processo contra Milei e sua irmã por suposta fraude com criptomoedas (juiz)",
+   "veiculos": 13,
    "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-24T16:59:51Z",
+   "na_pauta_desde": "2026-10-24T17:30:14Z",
    "esquentou": false,
    "ia": {
     "editoria": "america_latina",
     "I": 1,
     "V": 1,
-    "P": 0,
+    "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Mesmo assunto do item 10 em inglês.",
+    "motivo": "Justiça argentina arquiva processo envolvendo o presidente.",
     "soma": 2
    }
   },
   {
-   "manchete": "Incêndio devasta \"Ninho da Águia\" de Adolf Hitler",
-   "veiculos": 12,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-10-24T07:25:06Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "fora",
-    "I": 0,
-    "V": 0,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Fato histórico sem impacto direto no Brasil ou na classe trabalhadora.",
-    "soma": 0
-   }
-  },
-  {
-   "manchete": "Netanyahu authorises support for Argentina over Falklands",
-   "veiculos": 6,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-24T13:24:24Z",
+   "manchete": "Joice Hasselmann: entenda o que aconteceu com a ex-deputada que declarou voto em Lula",
+   "veiculos": 7,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-24T17:30:14Z",
    "esquentou": false,
    "ia": {
-    "editoria": "fora",
-    "I": 0,
-    "V": 0,
-    "P": 0,
+    "editoria": "eleicoes",
+    "I": 1,
+    "V": 1,
+    "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Assunto internacional sem repercussão direta no cotidiano brasileiro.",
-    "soma": 0
+    "motivo": "Declaração de voto de ex-parlamentar.",
+    "soma": 2
    }
   }
  ],
@@ -735,16 +740,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Nem Lula, nem Flávio Bolsonaro 'têm estômago' para reforma que Brasil precisa, diz Economist",
+   "manchete": "Quais são as propostas de Lula e Flávio Bolsonaro? Compare os planos de governo",
    "secoes": [
     "A"
    ],
-   "veiculos": 31,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-24T16:59:51Z",
-   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/10/nem-lula-nem-flavio-bolsonaro-tem-estomago-para-reforma-que-brasil-precisa-diz-economist.shtml",
+   "veiculos": 3,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-24T17:30:14Z",
+   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOLTZrZW55dXZ6Z0g3ZTN0Rk1JYjZZLUlZVVBSU083OFFHNXVpZ0dhbGh5eTBnZi1EWlBqWDhERHdlWVVIQ2d4ZlJSX1VIMHJLOWhiT1JCcEhzdmYzbXpIbkEtZzFpb3ZubEVQQlBZdVNuV3IzVmk4LTU4X2ZoNXVtdVhJREpHUjVIYWpycndySGc3TExT?oc=5",
    "editoria": "gerais",
-   "nota": 6,
+   "nota": 4,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-10-24T13:00:23Z",
@@ -813,10 +818,9 @@
   {
    "manchete": "Preço dos alimentos pressiona inflação em outubro, mas IPCA-15 não inclui o Acre no levantamento\" - O",
    "secoes": [
-    "A",
-    "D-terra"
+    "A"
    ],
-   "veiculos": 4,
+   "veiculos": 3,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-24T16:59:51Z",
    "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPMDRYMjhDTnJIOTBITTVVZFU3QzNpNXYxRXZMd2NpZkdjUDFCcVV5a085QkFvVzBqaUFzalpPU1pKSEs3VjJ6Q2NIc01zb0xQRkFvUnpBZUpXdmZzbEg2RTI2ZXFLeURpSklzLXlNRV9fMkV4QUo0NmJEWnc1VGhFTTA1bnpfbkY4NFdteVUwYWtvN2xRN3RMcFhNZzFmRVZBV0RTQ0VqRjgxaF9aYWoxUDFvdk1WU0I4OG5PNF9UTdIBvwFBVV95cUxPMDRYMjhDTnJIOTBITTVVZFU3QzNpNXYxRXZMd2NpZkdjUDFCcVV5a085QkFvVzBqaUFzalpPU1pKSEs3VjJ6Q2NIc01zb0xQRkFvUnpBZUpXdmZzbEg2RTI2ZXFLeURpSklzLXlNRV9fMkV4QUo0NmJEWnc1VGhFTTA1bnpfbkY4NFdteVUwYWtvN2xRN3RMcFhNZzFmRVZBV0RTQ0VqRjgxaF9aYWoxUDFvdk1WU0I4OG5PNF9UTQ?oc=5",
@@ -869,17 +873,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Apoiadores chegam para ato de Lula na avenida Paulista",
+   "manchete": "Flávio e Lula fecham campanha na TV com atos nas ruas e retrospectiva",
    "secoes": [
-    "A",
-    "B"
+    "A"
    ],
-   "veiculos": 4,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-24T16:59:51Z",
-   "link": "https://www1.folha.uol.com.br/poder/2026/10/apoiadores-chegam-para-ato-de-lula-na-avenida-paulista.shtml",
-   "editoria": "eleicoes",
-   "nota": 3,
+   "veiculos": 8,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-24T17:30:14Z",
+   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://aovivo.folha.uol.com.br/poder/2026/10/23/6566-flavio-bolsonaro-e-lula-participam-de-ultimo-debate-das-eleicoes-na-globo-acompanhe.shtml#post467610",
+   "editoria": "america_latina",
+   "nota": 6,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-10-24T13:28:42Z",
@@ -946,14 +949,14 @@
    "triagem": "fora: crime ou tragedia (morte)"
   },
   {
-   "manchete": "Nanossatélites — Instituto Nacional de Pesquisas Espaciais",
+   "manchete": null,
    "secoes": [
     "A"
    ],
-   "veiculos": 1,
+   "veiculos": 0,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-24T16:59:51Z",
-   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9weUN1QWNZS2ZPMnBYQkxPblNPbzRLZ21aV3BrNHBnd1RwMTRzWUpwSXBkeS1QYmFSZWVvVUYybmxTeUhKVUJ6TlFIZ1dSNDRHWGMwWk9jTU5PUnYyLWJpOFY1YkZ1WlBvZThUUjJWTm5Ia1A5RDBON3VMWlFJTkE?oc=5",
+   "na_pauta_desde": null,
+   "link": null,
    "editoria": null,
    "nota": null,
    "parceiro": {
@@ -987,62 +990,62 @@
  "descartados_mais_quentes": [
   {
    "manchete": "Mais um ouro! Rebeca Andrade é tricampeã mundial no salto",
-   "veiculos": 17,
-   "veiculos_3h": 9,
+   "veiculos": 16,
+   "veiculos_3h": 6,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "UFC Vegas 123: Moicano x Nolan | Card completo, horário e onde assistir",
-   "veiculos": 15,
-   "veiculos_3h": 6,
+   "manchete": "Resultados | UFC 333: Volkanovski x Evloev",
+   "veiculos": 11,
+   "veiculos_3h": 3,
    "motivo": "fora: esporte (ufc)"
   },
   {
-   "manchete": "Flamengo entra com reclamação na Conmebol por escalação de Marcos Rojo pelo Estudiantes",
-   "veiculos": 10,
-   "veiculos_3h": 1,
-   "motivo": "fora: esporte (flamengo)"
+   "manchete": "What to know as Brazilians choose between Lula and Flávio Bolsonaro on Sunday",
+   "veiculos": 11,
+   "veiculos_3h": 2,
+   "motivo": "sem editoria"
   },
   {
    "manchete": "Fire engulfs Hitler’s ‘Eagle’s Nest’ mountain retreat",
    "veiculos": 8,
-   "veiculos_3h": 5,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Guindaste cai nos trilhos do monotrilho e atinge trem da linha 15-Prata em SP",
-   "veiculos": 7,
-   "veiculos_3h": 6,
+   "veiculos_3h": 2,
    "motivo": "sem editoria"
   },
   {
    "manchete": "Vazamento de produto químico mobiliza bombeiros após quatro técnicas passarem mal em BH",
+   "veiculos": 8,
+   "veiculos_3h": 1,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Juventude x Náutico pela Série B: horário e onde assistir ao vivo | Pioneiro",
    "veiculos": 7,
+   "veiculos_3h": 1,
+   "motivo": "fora: entretenimento (serie)"
+  },
+  {
+   "manchete": "Mark Ruffalo, Guillermo del Toro e artistas internacionais apoiam Lula em vídeo idealizado por Kleber Mendonça",
+   "veiculos": 6,
    "veiculos_3h": 1,
    "motivo": "sem editoria"
   },
   {
    "manchete": "Israeli military says 2 soldiers were killed in West Bank attack that also left 2 gunmen dead",
    "veiculos": 5,
-   "veiculos_3h": 3,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "‘We can’t let the far right take power again’: Lula voters in final push before Brazil runoff",
-   "veiculos": 5,
    "veiculos_3h": 2,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Shein aceita pagar US$ 100 milhões para encerrar apuração nos EUA, diz Reuters",
-   "veiculos": 5,
-   "veiculos_3h": 1,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
+   "manchete": "Aston Villa vs Manchester City: Premier League – teams, prediction, lineups",
+   "veiculos": 4,
+   "veiculos_3h": 2,
+   "motivo": "fora: esporte (manchester)"
   },
   {
-   "manchete": "Em ato no Rio, Lula diz que Flávio é adversário de mais baixo nível e volta a citar morte de menina",
+   "manchete": "‘We can’t let the far right take power again’: Lula voters in final push before Brazil runoff",
    "veiculos": 4,
-   "veiculos_3h": 3,
+   "veiculos_3h": 2,
    "motivo": "sem editoria"
   }
  ]
