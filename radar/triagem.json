@@ -1,6 +1,6 @@
 {
- "quando": "2026-10-25T21:15:28Z",
- "pauta_quando": "2026-10-25T21:15:26Z",
+ "quando": "2026-10-25T23:21:16Z",
+ "pauta_quando": "2026-10-25T23:21:13Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,28 +9,54 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 14,
+  "avaliados_agora": 22,
   "falhas_antes": null,
-  "pedidos_hoje": 9
+  "pedidos_hoje": 10
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 138,
- "novos_3h": 14,
- "esquentaram": 1,
+ "total_assuntos": 156,
+ "novos_3h": 20,
+ "esquentaram": 0,
  "candidatos": [
   {
-   "manchete": "Datafolha para presidente no DF, votos válidos: Flávio Bolsonaro, 56%; Lula, 44%",
+   "manchete": "Datafolha, 2º turno - votos válidos: Flávio Bolsonaro, 51%; Lula, 49%",
    "secoes": [
-    "A",
-    "A",
     "B"
    ],
-   "veiculos": 644,
-   "veiculos_3h": 329,
-   "na_pauta_desde": "2026-10-25T21:15:26Z",
-   "link": "https://g1.globo.com/df/distrito-federal/eleicoes/2026/noticia/2026/10/24/datafolha-df-presidente-segundo-turno-24-outubro.ghtml",
+   "veiculos": 487,
+   "veiculos_3h": 259,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "link": "https://g1.globo.com/politica/eleicoes/2026/pesquisa-eleitoral/noticia/2026/10/24/datafolha-presidente-24-outubro.ghtml",
    "editoria": "eleicoes",
-   "nota": 9,
+   "nota": 7,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio"
+   ],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Datafolha mostra empate técnico no limite do 2º turno presidencial.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Flávio Bolsonaro usa helicóptero apreendido com R$ 7 milhões do “Faraó dos Bitcoins”",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "link": "https://vermelho.org.br/2026/10/25/na-vespera-da-eleicao-flavio-bolsonaro-usa-helicoptero-apreendido-com-7-milhes-do-farao-dos-bitcoins/?utm_source=rss&utm_medium=rss&utm_campaign=na-vespera-da-eleicao-flavio-bolsonaro-usa-helicoptero-apreendido-com-7-milhes-do-farao-dos-bitcoins",
+   "editoria": "gerais",
+   "nota": 6,
    "esquentou": false,
    "lente": [
     "bolsonar",
@@ -42,22 +68,76 @@
     "I": 3,
     "V": 3,
     "P": 2,
-    "formato": "reels",
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Declarações de Lula após votação e cenário de votos válidos.",
+    "motivo": "Flávio usa helicóptero ligado a esquema de criptomoedas no Rio.",
     "soma": 6
    }
   },
   {
-   "manchete": "Apoiadores de Lula e Flávio vão às ruas em 25 capitais no último dia de campanha para o 2º turno",
+   "manchete": "Ao Vivo | STF prorroga votação em todo o Brasil até 19h; acompanhe",
+   "secoes": [
+    "A",
+    "A"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOcjFfWXdDT050emlqOW1EdnBrY3ZYM002ZW1JTFBpYWxPZ1NhOXFiMHhNcXctcEMxWFRpNmo4b09Zem1STzlMZDdtWnBGTlh5Q1d1ZmdBREExTUVTUkFvM1VjNWF5NHV5T1NkbVdrbFpET3hodTVUSXhPUDRQVXhZNV96dV9Bd09ZV3VDbEt4ajltcThaWFh5ZXNoRlZwOTlPUGszdEtXbw?oc=5",
+   "editoria": "eleicoes",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "golpe",
+    "transporte publico"
+   ],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "STF prorroga votação após falhas no transporte público afetarem eleitores.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Resultado da apuração em São Paulo no segundo turno: veja votação agora",
    "secoes": [
     "B"
    ],
-   "veiculos": 31,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-25T21:15:26Z",
-   "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/10/24/atos-no-brasil.ghtml",
+   "veiculos": 77,
+   "veiculos_3h": 14,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "link": "https://noticias.uol.com.br/eleicoes/2026/10/25/resultado-da-apuracao-em-sao-paulo-no-segundo-turno-veja-votacao-agora.ghtm",
+   "editoria": "eleicoes",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 3,
+    "V": 3,
+    "P": 1,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Acompanhamento da apuração de votos no estado de São Paulo.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Flávio lidera apuração do 2º turno da eleição presidencial com 50,41% contra 49,59% de Lula, com 20,05% das seções eleitorais apuradas, diz TSE",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 25,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "link": "https://noticias.uol.com.br/ultimas-noticias/reuters/2026/10/25/flavio-lidera-apuracao-do-2-turno-da-eleicao-presidencial-com-5041-contra-4959-de-lula-com-2005-das-secoes-eleitorais-apuradas-diz-tse.htm",
    "editoria": "eleicoes",
    "nota": 6,
    "esquentou": false,
@@ -68,105 +148,82 @@
     "editoria": "eleicoes",
     "I": 3,
     "V": 3,
-    "P": 2,
+    "P": 1,
     "formato": "reels",
     "repetido": false,
     "risco": "",
-    "motivo": "Mobilização de ruas em 25 capitais no último dia.",
+    "motivo": "Apuração em tempo real do segundo turno presidencial.",
     "soma": 6
    }
   },
   {
-   "manchete": "Ministério da Justiça inicia operação de segurança para o 2º turno",
+   "manchete": "Eleições 2026 ao vivo: Com mais de 40% das urnas apuradas, Flávio tem 50,19%, e Lula, 49,81%; siga",
    "secoes": [
-    "A"
-   ],
-   "veiculos": 8,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-25T21:15:26Z",
-   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOZW44RHF3bmVUUUhpS29lWlEtcUczMktmMWU4UHRTbk42RlR2SjJjb0o3T0RTLXpXeC1hMTNfZjlxXzBCQ3ZEU3l6bDZoQmE2REdjaU5mRkhRNnFVS241aC1fX1lYU085d08yZDJlQzB1dDVLNnNwU0c5SHNNcks0VzhMeGFRaXViOUFrcUJDQlYzcHhVQ3FScHc0bGZLRlpXSHpQT1JYZ0xfVVMtWUp4UGk0UlpLMzZrREh6S1p1cW8?oc=5",
-   "editoria": "eleicoes",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 3,
-    "V": 3,
-    "P": 2,
-    "formato": "reels",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Prisão de secretário de Salvador por redução da frota.",
-    "soma": 6
-   }
-  },
-  {
-   "manchete": "Vereadora do PT Iara Pimentel é agredida durante ato em Minas Gerais e recebe atendimento médico; veja vídeo",
-   "secoes": [
-    "A",
-    "A"
-   ],
-   "veiculos": 8,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-25T21:15:26Z",
-   "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNZWo1MnhLYnN1c2pNaDFTc3JvUnBTZWRLRWJvM1RTWTNTbzk3eDhHM2EtVWhYclNUQl9Makp2VXhRMWZnMDg0cFBZb2dWRDg2MEtQcnY0M0hHRkNvbVpCZGZXVEZXVU9sTVpvMURyOEZVNFpXTFlSdGZRY3UzQ0Y4aFNVa25GQ3JKd28yeFZESU9mUGRTeFRMMm5nc1R1c3dkR1ZHT1hRSExJWEIwQTRvcjNyMVhWby1hU1hoR0dRak1HVXR6bDdCcTZzMkZ4NEpnZVFaNnBkRV9fZ1ROdnIzQnBEWdIB8gFBVV95cUxPbmxKSHJoYk9NZUVjRUpsek1NRUtEanBqYnc3REp1cGdGRVExNXVJMVFTS0NBTTZyYklSWkxTVm5IYmIyc1MtVkRlX25obzE5SlVvekhjR1BTRDRhRHladXdnV2ZHbXpnZU03ZlpWSjRJNURfbkNoeWIzUnJKWUo4ZmMyNF8xVEFjSVQyUjVOYzdDeHhPbHl5dG1LZVpYd29maU9rVmxVMXZfTUhoTVFyUzBReS11ci13YjJSRTloZGFEQlI5a0VKT1NlSHphUmpWNm5EZ2JMSTV5YzNSLVB2azM3THlQN0U5NkpiTnZaY1p4Zw?oc=5",
-   "editoria": "gerais",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 3,
-    "V": 3,
-    "P": 2,
-    "formato": "reels",
-    "repetido": false,
-    "risco": "Agressão física com vítima",
-    "motivo": "Vereadora do PT agredida durante carreata em Minas Gerais.",
-    "soma": 6
-   }
-  },
-  {
-   "manchete": "Gretchen declara voto às vésperas do segundo turno das eleições",
-   "secoes": [
-    "A",
-    "A",
-    "A",
     "B"
    ],
-   "veiculos": 6,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-25T21:15:26Z",
-   "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/10/25/como-justificar-a-ausencia-no-segundo-turno.ghtml",
+   "veiculos": 21,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "link": "https://www.bbc.co.uk/portuguese/live/c6vg0rrxzx13t?at_medium=RSS&at_campaign=rss",
    "editoria": "eleicoes",
    "nota": 5,
    "esquentou": false,
-   "lente": [],
+   "lente": [
+    "flavio"
+   ],
    "ia": {
     "editoria": "eleicoes",
     "I": 3,
     "V": 3,
-    "P": 2,
+    "P": 1,
     "formato": "reels",
     "repetido": false,
     "risco": "",
-    "motivo": "TRE-BA determina prisão de secretário por sabotagem no transporte.",
+    "motivo": "Parcial da apuração com disputa acirrada voto a voto.",
     "soma": 6
    }
   },
   {
-   "manchete": "O que marcou o segundo turno da eleição presidencial",
+   "manchete": "Lula termina campanha no ataque a Flávio Bolsonaro no Rio e em São Paulo",
    "secoes": [
+    "A"
+   ],
+   "veiculos": 25,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/10/sao-paulo-entra-em-atencao-para-alagamentos-na-madrugada-deste-domingo-25.shtml",
+   "editoria": "eleicoes",
+   "nota": 8,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio"
+   ],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 3,
+    "V": 3,
+    "P": 1,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Ataques de Lula à sabotagem de transportes públicos no dia da votação.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Las propuestas de Luiz Inácio Lula da Silva: Estado e inversión contra las desigualdades",
+   "secoes": [
+    "A",
     "A",
     "A"
    ],
-   "veiculos": 5,
+   "veiculos": 2,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-25T20:58:34Z",
-   "link": "https://www.nexojornal.com.br/expresso/2026/10/24/segundo-turno-lula-e-flavio-bolsonaro-eleicao-presidente",
-   "editoria": "eleicoes",
-   "nota": 7,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "link": "https://elpais.com/america/2026-10-25/las-propuestas-de-luiz-inacio-lula-da-silva-estado-e-inversion-contra-las-desigualdades.html",
+   "editoria": "gerais",
+   "nota": 5,
    "esquentou": false,
    "lente": [
     "bolsonar",
@@ -180,61 +237,7 @@
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Denúncias de sabotagem e falta de ônibus no eleitoral.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Voting extended in tight Brazil runoff between leftist Lula and Trump ally Bolsonaro",
-   "secoes": [
-    "B",
-    "D-america_latina"
-   ],
-   "veiculos": 6,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-10-25T17:52:54Z",
-   "link": "https://www.france24.com/en/americas/20261025-live-voting-under-way-across-brazil-in-tight-presidential-run-off-between-lula-and-bolsonaro",
-   "editoria": "america_latina",
-   "nota": 7,
-   "esquentou": true,
-   "lente": [
-    "bolsonar",
-    "trump"
-   ],
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 3,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Votação estendida e disputa acirrada no segundo turno.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Lula da Silva, un candidato mimetizado con su pueblo",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 2,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-25T20:58:34Z",
-   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQcXoyZzYyVWtpamtlS3RyOHhyTGQtbGp4aVZ5Tks0dzRBbnNUU2luc1dCQ0VPakJ5M3NuX3NxdWloRllnWkNTaUhLdVY5cDBudEYzYjJiak5idE1TM3poY3h0QzBLelRMUjItUGdCdWc2cjBfZk1pRDJpd0xhZVQybXN1Yw?oc=5",
-   "editoria": "eleicoes",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 3,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Lula denuncia boicote de transporte público no dia da eleição.",
+    "motivo": "Investigação apura votação expressiva de Flávio em áreas de milícia.",
     "soma": 5
    }
   },
@@ -243,12 +246,12 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 4,
+   "veiculos": 5,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-25T21:15:26Z",
    "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQdWRVWENGaGo2RV9IbUMzZkpLUUViYkhJVDdZYU1GVmRmeDZMQXFtZ245V0dYSkdzcFhSNTBLTElzOVE3dTVOMmNYZE1rYTJtWWlpN2lUZGphNWJUajdhNFJIZG5yY21qMWgxQ09aRjIzRS1fTEd1aFBMMnlQdXhxZGtWaEU0WnlkbXZnN3dCMl9hYzZDWFVQMU5tNzI2cEpNNHZqZFk4WEN1T0t1MmxvZ3F2aw?oc=5",
    "editoria": "politica",
-   "nota": 6,
+   "nota": 7,
    "esquentou": false,
    "lente": [
     "vorcaro",
@@ -268,52 +271,19 @@
    }
   },
   {
-   "manchete": "Brazil faces a tense Lula vs Bolsonaro runoff with US influence over Latin America at stake",
+   "manchete": "Ministros veem erros do TSE e do STF sobre prorrogação e esperam contestações, mas descartam anular eleição",
    "secoes": [
     "B",
-    "D-america_latina"
-   ],
-   "veiculos": 15,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-10-25T20:58:34Z",
-   "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPdUtLUF9XQnJFR3ZLR3ltUnpDM3NwRzdsOTF1WUhlSTNsU2lQRDcxM05LOExpSHBEWncwb3dZRTdVanpnNDJuaGVTWWVCWEhqZTRqcV9Fd3VxTklDcGdBcmpiMjlyT2FJZTdVYjJwRm1FcFBMUkI3bEpSRXZjVmZRbl9MNjFFTlJOTVVVUXp0T050bFpoVnp5ZWktV3A2ZXJzZGRLazRHX2xJWmdqTUxMZGhFLUIwQV9meDNmcGVHQ1lSaUpvOFNUWDhza1l6T0JF0gHWAUFVX3lxTE5aUTQ5MlVqNTZXTkRkRFdSOXZMRjkxQWxSUHZraXZlNjlOai1TZkJwc0p6VWdlSXFYd0NTY2t5QklyUV9QUENRU2xRV080MFlDeTBvcXZtSllVeUFEM2RsekJva0J5Y081aEFtdFd5TUVRQmwxcHdFZlFERk9rR0FSN2NQNzBLM19OVkdrbUFjLURJR1lub2ZvcHZ1UzlpZzA3dW0tMlBWLWpnV1Iza3UwT2dDdVphVGJweFRwbUJFREl1RTlBWEpadzhQd2phZk1xajdiVlE?oc=5",
-   "editoria": "america_latina",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "bolsonar"
-   ],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Eleição brasileira no radar internacional e influência dos EUA.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Apoiadores do senador Flávio Bolsonaro, candidato do PL (Partido Liberal) à Presidência, levaram uma máscara do presidente americano, Donald Trump, bandeiras dos Estados Unidos e de Israel e cartazes com a frase \"Fora PT\" ao ato com que ele encerr",
-   "secoes": [
-    "A",
-    "B"
+    "C-nacional"
    ],
    "veiculos": 4,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-25T20:58:34Z",
-   "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/10/25/flavio-bolsonaro-de-filho-do-ex-presidente-a-candidato-do-pl-a-presidencia-da-republica.ghtml",
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "link": "https://www1.folha.uol.com.br/poder/2026/10/ministros-veem-erros-do-tse-e-do-stf-sobre-prorrogacao-e-esperam-contestacoes-mas-descartam-anular-eleicao.shtml",
    "editoria": "eleicoes",
-   "nota": 6,
+   "nota": 4,
    "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio",
-    "pl",
-    "trump"
-   ],
+   "lente": [],
    "ia": {
     "editoria": "eleicoes",
     "I": 2,
@@ -322,23 +292,21 @@
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Contradição envolvendo helicóptero e investigados com Flávio.",
+    "motivo": "Bastidores sobre falhas e prorrogação de horário de votação pelo TSE.",
     "soma": 4
    }
   },
   {
    "manchete": "Escritório de Flávio recebeu R$ 1,32 mi de banca que defendia sócio do Faraó dos Bitcoins, diz mídia",
    "secoes": [
-    "A",
-    "B",
-    "C-nacional"
+    "A"
    ],
-   "veiculos": 2,
+   "veiculos": 1,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-25T20:58:34Z",
    "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPVy1FT0FiV2Z4eG5wNzRPOFBzLUZabUJwOExjZDlTU2pxOTFBZjdSWmVGTW05Szg0SjZPMERndHh6eTdsbUFxenRtenNCS185WWtCOWNteHRYQmI1bXdSSHdsQ3M1a1RYcHkweTNMMzU0Q3l6QmVoeEdZRUZFd0E3a0ZMcGZOczJMYzBvWEJUYlUxQmllcnhNSFpTRHdfTzg5QWRhSlk3MTVtV2FLeUpKRkEwUUV3RXI4NFEyRnprejZnTU00cUlSdElRR2I0NjE5NHJNTVRFLXVpTGNZZk9fWDNzUE5ici05QWtWVjBR?oc=5",
    "editoria": "eleicoes",
-   "nota": 6,
+   "nota": 5,
    "esquentou": false,
    "lente": [
     "bolsonar",
@@ -358,20 +326,44 @@
    }
   },
   {
+   "manchete": "Watch Lula Cast Vote in Brazil’s Presidential Runoff Election",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 74,
+   "veiculos_3h": 27,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "link": "https://www.france24.com/en/polls-open-in-brazil-presidential-runoff",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Cobertura internacional do voto de Lula no segundo turno.",
+    "soma": 4
+   }
+  },
+  {
    "manchete": "María Corina Machado regresa a Venezuela",
    "secoes": [
     "B",
     "D-america_latina"
    ],
-   "veiculos": 133,
-   "veiculos_3h": 61,
+   "veiculos": 129,
+   "veiculos_3h": 26,
    "na_pauta_desde": "2026-10-25T20:58:34Z",
    "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mundo/2026/10/maria-corina-machado-anuncia-volta-a-venezuela-apos-quase-um-ano-fora.shtml",
    "editoria": "america_latina",
    "nota": 5,
    "esquentou": false,
    "lente": [],
-   "outras_manchetes": 1,
    "ia": {
     "editoria": "america_latina",
     "I": 2,
@@ -385,238 +377,194 @@
    }
   },
   {
-   "manchete": "Eleitora cola teclas 2 e 3 de uma urna em Gravataí",
+   "manchete": "A horas de la segunda vuelta, Lula y Flávio Bolsonaro cerraron sus campañas con movilizaciones y actos multitudinarios",
    "secoes": [
-    "A",
-    "B",
-    "C-nacional"
+    "B"
    ],
-   "veiculos": 2,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-25T21:15:26Z",
-   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQUTlZRF9fcEczRDgwNm5aWS1VOE9ILU1UNmFSbXAwX2dJRWQtSExBdzA4TXlJT2g5RThCaldzQTk0cUg0UFdKRnJxTVRDVzFaZmNzRmRIUXZPR1A4Q2FCZm1nNFFsNWVrT1h5SVlvOThmZ2Mxc1VtYndEUHJiVFlIdjVLVjFSV0ViazF0bjdGT2QyQ3BaV3ctOTdDOGNreDA1MEZLejdPT3RQNFVQQjdkd29oNXNlSkw4anh3?oc=5",
-   "editoria": "eleicoes",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Incidente com cantor em seção eleitoral em São Paulo.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Urnas são distribuídas em todo o país para a votação do 2º turno",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 2,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-25T21:15:26Z",
-   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOeHdfU2hfZVU1M0NLSUhrWWtvZk5ESnR6VVBCaDNJUTdCQXNDSUdxWWxVYXAtb3BEY1J0Yl9QbENsaUdlOXhSSmNucjdLRlVoQ0dCOU0wRkE4UHFKWTg5UnVtSWpSWnRhNHZaMTJ1R1Jaa3ZFM1owVHhlRUdvS0RxQWVvaXN6dXh6b3YwT3VQMFdtNmp0eVp2SWNRa0ZDSmdsRFJzYTNwOWU5Zi1CS3c?oc=5",
-   "editoria": "eleicoes",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Balanço parcial de urnas eletrônicas substituídas no país.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "eleicoes",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Manifestação democrática contra golpes.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "eleicoes",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Manifestação democrática contra golpes.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "eleicoes",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Manifestação democrática contra golpes.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 2,
+   "veiculos": 39,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "link": "https://ladiaria.com.uy/mundo/articulo/2026/10/a-horas-de-la-segunda-vuelta-lula-y-flavio-bolsonaro-cerraron-sus-campanas-con-movilizaciones-y-actos-multitudinarios/",
+   "editoria": "saude",
+   "nota": 7,
    "esquentou": false,
    "lente": [
-    "golpe"
+    "sus",
+    "bolsonar",
+    "flavio"
    ],
    "ia": {
-    "editoria": "politica",
+    "editoria": "eleicoes",
     "I": 2,
     "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Manifestação democrática contra golpes.",
+    "motivo": "Encerramento das campanhas de Lula e Flávio Bolsonaro.",
     "soma": 4
    }
   },
   {
-   "manchete": null,
+   "manchete": "Brazil's Lula and Flavio Bolsonaro neck and neck after bitter runoff campaign",
    "secoes": [
-    "A"
+    "B",
+    "D-america_latina"
    ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "eleicoes",
-   "nota": 2,
+   "veiculos": 23,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "link": "https://www.lemonde.fr/en/international/article/2026/10/25/brazil-s-lula-and-flavio-bolsonaro-neck-and-neck-after-bitter-runoff-campaign_6763594_4.html",
+   "editoria": "america_latina",
+   "nota": 7,
    "esquentou": false,
-   "lente": [],
+   "lente": [
+    "bolsonar",
+    "flavio"
+   ],
    "ia": {
-    "editoria": "politica",
+    "editoria": "eleicoes",
     "I": 2,
     "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Manifestação democrática contra golpes.",
+    "motivo": "Imprensa internacional destaca acirrada disputa eleitoral no Brasil.",
     "soma": 4
    }
+  },
+  {
+   "manchete": "Deputados denunciam racismo e intolerância religiosa em atos pró-Flávio",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 10,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "link": "https://operamundi.uol.com.br/eleicoes-2026-brasil/ministerio-da-igualdade-racial-quer-apurar-racismo-em-ato-bolsonarista/",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "flavio",
+    "racismo"
+   ],
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Denúncias de racismo e intolerância religiosa em atos bolsonaristas.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Que horas começa a votação do 2º turno? Veja os horários por estado",
+   "secoes": [
+    "A",
+    "A",
+    "A"
+   ],
+   "veiculos": 7,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/10/25/horario-de-votacao-no-segundo-turno-das-eleicoes-de-2026-muda-dependendo-do-estado-veja-o-seu.ghtml",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Prisão de secretário municipal em Salvador no dia da votação.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "VÍDEO: Vereadora do PT é atacada durante carreata pró-Lula em Montes Claros, MG",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPSVY3aUJSZVgwcHd2cGxtMm9WdlBBY2JxVlNDRzFEeWh6MTRGb2NWWnR1WGtjQmEyTXVwaExFT25oZ3BLOUEyMlp0TlVTUEZPOEhfdHdpT1pOUGlGSzZxWDRXTHhaNGtFVGJWTlBtLW1WdlhmVEhkd185allpaHBKYWE1TXg2dGZSV0dvMm92ZVB0MjRGRjFZVnJkNFpaZjVFaTFqaWpXOFBWM3oxZjhmWVpVVzlCV1Q1UGhzYktzaVphZ2d4ZERURURwdVQ3ZTE2TG9ySTZGT0NQNFBNa2ZrRkp2SV9pUdIB5gFBVV95cUxPSVY3aUJSZVgwcHd2cGxtMm9WdlBBY2JxVlNDRzFEeWh6MTRGb2NWWnR1WGtjQmEyTXVwaExFT25oZ3BLOUEyMlp0TlVTUEZPOEhfdHdpT1pOUGlGSzZxWDRXTHhaNGtFVGJWTlBtLW1WdlhmVEhkd185allpaHBKYWE1TXg2dGZSV0dvMm92ZVB0MjRGRjFZVnJkNFpaZjVFaTFqaWpXOFBWM3oxZjhmWVpVVzlCV1Q1UGhzYktzaVphZ2d4ZERURURwdVQ3ZTE2TG9ySTZGT0NQNFBNa2ZrRkp2SV9pUQ?oc=5",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "bolsonar"
+   ],
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Violência política e ataques a vereadora do PT em Minas.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Mexico orders that former state attorney general face trial on unusual treason charge",
+   "secoes": [
+    "B",
+    "C-internacional",
+    "D-america_latina"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOZlE2REE0NjRIbEpTcGlPQzBNTEdrWFVvT1ZoZXFfWTE3MjhfSWVtOEIwdkp6RDNZN2lrLUpJc3pjcU5HVzd2SnVCM1pBc3VIbmNuSG1QQkJqM29oUXVQbjlRQXk2dFBjR3NnbVY1SGpISDE1QTF1bnhxdDJ0RDJUZmJ3SUtZODRLR1ZrTVVHc3Q4T1IzMHJIUzBsSkZETnUyVnJpQlhn?oc=5",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Brasil x Venezuela ao vivo: onde assistir e horário pela 4ª rodada da Liga Evolução de Futsal",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 6,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxNNWhldjVIZVJEZXpidFVIQzlESi0tMWlfSTVjNnFXT0xGSXZlZnlVd0JuYWpzS3VtTHdBbDczR1d1N0hpSUhRN242cWJvU0F5R3VBR05vc2dGTE9rakxyN2ZwZC1aNkE0cHBPTmhvclVqeS1PLXFucVVsR1lPRUNlOWkzeDNvNllna3dJZ3ZITDlvNUJ3bkcyUGJNZkM5QUJyQk5rOG9SZTJ6bkZqS29zOXFqMEFLRkpadGtRWGdybk5GOFVKV2RIME1jODFpSjZEc3RXR3FKMWVTRmRrOHFIWFduaWdpZ1ptS0QzVUp6WWNmNl9tcEVxX1FYSVpUZFZNRVRV?oc=5",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
   }
  ],
  "rebaixados": [
   {
-   "manchete": "Trump comments on Machado's return to Venezuela, Brazil presidential election, Michigan Senate race",
+   "manchete": "INSS paga aposentados de outubro a partir de segunda (26/10); veja o calendário pelo final do benefício",
    "veiculos": 2,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-25T20:58:34Z",
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
    "esquentou": false,
    "ia": {
-    "editoria": "america_latina",
+    "editoria": "economia",
     "I": 2,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Declarações de Trump sobre eleições no Brasil e região.",
+    "motivo": "Calendário de pagamento de aposentadorias do INSS.",
     "soma": 3
-   }
-  },
-  {
-   "manchete": "Longe da TV há 36 anos, Lídia Brondi ressurge para declarar voto: “Pela manutenção da democracia”",
-   "veiculos": 5,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-25T17:41:40Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 1,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Declaração de voto de artista famosa.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Como data centers dos EUA viraram motor de 'fábrica de bilionários' no Brasil",
-   "veiculos": 2,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-25T20:58:34Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "economia",
-    "I": 1,
-    "V": 1,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Crescimento de data centers e impacto econômico.",
-    "soma": 2
    }
   },
   {
@@ -638,9 +586,81 @@
    }
   },
   {
+   "manchete": "Economia e agro: eleições no Brasil ganham destaque na imprensa internacional; veja",
+   "veiculos": 28,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 1,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Mídia estrangeira foca em economia e agro nas eleições.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Brasileiros na Nova Zelândia abrem votação do segundo turno das eleições 2026",
+   "veiculos": 31,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 1,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Aumento de comparecimento de brasileiros votando no exterior.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Nas duas primeiras horas de votação, 467 urnas foram substituídas",
+   "veiculos": 9,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 1,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Balanço parcial de substituição de urnas eletrônicas pelo TSE.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Eleições 2026: 7 momentos da campanha de Lula à Presidência da República",
+   "veiculos": 5,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 1,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Desempenho de Lula na votação dos brasileiros no exterior.",
+    "soma": 2
+   }
+  },
+  {
    "manchete": "Jocivaldo vota em comunidade quilombola de Antônio Cardoso",
    "veiculos": 1,
-   "veiculos_3h": 1,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-25T20:58:34Z",
    "esquentou": false,
    "ia": {
@@ -656,25 +676,81 @@
    }
   },
   {
-   "manchete": "Brasileiros no exterior abrem votação do segundo turno",
-   "veiculos": 3,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-25T20:58:34Z",
+   "manchete": "Serbia votes in election pitting longtime leader against student movement",
+   "veiculos": 8,
+   "veiculos_3h": 8,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
    "esquentou": false,
    "ia": {
-    "editoria": "eleicoes",
-    "I": 1,
-    "V": 1,
+    "editoria": "fora",
+    "I": 0,
+    "V": 0,
     "P": 0,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Votação de brasileiros no exterior.",
-    "soma": 2
+    "motivo": "Eleições em outro país sem impacto direto no Brasil.",
+    "soma": 0
+   }
+  },
+  {
+   "manchete": "Daniel Vorcaro está apto a votar no segundo turno em seção eleitoral na Papuda",
+   "veiculos": 13,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "fora",
+    "I": 0,
+    "V": 0,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Curiosidade menor sobre local de votação de preso.",
+    "soma": 0
    }
   }
  ],
  "obrigatorios": [
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "luzmanifesto",
+    "quando": "2026-10-25T21:06:32Z",
+    "legenda": "Agora não precisa mais desenhar. Manifeste-se conosco. LUZMANIFESTO | luzmanifesto",
+    "link": "https://www.instagram.com/p/De7ofEFSdq0/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-25T20:59:25Z",
+    "legenda": "🔥💭",
+    "link": "https://www.instagram.com/p/De7nyJlzCXK/"
+   },
+   "triagem": "candidato"
+  },
   {
    "manchete": null,
    "secoes": [
@@ -691,6 +767,64 @@
     "quando": "2026-10-25T19:22:13Z",
     "legenda": "O recado está dado! GOLPE NUNCA MAIS Manifeste-se conosco. LUZMANIFESTO | luzmanifesto",
     "link": "https://www.instagram.com/p/De7cfEmJyU3/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Ao Vivo | STF prorroga votação em todo o Brasil até 19h; acompanhe",
+   "secoes": [
+    "A",
+    "A"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOcjFfWXdDT050emlqOW1EdnBrY3ZYM002ZW1JTFBpYWxPZ1NhOXFiMHhNcXctcEMxWFRpNmo4b09Zem1STzlMZDdtWnBGTlh5Q1d1ZmdBREExTUVTUkFvM1VjNWF5NHV5T1NkbVdrbFpET3hodTVUSXhPUDRQVXhZNV96dV9Bd09ZV3VDbEt4ajltcThaWFh5ZXNoRlZwOTlPUGszdEtXbw?oc=5",
+   "editoria": "eleicoes",
+   "nota": 6,
+   "parceiro": {
+    "perfil": "luzmanifesto",
+    "quando": "2026-10-25T20:30:38Z",
+    "legenda": "GOLPE EM CURSO NO BRASIL. Após falhas no transporte público dificultarem o acesso de eleitores às urnas, o ministro Cristiano Zanin prorrogou a votação até as 1",
+    "link": "https://www.instagram.com/p/De7kWtYvyEe/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-25T20:40:26Z",
+    "legenda": "🔥💭",
+    "link": "https://www.instagram.com/p/De7lnq6gSJX/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-25T20:24:04Z",
+    "legenda": "🔥💭",
+    "link": "https://www.instagram.com/p/De7jvA-hBNY/"
    },
    "triagem": "candidato"
   },
@@ -723,12 +857,12 @@
    "na_pauta_desde": null,
    "link": null,
    "editoria": "gerais",
-   "nota": 1,
+   "nota": 2,
    "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-25T16:46:32Z",
-    "legenda": "🔥💭",
-    "link": "https://www.instagram.com/p/De7K10ZRNLB/"
+    "perfil": "luzmanifesto",
+    "quando": "2026-10-25T20:53:14Z",
+    "legenda": "ALERTA NACIONAL. TENTATIVA DE GOLPE EM CURSO. Manifeste-se conosco. LUZMANIFESTO | luzmanifesto",
+    "link": "https://www.instagram.com/p/De7m9quRWND/"
    },
    "triagem": "candidato"
   },
@@ -752,17 +886,37 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "O que marcou o segundo turno da eleição presidencial",
+   "manchete": null,
    "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-25T16:46:32Z",
+    "legenda": "🔥💭",
+    "link": "https://www.instagram.com/p/De7K10ZRNLB/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Las propuestas de Luiz Inácio Lula da Silva: Estado e inversión contra las desigualdades",
+   "secoes": [
+    "A",
     "A",
     "A"
    ],
-   "veiculos": 5,
+   "veiculos": 2,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-25T20:58:34Z",
-   "link": "https://www.nexojornal.com.br/expresso/2026/10/24/segundo-turno-lula-e-flavio-bolsonaro-eleicao-presidente",
-   "editoria": "eleicoes",
-   "nota": 7,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "link": "https://elpais.com/america/2026-10-25/las-propuestas-de-luiz-inacio-lula-da-silva-estado-e-inversion-contra-las-desigualdades.html",
+   "editoria": "gerais",
+   "nota": 5,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-10-25T18:16:42Z",
@@ -772,64 +926,21 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Lula da Silva, un candidato mimetizado con su pueblo",
+   "manchete": null,
    "secoes": [
     "A"
    ],
-   "veiculos": 2,
+   "veiculos": 0,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-25T20:58:34Z",
-   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQcXoyZzYyVWtpamtlS3RyOHhyTGQtbGp4aVZ5Tks0dzRBbnNUU2luc1dCQ0VPakJ5M3NuX3NxdWloRllnWkNTaUhLdVY5cDBudEYzYjJiak5idE1TM3poY3h0QzBLelRMUjItUGdCdWc2cjBfZk1pRDJpd0xhZVQybXN1Yw?oc=5",
-   "editoria": "eleicoes",
-   "nota": 3,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 2,
    "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-25T19:13:26Z",
-    "legenda": "O presidente Lula da Silva (PT), candidato à reeleição, afirmou neste domingo (25) que a falta de ônibus registrada em cidades baianas e em São Paulo é “banditi",
-    "link": "https://www.instagram.com/p/De7bp-RPQGU/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Gretchen declara voto às vésperas do segundo turno das eleições",
-   "secoes": [
-    "A",
-    "A",
-    "A",
-    "B"
-   ],
-   "veiculos": 6,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-25T21:15:26Z",
-   "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/10/25/como-justificar-a-ausencia-no-segundo-turno.ghtml",
-   "editoria": "eleicoes",
-   "nota": 5,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-25T16:39:22Z",
-    "legenda": "O Tribunal Regional Eleitoral da Bahia (TRE-BA) determinou, neste domingo (25), a prisão de Pablo Souza, secretário municipal de Mobilidade de Salvador, após de",
-    "link": "https://www.instagram.com/p/De7J6JzRYfE/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Datafolha para presidente no DF, votos válidos: Flávio Bolsonaro, 56%; Lula, 44%",
-   "secoes": [
-    "A",
-    "A",
-    "B"
-   ],
-   "veiculos": 644,
-   "veiculos_3h": 329,
-   "na_pauta_desde": "2026-10-25T21:15:26Z",
-   "link": "https://g1.globo.com/df/distrito-federal/eleicoes/2026/noticia/2026/10/24/datafolha-df-presidente-segundo-turno-24-outubro.ghtml",
-   "editoria": "eleicoes",
-   "nota": 9,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-25T17:46:03Z",
-    "legenda": "O presidente Luiz Inácio Lula da Silva (PT), candidato à reeleição, criticou Flávio Bolsonaro (PL) neste domingo (25), após votar em São Bernardo do Campo, no A",
-    "link": "https://www.instagram.com/reel/De7RgKyhC0-/"
+    "perfil": "luzmanifesto",
+    "quando": "2026-10-25T20:15:40Z",
+    "legenda": "GOLPE EM CURSO.",
+    "link": "https://www.instagram.com/p/De7ip-zh3Bt/"
    },
    "triagem": "candidato"
   },
@@ -846,28 +957,87 @@
    "nota": 1,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-10-25T19:08:28Z",
-    "legenda": "O juiz Carlos Alberto Begalles, do Tribunal Regional do Trabalho da 18ª Região (TRT-18), proibiu o dono do Frigorífico Goiás, Leandro Batista da Nóbrega, de lev",
-    "link": "https://www.instagram.com/p/De7bE-lBs8v/"
+    "quando": "2026-10-25T21:01:08Z",
+    "legenda": "taliriapetrone 🔥💭",
+    "link": "https://www.instagram.com/p/De7n-u-zBUi/"
    },
    "triagem": "candidato"
   },
   {
-   "manchete": "Ministério da Justiça inicia operação de segurança para o 2º turno",
+   "manchete": null,
    "secoes": [
     "A"
    ],
-   "veiculos": 8,
+   "veiculos": 0,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-25T21:15:26Z",
-   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOZW44RHF3bmVUUUhpS29lWlEtcUczMktmMWU4UHRTbk42RlR2SjJjb0o3T0RTLXpXeC1hMTNfZjlxXzBCQ3ZEU3l6bDZoQmE2REdjaU5mRkhRNnFVS241aC1fX1lYU085d08yZDJlQzB1dDVLNnNwU0c5SHNNcks0VzhMeGFRaXViOUFrcUJDQlYzcHhVQ3FScHc0bGZLRlpXSHpQT1JYZ0xfVVMtWUp4UGk0UlpLMzZrREh6S1p1cW8?oc=5",
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "luzmanifesto",
+    "quando": "2026-10-25T20:09:25Z",
+    "legenda": "Se manifeste. Luz Manifesto | luzmanifesto",
+    "link": "https://www.instagram.com/p/De7iCQjhLDn/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-25T20:52:41Z",
+    "legenda": "Lindo ⭐️❤️",
+    "link": "https://www.instagram.com/p/De7m7WYsjQ2/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Que horas começa a votação do 2º turno? Veja os horários por estado",
+   "secoes": [
+    "A",
+    "A",
+    "A"
+   ],
+   "veiculos": 7,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/10/25/horario-de-votacao-no-segundo-turno-das-eleicoes-de-2026-muda-dependendo-do-estado-veja-o-seu.ghtml",
    "editoria": "eleicoes",
    "nota": 5,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-10-25T19:10:41Z",
-    "legenda": "O secretário de Mobilidade de Salvador, Pablo Souza, que teve ordem de prisão decretada pela Justiça Eleitoral da Bahia após a redução da frota de ônibus na cap",
-    "link": "https://www.instagram.com/p/De7bVytBvfo/"
+    "quando": "2026-10-25T16:39:22Z",
+    "legenda": "O Tribunal Regional Eleitoral da Bahia (TRE-BA) determinou, neste domingo (25), a prisão de Pablo Souza, secretário municipal de Mobilidade de Salvador, após de",
+    "link": "https://www.instagram.com/p/De7J6JzRYfE/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "luzmanifesto",
+    "quando": "2026-10-25T21:18:24Z",
+    "legenda": "CARA É INACREDITÁVEL. Manifeste-se conosco. LUZMANIFESTO | luzmanifesto",
+    "link": "https://www.instagram.com/p/De7p3w-xk8R/"
    },
    "triagem": "candidato"
   },
@@ -891,6 +1061,25 @@
    "triagem": "candidato"
   },
   {
+   "manchete": "Lula termina campanha no ataque a Flávio Bolsonaro no Rio e em São Paulo",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 25,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/10/sao-paulo-entra-em-atencao-para-alagamentos-na-madrugada-deste-domingo-25.shtml",
+   "editoria": "eleicoes",
+   "nota": 8,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-25T19:13:26Z",
+    "legenda": "O presidente Lula da Silva (PT), candidato à reeleição, afirmou neste domingo (25) que a falta de ônibus registrada em cidades baianas e em São Paulo é “banditi",
+    "link": "https://www.instagram.com/p/De7bp-RPQGU/"
+   },
+   "triagem": "candidato"
+  },
+  {
    "manchete": null,
    "secoes": [
     "A"
@@ -910,23 +1099,40 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Eleitora cola teclas 2 e 3 de uma urna em Gravataí",
+   "manchete": "Eleições 2026: 7 momentos da campanha de Lula à Presidência da República",
    "secoes": [
-    "A",
-    "B",
-    "C-nacional"
+    "A"
    ],
-   "veiculos": 2,
+   "veiculos": 5,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-25T21:15:26Z",
-   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQUTlZRF9fcEczRDgwNm5aWS1VOE9ILU1UNmFSbXAwX2dJRWQtSExBdzA4TXlJT2g5RThCaldzQTk0cUg0UFdKRnJxTVRDVzFaZmNzRmRIUXZPR1A4Q2FCZm1nNFFsNWVrT1h5SVlvOThmZ2Mxc1VtYndEUHJiVFlIdjVLVjFSV0ViazF0bjdGT2QyQ3BaV3ctOTdDOGNreDA1MEZLejdPT3RQNFVQQjdkd29oNXNlSkw4anh3?oc=5",
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPN203WXBrRkdQd0Q3anJmckItWENyTkxkTjRFSnNncVFYUHZfYnNNekk4WnRxbFhaa24waG5hMTRUcFE4emtVWEJlMlpKVG01REE0cFYtQmRaODZJNXJrQUIwcnBKajJNNFJwVEVSS1E3YURoNnJMRWpwczVkVFJXbnZwbXpDZXhIQVJCZE9sZldCMHp4b0pHbE81T2JGQUQ1RmtlY2RmSnNWcUlpSFViRzJjaWNtUnRy0gG-AUFVX3lxTE16Y3lzRW9tOE9kNk1YRDYtZ1pkaWo2dWUxUHJYVkFMT0h6YVQweDV6TzR6RW9uTEx5Z2E5bk5Cb3ZNLU5jVC1uQ1pWOHpGN1lWVmE4TFh1WXg4YXdQX0FLWkdOQXAzM2h1OTBCV3dzbmZYTDJaTDFHM1Y2Wmg3SDFYdDVTcnpmbjg0dkU2OVB6WUJ0TkJiSEJDQVR4b2R0TUVxNktjdC1jbjhkbDhNakp2SmY2b2p2eWVud2FuU1E?oc=5",
    "editoria": "eleicoes",
-   "nota": 4,
+   "nota": 5,
+   "parceiro": {
+    "perfil": "luzmanifesto",
+    "quando": "2026-10-25T11:52:02Z",
+    "legenda": "A VIRADA COMEÇOU! Lula venceu na Austrália, Nova Zelândia, China, Coreia do Sul e Singapura, com mais votos do que no primeiro turno em todos esses países. Na A",
+    "link": "https://www.instagram.com/p/De6o-oiRuaJ/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Flávio Bolsonaro usa helicóptero apreendido com R$ 7 milhões do “Faraó dos Bitcoins”",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "link": "https://vermelho.org.br/2026/10/25/na-vespera-da-eleicao-flavio-bolsonaro-usa-helicoptero-apreendido-com-7-milhes-do-farao-dos-bitcoins/?utm_source=rss&utm_medium=rss&utm_campaign=na-vespera-da-eleicao-flavio-bolsonaro-usa-helicoptero-apreendido-com-7-milhes-do-farao-dos-bitcoins",
+   "editoria": "gerais",
+   "nota": 6,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-10-25T17:53:53Z",
-    "legenda": "O cantor Johnny Hooker enfrentou uma interrupção na votação neste domingo (25), na Escola Concept, em São Paulo, após ser informado de que teclas da urna eletrô",
-    "link": "https://www.instagram.com/p/De7SjU9hqlR/"
+    "quando": "2026-10-25T17:07:54Z",
+    "legenda": "Flávio Bolsonaro (PL) desembarcou neste sábado (24), no Rio de Janeiro, de um helicóptero que foi alvo de uma apreensão de R$ 7 milhões ligados a Glaidson Acáci",
+    "link": "https://www.instagram.com/p/De7NSjmxaYr/"
    },
    "triagem": "candidato"
   },
@@ -950,22 +1156,21 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Apoiadores do senador Flávio Bolsonaro, candidato do PL (Partido Liberal) à Presidência, levaram uma máscara do presidente americano, Donald Trump, bandeiras dos Estados Unidos e de Israel e cartazes com a frase \"Fora PT\" ao ato com que ele encerr",
+   "manchete": null,
    "secoes": [
-    "A",
-    "B"
+    "A"
    ],
-   "veiculos": 4,
+   "veiculos": 0,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-25T20:58:34Z",
-   "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/10/25/flavio-bolsonaro-de-filho-do-ex-presidente-a-candidato-do-pl-a-presidencia-da-republica.ghtml",
-   "editoria": "eleicoes",
-   "nota": 6,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-10-25T17:07:54Z",
-    "legenda": "Flávio Bolsonaro (PL) desembarcou neste sábado (24), no Rio de Janeiro, de um helicóptero que foi alvo de uma apreensão de R$ 7 milhões ligados a Glaidson Acáci",
-    "link": "https://www.instagram.com/p/De7NSjmxaYr/"
+    "quando": "2026-10-25T19:08:28Z",
+    "legenda": "O juiz Carlos Alberto Begalles, do Tribunal Regional do Trabalho da 18ª Região (TRT-18), proibiu o dono do Frigorífico Goiás, Leandro Batista da Nóbrega, de lev",
+    "link": "https://www.instagram.com/p/De7bE-lBs8v/"
    },
    "triagem": "candidato"
   },
@@ -989,37 +1194,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Brasileiros no exterior abrem votação do segundo turno",
+   "manchete": "Escritório de Flávio recebeu R$ 1,32 mi de banca que defendia sócio do Faraó dos Bitcoins, diz mídia",
    "secoes": [
     "A"
    ],
-   "veiculos": 3,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-25T20:58:34Z",
-   "link": "https://www.gazetadopovo.com.br/eleicoes/2026/brasileiros-no-exterior-abrem-votacao-do-segundo-turno/",
-   "editoria": "eleicoes",
-   "nota": 4,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-25T17:50:29Z",
-    "legenda": "O comparecimento de brasileiros às urnas no exterior cresceu em 11 países que já encerraram a votação do segundo turno neste domingo (25), com 8.950 participant",
-    "link": "https://www.instagram.com/p/De7SKS_BZ-d/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Escritório de Flávio recebeu R$ 1,32 mi de banca que defendia sócio do Faraó dos Bitcoins, diz mídia",
-   "secoes": [
-    "A",
-    "B",
-    "C-nacional"
-   ],
-   "veiculos": 2,
+   "veiculos": 1,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-25T20:58:34Z",
    "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPVy1FT0FiV2Z4eG5wNzRPOFBzLUZabUJwOExjZDlTU2pxOTFBZjdSWmVGTW05Szg0SjZPMERndHh6eTdsbUFxenRtenNCS185WWtCOWNteHRYQmI1bXdSSHdsQ3M1a1RYcHkweTNMMzU0Q3l6QmVoeEdZRUZFd0E3a0ZMcGZOczJMYzBvWEJUYlUxQmllcnhNSFpTRHdfTzg5QWRhSlk3MTVtV2FLeUpKRkEwUUV3RXI4NFEyRnprejZnTU00cUlSdElRR2I0NjE5NHJNTVRFLXVpTGNZZk9fWDNzUE5ici05QWtWVjBR?oc=5",
    "editoria": "eleicoes",
-   "nota": 6,
+   "nota": 5,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-10-25T17:36:47Z",
@@ -1029,35 +1213,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": null,
+   "manchete": "Nas duas primeiras horas de votação, 467 urnas foram substituídas",
    "secoes": [
     "A"
    ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
+   "veiculos": 9,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/10/25/eleicoes-2026-tse-informa-que-467-urnas-foram-substituidas-ate-10h-deste-domingo.ghtml",
    "editoria": "eleicoes",
-   "nota": 2,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-25T18:04:03Z",
-    "legenda": "A apresentadora Eliana fez um pedido aos brasileiros neste domingo de eleição. Ela falou diretamente às pessoas que respeitam umas às outras; em quem defende as",
-    "link": "https://www.instagram.com/reel/De7TnTZBkqR/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Urnas são distribuídas em todo o país para a votação do 2º turno",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 2,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-25T21:15:26Z",
-   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOeHdfU2hfZVU1M0NLSUhrWWtvZk5ESnR6VVBCaDNJUTdCQXNDSUdxWWxVYXAtb3BEY1J0Yl9QbENsaUdlOXhSSmNucjdLRlVoQ0dCOU0wRkE4UHFKWTg5UnVtSWpSWnRhNHZaMTJ1R1Jaa3ZFM1owVHhlRUdvS0RxQWVvaXN6dXh6b3YwT3VQMFdtNmp0eVp2SWNRa0ZDSmdsRFJzYTNwOWU5Zi1CS3c?oc=5",
-   "editoria": "eleicoes",
-   "nota": 4,
+   "nota": 5,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-10-25T17:44:47Z",
@@ -1067,22 +1232,79 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Vereadora do PT Iara Pimentel é agredida durante ato em Minas Gerais e recebe atendimento médico; veja vídeo",
+   "manchete": "Brasileiros na Nova Zelândia abrem votação do segundo turno das eleições 2026",
    "secoes": [
     "A",
+    "B"
+   ],
+   "veiculos": 31,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/10/25/como-consultar-meu-local-de-votacao-para-o-segundo-turno.ghtml",
+   "editoria": "eleicoes",
+   "nota": 6,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-25T17:50:29Z",
+    "legenda": "O comparecimento de brasileiros às urnas no exterior cresceu em 11 países que já encerraram a votação do segundo turno neste domingo (25), com 8.950 participant",
+    "link": "https://www.instagram.com/p/De7SKS_BZ-d/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "GCN: Quem defende sua aposentadoria depois da eleição?",
+   "secoes": [
     "A"
    ],
-   "veiculos": 8,
+   "veiculos": 1,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-25T21:15:26Z",
-   "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNZWo1MnhLYnN1c2pNaDFTc3JvUnBTZWRLRWJvM1RTWTNTbzk3eDhHM2EtVWhYclNUQl9Makp2VXhRMWZnMDg0cFBZb2dWRDg2MEtQcnY0M0hHRkNvbVpCZGZXVEZXVU9sTVpvMURyOEZVNFpXTFlSdGZRY3UzQ0Y4aFNVa25GQ3JKd28yeFZESU9mUGRTeFRMMm5nc1R1c3dkR1ZHT1hRSExJWEIwQTRvcjNyMVhWby1hU1hoR0dRak1HVXR6bDdCcTZzMkZ4NEpnZVFaNnBkRV9fZ1ROdnIzQnBEWdIB8gFBVV95cUxPbmxKSHJoYk9NZUVjRUpsek1NRUtEanBqYnc3REp1cGdGRVExNXVJMVFTS0NBTTZyYklSWkxTVm5IYmIyc1MtVkRlX25obzE5SlVvekhjR1BTRDRhRHladXdnV2ZHbXpnZU03ZlpWSjRJNURfbkNoeWIzUnJKWUo4ZmMyNF8xVEFjSVQyUjVOYzdDeHhPbHl5dG1LZVpYd29maU9rVmxVMXZfTUhoTVFyUzBReS11ci13YjJSRTloZGFEQlI5a0VKT1NlSHphUmpWNm5EZ2JMSTV5YzNSLVB2azM3THlQN0U5NkpiTnZaY1p4Zw?oc=5",
-   "editoria": "gerais",
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPRXViUWpiQmZMMVNDODdCa282d3RQNDNOMDgyemdZUlFKTWFqRHVJMjg3amtfelMxYXd0andzS3hzWDVjay0tdjgwTC1hY1U5OUo0S0FndldKSlhrVF85UVo0aDRnZkI3SUZ5ZzN2MGgzZ0xld3pWVzZDX1M3aTZweXYtVEVSWlByT1F4NTBDclVheUtCVkxrRGlsbF9kYnI1V25DMXdHeFBnMG5tdVE?oc=5",
+   "editoria": "eleicoes",
    "nota": 3,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-10-25T11:56:51Z",
-    "legenda": "A vereadora Iara Pimentel (PT), de Montes Claros, em Minas Gerais, foi agredida durante uma carreata em apoio à reeleição do presidente Luiz Inácio Lula da Silv",
-    "link": "https://www.instagram.com/p/De6psv-kTdH/"
+    "quando": "2026-10-25T18:04:03Z",
+    "legenda": "A apresentadora Eliana fez um pedido aos brasileiros neste domingo de eleição. Ela falou diretamente às pessoas que respeitam umas às outras; em quem defende as",
+    "link": "https://www.instagram.com/reel/De7TnTZBkqR/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "MJSP: Às 9h, segundo turno já tinha 32 ocorrências de crimes eleitorais",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPNUxSdW9qZVR0TWpsRGJoMjNZRVVMQXl1dTk0bzRDTjlzMkhPTG9TdFRxWHdMX041M0ZxVXRydG1ucDBLalo4dFlQMV80LWpjbDZBb3lrZmJGWkpKaWdmVFNSa0JLdjNGT1A4cE5ZM0QxV0pkVVQxTjg1TlVBQ1kwcVU4NFROQ0V6VHo4b0J4WVRQbUo5aXZJaWNxdzN0SE8zYWVsWDR1VWZobGN4aVJKbkl4ZjhEM3B4ZGFIRVZRRFowdV81WnM4Ymh2VTNTZ25UZVJOcnE3T21Xa1NOa0RLRTNLTnFfMVBxeVN3Nl9kZVpicU5FcnJWVw?oc=5",
+   "editoria": "eleicoes",
+   "nota": 3,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-25T17:57:16Z",
+    "legenda": "Ao menos 22 pessoas foram levadas a delegacias por suspeita de envolvimento em crimes eleitorais durante o segundo turno das eleições de 2026, neste domingo (25",
+    "link": "https://www.instagram.com/p/De7S8C5Bx82/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "VÍDEO: Vereadora do PT é atacada durante carreata pró-Lula em Montes Claros, MG",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPSVY3aUJSZVgwcHd2cGxtMm9WdlBBY2JxVlNDRzFEeWh6MTRGb2NWWnR1WGtjQmEyTXVwaExFT25oZ3BLOUEyMlp0TlVTUEZPOEhfdHdpT1pOUGlGSzZxWDRXTHhaNGtFVGJWTlBtLW1WdlhmVEhkd185allpaHBKYWE1TXg2dGZSV0dvMm92ZVB0MjRGRjFZVnJkNFpaZjVFaTFqaWpXOFBWM3oxZjhmWVpVVzlCV1Q1UGhzYktzaVphZ2d4ZERURURwdVQ3ZTE2TG9ySTZGT0NQNFBNa2ZrRkp2SV9pUdIB5gFBVV95cUxPSVY3aUJSZVgwcHd2cGxtMm9WdlBBY2JxVlNDRzFEeWh6MTRGb2NWWnR1WGtjQmEyTXVwaExFT25oZ3BLOUEyMlp0TlVTUEZPOEhfdHdpT1pOUGlGSzZxWDRXTHhaNGtFVGJWTlBtLW1WdlhmVEhkd185allpaHBKYWE1TXg2dGZSV0dvMm92ZVB0MjRGRjFZVnJkNFpaZjVFaTFqaWpXOFBWM3oxZjhmWVpVVzlCV1Q1UGhzYktzaVphZ2d4ZERURURwdVQ3ZTE2TG9ySTZGT0NQNFBNa2ZrRkp2SV9pUQ?oc=5",
+   "editoria": "politica",
+   "nota": 5,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-25T17:34:17Z",
+    "legenda": "A Bancada do PT na Câmara dos Deputados divulgou nota neste domingo (25) repudiando a violência de militantes bolsonaristas contra manifestação pacífica em apoi",
+    "link": "https://www.instagram.com/p/De7QTwmBRCt/"
    },
    "triagem": "candidato"
   },
@@ -1115,25 +1337,6 @@
    "na_pauta_desde": null,
    "link": null,
    "editoria": "eleicoes",
-   "nota": 3,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-25T03:01:22Z",
-    "legenda": "#BFCNASRUAS e o cenário eleitoral 2026.",
-    "link": "https://www.instagram.com/reel/De5sV_xiYDR/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "eleicoes",
    "nota": 2,
    "parceiro": {
     "perfil": "brasilforadacaverna",
@@ -1142,86 +1345,67 @@
     "link": "https://www.instagram.com/p/De62q8Yx_Ln/"
    },
    "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "eleicoes",
-   "nota": 3,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-25T11:50:41Z",
-    "legenda": "#BFCNASRUAS e o cenário eleitoral 2026.",
-    "link": "https://www.instagram.com/reel/De6o05rR9f7/"
-   },
-   "triagem": "candidato"
   }
  ],
  "descartados_mais_quentes": [
   {
-   "manchete": "Bolsonaro and Lula in Dead Heat a Day Before Runoff, Poll Shows",
-   "veiculos": 84,
-   "veiculos_3h": 27,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Lula y Flávio Bolsonaro despiden la campaña electoral con masivos actos en Brasil",
-   "veiculos": 16,
-   "veiculos_3h": 0,
-   "motivo": "sem editoria"
-  },
-  {
    "manchete": "Procon-BA fiscaliza empresas de ônibus em Salvador e identifica 55 veículos parados no pátio da OT Trans",
    "veiculos": 13,
-   "veiculos_3h": 9,
+   "veiculos_3h": 2,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Ucrânia diz que Starlink voltou a funcionar; Elon Musk acusa país de usar sistema para ataques",
-   "veiculos": 9,
+   "manchete": "Celina Leão (PP) derrota petista e é reeleita governadora do DF",
+   "veiculos": 11,
+   "veiculos_3h": 10,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Con 40% del escrutinio, Flávio Bolsonaro supera a Lula por apenas 0,38% en el reñido balotaje por la presidencia de Brasil",
+   "veiculos": 11,
+   "veiculos_3h": 4,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Morre aos 26 anos Sérgio Gomes Ribeiro, diretor do DCE da UFG",
+   "veiculos": 7,
+   "veiculos_3h": 3,
+   "motivo": "fora: crime ou tragedia (morre)"
+  },
+  {
+   "manchete": "Brazil's Supreme Court justice rules to extend presidential voting nationwide for 2 hours shortly after polls closed - News-Press NOW",
+   "veiculos": 6,
+   "veiculos_3h": 5,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Kimi Antonelli wins dominant US Grand Prix and tightens his grip on historic F1 title chase",
+   "veiculos": 5,
+   "veiculos_3h": 5,
+   "motivo": "fora: esporte (f1)"
+  },
+  {
+   "manchete": "“Otária de carteira assinada”: Luana Piovani critica Bruna Biancardi após expulsão de Neymar",
+   "veiculos": 5,
+   "veiculos_3h": 4,
+   "motivo": "fora: esporte (neymar)"
+  },
+  {
+   "manchete": "Rússia diz estar disposta a retomar negociações com Ucrânia e EUA em novembro",
+   "veiculos": 5,
    "veiculos_3h": 1,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
    "manchete": "Ataque ucraniano à fábrica na Rússia deixa três mortos e cinco feridos graves",
-   "veiculos": 8,
+   "veiculos": 5,
    "veiculos_3h": 0,
    "motivo": "fora: crime ou tragedia (mortos)"
   },
   {
-   "manchete": "Israel to close all land crossings with West Bank on election day",
-   "veiculos": 5,
-   "veiculos_3h": 2,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "UK's Burnham says he is open to discussing EU free movement",
-   "veiculos": 5,
-   "veiculos_3h": 0,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Brazil's Supreme Court justice rules to extend presidential voting nationwide for 2 hours shortly after polls closed - News-Press NOW",
-   "veiculos": 4,
-   "veiculos_3h": 4,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Home office revela vida pessoal e melhora colaboração no trabalho",
-   "veiculos": 4,
+   "manchete": "La rapera Nicki Minaj sube al avión presidencial y acompaña a Trump a un mitin en Michigan - EFE",
+   "veiculos": 3,
    "veiculos_3h": 3,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "França registra quase mil prisões após novo dia de protestos",
-   "veiculos": 4,
-   "veiculos_3h": 0,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   }
  ]
