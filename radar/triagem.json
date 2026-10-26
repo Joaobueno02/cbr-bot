@@ -1,6 +1,6 @@
 {
- "quando": "2026-10-26T10:09:30Z",
- "pauta_quando": "2026-10-26T10:09:29Z",
+ "quando": "2026-10-26T12:25:11Z",
+ "pauta_quando": "2026-10-26T12:25:10Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,31 +9,54 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 10,
+  "avaliados_agora": 22,
   "falhas_antes": null,
-  "pedidos_hoje": 4
+  "pedidos_hoje": 5
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 126,
- "novos_3h": 3,
+ "total_assuntos": 131,
+ "novos_3h": 8,
  "esquentaram": 0,
  "candidatos": [
   {
-   "manchete": "Pesquisa PoderData/Aya aponta empate técnico entre Flávio Bolsonaro e Lula para o segundo turno",
+   "manchete": "Lula conquista histórico 4º mandato presidencial com virada inédita",
+   "secoes": [
+    "A",
+    "B"
+   ],
+   "veiculos": 15,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-26T12:25:10Z",
+   "link": "https://operamundi.uol.com.br/eleicoes-2026-brasil/lula-vence-e-esta-reeleito-para-quarto-mandato-presidencial/",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 3,
+    "V": 3,
+    "P": 3,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Primeiro pronunciamento de Lula após vitória eleitoral.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "PT pede prisão do prefeito de Salvador por crime eleitoral após retenção de ônibus no dia do 2º turno",
    "secoes": [
     "B"
    ],
-   "veiculos": 546,
-   "veiculos_3h": 141,
-   "na_pauta_desde": "2026-10-26T10:09:29Z",
-   "link": "https://www.gazetadopovo.com.br/eleicoes/2026/lula-vota-sp-retoma-ataques-flavio-bolsonaro/",
+   "veiculos": 21,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-26T12:25:10Z",
+   "link": "https://g1.globo.com/ba/bahia/eleicoes/2026/noticia/2026/10/26/tre-ba-revoga-prisao-de-secretario-de-transporte-de-salvador.ghtml",
    "editoria": "eleicoes",
-   "nota": 6,
+   "nota": 5,
    "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ],
+   "lente": [],
    "ia": {
     "editoria": "eleicoes",
     "I": 3,
@@ -42,24 +65,54 @@
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Empate técnico nas eleições presidenciais mobiliza grande público e debate acirrado.",
+    "motivo": "Denúncia de crime eleitoral e retenção de ônibus.",
     "soma": 6
    }
   },
   {
-   "manchete": "Com fim da escala 6x1, Apas propõe contratação por hora nos supermercados",
+   "manchete": "Lula vence na China e Flávio, no Japão",
    "secoes": [
-    "B"
+    "A",
+    "A"
    ],
-   "veiculos": 3,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-26T10:09:29Z",
-   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNWGJpZm9mUHZiNGN2cXk4bFpZNUVFWUl0UDBJdTdyU29Ra0tDbkVvNW42ZXpFTWc5Z2JSVDBwV2ZSd05qbUFnR3VpVFBxYjJxdVdjaHBYS3BodTIxYUJvMGx5MjBMWHBGRVBBejBhRUw1VUdHbml4dUh0dEZRN2J1dkh3TUJob1Ayc3lCcTZybm54X0Mtc2Y1YVg5clZwRlNwd2VYdnFuamNfMWdlTXlNcnEzbnlVZC10Snc?oc=5",
-   "editoria": "economia",
-   "nota": 3,
+   "veiculos": 5,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-26T12:25:10Z",
+   "link": "https://www.congressoemfoco.com.br/noticia/128172/flavio-bolsonaro-vence-em-santopolis-do-aguapei",
+   "editoria": "eleicoes",
+   "nota": 7,
    "esquentou": false,
    "lente": [
-    "6x1"
+    "bolsonar",
+    "flavio",
+    "pl"
+   ],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Derrota de Flávio Bolsonaro no segundo turno para Lula.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Cesta básica chega a custar R$ 937,20 em Cuiabá com aumento de 5,25% da carne",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-26T12:25:10Z",
+   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQZGppMm5ZalFVRmo1eWg0cHg4Qm5RWHhUc3Rma1FwdDNjQnZ1bmN2dDhPR1dLWnU5VUNxT2FiSlBoTXhLeDVtckhVVHoyaWRHMjRkYWRoYlpNNTRPalJvcTR3YjF3cy1EbjlzNHVHLWtxMGtFTnJUdUp2R3M5ZjF2MHFkcXNtd3VVRkJjNHp4R1hQbndZWVM2cHpKQ3Y1M0dWSnZ2RTJRXzZKN2ZyYXRKRTlQWGxyVjNP?oc=5",
+   "editoria": "roca",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "cesta basica"
    ],
    "ia": {
     "editoria": "economia",
@@ -69,66 +122,139 @@
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Proposta patronal de contratação por hora após fim da escala 6x1 ataca direitos.",
+    "motivo": "Alta do preço da cesta básica afeta o trabalhador.",
     "soma": 6
    }
   },
   {
-   "manchete": "Justiça Eleitoral manda prender secretário de Salvador após falhas na oferta de ônibus na eleição",
+   "manchete": "Campanha de Lula denuncia prefeitura de São Paulo à Justiça por falta de ônibus",
    "secoes": [
     "B"
    ],
-   "veiculos": 20,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-26T10:09:29Z",
-   "link": "https://www.gazetadopovo.com.br/eleicoes/2026/tre-ba-manda-prender-secretario-que-reteve-onibus-com-adesivos-do-pt-em-salvador/",
+   "veiculos": 104,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-26T12:25:10Z",
+   "link": "https://www.gazetadopovo.com.br/eleicoes/2026/campanha-lula-denuncia-prefeitura-sao-paulo-justica-falta-onibus/",
    "editoria": "eleicoes",
-   "nota": 5,
+   "nota": 4,
    "esquentou": false,
    "lente": [],
    "ia": {
     "editoria": "eleicoes",
     "I": 3,
     "V": 2,
-    "P": 2,
+    "P": 1,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Prisão por sabotagem no transporte público em dia de eleição afeta direitos fundamentais.",
+    "motivo": "Denúncia de sabotagem no transporte público eleitoral.",
     "soma": 5
    }
   },
   {
-   "manchete": "María Corina Machado regresa a Venezuela",
+   "manchete": "Dono do extinto Banco Master, Daniel Vorcaro vota na Papuda, em Brasília",
    "secoes": [
-    "B",
-    "D-america_latina"
+    "B"
    ],
-   "veiculos": 68,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-25T20:58:34Z",
-   "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/10/maria-corina-machado-anuncia-volta-a-venezuela-apos-quase-um-ano-fora.shtml",
-   "editoria": "america_latina",
-   "nota": 5,
+   "veiculos": 530,
+   "veiculos_3h": 272,
+   "na_pauta_desde": "2026-10-26T12:25:10Z",
+   "link": "https://www.aosfatos.org/noticias/relatos-supressao-voto-prorrogacao-segundo-turno/",
+   "editoria": "politica",
+   "nota": 8,
    "esquentou": false,
-   "lente": [],
+   "lente": [
+    "vorcaro",
+    "master",
+    "banco"
+   ],
    "ia": {
-    "editoria": "america_latina",
+    "editoria": "gerais",
     "I": 2,
     "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Retorno de María Corina Machado à Venezuela.",
+    "motivo": "Prisão de banqueiro corrupto gera grande interesse popular.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Dólar abre em alta de mais de 8% após vitória de Lula; juros futuros disparam",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-26T12:25:10Z",
+   "link": "https://www1.folha.uol.com.br/mercado/2026/10/dolar-abre-em-alta-de-mais-de-8-apos-vitoria-de-lula-juros-futuros-disparam.shtml",
+   "editoria": "economia",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "juros"
+   ],
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Reação do mercado financeiro e dólar após a eleição.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Lula vota em São Bernardo do Campo e ergue bandeira do Brasil em seção eleitoral: 'Pelo povo'",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 37,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-26T12:25:10Z",
+   "link": "https://www.gazetadopovo.com.br/eleicoes/2026/tarcisio-vota-em-sp-e-diz-que-brasil-precisa-de-pacificacao-apos-segundo-turno/",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Votação e declaração do presidente reeleito.",
     "soma": 4
    }
   }
  ],
  "rebaixados": [
   {
+   "manchete": "Postos do Detran voltam a funcionar normalmente nesta segunda-feira após fim da greve de servidores",
+   "veiculos": 7,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-10-26T12:25:10Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Fim de greve e retorno do atendimento do Detran.",
+    "soma": 3
+   }
+  },
+  {
    "manchete": "Brazil votes in tense Lula vs Bolsonaro runoff with U.S. influence over Latin America at stake",
-   "veiculos": 3,
+   "veiculos": 6,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-10-26T07:00:56Z",
    "esquentou": false,
@@ -145,47 +271,11 @@
    }
   },
   {
-   "manchete": "Imprensa internacional repercute eleições no Brasil e vê país como ‘campo de batalha’",
-   "veiculos": 22,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-26T10:09:29Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Visão internacional da eleição brasileira interessa, mas tem baixo engajamento prático.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "PF registra crimes eleitorais em quatro estados e MS registra três ocorrências",
-   "veiculos": 6,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-26T07:00:56Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Crimes eleitorais registrados pela PF mostram infrações no pleito.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Venezuela’s Machado returns from exile to crowds of cheering supporters",
-   "veiculos": 45,
-   "veiculos_3h": 5,
+   "manchete": "Venezuela’s Leading Opposition Figure, María Corina Machado, Returns Home",
+   "veiculos": 39,
+   "veiculos_3h": 12,
    "na_pauta_desde": "2026-10-26T04:59:27Z",
-   "esquentou": false,
+   "esquentou": true,
    "ia": {
     "editoria": "america_latina",
     "I": 1,
@@ -194,105 +284,123 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Retorno de María Corina Machado à Venezuela.",
+    "motivo": "Retorno de oposicionista na Venezuela.",
     "soma": 2
    }
   },
   {
-   "manchete": "Argentina: sectores empresarial, periodístico y político repudian ataque de Milei a la prensa",
-   "veiculos": 2,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-26T07:00:56Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Ataques de Milei à imprensa argentina.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Daniel Vorcaro registra voto no segundo turno na Papuda, em Brasília",
-   "veiculos": 33,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-26T10:09:29Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "gerais",
-    "I": 1,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Fato menor sobre figura investigada sem grande impacto direto na vida do trabalhador.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Presidente do PDT em Santo Antônio de Jesus vota com Conceição Gonzalez e declara apoio à reeleição de Lula",
-   "veiculos": 10,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-26T10:09:29Z",
+   "manchete": "Flávio Bolsonaro ou Lula? Veja como foi a votação no exterior no primeiro e no segundo turno",
+   "veiculos": 63,
+   "veiculos_3h": 8,
+   "na_pauta_desde": "2026-10-26T12:25:10Z",
    "esquentou": false,
    "ia": {
     "editoria": "eleicoes",
     "I": 1,
     "V": 1,
-    "P": 0,
+    "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Apoio político local de relevância restrita para a pauta nacional.",
+    "motivo": "Resultado da votação no exterior.",
     "soma": 2
    }
   },
   {
-   "manchete": "Presidentes da Câmara e do Senado votam neste domingo (25) e defendem a democracia",
+   "manchete": "El regreso de María Corina Machado busca acelerar la transición y retar al chavismo",
    "veiculos": 5,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-26T10:09:29Z",
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-25T21:15:26Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Cenário político na Venezuela.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Trump comments on Machado's return to Venezuela, Brazil presidential election, Michigan Senate race",
+   "veiculos": 4,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-26T12:25:10Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Declarações de Trump sobre eleições brasileiras e Venezuela.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Candidato Flávio Bolsonaro vota en la segunda vuelta electoral de Brasil",
+   "veiculos": 34,
+   "veiculos_3h": 9,
+   "na_pauta_desde": "2026-10-26T12:25:10Z",
    "esquentou": false,
    "ia": {
     "editoria": "eleicoes",
     "I": 1,
-    "V": 0,
+    "V": 1,
     "P": 0,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Voto de autoridades é cobertura padrão sem impacto prático.",
-    "soma": 1
+    "motivo": "Votação do candidato no segundo turno.",
+    "soma": 2
    }
   },
   {
-   "manchete": "Elma Saiz asegura que el Gobierno aprobará otra deducción para que el salario mínimo no tribute en el IRPF",
-   "veiculos": 2,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-26T10:09:29Z",
+   "manchete": "Sine abre pré-cadastro de emprego para trabalhadores da Sanremo",
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-26T12:25:10Z",
    "esquentou": false,
    "ia": {
-    "editoria": "america_latina",
+    "editoria": "economia",
+    "I": 1,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Abertura de vagas de emprego local.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Student List wins Serbian election as Vučić concedes defeat",
+   "veiculos": 13,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-10-25T21:15:26Z",
+   "esquentou": true,
+   "ia": {
+    "editoria": "fora",
     "I": 0,
     "V": 0,
     "P": 0,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Assunto internacional fora do eixo de interesse direto do público brasileiro.",
+    "motivo": "Eleições na Sérvia fora do escopo nacional.",
     "soma": 0
    }
   },
   {
-   "manchete": "Aposentado com doença grave: dois direitos que muitos desconhecem",
-   "veiculos": 1,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-26T10:09:29Z",
+   "manchete": "Anthropic, demandada por los herederos de Elvis Presley por usar sus canciones - EFE",
+   "veiculos": 3,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-26T12:25:10Z",
    "esquentou": false,
    "ia": {
     "editoria": "fora",
@@ -302,72 +410,208 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Conteúdo utilitário de serviços/direitos gerais sem ligação política direta.",
+    "motivo": "Processo judicial de direitos autorais nos EUA.",
     "soma": 0
    }
   }
  ],
- "obrigatorios": [],
+ "obrigatorios": [
+  {
+   "manchete": "Lula vence na China e Flávio, no Japão",
+   "secoes": [
+    "A",
+    "A"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-26T12:25:10Z",
+   "link": "https://www.congressoemfoco.com.br/noticia/128172/flavio-bolsonaro-vence-em-santopolis-do-aguapei",
+   "editoria": "eleicoes",
+   "nota": 7,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-26T04:18:05Z",
+    "legenda": "A derrota de Flávio Bolsonaro (PL-RJ) para Luiz Inácio Lula da Silva (PT) no segundo turno das eleições presidenciais de 2026 fará com que o senador fique sem m",
+    "link": "https://www.instagram.com/p/De8Z_BIuJa1/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-26T03:10:44Z",
+    "legenda": "Que orgulho eu tenho dos meus ídolos ❤️ ⭐️⭐️⭐️⭐️",
+    "link": "https://www.instagram.com/reel/De8SLt4s0pR/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Lula conquista histórico 4º mandato presidencial com virada inédita",
+   "secoes": [
+    "A",
+    "B"
+   ],
+   "veiculos": 15,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-26T12:25:10Z",
+   "link": "https://operamundi.uol.com.br/eleicoes-2026-brasil/lula-vence-e-esta-reeleito-para-quarto-mandato-presidencial/",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-26T03:27:26Z",
+    "legenda": "Em seu primeiro pronunciamento após vencer a eleição presidencial neste domingo (25), Luiz Inácio Lula da Silva (PT) adotou tom incisivo e fez declarações contu",
+    "link": "https://www.instagram.com/p/De8UMBksJDs/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-26T03:01:55Z",
+    "legenda": "O maior brasileiro de todos os tempos. Fim!",
+    "link": "https://www.instagram.com/reel/De8ROi1sTeZ/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-26T03:06:46Z",
+    "legenda": "Festa em Soure, na Ilha de Marajó, no Pará! ⭐️⭐️⭐️⭐️",
+    "link": "https://www.instagram.com/reel/De8RtntMz0e/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-26T04:30:30Z",
+    "legenda": "⭐️⭐️⭐️⭐️ 02 - 06 - 22 - 26",
+    "link": "https://www.instagram.com/p/De8bafKDgmN/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-26T04:12:26Z",
+    "legenda": "hilton_erika 🔥💭",
+    "link": "https://www.instagram.com/p/De8ZUJLO-r5/"
+   },
+   "triagem": "candidato"
+  }
+ ],
  "descartados_mais_quentes": [
   {
-   "manchete": "Polls open in Brazil presidential runoff",
-   "veiculos": 66,
-   "veiculos_3h": 38,
+   "manchete": "Lula beats Bolsonaro in Brazil runoff, securing fourth presidential term",
+   "veiculos": 58,
+   "veiculos_3h": 36,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Lula é reeleito presidente, e Flávio diz que vai pedir anulação das eleições; siga",
-   "veiculos": 36,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Serbia’s Aleksandar Vucic concedes defeat to the student-led movement in a seismic political shift",
-   "veiculos": 13,
-   "veiculos_3h": 6,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Trump tem que ficar de fora da política do Brasil, diz New York Times",
-   "veiculos": 11,
-   "veiculos_3h": 0,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Morre Ewaldo Podolan, ex-reitor da UEPG, aos 86 anos em Ponta Grossa - BNT",
-   "veiculos": 11,
-   "veiculos_3h": 0,
-   "motivo": "fora: crime ou tragedia (morre)"
-  },
-  {
-   "manchete": "Jovem morre ao descer de caminhão em carreata política em GO",
-   "veiculos": 6,
-   "veiculos_3h": 0,
-   "motivo": "fora: crime ou tragedia (morre)"
-  },
-  {
-   "manchete": "Presidential race in Bulgaria heads to runoff due to record low turnout",
-   "veiculos": 4,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Trump urges Michigan voters to oppose Muslim Senate candidate El-Sayed",
-   "veiculos": 4,
-   "veiculos_3h": 0,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Tele Sena: confira o resultado deste domingo (25/10)",
-   "veiculos": 4,
-   "veiculos_3h": 0,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "How Kimi Antonelli can become youngest F1 World Champion at the US Grand Prix",
-   "veiculos": 4,
+   "manchete": "Barcelona x Real Madrid: onde assistir, horário e escalações",
+   "veiculos": 16,
    "veiculos_3h": 1,
-   "motivo": "fora: esporte (f1)"
+   "motivo": "fora: esporte (real madrid)"
+  },
+  {
+   "manchete": "Fórmula 1: Kimi Antonelli vence GP dos EUA, mas título mundial é adiado",
+   "veiculos": 7,
+   "veiculos_3h": 1,
+   "motivo": "fora: esporte (formula 1)"
+  },
+  {
+   "manchete": "Itaú anuncia compra da NeoSpace, startup de inteligência artificial, por R$ 2,9 bilhões",
+   "veiculos": 5,
+   "veiculos_3h": 3,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Global leaders congratulate Brazil President Lula on reelection",
+   "veiculos": 5,
+   "veiculos_3h": 2,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Lula’s Suprise Win Blocks Trump’s Push for a Far-Right Brazil",
+   "veiculos": 5,
+   "veiculos_3h": 2,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Petróleo chega a cair mais de 2% em meio a ataques entre houthis e sauditas, e negociações pela paz",
+   "veiculos": 4,
+   "veiculos_3h": 3,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "NHS consultants to go on two-day strike in England in November, says BMA",
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "US singer Chris Brown arrives at UK court for sentencing over nightclub incident",
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Thousands mourn victims of deadly Jordan church attack",
+   "veiculos": 3,
+   "veiculos_3h": 2,
+   "motivo": "sem editoria"
   }
  ]
 }
