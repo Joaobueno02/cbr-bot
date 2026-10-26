@@ -191,6 +191,8 @@ def agrupar(itens: list[dict]) -> list[dict]:
             "sig": chave(g["itens"][0]), "manchete": g["itens"][0]["titulo"], "secao": secao,
             "veiculos_3h": len(recentes), "link_direto": diretos[0] if diretos else None,
             "_tok": sorted(g["_tok"]),
+            # chaves de todos os itens: a data de entrada na pauta não reinicia quando muda o 1º item (26/10/2026)
+            "_sigs": [chave(i) for i in g["itens"]][:15],
             "veiculos": veiculos, "temperatura": len(veiculos),
             "primeira_vez": min(datas) if datas else None, "ultima_vez": max(datas) if datas else None,
             "detectado": min(i["_visto"] for i in g["itens"]),
@@ -315,7 +317,13 @@ def _pauta(grupos: list[dict], agora_dt: datetime) -> str:
         por_tema[k] = lista[:15]
 
     for g in [p["grupo"] for p in parceiros + movimentos if p["grupo"]] + em_alta + novos_sel + [g for l in por_tema.values() for g in l]:
-        desde.setdefault(g["sig"], agora)
+        # regra de 26/10/2026: o assunto herda a data mais antiga de qualquer item dele já visto na pauta,
+        # para não parecer novo quando outro veículo passa a abrir o grupo (isso travava a rodada curta)
+        chaves = [g["sig"]] + [k for k in g.get("_sigs", []) if k != g["sig"]]
+        antigas = [desde[k] for k in chaves if k in desde]
+        inicio = min(antigas) if antigas else agora
+        for k in chaves:
+            desde[k] = min(desde.get(k, inicio), inicio)
 
     itens = []  # versão estruturada da pauta, lida pela triagem (bot/triagem.py)
 
@@ -420,7 +428,7 @@ def main() -> None:
     grupos = agrupar(unicos)
     (PASTA / "atual.json").write_text(json.dumps({
         "quando": agora, "janela_horas": 26, "manchetes": len(unicos), "assuntos": len(grupos),
-        "grupos": [{k: v for k, v in g.items() if k != "_tok"} for g in grupos]},
+        "grupos": [{k: v for k, v in g.items() if k not in ("_tok", "_sigs")} for g in grupos]},
         ensure_ascii=False, indent=0) + "\n", encoding="utf-8")
 
     corte = (agora_dt - timedelta(hours=NOVOS_HORAS)).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -435,6 +443,7 @@ def main() -> None:
     (PASTA / "pauta.md").write_text(_pauta(grupos, agora_dt), encoding="utf-8")
     for g in grupos:
         g.pop("_tok", None)
+        g.pop("_sigs", None)
 
     total = len(tarefas)
     (PASTA / "saude_fontes.json").write_text(json.dumps({

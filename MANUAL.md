@@ -53,10 +53,13 @@ O dono é o João. Ele acompanha cada post pela notificação e pede para parar 
    - **`radar/pre_apuracao.json`**: os veículos independentes do radar para os 3 primeiros candidatos.
      Comece a apuração por ele (ainda abra as matérias e preencha `apuracao`; `bot/cruzar.py` continua
      valendo para os outros);
-   - **Rodada curta**: se `ok` for true, nenhum candidato ou obrigatório tem `na_pauta_desde` depois da
-     rodada anterior, nenhum `esquentou`, nada nos rebaixados e descartes quentes merece resgate, e não há
-     pendência (fila, acompanhamento, calendário das 18h, dossiê das 23h, relatório de segunda), **encerre
-     a rodada** sem ler a pauta.md nem buscar na web. O resumo da rodada diz "triagem sem candidatos novos";
+   - **Rodada curta** (script desde 26/10/2026): `python bot/rodada_curta.py` confere tudo de uma vez
+     (triagem ok e recente, candidatos/obrigatórios com `na_pauta_desde` na última hora, `esquentou`,
+     rebaixados a conferir, fila, acompanhamento, calendário das 18h, dossiê das 23h, relatório de segunda).
+     **Roda antes de ler este manual.** `VEREDITO: CURTA` → encerre a rodada sem ler o manual nem a pauta.md
+     e sem buscar na web; o resumo diz "triagem sem candidatos novos" (os "descartes quentes" listados só se
+     resgatam se a manchete for pauta nova). Triagem velha → dispare o radar, espere ~2 min e rode de novo.
+     `VEREDITO: COMPLETA` → leia o manual e trabalhe só sobre os itens listados;
    - com candidatos, trabalhe só sobre eles: confirme a nota, aprofunde os melhores com a pré-apuração,
      `bot/cruzar.py`, `radar/atual.json` e a busca na web. **Não leia a pauta.md inteira** quando a triagem
      está ok; o item de A, A2 e B "avaliado nesta rodada" passa a ser o que a triagem avaliou mais a sua nota;
@@ -418,14 +421,21 @@ texto, barra 1180-1350 px):
 - barra: na altura da referência, segmento colorido certo (América Latina: faixa colorida);
 - nada sobreposto, cortado, desalinhado ou com espaçamento diferente da referência.
 
-**c) Revisor de design** (subagente pela ferramenta Agent, diferente do revisor da notícia):
+**Referências** (atualizadas em 26/10/2026): `referencias/politica.jpg`, `eleicoes.jpg`, `gerais.jpg` e
+`economia.jpg` são artes publicadas no padrão atual. Nas outras editorias, se a referência divergir do padrão
+de 15/10 (seção 4: título menor, bloco mais alto, marca-texto inclinado, CBR 25% menor, nada abaixo da
+barra), vale o padrão: isso vem travado do gerador e **não reprova** a arte. Reprove só o que depende do
+post (texto, quebras, foto, enquadramento, legibilidade).
+
+**c) Revisor de design** (subagente pela ferramenta Agent com `model: "sonnet"`, para gastar menos;
+diferente do revisor da notícia):
 
 > Você é o revisor de design da CBR. Leia a seção 6 do MANUAL.md e fila/<id>/post.json
 > (inclusive `design_auto`). Abra fila/<id>/arte-*.jpg e referencias/<editoria>.jpg e compare
 > lado a lado; depois corte e amplie com PIL (topo 0-260, foto, bloco de texto, barra 1180-1350)
-> e abra cada recorte. Confira um por um os itens da seção 6b. Seja rigoroso: qualquer diferença
-> de padrão em relação à referência, palavra órfã, marca pouco legível, foto borrada ou mal
-> enquadrada reprova. Responda só com JSON:
+> e abra cada recorte. Confira um por um os itens da seção 6b. O padrão visual travado (seção 4 e
+> "Referências" da seção 6) não reprova. Seja rigoroso com o que depende do post: palavra órfã,
+> marca pouco legível, foto borrada ou mal enquadrada reprova. Em Reels, confira também story.jpg. Responda só com JSON:
 > {"aprovado": true|false, "problemas": ["..."], "correcoes": ["..."]}.
 
 Grave em `post.json` como `"revisao_design": {"aprovado": ..., "problemas": [...], "quando": "..."}`.
@@ -435,7 +445,7 @@ publicador recusa post sem `revisao_design.aprovado == true`.
 
 ## 7. Revisor da notícia (obrigatório, independente)
 
-Depois da arte pronta, chame um subagente (ferramenta Agent) que **não escreveu o post**,
+Depois da arte pronta, chame um subagente (ferramenta Agent, `model: "sonnet"`) que **não escreveu o post**,
 passando o caminho da pasta do post e este manual. Instrução ao revisor:
 
 > Você é o revisor da notícia da CBR. Leia MANUAL.md e fila/<id>/post.json, abra a arte
@@ -449,7 +459,8 @@ passando o caminho da pasta do post e este manual. Instrução ao revisor:
 > Responda só com JSON: {"aprovado": true|false, "problemas": ["..."], "correcoes": ["..."]}.
 
 Grave o veredito em `post.json` como `"revisao": {"aprovado": ..., "problemas": [...], "quando": "..."}`.
-Se reprovar: aplique as correções e rode o revisor de novo **uma vez**. Se reprovar de novo,
+Para gastar menos, rode os dois revisores **em paralelo** (mesma mensagem) e, na 2ª passada, continue o
+mesmo subagente com SendMessage em vez de abrir outro. Se reprovar: aplique as correções e rode o revisor de novo **uma vez**. Se reprovar de novo,
 `status: "descartado"` com o motivo. O publicador recusa post sem `revisao.aprovado == true`.
 
 ## 8. Legenda
