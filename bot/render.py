@@ -80,15 +80,23 @@ def recortar(foto: Path, destino: Path) -> bool:
 
 
 def quadro_vertical(arte_jpg: Path, saida: Path) -> None:
-    """Arte 1080x1350 centralizada num quadro 1080x1920 (Story/Reels), com a própria arte
-    desfocada e escurecida preenchendo o fundo. No grid do perfil (4:5) aparece só a arte."""
-    from PIL import ImageEnhance, ImageFilter
+    """Arte 1080x1350 num quadro 1080x1920 (Story/Reels) sem faixas aparentes (ajuste do João, 26/10/2026):
+    embaixo, a cor de fundo da própria arte (a faixa abaixo da barra não tem texto), então a arte continua sem
+    emenda; em cima, a faixa de 0 a 40 px da arte (acima da marca) esticada e desfocada, com a borda da arte
+    esfumada. No feed (4:5) e no grid aparece só a arte; na tela cheia, a arte parece ocupar o quadro todo."""
+    from PIL import ImageDraw, ImageFilter
     arte_im = Image.open(arte_jpg).convert("RGB")
-    fundo = arte_im.resize((1536, 1920)).crop((228, 0, 1308, 1920))
-    fundo = fundo.filter(ImageFilter.GaussianBlur(40))
-    fundo = ImageEnhance.Brightness(fundo).enhance(0.35)
-    fundo.paste(arte_im, (0, 285))
-    fundo.save(saida, "JPEG", quality=95)
+    largura, altura, topo_arte = 1080, 1920, 285
+    cor_fundo = arte_im.crop((0, 1310, 1080, 1350)).resize((1, 1), Image.LANCZOS).getpixel((0, 0))
+    quadro = Image.new("RGB", (largura, altura), cor_fundo)
+    topo = arte_im.crop((0, 0, 1080, 40)).resize((1080, topo_arte + 60), Image.BILINEAR)
+    quadro.paste(topo.filter(ImageFilter.GaussianBlur(24)), (0, 0))
+    mascara = Image.new("L", arte_im.size, 255)
+    desenho = ImageDraw.Draw(mascara)
+    for y in range(40):
+        desenho.line([(0, y), (arte_im.width, y)], fill=int(255 * y / 40))
+    quadro.paste(arte_im, (0, topo_arte), mascara)
+    quadro.save(saida, "JPEG", quality=95)
 
 
 def gerar_reels(quadro: Path, saida: Path, segundos: int = 12) -> None:
