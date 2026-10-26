@@ -105,7 +105,7 @@ def main() -> None:
             ia_c = c.get("ia") or {}
             nota = f"I{ia_c.get('I')} V{ia_c.get('V')} P{ia_c.get('P')}" if ia_c else "sem nota"
             par = (c.get("parceiro") or {}).get("perfil", "")
-            olhar.append(f"- {c.get('manchete', '')[:110]} | {c.get('veiculos')} veíc. ({c.get('veiculos_3h')} em 3 h)"
+            olhar.append(f"- {(c.get('manchete') or '')[:110]} | {c.get('veiculos')} veíc. ({c.get('veiculos_3h')} em 3 h)"
                          f" | {nota}{' | ' + par if par else ''}")
         # resgates possíveis: o Gemini ou a regra tiraram algo com muitos veículos nas últimas 3 h
         resg = [c for c in t.get("rebaixados", [])
@@ -117,11 +117,11 @@ def main() -> None:
                 and "crime" not in str(c.get("motivo", ""))]
         for c in desc:
             olhar.append(f"- descarte quente (só olhe a manchete; já publicado ou velho = ignore): "
-                         f"{c.get('manchete', '')[:110]} | {c.get('veiculos_3h')} em 3 h")
+                         f"{(c.get('manchete') or '')[:110]} | {c.get('veiculos_3h')} em 3 h")
         if resg:
             motivos.append(f"{len(resg)} rebaixado(s)/descarte(s) quente(s) a conferir")
             for c in resg:
-                olhar.append(f"- conferir: {c.get('manchete', '')[:110]} | {c.get('veiculos_3h')} em 3 h"
+                olhar.append(f"- conferir: {(c.get('manchete') or '')[:110]} | {c.get('veiculos_3h')} em 3 h"
                              f" | {c.get('motivo') or (c.get('ia') or {}).get('motivo', '')}"[:200])
 
     print("VEREDITO: " + ("COMPLETA" if motivos else "CURTA"))
