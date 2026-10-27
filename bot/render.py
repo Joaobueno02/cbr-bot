@@ -89,6 +89,22 @@ def quadro_vertical(arte_jpg: Path, saida: Path) -> None:
     largura, altura, topo_arte = 1080, 1920, 285
     cor_fundo = arte_im.crop((0, 1310, 1080, 1350)).resize((1, 1), Image.LANCZOS).getpixel((0, 0))
     quadro = Image.new("RGB", (largura, altura), cor_fundo)
+    # embaixo: o grão do papel continua (revisão de 27/10/2026). Ajusta, por canal, cor = a*papel + b na faixa lisa
+    # abaixo da barra (1305-1350) e aplica a mesma relação a outro trecho do papel: sem emenda chapada nem faixa repetida
+    try:
+        import numpy as np
+        papel = np.asarray(Image.open(RAIZ / "assets" / "papel.jpg").convert("L").resize((1080, 1350)), dtype=float)
+        arte_np = np.asarray(arte_im, dtype=float)
+        x = papel[1305:1350].ravel()
+        canais = []
+        for c in range(3):
+            y = arte_np[1305:1350, :, c].ravel()
+            a, b = np.polyfit(x, y, 1) if x.std() > 0 else (0.0, float(y.mean()))
+            canais.append(np.clip(a * papel[1350 - (altura - topo_arte - 1350):1350][::-1] + b, 0, 255))  # espelhado: emenda contínua
+        fundo_baixo = Image.fromarray(np.stack(canais, axis=-1).astype("uint8"), "RGB")
+        quadro.paste(fundo_baixo, (0, topo_arte + 1350))
+    except Exception:
+        pass  # sem numpy ou sem o papel: fica a cor de fundo lisa
     topo = arte_im.crop((0, 0, 1080, 40)).resize((1080, topo_arte + 60), Image.BILINEAR)
     quadro.paste(topo.filter(ImageFilter.GaussianBlur(24)), (0, 0))
     mascara = Image.new("L", arte_im.size, 255)
