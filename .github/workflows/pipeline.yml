@@ -72,6 +72,10 @@ jobs:
         if: steps.fila.outputs.renderizar != '0'
         run: python bot/conferir_design.py
 
+      - name: Trilha própria dos Reels (uma por editoria, 27/10/2026)
+        if: steps.fila.outputs.renderizar != '0'
+        run: python bot/trilha.py || echo "trilha falhou: o Reels segue sem som"
+
       - name: Publicar
         if: steps.fila.outputs.publicar != '0'
         env:

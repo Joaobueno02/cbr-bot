@@ -244,11 +244,12 @@ candidato). Não há teto por dia: depende do dia. Mas não banalize; se tudo é
 nada é. Bombástica:
 - sai como **Reels** (a arte vira um vídeo vertical de 12 s com zoom lento), no lugar do post
   de foto, e aparece no feed também;
-- leva **música da biblioteca do Instagram** (vale também para o Reels comum). **Desde 27/10/2026 a
-  música é fixa por editoria** (`config.json` > `musicas`: `audio_id` escolhido com o João a partir de
-  `radar/musicas.json`, gerado pela tarefa `musicas` do manutencao.yml). Editoria sem `audio_id` usa a
-  busca (`musica_busca` do post, depois a `busca` da editoria, depois as em alta). Se a música falhar, o
-  publicador grava o motivo em `publicacao.musica_erro`: cite na notificação;
+- leva **trilha própria da editoria** (vale também para o Reels comum e o carrossel em Reels; pedido do João,
+  27/10/2026). A busca de músicas da API volta vazia para a nossa conta (`radar/musicas.json`), então o
+  pipeline embute no `reels.mp4` a trilha `trilhas/<editoria>.m4a` (sintetizada por `bot/gerar_trilhas.py`,
+  sem direito de terceiros) logo depois do render, sem recodificar a arte; `render.reels.trilha` registra.
+  `"trilha": false` no post deixa o Reels mudo. Se um dia a API achar música (`config.json` > `musicas`),
+  ela substitui a trilha; a falha fica em `publicacao.musica_erro`. Na notificação, diga a trilha usada;
 - sempre leva **collab** (seção 10).
 Só Reels tem música (bombástica e Reels comum). Feed e carrossel continuam sem.
 
