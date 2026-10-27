@@ -191,6 +191,9 @@ def collab_pausada() -> bool:
 
 def decidir_collab(post: dict, numero: int) -> list[str]:
     inst = (post.get("instituicao_ig") or post.get("universidade_ig") or "").lstrip("@").strip()
+    forcar = [u.lstrip("@").strip() for u in (post.get("collab_forcar") or []) if u.strip()]
+    if forcar:  # convite pedido pelo João para este post (vale mesmo com a pausa), até 3 perfis
+        return forcar[:3]
     if collab_pausada():
         return [inst] if inst else []
     bfc = CONFIG["collab_padrao"][0]
