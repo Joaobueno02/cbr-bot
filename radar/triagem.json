@@ -1,6 +1,6 @@
 {
- "quando": "2026-10-26T23:06:59Z",
- "pauta_quando": "2026-10-26T23:06:57Z",
+ "quando": "2026-10-27T00:34:58Z",
+ "pauta_quando": "2026-10-27T00:34:57Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,42 +9,68 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 20,
+  "avaliados_agora": 21,
   "falhas_antes": null,
-  "pedidos_hoje": 17
+  "pedidos_hoje": 1
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 132,
- "novos_3h": 4,
- "esquentaram": 1,
+ "total_assuntos": 141,
+ "novos_3h": 11,
+ "esquentaram": 0,
  "candidatos": [
   {
-   "manchete": "Flávio Bolsonaro pode enfrentar investigações por corrupção e lavagem de dinheiro após deixar o Senado em 2027",
+   "manchete": "Eleições 2026: virada de Lula sobre Flávio ocorreu às 20h26",
    "secoes": [
-    "A"
+    "A",
+    "B"
    ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
+   "veiculos": 782,
+   "veiculos_3h": 242,
    "na_pauta_desde": "2026-10-26T21:05:28Z",
-   "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQakwzTEpkN0t6eFFpZEZwdldveDRjTXRrd2VidVhhX1NfT2NkOFotT1EyZW9LSzdxazRwRW00bHRIekhJSWw5c3dFRHNqbjZDN0Fnc1RYMmxkbUVUVXdzOVUzUlBTN3J3aGJQS3FBeEdxdEI0RFNRdVd3RmtEUmhxTGFwNGRBaDFOVDk5dHpYOVptMWg5T1hwZHcxcmpQTWVpaU5HdzhfVktOZU1wODk5clhGeXdSODlEZTYwUnBnYXNKN2lMempId2dlQThnekJzRnlPdlE4ZlUtNWVyQmc?oc=5",
-   "editoria": "politica",
+   "link": "https://www.gazetadopovo.com.br/eleicoes/2026/votos-no-exterior-no-2-turno-veja-resultados/",
+   "editoria": "eleicoes",
+   "nota": 7,
+   "esquentou": false,
+   "lente": [
+    "flavio"
+   ],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Análise da virada de votos de Lula no 2º turno.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Lula logra una remontada histórica en Brasil y da la victoria a la izquierda frente al avance ultra de los Bolsonaro",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 57,
+   "veiculos_3h": 16,
+   "na_pauta_desde": "2026-10-27T00:34:57Z",
+   "link": "https://elpais.com/america/2026-10-26/lula-logra-una-remontada-historica-en-brasil-y-da-la-victoria-a-la-izquierda-frente-al-avance-ultra-de-los-bolsonaro.html",
+   "editoria": "america_latina",
    "nota": 6,
    "esquentou": false,
    "lente": [
-    "bolsonar",
-    "flavio",
-    "lavagem",
-    "corrupca"
+    "bolsonar"
    ],
    "ia": {
-    "editoria": "gerais",
+    "editoria": "eleicoes",
     "I": 3,
     "V": 2,
     "P": 2,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "PF pede apreensão do passaporte de Flávio Bolsonaro.",
+    "motivo": "Imprensa internacional destaca vitória histórica de Lula.",
     "soma": 5
    }
   },
@@ -78,48 +104,104 @@
    }
   },
   {
-   "manchete": "Lula vira e fica à frente de Flavio Bolsonaro na Guiana Francesa no 2º turno",
+   "manchete": "Brazil election 2026: Full second round results as Lula wins comeback against Flávio Bolsonaro",
    "secoes": [
-    "A",
-    "A"
+    "B"
    ],
-   "veiculos": 4,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-26T21:05:28Z",
-   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxObTM2OG1UWl9LeEMyWDRHQXdEYlN5UEZjak1OWGZCSktLOWlXWUVuMFNLei1GQVVNRXpKQTBvczROVkZYNTRtZFhlMXFPY2RXdUd1RmlBSnhiU1VHYUNtbm1QRGJobC1DQTlTbGRkY0RpWVBob1JQZk1GZ1B4ajNrV1R6SFI4a3ktY1dKUnhhSDQzcTFRREFPS1FYN216blMtNzNhYmtxelFWX0t4ZXlSbTYzY0g3QQ?oc=5",
+   "veiculos": 30,
+   "veiculos_3h": 10,
+   "na_pauta_desde": "2026-10-26T18:07:31Z",
+   "link": "https://www.theguardian.com/world/ng-interactive/2026/oct/25/brazil-election-2026-live-second-round-results",
    "editoria": "eleicoes",
-   "nota": 5,
+   "nota": 6,
    "esquentou": false,
    "lente": [
     "bolsonar",
     "flavio"
    ],
    "ia": {
-    "editoria": "politica",
+    "editoria": "eleicoes",
+    "I": 3,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Resultado completo do segundo turno para veículos estrangeiros.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Reeleição de Lula contraria avanço da direita e amplia desafios na América Latina",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 6,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-26T21:05:28Z",
+   "link": "https://g1.globo.com/mundo/noticia/2026/10/26/repercute-imprensa-internacional-reeleicao-lula-dia-seguinte.ghtml",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "america_latina",
     "I": 2,
     "V": 2,
     "P": 2,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Centrão articula reaproximação com governo Lula.",
+    "motivo": "Vitória de Lula e os reflexos na América Latina.",
     "soma": 4
    }
   },
   {
-   "manchete": "CEO da AtlasIntel projeta à Reuters vitória de Lula no 2º turno da eleição presidencial",
+   "manchete": "Filho de Trump compartilha post que chama Lula de \"próximo Maduro\"",
+   "secoes": [
+    "D-america_latina"
+   ],
+   "veiculos": 8,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-26T21:06:31Z",
+   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNeTFVNlhQMEJGZDJiZUJ6TndxblJNRW1oRDR6OGpVRTRlVkdHWjh6NHJHcmVkZjN4a1FNVWNmRzMyVHA1RHdBb2pjNk5lXzJzb2x4ZkN5U3RfQ2dLRG9XcUlaUjZfTm4zd1V1bVNuWTZDb2xnRjlTaTZsZXVqZDVaLWFPajcyOTNWSFpidG1PUlpiaDB2QWZ1TFBUZHI4N1JJV1RkN0t4SlpfU0lJa0UwcTZ6SQ?oc=5",
+   "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "trump"
+   ],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Filho de Trump ataca Lula após eleição.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Lula vence Flávio Bolsonaro contra todos os prognósticos e governará o Brasil pela 4ª vez",
    "secoes": [
     "A",
-    "B"
+    "A"
    ],
-   "veiculos": 17,
+   "veiculos": 12,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-26T21:05:28Z",
-   "link": "https://jornalggn.com.br/noticia/lula-ganhou-crava-ceo-da-atlas-intel/",
+   "na_pauta_desde": "2026-10-27T00:34:57Z",
+   "link": "https://www.gazetadopovo.com.br/eleicoes/2026/parana-2026/flavio-bolsonaro-supera-lula-no-parana-com-626-dos-votos-validos/",
    "editoria": "eleicoes",
-   "nota": 6,
-   "esquentou": true,
-   "lente": [],
+   "nota": 8,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio",
+    "trump"
+   ],
    "ia": {
     "editoria": "eleicoes",
     "I": 2,
@@ -128,253 +210,221 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Reconhecimento internacional da vitória de Lula.",
+    "motivo": "Bolsonaristas pedem socorro a Trump após derrota.",
     "soma": 4
    }
-  }
- ],
- "rebaixados": [
-  {
-   "manchete": "Venezuela’s opposition leader Machado returns after months in exile",
-   "veiculos": 19,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-10-26T20:07:52Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Líder oposicionista da Venezuela, Machado, retorna após meses no exílio.",
-    "soma": 3
-   }
   },
   {
-   "manchete": "PL, partido de Flávio Bolsonaro, reconhece resultado da eleição que deu vitória a Lula",
+   "manchete": "Presidentes da França, Canadá, Peru, Chile, Rússia e mais países parabenizam Lula; veja repercussão",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
    "veiculos": 7,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-10-25T23:21:13Z",
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-27T00:34:57Z",
+   "link": "https://g1.globo.com/mundo/noticia/2026/10/25/lideres-mundiais-parabenizam-lula-pela-reeleicao-veja-repercussao.ghtml",
+   "editoria": "america_latina",
+   "nota": 4,
    "esquentou": false,
-   "ia": {
-    "editoria": "politica",
-    "I": 1,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Deputada bolsonarista provoca revolta nas redes sociais.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Rubio says Venezuela’s electoral infrastructure must be replaced before a vote",
-   "veiculos": 3,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-10-26T23:06:57Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Declaração de Rubio sobre infraestrutura na Venezuela.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Líder opositora Maria Corina Machado volta à Venezuela após dez meses",
-   "veiculos": 16,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-26T21:05:28Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Maria Corina Machado retorna à Venezuela.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Veja bastidores da cobertura do segundo turno das eleições na Folha",
-   "veiculos": 4,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-26T20:07:52Z",
-   "esquentou": false,
+   "lente": [],
    "ia": {
     "editoria": "eleicoes",
-    "I": 1,
-    "V": 1,
+    "I": 2,
+    "V": 2,
     "P": 0,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Eduardo Bolsonaro deixa apuração antecipadamente.",
-    "soma": 2
+    "motivo": "Presidentes estrangeiros parabenizam Lula.",
+    "soma": 4
    }
   },
   {
-   "manchete": "Quem é Pablo Souza, secretário de Salvador que teve prisão decretada e está em Paris",
-   "veiculos": 3,
+   "manchete": "Abstenção no 2º turno cai para 19,21%, menor índice desde 2006",
+   "secoes": [
+    "A",
+    "B"
+   ],
+   "veiculos": 6,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-26T21:12:51Z",
+   "na_pauta_desde": "2026-10-27T00:34:57Z",
+   "link": "https://www.gazetadopovo.com.br/eleicoes/2026/abstencao-segundo-turno-eleicao-2026/",
+   "editoria": "eleicoes",
+   "nota": 5,
    "esquentou": false,
+   "lente": [],
    "ia": {
     "editoria": "gerais",
-    "I": 1,
-    "V": 1,
+    "I": 2,
+    "V": 2,
     "P": 0,
     "formato": "feed",
     "repetido": false,
-    "risco": "",
-    "motivo": "TRE-BA suspende ordem de prisão de secretário.",
-    "soma": 2
+    "risco": "Acusação de crime sem condenação transitada em julgado",
+    "motivo": "Mulher identificada fazendo saudação nazista após votar.",
+    "soma": 4
    }
   },
   {
-   "manchete": "Flávio Bolsonaro repete feito de Jair e vence Lula no estado de São Paulo",
+   "manchete": "Colégio Estadual Quilombola Diogo Ramos, 48ª zona eleitoral: resultado da votação em Adrianópolis (PR) no 2º turno",
+   "secoes": [
+    "D-terra"
+   ],
    "veiculos": 2,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-26T23:06:57Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 1,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Joice Hasselmann ironiza contestação de Flávio.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Indissociabilidade entre água e saneamento: as percepções de violações dos direitos humanos dentre quilombolas",
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-26T20:07:52Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "gerais",
-    "I": 1,
-    "V": 0,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Estudo aborda violações de direitos humanos e saneamento entre quilombolas.",
-    "soma": 1
-   }
-  },
-  {
-   "manchete": "Lula (PT) é reeleito presidente, projeta Datafolha 📲Leia mais na #Folha: folha.com/politica 📷 Marlene Bergamo/Folhapress",
-   "veiculos": 1104,
-   "veiculos_3h": 339,
-   "na_pauta_desde": "2026-10-26T21:05:28Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 3,
-    "V": 3,
-    "P": 3,
-    "formato": "reels",
-    "repetido": true,
-    "risco": "",
-    "motivo": "Projeção da reeleição de Lula.",
-    "soma": 6
-   }
-  },
-  {
-   "manchete": "Así te lo contamos: elección histórica en Brasil con el triunfo de Lula y el pedido de anulación de Flávio Bolsonaro",
-   "veiculos": 44,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-25T23:21:13Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 3,
-    "V": 3,
-    "P": 3,
-    "formato": "reels",
-    "repetido": true,
-    "risco": "",
-    "motivo": "Vitória de Lula e derrota de Flávio Bolsonaro.",
-    "soma": 6
-   }
-  }
- ],
- "obrigatorios": [
-  {
-   "manchete": "PL, partido de Flávio Bolsonaro, reconhece resultado da eleição que deu vitória a Lula",
-   "secoes": [
-    "A",
-    "B"
-   ],
-   "veiculos": 7,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-10-25T23:21:13Z",
-   "link": "https://noticias.uol.com.br/ultimas-noticias/reuters/2026/10/26/pl-partido-de-flavio-bolsonaro-reconhece-resultado-da-eleicao-que-deu-vitoria-a-lula.htm",
-   "editoria": "eleicoes",
-   "nota": 8,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-26T15:00:15Z",
-    "legenda": "A deputada estadual eleita pelo Paraná Jessica Ramos Moreno (PL), conhecida como Jessicão, provocou revolta nas redes sociais nesta segunda-feira (26) ao defend",
-    "link": "https://www.instagram.com/p/De9je8RDc1R/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Veja bastidores da cobertura do segundo turno das eleições na Folha",
-   "secoes": [
-    "A",
-    "A",
-    "B"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-26T20:07:52Z",
-   "link": "https://www1.folha.uol.com.br/tv/2026/10/veja-bastidores-da-cobertura-do-segundo-turno-das-eleicoes-na-folha.shtml",
+   "na_pauta_desde": "2026-10-27T00:34:57Z",
+   "link": "https://news.google.com/rss/articles/CBMijAJBVV95cUxOZWtxZktxUU4wUTR6S2N6NTZNdGJvOWNiTllha2VHY25LLWxGczFRaVBMX0JOcEJ2Y0pVeFQybmtBRXBGSE04QmRESG0zaU1ISFhfQTVHb1duSnlra0ZQQmZheFB4NW9SdEhmN1ZrcURmQ2N4azMzVEpFLTlqcGRtN0M1a2stNDBwcElwN2dieGszNHM1NEV0SUlvTUxzTUZJTFVCRzRvM2M1Y0Nmc3cxYV9NS285d3BlUHowSTVhVm1rWDV2QVkzdUtHQTVjdS1kVHYxMkd5WDRsdWJTZ05kMV81a3dTZ2haMW9sd0J5SG5DOExEU3A3LTZnRElEZTlqaTNib0JsdWcyY3Jh0gGbAkFVX3lxTE52blFtNlB2cXNjblJERnVxWlhXNEZReEZfZ2NQMkxCR1FDc1I3WUdQQk9uTkhUdUV1cDNCanMtVHJXYy13MFZWaUlrZnZJSE1ZUjVkaVRwUVdVaW1mZ3BvZnN6RnJWZHJycl9FOFhSalpKU1phRUNoblBiekl3OXNEZjd5aDhqeTZta1BESUhXSTRNN2I2RVpNV2ZCTWFEdEZoaktJaC1KYnREQzU1cVdRUmVsUmZyTGpzakxrbTAzb01zNG52V1JNeGR0NEpFZWJXRHYweDc0d3FmdXFMY2t1Zm1TWDh5Y0tCMldMWmtUTmlNWDZZRlRQSEcxblp3Yk9fY3JfQlBZcTFYY2NkS25aZWRDQU9MMDE1WVE?oc=5",
    "editoria": "eleicoes",
    "nota": 4,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-26T18:01:23Z",
-    "legenda": "O ex-deputado federal Eduardo Bolsonaro deixou antecipadamente o evento de acompanhamento da apuração do segundo turno das eleições presidenciais, realizado em ",
-    "link": "https://www.instagram.com/reel/De94I5ijEgf/"
-   },
-   "triagem": "candidato"
+   "esquentou": false,
+   "lente": [
+    "quilombola"
+   ]
   },
   {
-   "manchete": "Flávio Bolsonaro pode enfrentar investigações por corrupção e lavagem de dinheiro após deixar o Senado em 2027",
+   "manchete": null,
    "secoes": [
     "A"
    ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "eleicoes",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "extrema direita"
+   ]
+  },
+  {
+   "manchete": "Nunes entrou na campanha de Flávio e vitória de Lula aumentou em SP, diz vereador do PT",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-27T00:34:57Z",
+   "link": "https://www1.folha.uol.com.br/colunas/painel/2026/10/nunes-entrou-na-campanha-de-flavio-e-vitoria-de-lula-aumentou-em-sp-diz-vereador-do-pt.shtml",
+   "editoria": "eleicoes",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "flavio"
+   ]
+  },
+  {
+   "manchete": "Trump offers $1 million for tipoffs leading to vote fraud conviction as midterms approach",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-26T23:06:57Z",
+   "link": "https://www.france24.com/en/americas/20261026-trump-offers-1-million-for-tipoffs-leading-to-vote-fraud-conviction-as-midterms-approach",
+   "editoria": "eleicoes",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "trump"
+   ]
+  },
+  {
+   "manchete": "Cubano é preso no DF com maconha, skunk, cocaína e munição restrita",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-27T00:34:57Z",
+   "link": "https://www.metropoles.com/distrito-federal/cubano-e-preso-no-df-com-maconha-skunk-cocaina-e-municao-restrita",
+   "editoria": "america_latina",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "preso"
+   ]
+  },
+  {
+   "manchete": "Kast reconoce error en rebajas de condena pero descarta salida de Rabat; Chadwick es mencionado en nueva formalización de Hermosilla, y Corte sobresee a asesino de Ámbar por otros dos homicidios",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-27T00:34:57Z",
+   "link": "https://www.ciperchile.cl/2026/10/26/radar-26-10-26/?utm_source=rss&utm_medium=rss&utm_campaign=radar-26-10-26",
+   "editoria": "america_latina",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "corte"
+   ]
+  },
+  {
+   "manchete": "Polícia de fronteira apreende agrotóxico do Paraguai; R$ 161 mil de prejuízo ao crime",
+   "secoes": [
+    "D-terra"
+   ],
    "veiculos": 1,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-26T21:05:28Z",
-   "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQakwzTEpkN0t6eFFpZEZwdldveDRjTXRrd2VidVhhX1NfT2NkOFotT1EyZW9LSzdxazRwRW00bHRIekhJSWw5c3dFRHNqbjZDN0Fnc1RYMmxkbUVUVXdzOVUzUlBTN3J3aGJQS3FBeEdxdEI0RFNRdVd3RmtEUmhxTGFwNGRBaDFOVDk5dHpYOVptMWg5T1hwZHcxcmpQTWVpaU5HdzhfVktOZU1wODk5clhGeXdSODlEZTYwUnBnYXNKN2lMempId2dlQThnekJzRnlPdlE4ZlUtNWVyQmc?oc=5",
-   "editoria": "politica",
-   "nota": 6,
-   "parceiro": {
-    "perfil": "luzmanifesto",
-    "quando": "2026-10-26T19:56:07Z",
-    "legenda": "A polícia federal acaba de pedir a apreensão do passaporte do senador Flávio Bolsonaro. A PF alega alto risco de fuga do Brasil em meio a investigações sobre po",
-    "link": "https://www.instagram.com/p/De-FAkrudGr/"
-   },
-   "triagem": "candidato"
+   "na_pauta_desde": "2026-10-27T00:34:57Z",
+   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPTDA5VkVFREI5UlVNbG9qUnp5NU1kcGp6TzAwVXFpS3dia25OQzRoNkdIaVFhYUhLcXVRaFB2ZjFOd3lxQmlENF9EUl9HUlpDVW9GMjcySlFJbHlPeHYyNi1peHctdF9DT2pud0pnbjhpLTFPeXFXa2lVcjhPbWhFalYxLUU1RHJCOHJ2c0l4ZXdCanhL?oc=5",
+   "editoria": "roca",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "agrotoxic"
+   ]
+  },
+  {
+   "manchete": "Mãe é presa após filho ser encontrado andando sozinho e com fome em Cariacica",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-27T00:34:57Z",
+   "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQblRxdzRfVmg2bnZTZlJXTnBwOUpRWE9CUUtCeGVKYnRSV21jbWJVTlE2SHpzdXBCaF9pRzE3Sng1LU42NXI0WUdHcUlkcEZfQy1YTG53TU5pUGRTdEVmcGpkY1dGRWw5ejZHUUJwSHNQUDZmaU52T0x2YnlGVlpPdWY5MHh3VGFNXzBOU3oyeEhyVXB6WEtuZEkwWVJDVW92aVJmQ0FiMk5BWm9rVlNwQy1heW1RdVdZc3RtbVdB0gHGAUFVX3lxTE4yYUkxeTNUTy1mbHhTT1RIa2NpRDBBN2xrQU9FY25ua1hRaVdZQzJjeGM5VWQ5anpNSDNhUmRhaEdTZ0FBTkZMcjFscUMwMmpKTlpDQmhVc2h5c3V6a0g3THEtb2ZxRnVjeFVGQ3VvbmJYcWY1ZHR4b0h6VGtHX2NNVERwbTlQRlE1Z1NMeGFXQ09nM2hzc0lOX1piUUVtOEp0eHM2eUJmSjFpU0owLVg4TGJrVTlvczY1MWVjNGhQdWlKZGdYZw?oc=5",
+   "editoria": "roca",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "fome"
+   ]
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "eleicoes",
+   "nota": 3,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 2,
+   "esquentou": false,
+   "lente": [
+    "bolsonar"
+   ]
   },
   {
    "manchete": null,
@@ -387,35 +437,209 @@
    "link": null,
    "editoria": "gerais",
    "nota": 1,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-26T19:01:49Z",
-    "legenda": "E aí, petistinha! 🤣 Via: jairmearrependi",
-    "link": "https://www.instagram.com/reel/De9_Bdfheaf/"
-   },
-   "triagem": "candidato"
+   "esquentou": false,
+   "lente": []
+  }
+ ],
+ "rebaixados": [
+  {
+   "manchete": "Febraban cumprimenta Lula pela reeleição",
+   "veiculos": 16,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-26T19:06:44Z",
+   "esquentou": true,
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Articulações para a montagem do próximo governo Lula.",
+    "soma": 3
+   }
   },
   {
-   "manchete": "Así te lo contamos: elección histórica en Brasil con el triunfo de Lula y el pedido de anulación de Flávio Bolsonaro",
-   "secoes": [
-    "A",
-    "A",
-    "A",
-    "A",
-    "A",
-    "B"
-   ],
-   "veiculos": 44,
+   "manchete": "Nunes Marques diz ter ‘toda a segurança’ no processo eleitoral, confirma resultado das eleições e liga para Lula e Flávio",
+   "veiculos": 11,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-26T21:12:51Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "TSE confirma resultado e dá segurança ao processo.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Janones foi decisivo para vitória de Lula nas eleições",
+   "veiculos": 6,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-26T21:12:51Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Reconhecimento internacional da vitória de Lula.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Lula é reeleito presidente com quase 52% dos votos válidos no 2º turno",
+   "veiculos": 6,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-26T21:05:28Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Levantamento de dados do TSE sobre abstenção e votos.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Justiça revoga pedido de prisão de secretário municipal de Salvador",
+   "veiculos": 11,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-10-27T00:34:57Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "gerais",
+    "I": 1,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Justiça revoga prisão de secretário em Salvador.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Minha Casa, Minha Vida Rural: Funai autoriza construção de sete moradias na Terra Indígena Xerente",
+   "veiculos": 5,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-27T00:34:57Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "roca",
+    "I": 1,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Funai autoriza moradias em Terra Indígena.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Veja a trajetória de Luiz Inácio Lula da Silva, primeiro presidente eleito quatro vezes no Brasil",
+   "veiculos": 14,
    "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-25T23:21:13Z",
-   "link": "https://www.bbc.co.uk/mundo/live/cm5ynp5y1871t?at_medium=RSS&at_campaign=rss",
+   "na_pauta_desde": "2026-10-26T21:06:31Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 1,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Deputada do PR causa revolta nas redes sociais.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Confira os cinco governadores eleitos em segundo turno neste domingo",
+   "veiculos": 8,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-27T00:34:57Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 1,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Eduardo Bolsonaro deixa evento de apuração antecipadamente.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Em Salvador: Bruno Reis atribuiu a uma propaganda irregular atraso dos ônibus do transporte público no segundo turno",
+   "veiculos": 5,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-26T21:12:51Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "gerais",
+    "I": 1,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Prefeito de Salvador atribui atraso de ônibus a propaganda irregular.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Deputado afirma que campanha de Flávio Bolsonaro avalia contestar resultado eleitoral",
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-27T00:34:57Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 1,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Joice Hasselmann ironiza contestação de Flávio Bolsonaro.",
+    "soma": 2
+   }
+  }
+ ],
+ "obrigatorios": [
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
    "editoria": "eleicoes",
-   "nota": 8,
+   "nota": 3,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-10-26T13:02:01Z",
-    "legenda": "O presidente Luiz Inácio Lula da Silva (PT) foi reeleito neste domingo (25), derrotando Flávio Bolsonaro (PL) no segundo turno das eleições presidenciais de 202",
-    "link": "https://www.instagram.com/p/De9Vvkkxmz5/"
+    "quando": "2026-10-26T23:08:11Z",
+    "legenda": "O presidente do governo da Espanha, Pedro Sánchez, usou o Brasil como exemplo durante um discurso eleitoral em defesa do Partido Socialista. Ao convocar os espa",
+    "link": "https://www.instagram.com/reel/De-bM44BqEE/"
    },
    "triagem": "candidato"
   },
@@ -439,22 +663,243 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Lula vira e fica à frente de Flavio Bolsonaro na Guiana Francesa no 2º turno",
+   "manchete": "Veja a trajetória de Luiz Inácio Lula da Silva, primeiro presidente eleito quatro vezes no Brasil",
+   "secoes": [
+    "A",
+    "A",
+    "A",
+    "A",
+    "A",
+    "D-america_latina"
+   ],
+   "veiculos": 14,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-26T21:06:31Z",
+   "link": "https://midianinja.org/luiz-inacio-lula-da-silva-e-reeleito-presidente-do-brasil/",
+   "editoria": "america_latina",
+   "nota": 6,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-26T15:00:15Z",
+    "legenda": "A deputada estadual eleita pelo Paraná Jessica Ramos Moreno (PL), conhecida como Jessicão, provocou revolta nas redes sociais nesta segunda-feira (26) ao defend",
+    "link": "https://www.instagram.com/p/De9je8RDc1R/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Lula vence Flávio Bolsonaro contra todos os prognósticos e governará o Brasil pela 4ª vez",
    "secoes": [
     "A",
     "A"
    ],
-   "veiculos": 4,
+   "veiculos": 12,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-26T21:05:28Z",
-   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxObTM2OG1UWl9LeEMyWDRHQXdEYlN5UEZjak1OWGZCSktLOWlXWUVuMFNLei1GQVVNRXpKQTBvczROVkZYNTRtZFhlMXFPY2RXdUd1RmlBSnhiU1VHYUNtbm1QRGJobC1DQTlTbGRkY0RpWVBob1JQZk1GZ1B4ajNrV1R6SFI4a3ktY1dKUnhhSDQzcTFRREFPS1FYN216blMtNzNhYmtxelFWX0t4ZXlSbTYzY0g3QQ?oc=5",
+   "na_pauta_desde": "2026-10-27T00:34:57Z",
+   "link": "https://www.gazetadopovo.com.br/eleicoes/2026/parana-2026/flavio-bolsonaro-supera-lula-no-parana-com-626-dos-votos-validos/",
+   "editoria": "eleicoes",
+   "nota": 8,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-26T23:00:11Z",
+    "legenda": "Em mais um episódio de delírio coletivo, bolsonaristas foram ao perfil de Donald Trump nas redes sociais pedir \"socorro\" após a derrota eleitoral de Flávio Bols",
+    "link": "https://www.instagram.com/p/De-aaDBj5Ao/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Eleições em Israel revolvem incertezas de israelenses e palestinos",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-27T00:34:57Z",
+   "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/10/eleicoes-em-israel-revolvem-incertezas-de-israelenses-e-palestinos.shtml",
+   "editoria": null,
+   "nota": null,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-26T22:30:05Z",
+    "legenda": "Israel realiza nesta terça-feira (27) eleições parlamentares que podem definir o futuro político do primeiro-ministro Benjamin Netanyahu, no poder durante grand",
+    "link": "https://www.instagram.com/p/De-W9iljMkO/"
+   },
+   "triagem": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Abstenção no 2º turno cai para 19,21%, menor índice desde 2006",
+   "secoes": [
+    "A",
+    "B"
+   ],
+   "veiculos": 6,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-27T00:34:57Z",
+   "link": "https://www.gazetadopovo.com.br/eleicoes/2026/abstencao-segundo-turno-eleicao-2026/",
    "editoria": "eleicoes",
    "nota": 5,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-10-26T17:30:08Z",
-    "legenda": "Lideranças do Centrão começaram a articular uma reaproximação com o presidente Lula (PT) após sua reeleição no domingo (25), buscando participação no próximo go",
-    "link": "https://www.instagram.com/p/De90ofKCCS6/"
+    "quando": "2026-10-26T22:36:00Z",
+    "legenda": "A Polícia Civil do Rio de Janeiro identificou como Erica Marques Pinho, de 46 anos, a mulher filmada fazendo uma saudação nazista após votar no segundo turno da",
+    "link": "https://www.instagram.com/reel/De-XfRLBPNr/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Confira os cinco governadores eleitos em segundo turno neste domingo",
+   "secoes": [
+    "A",
+    "B"
+   ],
+   "veiculos": 8,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-27T00:34:57Z",
+   "link": "https://jornalggn.com.br/eleicoes/segundo-turno-define-governos-cinco-estados/",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-26T18:01:23Z",
+    "legenda": "O ex-deputado federal Eduardo Bolsonaro deixou antecipadamente o evento de acompanhamento da apuração do segundo turno das eleições presidenciais, realizado em ",
+    "link": "https://www.instagram.com/reel/De94I5ijEgf/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-26T19:01:49Z",
+    "legenda": "E aí, petistinha! 🤣 Via: jairmearrependi",
+    "link": "https://www.instagram.com/reel/De9_Bdfheaf/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Como fica o bolsonarismo após a derrota de Flávio",
+   "secoes": [
+    "A",
+    "A",
+    "A",
+    "A",
+    "B"
+   ],
+   "veiculos": 66,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-26T21:05:28Z",
+   "link": "https://www.nexojornal.com.br/expresso/2026/10/25/flavio-bolsonaro-perde-derrota-bolsonarismo-lula-reeleito-presidente",
+   "editoria": "politica",
+   "nota": 8,
+   "parceiro": {
+    "perfil": "luzmanifesto",
+    "quando": "2026-10-26T19:56:07Z",
+    "legenda": "A polícia federal acaba de pedir a apreensão do passaporte do senador Flávio Bolsonaro. A PF alega alto risco de fuga do Brasil em meio a investigações sobre po",
+    "link": "https://www.instagram.com/p/De-FAkrudGr/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": null,
+   "nota": null,
+   "parceiro": {
+    "perfil": "luzmanifesto",
+    "quando": "2026-10-26T12:48:49Z",
+    "legenda": "Nosso máximo respeito a todos os soldados e soldadas que lutaram bravamente contra o avanço da barbárie no Brasil. Foi uma honra dividir o campo de batalha com ",
+    "link": "https://www.instagram.com/p/De9UMrnxTo5/"
+   },
+   "triagem": "fora: esporte (luta)"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": null,
+   "nota": null,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-26T23:18:49Z",
+    "legenda": "Desde o Brasil Fede Covid velho de guerra na luta contra o bolsonarismo! Vacinas para sempre!",
+    "link": "https://www.instagram.com/p/De-cTnYBiML/"
+   },
+   "triagem": "fora: esporte (luta)"
+  },
+  {
+   "manchete": "Febraban cumprimenta Lula pela reeleição",
+   "secoes": [
+    "A",
+    "B"
+   ],
+   "veiculos": 16,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-26T19:06:44Z",
+   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://c-level.folha.uol.com.br/financas/2026/10/febraban-cumprimenta-lula-pela-reeleicao.shtml",
+   "editoria": "america_latina",
+   "nota": 6,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-26T23:30:05Z",
+    "legenda": "A montagem do próximo governo Lula movimenta dirigentes do PT após a reeleição do presidente, com dois nomes do Nordeste nas articulações para o primeiro escalã",
+    "link": "https://www.instagram.com/p/De-d08_iXlP/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Lula é reeleito presidente com quase 52% dos votos válidos no 2º turno",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 6,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-26T21:05:28Z",
+   "link": "https://www.camara.leg.br/noticias/1313705-lula-e-reeleito-presidente-com-quase-52-dos-votos-validos-no-2o-turno",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-26T14:30:08Z",
+    "legenda": "Um levantamento realizado pela equipe de Tecnologia Digital de Jornalismo da TV Globo, com base em dados do Tribunal Superior Eleitoral (TSE), identificou 35.52",
+    "link": "https://www.instagram.com/p/De9gCIciNxf/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-26T22:01:29Z",
+    "legenda": "Uma viatura da Polícia Militar Rodoviária atingiu um motociclista de 24 anos na noite de domingo (25), na SC-403, no bairro Ingleses, em Florianópolis, durante ",
+    "link": "https://www.instagram.com/reel/De-TpbBDNFF/"
    },
    "triagem": "candidato"
   },
@@ -486,47 +931,27 @@
    "veiculos_3h": 0,
    "na_pauta_desde": null,
    "link": null,
-   "editoria": null,
-   "nota": null,
+   "editoria": "gerais",
+   "nota": 1,
    "parceiro": {
-    "perfil": "luzmanifesto",
-    "quando": "2026-10-26T12:48:49Z",
-    "legenda": "Nosso máximo respeito a todos os soldados e soldadas que lutaram bravamente contra o avanço da barbárie no Brasil. Foi uma honra dividir o campo de batalha com ",
-    "link": "https://www.instagram.com/p/De9UMrnxTo5/"
-   },
-   "triagem": "fora: esporte (luta)"
-  },
-  {
-   "manchete": "Como fica o bolsonarismo após a derrota de Flávio",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-26T21:05:28Z",
-   "link": "https://www.nexojornal.com.br/expresso/2026/10/25/flavio-bolsonaro-perde-derrota-bolsonarismo-lula-reeleito-presidente",
-   "editoria": "politica",
-   "nota": 6,
-   "parceiro": {
-    "perfil": "luzmanifesto",
-    "quando": "2026-10-26T18:46:35Z",
-    "legenda": "🚨 Otoni de Paula aciona a PGR e pede apreensão do passaporte de Flávio Bolsonaro. O deputado quer impedir que o senador deixe o Brasil e solicita a entrega do d",
-    "link": "https://www.instagram.com/p/De99W6FxX25/"
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-26T15:02:31Z",
+    "legenda": "🔥💭",
+    "link": "https://www.instagram.com/p/De9jujhhgcg/"
    },
    "triagem": "candidato"
   },
   {
-   "manchete": "Flávio Bolsonaro repete feito de Jair e vence Lula no estado de São Paulo",
+   "manchete": "Deputado afirma que campanha de Flávio Bolsonaro avalia contestar resultado eleitoral",
    "secoes": [
-    "A",
     "A"
    ],
-   "veiculos": 2,
+   "veiculos": 1,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-26T23:06:57Z",
-   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQbndlV1pGMEVmc0I3d3pyNWI2ejdkZWliUDNTRllTaUZ5N3VKVzRETTRaZkc3QzNJcDdTeVQ0NkQyU2lJeVZuNVNhNk5wbVlIZWVmMXZQd2h2bDhtOGpTZWVDN3U1ZzhMLXVTWXpjeE9KSWxkd014WGlQYi1iS19EanBZVUw0MjZUdjk4cEJ1WUNUdG83TGduNnpRLV9MRmtPSk5EQnl5enZLMXdOYXZB?oc=5",
+   "na_pauta_desde": "2026-10-27T00:34:57Z",
+   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOVFhLZnpOY0NBMWtyUU1uYlBYZEp6dFUxbC1CYXhweEZRZlBpSDNqUTNCNm1HOVFmOWlDcGdBY0J5aG9QSUZqRDVjX21KMkNoUzktaUp6TmtkY2kxd0czZGVVNkwyZnozTDB4XzF2dWpqOEhHbmkzRXVJSEtSbzF2MWZQc0kwdEdqOE1wdkJMdnZpM2w0ckVHNnVTYWN0WEVwaWdoZWVPRjdBNGQ4QkFsb0FHV29oZ1k0d0ZpclBfdXc4Zw?oc=5",
    "editoria": "eleicoes",
-   "nota": 6,
+   "nota": 5,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-10-26T19:01:24Z",
@@ -536,40 +961,41 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Minas Gerais tem ‘vira-vira’ em disputa entre Lula e Flávio Bolsonaro; acompanhe ao vivo",
+   "manchete": "Nunes Marques diz ter ‘toda a segurança’ no processo eleitoral, confirma resultado das eleições e liga para Lula e Flávio",
    "secoes": [
     "A"
    ],
-   "veiculos": 13,
+   "veiculos": 11,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-26T21:05:28Z",
-   "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/10/26/lula-reeleito-compare-evolucao-da-apuracao-do-2o-turno-e-do-1o-turno.ghtml",
-   "editoria": "america_latina",
-   "nota": 8,
+   "na_pauta_desde": "2026-10-26T21:12:51Z",
+   "link": "https://jornalggn.com.br/noticia/temos-absoluta-seguranca-de-todo-o-processo-eleitoral-diz-kassio-nunes/",
+   "editoria": "eleicoes",
+   "nota": 6,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-10-26T04:18:05Z",
-    "legenda": "A derrota de Flávio Bolsonaro (PL-RJ) para Luiz Inácio Lula da Silva (PT) no segundo turno das eleições presidenciais de 2026 fará com que o senador fique sem m",
-    "link": "https://www.instagram.com/p/De8Z_BIuJa1/"
+    "quando": "2026-10-26T19:30:58Z",
+    "legenda": "O presidente do Tribunal Superior Eleitoral (TSE), ministro Kassio Nunes Marques, confirmou a vitória de Luiz Inácio Lula da Silva (PT) nas eleições presidencia",
+    "link": "https://www.instagram.com/reel/De-CaG7D8C6/"
    },
    "triagem": "candidato"
   },
   {
-   "manchete": null,
+   "manchete": "Eleições 2026: virada de Lula sobre Flávio ocorreu às 20h26",
    "secoes": [
-    "A"
+    "A",
+    "B"
    ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
+   "veiculos": 782,
+   "veiculos_3h": 242,
+   "na_pauta_desde": "2026-10-26T21:05:28Z",
+   "link": "https://www.gazetadopovo.com.br/eleicoes/2026/votos-no-exterior-no-2-turno-veja-resultados/",
+   "editoria": "eleicoes",
+   "nota": 7,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-10-26T15:02:31Z",
-    "legenda": "🔥💭",
-    "link": "https://www.instagram.com/p/De9jujhhgcg/"
+    "quando": "2026-10-26T21:00:07Z",
+    "legenda": "O presidente Luiz Inácio Lula da Silva (PT) conquistou cerca de 10 milhões dos 14 milhões de novos votos registrados entre o primeiro e o segundo turno das elei",
+    "link": "https://www.instagram.com/p/De-MqlGnNzf/"
    },
    "triagem": "candidato"
   },
@@ -593,79 +1019,40 @@
    "triagem": "candidato"
   },
   {
-   "manchete": null,
+   "manchete": "Janones foi decisivo para vitória de Lula nas eleições",
    "secoes": [
     "A"
    ],
-   "veiculos": 0,
+   "veiculos": 6,
    "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "politica",
-   "nota": 6,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-26T20:27:10Z",
-    "legenda": "A Polícia Federal intimou o senador Flávio Bolsonaro (PL-RJ), na manhã desta segunda-feira (26), a entregar seu passaporte e o proibiu de deixar o Brasil. O pró",
-    "link": "https://www.instagram.com/p/De-I5SfjdSR/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-26T12:03:43Z",
-    "legenda": "🔥💭",
-    "link": "https://www.instagram.com/p/De9PSBpEWwX/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-26T22:01:29Z",
-    "legenda": "Uma viatura da Polícia Militar Rodoviária atingiu um motociclista de 24 anos na noite de domingo (25), na SC-403, no bairro Ingleses, em Florianópolis, durante ",
-    "link": "https://www.instagram.com/reel/De-TpbBDNFF/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "CEO da AtlasIntel projeta à Reuters vitória de Lula no 2º turno da eleição presidencial",
-   "secoes": [
-    "A",
-    "B"
-   ],
-   "veiculos": 17,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-26T21:05:28Z",
-   "link": "https://jornalggn.com.br/noticia/lula-ganhou-crava-ceo-da-atlas-intel/",
-   "editoria": "eleicoes",
-   "nota": 6,
+   "na_pauta_desde": "2026-10-26T21:12:51Z",
+   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQTHVYd0xITVVQbXJzYVBDelo1ZnY2RjRRVDYyUjVsLVVER2RTN0pnZ0Q2eWc1endiYkpjMjFabWJEdzZjNTdqR193WndVbHcxQ3lELUdUbHZXM29NMTc0VEhSVGRjMFFjUXBPMnJpb2g4dldjamM3SnNIOS1jVjBjM1F4Tk42WVl1SzJ0dV9YNl9zZmphMlFCemhkUC1XS09SWHkyZVBDaENJUdIBrwFBVV95cUxNYWh3VW1hY3F5ekU0YWRuMUM0Q3EteXZ2VGZmTHVzZm0zRU1WMk1pY3FWc3FUamNCY0RGYWlxRXIxb2J1Z1JfNWZaNVVGMzlOWlRxRzFfRXdfcGlpdU9mNENUaGo0UUc1Y1IwT2RvR2wwb0hWNGZ3NUtiSVRmbURZUFlJNXczVW5NSC1nTndrcUdxcktIbHJrRmI3eWhyU01HdmFBRW52XzU3VUYteXlj?oc=5",
+   "editoria": "america_latina",
+   "nota": 5,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-10-26T14:01:09Z",
     "legenda": "Presidentes e autoridades de diferentes correntes políticas reconheceram a vitória de Luiz Inácio Lula da Silva (PT) no segundo turno das eleições presidenciais",
     "link": "https://www.instagram.com/p/De9ct4tiIFp/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Lula gana un cuarto mandato inédito en Brasil contra Bolsonaro, que desconoce el resultado",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 8,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-27T00:34:57Z",
+   "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPVUxubHF5WmY4SDE5WWFWVEF4aVNzQTA2eU96TFRyYmZub2ZZNXF2bUNQTXlMa2VGU1RFS0dwM1VnQUtJWUxYZmNObFRaOTZ3ZTVmWmlES1o4ZHRnSlVjVmhlbW5ISmNQX19oSjNJa184RXoybUE0dXdVZjJXQjdYWG1BQS01cGNDVGRuVHNOcmllTmswTWlHTVN3bUhRSmltTDEyaTg0YzNKTXc4RVNpRFlVSkpfMDFLNDVwNVBCdGxON3lCMXZWazk2Q0hhUHRqRlpR?oc=5",
+   "editoria": "america_latina",
+   "nota": 8,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-26T20:27:10Z",
+    "legenda": "A Polícia Federal intimou o senador Flávio Bolsonaro (PL-RJ), na manhã desta segunda-feira (26), a entregar seu passaporte e o proibiu de deixar o Brasil. O pró",
+    "link": "https://www.instagram.com/p/De-I5SfjdSR/"
    },
    "triagem": "candidato"
   },
@@ -716,25 +1103,6 @@
    "veiculos_3h": 0,
    "na_pauta_desde": null,
    "link": null,
-   "editoria": "politica",
-   "nota": 2,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-26T12:40:51Z",
-    "legenda": "Com uma longa trajetória na política paranaense, rafaelgrecaoficial foi prefeito de Curitiba por três mandatos (1993–1996, 2017–2020 e 2021–2024), além de deput",
-    "link": "https://www.instagram.com/reel/De9TXINRh1G/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
    "editoria": null,
    "nota": null,
    "parceiro": {
@@ -746,36 +1114,17 @@
    "triagem": "fora: esporte (luta)"
   },
   {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-26T20:00:01Z",
-    "legenda": "Boas notícias também merecem espaço! Nesta edição do Vale a Pena Saber, reunimos descobertas científicas, iniciativas de conservação e projetos que mostram como",
-    "link": "https://www.instagram.com/p/De-F0tvFYXt/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Quem é Pablo Souza, secretário de Salvador que teve prisão decretada e está em Paris",
+   "manchete": "Justiça revoga pedido de prisão de secretário municipal de Salvador",
    "secoes": [
     "A",
     "B"
    ],
-   "veiculos": 3,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-26T21:12:51Z",
-   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQcEFyTXdBLWIzMUNMNVJOWW1ucHpfblM2c1poQ1lscXIxLWYzbUNGcVN5NkJ0bjZjM3A3a0pPNDJpZVg4NmxNZV9QSV9FYWtnMXZvX1l6cnhNUVliRk9hdko4OEg3RzJYWVlRSDUtU1lCYTRVRndKZzdTSW4xQ0tpcENiT1E0SjNrenMtMnhTRGEwakVPYzV6YTdUZ3BROHhCaEhnSDhXdnBGRE9MdUo3QkZ5c9IBtwFBVV95cUxNVEo0dGFzUlg1eHBxUWpJc0hPTVpGWm81clJtQWZraGxJOUNCV1ZuYXVMRUZQRFUzLW9KM1A3Vko1U3ZDMXBvVEtZSEJRbkVKZmIzNmY3amlpWjFvNHo1WTJYV0Q1N2g0ZXo1Q0RoWFN5cFhBakhWdVBoUGxUYkw3UWlYaHctLVZrYm5RdndVTmxxMEZFTEdSY3B3dmx0dThDWTlmaU1qYWFXdl91dDBXOGx5VFNvZEk?oc=5",
+   "veiculos": 11,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-10-27T00:34:57Z",
+   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/10/justica-revoga-pedido-de-prisao-de-secretario-municipal-de-salvador.shtml",
    "editoria": "eleicoes",
-   "nota": 4,
+   "nota": 6,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-10-26T16:00:07Z",
@@ -797,78 +1146,64 @@
    "nota": 1,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-10-26T04:30:30Z",
-    "legenda": "⭐️⭐️⭐️⭐️ 02 - 06 - 22 - 26",
-    "link": "https://www.instagram.com/p/De8bafKDgmN/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-26T04:12:26Z",
-    "legenda": "hilton_erika 🔥💭",
-    "link": "https://www.instagram.com/p/De8ZUJLO-r5/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-26T11:35:45Z",
-    "legenda": "No embalo da maior virada das história brasileira, mais uma vitória do BFC: 2 milhões de seguidores. Obrigado, Brasil! 💰Doe R$ 13 e fortaleça a nossa causa: pix",
-    "link": "https://www.instagram.com/p/De9L3GcxbB5/"
+    "quando": "2026-10-26T20:00:01Z",
+    "legenda": "Boas notícias também merecem espaço! Nesta edição do Vale a Pena Saber, reunimos descobertas científicas, iniciativas de conservação e projetos que mostram como",
+    "link": "https://www.instagram.com/p/De-F0tvFYXt/"
    },
    "triagem": "candidato"
   }
  ],
  "descartados_mais_quentes": [
   {
-   "manchete": "Lula wins historic fourth term as Brazilian president in defeat of far-right Flávio Bolsonaro",
-   "veiculos": 28,
-   "veiculos_3h": 8,
+   "manchete": "Líderes estrangeiros comemoram reeleição de Lula e destacam defesa da democracia: ‘Fascismo foi detido’",
+   "veiculos": 74,
+   "veiculos_3h": 3,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Apuração no Espírito Santo: Lorenzo Pazolini lidera disputa",
-   "veiculos": 24,
+   "manchete": "Lula wins historic fourth term as Brazilian president in defeat of far-right Flávio Bolsonaro",
+   "veiculos": 56,
+   "veiculos_3h": 16,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Concurso TJ PB: inscreva-se para 50 vagas e R$ 7,5 mil!",
+   "veiculos": 8,
    "veiculos_3h": 0,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Muere Walter Koenig, el Chekov original de ‘Star Trek’",
+   "manchete": "Judge: Maurene Comey was illegally fired from Justice Department",
    "veiculos": 7,
-   "veiculos_3h": 2,
+   "veiculos_3h": 5,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Justice Department charges former FBI Director James Comey for third time",
+   "manchete": "Alcolumbre diz ter maioria para se reeleger e rejeita impeachment de Moraes",
+   "veiculos": 6,
+   "veiculos_3h": 1,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Discussion: Harry Kane, Alexia Putellas lift 2026 Ballon d’Or trophies: Live updates and full results",
    "veiculos": 5,
    "veiculos_3h": 5,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Daughter of ex-FBI director unlawfully fired as federal prosecutor, judge rules",
+   "manchete": "9th Circuit questions DOJ demand to set aside 20,000 California mail ballots",
+   "veiculos": 5,
+   "veiculos_3h": 4,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Real e ativos brasileiros têm forte desvalorização com vitória de Lula",
+   "veiculos": 5,
+   "veiculos_3h": 0,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Jordan says it attacks militants in Syria tied to last week’s church attack",
    "veiculos": 4,
    "veiculos_3h": 3,
    "motivo": "sem editoria"
@@ -876,31 +1211,7 @@
   {
    "manchete": "Nigeria evacuates Ebola patient to Switzerland, tracks 53 contacts",
    "veiculos": 4,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Microsoft to reportedly offer buyouts to 60,000 employees in latest cuts",
-   "veiculos": 4,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Global leaders congratulate Brazil President Lula on reelection",
-   "veiculos": 4,
-   "veiculos_3h": 1,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Trump oferece recompensa US$ 1 milhão para quem apontar fraude em eleições",
-   "veiculos": 3,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "PT retoma hegemonia no 'Matopiba' após Lula vencer em mais de 80% dos municípios da região",
-   "veiculos": 3,
-   "veiculos_3h": 2,
+   "veiculos_3h": 0,
    "motivo": "sem editoria"
   }
  ]
