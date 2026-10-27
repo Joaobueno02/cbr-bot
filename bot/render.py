@@ -114,6 +114,33 @@ def gerar_reels(quadro: Path, saida: Path, segundos: int = 12) -> None:
     subprocess.run(cmd, check=True)
 
 
+def gerar_reels_slides(quadros: list[Path], saida: Path, por_slide: float = 4.0, transicao: float = 0.5) -> None:
+    """Carrossel em Reels (pedido do João, 27/10/2026): os quadros verticais dos slides em sequência,
+    4 s cada, com transição suave, H.264 + faixa de áudio muda (a música entra pela API na publicação)."""
+    import subprocess
+    n = len(quadros)
+    entradas = []
+    for q in quadros:
+        entradas += ["-loop", "1", "-t", str(por_slide + transicao), "-i", str(q)]
+    if n == 1:
+        filtro, rotulo = "[0]format=yuv420p[out]", "[out]"
+    else:
+        partes, anterior, desloc = [], "[0]", por_slide
+        for k in range(1, n):
+            rot = f"[v{k}]"
+            partes.append(f"{anterior}[{k}]xfade=transition=fade:duration={transicao}:offset={desloc}{rot}")
+            anterior, desloc = rot, desloc + por_slide
+        partes.append(f"{anterior}format=yuv420p[out]")
+        filtro, rotulo = ";".join(partes), "[out]"
+    total = por_slide * n + transicao
+    cmd = ["ffmpeg", "-y", "-loglevel", "error", *entradas,
+           "-f", "lavfi", "-i", "anullsrc=channel_layout=stereo:sample_rate=44100",
+           "-filter_complex", filtro, "-map", rotulo, "-map", f"{n}:a", "-t", str(total), "-r", "30",
+           "-c:v", "libx264", "-profile:v", "high", "-preset", "medium", "-crf", "21",
+           "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", "-shortest", str(saida)]
+    subprocess.run(cmd, check=True)
+
+
 def capturar(pagina, html_path: Path, saida: Path) -> dict:
     pagina.goto(html_path.as_uri())
     pagina.wait_for_function("window.__fit !== undefined", timeout=30000)
@@ -128,7 +155,7 @@ def processar(pasta: Path, pagina) -> None:
     post = json.loads(arq.read_text(encoding="utf-8"))
     rel = {"quando": agora(), "artes": [], "avisos": []}
     try:
-        for padrao in ("arte-*.jpg", "story.jpg", "reels.mp4"):
+        for padrao in ("arte-*.jpg", "quadro-*.jpg", "story.jpg", "reels.mp4"):
             for velha in pasta.glob(padrao):
                 velha.unlink()
         rod = post.get("rodape") or ""
@@ -169,6 +196,16 @@ def processar(pasta: Path, pagina) -> None:
                 html_path.write_text(arte.slide(s, uri, post.get("editoria", "gerais")), encoding="utf-8")
                 fit = capturar(pagina, html_path, pasta / f"arte-{i}.jpg")
                 rel["artes"].append({"arquivo": f"arte-{i}.jpg", **fit})
+            if post.get("reels") and rel["artes"]:  # carrossel que também sai como Reels (27/10/2026)
+                quadros = []
+                for a in rel["artes"]:
+                    q = pasta / a["arquivo"].replace("arte-", "quadro-")
+                    quadro_vertical(pasta / a["arquivo"], q)
+                    quadros.append(q)
+                quadro_vertical(pasta / "arte-1.jpg", pasta / "story.jpg")
+                rel["story"] = "story.jpg"
+                gerar_reels_slides(quadros, pasta / "reels.mp4")
+                rel["reels"] = {"video": "reels.mp4", "capa": "story.jpg"}
         sem_fonte = [a["arquivo"] for a in rel["artes"] if a.get("fontes_ok") is False]
         estouros = [a["arquivo"] for a in rel["artes"] if not a.get("ok") and a.get("fontes_ok") is not False]
         ign = sorted({k for k in post if k in ("titulo_max", "bloco_subir", "barra_invertida", "cbr_escala", "peso_titulo",

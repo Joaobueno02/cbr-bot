@@ -213,7 +213,10 @@ def escolher_musica(busca: str | None) -> dict | None:
 
 def eh_reels(post: dict) -> bool:
     """Bombástica sempre vira Reels; desde 20/10/2026 o Claude também marca "reels": true em post único forte."""
-    return bool(post.get("bombastica") or post.get("reels")) and post.get("formato", "unico") == "unico"
+    formato = post.get("formato", "unico")
+    if formato == "carrossel":  # carrossel em Reels, só com "reels": true (pedido do João, 27/10/2026)
+        return bool(post.get("reels"))
+    return bool(post.get("bombastica") or post.get("reels")) and formato == "unico"
 
 
 def comentar(media_id: str, texto: str) -> dict:
