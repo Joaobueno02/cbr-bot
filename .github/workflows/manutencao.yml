@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       tarefa:
-        description: "saude | relatorio | historico | benchmark | movimentos | collabs"
+        description: "saude | relatorio | historico | benchmark | movimentos | collabs | musicas"
         required: true
         default: saude
 
@@ -73,6 +73,12 @@ jobs:
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
         run: python bot/collab_metricas.py
+
+      - name: Músicas por editoria (sonda a biblioteca do Instagram)
+        if: steps.t.outputs.tarefa == 'musicas'
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: python bot/musicas.py
 
       - name: Relatório semanal
         if: steps.t.outputs.tarefa == 'relatorio'

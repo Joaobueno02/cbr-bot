@@ -244,9 +244,11 @@ candidato). Não há teto por dia: depende do dia. Mas não banalize; se tudo é
 nada é. Bombástica:
 - sai como **Reels** (a arte vira um vídeo vertical de 12 s com zoom lento), no lugar do post
   de foto, e aparece no feed também;
-- leva **música da biblioteca do Instagram**, escolhida pela API (vale também para o Reels comum). Preencha `musica_busca`
-  com 1 a 3 palavras do clima desejado (ex.: "tensão", "suspense", "épico", "triunfo");
-  sem isso, vai uma música em alta. Evite clima alegre em notícia grave;
+- leva **música da biblioteca do Instagram** (vale também para o Reels comum). **Desde 27/10/2026 a
+  música é fixa por editoria** (`config.json` > `musicas`: `audio_id` escolhido com o João a partir de
+  `radar/musicas.json`, gerado pela tarefa `musicas` do manutencao.yml). Editoria sem `audio_id` usa a
+  busca (`musica_busca` do post, depois a `busca` da editoria, depois as em alta). Se a música falhar, o
+  publicador grava o motivo em `publicacao.musica_erro`: cite na notificação;
 - sempre leva **collab** (seção 10).
 Só Reels tem música (bombástica e Reels comum). Feed e carrossel continuam sem.
 
@@ -503,6 +505,11 @@ Se der `simulado`, avise que a publicação está desligada. Em `erro_publicacao
 o erro (o texto já vem sem token).
 
 ## 10. Collab
+
+**Pausa (pedido do João, 27/10/2026)**: até `config.json` > `collab_automatica_pausada_ate`
+(03/11/2026) o publicador **não convida ninguém** (nem BFC/Luz nas bombásticas, nem a cada 3 posts, nem o
+rodízio); só a instituição (regras 1 e 3). Motivo: em 26/10 os Reels com convite pendente tiveram alcance
+1-2 contra 1.234-4.734 dos sem collab. O dossiê compara o alcance da semana para decidir se volta.
 
 O publicador decide sozinho, nesta ordem:
 1. **Bombástica envolvendo instituição** → a instituição + @brasilforadacaverna.

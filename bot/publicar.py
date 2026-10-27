@@ -182,8 +182,17 @@ def registrar_rodizio(convidados: list[str], pasta: str, erro: str | None = None
     RODIZIO_REG.write_text(json.dumps(reg, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def collab_pausada() -> bool:
+    """Pausa da collab automática (pedido do João, 27/10/2026): os Reels com convite pendente
+    tiveram alcance 1-2 contra 1.234-4.734 dos sem collab. Até a data, só a instituição é convidada."""
+    ate = CONFIG.get("collab_automatica_pausada_ate")
+    return bool(ate) and agora()[:10] < ate
+
+
 def decidir_collab(post: dict, numero: int) -> list[str]:
     inst = (post.get("instituicao_ig") or post.get("universidade_ig") or "").lstrip("@").strip()
+    if collab_pausada():
+        return [inst] if inst else []
     bfc = CONFIG["collab_padrao"][0]
     if post.get("bombastica"):
         base = [inst, bfc] if inst else list(CONFIG["collab_padrao"])
@@ -197,18 +206,38 @@ def decidir_collab(post: dict, numero: int) -> list[str]:
     return base + ([extra] if extra else [])
 
 
-def escolher_musica(busca: str | None) -> dict | None:
-    """Busca na biblioteca do Instagram (Audio API). Sem termo, pega as músicas em alta."""
+def buscar_musicas(busca: str | None) -> list[dict]:
+    """Busca na biblioteca do Instagram (Audio API). Sem termo, as músicas em alta."""
     params = {"audio_type": "music", "user_id": CONFIG["ig_user_id"]}
     if busca:
         params["search_query"] = busca
-    dados = chamar("GET", "ig_audio", **params).get("data", [])
-    if not dados and busca:
-        dados = chamar("GET", "ig_audio", audio_type="music", user_id=CONFIG["ig_user_id"]).get("data", [])
-    if not dados:
-        return None
-    m = dados[0]
-    return {"audio_id": m.get("audio_id"), "titulo": m.get("title"), "artista": m.get("display_artist")}
+    return chamar("GET", "ig_audio", **params).get("data", [])
+
+
+def escolher_musica(post: dict) -> tuple[dict | None, str | None]:
+    """Música padrão por editoria (config.json > musicas, 27/10/2026); sem audio_id fixo, busca pelo
+    termo do post ou da editoria e cai nas em alta. Devolve (música, motivo da falha)."""
+    padrao = (CONFIG.get("musicas") or {}).get(post.get("editoria"), {})
+    if padrao.get("audio_id") and not post.get("musica_busca_forcar"):
+        return {"audio_id": padrao["audio_id"], "titulo": padrao.get("titulo"),
+                "artista": padrao.get("artista"), "origem": "padrao_editoria"}, None
+    erros = []
+    termos = []
+    for t in [post.get("musica_busca"), padrao.get("busca"), None]:
+        if t not in termos:
+            termos.append(t)
+    for termo in termos:
+        try:
+            dados = buscar_musicas(termo)
+        except ErroAPI as e:
+            erros.append(f"busca '{termo or 'em alta'}': {e}")
+            continue
+        if dados:
+            m = dados[0]
+            return {"audio_id": m.get("audio_id"), "titulo": m.get("title"), "artista": m.get("display_artist"),
+                    "origem": f"busca:{termo or 'em alta'}"}, None
+        erros.append(f"busca '{termo or 'em alta'}': nenhuma música")
+    return None, "; ".join(erros)[:300]
 
 
 def eh_reels(post: dict) -> bool:
@@ -307,15 +336,24 @@ def criar_e_publicar(post: dict, pasta: str, legenda: str, collab: list[str]) ->
         params = dict(media_type="REELS", video_url=url_arte(pasta, post["render"]["reels"]["video"]),
                       cover_url=url_arte(pasta, post["render"]["reels"]["capa"]),
                       share_to_feed="true", caption=legenda, **extra)
-        try:
-            musica = escolher_musica(post.get("musica_busca"))
-        except ErroAPI:
-            musica = None
+        musica, musica_erro = escolher_musica(post)
         if musica and musica.get("audio_id"):
             params["audio_configuration"] = json.dumps({"audio_id": musica["audio_id"], "audio_volume": 100, "video_volume": 0})
-        cid = chamar("POST", f"{ig}/media", **params)["id"]
+        try:
+            cid = chamar("POST", f"{ig}/media", **params)["id"]
+        except ErroAPI as e:
+            if "audio_configuration" not in params:
+                raise
+            # a música foi recusada no container: publica sem ela e registra o motivo
+            musica_erro = f"container recusou a música {musica.get('audio_id')}: {e}"[:300]
+            musica = None
+            params.pop("audio_configuration")
+            cid = chamar("POST", f"{ig}/media", **params)["id"]
         esperar_container(cid, limite=600)
-        return {**publicar_container(cid, legenda), "musica": musica}
+        res = {**publicar_container(cid, legenda), "musica": musica}
+        if musica_erro:
+            res["musica_erro"] = musica_erro
+        return res
     if len(artes) == 1:
         cid = chamar("POST", f"{ig}/media", image_url=url_arte(pasta, artes[0]), caption=legenda, **extra)["id"]
     else:
