@@ -1,6 +1,6 @@
 {
- "quando": "2026-10-27T15:26:26Z",
- "pauta_quando": "2026-10-27T15:26:23Z",
+ "quando": "2026-10-27T15:34:00Z",
+ "pauta_quando": "2026-10-27T15:33:57Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,27 +9,54 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 20,
+  "avaliados_agora": 12,
   "falhas_antes": null,
-  "pedidos_hoje": 10
+  "pedidos_hoje": 11
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 160,
- "novos_3h": 10,
- "esquentaram": 2,
+ "total_assuntos": 166,
+ "novos_3h": 5,
+ "esquentaram": 1,
  "candidatos": [
   {
-   "manchete": "Flávio Bolsonaro intimado a entregar passaportes e as reações pós vitória de Lula no 2º turno; siga",
+   "manchete": "Dólar dispara, Bolsa despenca, acionando vários 'circuit breakers'. BC e Tesouro atuam no mercado como reflexo da reeleição de Lula",
    "secoes": [
-    "A",
-    "B"
+    "B",
+    "D-america_latina"
    ],
-   "veiculos": 43,
-   "veiculos_3h": 8,
+   "veiculos": 28,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-10-27T06:51:35Z",
+   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/10/bolsa-da-argentina-desaba-mais-de-6-apos-reeleicao-de-lula-no-brasil.shtml",
+   "editoria": "america_latina",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "dispara"
+   ],
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 3,
+    "P": 3,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Ataque especulativo do mercado financeiro pós-eleição.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Flávio Bolsonaro tem passaportes cancelados (fonte policial)",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-27T00:51:34Z",
-   "link": "https://www.bbc.co.uk/portuguese/live/c6x2v49yvrygt?at_medium=RSS&at_campaign=rss",
-   "editoria": "eleicoes",
-   "nota": 7,
+   "link": "https://noticias.uol.com.br/ultimas-noticias/afp/2026/10/27/flavio-bolsonaro-tem-passaportes-cancelados-fonte-policial.htm",
+   "editoria": "america_latina",
+   "nota": 5,
    "esquentou": false,
    "lente": [
     "bolsonar",
@@ -37,71 +64,69 @@
    ],
    "ia": {
     "editoria": "eleicoes",
-    "I": 2,
+    "I": 3,
     "V": 3,
-    "P": 1,
+    "P": 2,
     "formato": "carrossel",
     "repetido": false,
-    "risco": "Acusação de fuga sem confirmação oficial.",
-    "motivo": "Boato sobre saída do país de derrotado.",
+    "risco": "Acusação de fuga sem confirmação oficial sólida.",
+    "motivo": "Boato de fuga e cancelamento de passaportes.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Vitória de Lula é 'divisor de águas' para América Latina e recado das urnas extrapola partidarismos",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 25,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-26T21:05:28Z",
+   "link": "https://www.rfi.fr/br/podcasts/rfi-convida/20261026-vit%C3%B3ria-de-lula-%C3%A9-divisor-de-%C3%A1guas-para-am%C3%A9rica-latina-e-recado-das-urnas-extrapola-partidarismos",
+   "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": true,
+   "lente": [],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 3,
+    "V": 2,
+    "P": 3,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Análise geopolítica da vitória da esquerda regional.",
     "soma": 5
    }
   },
   {
-   "manchete": "STF ordena investigar possível financiamento estrangeiro à campanha de Flávio Bolsonaro",
+   "manchete": "Eleições 2026: Confira em 7 mapas e gráficos como foi a disputa Lula x Flávio Bolsonaro no 2º turno",
    "secoes": [
-    "A",
-    "B"
+    "B",
+    "D-america_latina"
    ],
-   "veiculos": 11,
-   "veiculos_3h": 10,
-   "na_pauta_desde": "2026-10-27T14:11:14Z",
-   "link": "https://noticias.uol.com.br/ultimas-noticias/afp/2026/10/27/stf-ordena-investigar-possivel-financiamento-estrangeiro-a-campanha-de-flavio-bolsonaro.htm",
-   "editoria": "eleicoes",
+   "veiculos": 21,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-26T21:05:28Z",
+   "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/10/26/eleicoes-2026-o-2o-turno-em-mapas-e-graficos.ghtml",
+   "editoria": "america_latina",
    "nota": 7,
    "esquentou": false,
    "lente": [
     "bolsonar",
     "flavio"
    ],
+   "outras_manchetes": 1,
    "ia": {
     "editoria": "eleicoes",
     "I": 2,
     "V": 2,
-    "P": 2,
+    "P": 3,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Investigação sobre financiamento estrangeiro na campanha.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Governo Trump mandou segurar comunicado reconhecendo resultado da eleição após alegações de Flávio Bolsonaro",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 139,
-   "veiculos_3h": 51,
-   "na_pauta_desde": "2026-10-27T14:11:14Z",
-   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/mundo/2026/10/governo-trump-mandou-segurar-comunicado-reconhecendo-resultado-da-eleicao-apos-alegacoes-de-flavio.shtml",
-   "editoria": "eleicoes",
-   "nota": 7,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio",
-    "trump"
-   ],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Governo Trump segura reconhecimento da eleição brasileira.",
+    "motivo": "Mapas detalham a polarização e votação pelo país.",
     "soma": 4
    }
   },
@@ -111,10 +136,10 @@
     "B",
     "D-america_latina"
    ],
-   "veiculos": 157,
-   "veiculos_3h": 38,
+   "veiculos": 202,
+   "veiculos_3h": 87,
    "na_pauta_desde": "2026-10-26T19:06:44Z",
-   "link": "https://midianinja.org/lideres-internacionais-reconhecem-reeleicao-de-lula-e-defendem-cooperacao-com-brasil/",
+   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/mundo/2026/10/congressistas-democratas-dos-eua-parabenizam-lula-e-pedem-reconhecimento-de-trump.shtml",
    "editoria": "america_latina",
    "nota": 7,
    "esquentou": false,
@@ -135,44 +160,17 @@
    }
   },
   {
-   "manchete": "Donald Trump retuvo una felicitación al pueblo brasileño tras las elecciones del domingo que ganó Lula da Silva",
+   "manchete": "Watch: Brazil: Flavio Bolsonaro refuses to concede Lula’s election win",
    "secoes": [
     "B",
     "D-america_latina"
    ],
-   "veiculos": 31,
-   "veiculos_3h": 8,
-   "na_pauta_desde": "2026-10-26T21:05:28Z",
-   "link": "https://elpais.com/argentina/2026-10-26/milei-evita-reconocer-el-triunfo-de-lula-en-brasil-tras-hacer-campana-por-bolsonaro.html",
-   "editoria": "america_latina",
-   "nota": 6,
-   "esquentou": true,
-   "lente": [
-    "trump"
-   ],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Trump retém saudação ao povo brasileiro após vitória de Lula.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Watch: Brazil: Flavio Bolsonaro refuses to concede Lula’s election win",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 17,
+   "veiculos": 15,
    "veiculos_3h": 3,
    "na_pauta_desde": "2026-10-26T18:07:31Z",
    "link": "https://www.theguardian.com/world/live/2026/oct/25/brazil-election-runoff-live-updates-flavio-bolsonaro-lula",
-   "editoria": "eleicoes",
-   "nota": 6,
+   "editoria": "america_latina",
+   "nota": 7,
    "esquentou": false,
    "lente": [
     "bolsonar",
@@ -191,9 +189,62 @@
    }
   },
   {
+   "manchete": "Anvisa aprova novo medicamento para tratamento de câncer de pulmão no Brasil",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-10-27T15:26:23Z",
+   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQdFVqMmYyNzdlV2JPM2JTbWVQSVNpQmhTQjZhU2JDU3RTTUlORk1ydUZKeXVSbVZOam9EUTlJOGZwczRsdl9Rc2RXZTlUTHJmZVRERkRnVEY5a3BwZEZ3VlBSU3hvMUszYXl1MTBJRms4WlRUZHVSVkJPSllVZktGUFBDME5tcE5sbzV1SmdUWldzZWVVSWl4amZydVFvWmFaT1dRTldGQjE5WG8ydGtIRHFGVjNOVWRjblF5RA?oc=5",
+   "editoria": "saude",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "saude",
+    "I": 3,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Novo remédio aprovado, mas baixo engajamento imediato.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Trump oferece US$ 1 milhão por denúncias que levem a condenações por fraude eleitoral",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 12,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-26T23:06:57Z",
+   "link": "https://g1.globo.com/mundo/noticia/2026/10/26/trump-oferece-us-1-milhao-por-denuncias-que-levem-a-condenacoes-por-fraude-eleitoral.ghtml",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "trump"
+   ],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Discurso intervencionista de Trump.",
+    "soma": 4
+   }
+  },
+  {
    "manchete": "Au Brésil, une enquête ouverte sur un possible financement étranger de la campagne de Flavio Bolsonaro",
    "secoes": [
-    "C-internacional"
+    "C-internacional",
+    "D-america_latina"
    ],
    "veiculos": 2,
    "veiculos_3h": 2,
@@ -219,46 +270,16 @@
    }
   },
   {
-   "manchete": "Só 34,3 mil votos foram registrados após as 17h; Lula venceu Flávio por 4,43 milhões",
-   "secoes": [
-    "A",
-    "A"
-   ],
-   "veiculos": 18,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-27T14:11:14Z",
-   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/10/so-003-do-total-de-votos-foram-registrados-apos-as-17h-contrariando-alegacoes-de-fraude-de-flavio.shtml",
-   "editoria": "eleicoes",
-   "nota": 9,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio",
-    "pl"
-   ],
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "Acusação de crime sem fonte oficial",
-    "motivo": "Boato sobre fuga de Flávio Bolsonaro após derrota.",
-    "soma": 4
-   }
-  },
-  {
    "manchete": "Quem é André Janones, deputado responsável pelo \"Exército de Lula\"",
    "secoes": [
     "A"
    ],
-   "veiculos": 17,
+   "veiculos": 13,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-26T21:12:51Z",
    "link": "https://www.gazetadopovo.com.br/eleicoes/2026/o-papel-de-janones-e-do-exercito-de-lula-na-vitoria-petista/",
    "editoria": "politica",
-   "nota": 6,
+   "nota": 5,
    "esquentou": false,
    "lente": [],
    "ia": {
@@ -274,81 +295,63 @@
    }
   },
   {
-   "manchete": "Anvisa suspende venda de suplemento e picolé; saiba quais são",
+   "manchete": "Anvisa proíbe venda de picolé com melatonina e suplemento de proteína",
    "secoes": [
     "B"
    ],
-   "veiculos": 16,
+   "veiculos": 12,
    "veiculos_3h": 3,
    "na_pauta_desde": "2026-10-27T00:51:34Z",
-   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPU3JOTjA0azAxSnFFNG9waGNXUk1PR0lVTjdwTXhjWEdxT1pyYVpxU25yTWY4RS01bXhTY3AtX2xsdE52UFVqb1RYblBSclZ1d0NJNUQ1WjFzS2JNcHlFTDQtNXZXM2pZQ011TWdWWE1VZUU4SnRGOXV1UXFnR21nWU5Ka0VNSlYyVy1rcEZ1Y3NzWWsySndrOTk1MEhBWFk3Zm5GQTRjQ1ktVjN3QWZncnBPb21pSjFm0gHAAUFVX3lxTE54ZGJmS3F5LU9vSWltMVN5bXVEVFB2cVFMLVl1b3Fuc2cwUVZHN2ZrejFaYTN4VzB2MFgzTGRtTjZGeWdJdkdJci1zNkpueDhNcGRfN3FVbmItSWdMWGZKY2ptX2tPdFRqT2ZJMUh6bGQzYlRHTV8yLTBWcjhJV3E3SVIyVjVxMHlid1FwQnBwRGM5MWtjUzNfU1A3a3A3aTR1Y1JZZGF4X2VaeE8wR3pwbnhEeXBMRGJubVRkU3JFUw?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPbXdqWWxHTGpQdVV3alJ5YzNIRWlzZjZsNG5CVE8wNjFuUWptVHhmNFBhUTB3N1pRT09henpBZXJpaGlfb2hnYTlrelFrdjI2MmRuemZXY3ZleWdPbmFIWjcxTTdUMjJ5LVdqTnU0UXVFMi1VLWduWFJfLW1aZzNLYWZuNFZnREdOTWQ3U3JJNU9taHVUOG9EbUZ5MThlWmJwY1FyV3RCYnNNRExwcUVJZjJxRndKa1ZPZHNJNk94c0tudw?oc=5",
    "editoria": "saude",
-   "nota": 4,
-   "esquentou": true,
-   "lente": []
-  },
-  {
-   "manchete": "Comitê Nobel considera transição democrática na Venezuela ainda necessária",
-   "secoes": [
-    "B",
-    "C-internacional",
-    "D-america_latina"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-10-27T14:11:14Z",
-   "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNdDBlWmU2cmFBbERZRmtuSWEzZGE1Nm5qM0NRbHFKdmZ4a29CbkxoRENpd0FhUDhkWnRxNXNPcENmZ1Y4cFNRWWtBR1BJek1OMS1yeFNhLUZzbC05dDVWSUt1OXI5Z01RYnVQV3BNaDc1WjJaWjZ1UzJLRF9rRUk4Ym0wM1hHdUVmNC03MF9xMGR3RGx3anAycDRnUnVZSzFqbDFtMUE2bnEwQTdSR002STVvWThDVy13MmZ6eGdLV0tyR0hoMUF4N3M5Q2JqMDBmdTlteg?oc=5",
-   "editoria": "america_latina",
    "nota": 4,
    "esquentou": false,
    "lente": []
   },
   {
-   "manchete": "PF deflagra operação contra importação irregular de medicamentos emagrecedores",
+   "manchete": "Tecpar submete à Anvisa pedido de registro da vacina contra varicela",
    "secoes": [
     "B",
     "C-nacional"
    ],
-   "veiculos": 4,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-10-27T15:26:23Z",
-   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOa0tRVHBZMHZyUXpEUzFPQ1VienZfTVYta245T214Wndtd0NfNFpmcXNBQW55OFA4US1MblJBcWM5ek1jWVVKcTVJRGlSYjB1SUJBNEVTRmtFSU9QRFA3eXpDczliWUZoUWJON1dHZEY5R2J5RkpkTnlfdU1IR1N3ZEMwTC1icGhfV1VNVjcydUlubU1kOVZmZTZBVi1jN2ljbE1yZnNhN0ZzX3Z1SHpJemlaSGkwQQ?oc=5",
-   "editoria": "politica",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Tribunal Supremo de Brasil ordena investigar posible financiamiento extranjero a campaña de Bolsonaro; ven interferencia electoral",
-   "secoes": [
-    "B",
-    "C-internacional"
-   ],
    "veiculos": 3,
    "veiculos_3h": 3,
    "na_pauta_desde": "2026-10-27T15:26:23Z",
-   "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPT3BtS3pNeTlUWk4yT09hV1VMLWNQWjVuSEJJS1JUdFdESTJXVzdWRlB3bmQyZjhEaEtWSUIzbUN6TExERkxqYXQyVWxxc3ZGQ2o3WTR0cUpYcE5xUFZ5WlpkbTRMMzItNVJmLU9nQW4zMG5mTWpRTnRTMVN2c01fNnZ5cmg5RjZ1cDZRd1lNeC1neVlvX2JlWUVLYnhZTVNPb2xpNE5lVWNtb1ptd0kwQWtfYW0wbTNPMF9GdXJteFBiNjg3enEweXQtV1BTeDY3NVRjdzdR0gHqAUFVX3lxTE1nTmRTc20ya1BHeFRGWWpHVDVkXzZaS0N2YUNEWDZsS0RFNkhrZGprZDk3S05YRV9pMEFnVkZJRXY1UEViWjQ5N216TXQyVXRZYjVrTi1zV2JQRmx5ODRyWVRfUUFZdEgzcXVzT2JyTUdkMjhSVGgtbzBaMzN4R01NWlZybWJEa0tLbFF5dDdaQWJXRGhXZGU4QnV5LS01ZGpISFRQRUZYV1paVm1iem5rQ3JHcWE0ZjllSm9INFdxZ2l6RWROYy1EcnFrV1VFTG16b1RKWTN4S2IyeFhrZlVwVGRSOE5WLTVuUQ?oc=5",
-   "editoria": "politica",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "bolsonar"
-   ]
-  },
-  {
-   "manchete": "El regreso de María Corina Machado sacude el tablero político y mete presión a una transición en Venezuela",
-   "secoes": [
-    "B",
-    "D-america_latina"
-   ],
-   "veiculos": 6,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-27T00:51:34Z",
-   "link": "https://elpais.com/america/2026-10-26/el-regreso-de-maria-corina-machado-sacude-el-tablero-politico-y-mete-presion-a-una-transicion-en-venezuela.html",
-   "editoria": "america_latina",
+   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOclNrdk5yNExTNlZON3MwOFowalhGNmtvWWR1OVVCQXc1SWlMeDJBRGZDX2ItWUN3c05WTmlxMnJnblJGR1d0X2FUekpNTE1tTUg4M2FLNWdMd2FoNlQyZ3lJdXN3SkROUDByVmQ0UG1KSU05SU43VFJCZWFaclJlOEhXUVdUdWVXYk1TRjVvOXU3R1N5endITUJpZG1UcHdXUjF4VXNsWExtZWdlQjRPM0YxYVg?oc=5",
+   "editoria": "saude",
    "nota": 4,
    "esquentou": false,
    "lente": []
+  },
+  {
+   "manchete": "Santana do Cariri dá a Lula maior percentual de votos no Ceará no 2º turno; veja ranking",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 14,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-26T21:05:28Z",
+   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/10/veja-os-estados-onde-lula-mais-ganhou-votos-do-1o-para-o-2o-turno.shtml",
+   "editoria": "eleicoes",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Celso Freitas anuncia aposentadoria da televisão após trajetória de 56 anos",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 8,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-27T00:51:34Z",
+   "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQUENZbHlOVDFZYU91OUJIXzdKRldMUkt1Q2dUTjg3ZGFKU2dLMk96Zzd4SHBkbDVsT241WFQ5UmpKWFJzdnFSSWJsY3dUYkZJeE1fd2NFX2lySWJuZ0c2VFYzNDhFNHhFLWotUHlvLThNNmdSYVRaZF90X0VoY2YtQlNDNnVvdjhpWTU2U2pCWU9tUVVLU1I5WERrVF9uemJBam1UZE9mMWEzcjdlZzdrbmUxRXpxbjlUVC1Ib2JnQU5ockZ0aHZzOURidmRIVTZ1OWl2bE51dXBHVTJycnlBT0s3ZmJFdi1yU2NjY1lGcw?oc=5",
+   "editoria": "economia",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "aposentad"
+   ]
   },
   {
    "manchete": "La gala del Balón de Oro 2026 y los premiados, en imágenes | Fotos | Fútbol | Deportes",
@@ -366,33 +369,19 @@
    "lente": []
   },
   {
-   "manchete": "Anvisa aprova novo medicamento para tratamento de câncer de pulmão no Brasil",
+   "manchete": "Economia Lula 3: PIB cresce, mas juros pesam",
    "secoes": [
     "B"
    ],
-   "veiculos": 5,
+   "veiculos": 4,
    "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-27T15:26:23Z",
-   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNM05VcVFGcGE2MHdRZVNfQUZoend2emw1aFZuZVFWWkt0SmNUbXJsbkpVRjdaaXdHRmNtb2pGUktrb25kTXgyd1k2RnhpRlpMZUViQzlEUmlVa0loR3ZCUERzQ2VBLUZvVGxwY3FIcnRCamFmYmV0LWp0dmhyOUhzWkRSc0YteENCWlZtXzFGZl9UQUJ5OENZaHFYYWI2aTNRb240VERSamNvSlM3WGlDZmdRX2FWOXpXZ1F0MQ?oc=5",
-   "editoria": "saude",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Lula gana la presidencia de Brasil, un sorpresivo golpe a la derecha de América Latina",
-   "secoes": [
-    "D-america_latina"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-27T15:26:23Z",
-   "link": "https://www.bbc.com/mundo/articles/cm93zw193zd0o?at_medium=RSS&at_campaign=rss",
-   "editoria": "america_latina",
+   "na_pauta_desde": "2026-10-27T15:33:57Z",
+   "link": "https://iclnoticias.com.br/economia/lula-3-economia-cresceu-e-desemprego/",
+   "editoria": "economia",
    "nota": 4,
    "esquentou": false,
    "lente": [
-    "golpe"
+    "juros"
    ]
   },
   {
@@ -412,32 +401,52 @@
    ]
   },
   {
-   "manchete": "Holanda anuncia US$ 500 milhões para Brasil preservar florestas",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 15,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-26T21:06:31Z",
-   "link": "https://jornalggn.com.br/noticia/com-vitoria-de-lula-holanda-anuncia-us-500-mi-a-fundo-de-florestas-do-brasil/",
-   "editoria": "gerais",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
    "manchete": "A final surge: On Luiz Inácio Lula da Silva’s triumph in Brazil",
    "secoes": [
     "A",
     "A",
     "A",
+    "A",
+    "A",
+    "A",
+    "A",
     "A"
    ],
-   "veiculos": 9,
+   "veiculos": 4,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-10-27T00:34:57Z",
-   "link": "https://www.theguardian.com/world/2026/oct/26/flavio-bolsonaro-brazil-lula-election",
-   "editoria": "saude",
+   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQY3dCUU5SeDQzT2tIbkNfSUk4UmxnTnJRdUpFUU9zcEpSZXlrNXNpYk9pbWh6TUplcFVnVmNibmJvTTg2MHVFbG00akV2Q21OSEVUVmt1d00tdjk5cmF1blZGblhRQjZVdjVaWDUxTFRfai0wUmd3aTBjS2EzQW56ekhUX1BGNkxzeDhONURrMW5taEdob2JZWndMaEFxekhJRzZTc0RqSEczZGFQSXJPNGpvMmdnNzJIS1d1bm1DRzlYZ9IByAFBVV95cUxNNk11WDZ4ZHo3cHFpS2lmNUFsdndfc2dIOE04VDBhcXE0bmZjc2dOZU95Qk9qSEw4Ukd2aEo2RlhXYmgyejdYUHBwOUE5Y1NWOEJ4WTlWaW5mbE1LNXVjQ0tKTTlIMXFLb0pwY1BGaWdWQTMzMnJGY01IcUFtLXl5RDV6NjBIUnQ5TDZLeUpvdWdpWkhieXVWdHJCby1VeDA1NVB5N3lkR0w2LVBoWlBHMk9SVGVTWDN6c000b09Zb1UwVEIycW1tRA?oc=5",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Primeiro mutirão da campanha Natal Sem Fome arrecada 1,5 t de alimentos em Prudente",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-27T00:51:34Z",
+   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOVk5TaW1zbzlHVEpHelFOQ2htZEdPRzFjVURta2l5a1NGWG5EUGRfeFpoaTBJS2t6blJlc18tdWdGeEI5M0xWSjBFN21TWnZwTHFpZ0RrV0RCN01xVlBDZkNlQXBHNjVYVjU4ZXRvOXdteU9UNkR4ZzdReXlCaWlhRHpzandXWkJrX0xqdG9yVUhBYndNN2hoTi02WnYyd0hQU0lmQXJ0Q1VnR1cyNkNKR2ZuMC1DemhqNjRjeWEydDNTVjNXaXc?oc=5",
+   "editoria": "roca",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "fome"
+   ]
+  },
+  {
+   "manchete": "Finep disponibiliza R$ 120 milhões para projetos de inovação na pesca artesanal e na agricultura familiar",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-26T21:06:31Z",
+   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNSWdmZExNcUxfMEVPMl8xcEk5dkJIdkQxMnVYREsydTkybjRrMWZZTVM5UTJPQTA1VUhhaUU3NUJhc05aM3ZfY1l6UzlTRUcxWVdLMjlBY2RFdXMyR3NqTS1SdHY0SnR3THNJYnZDenpWd0l5c3k5MllreGttQWJQVEZBQ1JtdHJWeEF5VXlyTHlSR3g4NjR5S0l6TjZQVlRKYWpXMk9ZY0ptMXNyWU5XbnlYZ2pGSnhGNWlVLV9mUUdVTl9H?oc=5",
+   "editoria": "roca",
    "nota": 4,
    "esquentou": false,
    "lente": []
@@ -499,38 +508,38 @@
    }
   },
   {
-   "manchete": "Dengue: 3 milhões de adolescentes estão com vacinação incompleta",
-   "veiculos": 6,
+   "manchete": "Governo prorroga por um mês subvenção de R$ 2,12 por litro de diesel",
+   "veiculos": 13,
    "veiculos_3h": 3,
-   "na_pauta_desde": "2026-10-27T06:25:21Z",
+   "na_pauta_desde": "2026-10-27T12:10:31Z",
    "esquentou": false,
    "ia": {
-    "editoria": "saude",
+    "editoria": "economia",
     "I": 2,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Milhões de adolescentes estão com vacinação contra dengue incompleta.",
+    "motivo": "Prorrogação de subsídio afeta preços e custos de transporte.",
     "soma": 3
    }
   },
   {
-   "manchete": "Bets, escala 6x1 e SUS: professores da rede estadual apontam possíveis temas da redação do Enem",
-   "veiculos": 11,
+   "manchete": "Flávio Bolsonaro vence Lula em prisão onde Vorcaro está preso",
+   "veiculos": 9,
    "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-27T14:11:14Z",
+   "na_pauta_desde": "2026-10-27T15:26:23Z",
    "esquentou": false,
    "ia": {
-    "editoria": "educacao",
-    "I": 2,
-    "V": 1,
+    "editoria": "eleicoes",
+    "I": 1,
+    "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Professores apontam temas sociais para a redação do Enem.",
+    "motivo": "Curiosidade sobre votação em presídio.",
     "soma": 3
    }
   },
@@ -553,9 +562,27 @@
    }
   },
   {
+   "manchete": "Chuvas afetam lavouras e atrasam plantio de soja no Brasil",
+   "veiculos": 5,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-26T16:12:36Z",
+   "esquentou": true,
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Impacto climático nas lavouras e no plantio.",
+    "soma": 3
+   }
+  },
+  {
    "manchete": "Venezuela: volta de María Corina Machado indica retorno da ordem constitucional, diz especialista",
    "veiculos": 46,
-   "veiculos_3h": 8,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-10-26T20:07:52Z",
    "esquentou": false,
    "ia": {
@@ -571,73 +598,55 @@
    }
   },
   {
-   "manchete": "Cinco pesquisadores da Ufal estão entre os cientistas mais influentes do mundo",
-   "veiculos": 8,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-10-27T00:51:34Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "educacao",
-    "I": 1,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Pesquisadores da Ufal entre cientistas mais influentes.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "A-29 Super Tucano e E-99 interceptam Cessna vindo da Bolívia e piloto faz pouso forçado em MT",
-   "veiculos": 7,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-10-27T12:10:31Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "gerais",
-    "I": 1,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "FAB intercepta aeronave clandestina vinda da Bolívia.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Polícia Federal faz operação contra o comércio ilegal de armas de fogo e munições",
+   "manchete": "Comitê Nobel considera transição democrática na Venezuela ainda necessária",
    "veiculos": 5,
    "veiculos_3h": 4,
-   "na_pauta_desde": "2026-10-27T15:26:23Z",
+   "na_pauta_desde": "2026-10-27T14:11:14Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Menção distante sobre transição na Venezuela.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Rei Charles vai ao Caribe em meio a pedidos por reparações pela escravidão",
+   "veiculos": 4,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-10-27T14:11:14Z",
    "esquentou": false,
    "ia": {
     "editoria": "gerais",
     "I": 1,
     "V": 1,
-    "P": 0,
+    "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "PF combate comércio ilegal de armas de fogo.",
+    "motivo": "Notícia internacional sem impacto direto no trabalhador brasileiro.",
     "soma": 2
    }
   }
  ],
  "obrigatorios": [
   {
-   "manchete": "Só 34,3 mil votos foram registrados após as 17h; Lula venceu Flávio por 4,43 milhões",
+   "manchete": "Gráfico mostra momento da virada de Lula sobre Flávio no segundo turno",
    "secoes": [
     "A",
     "A"
    ],
-   "veiculos": 18,
+   "veiculos": 13,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-27T14:11:14Z",
-   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/10/so-003-do-total-de-votos-foram-registrados-apos-as-17h-contrariando-alegacoes-de-fraude-de-flavio.shtml",
+   "na_pauta_desde": "2026-10-26T21:05:28Z",
+   "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/10/26/grafico-mostra-momento-da-virada-de-lula-sobre-flavio-no-segundo-turno.ghtml",
    "editoria": "eleicoes",
-   "nota": 9,
+   "nota": 7,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-10-27T12:15:47Z",
@@ -652,13 +661,17 @@
     "A",
     "A",
     "A",
+    "A",
+    "A",
+    "A",
+    "A",
     "A"
    ],
-   "veiculos": 9,
+   "veiculos": 4,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-10-27T00:34:57Z",
-   "link": "https://www.theguardian.com/world/2026/oct/26/flavio-bolsonaro-brazil-lula-election",
-   "editoria": "saude",
+   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQY3dCUU5SeDQzT2tIbkNfSUk4UmxnTnJRdUpFUU9zcEpSZXlrNXNpYk9pbWh6TUplcFVnVmNibmJvTTg2MHVFbG00akV2Q21OSEVUVmt1d00tdjk5cmF1blZGblhRQjZVdjVaWDUxTFRfai0wUmd3aTBjS2EzQW56ekhUX1BGNkxzeDhONURrMW5taEdob2JZWndMaEFxekhJRzZTc0RqSEczZGFQSXJPNGpvMmdnNzJIS1d1bm1DRzlYZ9IByAFBVV95cUxNNk11WDZ4ZHo3cHFpS2lmNUFsdndfc2dIOE04VDBhcXE0bmZjc2dOZU95Qk9qSEw4Ukd2aEo2RlhXYmgyejdYUHBwOUE5Y1NWOEJ4WTlWaW5mbE1LNXVjQ0tKTTlIMXFLb0pwY1BGaWdWQTMzMnJGY01IcUFtLXl5RDV6NjBIUnQ5TDZLeUpvdWdpWkhieXVWdHJCby1VeDA1NVB5N3lkR0w2LVBoWlBHMk9SVGVTWDN6c000b09Zb1UwVEIycW1tRA?oc=5",
+   "editoria": "america_latina",
    "nota": 4,
    "parceiro": {
     "perfil": "brasilforadacaverna",
@@ -688,38 +701,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Vitória de Lula é 'divisor de águas' para América Latina e recado das urnas extrapola partidarismos",
+   "manchete": "Contra evidências, Musk questiona ‘matemática’ da eleição brasileira e vitória de Lula",
    "secoes": [
     "A"
    ],
-   "veiculos": 3,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-26T21:05:28Z",
-   "link": "https://www.rfi.fr/br/podcasts/rfi-convida/20261026-vit%C3%B3ria-de-lula-%C3%A9-divisor-de-%C3%A1guas-para-am%C3%A9rica-latina-e-recado-das-urnas-extrapola-partidarismos",
-   "editoria": "america_latina",
-   "nota": 4,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-27T11:30:07Z",
-    "legenda": "Com a reeleição de Luiz Inácio Lula da Silva (PT), o Brasil, a maior democracia da América Latina, se consolidou como a última trincheira da região contra o ava",
-    "link": "https://www.instagram.com/p/De_wOqpD92Z/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Lula é reeleito presidente do Brasil e conquista quarto mandato após vitória sobre Flávio Bolsonaro",
-   "secoes": [
-    "A",
-    "A",
-    "B",
-    "D-america_latina"
-   ],
-   "veiculos": 449,
-   "veiculos_3h": 344,
-   "na_pauta_desde": "2026-10-26T21:05:28Z",
-   "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/10/26/resultado-do-2o-turno-veja-os-votos-para-presidente-por-local-e-urna-nas-5570-cidades-busque-por-estado.ghtml",
-   "editoria": "america_latina",
-   "nota": 9,
+   "veiculos": 4,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-27T15:33:57Z",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPdWRNRFA1ekVhQTlaeFdZcEJ5dk9HQmh5eGh2MkJsSktDRFV6Y2xwYk9DQmplS3JaTFB2Q0I2QlBidDhQODdkdzRUVTFNbFExOERxLXhLUkFzcUEyRTJwVVhxdDl5dnFpbU9zMThqX3VNOWZxQ19uY29hRjYyRlN4X3h5dDNBYlBQdjRaTHBqSW5pLTFhbXhTdFRaRUZKMGU4QlhRNmpkamdUVmZaaER3a0lWalhuZDA?oc=5",
+   "editoria": "eleicoes",
+   "nota": 7,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-10-27T10:00:06Z",
@@ -733,12 +724,12 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 17,
+   "veiculos": 13,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-26T21:12:51Z",
    "link": "https://www.gazetadopovo.com.br/eleicoes/2026/o-papel-de-janones-e-do-exercito-de-lula-na-vitoria-petista/",
    "editoria": "politica",
-   "nota": 6,
+   "nota": 5,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-10-27T12:30:10Z",
@@ -767,41 +758,21 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Flávio Bolsonaro intimado a entregar passaportes e as reações pós vitória de Lula no 2º turno; siga",
-   "secoes": [
-    "A",
-    "B"
-   ],
-   "veiculos": 43,
-   "veiculos_3h": 8,
-   "na_pauta_desde": "2026-10-27T00:51:34Z",
-   "link": "https://www.bbc.co.uk/portuguese/live/c6x2v49yvrygt?at_medium=RSS&at_campaign=rss",
-   "editoria": "eleicoes",
-   "nota": 7,
-   "parceiro": {
-    "perfil": "luzmanifesto",
-    "quando": "2026-10-27T13:04:36Z",
-    "legenda": "FUGIU? Segundo o Infobae, Flávio Bolsonaro teria deixado o país pela Argentina para seguir aos Estados Unidos. Flávio foi intimado a entregar seus passaportes e",
-    "link": "https://www.instagram.com/p/De_65gsxVHl/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Eleição de Lula é um sinal de que o povo unido jamais será vencido, diz Mamdani",
+   "manchete": "Flávio Bolsonaro tem passaportes cancelados (fonte policial)",
    "secoes": [
     "A"
    ],
    "veiculos": 4,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-27T15:26:23Z",
-   "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/10/eleicao-de-lula-e-um-sinal-de-que-o-povo-unido-jamais-sera-vencido-diz-mamdani.shtml",
-   "editoria": "eleicoes",
-   "nota": 3,
+   "na_pauta_desde": "2026-10-27T00:51:34Z",
+   "link": "https://noticias.uol.com.br/ultimas-noticias/afp/2026/10/27/flavio-bolsonaro-tem-passaportes-cancelados-fonte-policial.htm",
+   "editoria": "america_latina",
+   "nota": 5,
    "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-27T11:01:54Z",
-    "legenda": "O prefeito de Nova York, Zohran Mamdani, parabenizou o presidente Luiz Inácio Lula da Silva (PT) pela vitória nas eleições brasileiras, realizadas neste domingo",
-    "link": "https://www.instagram.com/reel/De_s7bgDN8U/"
+    "perfil": "luzmanifesto",
+    "quando": "2026-10-27T13:04:36Z",
+    "legenda": "FUGIU? Segundo o Infobae, Flávio Bolsonaro teria deixado o país pela Argentina para seguir aos Estados Unidos. Flávio foi intimado a entregar seus passaportes e",
+    "link": "https://www.instagram.com/p/De_65gsxVHl/"
    },
    "triagem": "candidato"
   },
@@ -844,17 +815,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "STF ordena investigar possível financiamento estrangeiro à campanha de Flávio Bolsonaro",
+   "manchete": null,
    "secoes": [
-    "A",
-    "B"
+    "A"
    ],
-   "veiculos": 11,
-   "veiculos_3h": 10,
-   "na_pauta_desde": "2026-10-27T14:11:14Z",
-   "link": "https://noticias.uol.com.br/ultimas-noticias/afp/2026/10/27/stf-ordena-investigar-possivel-financiamento-estrangeiro-a-campanha-de-flavio-bolsonaro.htm",
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
    "editoria": "eleicoes",
-   "nota": 7,
+   "nota": 4,
    "parceiro": {
     "perfil": "luzmanifesto",
     "quando": "2026-10-27T13:56:56Z",
@@ -902,16 +872,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Holanda anuncia US$ 500 milhões para Brasil preservar florestas",
+   "manchete": "Holanda anuncia US$ 500 milhões para fundo de florestas após reeleição de Lula",
    "secoes": [
     "A"
    ],
-   "veiculos": 15,
+   "veiculos": 10,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-10-26T21:06:31Z",
    "link": "https://jornalggn.com.br/noticia/com-vitoria-de-lula-holanda-anuncia-us-500-mi-a-fundo-de-florestas-do-brasil/",
    "editoria": "gerais",
-   "nota": 4,
+   "nota": 3,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-10-27T15:00:11Z",
@@ -959,14 +929,14 @@
    "triagem": "fora: entretenimento (album)"
   },
   {
-   "manchete": "Juristas descartam anulação do segundo turno das eleições",
+   "manchete": "SSPDS divulga balanço final da Operação Eleições 2026, no 2º turno, em delegacias da PCCE",
    "secoes": [
     "A"
    ],
-   "veiculos": 3,
+   "veiculos": 2,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-27T14:11:14Z",
-   "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPb05ZTkR3MVU3QUtyM3NQS0QwWFJid2NENUM3QXFGTE56N2ZPSVQ2MktNTy01ZjRPamtYaEE0Y1FobE5GZDFFazhLenVXOHV6bXhPaDdELUJvVmtwU3hKSThDbXdCQVREdHZWcC1zTGYxRGtYZEhkMXJNQk5XcmVPX1R2RHU3cWljNV83QUpzVGljNmlMRTRaT0MwZGlkUi1IQ203TkZxSGNxeHJUZkxtbUtMc3NGV1NfcVBCbXkydjdRbEVjS3l6Q0d1TWhPV2xy?oc=5",
+   "na_pauta_desde": "2026-10-26T19:06:44Z",
+   "link": "https://news.google.com/rss/articles/CBMikAJBVV95cUxPVVRFckwtOTBrZHBLMlR5TnBtS2Zya3hOQVNrNEhoM1R6VkljWlN4VHUxdW9TM2ZHU295dHlYUmlPaDc1UENPOHMycjBRZGVWWElhSkhsaGlpSG9SNEFxcDUwY1VuajdrMTE4bTFQWlM1c2MxdTJWbVRKb2E3MlVyT2tGS0xTWDlNNkVVNU1KczZnZUJKVkhsNU5MUV9PZ3FHN3BKRUpfWUdSaWtjOGZzbjJnU2JoUGtENmw5dzVIb1RQTlJhN2lQYklwTW9tcV9Pei1wbTdfakJySi14dXk3cHgyOTgtbmRnbExpSGVLNUsteGR6M3VsZW5lUmtFcXJkb2VxWVF0Sks3VVdKUjl2dA?oc=5",
    "editoria": "eleicoes",
    "nota": 4,
    "parceiro": {
@@ -1035,25 +1005,6 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Trump questiona eleição no Brasil: “Pareceu mais uma eleição fraudada”",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 70,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-27T10:06:33Z",
-   "link": "https://g1.globo.com/mundo/noticia/2026/10/26/trump-fala-sobre-eleicao-no-brasil-pareceu-mais-uma-eleicao-fraudada.ghtml",
-   "editoria": "eleicoes",
-   "nota": 6,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-27T03:00:13Z",
-    "legenda": "O presidente dos Estados Unidos, Donald Trump, afirmou nesta segunda-feira (26) que a eleição brasileira vencida por Luiz Inácio Lula da Silva (PT) “pareceu mai",
-    "link": "https://www.instagram.com/p/De-14A3APkF/"
-   },
-   "triagem": "repetido (20261026-1745-trump-fraudada)"
-  },
-  {
    "manchete": null,
    "secoes": [
     "A"
@@ -1073,14 +1024,14 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "B3 aciona circuit breaker na abertura após reeleição de Lula",
+   "manchete": "Entenda o que é o circuit breaker e quantas vezes o mecanismo já foi acionado na Bolsa",
    "secoes": [
     "A"
    ],
-   "veiculos": 9,
-   "veiculos_3h": 1,
+   "veiculos": 6,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-27T06:51:35Z",
-   "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOdWpOQko4Y0RvMl81dGtNYVA0RTRDRWJYdVB1U3R1NjRCaTVxVEg1MjNyWk84WGEwb0xPdFJiM29STUxVVFFXQ0dqSWZZZXNSUF9lZktVWTN1c2gzSUNGaU1ZZVY0TzRTeURhbWI1dE5yQWZUZW1mWEQyQVZCdG5qZ2lNVjU3dVlHcWsyVWJ4TmE5V215Sl9UYVpzT1NoNjhYejQ4UXpUSXdWbE1TT0hra1FVblhKakFoaTUxZUtRb09YdFEwb1ktcDR6MUdvV2lyVExmY3ZEVmE1NFRHNXI1R0JQaGk?oc=5",
+   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/10/entenda-o-que-e-o-circuit-breaker-e-quantas-vezes-o-mecanismo-ja-foi-acionado-na-bolsa.shtml",
    "editoria": "gerais",
    "nota": 3,
    "parceiro": {
@@ -1094,64 +1045,64 @@
  ],
  "descartados_mais_quentes": [
   {
+   "manchete": "Eduardo Bolsonaro pede que comunidade internacional não aceite vitória de Lula e pressione por anulação",
+   "veiculos": 454,
+   "veiculos_3h": 335,
+   "motivo": "sem editoria"
+  },
+  {
    "manchete": "Trump questiona eleição no Brasil: “Pareceu mais uma eleição fraudada”",
-   "veiculos": 70,
+   "veiculos": 64,
    "veiculos_3h": 1,
    "motivo": "repetido (20261026-1745-trump-fraudada)"
   },
   {
    "manchete": "Justiça italiana decidirá sobre extradição de Carla Zambelli nesta terça-feira",
-   "veiculos": 27,
+   "veiculos": 28,
    "veiculos_3h": 8,
    "motivo": "sem editoria"
   },
   {
+   "manchete": "Lula wins fourth term: What are the reactions in Brazil?",
+   "veiculos": 27,
+   "veiculos_3h": 6,
+   "motivo": "sem editoria"
+  },
+  {
    "manchete": "Bola de Ouro 2026: PSG desbanca Flamengo e leva prêmio de melhor time do mundo",
-   "veiculos": 19,
-   "veiculos_3h": 3,
+   "veiculos": 20,
+   "veiculos_3h": 4,
    "motivo": "fora: esporte (flamengo)"
   },
   {
-   "manchete": "Lula wins fourth term: What are the reactions in Brazil?",
-   "veiculos": 17,
-   "veiculos_3h": 3,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "CENAS FORTES: Vídeo mostra engenheiro sendo espancado após ato pró-Lula",
-   "veiculos": 15,
-   "veiculos_3h": 7,
-   "motivo": "sem editoria"
-  },
-  {
    "manchete": "Fonteles ganha força na Fazenda e expõe aposta de Durigan no governo Lula",
-   "veiculos": 15,
+   "veiculos": 20,
    "veiculos_3h": 2,
    "motivo": "sem editoria"
   },
   {
    "manchete": "UFPI mantém ponto facultativo do Dia da Servidora e do Servidor Público em 28 de outubro",
-   "veiculos": 14,
-   "veiculos_3h": 4,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Camila Kfouri, filha do jornalista Juca Kfouri, morre aos 48 anos",
-   "veiculos": 10,
-   "veiculos_3h": 7,
-   "motivo": "fora: crime ou tragedia (morre)"
-  },
-  {
-   "manchete": "Vivo anuncia parceria com a Starlink Mobile e Lança o \"Vivo Satélite\" no Brasil",
-   "veiculos": 10,
+   "veiculos": 19,
    "veiculos_3h": 3,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Gases de efeito estufa atingem níveis sem precedentes, diz ONU",
-   "veiculos": 8,
-   "veiculos_3h": 4,
+   "manchete": "Camila Kfouri, filha do jornalista Juca Kfouri, morre aos 48 anos",
+   "veiculos": 11,
+   "veiculos_3h": 8,
+   "motivo": "fora: crime ou tragedia (morre)"
+  },
+  {
+   "manchete": "Gases de efeito estufa atingem recorde; agência meteorológica da ONU prevê novo aumento com El Niño",
+   "veiculos": 11,
+   "veiculos_3h": 5,
    "motivo": "sem editoria"
+  },
+  {
+   "manchete": "André Janones recebe convite para auxiliar Pedro Sánchez na eleição da Espanha",
+   "veiculos": 11,
+   "veiculos_3h": 5,
+   "motivo": "repetido (20261027-0700-janones-sanchez)"
   }
  ]
 }
