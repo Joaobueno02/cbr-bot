@@ -1,6 +1,6 @@
 {
- "quando": "2026-10-28T21:21:31Z",
- "pauta_quando": "2026-10-28T21:21:28Z",
+ "quando": "2026-10-28T23:07:10Z",
+ "pauta_quando": "2026-10-28T23:07:07Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -8,59 +8,29 @@
   "ia": "gemini",
   "ok": true,
   "erro": null,
-  "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 11,
-  "falhas_antes": null,
-  "pedidos_hoje": 17
+  "modelo": "gemini-3.8-flash",
+  "avaliados_agora": 18,
+  "falhas_antes": "gemini-3.5-flash-lite: resposta ilegível (JSONDecodeError)",
+  "pedidos_hoje": 19
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 174,
- "novos_3h": 9,
- "esquentaram": 1,
+ "total_assuntos": 162,
+ "novos_3h": 3,
+ "esquentaram": 0,
  "candidatos": [
   {
-   "manchete": "União Brasil e PP contrariam aliança com Flávio e declaram apoio à reeleição de Alcolumbre",
+   "manchete": "Governo Trump vai conceder vistos a Flávio Bolsonaro e sua família, diz imprensa dos EUA",
    "secoes": [
-    "B",
-    "D-famosos"
-   ],
-   "veiculos": 52,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-10-27T22:06:43Z",
-   "link": "https://www.gazetadopovo.com.br/republica/uniao-pp-contrariam-alianca-flavio-apoio-reeleicao-alcolumbre/",
-   "editoria": "eleicoes",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "flavio"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 3,
-    "V": 3,
-    "P": 3,
-    "formato": "reels",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Negociações de Alcolumbre para anistiar Bolsonaro envolvem impunidade e exigem denúncia firme.",
-    "soma": 6
-   }
-  },
-  {
-   "manchete": "Trump diz que não vai se \"envolver\" após Flávio Bolsonaro afirmar que é o verdadeiro presidente do Brasil",
-   "secoes": [
-    "A",
-    "A",
     "A",
     "A",
     "B"
    ],
-   "veiculos": 8,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-10-28T21:11:33Z",
-   "link": "https://noticias.uol.com.br/ultimas-noticias/afp/2026/10/28/trump-diz-que-nao-vai-se-envolver-apos-flavio-bolsonaro-afirmar-que-e-o-verdadeiro-presidente-do-brasil.htm",
-   "editoria": "gerais",
-   "nota": 7,
+   "veiculos": 817,
+   "veiculos_3h": 403,
+   "na_pauta_desde": "2026-10-27T17:08:04Z",
+   "link": "https://www.gazetadopovo.com.br/mundo/governo-trump-vai-conceder-vistos-a-flavio-bolsonaro-e-sua-familia-diz-imprensa-dos-eua/",
+   "editoria": "politica",
+   "nota": 8,
    "esquentou": false,
    "lente": [
     "bolsonar",
@@ -68,70 +38,14 @@
     "trump"
    ],
    "ia": {
-    "editoria": "eleicoes",
+    "editoria": "politica",
     "I": 3,
     "V": 3,
-    "P": 3,
+    "P": 2,
     "formato": "reels",
     "repetido": false,
     "risco": "",
-    "motivo": "Fuga e carta de Flávio geram enorme repercussão e revolta.",
-    "soma": 6
-   }
-  },
-  {
-   "manchete": "Indígenas denunciam servidor por áudio em que sugere envenenar água após eleição; homem é afastado",
-   "secoes": [
-    "B",
-    "C-nacional"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-10-28T21:11:33Z",
-   "link": "https://www1.folha.uol.com.br/cotidiano/2026/10/indigenas-denunciam-servidor-por-audio-em-que-sugere-envenenar-agua-apos-eleicao-homem-e-afastado.shtml",
-   "editoria": "eleicoes",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "indigena"
-   ],
-   "ia": {
-    "editoria": "gerais",
-    "I": 3,
-    "V": 3,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Denúncia gravíssima de servidor sugerindo envenenar água de indígenas.",
-    "soma": 6
-   }
-  },
-  {
-   "manchete": "Vice de Flávio Bolsonaro, Alfredo Gaspar reconhece resultado da eleição presidencial: 'Não vamos desistir do Brasil'",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 25,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-28T19:08:04Z",
-   "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/10/27/vice-flavio-bolsonaro-alfredo-gaspar-reconhece-resultado-2-turno-eleicao-presidencial.ghtml",
-   "editoria": "eleicoes",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ],
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 3,
-    "V": 3,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Vice reconhece derrota e isola ainda mais o clã Bolsonaro.",
+    "motivo": "Fuga com apoio de Trump escancara conluio da extrema-direita e atrai enorme atenção.",
     "soma": 6
    }
   },
@@ -140,8 +54,8 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 5,
-   "veiculos_3h": 1,
+   "veiculos": 6,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-28T18:09:45Z",
    "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/10/alcolumbre-planeja-articular-indulto-ou-anistia-a-bolsonaro-em-busca-de-votos-da-direita-para-se-reeleger.shtml",
    "editoria": "eleicoes",
@@ -163,123 +77,43 @@
    }
   },
   {
-   "manchete": "Biometria no INSS: quem não fizer cadastro terá benefício bloqueado?",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 18,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-10-28T10:07:07Z",
-   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQZERDSERLSTNVZGxSZGtXSlR1QXJ4bngwSnM3Z0FsZG5aWXRiM1ExTmI5NEZia0IzbW10R1dkVU1nelZENTZ2X245NzVmVG45LXVwMFZHT3M2VjhvendxZVR0NV93U0RxV1g5Vnd6MzQ0YnBiNW5JU2stMUFTaUE0OTEzY2owUmJwYnlaWnpmb21aTlcyTW1v?oc=5",
-   "editoria": "economia",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "inss"
-   ],
-   "ia": {
-    "editoria": "gerais",
-    "I": 3,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Alerta sobre biometria no INSS e risco de benefício.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "BPC e medicamentos do SUS recebem reforço de R$ 5,1 bilhões",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 13,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-28T21:21:28Z",
-   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPY3lQTk10cnVTaG12R1VaaFR0eElSQ2YtNElVN2dWdm5PTWthUjBmU0V4aG9xalVuRGk3T2hhVFh5VzcySUtvbW0xd0xxUDZCdzAxZXdROFBmek40bHhCbWU3YWVycG9QWC1RSlJDUGJQTkZjNTJmZC1SWlJJVFMxRW5xSkxqTmVTUE1nQUt6NG1YU1RFNWNUWGd5OE5MWXBBaHpJa3RoWl_SAa4BQVVfeXFMTThCRkJkeXdNMGprX3hSSXg5LXBpQTNzcFdzMy1hNHJkQ002ZEFBTzg2cml6WU9YbjJhaU8xX3pleTA0QlZ5SF9VS0dwWWZRQ2dEQXhrRmlmSWwybVdrVDdlNWhrOHlGNmNxTjh1ZEtKeTBUc21rSGpUVVJTR19qZnBiZmh3Qy1lLUxyVFJGYjVBUTlteEF4TXBidnRsOE5DM1VnVHlDby0yTFhmeGFB?oc=5",
-   "editoria": "saude",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "sus"
-   ],
-   "ia": {
-    "editoria": "saude",
-    "I": 3,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Reforço orçamentário de R$ 5,1 bi para BPC e medicamentos do SUS.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "BRB comprou carteiras com problemas do Master mesmo sabendo de problemas por um ano, aponta PF",
-   "secoes": [
-    "C-nacional"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-28T21:11:33Z",
-   "link": "https://www1.folha.uol.com.br/mercado/2026/10/brb-comprou-carteiras-com-problemas-do-master-mesmo-sabendo-de-problemas-por-um-ano-aponta-pf.shtml",
-   "editoria": "politica",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "master"
-   ],
-   "ia": {
-    "editoria": "economia",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Investigação da PF aponta compra de carteiras problemáticas pelo BRB.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Além de Flávio Bolsonaro: veja outros bolsonaristas que deixaram o país",
+   "manchete": "Mesmo nos EUA, Flávio ainda custará R$ 384 mil por mês aos cofres públicos",
    "secoes": [
     "A"
    ],
-   "veiculos": 13,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-28T19:08:04Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/10/27/zambelli-eduardo-bolsonaro-e-mais-veja-bolsonaristas-que-deixaram-o-brasil.ghtml",
-   "editoria": "gerais",
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-28T21:11:33Z",
+   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOUVdVNzdpU0VXMl9tTGlGOXBOZXBRdFdsUHR5amJEZ3JmUnZ0UWRJU2RlNC1LdUlSczB1MS1MQmgtbTl6TjhHZmlqMlNlRkJwME9MYlpENnF0VlFjU3BPUV9VSU1IR2FjRGpUcGVodGdOZmJrV0xzaGRETzJYVVpGSHZXQnYxanhTNy1XQlRlY2xremp0ZGVHbGF3RGVxN3BlYnk2eXFMR2s2VVpmQzNjVGRwcVM0TFVnODdteg?oc=5",
+   "editoria": "politica",
    "nota": 5,
    "esquentou": false,
    "lente": [
     "bolsonar",
-    "flavio"
+    "flavio",
+    "pl"
    ],
    "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 2,
+    "editoria": "politica",
+    "I": 3,
+    "V": 3,
     "P": 2,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Retrospectiva de bolsonaristas que deixaram o país fugindo da justiça.",
-    "soma": 4
+    "motivo": "Absurdo de senador fugitivo custar R$ 384 mil mensais gera revolta.",
+    "soma": 6
    }
   },
   {
-   "manchete": "Plano de fuga de Flávio Bolsonaro já estava organizado semanas antes da derrota",
+   "manchete": "Flavio Bolsonaro flees Brazil after election loss, US says will grant visa - Al Jazeera",
    "secoes": [
-    "A"
+    "B"
    ],
-   "veiculos": 2,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-28T21:11:33Z",
-   "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPTzBfOWhLcHcxUHpDQ05ZM3pTVzhldmdqcHJtTm5iSmxhZE9tYlg1M045UUxwVE5zREZrWmJRekFTTlpVYmVJTXhfeFR0SnhobXN4cXY0VzNGbjh2eHZtelZoWnZkWEVkeUpBQVVkSHAtSWIwLXFEQ3RQV0xJQzFRQlViQUg3VEZERmlGWElNQUlWRGNmN2RWNEZrRDB2UnNQZFpySmlYdVNKZk94elpvM1VucW92T0pSNmg0VngxT1NwQXdXMEUyMmRIMUJTTC11SlFrc2U4V2fSAecBQVVfeXFMUHNOQ1ZjNUlPdkRobTR4TUNtZm4wQ0h1TXo2RjZsWHh0TXVrX2FPMVBfXzRNTVB2cDU3ZzBYWFV3dkZtTXY5LU5LMS0xVkw1b3VTZ0VsemFHX3Q0NTc5ZE1oTWNob0FfYU4za3RZV3dfUy1vTWxXcGpwMVJXM2dSSTNzdlN1QkREdzdpYTAxNVJ1RmoxeklJY3diYWhTMk1xVlZWTWdmSGg3Xy1PU2xiMjVwd1ZkRnp4X3dMNGlNdHRSbGVvb1FDZGN5UzNIYWJ6eFoxMEprcnVmWnIxSVRTSUdGRUR5bm1B?oc=5",
+   "veiculos": 70,
+   "veiculos_3h": 19,
+   "na_pauta_desde": "2026-10-28T02:06:17Z",
+   "link": "https://www.theguardian.com/world/2026/oct/27/flavio-bolsonaro-brazil-argentina-fled",
    "editoria": "eleicoes",
    "nota": 6,
    "esquentou": false,
@@ -288,45 +122,64 @@
     "flavio"
    ],
    "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
+    "editoria": "politica",
+    "I": 3,
     "V": 2,
     "P": 2,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Plano de fuga de Flávio já estava articulado antes da eleição.",
-    "soma": 4
+    "motivo": "Repercussão internacional da fuga de Flávio e concessão de visto pelos EUA.",
+    "soma": 5
    }
   },
   {
-   "manchete": "Governo Trump dará visto para Flávio Bolsonaro e permitirá entrada dele nos EUA",
+   "manchete": "INEP divulga locais de prova do Enem",
    "secoes": [
-    "A",
     "B"
    ],
-   "veiculos": 85,
-   "veiculos_3h": 14,
-   "na_pauta_desde": "2026-10-28T21:11:33Z",
-   "link": "https://g1.globo.com/mundo/noticia/2026/10/27/governo-dos-eua-concedera-vistos-a-flavio-bolsonaro-e-sua-familia.ghtml",
-   "editoria": "politica",
-   "nota": 8,
-   "esquentou": true,
-   "lente": [
-    "bolsonar",
-    "flavio",
-    "pl",
-    "trump"
-   ],
+   "veiculos": 68,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-10-27T17:08:04Z",
+   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQVTdSbHZQZzN1WHBma0ktM0o4eUdaNjFyamx1eHVheXRFWjVmWlVEMlZxZkF0SXVoUHY1bS1PWEdtNURqMW1ONlkzUUltT0lUOUJGTWNrRWVpT1VCY2hoVnJlbktMZXh0T2gzTV9PQUYtZlRzQzZXWnZmV2hGalI0N0Z0dzRNOGtnS1Y3YnAxbV9UeGI1V3RpNlRzc2NrLUNfTzJtODlfcDBuUVBqNEdV0gGvAUFVX3lxTFBVN1JsdlBnM3VYcGZrSS0zSjh5R1o2MXJqbHV4dWF5dEVaNWZaVUQyVnFmQXRJdWhQdjVtLU9YR201RGoxbU42WTNRSW1PSVQ5QkZNY2tFZWlPVUJjaGhWcmVuS0xleHRPaDNNX09BRi1mVHNDNldadmZXaEZqUjQ3RnR3NE04a2dLVjdicDFtX1R4YjVXdGk2VHNzY2stQ19PMm04OV9wMG5RUGo0R1U?oc=5",
+   "editoria": "educacao",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
    "ia": {
-    "editoria": "america_latina",
-    "I": 2,
+    "editoria": "educacao",
+    "I": 3,
     "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Críticas democratas dos EUA à concessão de vistos a Flávio Bolsonaro.",
+    "motivo": "Utilidade pública de alto alcance para a juventude da classe trabalhadora.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "PT, PV e PC do B anunciam apoio à reeleição de Motta para presidência da Câmara",
+   "secoes": [
+    "D-famosos"
+   ],
+   "veiculos": 12,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-27T22:06:43Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/10/27/pt-pv-e-pc-do-b-anunciam-apoio-a-reeleicao-de-motta-para-presidencia-da-camara.ghtml",
+   "editoria": "eleicoes",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Aliança da esquerda com o centrão expõe contradições políticas no Congresso.",
     "soma": 4
    }
   },
@@ -336,7 +189,7 @@
     "B"
    ],
    "veiculos": 17,
-   "veiculos_3h": 7,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-10-28T15:14:12Z",
    "link": "https://iclnoticias.com.br/anvisa-suspende-venda-linguica-defumadabacteria/",
    "editoria": "saude",
@@ -356,71 +209,39 @@
    }
   },
   {
-   "manchete": "INSS nega boato de bloqueio de benefício por falta de biometria",
+   "manchete": "UN condemns US economic embargo of Cuba though more nations sit out after Trump administration push",
    "secoes": [
-    "B"
-   ],
-   "veiculos": 13,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-10-28T18:09:45Z",
-   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/10/inss-diz-que-mensagem-sobre-bloqueio-de-beneficios-por-falta-de-biometria-e-falsa.shtml",
-   "editoria": "economia",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "inss"
-   ],
-   "ia": {
-    "editoria": "economia",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Alerta sobre golpe e desinformação envolvendo o INSS.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Com Flávio a caminho dos EUA, Tarcísio diz que eleição passou",
-   "secoes": [
-    "A",
-    "A",
-    "A",
-    "A"
-   ],
-   "veiculos": 19,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-28T21:08:51Z",
-   "link": "https://www.gazetadopovo.com.br/ultima-analise/perseguido-e-exilado-a-rota-de-flavio-bolsonaro-apos-eleicao/",
-   "editoria": "eleicoes",
-   "nota": 7,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ],
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Objetivos da fuga de Flávio para os EUA revelados por aliados.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Trump diz que EUA receberão 1 milhão de barris da Venezuela no Texas",
-   "secoes": [
-    "A",
     "D-america_latina"
    ],
-   "veiculos": 11,
+   "veiculos": 3,
    "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-28T13:15:59Z",
+   "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxONmhHUnN6bGI5X0Q3eG4zME1GUXFGbV9sQWZ0aDlzNG5MZmZoMGxHV3A4TTl1QklWMTJFOEF0STBfT0Y5VjA0NDNIejk5T0Q2UVlzZVhQRFNyXzNfR00wWjZ3U2NVSFcxc2lVb1h2d0lubURHZ0stVkplZXAtV0JFZTRpMTNoWnd6amhCSjlhWU9BM0NEMVJMa1pXOUptRGc3UTRETWtZUTlLVzhPNF9SbHJVS05nUExTcXlFaUFlbWJ0ZWdhUWUxUVl4LTBWLXNwR1pV?oc=5",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "trump"
+   ],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Denúncia de embargo econômico imperialista contra Cuba mobiliza a esquerda socialista.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Trump diz que Venezuela deveria se tornar um estado dos EUA e sugere eleição para governador no país",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-27T20:15:38Z",
    "link": "https://www.gazetadopovo.com.br/mundo/trump-diz-que-venezuela-deveria-se-tornar-um-estado-dos-eua-e-sugere-eleicao-para-governador-no-pais/",
    "editoria": "america_latina",
@@ -437,81 +258,26 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Declarações imperialistas de Trump sobre a Venezuela exigem denúncia anti-imperialista.",
+    "motivo": "Agressão imperialista escancarada de Trump contra a soberania da América Latina.",
     "soma": 4
    }
   },
   {
-   "manchete": "Flávio Bolsonaro viaja a Ecuador desde Argentina tras huir de Brasil",
+   "manchete": "Flávio Bolsonaro dice que la justicia le prohibió salir de Brasil",
    "secoes": [
-    "D-america_latina"
+    "A"
    ],
-   "veiculos": 8,
-   "veiculos_3h": 1,
+   "veiculos": 4,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-27T17:08:04Z",
-   "link": "https://elpais.com/internacional/2026-10-28/argentina-confirma-que-flavio-bolsonaro-huyo-de-brasil-a-traves-de-su-territorio.html",
-   "editoria": "america_latina",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNOWlHX1JaU0k4dGFWWW1YaDZvYkdSQnpuYTZvZzdCdkFZeV9GdXZCQ1Q3UWVURXBGcWRaVUw2UjdxSlBjZ2VvS3ItdFJHYU1xWU5kSThhOEFPa3V3OEk4a0xlYlJOWFZXSVUyLWh3OW5EaTdvcFRadGUtSnB0UXEtNXpnUllyd1lOVWxwZXlCUVN1cnhPa1JTV19rQ09OVm5McEFSSEZHUkFmWmZK0gGsAUFVX3lxTFBGdHhMMlRvb29SLVFVeENtZzQxNVRrRWh0a2dZRktuYXp2WjZXZGVpUVQ0NEl0bFMwMUZKWlc5TERDR2FkSGdUd20xQTZfV0E4MmlyWC1UWFY4NlJZNGZEU3FWYjJDVlR6THUwZGZwckMwSHRvYXVfYUw5alU3UkFsR2Y2Yzdrd3R2Z0VFOThuZTBac0tvUlJ2V2Z0NUYtTmd0X04xbFJJeENyeUU?oc=5",
+   "editoria": "eleicoes",
    "nota": 6,
    "esquentou": false,
    "lente": [
     "bolsonar",
     "flavio"
    ],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Trajeto da fuga de Flávio pela América Latina reforça desrespeito à justiça.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Carta de Flávio Bolsonaro usa brasão com \"Estados Unidos do Brazil\"",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 9,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-28T02:06:17Z",
-   "link": "https://tnonline.uol.com.br/noticias/politica/carta-de-flavio-bolsonaro-usa-brasao-com-estados-unidos-do-brazil-1169152",
-   "editoria": "eleicoes",
-   "nota": 7,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio",
-    "pl"
-   ],
-   "outras_manchetes": 1,
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Chegada de Flávio aos EUA e uso de brasão polêmico.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Vaquinha para mãe de Ana Clara arrecada R$ 1,5 milhão em menos de cinco horas",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-28T00:34:12Z",
-   "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOeDlhV29mdmdwU3A3QVZiQUhORzlSdWNabzJORzEwVDlMZXc2cks1aXZDa0JpUjZTUHdrLTBQNzQ4d2FVeEZES2FRWTNhLUJqNG1ka0JaWE9zYnFhbV9TUGs5VzdiSkt0TkNWUmp1ZEpMQjVPZ2wtVlBvUWdMVTJYRWJvb1BpUnhoaTgtVzlIVmo4RW1MRGE0UVFqenhXTXdNRWUzXzdORWJaYURBb3FYMHQ4cllkUzhSbVk3RmFVYmtwbjE4eXlpYzFGZ2htcVI0U1dyaDdWbnBFVlJuWmfSAewBQVVfeXFMTTVhVjUzdmpQNkZlVm5PSlhISGpTdlBqaDFOUm9FZm5mZmVoODN0Rk0tZ01JNEl0SEJ0U0xlQlhtbUJpc2p4U19Ha2J2UDhpUUJqTkFnMUZ3U1M3anRUVTlWR1otMVVXTkVTTk45Y2wtM2FuSE5adm1CZE5DellmS0JSNTc5Yms5Z1RlR0JFb0tEQmtCM0V2SzI3QjlnVWZNRzl5bkkwZXc5eGtrVUZBaGZXaFU4ekJ3Q25uTlIwOTJac3o4UmY3WWdwQ3BpTm9ET0oxZzl6YzBzR24tY3Z1bXpNRnZJLXotSGJuY0w?oc=5",
-   "editoria": "eleicoes",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [],
    "ia": {
     "editoria": "gerais",
     "I": 2,
@@ -520,75 +286,93 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Campanha de arrecadação atinge R$ 1,5 milhão rapidamente.",
+    "motivo": "Flávio alega proibição de deixar o Brasil.",
     "soma": 4
    }
   },
   {
-   "manchete": "Após deixar o país, Willer pede que Justiça proíba MST de ocupar mansão",
+   "manchete": "Após chegar aos EUA, Flávio encontra o irmão Eduardo na Flórida",
    "secoes": [
-    "D-terra"
+    "A"
    ],
-   "veiculos": 3,
+   "veiculos": 4,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-28T02:06:17Z",
-   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPNVRFbHNxRlBET0M1ejdCbTZnNkxfd181R2hXS3JGM0xaTTJlYXpFOUlxWjhraG8wQTl1NU8zT2Vod3A0S3IySzdLUjgzazFwZUo1NjV3SExnQkN0a1NjWjE1c01RS3hheUsxblFNQ1k5MWUzREo5U3FOaDZhcGdEakZoYzdoemdjc3VfYVdhZE9wZlVILVlSUGlGdGU4N3ZrWWU0bWgzVVFFWTRkXzJvSGZLNFI5Z0tvdzcwSUJmdmFGZw?oc=5",
-   "editoria": "roca",
+   "na_pauta_desde": "2026-10-28T21:11:33Z",
+   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPT2RpQlZCZ2FfWm9iNWZ6cS1rUGYxVV9ySkhEWE5VU1N5U3pzamxURDVYbmh1QXN4eXNfMjNSNF9lS2FjUGRyM0xtLTJ0cUpJM1huMzQwSGYyOEhOTHh6SDFfQjllVy1nZVlaN3FIbHJqMFRNdXJGTmJTM2pwNzNTZW9LRXJTSmtiOU5QMWtZRnZtZXRxWUJlQlBHMWtJT0pHam9kMVYxWEdra1NkUEJR?oc=5",
+   "editoria": "gerais",
    "nota": 4,
    "esquentou": false,
    "lente": [
-    "mst"
+    "bolsonar",
+    "flavio"
    ],
    "ia": {
-    "editoria": "roca",
+    "editoria": "politica",
     "I": 2,
     "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Tentativa de usar a justiça contra ocupações do MST envolve conflito agrario direto.",
+    "motivo": "Encontro na Flórida reforça articulação da família Bolsonaro no exterior após derrota.",
     "soma": 4
    }
   },
   {
-   "manchete": "Inep divulga local de provas do Enem 2026; saiba como conferir",
+   "manchete": "Deputada Lívia Duarte cobra providência da Segup contra invasão, tortura e ameaça por PMs em área quilombola de Mocajuba",
    "secoes": [
-    "B"
+    "D-terra"
    ],
-   "veiculos": 85,
-   "veiculos_3h": 10,
-   "na_pauta_desde": "2026-10-27T17:08:04Z",
-   "link": "https://www12.senado.leg.br/noticias/audios/2026/10/senadora-ressalta-importancia-do-enem-local-da-prova-ja-pode-ser-consultado",
-   "editoria": "educacao",
-   "nota": 4,
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-28T23:07:07Z",
+   "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPWmduQTFVSHhUYkR0cm1LOWVfMUNLcUxsU01pQ3A2NGkyTDNMTGFzbUU3MTBYbVhDVFBXcGhCR1FEZ1k2blFRNzdpSjZRYnUtcWZYa3RsSjJfemFLbW93em5CM09MaE5CcDNUX0RYNVQ4X0NPYzRtMnpXdXZjS1ZfM2M0RVlJNzR6WXdZNGstVE9RTFl4UHllWmg5bnFnYzJ2OWdXVjdVa3NmTUpEZ01hUE9RejR6Y3Z3c0xrVjIzaW4zNGdZVTVrbXdPeFh0YU5tanNrQ3pVTXdpbnBRZV94NWNXaTJPN0lXcDZaZg?oc=5",
+   "editoria": "roca",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "quilombola"
+   ]
+  },
+  {
+   "manchete": "Promotor do MPSP é cotado para comandar ministério no governo Lula 4",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-27T20:47:50Z",
+   "link": "https://g1.globo.com/sp/presidente-prudente-e-regiao/noticia/2026/10/28/promotor-lincoln-gakiya-conhecido-por-repressao-ao-pcc-e-cotado-para-ministerio-da-seguranca-de-lula.ghtml",
+   "editoria": "gerais",
+   "nota": 2,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Empresas, pequenos negócios e grupos de apoio anunciaram, nesta segunda-feira (26), a suspensão ou o encerramento de doações e ações sociais. As publicações ocorreram um dia após a reeleição de Luiz Inácio Lula da Silva (PT), que venceu o segund",
+   "secoes": [
+    "A",
+    "A",
+    "A",
+    "A",
+    "A",
+    "A"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-28T16:10:58Z",
+   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBkMm1LMnFxbXFyN3ZXTXVPZXRiandhWUoyR0hBY3ZDUTNtT2ZLckh2dWZhYWNfd0djTW1JSHZIODhHNjAyVFJlcmdFdTNfR1YyRXc?oc=5",
+   "editoria": "gerais",
+   "nota": 2,
    "esquentou": false,
    "lente": []
   }
  ],
  "rebaixados": [
   {
-   "manchete": "Enem: mulheres e pardos lideram inscrições; confira o painel do Inep",
-   "veiculos": 10,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-10-28T21:08:51Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "educacao",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Perfil socioeconômico de inscritos no Enem traz dados importantes sobre desigualdade educacional.",
-    "soma": 3
-   }
-  },
-  {
    "manchete": "MP Eleitoral pede inelegibilidade de candidato eleito ao governo do PA por abuso de poder econômico e político",
-   "veiculos": 18,
-   "veiculos_3h": 5,
+   "veiculos": 12,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-10-27T22:06:43Z",
    "esquentou": true,
    "ia": {
@@ -604,147 +388,165 @@
    }
   },
   {
-   "manchete": "Rogério Marinho afirma que esperava mais liderança de Flávio Bolsonaro após fuga do ex-candidato",
-   "veiculos": 12,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-28T21:11:33Z",
+   "manchete": "UFMG cria supercomputador para mapear o Brasil",
+   "veiculos": 7,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-10-28T21:21:28Z",
    "esquentou": false,
    "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Rogério Marinho comenta articulação e falta de liderança após fuga.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Cuba y Estados Unidos chocan por el embargo",
-   "veiculos": 22,
-   "veiculos_3h": 10,
-   "na_pauta_desde": "2026-10-27T19:10:49Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
+    "editoria": "educacao",
     "I": 1,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Confronto diplomático entre Cuba e EUA sobre o embargo.",
+    "motivo": "Iniciativa relevante de ciência na universidade pública, mas sem apelo imediato.",
     "soma": 2
    }
   },
   {
-   "manchete": "Incêndio atinge área de vegetação na UFRN e Bombeiros são acionados",
+   "manchete": "Ministro de Lula faz evento com Einstein, hospital que foi tema da campanha de Flávio",
    "veiculos": 4,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-28T16:10:58Z",
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-10-28T23:07:07Z",
    "esquentou": false,
    "ia": {
-    "editoria": "gerais",
+    "editoria": "saude",
     "I": 1,
     "V": 1,
-    "P": 0,
+    "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Incêndio em vegetação na UFRN.",
+    "motivo": "Encontro institucional sem novidade concreta ou avanço prático para o SUS.",
     "soma": 2
    }
   },
   {
-   "manchete": "INSS paga folha de outubro nesta quarta, 28; confira o calendário",
-   "veiculos": 5,
-   "veiculos_3h": 1,
+   "manchete": "Rio Tinto celebrates opening of $1.4 billion lithium projects in Argentina – Company Announcement",
+   "veiculos": 4,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-10-28T21:08:51Z",
    "esquentou": false,
    "ia": {
-    "editoria": "gerais",
+    "editoria": "america_latina",
     "I": 1,
-    "V": 0,
+    "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Reunião de direitos humanos com ministério é de interesse geral, mas pouco viral.",
-    "soma": 1
+    "motivo": "Exploração corporativa na Argentina sem ligação direta com os trabalhadores brasileiros.",
+    "soma": 2
    }
   },
   {
-   "manchete": "Governo emite comunicado e coloca ‘ponto final’ sobre mudanças no fim da escala 6×1, Bolsa Família e Gás do Povo",
-   "veiculos": 35,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-10-28T02:06:17Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "gerais",
-    "I": 3,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": true,
-    "risco": "",
-    "motivo": "Já publicado comunicado sobre escala 6x1 e Bolsa Família.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Whereabouts of Brazil's defeated presidential candidate Bolsonaro unknown",
-   "veiculos": 21,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-10-28T02:06:17Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": true,
-    "risco": "",
-    "motivo": "Desaparecimento e paradeiro de Flávio já noticiados anteriormente.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Trump floats Venezuela as 51st state while rallying to keep Texas Republican",
-   "veiculos": 6,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-27T22:06:43Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": true,
-    "risco": "",
-    "motivo": "Repete declaração de Trump sobre a Venezuela já tratada no item 7.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Trump volta a falar, sem provas, em fraude na eleição no Brasil",
-   "veiculos": 12,
+   "manchete": "Vice de Flávio Bolsonaro reconhece derrota e promete oposição no Congresso",
+   "veiculos": 5,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-27T19:10:49Z",
+   "na_pauta_desde": "2026-10-28T19:08:04Z",
    "esquentou": false,
    "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 2,
+    "editoria": "politica",
+    "I": 1,
+    "V": 1,
     "P": 1,
     "formato": "feed",
-    "repetido": true,
+    "repetido": false,
     "risco": "",
-    "motivo": "Trump repete alegações sem provas sobre a eleição no Brasil.",
-    "soma": 4
+    "motivo": "Reconhecimento da derrota pelo vice isola Flávio, mas tem baixa repercussão.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Janones vira referência global contra a extrema direita e inspira grupos na França, Espanha e Argentina",
+   "veiculos": 5,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-27T17:08:04Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "politica",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Baixo impacto material; personalismo em torno de parlamentar sem repercussão de massa.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": null,
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "esquentou": false,
+   "ia": {
+    "editoria": "saude",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Homenagem histórica positiva ao SUS, mas sem gancho noticioso recente.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": null,
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "esquentou": false,
+   "ia": {
+    "editoria": "saude",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Homenagem histórica positiva ao SUS, mas sem gancho noticioso recente.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": null,
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "esquentou": false,
+   "ia": {
+    "editoria": "saude",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Homenagem histórica positiva ao SUS, mas sem gancho noticioso recente.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": null,
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "esquentou": false,
+   "ia": {
+    "editoria": "saude",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Homenagem histórica positiva ao SUS, mas sem gancho noticioso recente.",
+    "soma": 2
    }
   }
  ],
@@ -769,25 +571,27 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Trump diz que não vai se \"envolver\" após Flávio Bolsonaro afirmar que é o verdadeiro presidente do Brasil",
+   "manchete": "Após se declarar 'verdadeiro presidente do Brasil', Flávio muda carta e se diz 'líder do Brasil'; siga",
    "secoes": [
+    "A",
+    "A",
     "A",
     "A",
     "A",
     "A",
     "B"
    ],
-   "veiculos": 8,
-   "veiculos_3h": 4,
+   "veiculos": 3,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-10-28T21:11:33Z",
-   "link": "https://noticias.uol.com.br/ultimas-noticias/afp/2026/10/28/trump-diz-que-nao-vai-se-envolver-apos-flavio-bolsonaro-afirmar-que-e-o-verdadeiro-presidente-do-brasil.htm",
-   "editoria": "gerais",
-   "nota": 7,
+   "link": "https://www.bbc.co.uk/portuguese/live/c6x2v49yvrygt?at_medium=RSS&at_campaign=rss",
+   "editoria": "politica",
+   "nota": 6,
    "parceiro": {
-    "perfil": "luzmanifesto",
-    "quando": "2026-10-28T20:16:08Z",
-    "legenda": "“Dirijo-me ao povo brasileiro e à comunidade internacional como o verdadeiro presidente eleito do Brasil”. Atenção, estamos diante do início de mais uma tentati",
-    "link": "https://www.instagram.com/p/DfDROVlmbJT/"
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-28T21:26:40Z",
+    "legenda": "O senador Flávio Bolsonaro (PL-RJ) recuou e retirou de seu pronunciamento oficial os trechos em que se apresentava como o “verdadeiro presidente eleito do Brasi",
+    "link": "https://www.instagram.com/p/DfDZKQ9h4hz/"
    },
    "triagem": "candidato"
   },
@@ -811,6 +615,30 @@
    "triagem": "candidato"
   },
   {
+   "manchete": "Empresas, pequenos negócios e grupos de apoio anunciaram, nesta segunda-feira (26), a suspensão ou o encerramento de doações e ações sociais. As publicações ocorreram um dia após a reeleição de Luiz Inácio Lula da Silva (PT), que venceu o segund",
+   "secoes": [
+    "A",
+    "A",
+    "A",
+    "A",
+    "A",
+    "A"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-28T16:10:58Z",
+   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBkMm1LMnFxbXFyN3ZXTXVPZXRiandhWUoyR0hBY3ZDUTNtT2ZLckh2dWZhYWNfd0djTW1JSHZIODhHNjAyVFJlcmdFdTNfR1YyRXc?oc=5",
+   "editoria": "gerais",
+   "nota": 2,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-28T21:00:16Z",
+    "legenda": "O jogador de futsal Bernardo Leal - lealbernardo22 foi desligado da AAEMA Mariópolis, do Paraná, após compartilhar nas redes sociais publicações de apoio a Luiz",
+    "link": "https://www.instagram.com/p/DfDWRVhivrj/"
+   },
+   "triagem": "candidato"
+  },
+  {
    "manchete": null,
    "secoes": [
     "A"
@@ -826,28 +654,6 @@
     "quando": "2026-10-28T20:33:25Z",
     "legenda": "INACREDITÁVEL. Manifeste-se conosco. LUZMANIFESTO | luzmanifesto",
     "link": "https://www.instagram.com/p/DfDTF1IOc3O/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Com Flávio a caminho dos EUA, Tarcísio diz que eleição passou",
-   "secoes": [
-    "A",
-    "A",
-    "A",
-    "A"
-   ],
-   "veiculos": 19,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-28T21:08:51Z",
-   "link": "https://www.gazetadopovo.com.br/ultima-analise/perseguido-e-exilado-a-rota-de-flavio-bolsonaro-apos-eleicao/",
-   "editoria": "eleicoes",
-   "nota": 7,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-28T15:51:36Z",
-    "legenda": "A fuga de Flávio Bolsonaro para os Estados Unidos na noite de ontem (27) teve um de seus objetivos revelados ao BFC por um de seus aliados: transformar o senado",
-    "link": "https://www.instagram.com/p/DfCy8KzxV8H/"
    },
    "triagem": "candidato"
   },
@@ -871,16 +677,37 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Promotor Gakiya diz que, se for convidado, aceitará ser ministro da Segurança Pública de Lula",
+   "manchete": "Governo Trump vai conceder vistos a Flávio Bolsonaro e sua família, diz imprensa dos EUA",
+   "secoes": [
+    "A",
+    "A",
+    "B"
+   ],
+   "veiculos": 817,
+   "veiculos_3h": 403,
+   "na_pauta_desde": "2026-10-27T17:08:04Z",
+   "link": "https://www.gazetadopovo.com.br/mundo/governo-trump-vai-conceder-vistos-a-flavio-bolsonaro-e-sua-familia-diz-imprensa-dos-eua/",
+   "editoria": "politica",
+   "nota": 8,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-28T15:51:36Z",
+    "legenda": "A fuga de Flávio Bolsonaro para os Estados Unidos na noite de ontem (27) teve um de seus objetivos revelados ao BFC por um de seus aliados: transformar o senado",
+    "link": "https://www.instagram.com/p/DfCy8KzxV8H/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Promotor do MPSP é cotado para comandar ministério no governo Lula 4",
    "secoes": [
     "A"
    ],
    "veiculos": 3,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-27T20:47:50Z",
-   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/10/promotor-gakiya-diz-que-se-for-convidado-aceitara-ser-ministro-da-seguranca-publica-de-lula.shtml",
-   "editoria": "politica",
-   "nota": 3,
+   "link": "https://g1.globo.com/sp/presidente-prudente-e-regiao/noticia/2026/10/28/promotor-lincoln-gakiya-conhecido-por-repressao-ao-pcc-e-cotado-para-ministerio-da-seguranca-de-lula.ghtml",
+   "editoria": "gerais",
+   "nota": 2,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-10-28T19:30:05Z",
@@ -890,58 +717,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Empresas, pequenos negócios e grupos de apoio anunciaram, nesta segunda-feira (26), a suspensão ou o encerramento de doações e ações sociais. As publicações ocorreram um dia após a reeleição de Luiz Inácio Lula da Silva (PT), que venceu o segund",
-   "secoes": [
-    "A",
-    "A",
-    "A",
-    "A",
-    "A"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-28T16:10:58Z",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBkMm1LMnFxbXFyN3ZXTXVPZXRiandhWUoyR0hBY3ZDUTNtT2ZLckh2dWZhYWNfd0djTW1JSHZIODhHNjAyVFJlcmdFdTNfR1YyRXc?oc=5",
-   "editoria": "america_latina",
-   "nota": 4,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-28T19:00:08Z",
-    "legenda": "O presidente de El Salvador, Nayib Bukele, enviou uma carta ao presidente Luiz Inácio Lula da Silva (PT) para parabenizá-lo pela vitória nas eleições presidenci",
-    "link": "https://www.instagram.com/p/DfDIhknjddi/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Após gravação de vídeo de Nikolas Ferreira sobre Nordeste, cidade baiana registrou maior número de votos no PT desde 2018",
+   "manchete": null,
    "secoes": [
     "A"
    ],
-   "veiculos": 2,
+   "veiculos": 0,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-28T21:08:51Z",
-   "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOdkF6Rmx5ODRoOS1ITlJyQ3RmUGlzY0VWV3BTdVJxOGJPanpQUEFqb05PTi1rdlBGVDIwWlBvLWN0SzFIa3BTLVNoVHRPT18xS3dNVG1zWmstamdIXzBMNGhHclNuNXNDaFBxSHZvUHJLNlZQVkJfNHM5Vkk5QkVuN3BTZElxWVQyUWEwTlZfT1pzd1IxeXV2aU1kLTJrY2FZVVlpUkRpWUpWTVZ0Z1cwSDJjUmlHWnRHU213WGxWUHB0MS01UnUwdFN3ZXhhLVdGVXRzdDZwUFQxaUw0X01QU1BQZjR5YzRoMEHSAfgBQVVfeXFMUFJyLU9Ub1V5MnZYcEVQeW01bWZBRHBIdFpVdGd2T0Y1eDM1Y3ktd0lmMm9nb1FRLTRpQmNHcWFQc3l2c1JyM29kZC02anBTOVl5M0Qxd0RzaUpIRXl3SEp0NGtrZHF3ZVdnSDFUUXlSbWFxMDNxY2dQaldnYXJISEJHaXJKQ0NSM082NENaV3R1VjNTRWw2WE9YZjItcnJ4MkR0TVkzenpNX1BudGdBWVNVZERheVR4YXRFWG9ERmFFZk1SeFA1VXh4cmdfZU85dnJuMnZIcHNxX1Q1RnE1cHdfbm41V3E3cHV1WUtOZy04eG11d1NDODc?oc=5",
-   "editoria": "eleicoes",
-   "nota": 4,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-28T18:45:08Z",
-    "legenda": "A cidade baiana onde o deputado federal Nikolas Ferreira (PL-MG) gravou um vídeo sobre o Nordeste registrou a maior votação do PT desde as eleições de 2018. Loc",
-    "link": "https://www.instagram.com/p/DfDGznciFXg/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Trump volta a falar, sem provas, em fraude na eleição no Brasil",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 12,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-27T19:10:49Z",
-   "link": "https://g1.globo.com/mundo/noticia/2026/10/27/trump-volta-a-falar-sem-provas-em-fraude-na-eleicao-no-brasil.ghtml",
-   "editoria": "eleicoes",
-   "nota": 5,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 2,
    "parceiro": {
     "perfil": "luzmanifesto",
     "quando": "2026-10-28T14:04:32Z",
@@ -959,52 +744,13 @@
    "veiculos_3h": 0,
    "na_pauta_desde": null,
    "link": null,
-   "editoria": "gerais",
-   "nota": 1,
+   "editoria": "politica",
+   "nota": 3,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-10-28T19:45:06Z",
-    "legenda": "🔥💭",
-    "link": "https://www.instagram.com/p/DfDNq7UDrb7/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Quem não deve, não foge. Flávio Bolsonaro fugiu para os Estados Unidos",
-   "secoes": [
-    "A",
-    "A"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-28T21:21:28Z",
-   "link": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxNLU5DTU1EWjUzY0hJUHU2VzBZZlRvd2NPOHNMZ2dfeEVjbzN6T1cyTnVFbjk0VUNNdkRYdGlQc19MX2lROG5TN1pwbWFUTkd4UzRFNnU4ZzZ5My10ZVZnNGFOMVRrQkV6WHJOY3BGNk00RjJZRUlOUmV6dXpxYl9pZVdmYzM1TWQwM3pFSHd1dTc3NmF4STZiN3VGdmdYczFiMVBQdzAwcHlDbzBmR0Z1ZjZHYlp6RVNraUpfajdtVEhWR2Nvamo4NDlBMmJ3ZEVRMy1ra2pwM3hyNUFlbzJpM2R6SURuSlpENXhrUUJXX3Q0WHR0Nk5Hd1RpNjNxX2FCczNTNTVHZFU?oc=5",
-   "editoria": "america_latina",
-   "nota": 7,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-28T20:45:06Z",
-    "legenda": "Mesmo tendo fugido para os Estados Unidos após descumprir ordem judicial, o senador Flávio Bolsonaro (PL-RJ) ainda custa pelo menos R$ 384 mil por mês aos cofre",
-    "link": "https://www.instagram.com/p/DfDUiU9CZeK/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-28T16:48:48Z",
-    "legenda": "🔥💭",
-    "link": "https://www.instagram.com/p/DfC5fwoEbE8/"
+    "quando": "2026-10-28T18:45:08Z",
+    "legenda": "A cidade baiana onde o deputado federal Nikolas Ferreira (PL-MG) gravou um vídeo sobre o Nordeste registrou a maior votação do PT desde as eleições de 2018. Loc",
+    "link": "https://www.instagram.com/p/DfDGznciFXg/"
    },
    "triagem": "candidato"
   },
@@ -1040,6 +786,63 @@
    "nota": 1,
    "parceiro": {
     "perfil": "brasilforadacaverna",
+    "quando": "2026-10-28T16:48:48Z",
+    "legenda": "🔥💭",
+    "link": "https://www.instagram.com/p/DfC5fwoEbE8/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-28T19:45:06Z",
+    "legenda": "🔥💭",
+    "link": "https://www.instagram.com/p/DfDNq7UDrb7/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Mesmo nos EUA, Flávio ainda custará R$ 384 mil por mês aos cofres públicos",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-28T21:11:33Z",
+   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOUVdVNzdpU0VXMl9tTGlGOXBOZXBRdFdsUHR5amJEZ3JmUnZ0UWRJU2RlNC1LdUlSczB1MS1MQmgtbTl6TjhHZmlqMlNlRkJwME9MYlpENnF0VlFjU3BPUV9VSU1IR2FjRGpUcGVodGdOZmJrV0xzaGRETzJYVVpGSHZXQnYxanhTNy1XQlRlY2xremp0ZGVHbGF3RGVxN3BlYnk2eXFMR2s2VVpmQzNjVGRwcVM0TFVnODdteg?oc=5",
+   "editoria": "politica",
+   "nota": 5,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-28T20:45:06Z",
+    "legenda": "Mesmo tendo fugido para os Estados Unidos após descumprir ordem judicial, o senador Flávio Bolsonaro (PL-RJ) ainda custa pelo menos R$ 384 mil por mês aos cofre",
+    "link": "https://www.instagram.com/p/DfDUiU9CZeK/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
     "quando": "2026-10-28T20:45:49Z",
     "legenda": "🔥💭",
     "link": "https://www.instagram.com/p/DfDUk01hz54/"
@@ -1047,21 +850,40 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Vaquinha para mãe de Ana Clara arrecada R$ 1,5 milhão em menos de cinco horas",
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "politica",
+   "nota": 3,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-28T21:47:22Z",
+    "legenda": "A deputada federal Denise Pessôa (PT-RS) está encaminhando denúncias ao Ministério Público Federal (MPF), ao Ministério Público Estadual do Rio Grande do Sul (M",
+    "link": "https://www.instagram.com/reel/DfDbi_ACBZE/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Flávio Bolsonaro dice que la justicia le prohibió salir de Brasil",
    "secoes": [
     "A"
    ],
    "veiculos": 4,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-28T00:34:12Z",
-   "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOeDlhV29mdmdwU3A3QVZiQUhORzlSdWNabzJORzEwVDlMZXc2cks1aXZDa0JpUjZTUHdrLTBQNzQ4d2FVeEZES2FRWTNhLUJqNG1ka0JaWE9zYnFhbV9TUGs5VzdiSkt0TkNWUmp1ZEpMQjVPZ2wtVlBvUWdMVTJYRWJvb1BpUnhoaTgtVzlIVmo4RW1MRGE0UVFqenhXTXdNRWUzXzdORWJaYURBb3FYMHQ4cllkUzhSbVk3RmFVYmtwbjE4eXlpYzFGZ2htcVI0U1dyaDdWbnBFVlJuWmfSAewBQVVfeXFMTTVhVjUzdmpQNkZlVm5PSlhISGpTdlBqaDFOUm9FZm5mZmVoODN0Rk0tZ01JNEl0SEJ0U0xlQlhtbUJpc2p4U19Ha2J2UDhpUUJqTkFnMUZ3U1M3anRUVTlWR1otMVVXTkVTTk45Y2wtM2FuSE5adm1CZE5DellmS0JSNTc5Yms5Z1RlR0JFb0tEQmtCM0V2SzI3QjlnVWZNRzl5bkkwZXc5eGtrVUZBaGZXaFU4ekJ3Q25uTlIwOTJac3o4UmY3WWdwQ3BpTm9ET0oxZzl6YzBzR24tY3Z1bXpNRnZJLXotSGJuY0w?oc=5",
+   "na_pauta_desde": "2026-10-27T17:08:04Z",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNOWlHX1JaU0k4dGFWWW1YaDZvYkdSQnpuYTZvZzdCdkFZeV9GdXZCQ1Q3UWVURXBGcWRaVUw2UjdxSlBjZ2VvS3ItdFJHYU1xWU5kSThhOEFPa3V3OEk4a0xlYlJOWFZXSVUyLWh3OW5EaTdvcFRadGUtSnB0UXEtNXpnUllyd1lOVWxwZXlCUVN1cnhPa1JTV19rQ09OVm5McEFSSEZHUkFmWmZK0gGsAUFVX3lxTFBGdHhMMlRvb29SLVFVeENtZzQxNVRrRWh0a2dZRktuYXp2WjZXZGVpUVQ0NEl0bFMwMUZKWlc5TERDR2FkSGdUd20xQTZfV0E4MmlyWC1UWFY4NlJZNGZEU3FWYjJDVlR6THUwZGZwckMwSHRvYXVfYUw5alU3UkFsR2Y2Yzdrd3R2Z0VFOThuZTBac0tvUlJ2V2Z0NUYtTmd0X04xbFJJeENyeUU?oc=5",
    "editoria": "eleicoes",
-   "nota": 3,
+   "nota": 6,
    "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-28T14:14:38Z",
-    "legenda": "Uma campanha de arrecadação promovida pelo projeto Revelando conseguiu reunir R$ 1,5 milhão nesta terça-feira (27) para ajudar Cristiane Gomes da Silva, mãe de ",
-    "link": "https://www.instagram.com/p/DfCn2bvjr5K/"
+    "perfil": "luzmanifesto",
+    "quando": "2026-10-28T10:46:05Z",
+    "legenda": "MAIS UMA VEZ ELE MENTIU A SEUS ELEITORES. O plano de saída de Flávio Bolsonaro do Brasil já estaria organizado semanas antes de sua derrota eleitoral, segundo i",
+    "link": "https://www.instagram.com/p/DfCPctGx4In/"
    },
    "triagem": "candidato"
   },
@@ -1070,8 +892,8 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 5,
-   "veiculos_3h": 1,
+   "veiculos": 6,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-28T18:09:45Z",
    "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/10/alcolumbre-planeja-articular-indulto-ou-anistia-a-bolsonaro-em-busca-de-votos-da-direita-para-se-reeleger.shtml",
    "editoria": "eleicoes",
@@ -1085,32 +907,31 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Plano de fuga de Flávio Bolsonaro já estava organizado semanas antes da derrota",
+   "manchete": null,
    "secoes": [
     "A"
    ],
-   "veiculos": 2,
+   "veiculos": 0,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-28T21:11:33Z",
-   "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPTzBfOWhLcHcxUHpDQ05ZM3pTVzhldmdqcHJtTm5iSmxhZE9tYlg1M045UUxwVE5zREZrWmJRekFTTlpVYmVJTXhfeFR0SnhobXN4cXY0VzNGbjh2eHZtelZoWnZkWEVkeUpBQVVkSHAtSWIwLXFEQ3RQV0xJQzFRQlViQUg3VEZERmlGWElNQUlWRGNmN2RWNEZrRDB2UnNQZFpySmlYdVNKZk94elpvM1VucW92T0pSNmg0VngxT1NwQXdXMEUyMmRIMUJTTC11SlFrc2U4V2fSAecBQVVfeXFMUHNOQ1ZjNUlPdkRobTR4TUNtZm4wQ0h1TXo2RjZsWHh0TXVrX2FPMVBfXzRNTVB2cDU3ZzBYWFV3dkZtTXY5LU5LMS0xVkw1b3VTZ0VsemFHX3Q0NTc5ZE1oTWNob0FfYU4za3RZV3dfUy1vTWxXcGpwMVJXM2dSSTNzdlN1QkREdzdpYTAxNVJ1RmoxeklJY3diYWhTMk1xVlZWTWdmSGg3Xy1PU2xiMjVwd1ZkRnp4X3dMNGlNdHRSbGVvb1FDZGN5UzNIYWJ6eFoxMEprcnVmWnIxSVRTSUdGRUR5bm1B?oc=5",
-   "editoria": "eleicoes",
-   "nota": 6,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "politica",
+   "nota": 5,
    "parceiro": {
-    "perfil": "luzmanifesto",
-    "quando": "2026-10-28T10:46:05Z",
-    "legenda": "MAIS UMA VEZ ELE MENTIU A SEUS ELEITORES. O plano de saída de Flávio Bolsonaro do Brasil já estaria organizado semanas antes de sua derrota eleitoral, segundo i",
-    "link": "https://www.instagram.com/p/DfCPctGx4In/"
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-28T21:30:06Z",
+    "legenda": "Gustavo Schiphorst, assessor parlamentar de Jair Renan Bolsonaro (PL), é investigado pela Polícia Civil de Santa Catarina por suposta participação na agressão a",
+    "link": "https://www.instagram.com/p/DfDZr8TjwvH/"
    },
    "triagem": "candidato"
   },
   {
-   "manchete": "Trump diz que EUA receberão 1 milhão de barris da Venezuela no Texas",
+   "manchete": "Trump diz que Venezuela deveria se tornar um estado dos EUA e sugere eleição para governador no país",
    "secoes": [
-    "A",
-    "D-america_latina"
+    "A"
    ],
-   "veiculos": 11,
-   "veiculos_3h": 1,
+   "veiculos": 5,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-27T20:15:38Z",
    "link": "https://www.gazetadopovo.com.br/mundo/trump-diz-que-venezuela-deveria-se-tornar-um-estado-dos-eua-e-sugere-eleicao-para-governador-no-pais/",
    "editoria": "america_latina",
@@ -1124,16 +945,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "INSS paga folha de outubro nesta quarta, 28; confira o calendário",
+   "manchete": "Ufac oferece bolsas de R$ 700 para estudantes; inscrições terminam nesta quarta",
    "secoes": [
     "A"
    ],
-   "veiculos": 5,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-28T21:08:51Z",
-   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQSG16cVBTWnFmdWVNdWRhSGpuSDVlV3VEUFQ2T3RyVTBVWGRUcW9xU1N2WGt1dXRjOUoxY2NZUlRoWDYwN05GaUtpc0x6bnoweENFZE52eUpITnZNNHBtZjlydlVKSXZwSVQwYjJIYVR6SzFIN25QQy1aYkVTSWR2Y0VmNC11ZXptVkFiTHJXdmFaS2VkdG13MDhrUDAxVm1RQTgtenBweDc?oc=5",
+   "veiculos": 3,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-28T21:11:33Z",
+   "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQLUtNVHdGVEhQUU1RZGJIZF8tZDdZMVV1bUNMclcwaGFpejNsdG1tTEJpa1VWTjZPVUZ2TUIzT1hhSlg0dWlOaEhOdXFiREVxOThpMGdab3I2MTVaa0ViSzB2cDBZTFB4YXFfUjdEQXF3d3IxVGlyZzVnV2wybmFvX0Q0WkJrcjFfYnFqbmNRanRMcmExRm8xSkRBSU9nUEZHd21BU3ZxeDgzV3RCc01xNXpfZWI0VzBGUWVTY1Bn?oc=5",
    "editoria": "politica",
-   "nota": 7,
+   "nota": 6,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-10-28T19:15:04Z",
@@ -1155,50 +976,30 @@
    "nota": 2,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-10-28T15:02:15Z",
-    "legenda": "Em uma conversa entre gerações, a deputada federal eleita Ana Elisa Santos Silva, de apenas 21 anos, pergunta à histórica parlamentar Benedita da Silva (PT-RJ) ",
-    "link": "https://www.instagram.com/reel/DfCtLTHlLeC/"
+    "quando": "2026-10-28T21:51:26Z",
+    "legenda": "Um abraço para o helderlazarotto, mas a partir de agora sou o prefeito da minha amada Colombo (PR). Brincadeirinha, prefeito! Tá fazendo um ótimo trabalho.",
+    "link": "https://www.instagram.com/p/DfDbtZKh8Nv/"
    },
    "triagem": "candidato"
   },
   {
-   "manchete": "Governo Trump dará visto para Flávio Bolsonaro e permitirá entrada dele nos EUA",
-   "secoes": [
-    "A",
-    "B"
-   ],
-   "veiculos": 85,
-   "veiculos_3h": 14,
-   "na_pauta_desde": "2026-10-28T21:11:33Z",
-   "link": "https://g1.globo.com/mundo/noticia/2026/10/27/governo-dos-eua-concedera-vistos-a-flavio-bolsonaro-e-sua-familia.ghtml",
-   "editoria": "politica",
-   "nota": 8,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-10-28T14:30:05Z",
-    "legenda": "Integrantes do Partido Democrata dos EUA criticaram a decisão do governo Donald Trump de conceder vistos ao senador brasileiro Flávio Bolsonaro (PL) e familiare",
-    "link": "https://www.instagram.com/p/DfCpnuSj2ct/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Carta de Flávio Bolsonaro usa brasão com \"Estados Unidos do Brazil\"",
+   "manchete": null,
    "secoes": [
     "A"
    ],
-   "veiculos": 9,
+   "veiculos": 0,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-28T02:06:17Z",
-   "link": "https://tnonline.uol.com.br/noticias/politica/carta-de-flavio-bolsonaro-usa-brasao-com-estados-unidos-do-brazil-1169152",
-   "editoria": "eleicoes",
-   "nota": 7,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": null,
+   "nota": null,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-10-28T15:18:41Z",
-    "legenda": "O ex-candidato à Presidência Flávio Bolsonaro (PL) chegou aos Estados Unidos na manhã desta quarta-feira (28), acompanhado da esposa Fernanda Antunes Figueira B",
-    "link": "https://www.instagram.com/reel/DfCvH8qjjNy/"
+    "quando": "2026-10-28T22:00:09Z",
+    "legenda": "Clubes de futebol e empresas de apostas buscam um entendimento com o governo federal para retomar as apostas esportivas e preservar patrocínios, diante da proib",
+    "link": "https://www.instagram.com/p/DfDdIHPj1mT/"
    },
-   "triagem": "candidato"
+   "triagem": "fora: esporte (futebol)"
   },
   {
    "manchete": null,
@@ -1220,16 +1021,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Além de Flávio Bolsonaro: veja outros bolsonaristas que deixaram o país",
+   "manchete": "Após chegar aos EUA, Flávio encontra o irmão Eduardo na Flórida",
    "secoes": [
     "A"
    ],
-   "veiculos": 13,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-28T19:08:04Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/10/27/zambelli-eduardo-bolsonaro-e-mais-veja-bolsonaristas-que-deixaram-o-brasil.ghtml",
+   "veiculos": 4,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-28T21:11:33Z",
+   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPT2RpQlZCZ2FfWm9iNWZ6cS1rUGYxVV9ySkhEWE5VU1N5U3pzamxURDVYbmh1QXN4eXNfMjNSNF9lS2FjUGRyM0xtLTJ0cUpJM1huMzQwSGYyOEhOTHh6SDFfQjllVy1nZVlaN3FIbHJqMFRNdXJGTmJTM2pwNzNTZW9LRXJTSmtiOU5QMWtZRnZtZXRxWUJlQlBHMWtJT0pHam9kMVYxWEdra1NkUEJR?oc=5",
    "editoria": "gerais",
-   "nota": 5,
+   "nota": 4,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-10-28T20:15:07Z",
@@ -1239,14 +1040,15 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Rogério Marinho afirma que esperava mais liderança de Flávio Bolsonaro após fuga do ex-candidato",
+   "manchete": "Vice de Flávio Bolsonaro reconhece derrota e promete oposição no Congresso",
    "secoes": [
-    "A"
+    "A",
+    "D-america_latina"
    ],
-   "veiculos": 12,
+   "veiculos": 5,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-28T21:11:33Z",
-   "link": "https://www.gazetadopovo.com.br/opiniao/editoriais/perseguicao-politica-flavio-bolsonaro-sair-do-brasil/",
+   "na_pauta_desde": "2026-10-28T19:08:04Z",
+   "link": "https://www.gazetadopovo.com.br/republica/vice-de-flavio-bolsonaro-reconhece-derrota-e-promete-oposicao-no-congresso/",
    "editoria": "america_latina",
    "nota": 8,
    "parceiro": {
@@ -1279,64 +1081,64 @@
  ],
  "descartados_mais_quentes": [
   {
-   "manchete": "Flávio Bolsonaro deixa o Brasil e viaja aos EUA",
-   "veiculos": 469,
-   "veiculos_3h": 349,
+   "manchete": "Flavio Bolsonaro declares himself Brazil's 'true' leader after landing in Miami",
+   "veiculos": 17,
+   "veiculos_3h": 13,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Lula reage à suposta fuga de Flávio: 'Quem sai escondido do seu país deve ou tem medo de alguma coisa'",
-   "veiculos": 61,
-   "veiculos_3h": 8,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Partido de Netanyahu tem mais votos, mas bloco de oposição pode vencer em Israel, diz boca de urna",
-   "veiculos": 45,
-   "veiculos_3h": 11,
+   "manchete": "Israel election: what we know so far",
+   "veiculos": 13,
+   "veiculos_3h": 1,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Flávio Bolsonaro huyó a EEUU tras derrota electoral en Brasil - La Prensa",
-   "veiculos": 39,
-   "veiculos_3h": 8,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Colisão de trem na Espanha deixa pelo menos 68 mortos, diz governo",
-   "veiculos": 30,
-   "veiculos_3h": 6,
-   "motivo": "fora: crime ou tragedia (mortos)"
-  },
-  {
-   "manchete": "Imprensa internacional repercute fuga de Flávio Bolsonaro do Brasil",
-   "veiculos": 29,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Valdemar posta foto com Michelle Bolsonaro: 'conversa sobre o futuro'",
-   "veiculos": 27,
-   "veiculos_3h": 3,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "High-speed train crash in Spain kills at least 68, injures 80",
-   "veiculos": 13,
+   "manchete": "Two high-speed trains collide in Spain forcing suspension of line",
+   "veiculos": 12,
    "veiculos_3h": 4,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "President Lula calls Bolsonaro’s Brazil exit ‘shameful’",
-   "veiculos": 13,
+   "manchete": "Confiança da indústria cai pelo 3º mês seguido com piora em indicadores",
+   "veiculos": 10,
+   "veiculos_3h": 1,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Dolores Huerta, pioneering labor leader and civil rights icon, dies at 96",
+   "veiculos": 9,
+   "veiculos_3h": 4,
+   "motivo": "fora: crime ou tragedia (dies)"
+  },
+  {
+   "manchete": "Video. First aerial images show scene of deadly train crash in Toledo, Spain",
+   "veiculos": 9,
    "veiculos_3h": 2,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Confira o resultado da Quina, concurso 7153, desta terça-feira (27/10); prêmio é de R$ 2,0 milhões",
-   "veiculos": 12,
+   "manchete": "Al menos 68 muertos en un choque de trenes de alta velocidad en España tras una decisión \"inexplicable\" del centro de control",
+   "veiculos": 7,
+   "veiculos_3h": 3,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Lucas Guedez detona Silvia Abravanel após críticas contra Virginia: 'É de família ser corna'",
+   "veiculos": 7,
    "veiculos_3h": 2,
-   "motivo": "fora: entretenimento (quina)"
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Amazônia e Cerrado evitaram emissões equivalentes às do Japão",
+   "veiculos": 7,
+   "veiculos_3h": 2,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Já superou Virginia? Marina Ruy Barbosa e Vini Jr. viram assunto após rumores",
+   "veiculos": 7,
+   "veiculos_3h": 1,
+   "motivo": "sem editoria"
   }
  ]
 }
