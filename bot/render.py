@@ -121,6 +121,59 @@ def gerar_reels(quadro: Path, saida: Path, segundos: int = 12) -> None:
     subprocess.run(cmd, check=True)
 
 
+# Reels animado (aprovado pelo João em 28/10/2026): a arte é capturada em 3 camadas. Só a foto se move (zoom
+# lento de 8%); marca fixa; título, texto, barra e rodapé entram subindo e aparecendo entre 0,4 s e 1,1 s.
+# As letras nunca são reamostradas, então ficam tão nítidas quanto no feed.
+CAMADAS_REELS = {
+    "fundo": "body>div>*:not(#foto):not(img){visibility:hidden!important}",
+    "marca": "#foto,#bloco,#barra,body>div>img{visibility:hidden!important} html,body,body>div{background:transparent!important}",
+    "texto": "body>div>*:not(#bloco):not(#barra){visibility:hidden!important} html,body,body>div{background:transparent!important}",
+}
+
+
+def camadas_reels(pagina, html_path: Path, pasta: Path) -> tuple[Path, Path, Path]:
+    """Captura as 3 camadas do Reels animado a partir do mesmo HTML da arte, já no quadro vertical 1080x1920."""
+    html = html_path.read_text(encoding="utf-8")
+    saidas = {}
+    for nome, css in CAMADAS_REELS.items():
+        h = pasta / f"reels-{nome}.html"
+        h.write_text(html.replace("</style>", css + "</style>", 1), encoding="utf-8")
+        pagina.goto(h.as_uri())
+        pagina.wait_for_function("window.__fit !== undefined", timeout=30000)
+        png = pagina.screenshot(clip={"x": 0, "y": 0, "width": 1080, "height": 1350}, type="png",
+                                omit_background=nome != "fundo")
+        img = Image.open(io.BytesIO(png))
+        if nome == "fundo":
+            plano = pasta / "reels-fundo.jpg"
+            img.convert("RGB").save(plano, "JPEG", quality=95)
+            saidas[nome] = pasta / "reels-fundo-v.jpg"
+            quadro_vertical(plano, saidas[nome])
+        else:
+            q = Image.new("RGBA", (1080, 1920), (0, 0, 0, 0))
+            q.paste(img.convert("RGBA"), (0, 285))  # mesma posição da arte em quadro_vertical
+            saidas[nome] = pasta / f"reels-{nome}.png"
+            q.save(saidas[nome])
+    return saidas["fundo"], saidas["marca"], saidas["texto"]
+
+
+def gerar_reels_camadas(fundo: Path, marca: Path, texto: Path, saida: Path, segundos: int = 12) -> None:
+    """Vídeo 1080x1920: foto com zoom de 8% (centro um pouco acima do meio, onde ficam os rostos), marca fixa e
+    bloco de texto + barra entrando, H.264 + faixa de áudio muda (a trilha entra depois, por bot/trilha.py)."""
+    import subprocess
+    quadros = segundos * 30
+    filtro = (f"[0]scale=2160:3840:flags=lanczos,zoompan=z='1+0.08*on/{quadros}':x='iw/2-(iw/zoom/2)':"
+              f"y='ih*0.42-(ih/zoom*0.42)':d={quadros}:s=1080x1920:fps=30[bg];"
+              f"[bg][1]overlay=0:0[b2];"
+              f"[2]format=rgba,fade=t=in:st=0.4:d=0.7:alpha=1[tx];"
+              f"[b2][tx]overlay=x=0:y='if(lt(t,0.4),60,if(lt(t,1.1),60*(1-(t-0.4)/0.7),0))'[v];[v]{COR_TV}[out]")
+    cmd = ["ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-i", str(fundo), "-loop", "1", "-i", str(marca),
+           "-loop", "1", "-i", str(texto), "-f", "lavfi", "-i", "anullsrc=channel_layout=stereo:sample_rate=44100",
+           "-filter_complex", filtro, "-map", "[out]", "-map", "3:a", "-t", str(segundos), "-r", "30",
+           "-c:v", "libx264", "-profile:v", "high", "-preset", "medium", "-crf", "18", *TAGS_COR,
+           "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", "-shortest", str(saida)]
+    subprocess.run(cmd, check=True)
+
+
 def gerar_reels_slides(quadros: list[Path], saida: Path, por_slide: float = 4.0, transicao: float = 0.5) -> None:
     """Carrossel em Reels (pedido do João, 27/10/2026): os quadros verticais dos slides em sequência,
     4 s cada, com transição suave, H.264 + faixa de áudio muda (a música entra pela API na publicação)."""
@@ -162,7 +215,7 @@ def processar(pasta: Path, pagina) -> None:
     post = json.loads(arq.read_text(encoding="utf-8"))
     rel = {"quando": agora(), "artes": [], "avisos": []}
     try:
-        for padrao in ("arte-*.jpg", "quadro-*.jpg", "story.jpg", "reels.mp4"):
+        for padrao in ("arte-*.jpg", "quadro-*.jpg", "story.jpg", "reels.mp4", "reels-*"):
             for velha in pasta.glob(padrao):
                 velha.unlink()
         rod = post.get("rodape") or ""
@@ -189,8 +242,16 @@ def processar(pasta: Path, pagina) -> None:
             quadro_vertical(pasta / "arte-1.jpg", pasta / "story.jpg")
             rel["story"] = "story.jpg"
             if post.get("bombastica") or post.get("reels"):  # Reels comum (20/10/2026) usa o mesmo quadro aprovado
-                gerar_reels(pasta / "story.jpg", pasta / "reels.mp4")
-                rel["reels"] = {"video": "reels.mp4", "capa": "story.jpg"}
+                try:
+                    gerar_reels_camadas(*camadas_reels(pagina, html_path, pasta), pasta / "reels.mp4")
+                    rel["reels"] = {"video": "reels.mp4", "capa": "story.jpg", "animado": True}
+                except Exception as e:  # o Reels animado nunca segura o post: cai para o zoom simples
+                    rel["avisos"].append(f"Reels animado falhou ({type(e).__name__}: {e}); saiu o zoom simples")
+                    gerar_reels(pasta / "story.jpg", pasta / "reels.mp4")
+                    rel["reels"] = {"video": "reels.mp4", "capa": "story.jpg", "animado": False}
+                finally:
+                    for temp in pasta.glob("reels-*"):
+                        temp.unlink()
         else:
             for i, s in enumerate(post["slides"], start=1):
                 uri = None
