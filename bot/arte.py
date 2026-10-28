@@ -83,9 +83,9 @@ LOCKUPS = {
     ),
     "saude": (
         '<svg style="position:absolute;z-index:6;left:128px;top:52px" width="387" height="76" viewBox="0 0 580 114" role="img" aria-label="Saúde CBR">'
-        '<text x="152" y="101" font-family="Unbounded, Archivo, sans-serif" font-weight="900" font-size="118" letter-spacing="-4" fill="#14D9C4">CBR</text>'
-        '<text x="0" y="74" font-family="Archivo, sans-serif" font-weight="600" font-size="46" letter-spacing="1" fill="#FFFFFF">SAÚD</text>'
-        '<g fill="#14D9C4" stroke="#101010" stroke-width="3" paint-order="stroke"><rect x="136" y="41" width="10" height="33" rx="4"/>'
+        '<text x="152" y="101" font-family="Unbounded, Archivo, sans-serif" font-weight="900" font-size="118" letter-spacing="-4" fill="#087A6D">CBR</text>'
+        '<text x="0" y="74" font-family="Archivo, sans-serif" font-weight="600" font-size="46" letter-spacing="1" fill="#101010">SAÚD</text>'
+        '<g fill="#087A6D" stroke="#ECEAE5" stroke-width="3" paint-order="stroke"><rect x="136" y="41" width="10" height="33" rx="4"/>'
         '<rect x="136" y="41" width="30" height="9" rx="4.5"/><rect x="136" y="53" width="27" height="9" rx="4.5"/><rect x="136" y="65" width="30" height="9" rx="4.5"/></g></svg>'
     ),
 }
@@ -99,7 +99,7 @@ def _marca_roca(c: dict) -> str:
             f'<div style="position:absolute;z-index:6;left:80px;top:46px;line-height:1">'
             f'<div style="font-family:Unbounded,Archivo,sans-serif;font-weight:900;font-size:84px;letter-spacing:-4px;color:{c["destaque"]}">CBR</div>'
             f'<div id="mao" style="position:relative;display:inline-block;margin:-8px 0 0 64px;font-family:PermanentMarker,cursive;font-size:58px;'
-            f'color:{c["destaque"]};text-shadow:0 2px 10px rgba(0,0,0,.55);transform:rotate(-5deg);transform-origin:left center;white-space:nowrap">'
+            f'color:{c["destaque"]};{'text-shadow:0 2px 10px rgba(0,0,0,.55);' if c.get('tema') == 'escuro' else ''}transform:rotate(-5deg);transform-origin:left center;white-space:nowrap">'
             f'da roça{risco}</div></div>')
 
 
@@ -120,19 +120,20 @@ MARCA_SIMPLES = (
 
 ESCURO = dict(bg="#101010", texto="#FFFFFF", sub="#C9C6C0", rodape="#8C8984",
               barra="rgba(255,255,255,0.22)", barra_solida="#484848", barra_y=1262, papel="overlay", papel_op=0.35,
-              grad_rgb="16,16,16")
+              grad_rgb="16,16,16", tema="escuro")
 CLARO = dict(bg="#ECEAE5", texto="#101010", sub="#4E4B47", rodape="#4E4B47",
              barra="rgba(16,16,16,0.16)", barra_solida="#CBC9C4", barra_y=1278, papel="multiply", papel_op=0.16,
-             grad_rgb="236,234,229")
+             grad_rgb="236,234,229", tema="claro")
 
 EDITORIAS = {
     "politica": dict(ESCURO, destaque="#E0302A", icone="#E0302A", icone_top=70, marca="lockup", esquerda=80, credito="rodape", foto_min=880),
     "eleicoes": dict(ESCURO, destaque="#FED700", icone="#FED700", icone_top=70, marca="lockup", esquerda=120, credito="rodape", foto_min=780),
-    "saude":    dict(ESCURO, destaque="#14D9C4", icone="#E3AD16", icone_top=72, marca="lockup", esquerda=120, credito="rodape", foto_min=780),
+    "saude":    dict(CLARO, destaque="#087A6D", icone="#E3AD16", icone_top=72, marca="lockup", esquerda=120, credito="topo", foto_min=780),
     "gerais":   dict(ESCURO, destaque="#E0302A", icone=None, icone_top=60, marca="simples", esquerda=120, credito="topo", foto_min=760),
     "america_latina": dict(ESCURO, destaque="#FF5A1F", icone="#FF5A1F", icone_top=70, marca="lockup", esquerda=120, credito="rodape", foto_min=800),
-    "roca": dict(ESCURO, bg="#1E1610", texto="#F6F0E4", sub="#CFC4B2", barra_solida="#3A2E24", papel_op=0.4,
-                 grad_rgb="30,22,16", destaque="#B8D86B", risco="#E7DCC4", icone=None, icone_top=70, marca="roca",
+    # grade branca (pedido do João, 28/10/2026): papel creme, folha escura e café
+    "roca": dict(CLARO, bg="#F2EBDD", texto="#1E1610", sub="#5A4A3A", rodape="#5A4A3A", barra="rgba(30,22,16,0.16)",
+                 barra_solida="#D9CCB4", papel_op=0.2, grad_rgb="242,235,221", destaque="#4F7A1C", risco="#8A6A45", icone=None, icone_top=70, marca="roca",
                  esquerda=120, credito="rodape", foto_min=800,
                  foto_filtro="filter:saturate(1.08) sepia(.12) contrast(1.04)"),
     "economia": dict(CLARO, destaque="#1646E0", icone="#E3AD16", icone_top=72, marca="lockup", esquerda=120, credito="topo", foto_min=760),
@@ -329,10 +330,10 @@ PADROES = {
     "politica": {**PADRAO_COMUM, "cor_destaque": "#D0021B"},
     "gerais":   {**PADRAO_COMUM, "cor_destaque": "#D0021B"},
     "eleicoes": {**PADRAO_COMUM},
-    "saude":    {**PADRAO_COMUM},
+    "saude":    {**PADRAO_COMUM, "destaque_faixa": [64, 100], "destaque_opacidade": 0.45},
     "america_latina": {**PADRAO_COMUM},
-    "roca": {**PADRAO_COMUM},
-    # fundo claro: faixa mais baixa e translúcida, senão parece texto riscado
+    "roca": {**PADRAO_COMUM, "destaque_faixa": [64, 100], "destaque_opacidade": 0.45},
+    # fundo claro (economia, educação, saúde, da roça): faixa mais baixa e translúcida, senão parece texto riscado
     "economia": {**PADRAO_COMUM, "destaque_faixa": [64, 100], "destaque_opacidade": 0.45},
     "educacao": {**PADRAO_COMUM, "destaque_faixa": [64, 100], "destaque_opacidade": 0.45},
 }
@@ -374,7 +375,7 @@ def post_unico(post: dict, foto_uri: str, recorte: bool = False) -> str:
                   f'{marcar(post["titulo"], d, c["texto"], titulo=True, peso_destaque=min(900, peso + 100), estilo=post.get("destaque_estilo", "cor"), faixa=tuple(post.get("destaque_faixa", (55, 95))),
                          opacidade=float(post.get("destaque_opacidade", 0.9)))}</p>')
     if post.get("subtitulo"):
-        partes.append(f'<p style="margin:26px 0 0;font-family:Archivo,sans-serif;font-size:22px;line-height:1.42;color:{c["sub"]}">{marcar(post["subtitulo"], d, c["texto"])}</p>')
+        partes.append(f'<p style="margin:26px 0 0;font-family:Archivo,sans-serif;font-size:24px;line-height:1.42;color:{c["sub"]}">{marcar(post["subtitulo"], d, c["texto"])}</p>')
 
     fundo_bloco = c["barra_y"] - 40 - int(post.get("bloco_subir", 0))
     limite = 300  # o bloco nunca sobe acima disso
@@ -423,9 +424,9 @@ def slide(s: dict, foto_uri: str | None = None, editoria: str = "gerais") -> str
     ed = editoria if editoria in EDITORIAS else "gerais"
     propria = ed != "gerais"
     if propria:
-        # todos os slides no fundo da editoria (escuro em Saúde/Eleições/AL/roça, claro em Economia/Educação)
+        # todos os slides no fundo da editoria (claro em Economia/Educação/Saúde/da roça, escuro no resto)
         c = dict(EDITORIAS[ed])
-        escuro = c["bg"] != CLARO["bg"]
+        escuro = c.get("tema") == "escuro"
         bg, tx, sub, dest = c["bg"], c["texto"], c["sub"], c["destaque"]
     else:
         c = None
