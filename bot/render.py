@@ -99,17 +99,24 @@ def quadro_vertical(arte_jpg: Path, saida: Path) -> None:
     quadro.save(saida, "JPEG", quality=95)
 
 
+# Qualidade do vídeo (ajuste do João, 28/10/2026): o Reels saía mais mole que o post do feed. Causas: zoom de
+# 3,5% reamostrando a arte quadro a quadro, cor em faixa cheia (yuvj/pc, bt470bg) que o Instagram converte mal
+# e ~1,5 Mbps de origem. Agora: zoom de 1,5%, faixa de TV bt709 marcada no arquivo e CRF 18.
+COR_TV = "scale=out_color_matrix=bt709:out_range=tv,format=yuv420p"
+TAGS_COR = ["-color_range", "tv", "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709"]
+
+
 def gerar_reels(quadro: Path, saida: Path, segundos: int = 12) -> None:
-    """Vídeo 1080x1920 com zoom lento sobre o quadro vertical, H.264 + faixa de áudio muda
-    (a música entra pela API do Instagram na publicação)."""
+    """Vídeo 1080x1920 com zoom lento e suave (1,5%) sobre o quadro vertical, H.264 + faixa de áudio muda
+    (a trilha da editoria entra depois, por bot/trilha.py)."""
     import subprocess
     quadros = segundos * 30
-    filtro = (f"scale=2160:3840,zoompan=z='1+0.035*on/{quadros}':x='iw/2-(iw/zoom/2)':"
-              f"y='ih/2-(ih/zoom/2)':d={quadros}:s=1080x1920:fps=30,format=yuv420p")
+    filtro = (f"scale=2160:3840:flags=lanczos,zoompan=z='1+0.015*on/{quadros}':x='iw/2-(iw/zoom/2)':"
+              f"y='ih/2-(ih/zoom/2)':d={quadros}:s=1080x1920:fps=30,{COR_TV}")
     cmd = ["ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-i", str(quadro),
            "-f", "lavfi", "-i", "anullsrc=channel_layout=stereo:sample_rate=44100",
            "-t", str(segundos), "-vf", filtro, "-c:v", "libx264", "-profile:v", "high",
-           "-preset", "medium", "-crf", "21", "-c:a", "aac", "-b:a", "128k",
+           "-preset", "medium", "-crf", "18", *TAGS_COR, "-c:a", "aac", "-b:a", "128k",
            "-movflags", "+faststart", "-shortest", str(saida)]
     subprocess.run(cmd, check=True)
 
@@ -123,20 +130,20 @@ def gerar_reels_slides(quadros: list[Path], saida: Path, por_slide: float = 4.0,
     for q in quadros:
         entradas += ["-loop", "1", "-t", str(por_slide + transicao), "-i", str(q)]
     if n == 1:
-        filtro, rotulo = "[0]format=yuv420p[out]", "[out]"
+        filtro, rotulo = f"[0]{COR_TV}[out]", "[out]"
     else:
         partes, anterior, desloc = [], "[0]", por_slide
         for k in range(1, n):
             rot = f"[v{k}]"
             partes.append(f"{anterior}[{k}]xfade=transition=fade:duration={transicao}:offset={desloc}{rot}")
             anterior, desloc = rot, desloc + por_slide
-        partes.append(f"{anterior}format=yuv420p[out]")
+        partes.append(f"{anterior}{COR_TV}[out]")
         filtro, rotulo = ";".join(partes), "[out]"
     total = por_slide * n + transicao
     cmd = ["ffmpeg", "-y", "-loglevel", "error", *entradas,
            "-f", "lavfi", "-i", "anullsrc=channel_layout=stereo:sample_rate=44100",
            "-filter_complex", filtro, "-map", rotulo, "-map", f"{n}:a", "-t", str(total), "-r", "30",
-           "-c:v", "libx264", "-profile:v", "high", "-preset", "medium", "-crf", "21",
+           "-c:v", "libx264", "-profile:v", "high", "-preset", "medium", "-crf", "18", *TAGS_COR,
            "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", "-shortest", str(saida)]
     subprocess.run(cmd, check=True)
 
