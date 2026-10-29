@@ -1,6 +1,6 @@
 {
- "quando": "2026-10-29T20:08:31Z",
- "pauta_quando": "2026-10-29T20:08:30Z",
+ "quando": "2026-10-29T21:14:29Z",
+ "pauta_quando": "2026-10-29T21:14:27Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,52 +9,243 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 16,
+  "avaliados_agora": 21,
   "falhas_antes": null,
-  "pedidos_hoje": 13
+  "pedidos_hoje": 14
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 125,
- "novos_3h": 1,
- "esquentaram": 0,
+ "total_assuntos": 153,
+ "novos_3h": 11,
+ "esquentaram": 1,
  "candidatos": [
   {
-   "manchete": "Anvisa aprova cinco novas canetas para tratamento de diabetes e obesidade; veja quais",
+   "manchete": "Ex-presidente do BRB diz à PF que Ibaneis ordenou negócio com Master",
    "secoes": [
     "B"
    ],
-   "veiculos": 32,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-10-29T16:15:47Z",
-   "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQWDNHay12WXI1MkNRSmtHTHY3Vndrc3VRa0c5QmFmVmh2U29JVThzT18tbUZTc2hGWGJMWWhzN0NscW1zZ2pfdzBmSEl2Vnl2d3ZQYXNkREF3UHUwc2pMNlBneUl4NGxhOEoyY0FETGhoUmZrbjJWbzk3amVhTnBFMlY1eTZZNFZCWEhPaXhYOFNOa2dWZUdXcEk0NlhvZDJQeFFWeExGTUVzNl9EU0ZHZVRNN2FkZmVNLUxMQnJIU2dMdC1yMkM3cEpJY0lqTVNaMnfSAeABQVVfeXFMTXNsRVZQYnJKazA0bzNTaFBFSi1Ib1Z0MzFVY2JyVFhpaVZYVHYxZElCUENfTkoybWZHRnF0YUc3TWNZeHUyWnJ5NElPX21pRDFJdzVyRTNrY3IteVdEU1VZb01uZWJHS3VUWnRnWW9ZeGVKQ0c5WHQ0YjMwNzhqcXo2RldvZVhwSXpPZXZ5SkhkeGl4Zm5LT2oyeUhTNzJvMERZWWlCZ0pvR3VMNnlVcl9NTmFPNEVGTS1HNWhieXk2MkllVzlrSS10czZnN01jSDBpWS1CbkpwWUl1OTBLMVI?oc=5",
-   "editoria": "saude",
+   "veiculos": 51,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-10-29T01:03:44Z",
+   "link": "https://noticias.uol.com.br/politica/ultimas-noticias/2026/10/29/ex-presidente-do-brb-diz-a-pf-que-ibaneis-ordenou-negocio-com-master.ghtm",
+   "editoria": "politica",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "master"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 3,
+    "V": 3,
+    "P": 3,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Ex-presidente do BRB implica Ibaneis em esquema bilionário.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Após carta golpista, Alencar Santana (PT) pede inelegibilidade de Flávio Bolsonaro",
+   "secoes": [
+    "A",
+    "A",
+    "A",
+    "B"
+   ],
+   "veiculos": 15,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-10-28T21:11:33Z",
+   "link": "https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2026/10/29/apos-carta-golpista-alencar-santana-pt-pede-inelegibilidade-de-flavio-bolsonaro.htm",
+   "editoria": "gerais",
+   "nota": 7,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio",
+    "pl"
+   ],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Valdemar afasta-se de Flávio e PT pede inelegibilidade.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Bancos elevam taxas de financiamento imobiliário após disparada dos juros futuros",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-29T21:14:27Z",
+   "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQZHV1b0ZYVVFjOFl0Nk1ERTZ1NGZsM2ZMVmwwbnQ4MF9lLUhZQWJpbm5sSVNYdmE3dWNKcG91ckxHcExBQW4zbUh5b0c4eVVBb0YxdHNfcGo5UDlHSnY2SXVBS2l4cUozTVB2MjFpbVVUVHRRTzEyN2E0ZXpxMXluVm1qQ09XaEtJVWtGZGZrdjMwSG1CUTl1UFZIUFIyWmxmd05oNTRQcHdXT3BGeVc0blp2YWhKRFBOaEJyVFlIaXJVNHlfdjRiNFJBaEVvZUprMVM00gHiAUFVX3lxTE8wNHUyUGpfUmp6aEo1ZFp6NEpLanJ4RjRGOHFhcjY1R1pPUjQzaG9wQVRXNzNrczlOcW5HeGYzVHRxM05zYmxNSHBKWVRObjNZMTBXc2pwTTRncmhRRFdxSVFkakcwVGIzbV8xZy1Welo1Y0VBMFF4STQxdHhPUUctR0RBcWpUVjRJNmtPVEJJSnA0Z2dUcVNoZmx6MHEyVGxqOFh0RjdSUEJJemFHYzBkd2lER2FZV2M2TURyYjdrOTdoNjh2OUd5Zm5zWlRSZ1RUYXZET2lfVjZIVGNqbHJLZVE?oc=5",
+   "editoria": "economia",
    "nota": 4,
    "esquentou": false,
-   "lente": [],
+   "lente": [
+    "banco",
+    "juros"
+   ],
    "ia": {
-    "editoria": "saude",
+    "editoria": "economia",
     "I": 3,
     "V": 2,
     "P": 2,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Aprovação de novos tratamentos para diabetes e obesidade pela Anvisa.",
+    "motivo": "Bancos elevam taxas de financiamento imobiliário após alta de juros.",
     "soma": 5
    }
   },
   {
-   "manchete": "Flávio muda carta golpista e troca autodeclaração de 'presidente' para 'líder do Brasil'",
+   "manchete": "MPT pede indenização de R$ 50 mi para a Meta e remoção de conteúdos de assédio eleitoral",
    "secoes": [
-    "B",
-    "D-famosos"
+    "B"
    ],
-   "veiculos": 1061,
-   "veiculos_3h": 563,
-   "na_pauta_desde": "2026-10-28T19:08:04Z",
-   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/10/em-carta-divulgada-por-aliados-flavio-bolsonaro-se-diz-presidente-eleito-do-brasil-apos-chegar-aos-eua-fugido.shtml",
+   "veiculos": 5,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-29T21:14:27Z",
+   "link": "https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2026/10/29/mpt-pede-indenizacao-de-r-50-mi-para-a-meta-e-remocao-de-conteudos-de-assedio-eleitoral.htm",
    "editoria": "eleicoes",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "MPT pede indenização da Meta por assédio eleitoral.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "ONU aprueba la resolución contra el embargo de EEUU a Cuba: ¿Cómo votó Paraguay?",
+   "secoes": [
+    "D-america_latina"
+   ],
+   "veiculos": 14,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-28T21:21:28Z",
+   "link": "https://www.jornada.com.mx/2026/10/29/mundo/028n1mun?partner=rss",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "ONU aprova resolução contra embargo dos EUA a Cuba.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Tráfico e Lavagem de dinheiro: MP pede condenação do bolsonarista Renato Cariani",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-29T01:03:44Z",
+   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/10/ministerio-publico-de-sp-pede-condenacao-de-renato-cariani-por-trafico-de-drogas-e-lavagem.shtml",
+   "editoria": "politica",
    "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "lavagem"
+   ],
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "MP pede condenação do influenciador bolsonarista Renato Cariani.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "China vê vitória de Lula como revés para influência de Trump na América Latina",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-29T21:14:27Z",
+   "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/10/china-ve-vitoria-de-lula-como-reves-para-influencia-de-trump-na-america-latina.shtml",
+   "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "trump"
+   ],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Imprensa chinesa vê vitória de Lula como revés para Trump.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Anvisa aprova cinco novas canetas de GLP-1",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 39,
+   "veiculos_3h": 7,
+   "na_pauta_desde": "2026-10-29T16:15:47Z",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOOTBsOTBIUGhkYV9zOVRSZzZIZzBSekF4Nm9OUkpOS25ILUlldEczVHMyNFlhbXBvbEJRWEFOWndORm5ma0hFYlFuYlY5emRpaHYwOG5Vd0l2SHpGYWdNeE5fWnhmVjNFWHlCVmFOY0hlNGI2aWZuVDFMYTNKYnZtWkNNakpicFZwVDZIZ3dvVWZXa01CcEdpNGlTTlVpSXhYOWlFZ2l3TQ?oc=5",
+   "editoria": "saude",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "saude",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Anvisa aprova novas canetas de GLP-1 para diabetes e obesidade.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Engajamento do ‘Exército do Lula’ foi 76 vezes mais rápido que o da ‘Tropa do Flávio’; veja mais comparações",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-29T21:14:27Z",
+   "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPMWgxbkZYcnRVaW12elhSUWppRVhzVm9YR19nOWpqTU00MzhSNUJ0clh4RVVNc1FNVU1MalZVYU5QOVprcGh0b0N2LVd6OG56STU5a0kzUndnUlltc0o4by1vNnN1LU9WcGg2ZUhkS183YU91Nlh3V2p0LVVCUGxKYlVobEM5ZW5FUWltazhfZWdhQ2ZjZ2V5V283bHRCWFUyS245OXRTdXEyV1lSaE9NMUV3ZzZySkh2ek9ZX0lKd1o2WlZVbFZFWDJSTHBESUtiRzVqYkp5aHFXMU1Remc?oc=5",
+   "editoria": "eleicoes",
+   "nota": 4,
    "esquentou": false,
    "lente": [
     "flavio"
@@ -62,191 +253,307 @@
    "ia": {
     "editoria": "eleicoes",
     "I": 2,
-    "V": 3,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Declaração golpista e absurda de Flávio fora do país.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Alunos de Medicina em MG hostilizam bolsistas em grupo de WhatsApp após vitória de Lula: 'divide a bolsa com o MST'",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-29T16:15:47Z",
-   "link": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNX0FkRUZCamdhdUhnekxQaXN2NTdpZ3Nqdi13V0xhYm8wU3NVYk5UUlJfbnZtZWY2LUNLOUFfelRvMWRDZXE4ZjN4WWlmbS1xeVNRMHVYX1NBTTFGSUxWVWVodjluWFkySzJ5Q2VFMURrU3doWFJPZ2syZ2o5UFRzYTl5QkRNTVVfVzBqRTA4Z0RTWWdINUkzeGQ3TnBTSmxDSFhhUzFuZVVDQXBVUkhuUkFGeWlwbVJENVpuamVjdlZuMVlTemN5X05qS2Y4bEJjZDluSWc0cFI0SHlhaDR3YlRLYWoxVDJHVEE4VnNMZXlJNmd0LWViQXk0djh4NzJpZkdVNjJPN2VKaU3SAZoCQVVfeXFMTjFqaldlQ2hpWks5ejNxM1VmNGJUVERnTGs1MlVDYmgwMUZkYmhmV2cxc1ZlM2hZQ3NHODJtVUllWDREaVhMeVp3WmR0VG5EdmJvV2Q1SWg5ajVwRHRGZUs4Z2pIbFVIZHJUUWVlXzV3WGNPVnNmSjVuY1VWV2pma1VzSzE1Zmd2cW44Q1RFaUhpUy1SWU5XT3B0QUFmNmZQSlBmeTltaTlfdG9SSlFIR1ZmNVhuNGtCcC1hNGE1emM1YXZwUVRjam9hcURvUTFkLXFzY211UG1MLUxudWFTNlIyT0JybTdOTGFmdnlxN1d3UDJpd0VLSkVJNlhva1ZWa0FaZXpqN0JtUEZMTFM0TDhON29HT253ZVB3?oc=5",
-   "editoria": "roca",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "mst"
-   ],
-   "ia": {
-    "editoria": "educacao",
-    "I": 2,
-    "V": 3,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Estudantes de medicina hostilizam bolsistas em grupo.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Proibição das bets eleva consumo em supermercados, diz Abras",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-28T16:10:58Z",
-   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPOGdvU3hsRnltUDE1bzhGM0JGQ2Z1ZTZPdzdBbVBVT1Q3bEw0aHpMTFZKc1ExakFQcTlVLUIxRjhlMWlzZ1AyNkJadTN0T2czeFhoWGlSME0yMlBoNTU1RnZFemdrUjVoME5pLVRuQm5Wa1VfNXJHOXcyazl5U0tfUkRINDBfQkhrMGg3ZDJic2JIVkJnaDZMdU1IOXdaMlNEbFE?oc=5",
-   "editoria": "gerais",
-   "nota": 2,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "economia",
-    "I": 2,
     "V": 2,
-    "P": 2,
-    "formato": "carrossel",
+    "P": 1,
+    "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Proibição de bets reduz gastos em supérfluos e aumenta consumo de alimentos.",
+    "motivo": "Estudo aponta superioridade do engajamento governista nas redes.",
     "soma": 4
    }
   },
   {
-   "manchete": "Ambulância com cinco pessoas é arrastada por correnteza em Queimadas (BA)",
+   "manchete": "Unha e Carne 9: Márcio Poncio e sobrinho de Adilsinho são alvo de buscas da PF",
    "secoes": [
-    "B"
+    "A"
    ],
-   "veiculos": 4,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-29T20:08:30Z",
-   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQZHc4RGhXZVNUdmk1NDd6UmVCX0NhUFF2bVlNNktWMUxvRHp2SFZoQ1d1VWgzajBWZnRfLUZ5RkhYelNyXzh5Sy1Fejg3dTMtLWhUaThLdDRZT2dJM19tNXh5aWFtdGNibnNid3J4c0Q1OWo2WUh2VEkxMlZxdHVYd0R2ZEFMUE1FQ1hjLVdWdW14c0tKY2F4OEIweUp3SVI0REl1V3RfVGRRTkpzWGN4REhJTmNTZzZnZllB?oc=5",
-   "editoria": "gerais",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [
-    "queimada"
-   ],
+   "veiculos": 17,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-29T12:14:10Z",
+   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/10/pf-mira-enderecos-ligados-ao-pastor-marcio-poncio-em-nova-fase-de-operacao-contra-lavagem-de-dinheiro.shtml",
+   "editoria": "politica",
+   "nota": 6,
+   "esquentou": true,
+   "lente": [],
    "ia": {
     "editoria": "gerais",
     "I": 2,
     "V": 2,
-    "P": 0,
+    "P": 1,
     "formato": "feed",
     "repetido": false,
-    "risco": "Tragédia com vítimas",
-    "motivo": "Tragédia com ambulância arrastada por correnteza na Bahia.",
+    "risco": "Acusação de crime sem condenação",
+    "motivo": "Operação da PF envolvendo figuras conhecidas.",
     "soma": 4
    }
-  }
- ],
- "rebaixados": [
+  },
   {
-   "manchete": "President Trump said he approved of Brazilian Senator Flavio Bolsonaro coming to the United States after losing Sunday's presidential election. Bolsonaro left Brazil for the United States, ​with a senior US State Department official saying it would grant entry vi",
-   "veiculos": 7,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-29T20:08:30Z",
+   "manchete": "Flávio Bolsonaro chega aos EUA e desembarca com a família",
+   "secoes": [
+    "A",
+    "A"
+   ],
+   "veiculos": 10,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-29T21:14:27Z",
+   "link": "https://www.gazetadopovo.com.br/republica/flavio-bolsonaro-chega-miami-desembarca-familia/",
+   "editoria": "america_latina",
+   "nota": 7,
    "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio"
+   ],
    "ia": {
-    "editoria": "america_latina",
-    "I": 1,
+    "editoria": "eleicoes",
+    "I": 2,
     "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Apoio de Trump a Flávio gera repercussão internacional.",
-    "soma": 3
+    "motivo": "Chegada de Flávio aos EUA alimenta debate sobre fim do bolsonarismo.",
+    "soma": 4
    }
   },
   {
-   "manchete": "Moraes arquiva inquérito contra juiz que soltou homem responsável por quebrar relógio no 8/1",
+   "manchete": "Bolsonaro se autoproclama \"presidente\" tras perder las elecciones de Brasil y huir a EEUU",
+   "secoes": [
+    "A",
+    "A"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-29T16:25:57Z",
+   "link": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxPMXJUMnhBYmdTSTVwb2JXZ09sQnZ5cEQzNTNjNC1OMXB5SkREanRVeDJrNFMyZjJSbGktb2ltdV9IZ0JlNzZMSE5uNHhCR3g0bk5XQU1QcGpfNUtfeWFZcnhzX2tzemxuTUpvOEpjOXBuWlEyY3pfd0EzV3ZVWktUOHVkQlpRQ3RrUTJyejNYM19mN2owaTNKdzVER2VnUUtTQWRtUG5ROWlVVHRTdnU5SDByLU9MV19YUko0WF92M3VEVExNWWtUeVI2UmUwSUVWWHBTUzJ5eno5c2F4OTBhTzU5RW10UWc1aDUxTzZqYTROQ0NMRDVmUTg5QzdaazRHdEF2WlNBcDEzakE?oc=5",
+   "editoria": "politica",
+   "nota": 8,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio",
+    "pl"
+   ],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Tarcísio aconselhou Flávio a não fugir do Brasil após derrota.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Inspiração para Flávio, Bukele reconhece vitória de Lula nas eleições",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-29T21:14:27Z",
+   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSG02dkQyTWo4Z3h5Qko2djUzMUlVZXlfVFM0eG9rUGtBSS1IcndfNFpueUtlVm1rNU9VR0pNRlg1NHBlNE8waEQ1NTdxYW1WTGRDeEdzWkh2dWJpYmV1amctdmlqVW5vR1R2UHFORHJvWDYzeUM4aWRjdG51c0lCZnRVeXpaNUNHaFV3TF9MOUllWHU0b3dHZXlUT2c2QUItTjFV?oc=5",
+   "editoria": "politica",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "flavio",
+    "milei"
+   ],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Bukele e aliados de Milei reconhecem vitória de Lula.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Avión que dejó a Flávio Bolsonaro en Estados Unidos ya llegó a Tel Aviv y está pronto para despegar de urgencia",
+   "secoes": [
+    "A",
+    "A"
+   ],
    "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-29T21:14:27Z",
+   "link": "https://ladiaria.com.uy/humor/articulo/2026/10/avion-que-dejo-a-flavio-bolsonaro-en-estados-unidos-ya-llego-a-tel-aviv-y-esta-pronto-para-despegar-de-urgencia/",
+   "editoria": "gerais",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio"
+   ],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Hashtag pedindo deportação de bolsonaristas segue em alta.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Venezuelan Opposition Leader Thanks Trump But Marks Distance from Washington",
+   "secoes": [
+    "B",
+    "C-internacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-29T21:14:27Z",
+   "link": "https://www.nytimes.com/2026/10/29/world/americas/machado-trump-venezuela-return.html",
+   "editoria": "america_latina",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "trump"
+   ]
+  },
+  {
+   "manchete": "Câmara de São Paulo instala comissão para avaliar impeachment de Ricardo Nunes",
+   "secoes": [
+    "A",
+    "A"
+   ],
+   "veiculos": 1,
    "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-29T18:08:40Z",
+   "na_pauta_desde": "2026-10-29T21:14:27Z",
+   "link": "https://iclnoticias.com.br/camara-sao-paulo-impeachment-nunes/",
+   "editoria": "politica",
+   "nota": 3,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Justiça do Trabalho anuncia punições a empresas que demitirem por politica",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-29T21:14:27Z",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQazBCVnljUURWUG9rYWFPaUh5YS0tOEtiSV9qSjM3dzlzNjR2U2xNa3ppRGY1NjdMRDBYQ2JUZE45Tl9oRlFxTXdRQnVOaFlLWHZleVc1Rkp4cHBVbG5USEEya1RrUnJsVGV2RGVfV09kVHZxR0FvWURSQlVxeWQ3LUJTeVFucW10Tzc3YlZSeUZvcm5POS1TcUl0eDBFMUhzWTR0WjhvcmVhWG9I?oc=5",
+   "editoria": "economia",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "trabalhador"
+   ]
+  },
+  {
+   "manchete": "Santos: Polícia apreende dois menores suspeitos da morte de engenheiro",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-29T21:14:27Z",
+   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZ1gyX09pTzRrblpoU3AtcFp2MUtWUzM4Mk9BYzlCSFlTNF9EVVA0WGhfQTZqdEVmb3RzN2FqbVozRDdkTVBUTFpoOWtfYlBGSzhxTWlnaUNiY1g5V1pKbWdUVXU2OFU0RU1zVUpXSTNnRlZmQXMzd1NlZ04tMHJZMnNGYjJXbVhoY3dDTG1PN0JNaHFVbXNIZHdmRDZRREVHVlRZQTZtbTVVZmN6cDhCUkViYXRDbG1mR01VcTVITXlhWm5n?oc=5",
+   "editoria": "gerais",
+   "nota": 1,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "esquentou": false,
+   "lente": []
+  }
+ ],
+ "rebaixados": [
+  {
+   "manchete": "US has proposed Venezuela elections for 2027, opposition leader says",
+   "veiculos": 4,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-10-29T21:14:27Z",
    "esquentou": false,
    "ia": {
-    "editoria": "politica",
+    "editoria": "america_latina",
     "I": 2,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Decisão de Moraes sobre inquérito de juiz.",
+    "motivo": "EUA propõem eleições na Venezuela para 2027.",
     "soma": 3
    }
   },
   {
-   "manchete": "US lawmakers urge Trump administration to oppose Colombia's Amazon aerial spraying plans",
-   "veiculos": 3,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-29T18:08:40Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Pressão nos EUA contra plano na Colômbia; pouca relevância direta no Brasil.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Haití aplaza sus primeras elecciones presidenciales en una década para julio de 2027",
-   "veiculos": 14,
+   "manchete": "No Rio Grande do Sul, órgãos públicos já contrataram mais de R$ 4,1 milhões de microempreendedores e agricultores familiares pelo Contrata+Brasil",
+   "veiculos": 5,
    "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-29T16:15:47Z",
-   "esquentou": false,
+   "na_pauta_desde": "2026-10-29T01:03:44Z",
+   "esquentou": true,
    "ia": {
-    "editoria": "america_latina",
-    "I": 1,
+    "editoria": "roca",
+    "I": 2,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Eleições no Haiti adiadas, baixo impacto direto no Brasil.",
-    "soma": 2
+    "motivo": "RS contrata milhões de pequenos produtores via Contrata+Brasil.",
+    "soma": 3
    }
   },
   {
-   "manchete": "ONU aprobó resolución contra embargo a Cuba: ¿cómo votaron los países de la región?",
-   "veiculos": 8,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-28T21:21:28Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Votação na ONU sobre o embargo a Cuba.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Lula le agradeció a Macri y aprovechó para lanzarle un dardo a Milei",
+   "manchete": "Discriminação política no atendimento em saúde pode ser denunciada pelo 136 da Ouvidoria do SUS",
    "veiculos": 4,
    "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-29T20:08:30Z",
+   "na_pauta_desde": "2026-10-29T16:25:57Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "saude",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Ouvidoria do SUS passa a receber denúncias de discriminação política.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Cuba’s Foreign Minister: We’ll Outlast Trump",
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-29T21:14:27Z",
    "esquentou": false,
    "ia": {
     "editoria": "america_latina",
@@ -256,13 +563,31 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Lula agradece a Macri e alfineta Milei.",
+    "motivo": "Chanceler de Cuba comenta resistências ao governo Trump.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "\"Fue un transformador; sus ideales nunca mueren\": AMLO recuerda a Cuauhtémoc Cárdenas",
+   "veiculos": 4,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-29T21:14:27Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "AMLO lembra legado de Cuauhtémoc Cárdenas.",
     "soma": 2
    }
   },
   {
    "manchete": "\"Taddei traicionó la confianza del pueblo\": Sheinbaum; llama a revisar sus gestiones y deslindar responsabilidades",
-   "veiculos": 2,
+   "veiculos": 3,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-10-29T20:08:30Z",
    "esquentou": false,
@@ -279,141 +604,641 @@
    }
   },
   {
-   "manchete": "Ministro da Saúde de Lula encontra Lottenberg, médico 'indicado' por Flávio para o seu lugar",
+   "manchete": "US lawmakers urge Trump administration to oppose Colombia's Amazon aerial spraying plans",
    "veiculos": 2,
    "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-29T20:08:30Z",
+   "na_pauta_desde": "2026-10-29T18:08:40Z",
    "esquentou": false,
    "ia": {
-    "editoria": "politica",
+    "editoria": "america_latina",
     "I": 1,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Reunião de ministro da Saúde com médico ligado à oposição.",
+    "motivo": "Parlamentares dos EUA criticam fumigação na Amazônia colombiana.",
     "soma": 2
    }
   },
   {
-   "manchete": "Colombia se aparta de la decisión de la ONU que pide levantar el embargo de EE. UU. a Cuba",
-   "veiculos": 17,
+   "manchete": "PF deflagra 9ª fase da Operação Unha e Carne para apurar lavagem de dinheiro e outros crimes — Polícia Federal",
+   "veiculos": 3,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-28T21:21:28Z",
+   "na_pauta_desde": "2026-10-29T21:14:27Z",
    "esquentou": false,
    "ia": {
-    "editoria": "america_latina",
+    "editoria": "gerais",
     "I": 1,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Colômbia se afasta de votação sobre embargo a Cuba.",
+    "motivo": "PF deflagra 9ª fase da Operação Unha e Carne.",
     "soma": 2
    }
   },
   {
-   "manchete": "Machado thanks Trump for opening ‘floodgate to freedom’ for Venezuela",
+   "manchete": "Gazeta Agora: PF afirma que Flávio Bolsonaro não é foragido e descarta decretar prisão",
    "veiculos": 2,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-29T20:08:30Z",
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-29T21:14:27Z",
    "esquentou": false,
    "ia": {
-    "editoria": "america_latina",
+    "editoria": "eleicoes",
     "I": 1,
     "V": 1,
-    "P": 0,
+    "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Declaração de María Corina Machado sobre Trump e Venezuela.",
+    "motivo": "PF descarta decretar prisão e diz que Flávio não é foragido.",
     "soma": 2
+   }
+  },
+  {
+   "manchete": "Bolsonaro flees Brazil for US after election defeat",
+   "veiculos": 19,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-10-29T20:08:30Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": true,
+    "risco": "",
+    "motivo": "Fuga de Flávio para os EUA após derrota.",
+    "soma": 6
    }
   }
  ],
  "obrigatorios": [
   {
-   "manchete": "Proibição das bets eleva consumo em supermercados, diz Abras",
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-29T17:02:44Z",
+    "legenda": "A médica Marilene Maia Rios foi afastada temporariamente da Unidade de Pronto Atendimento (UPA) José Rodrigues, na zona norte de Manaus, após ser acusada de con",
+    "link": "https://www.instagram.com/reel/DfFfxIWjWHw/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Após carta golpista, Alencar Santana (PT) pede inelegibilidade de Flávio Bolsonaro",
+   "secoes": [
+    "A",
+    "A",
+    "A",
+    "B"
+   ],
+   "veiculos": 15,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-10-28T21:11:33Z",
+   "link": "https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2026/10/29/apos-carta-golpista-alencar-santana-pt-pede-inelegibilidade-de-flavio-bolsonaro.htm",
+   "editoria": "gerais",
+   "nota": 7,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-29T19:30:04Z",
+    "legenda": "Não foi à toa que o presidente nacional do PL, Valdemar da Costa Neto, apressou-se a se distanciar de Flávio Bolsonaro (PL-RJ), ao dizer que “não gostou” da car",
+    "link": "https://www.instagram.com/p/DfFwvuEFHqX/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Avión que dejó a Flávio Bolsonaro en Estados Unidos ya llegó a Tel Aviv y está pronto para despegar de urgencia",
+   "secoes": [
+    "A",
+    "A"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-29T21:14:27Z",
+   "link": "https://ladiaria.com.uy/humor/articulo/2026/10/avion-que-dejo-a-flavio-bolsonaro-en-estados-unidos-ya-llego-a-tel-aviv-y-esta-pronto-para-despegar-de-urgencia/",
+   "editoria": "gerais",
+   "nota": 4,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-29T13:02:48Z",
+    "legenda": "A hashtag #DeportTheBolsonaros segue em alta no X (antigo Twitter) pelo terceiro dia consecutivo, impulsionada inicialmente por perfis brasileiros e, agora, por",
+    "link": "https://www.instagram.com/p/DfFEbNcIVnV/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-29T19:16:42Z",
+    "legenda": "Em passeio pelo Twitter, repórteres do BFC flagraram a comoção de um gesto de três segundos, que ultrapassou as fronteiras do Brasil. Durante a comemoração da v",
+    "link": "https://www.instagram.com/reel/DfFvLKaHSb2/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Santos: Polícia apreende dois menores suspeitos da morte de engenheiro",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-29T21:14:27Z",
+   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZ1gyX09pTzRrblpoU3AtcFp2MUtWUzM4Mk9BYzlCSFlTNF9EVVA0WGhfQTZqdEVmb3RzN2FqbVozRDdkTVBUTFpoOWtfYlBGSzhxTWlnaUNiY1g5V1pKbWdUVXU2OFU0RU1zVUpXSTNnRlZmQXMzd1NlZ04tMHJZMnNGYjJXbVhoY3dDTG1PN0JNaHFVbXNIZHdmRDZRREVHVlRZQTZtbTVVZmN6cDhCUkViYXRDbG1mR01VcTVITXlhWm5n?oc=5",
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-29T18:00:06Z",
+    "legenda": "A Polícia Civil identificou oito suspeitos de participarem do latrocínio do engenheiro e mestrando Marcelo de Oliveira Rocha, de 30 anos, espancado em Santos, n",
+    "link": "https://www.instagram.com/p/DfFmcuEjNCT/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Flávio Bolsonaro chega aos EUA e desembarca com a família",
+   "secoes": [
+    "A",
+    "A"
+   ],
+   "veiculos": 10,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-29T21:14:27Z",
+   "link": "https://www.gazetadopovo.com.br/republica/flavio-bolsonaro-chega-miami-desembarca-familia/",
+   "editoria": "america_latina",
+   "nota": 7,
+   "parceiro": {
+    "perfil": "luzmanifesto",
+    "quando": "2026-10-29T13:58:15Z",
+    "legenda": "SERÁ QUE ESTAMOS PRESENCIANDO O INÍCIO DO FIM DO BOLSONARISMO? Há tempos circula nos bastidores a avaliação de que parte da direita enxergava uma eventual derro",
+    "link": "https://www.instagram.com/p/DfFKZq2xJRm/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Bolsonaro se autoproclama \"presidente\" tras perder las elecciones de Brasil y huir a EEUU",
+   "secoes": [
+    "A",
+    "A"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-29T16:25:57Z",
+   "link": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxPMXJUMnhBYmdTSTVwb2JXZ09sQnZ5cEQzNTNjNC1OMXB5SkREanRVeDJrNFMyZjJSbGktb2ltdV9IZ0JlNzZMSE5uNHhCR3g0bk5XQU1QcGpfNUtfeWFZcnhzX2tzemxuTUpvOEpjOXBuWlEyY3pfd0EzV3ZVWktUOHVkQlpRQ3RrUTJyejNYM19mN2owaTNKdzVER2VnUUtTQWRtUG5ROWlVVHRTdnU5SDByLU9MV19YUko0WF92M3VEVExNWWtUeVI2UmUwSUVWWHBTUzJ5eno5c2F4OTBhTzU5RW10UWc1aDUxTzZqYTROQ0NMRDVmUTg5QzdaazRHdEF2WlNBcDEzakE?oc=5",
+   "editoria": "politica",
+   "nota": 8,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-29T15:30:09Z",
+    "legenda": "O governador de São Paulo, Tarcísio de Freitas (Republicanos), afirmou que aconselhou o senador Flávio Bolsonaro (PL) a não deixar o Brasil após a derrota para ",
+    "link": "https://www.instagram.com/p/DfFVSWjClim/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-29T16:16:07Z",
+    "legenda": "🔥💭",
+    "link": "https://www.instagram.com/p/DfFaiaMxUzV/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Câmara de São Paulo instala comissão para avaliar impeachment de Ricardo Nunes",
+   "secoes": [
+    "A",
+    "A"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-29T21:14:27Z",
+   "link": "https://iclnoticias.com.br/camara-sao-paulo-impeachment-nunes/",
+   "editoria": "politica",
+   "nota": 3,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-29T16:45:06Z",
+    "legenda": "A Câmara Municipal de São Paulo instalou nesta quarta-feira (28) uma Comissão Especial para analisar o pedido de impeachment do prefeito Ricardo Nunes (MDB). A ",
+    "link": "https://www.instagram.com/p/DfFd3cXE2aC/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Inspiração para Flávio, Bukele reconhece vitória de Lula nas eleições",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-29T21:14:27Z",
+   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSG02dkQyTWo4Z3h5Qko2djUzMUlVZXlfVFM0eG9rUGtBSS1IcndfNFpueUtlVm1rNU9VR0pNRlg1NHBlNE8waEQ1NTdxYW1WTGRDeEdzWkh2dWJpYmV1amctdmlqVW5vR1R2UHFORHJvWDYzeUM4aWRjdG51c0lCZnRVeXpaNUNHaFV3TF9MOUllWHU0b3dHZXlUT2c2QUItTjFV?oc=5",
+   "editoria": "politica",
+   "nota": 6,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-29T18:45:05Z",
+    "legenda": "A senadora argentina Patricia Bullrich, ex-ministra da Segurança do governo de Javier Milei e atual líder do partido governista no Senado, reconheceu a vitória ",
+    "link": "https://www.instagram.com/p/DfFrmQFE4qN/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Tráfico e Lavagem de dinheiro: MP pede condenação do bolsonarista Renato Cariani",
    "secoes": [
     "A"
    ],
    "veiculos": 4,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-28T16:10:58Z",
-   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPOGdvU3hsRnltUDE1bzhGM0JGQ2Z1ZTZPdzdBbVBVT1Q3bEw0aHpMTFZKc1ExakFQcTlVLUIxRjhlMWlzZ1AyNkJadTN0T2czeFhoWGlSME0yMlBoNTU1RnZFemdrUjVoME5pLVRuQm5Wa1VfNXJHOXcyazl5U0tfUkRINDBfQkhrMGg3ZDJic2JIVkJnaDZMdU1IOXdaMlNEbFE?oc=5",
-   "editoria": "gerais",
-   "nota": 2,
+   "na_pauta_desde": "2026-10-29T01:03:44Z",
+   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/10/ministerio-publico-de-sp-pede-condenacao-de-renato-cariani-por-trafico-de-drogas-e-lavagem.shtml",
+   "editoria": "politica",
+   "nota": 6,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-10-29T03:01:39Z",
-    "legenda": "João Galassi, presidente da Associação Brasileira de Supermercados (Abras), afirmou que a proibição das apostas on-line pelo governo Lula contribuiu para aument",
-    "link": "https://www.instagram.com/reel/DfD_j5cjVW2/"
+    "quando": "2026-10-29T13:44:47Z",
+    "legenda": "O Ministério Público de São Paulo (MP-SP) pediu a condenação do empresário e influenciador fitness Renato Cariani pelos crimes de tráfico de insumos destinados ",
+    "link": "https://www.instagram.com/p/DfFJOwuIT4U/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Engajamento do ‘Exército do Lula’ foi 76 vezes mais rápido que o da ‘Tropa do Flávio’; veja mais comparações",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-29T21:14:27Z",
+   "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPMWgxbkZYcnRVaW12elhSUWppRVhzVm9YR19nOWpqTU00MzhSNUJ0clh4RVVNc1FNVU1MalZVYU5QOVprcGh0b0N2LVd6OG56STU5a0kzUndnUlltc0o4by1vNnN1LU9WcGg2ZUhkS183YU91Nlh3V2p0LVVCUGxKYlVobEM5ZW5FUWltazhfZWdhQ2ZjZ2V5V283bHRCWFUyS245OXRTdXEyV1lSaE9NMUV3ZzZySkh2ek9ZX0lKd1o2WlZVbFZFWDJSTHBESUtiRzVqYkp5aHFXMU1Remc?oc=5",
+   "editoria": "eleicoes",
+   "nota": 4,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-29T17:29:44Z",
+    "legenda": "O Exército de Lula superou a Tropa do Flávio em participantes, velocidade de resposta e distribuição de conteúdos nas redes sociais durante o segundo turno das ",
+    "link": "https://www.instagram.com/p/DfFi-W6IQfD/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": null,
+   "nota": null,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-29T17:15:15Z",
+    "legenda": "O jogador de futsal Bernardo Leal - lealbernardo22 foi desligado da AAEMA Mariópolis, do Paraná, após compartilhar nas redes sociais publicações de apoio a Luiz",
+    "link": "https://www.instagram.com/p/DfFhUOToWIH/"
+   },
+   "triagem": "fora: esporte (jogador)"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-29T13:35:53Z",
+    "legenda": "🔥💭",
+    "link": "https://www.instagram.com/p/DfFINFuRtzq/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Partido de Netanyahu acusa legendas árabes de terem 'roubado' a eleição legislativa em Israel",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-29T21:14:27Z",
+   "link": "https://www.rfi.fr/br/mundo/20261028-partido-de-netanyahu-acusa-legendas-%C3%A1rabes-de-terem-roubado-a-elei%C3%A7%C3%A3o-legislativa-em-israel",
+   "editoria": null,
+   "nota": null,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-29T16:30:04Z",
+    "legenda": "O Likud, partido do primeiro-ministro de Israel, Benjamin Netanyahu, acusou na quarta-feira (28) partidos árabes de terem “roubado” as eleições parlamentares re",
+    "link": "https://www.instagram.com/p/DfFcJXGlOe5/"
+   },
+   "triagem": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Justiça do Trabalho anuncia punições a empresas que demitirem por politica",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-29T21:14:27Z",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQazBCVnljUURWUG9rYWFPaUh5YS0tOEtiSV9qSjM3dzlzNjR2U2xNa3ppRGY1NjdMRDBYQ2JUZE45Tl9oRlFxTXdRQnVOaFlLWHZleVc1Rkp4cHBVbG5USEEya1RrUnJsVGV2RGVfV09kVHZxR0FvWURSQlVxeWQ3LUJTeVFucW10Tzc3YlZSeUZvcm5POS1TcUl0eDBFMUhzWTR0WjhvcmVhWG9I?oc=5",
+   "editoria": "economia",
+   "nota": 3,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-29T18:15:06Z",
+    "legenda": "Empresas que demitirem ou perseguirem trabalhadores por suas escolhas políticas poderão ter o acesso a crédito público restringido, conforme proposta em estudo ",
+    "link": "https://www.instagram.com/p/DfFoKhOiR5o/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "China vê vitória de Lula como revés para influência de Trump na América Latina",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-29T21:14:27Z",
+   "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/10/china-ve-vitoria-de-lula-como-reves-para-influencia-de-trump-na-america-latina.shtml",
+   "editoria": "america_latina",
+   "nota": 5,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-29T13:59:13Z",
+    "legenda": "A reeleição de Luiz Inácio Lula da Silva (PT) foi interpretada pela imprensa estatal chinesa como um revés para a influência dos Estados Unidos e de Donald Trum",
+    "link": "https://www.instagram.com/p/DfFK4gCoTz0/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-29T12:14:38Z",
+    "legenda": "Já perceberam que as vezes eu fico puto com a galera do “pare de dar palco”, né? Por vários motivos! Antes de tudo, eles não entendem absolutamente nada de enga",
+    "link": "https://www.instagram.com/p/DfE8DwUxKhS/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": null,
+   "nota": null,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-29T17:45:06Z",
+    "legenda": "A Justiça de São Paulo decretou nesta quarta-feira (28) a prisão preventiva do pecuarista João Roberto Bolelli, de 62 anos, suspeito de matar a ex-companheira P",
+    "link": "https://www.instagram.com/p/DfFku5nlEcA/"
+   },
+   "triagem": "fora: crime ou tragedia (matar)"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-29T16:15:05Z",
+    "legenda": "Já está disponível para acesso gratuito na plataforma Sesc Digital o documentário \"Não Existe Almoço Grátis\", dirigido por Marcos Nepomuceno e Pedro Charbel. A ",
+    "link": "https://www.instagram.com/p/DfFabsviWAW/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Gazeta Agora: PF afirma que Flávio Bolsonaro não é foragido e descarta decretar prisão",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-29T21:14:27Z",
+   "link": "https://www.gazetadopovo.com.br/gazeta-agora/gazeta-agora-pf-afirma-que-flavio-bolsonaro-nao-e-foragido-e-descarta-decretar-prisao/",
+   "editoria": "eleicoes",
+   "nota": 7,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-29T14:15:53Z",
+    "legenda": "Líder da oposição no Senado e coordenador da campanha de Flávio Bolsonaro, Rogério Marinho (PL-RN), diz que não houveram provas de fraude eleitoral na eleição q",
+    "link": "https://www.instagram.com/reel/DfFMu1tjFae/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "PF deflagra 9ª fase da Operação Unha e Carne para apurar lavagem de dinheiro e outros crimes — Polícia Federal",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-29T21:14:27Z",
+   "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNOHZfa29rSlRCWk94d2RrUFp5THRQMHpOTndWVUtVWVJEcTBTZ3hldXd5bkdhN2UxbUV1M210UWVUSlltTzFhSGZNUHRXQVVVTzBTTVdBeHZJZE0tVS1KM24tYVYyZmhFOEZJQXBPNVl6S3kzN2d2UjJmazBIM1RLWVN0ZHNUT0FXNXd5eThES2tneW04aFFRZWZIWnozLUhsUmtDR2hKb2JRUEt2SWRsRGdhcHhLYkxuWjgtY1RnNzNuaklvM3BheGI2aDF4Z1M3N1BGUUx4Q01Gc0VDbnJR?oc=5",
+   "editoria": "politica",
+   "nota": 5,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-29T13:29:30Z",
+    "legenda": "A Polícia Federal deflagrou nesta quinta-feira (29) a nona fase da Operação Unha e Carne, que investiga uma organização criminosa suspeita de lavagem de dinheir",
+    "link": "https://www.instagram.com/p/DfFHe1poQt3/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-29T16:51:04Z",
+    "legenda": "🔥💭",
+    "link": "https://www.instagram.com/p/DfFeik8xIIL/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Unha e Carne 9: Márcio Poncio e sobrinho de Adilsinho são alvo de buscas da PF",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 17,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-29T12:14:10Z",
+   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/10/pf-mira-enderecos-ligados-ao-pastor-marcio-poncio-em-nova-fase-de-operacao-contra-lavagem-de-dinheiro.shtml",
+   "editoria": "politica",
+   "nota": 6,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-29T13:15:29Z",
+    "legenda": "A Polícia Federal deflagrou, nesta quinta-feira (29), a nona fase da Operação Unha e Carne, com quatro mandados de busca e apreensão em endereços na Barra da Ti",
+    "link": "https://www.instagram.com/p/DfFF4F1oSe-/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-10-29T20:02:03Z",
+    "legenda": "🗣️ Pejotização, CLT e os rumos do trabalho no Brasil! A contratação como pessoa jurídica (PJ) tem sido amplamente discutida no mercado de trabalho e também está",
+    "link": "https://www.instagram.com/reel/DfF0SUJCU6J/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "luzmanifesto",
+    "quando": "2026-10-29T11:53:34Z",
+    "legenda": "Bom dia!! Segue o jogo. Manifeste-se conosco. LUZMANIFESTO | luzmanifesto",
+    "link": "https://www.instagram.com/reel/DfE8bFkxejd/"
    },
    "triagem": "candidato"
   }
  ],
  "descartados_mais_quentes": [
   {
+   "manchete": "Flávio muda carta golpista e troca autodeclaração de 'presidente' para 'líder do Brasil'",
+   "veiculos": 1057,
+   "veiculos_3h": 546,
+   "motivo": "sem editoria"
+  },
+  {
    "manchete": "Flávio Bolsonaro lands in Florida after fleeing Brazil – video",
-   "veiculos": 58,
-   "veiculos_3h": 18,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Morre aos 92 anos juiz que julgava caso de Maduro nos EUA",
-   "veiculos": 11,
-   "veiculos_3h": 1,
-   "motivo": "fora: crime ou tragedia (morre)"
-  },
-  {
-   "manchete": "Ancelotti brings more young players for Brazil friendlies against Japan and Singapore",
-   "veiculos": 9,
-   "veiculos_3h": 9,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Vasco x Flamengo: onde assistir, prováveis escalações e arbitragem",
-   "veiculos": 8,
-   "veiculos_3h": 2,
-   "motivo": "fora: esporte (flamengo)"
-  },
-  {
-   "manchete": "Patrick Stewart, astro de 'Star Trek' e 'X-Men', morre aos 86 anos",
-   "veiculos": 6,
+   "veiculos": 37,
    "veiculos_3h": 6,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Patrick Stewart, astro de \"Star Trek\" e \"X-Men\", morre aos 86 anos",
+   "veiculos": 30,
+   "veiculos_3h": 29,
    "motivo": "fora: crime ou tragedia (morre)"
   },
   {
-   "manchete": "Alaska governor orders investigation into Democrat Mary Peltola’s Senate campaign",
-   "veiculos": 5,
+   "manchete": "Ataque russo em estação de trem ucraniana deixa 14 mortos; Ucrânia lança drones contra Moscou",
+   "veiculos": 24,
    "veiculos_3h": 3,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "DoorDash to acquire Instacart for $17bn",
-   "veiculos": 5,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
+   "motivo": "fora: crime ou tragedia (mortos)"
   },
   {
    "manchete": "Surprise picks! Brazil 🇧🇷 name squad to face Japan and Singapore",
-   "veiculos": 4,
-   "veiculos_3h": 4,
+   "veiculos": 12,
+   "veiculos_3h": 12,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "TelevisaUnivision Q3 Buoyed by World Cup in Mexico, Streaming Revenue",
-   "veiculos": 4,
+   "manchete": "Trump shelters Flávio Bolsonaro, risking tensions with Brazil",
+   "veiculos": 11,
    "veiculos_3h": 3,
-   "motivo": "fora: entretenimento (streaming)"
+   "motivo": "sem editoria"
   },
   {
-   "manchete": "Russian drone attack on Ukrainian railway station kills at least 14 people",
-   "veiculos": 4,
+   "manchete": "Analisa Torres asumirá el caso de Nicolás Maduro en Nueva York tras la muerte del juez Alvin Hellerstein",
+   "veiculos": 10,
+   "veiculos_3h": 2,
+   "motivo": "fora: crime ou tragedia (muerte)"
+  },
+  {
+   "manchete": "‘Wall Street Journal’ critica perseguição e vingança política contra Flávio",
+   "veiculos": 9,
    "veiculos_3h": 2,
    "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Unwell Kimi Antonelli skips F1 Mexico GP media day",
+   "veiculos": 8,
+   "veiculos_3h": 4,
+   "motivo": "fora: esporte (f1)"
+  },
+  {
+   "manchete": "Por que as eleições nos EUA e em Israel têm consequências globais",
+   "veiculos": 8,
+   "veiculos_3h": 3,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
   }
  ]
 }
