@@ -370,9 +370,86 @@ def criar_e_publicar(post: dict, pasta: str, legenda: str, collab: list[str]) ->
     return publicar_container(cid, legenda)
 
 
+def salvar_post(arq: Path, post: dict) -> None:
+    temporario = arq.with_suffix(".json.tmp")
+    temporario.write_text(json.dumps(post, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    temporario.replace(arq)
+
+
+def publicar_story(arq: Path, post: dict) -> None:
+    """Etapa independente do feed; nunca recria um envio com resultado incerto."""
+    if not CONFIG.get("publicacao_ativa") or not CONFIG.get("story_automatico", True):
+        return
+    arquivo = post.get("render", {}).get("story")
+    if not arquivo:
+        return
+    publicacao = post["publicacao"]
+    story = publicacao.setdefault("story", {})
+    if story.get("media_id") or story.get("publicado"):
+        return
+    try:
+        if arquivo != "story.jpg" or not (arq.parent / arquivo).is_file():
+            raise ValueError("render.story deve apontar para story.jpg existente na pasta do post")
+        # Em retomadas, consulta o mesmo container; Stories não têm legenda para comparação.
+        cid = story.get("container_id")
+        if cid:
+            status = chamar("GET", cid, fields="status_code").get("status_code")
+            if status == "PUBLISHED":
+                story.update(publicado=True, quando=agora())
+                story.pop("erro", None)
+                return
+            if story.get("envio_iniciado"):
+                raise ErroAPI("envio anterior do Story sem confirmação; conferir à mão, sem reenviar")
+            if status in ("ERROR", "EXPIRED"):
+                raise ErroAPI(f"container do Story {status}; conferir à mão")
+        desde = datetime.strptime(publicacao.get("publicado_em", publicacao["quando"]),
+                                  "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+        restante = 60 - (datetime.now(timezone.utc) - desde).total_seconds()
+        if restante > 0:
+            time.sleep(restante)
+        if not cid:
+            cid = chamar("POST", f"{CONFIG['ig_user_id']}/media", media_type="STORIES",
+                         image_url=url_arte(arq.parent.name, arquivo))["id"]
+            story["container_id"] = cid
+            salvar_post(arq, post)
+        esperar_container(cid)
+        # Persistir antes de enviar impede repetição após timeout/interrupção.
+        story["envio_iniciado"] = agora()
+        salvar_post(arq, post)
+        mid = chamar("POST", f"{CONFIG['ig_user_id']}/media_publish", creation_id=cid)["id"]
+        story.update(media_id=mid, publicado=True, quando=agora())
+        story.pop("erro", None)
+    except Exception as e:
+        erro = limpar(f"{type(e).__name__}: {e}")
+        story.update(erro=erro, quando=agora())
+        if story.get("envio_iniciado") and story.get("container_id"):
+            try:
+                if chamar("GET", story["container_id"], fields="status_code").get("status_code") == "PUBLISHED":
+                    story.update(publicado=True, aviso_api=erro)
+                    story.pop("erro", None)
+            except Exception:
+                pass  # Não arriscar outro envio se a consulta também falhar.
+        if "2207051" in erro:
+            try:
+                with AVISOS.open("a", encoding="utf-8") as f:
+                    f.write(json.dumps({"quando": agora(), "id": arq.parent.name,
+                                        "tipo": "story", "publicado": bool(story.get("publicado")),
+                                        "aviso": erro[:200]}, ensure_ascii=False) + "\n")
+            except OSError:
+                story["aviso_registro"] = "não foi possível gravar o aviso do Story"
+    finally:
+        salvar_post(arq, post)
+
+
 def processar(arq: Path, estado: dict) -> None:
     post = json.loads(arq.read_text(encoding="utf-8"))
     pasta = arq.parent.name
+    # Retomada explícita: um feed confirmado nunca volta ao fluxo de publicação.
+    if post.get("status") == "publicar" and post.get("publicacao", {}).get("media_id"):
+        post["status"] = "publicado"
+        salvar_post(arq, post)
+        publicar_story(arq, post)
+        return
     res = {"quando": agora()}
     try:
         if post.get("status") != "publicar":
@@ -454,6 +531,7 @@ def processar(arq: Path, estado: dict) -> None:
                         res.update(criar_e_publicar(post, pasta, legenda, []))
                 else:
                     raise
+            res["publicado_em"] = agora()
             if post.get("comentario") and res.get("media_id") and not achado:
                 time.sleep(20)
                 res.update(comentar(res["media_id"], post["comentario"]))
@@ -491,6 +569,8 @@ def processar(arq: Path, estado: dict) -> None:
                                     "aviso": res["erro"][:200]}, ensure_ascii=False) + "\n")
     post["publicacao"] = res
     arq.write_text(json.dumps(post, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    if post["status"] == "publicado":
+        publicar_story(arq, post)
     print(f"{pasta}: {post['status']} {res.get('permalink') or res.get('erro') or res.get('obs','')}")
 
 
