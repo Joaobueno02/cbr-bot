@@ -255,8 +255,8 @@ def _marca(ed: str, c: dict, escala_cbr: float = 1.0) -> str:
     return ICONE.format(top=c["icone_top"], cor=c["icone"]) + lockup
 
 
-def _papel(c: dict) -> str:
-    return (f'<img src="{PAPEL.as_uri()}" alt="" style="position:absolute;z-index:5;left:0;top:0;width:{W}px;height:{H}px;'
+def _papel(c: dict, altura: int = H) -> str:
+    return (f'<img src="{PAPEL.as_uri()}" alt="" style="position:absolute;z-index:5;left:0;top:0;width:{W}px;height:{altura}px;'
             f'mix-blend-mode:{c["papel"]};opacity:{c["papel_op"]};pointer-events:none">')
 
 
@@ -339,8 +339,11 @@ PADROES = {
 }
 
 
-def post_unico(post: dict, foto_uri: str, recorte: bool = False) -> str:
-    """Arte de post único (1080x1350) no padrão da editoria."""
+def post_unico(post: dict, foto_uri: str, recorte: bool = False, altura: int = H) -> str:
+    """Arte de post único (1080x1350) no padrão da editoria. Com altura=1920 sai o Story nativo (9:16):
+    foto maior, título e apoio maiores, marca abaixo da barra de perfil do Instagram e ~300 px livres embaixo
+    para o adesivo de link (aprovado pelo João em 28/10/2026)."""
+    story = altura != H
     # o padrão da editoria SEMPRE vence: o post.json não consegue mudar tamanho, peso, cor,
     # posição, barra ou rodapé (trava contra arte fora da identidade no meio do dia)
     padrao = PADROES.get(post["editoria"], {})
@@ -348,6 +351,8 @@ def post_unico(post: dict, foto_uri: str, recorte: bool = False) -> str:
     post = {**post, **padrao, "_ignoradas": ignoradas}
     ed = post["editoria"]
     c = dict(EDITORIAS[ed])
+    if story:
+        c["barra_y"] += (altura - H) - 300
     cor_nova = post.get("cor_destaque")
     if cor_nova:
         c["destaque"] = cor_nova
@@ -370,17 +375,19 @@ def post_unico(post: dict, foto_uri: str, recorte: bool = False) -> str:
         tam = 60 if ed == "economia" else 66
         partes.append(f'<p style="margin:0 0 14px;font-family:Fraunces,Georgia,serif;font-weight:{min(900, int(post.get("peso_titulo", 800)) + 100)};font-size:{tam}px;line-height:1;letter-spacing:-1px;text-transform:uppercase;color:{d}">{html.escape(post["chapeu"])}</p>')
     maxt = int(post.get("titulo_max", TITULO_MAX[ed]))
+    if story:
+        maxt = int(maxt * 1.12)
     peso = int(post.get("peso_titulo", 800))
     partes.append(f'<p id="titulo" data-max="{maxt}" data-min="44" style="margin:0;font-family:Fraunces,Georgia,serif;font-weight:{peso};font-size:{maxt}px;line-height:1.05;letter-spacing:-1px;color:{c["texto"]}">'
                   f'{marcar(post["titulo"], d, c["texto"], titulo=True, peso_destaque=min(900, peso + 100), estilo=post.get("destaque_estilo", "cor"), faixa=tuple(post.get("destaque_faixa", (55, 95))),
                          opacidade=float(post.get("destaque_opacidade", 0.9)))}</p>')
     if post.get("subtitulo"):
-        partes.append(f'<p style="margin:26px 0 0;font-family:Archivo,sans-serif;font-size:24px;line-height:1.42;color:{c["sub"]}">{marcar(post["subtitulo"], d, c["texto"])}</p>')
+        partes.append(f'<p style="margin:26px 0 0;font-family:Archivo,sans-serif;font-size:{27 if story else 24}px;line-height:1.42;color:{c["sub"]}">{marcar(post["subtitulo"], d, c["texto"])}</p>')
 
     fundo_bloco = c["barra_y"] - 40 - int(post.get("bloco_subir", 0))
-    limite = 300  # o bloco nunca sobe acima disso
+    limite = 760 if story else 300  # o bloco nunca sobe acima disso (no Story a foto fica com a metade de cima)
     bloco = (f'<div id="bloco" data-limite="{limite}" style="position:absolute;z-index:3;left:{esq}px;right:50px;'
-             f'bottom:{H - fundo_bloco}px">{"".join(partes)}</div>')
+             f'bottom:{altura - fundo_bloco}px">{"".join(partes)}</div>')
 
     rodape = ""
     texto_rodape = "" if post.get("sem_rodape") else (post.get("rodape") or (credito if c["credito"] == "rodape" else ""))
@@ -388,12 +395,15 @@ def post_unico(post: dict, foto_uri: str, recorte: bool = False) -> str:
         rodape = (f'<p style="position:absolute;z-index:3;left:{esq}px;right:80px;top:{c["barra_y"]+18}px;margin:0;font-family:Archivo,sans-serif;'
                   f'font-weight:700;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:{c["rodape"]}">{html.escape(texto_rodape)}</p>')
 
-    corpo = (f'<div style="width:{W}px;height:{H}px;position:relative;overflow:hidden;background:{c["bg"]};color:{c["texto"]};font-family:Archivo,sans-serif">'
-             f'{foto}{_marca(ed, c, float(post.get("cbr_escala", 1.0)))}{bloco}'
+    marca = _marca(ed, c, float(post.get("cbr_escala", 1.0)))
+    if story:  # abaixo do nome do perfil e da barra de progresso do Story
+        marca = f'<div style="position:absolute;inset:0;z-index:6;transform:translateY(130px)">{marca}</div>'
+    corpo = (f'<div style="width:{W}px;height:{altura}px;position:relative;overflow:hidden;background:{c["bg"]};color:{c["texto"]};font-family:Archivo,sans-serif">'
+             f'{foto}{marca}{bloco}'
              # barra, sulcos e rodapé num grupo (#barra): no Reels animado eles entram junto com o texto
              f'<div id="barra" style="position:absolute;inset:0;z-index:3;pointer-events:none">'
              f'{_barra_tecida(c, esq) if ed == "america_latina" else _barra(c, esq, bool(post.get("barra_invertida")))}'
-             f'{_sulcos(c, esq) if ed == "roca" else ""}{rodape}</div>{_papel(c)}</div>')
+             f'{_sulcos(c, esq) if ed == "roca" else ""}{rodape}</div>{_papel(c, altura)}</div>')
     return _pagina(corpo, c["bg"])
 
 

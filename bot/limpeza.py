@@ -17,7 +17,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 FINAIS = {"publicado", "simulado", "descartado"}
 REGRAS = [
     (2, ["candidatas", "foto.jpg", "foto-*.jpg", "foto-recorte.png", "arte-*.html"]),
-    (7, ["reels.mp4", "story.jpg"]),
+    (7, ["reels.mp4", "story.jpg", "capa.jpg"]),
     (30, ["arte-*.jpg"]),
 ]
 

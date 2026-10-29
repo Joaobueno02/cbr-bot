@@ -210,12 +210,26 @@ def capturar(pagina, html_path: Path, saida: Path) -> dict:
     return fit
 
 
+def capturar_story(pagina, html_path: Path, saida: Path) -> dict:
+    """Story nativo 1080x1920: mesma captura da arte, com a janela do navegador na altura do Story."""
+    pagina.set_viewport_size({"width": 1080, "height": 1920})
+    try:
+        pagina.goto(html_path.as_uri())
+        pagina.wait_for_function("window.__fit !== undefined", timeout=30000)
+        fit = pagina.evaluate("window.__fit")
+        png = pagina.screenshot(clip={"x": 0, "y": 0, "width": 1080, "height": 1920}, type="png")
+        Image.open(io.BytesIO(png)).convert("RGB").save(saida, "JPEG", quality=95, subsampling=0)
+        return fit
+    finally:
+        pagina.set_viewport_size({"width": 1080, "height": 1350})
+
+
 def processar(pasta: Path, pagina) -> None:
     arq = pasta / "post.json"
     post = json.loads(arq.read_text(encoding="utf-8"))
     rel = {"quando": agora(), "artes": [], "avisos": []}
     try:
-        for padrao in ("arte-*.jpg", "quadro-*.jpg", "story.jpg", "reels.mp4", "reels-*"):
+        for padrao in ("arte-*.jpg", "quadro-*.jpg", "story.jpg", "capa.jpg", "reels.mp4", "reels-*"):
             for velha in pasta.glob(padrao):
                 velha.unlink()
         rod = post.get("rodape") or ""
@@ -238,17 +252,28 @@ def processar(pasta: Path, pagina) -> None:
             html_path.write_text(arte.post_unico(post, uri, recorte), encoding="utf-8")
             fit = capturar(pagina, html_path, pasta / "arte-1.jpg")
             rel["artes"].append({"arquivo": "arte-1.jpg", **fit})
-            # versão vertical: vai para os Stories quando a collab for aceita, e é a base do Reels
-            quadro_vertical(pasta / "arte-1.jpg", pasta / "story.jpg")
-            rel["story"] = "story.jpg"
+            # capa do Reels: a arte inteira no quadro vertical (no grid aparece o recorte 4:5 central = a arte)
+            quadro_vertical(pasta / "arte-1.jpg", pasta / "capa.jpg")
+            # Story nativo 9:16 (28/10/2026); se falhar, o Story é o quadro vertical, como antes
+            try:
+                story_html = pasta / "story.html"
+                story_html.write_text(arte.post_unico(post, uri, recorte, altura=1920), encoding="utf-8")
+                fit_story = capturar_story(pagina, story_html, pasta / "story.jpg")
+                if not fit_story.get("ok"):
+                    raise ValueError("texto não coube no Story")
+                rel["story"] = "story.jpg"
+            except Exception as e:
+                rel["avisos"].append(f"Story nativo falhou ({type(e).__name__}: {e}); saiu o quadro vertical")
+                quadro_vertical(pasta / "arte-1.jpg", pasta / "story.jpg")
+                rel["story"] = "story.jpg"
             if post.get("bombastica") or post.get("reels"):  # Reels comum (20/10/2026) usa o mesmo quadro aprovado
                 try:
                     gerar_reels_camadas(*camadas_reels(pagina, html_path, pasta), pasta / "reels.mp4")
-                    rel["reels"] = {"video": "reels.mp4", "capa": "story.jpg", "animado": True}
+                    rel["reels"] = {"video": "reels.mp4", "capa": "capa.jpg", "animado": True}
                 except Exception as e:  # o Reels animado nunca segura o post: cai para o zoom simples
                     rel["avisos"].append(f"Reels animado falhou ({type(e).__name__}: {e}); saiu o zoom simples")
-                    gerar_reels(pasta / "story.jpg", pasta / "reels.mp4")
-                    rel["reels"] = {"video": "reels.mp4", "capa": "story.jpg", "animado": False}
+                    gerar_reels(pasta / "capa.jpg", pasta / "reels.mp4")
+                    rel["reels"] = {"video": "reels.mp4", "capa": "capa.jpg", "animado": False}
                 finally:
                     for temp in pasta.glob("reels-*"):
                         temp.unlink()
