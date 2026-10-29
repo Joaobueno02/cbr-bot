@@ -1,6 +1,6 @@
 {
- "quando": "2026-10-29T12:14:11Z",
- "pauta_quando": "2026-10-29T12:14:10Z",
+ "quando": "2026-10-29T13:30:18Z",
+ "pauta_quando": "2026-10-29T13:30:17Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,39 +9,89 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 16,
+  "avaliados_agora": 20,
   "falhas_antes": null,
-  "pedidos_hoje": 6
+  "pedidos_hoje": 7
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 131,
- "novos_3h": 0,
- "esquentaram": 0,
+ "total_assuntos": 141,
+ "novos_3h": 8,
+ "esquentaram": 1,
  "candidatos": [
   {
-   "manchete": "BPC e medicamentos do SUS recebem reforço de R$ 5,1 bilhões",
+   "manchete": "'Demita petistas': governo pede remoção de posts e estuda 'lista suja' por assédio eleitoral, com restrição a crédito",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 12,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-10-29T01:03:44Z",
+   "link": "https://www.cartacapital.com.br/politica/governo-estuda-restringir-credito-a-empresas-por-assedio-eleitoral/",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "politica",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Governo age contra assédio eleitoral patronal e perseguição a petistas.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "TCU propõe alíquota de 11,3% para nova contribuição da reforma tributária em 2027, acima do esperado",
    "secoes": [
     "B"
    ],
    "veiculos": 16,
    "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-28T21:21:28Z",
-   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNOEJGQmR5d00wamtfeFJJeDktcGlBM3NwV3MzLWE0cmRDTTZkQUFPODZyaXpZT1huMmFpTzFfemV5MDRCVnlIX1VLR3BZZlFDZ0RBeGtGaWZJbDJtV2tUN2U1aGs4eUY2Y3FOOHVkS0p5MFRzbWtIalRVUlNHX2pmcGJmaHdDLWUtTHJUUkZiNUFROW14QXhNcGJ2dGw4TkMzVWdUeUNvLTJMWGZ4YUHSAa4BQVVfeXFMTThCRkJkeXdNMGprX3hSSXg5LXBpQTNzcFdzMy1hNHJkQ002ZEFBTzg2cml6WU9YbjJhaU8xX3pleTA0QlZ5SF9VS0dwWWZRQ2dEQXhrRmlmSWwybVdrVDdlNWhrOHlGNmNxTjh1ZEtKeTBUc21rSGpUVVJTR19qZnBiZmh3Qy1lLUxyVFJGYjVBUTlteEF4TXBidnRsOE5DM1VnVHlDby0yTFhmeGFB?oc=5",
-   "editoria": "saude",
-   "nota": 6,
+   "na_pauta_desde": "2026-10-28T19:08:04Z",
+   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/10/tcu-propoe-aliquota-de-113-para-nova-contribuicao-da-reforma-tributaria-em-2027.shtml",
+   "editoria": "politica",
+   "nota": 4,
    "esquentou": false,
-   "lente": [
-    "sus"
-   ],
+   "lente": [],
    "ia": {
-    "editoria": "saude",
+    "editoria": "economia",
     "I": 3,
     "V": 2,
     "P": 2,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Reforço no orçamento do SUS e BPC beneficia diretamente a população.",
+    "motivo": "TCU propõe alíquota alta para nova contribuição tributária.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Justiça Federal manda desocupar terra indígena no Norte de MT e autoriza uso de força policial",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 6,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-29T01:03:44Z",
+   "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQZ2hmaEk3c2lhVWRncjZDazUtRWxWcU8yQWVHa1FlUXM4djBwTVcyUktGTTR0TGFBOFNyeUFSeXNPR0tSVDA0am1lVS1oa2VQeU40aTRrbTBFX1B4cVQyR2JPN2NNaFFqZHlPMTZETEl2UnJnT2ZoY0hqNWZyUzA5V2ZQMXFBMGZZdEVSVUo5R2JONU1ZT2ZydWJSRlFzMmxYYVY4TFJSd09VaGJKeVNETlBHSVdfeVJ1ZkhkNGIyZ3JSRGw0dnlBanZOQWRyLV9hZU5hMXJXMGY1S0huVzJuVkRZYThWYTRhTWZv?oc=5",
+   "editoria": "roca",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "indigena"
+   ],
+   "ia": {
+    "editoria": "roca",
+    "I": 3,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Justiça manda desocupar terra indígena no MT com uso de força.",
     "soma": 5
    }
   },
@@ -50,8 +100,8 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 64,
-   "veiculos_3h": 7,
+   "veiculos": 60,
+   "veiculos_3h": 6,
    "na_pauta_desde": "2026-10-29T01:03:44Z",
    "link": "https://g1.globo.com/df/distrito-federal/noticia/2026/10/28/pf-indiciamentos-vorcaro-master.ghtml",
    "editoria": "politica",
@@ -79,7 +129,7 @@
     "A"
    ],
    "veiculos": 9,
-   "veiculos_3h": 1,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-28T16:10:58Z",
    "link": "https://iclnoticias.com.br/economia/alimentos-cresce-proibicao-bets/",
    "editoria": "roca",
@@ -99,21 +149,97 @@
    }
   },
   {
-   "manchete": "Flavio Bolsonaro on way to Ecuador from Argentina after fleeing Brazil",
+   "manchete": "Anvisa proíbe lote de linguiça de carne suína por risco de contaminação bacteriana grave",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 40,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-10-28T15:14:12Z",
+   "link": "https://revistaforum.com.br/brasil/anvisa-bacteria/",
+   "editoria": "saude",
+   "nota": 4,
+   "esquentou": true,
+   "lente": [],
+   "ia": {
+    "editoria": "saude",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Anvisa proíbe lote de linguiça por contaminação bacteriana.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Enem 2026 entra na reta final; Inep libera locais de prova e faz alerta aos candidatos",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 20,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-10-29T13:30:17Z",
+   "link": "https://tvtnews.com.br/enem-2026-locais-prova-disponiveis-para-consulta/",
+   "editoria": "eleicoes",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "educacao",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Enem 2026 na reta final com liberação de locais de prova.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "ONU aprova resolução contra embargo dos EUA à Cuba",
    "secoes": [
     "B",
     "D-america_latina"
    ],
-   "veiculos": 74,
-   "veiculos_3h": 11,
-   "na_pauta_desde": "2026-10-28T06:56:00Z",
-   "link": "https://www.france24.com/en/video/20261028-flavio-bolsonaro-on-way-to-ecuador-from-argentina-after-fleeing-brazil",
+   "veiculos": 31,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-28T21:21:28Z",
+   "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/10/assembleia-geral-da-onu-volta-a-aprovar-resolucao-contra-embargo-a-cuba.shtml",
    "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "ONU aprova resolução contra o embargo dos EUA a Cuba.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Bolsonaro pede autorização ao STF para receber presidente do PL após fuga de Flávio",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 29,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-29T13:30:17Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/10/28/jair-bolsonaro-pede-a-moraes-para-receber-visita-de-valdemar-costa-neto-em-prisao-domiciliar.ghtml",
+   "editoria": "politica",
    "nota": 7,
    "esquentou": false,
    "lente": [
     "bolsonar",
-    "flavio"
+    "flavio",
+    "pl"
    ],
    "ia": {
     "editoria": "politica",
@@ -123,53 +249,169 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Fuga de Flávio Bolsonaro continua rendendo manchetes.",
+    "motivo": "Bolsonaro pede autorização ao STF para receber aliado após fuga.",
     "soma": 4
    }
+  },
+  {
+   "manchete": "STF arquiva investigações ligadas ao inquérito das fake news",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-29T13:30:17Z",
+   "link": "https://www.brasil247.com/poder/fachin-arquiva-cinco-apuracoes-do-inquerito-das-fake-news/",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "inquerito"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "STF arquiva investigações do inquérito das fake news.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "INSS diz que mensagem sobre bloqueio de benefícios por falta de biometria é falsa",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 9,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-10-28T10:07:07Z",
+   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/10/inss-diz-que-mensagem-sobre-bloqueio-de-beneficios-por-falta-de-biometria-e-falsa.shtml",
+   "editoria": "economia",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "inss"
+   ],
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 2,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "boato",
+    "motivo": "Desmentido sobre bloqueio de benefícios do INSS por biometria.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "TV argentina mostra van supostamente com Flávio ao passar fronteira; veja",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-29T13:30:17Z",
+   "link": "https://noticias.uol.com.br/politica/ultimas-noticias/2026/10/29/van-flavio-argentina-canal-de-tv-video.ghtm",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "flavio"
+   ]
+  },
+  {
+   "manchete": "Aquecimento do Pacífico e El Niño forte ameaçam milhões com fome até 2027",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-29T13:30:17Z",
+   "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9IQWc5RWJTUWpobFpuMllReVI2MElNa2E2T01vZTllU2xnMktjWmFNSFB0VlFsa090WGxZcEQ3M1U5cGdGWk1kYWFHeVZheWRvZUdETWhodS1VZzJVQXhNRXVfMktjT1U3bHpiZExZV28tR0NZQXR1UlBldw?oc=5",
+   "editoria": "roca",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "fome"
+   ]
+  },
+  {
+   "manchete": "Ricardo Coutinho declara apoio a Hugo Motta, mas impõe condição: “Não fazemos bloco com a extrema direita”",
+   "secoes": [
+    "D-famosos"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-29T13:30:17Z",
+   "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPY2wzZGpzN3RHN1NMb1F0QmEyTW9NREU0LTZGM1YyVFdyalRrV2VzUmdydTh1OXBxVUFDLWREajBoOENjenFjZnd2RjBJTkJvM3FRbFBtZkZhMTZPSURyZFVyaUZLbWxXS0w1RVhvYWdlLWFhYlo2d01zOFZkTHNhNjdDRThHX3RUak1zVTlhbUpYTVBtODRwYmtzdlhiV2NnZk5ZaDJoSGFoM3F5WHpRQWFadEVrVUdUY0piTHhOWVoxSjVZdmpLdG5NS1BkYnV0cXVNUHR3TFlqTUNTWkRJYV96QQ?oc=5",
+   "editoria": "eleicoes",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "extrema direita"
+   ]
+  },
+  {
+   "manchete": "Desemprego mantém-se nos 5,6% em setembro, mas regista descida homóloga",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-29T13:30:17Z",
+   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQNjUxTnZiUTF5azVsMFBsZF9VX1BIa05wVnIwYUdSR1ZHWEJNSXczdndkWEg4SWNPazJsUHFLU1lpaExWYkxjR3dsTE9veXphWVh0SmVXOVd6MGpYTkpydEFxRlNyb3p5dlhRU1RTa1dqVzVIWUtVZlh1UmQ0TXNBeGEzakJxbF9mbmFINURTUXNqcVlJYWtGRWVzVmVmWXVUWlp0OFdnOUNUa1p2RXFYU08xdVVhM3lw?oc=5",
+   "editoria": "economia",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "desemprego"
+   ]
+  },
+  {
+   "manchete": "Projeto quer proibir cobrança de estacionamento para trabalhadores de shoppings",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-29T13:30:17Z",
+   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPV0VCMDdWdEhPWjE0SHNhOW82dWVkYWxxbm14RFVKMmtSYlFWZ2YwV1praHB2Wk15R3VSbE1TX0tnd3BaVDdZazhxWl9EYU5GT2QybHlzN2ZiMGx2WEI1V2JXWmttZzFPNWtxb0JSbjRjMDFoeDFoR1ZmcTVrZEc1M3Jva2VSOUNKRVlyU0M1VGlxYmc5VXVyRU1Mc3lZdFQwX2pld0JfYlFOY0owLThjZW40alNvc1VnYkxQblJqVmNYalU?oc=5",
+   "editoria": "economia",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "trabalhador"
+   ]
   }
  ],
  "rebaixados": [
   {
-   "manchete": "ONU vota novamente contra o bloqueio a Cuba em meio a denúncias de pressão dos Estados Unidos",
-   "veiculos": 22,
+   "manchete": "Banco Mundial prevê alta de 23% nos preços das commodities em 2026",
+   "veiculos": 5,
    "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-28T21:21:28Z",
+   "na_pauta_desde": "2026-10-29T01:03:44Z",
    "esquentou": false,
    "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 1,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Votação na ONU sobre o bloqueio a Cuba.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "\"Transfobia recreativa\": TJ dá 15 dias para deputados do PL se manifestarem",
-   "veiculos": 2,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-29T12:14:10Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "politica",
+    "editoria": "economia",
     "I": 2,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Ação na Justiça contra deputados por transfobia.",
+    "motivo": "Previsão do Banco Mundial sobre alta de commodities em 2026.",
     "soma": 3
    }
   },
   {
-   "manchete": "Justiça Federal manda desocupar terra indígena no Norte de MT e autoriza uso de força policial",
-   "veiculos": 4,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-29T01:03:44Z",
+   "manchete": "Flecha Noturna VII: Exército participa de operação de combate ao garimpo ilegal em terra indígena",
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-29T13:30:17Z",
    "esquentou": false,
    "ia": {
     "editoria": "roca",
@@ -179,33 +421,15 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Conflito em terra indígena no Norte de Mato Grosso.",
+    "motivo": "Exército participa de operação contra garimpo ilegal em terra indígena.",
     "soma": 3
    }
   },
   {
-   "manchete": "FOTOS: veja como é o jatinho particular que levou Flávio Bolsonaro e família aos EUA",
-   "veiculos": 653,
-   "veiculos_3h": 315,
-   "na_pauta_desde": "2026-10-29T12:14:10Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "politica",
-    "I": 1,
-    "V": 2,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Futilidade sobre luxo, foco menor para trabalhadores.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Muchos cubanoamericanos se sienten estafados por Trump, pero la mayoría votará republicano: “Utilizan el dolor de nosotros”",
-   "veiculos": 2,
+   "manchete": "Muere a los 92 años Cuauhtémoc Cárdenas, histórico líder de la izquierda mexicana",
+   "veiculos": 15,
    "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-29T10:07:41Z",
+   "na_pauta_desde": "2026-10-29T07:41:36Z",
    "esquentou": false,
    "ia": {
     "editoria": "america_latina",
@@ -215,68 +439,14 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Opinião de eleitores cubano-americanos nos EUA.",
+    "motivo": "Morte de Cuauhtémoc Cárdenas, figura histórica da esquerda mexicana.",
     "soma": 2
-   }
-  },
-  {
-   "manchete": "De rota pelo Paraguai à fronteira da Guiana: como bolsonaristas fugiram do Brasil antes de Flávio",
-   "veiculos": 7,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-28T19:08:04Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "politica",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Especulações sobre fugas de aliados.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Voo de Flávio Bolsonaro parte do Equador rumo a Miami",
-   "veiculos": 27,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-29T12:14:10Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "politica",
-    "I": 1,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Atualização menor sobre o paradeiro de Flávio.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "PF faz operação contra abuso sexual infantojuvenil em Vargem Alta/ES",
-   "veiculos": 5,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-10-29T12:14:10Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "gerais",
-    "I": 1,
-    "V": 0,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "acusação de crime sem fonte oficial",
-    "motivo": "Operação policial local sem repercussão nacional ampla.",
-    "soma": 1
    }
   },
   {
    "manchete": "Conab realiza pregão para transporte de 9,9 mil toneladas de milho",
    "veiculos": 5,
-   "veiculos_3h": 2,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-10-28T21:08:51Z",
    "esquentou": false,
    "ia": {
@@ -292,21 +462,111 @@
    }
   },
   {
-   "manchete": "PSOL contra a fome - 2026 - PSOL 50",
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-29T12:14:10Z",
+   "manchete": "UFRN abre seleção para mestrado em Engenharia Aeroespacial com 20 vagas",
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-29T13:30:17Z",
    "esquentou": false,
    "ia": {
-    "editoria": "eleicoes",
-    "I": 0,
+    "editoria": "educacao",
+    "I": 1,
     "V": 0,
     "P": 0,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Propaganda partidária isolada sem fato político novo.",
-    "soma": 0
+    "motivo": "Seleção para mestrado na UFRN.",
+    "soma": 1
+   }
+  },
+  {
+   "manchete": "Flávio Bolsonaro chega aos Estados Unidos após fugir do Brasil",
+   "veiculos": 254,
+   "veiculos_3h": 59,
+   "na_pauta_desde": "2026-10-29T01:15:33Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": true,
+    "risco": "",
+    "motivo": "Fato já publicado anteriormente sobre a fuga de Flávio.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "MPT recebe 941 denúncias de assédio eleitoral nos dois dias após a votação; listas de boicote viram alvo da Justiça",
+   "veiculos": 14,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-29T01:03:44Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "politica",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": true,
+    "risco": "",
+    "motivo": "Repetido: MPT recebe denúncias de assédio eleitoral e listas de boicote.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Defeated Brazilian presidential candidate Flavio Bolsonaro lands in Miami",
+   "veiculos": 78,
+   "veiculos_3h": 19,
+   "na_pauta_desde": "2026-10-28T06:56:00Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 3,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": true,
+    "risco": "",
+    "motivo": "Repetido: chegada de Flávio aos EUA.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "ONU: 130 países apoiam Cuba em votação contra bloqueio imposto pelos Estados Unidos",
+   "veiculos": 16,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-28T21:21:28Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": true,
+    "risco": "",
+    "motivo": "Repetido com novos dados sobre a votação da ONU pró-Cuba.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Al menos 69 muertos en un choque de trenes de alta velocidad en España tras una decisión \"inexplicable\" del centro de control",
+   "veiculos": 27,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-10-28T10:07:07Z",
+   "esquentou": true,
+   "ia": {
+    "editoria": "fora",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "tragedia com vítimas",
+    "motivo": "Acidente de trem na Espanha sem impacto direto no Brasil.",
+    "soma": 2
    }
   }
  ],
@@ -317,7 +577,7 @@
     "A"
    ],
    "veiculos": 9,
-   "veiculos_3h": 1,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-28T16:10:58Z",
    "link": "https://iclnoticias.com.br/economia/alimentos-cresce-proibicao-bets/",
    "editoria": "roca",
@@ -333,10 +593,22 @@
  ],
  "descartados_mais_quentes": [
   {
-   "manchete": "Al menos 69 muertos en un choque de trenes de alta velocidad en España tras una decisión \"inexplicable\" del centro de control",
-   "veiculos": 30,
-   "veiculos_3h": 3,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
+   "manchete": "Eduardo Bolsonaro e Ramagem publicam foto com Flávio após fuga para os EUA",
+   "veiculos": 481,
+   "veiculos_3h": 319,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Nunes Marques dá 10 dias para PGR se manifestar sobre revisão criminal de Bolsonaro",
+   "veiculos": 25,
+   "veiculos_3h": 2,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "O que se sabe sobre a colisão mortal entre dois trens na Espanha",
+   "veiculos": 21,
+   "veiculos_3h": 5,
+   "motivo": "sem editoria"
   },
   {
    "manchete": "Estados aprovam aumento do ICMS sobre gasolina, diesel e gás de cozinha a partir de 2027",
@@ -345,51 +617,39 @@
    "motivo": "repetido (20261028-2310-icms-gas-cozinha)"
   },
   {
-   "manchete": "Dozens killed in Spain after two high-speed trains collide",
-   "veiculos": 10,
-   "veiculos_3h": 5,
-   "motivo": "fora: crime ou tragedia (killed)"
+   "manchete": "Anatel vai exigir biometria para ativar e manter linhas de celular",
+   "veiculos": 13,
+   "veiculos_3h": 3,
+   "motivo": "sem editoria"
   },
   {
-   "manchete": "Após Mbappé, marca Hello Kitty pede desculpas por outra polêmica com a China",
-   "veiculos": 6,
-   "veiculos_3h": 3,
+   "manchete": "Aposta única de Rondonópolis (MT) leva os R$ 324 milhões do concurso 3077 da Mega-Sena",
+   "veiculos": 13,
+   "veiculos_3h": 2,
+   "motivo": "fora: entretenimento (mega sena)"
+  },
+  {
+   "manchete": "Valdemar Costa Neto diz que não gostou de carta golpista de Flávio Bolsonaro",
+   "veiculos": 12,
+   "veiculos_3h": 8,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Netanyahu aventaja en las elecciones de Israel, pero sigue sin mayoría para gobernar",
+   "veiculos": 11,
+   "veiculos_3h": 2,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Rays stun Brewers with 2-run rally in 12th inning and force World Series Game 5 with 4-3 win",
-   "veiculos": 5,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
+   "manchete": "Ataque russo em estação de trem ucraniana deixa 14 mortos; Ucrânia lança drones contra Moscou",
+   "veiculos": 9,
+   "veiculos_3h": 6,
+   "motivo": "fora: crime ou tragedia (mortos)"
   },
   {
-   "manchete": "Poucas esperanças de mudança entre os palestinos após eleições israelenses",
-   "veiculos": 4,
+   "manchete": "Spain’s 4 deadly train crashes this year, at a glance",
+   "veiculos": 9,
    "veiculos_3h": 4,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "BC decreta liquidação extrajudicial da instituição de pagamento MW",
-   "veiculos": 4,
-   "veiculos_3h": 4,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "European Central Bank President Lagarde resigns after months of speculation",
-   "veiculos": 4,
-   "veiculos_3h": 4,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Drone mata 13 em estação de trem na Ucrânia; Kiev faz maior ataque à Rússia",
-   "veiculos": 4,
-   "veiculos_3h": 3,
-   "motivo": "fora: crime ou tragedia (mata)"
-  },
-  {
-   "manchete": "Alaska Governor Orders Criminal Investigation Into Peltola Campaign",
-   "veiculos": 4,
-   "veiculos_3h": 3,
    "motivo": "sem editoria"
   }
  ]
