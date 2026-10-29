@@ -1,6 +1,6 @@
 {
- "quando": "2026-10-29T15:23:00Z",
- "pauta_quando": "2026-10-29T15:22:59Z",
+ "quando": "2026-10-29T16:15:48Z",
+ "pauta_quando": "2026-10-29T16:15:47Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,43 +9,63 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 18,
-  "falhas_antes": null,
-  "pedidos_hoje": 8
+  "avaliados_agora": 13,
+  "falhas_antes": "gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in",
+  "pedidos_hoje": 10
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 143,
- "novos_3h": 2,
+ "total_assuntos": 135,
+ "novos_3h": 7,
  "esquentaram": 0,
  "candidatos": [
   {
-   "manchete": "Milei y Trump ayudaron a Flávio Bolsonaro a huir de Brasil: prensa sudamericana",
+   "manchete": "Consumo de alimentos cresce após proibição das bets, aponta Abras",
    "secoes": [
-    "B",
-    "D-america_latina"
+    "A",
+    "B"
    ],
-   "veiculos": 79,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-10-29T01:15:33Z",
-   "link": "https://www.bbc.com/mundo/articles/c68xz74ne57wo?at_medium=RSS&at_campaign=rss",
-   "editoria": "america_latina",
-   "nota": 8,
+   "veiculos": 12,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-28T16:10:58Z",
+   "link": "https://vermelho.org.br/2026/10/28/familias-compram-mais-arroz-oleo-macarrao-e-cafe-apos-proibicao-das-bets-diz-abras/?utm_source=rss&utm_medium=rss&utm_campaign=familias-compram-mais-arroz-oleo-macarrao-e-cafe-apos-proibicao-das-bets-diz-abras",
+   "editoria": "roca",
+   "nota": 4,
    "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio",
-    "trump",
-    "milei"
-   ],
+   "lente": [],
    "ia": {
-    "editoria": "america_latina",
+    "editoria": "economia",
     "I": 3,
     "V": 3,
     "P": 2,
-    "formato": "reels",
+    "formato": "carrossel",
     "repetido": false,
-    "risco": "Acusação de crime sem fonte oficial formal",
-    "motivo": "Fuga de Flávio com apoio de Milei e Trump gera forte repercussão.",
+    "risco": "",
+    "motivo": "Aumento no consumo de alimentos após restrição às bets.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "'Demita petistas': governo pede remoção de posts e estuda 'lista suja' por assédio eleitoral, com restrição a crédito",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 12,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-29T01:03:44Z",
+   "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOdVJIMGVmR0tHa3BfTGJUVDBTX05TNGlKMUV1TmpBM0Q2OVJKM0Z1azEtVERQREk2NFpOQTdVai1wRm9BSkh6X1hlX1BnbzlkS3hxMmZXWUNnVkZNSEpkVmRCSVYtNkk0emp1QklmaEdNWWtaamtFcWdaUkpBc3o3TURxcU5wakpuemF2STVoeVBYT3RURU5hS0Q0dnJ1VVNDd0JBakZ0Q0I0RE02Qks2NzJhR29IQS1lSUNyQXR3RHhZV1dsU1Z3UUdTONIB2gFBVV95cUxPR2xQdjRabHF6WHlyRVltbGJ3UzBwRHIyZ0hadlQ3bTU0ZDN0UmE1azlhVlV0UGIzWWFTVi1rLVlUODZxNTJKNTJFdzdoZENFa2cwakFhd3BmTnZOY3ktVi0zSlNBVXlTLWp2ZGFqYVd5NG1CSVp2TlNVV1cxX2ZmdC1LRXVxcWxqUzZfWHhrRVBnMlgtZ0FjTF9iOXFwZmZrWExEVnNMNnhLaGRDUFM0QzJBRzJIcUxQS042TEZUelAzY1hkeVRmR09BYktqOVczUVFJOGg3NGtDUQ?oc=5",
+   "editoria": "eleicoes",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "politica",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Governo age contra assédio eleitoral patronal e perseguição a petistas.",
     "soma": 6
    }
   },
@@ -55,7 +75,7 @@
     "D-terra"
    ],
    "veiculos": 6,
-   "veiculos_3h": 1,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-29T01:03:44Z",
    "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQRzJhMlR2dDdFZUtrS1lhUlM4ZHpObVBESFRRcENvN29OQWxXTnVRTjE2Vlgwb3ZxTG9BR0t1Z0dobl9hZ1ZuMFU1VjlXVl9EMEF4U0l1TlFFMFNMc3gzemk3ZklxbEZMdjUySGZZWVlwb25VQ2ZJV0JScWY1ZTZKYjNZTGxjUi1waHREYVQxRkp6VXRKX3hSeWxacmkzWjFUOHBUd3g3OHZVVFpSQ1d2RGxXQkIwdWliVFV4SjI5R1p2RFgtLWx0dUluckExSkdBT3VnS1Ribw?oc=5",
    "editoria": "roca",
@@ -77,12 +97,66 @@
    }
   },
   {
+   "manchete": "Banco Mundial alerta para forte alta nos preços dos alimentos até 2027",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-29T01:03:44Z",
+   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQOUJqNFFSNVM4TEZYTDhxSUZ2NHlZWGdWWldJMElWRmUyekd2MlFaRzJpX2RpekNOdURRM0w5V3BRWFlCdjlZQkhrSnJ6MFBvUGJwTEFtb3F3N2hRd2hEcmJQX1Z3cHNESVRwUlp3dDM5OTVQZWxpVGdBVURHOUVaT2FFVU1NTEZFSGJYZHJidDRPeE52RkdVR04zX2E5eWozNnJuRnNQNXI4ZHIwTTNLZXRGUFTSAbgBQVVfeXFMUDhudVdXTW9laktxSGZHZVVHZTZaVnctV3Y1TnlIUGx0LWJkNmM1Vnc4NkFDNklLckp2NzNsaFNzMXJPQVhERTB4SWNiSHR0czduWlRvQ3RrXzlxVExPTk1VYWwzOW1pUXcyc0x0LWRuZ2NKWThCaWV0UEF2TWtxN2t1OEszZHh2X3kwXzdJN0h0dUJ1X3d0U0psX0hBY1R6SEw1UWYwR0hlbm5LUGVyZUJJUUIzMlJsUw?oc=5",
+   "editoria": "roca",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "banco"
+   ],
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Alerta do Banco Mundial sobre alta nos alimentos até 2027.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Alunos de Medicina em MG hostilizam bolsistas em grupo de WhatsApp após vitória de Lula: 'divide a bolsa com o MST'",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-29T16:15:47Z",
+   "link": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNX0FkRUZCamdhdUhnekxQaXN2NTdpZ3Nqdi13V0xhYm8wU3NVYk5UUlJfbnZtZWY2LUNLOUFfelRvMWRDZXE4ZjN4WWlmbS1xeVNRMHVYX1NBTTFGSUxWVWVodjluWFkySzJ5Q2VFMURrU3doWFJPZ2syZ2o5UFRzYTl5QkRNTVVfVzBqRTA4Z0RTWWdINUkzeGQ3TnBTSmxDSFhhUzFuZVVDQXBVUkhuUkFGeWlwbVJENVpuamVjdlZuMVlTemN5X05qS2Y4bEJjZDluSWc0cFI0SHlhaDR3YlRLYWoxVDJHVEE4VnNMZXlJNmd0LWViQXk0djh4NzJpZkdVNjJPN2VKaU3SAZoCQVVfeXFMTjFqaldlQ2hpWks5ejNxM1VmNGJUVERnTGs1MlVDYmgwMUZkYmhmV2cxc1ZlM2hZQ3NHODJtVUllWDREaVhMeVp3WmR0VG5EdmJvV2Q1SWg5ajVwRHRGZUs4Z2pIbFVIZHJUUWVlXzV3WGNPVnNmSjVuY1VWV2pma1VzSzE1Zmd2cW44Q1RFaUhpUy1SWU5XT3B0QUFmNmZQSlBmeTltaTlfdG9SSlFIR1ZmNVhuNGtCcC1hNGE1emM1YXZwUVRjam9hcURvUTFkLXFzY211UG1MLUxudWFTNlIyT0JybTdOTGFmdnlxN1d3UDJpd0VLSkVJNlhva1ZWa0FaZXpqN0JtUEZMTFM0TDhON29HT253ZVB3?oc=5",
+   "editoria": "roca",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "mst"
+   ],
+   "ia": {
+    "editoria": "educacao",
+    "I": 2,
+    "V": 3,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Estudantes de medicina hostilizam bolsistas em grupo.",
+    "soma": 5
+   }
+  },
+  {
    "manchete": "PF indicia Vorcaro e ex-presidente do BRB por crimes financeiros na injeção de R$ 17 bi no Master",
    "secoes": [
     "B"
    ],
-   "veiculos": 68,
-   "veiculos_3h": 6,
+   "veiculos": 65,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-10-29T01:03:44Z",
    "link": "https://g1.globo.com/df/distrito-federal/noticia/2026/10/28/pf-indiciamentos-vorcaro-master.ghtml",
    "editoria": "politica",
@@ -101,6 +175,32 @@
     "repetido": false,
     "risco": "",
     "motivo": "Indiciamento por rombo em banco público atinge grandes nomes.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Janones e militância deram impulso decisivo à campanha de Lula",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-10-29T16:15:47Z",
+   "link": "https://www1.folha.uol.com.br/poder/2026/10/janones-e-militancia-deram-impulso-decisivo-a-campanha-de-lula.shtml",
+   "editoria": "eleicoes",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Análise sobre o papel de Janones e militância na campanha.",
     "soma": 4
    }
   },
@@ -134,39 +234,42 @@
    }
   },
   {
-   "manchete": "Proibição de bets aumentou em 6,5% a venda de alimentos, diz Abras",
+   "manchete": "Deputados argentinos pedem explicações de Milei por fuga de Flávio",
    "secoes": [
-    "A"
+    "D-america_latina"
    ],
-   "veiculos": 12,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-28T16:10:58Z",
-   "link": "https://vermelho.org.br/2026/10/28/familias-compram-mais-arroz-oleo-macarrao-e-cafe-apos-proibicao-das-bets-diz-abras/?utm_source=rss&utm_medium=rss&utm_campaign=familias-compram-mais-arroz-oleo-macarrao-e-cafe-apos-proibicao-das-bets-diz-abras",
-   "editoria": "roca",
-   "nota": 4,
+   "veiculos": 17,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-28T10:07:07Z",
+   "link": "https://www.gazetadopovo.com.br/mundo/passagem-de-flavio-bolsonaro-pela-argentina-amplia-crise-entre-lula-e-milei/",
+   "editoria": "america_latina",
+   "nota": 7,
    "esquentou": false,
-   "lente": [],
+   "lente": [
+    "flavio",
+    "milei"
+   ],
    "ia": {
-    "editoria": "economia",
+    "editoria": "america_latina",
     "I": 2,
     "V": 2,
     "P": 2,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Proibição de bets ajudou vendas de alimentos nos supermercados.",
+    "motivo": "Deputados cobram Milei por fuga de Flávio, gerando crise diplomática.",
     "soma": 4
    }
   },
   {
-   "manchete": "Anvisa recolhe lote de linguiça com bactéria que causa infecção grave; veja qual",
+   "manchete": "Anvisa aprova cinco novas canetas de GLP-1",
    "secoes": [
     "B"
    ],
-   "veiculos": 29,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-28T15:14:12Z",
-   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQckxaTW1VTGJsMHl5cE8wYmhGdks2Zk1RcnZWbThvU1RHUnR2dmgyb1ZPVXBUejN0Z0RaWDNrSXpqWUV3aGh0UmNOSkRIQUZsQnJvODVGczNGbHNSVTFmZzdyRUlxUEh1NGhwbTdORTJad21peGhhMTdCWURxQjVrQTMyWHVnVEZ5UkY4am11VXBkOFkwc295c28td0xPQVFZNFIwMDloS3E0UmhaeFotd1htM3JSZUFXV2c?oc=5",
+   "veiculos": 31,
+   "veiculos_3h": 11,
+   "na_pauta_desde": "2026-10-29T16:15:47Z",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOOTBsOTBIUGhkYV9zOVRSZzZIZzBSekF4Nm9OUkpOS25ILUlldEczVHMyNFlhbXBvbEJRWEFOWndORm5ma0hFYlFuYlY5emRpaHYwOG5Vd0l2SHpGYWdNeE5fWnhmVjNFWHlCVmFOY0hlNGI2aWZuVDFMYTNKYnZtWkNNakpicFZwVDZIZ3dvVWZXa01CcEdpNGlTTlVpSXhYOWlFZ2l3TQ?oc=5",
    "editoria": "saude",
    "nota": 4,
    "esquentou": false,
@@ -179,26 +282,55 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Anvisa recolhe lote de linguiça contaminada por bactéria grave.",
+    "motivo": "Anvisa aprova novas canetas de GLP-1 para diabetes e obesidade.",
     "soma": 4
    }
   },
   {
-   "manchete": "Benefício dado a Flávio foi negado por Trump a milhares que fugiam da guerra, fome e morte",
+   "manchete": "Flávio ignora Senado e não comunica saída do país",
    "secoes": [
-    "D-terra"
+    "B",
+    "C-nacional"
    ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-29T15:22:59Z",
-   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNUWxSZUZLc3NSeFF6cUNXTThOeGEtVzUxd01QNnRicVJaY01CNTNlLUs2U3FVMDVseHZoOGxCb1MxR2NzNjI5dWpTZkFaRkVJSVRMS3U3RnNubGJKaHQzcy1KMVhZVnNrdDdXZGt1ZnNua3ItR0FaczllN0RWZFVJZzNMUVd3b3p1NzFxSFFXczhGaTh5VzNPdU1OSGRNYjZEaUxZUVVFUkpENV9vRlZUSmZ6Q1FwNk1X?oc=5",
-   "editoria": "roca",
+   "veiculos": 3,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-29T16:15:47Z",
+   "link": "https://www1.folha.uol.com.br/colunas/painel/2026/10/flavio-ignora-senado-e-nao-comunica-saida-do-pais.shtml",
+   "editoria": "politica",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "flavio"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Flávio ignora Senado e não comunica saída do país.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Santilli defendió la salida de Flávio Bolsonaro de Argentina: “No tenía impedimentos de Interpol”",
+   "secoes": [
+    "B",
+    "C-internacional",
+    "D-america_latina"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-29T16:15:47Z",
+   "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOSzBGV0NSUXFZb3BnSUVnWUN0Yzd6M0dsTVRJUFE2cHUzb3RLNy1hZGR0bkVfQnlrcXVUS1dTUmhYT3A5ZmZaZDVuLXlQWXFmVU9ZazJmUjVpb2NMYnFoTC1MYlA2QjQzQ2g2MThjMkJZMThBdFMzaGh1QVhQeUNQZmxQUkN2X08xbWl5YmVCUTQ4aEtLMEdLbDFneGZhYk5YamNyZWMyeGNzUEdGZmpncjZWV0czWFE1amY2VTNWcnByclBQYzZGMkFhMG0yaXdTOXVaMFln0gHwAUFVX3lxTE9SY3hDTHFMeHZ3TGlVSl9HYy1BeGlTbHYtLTQyeXhtbWxLWGQ0bWZHVkFRNDZ1a29jREJZcHR0dVYzNTdqSmtRdmRaQ1lJcFBPcENqRTlfTW5nWWdDdDZ5NEdiQkZycHhia0MxVThtX0tDaFFXYjliT0JFUC1mWnM2dWF2OURZVU9qTnNMcW1ob2VaZlBTd196V2RxdXRzS2t6SGRQeVJNemZHSFFOVHhTWmtoaGFSVHRYUHdiTUVBS1FsMWRyOXFCRDZPLWxBQ1dIUGYxdmpkUU1nWFZtQVZyal93Z0RVc1Z2MFhra3VhdQ?oc=5",
+   "editoria": "america_latina",
    "nota": 5,
    "esquentou": false,
    "lente": [
-    "fome",
-    "flavio",
-    "trump"
+    "bolsonar",
+    "flavio"
    ],
    "ia": {
     "editoria": "america_latina",
@@ -208,7 +340,34 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Crítica ao contraste de tratamento migratório dado a Flávio e refugiados.",
+    "motivo": "Ministro argentino defende saída de Flávio por falta de alerta da Interpol.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Incêndio destrói o assentamento Bela Vista, em Jacundá, sudeste do estado",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-29T16:15:47Z",
+   "link": "https://g1.globo.com/rr/roraima/noticia/2026/10/29/incendio-destroi-casa-e-moveis-em-boa-vista.ghtml",
+   "editoria": "roca",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "incendio"
+   ],
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "Incêndio destrói assentamento Bela Vista no Pará.",
+    "motivo": "Incêndio destrói assentamento Bela Vista, conflito no campo.",
     "soma": 4
    }
   }
@@ -216,8 +375,8 @@
  "rebaixados": [
   {
    "manchete": "STF arquiva investigações ligadas ao inquérito das fake news",
-   "veiculos": 15,
-   "veiculos_3h": 14,
+   "veiculos": 27,
+   "veiculos_3h": 26,
    "na_pauta_desde": "2026-10-29T13:30:17Z",
    "esquentou": true,
    "ia": {
@@ -233,45 +392,9 @@
    }
   },
   {
-   "manchete": "La ONU aprueba la resolución contra el embargo de EEUU a Cuba pese a perder apoyos clave",
-   "veiculos": 12,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-28T21:21:28Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 1,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "ONU aprova resolução contra embargo a Cuba, mantendo pressão geopolítica.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Delcy Rodríguez exige que Banco da Inglaterra devolva ouro da Venezuela",
-   "veiculos": 7,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-28T21:08:51Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 1,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Cobrança de ouro venezuelano retido na Inglaterra tem forte apelo anti-imperialista.",
-    "soma": 3
-   }
-  },
-  {
    "manchete": "Inscrições para concurso da Ufba com 139 vagas terminam nesta quinta; salários vão até R$ 5,2 mil",
-   "veiculos": 10,
-   "veiculos_3h": 3,
+   "veiculos": 11,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-10-29T15:22:59Z",
    "esquentou": false,
    "ia": {
@@ -287,45 +410,27 @@
    }
   },
   {
-   "manchete": "INSS diz que mensagem sobre bloqueio de benefícios por falta de biometria é falsa",
-   "veiculos": 9,
+   "manchete": "Saúde desenvolve painel para monitorar cobertura vacinal contra meningite em adolescentes",
+   "veiculos": 7,
    "veiculos_3h": 3,
-   "na_pauta_desde": "2026-10-28T10:07:07Z",
-   "esquentou": false,
+   "na_pauta_desde": "2026-10-29T01:03:44Z",
+   "esquentou": true,
    "ia": {
-    "editoria": "gerais",
-    "I": 2,
+    "editoria": "saude",
+    "I": 1,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Alerta sobre golpe do INSS e falsa mensagem de biometria.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Flávio já deve se lançar candidato a presidente em 2030 para barrar Tarcísio e Michelle",
-   "veiculos": 2,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-29T15:22:59Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Especulações sobre candidaturas para 2030 após derrota recente.",
-    "soma": 3
+    "motivo": "Painel de monitoramento de vacinação da meningite pelo SUS.",
+    "soma": 2
    }
   },
   {
    "manchete": "Muere a los 92 años Cuauhtémoc Cárdenas, histórico líder de la izquierda mexicana",
    "veiculos": 18,
-   "veiculos_3h": 3,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-10-29T07:41:36Z",
    "esquentou": false,
    "ia": {
@@ -341,9 +446,27 @@
    }
   },
   {
+   "manchete": "Haití aplaza sus primeras elecciones presidenciales en una década para julio de 2027",
+   "veiculos": 12,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-29T16:15:47Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Eleições no Haiti adiadas, baixo impacto direto no Brasil.",
+    "soma": 2
+   }
+  },
+  {
    "manchete": "O desfecho do inquérito contra Monark no STF",
    "veiculos": 2,
-   "veiculos_3h": 2,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-10-29T15:22:59Z",
    "esquentou": false,
    "ia": {
@@ -359,50 +482,87 @@
    }
   },
   {
-   "manchete": "Quiénes son los hermanos Passaglia que quieren hacerle frente a Javier Milei en 2027",
-   "veiculos": 4,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-29T01:03:44Z",
+   "manchete": "Conab realiza pregão para contratar transporte de 9,9 mil toneladas de milho",
+   "veiculos": 6,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-28T21:08:51Z",
    "esquentou": false,
    "ia": {
-    "editoria": "america_latina",
+    "editoria": "roca",
     "I": 1,
-    "V": 0,
+    "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Articulação eleitoral local na Argentina para 2027.",
-    "soma": 1
+    "motivo": "Conab realiza pregão para transporte de milho.",
+    "soma": 2
    }
   },
   {
-   "manchete": "UFRN abre seleção para mestrado em Engenharia Aeroespacial com 20 vagas",
-   "veiculos": 2,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-29T13:30:17Z",
+   "manchete": "Trump diz que Lula pediu para ele não tomar lado na eleição, mas que situação do Brasil é 'vergonhosa'; siga",
+   "veiculos": 10,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-10-28T21:11:33Z",
+   "esquentou": true,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": true,
+    "risco": "",
+    "motivo": "Fato amplamente repetido sobre Flávio nos EUA.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Governo alerta para fake news nas redes envolvendo fim da escala 6x1 e programas sociais",
+   "veiculos": 11,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-10-29T15:22:59Z",
    "esquentou": false,
    "ia": {
-    "editoria": "educacao",
-    "I": 1,
-    "V": 0,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
+    "editoria": "gerais",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": true,
     "risco": "",
-    "motivo": "Seleção para mestrado na UFRN.",
-    "soma": 1
+    "motivo": "Já abordado anteriormente sobre fake news da escala 6x1.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Defeated Brazilian presidential candidate Flavio Bolsonaro lands in Miami",
+   "veiculos": 83,
+   "veiculos_3h": 22,
+   "na_pauta_desde": "2026-10-28T21:11:33Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 3,
+    "V": 3,
+    "P": 1,
+    "formato": "feed",
+    "repetido": true,
+    "risco": "",
+    "motivo": "Fato já publicado sobre a chegada de Flávio a Miami.",
+    "soma": 6
    }
   }
  ],
  "obrigatorios": [
   {
-   "manchete": "Proibição de bets aumentou em 6,5% a venda de alimentos, diz Abras",
+   "manchete": "Consumo de alimentos cresce após proibição das bets, aponta Abras",
    "secoes": [
-    "A"
+    "A",
+    "B"
    ],
    "veiculos": 12,
-   "veiculos_3h": 0,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-10-28T16:10:58Z",
    "link": "https://vermelho.org.br/2026/10/28/familias-compram-mais-arroz-oleo-macarrao-e-cafe-apos-proibicao-das-bets-diz-abras/?utm_source=rss&utm_medium=rss&utm_campaign=familias-compram-mais-arroz-oleo-macarrao-e-cafe-apos-proibicao-das-bets-diz-abras",
    "editoria": "roca",
@@ -418,63 +578,63 @@
  ],
  "descartados_mais_quentes": [
   {
-   "manchete": "Flávio Bolsonaro e família desembarcam em Miami após fuga do Brasil",
-   "veiculos": 728,
-   "veiculos_3h": 475,
+   "manchete": "Flávio Bolsonaro llega a EEUU tras abandonar Brasil",
+   "veiculos": 789,
+   "veiculos_3h": 489,
    "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Ataque russo em estação de trem ucraniana deixa 14 mortos; Ucrânia lança drones contra Moscou",
+   "veiculos": 18,
+   "veiculos_3h": 3,
+   "motivo": "fora: crime ou tragedia (mortos)"
   },
   {
    "manchete": "Estados aprovam aumento do ICMS sobre gasolina, diesel e gás de cozinha a partir de 2027",
-   "veiculos": 17,
-   "veiculos_3h": 4,
+   "veiculos": 15,
+   "veiculos_3h": 2,
    "motivo": "repetido (20261028-2310-icms-gas-cozinha)"
   },
   {
-   "manchete": "Governo diz acompanhar 45 casos de violência política nas eleições e promete cobrar punições",
-   "veiculos": 16,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Brasileiros terão que validar biometria para manter linhas de celular, determina Anatel",
+   "manchete": "Linhas de celular terão biometria facial obrigatória a partir de 2027",
    "veiculos": 13,
    "veiculos_3h": 4,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Spain’s Second High-Speed Train Crash This Year Leaves Dozens Dead",
-   "veiculos": 9,
+   "manchete": "Presidente do BCE, Christine Lagarde, renuncia e deixará cargo em fevereiro",
+   "veiculos": 12,
    "veiculos_3h": 3,
-   "motivo": "fora: crime ou tragedia (dead)"
+   "motivo": "sem editoria"
   },
   {
-   "manchete": "Wall Street Journal acusa governo Lula de perseguição política a Flávio Bolsonaro",
-   "veiculos": 8,
-   "veiculos_3h": 7,
+   "manchete": "Checo Pérez renueva su contrato con Cadillac F1 hasta 2029 antes del GP de México",
+   "veiculos": 12,
+   "veiculos_3h": 1,
+   "motivo": "fora: esporte (f1)"
+  },
+  {
+   "manchete": "Xuxa vai ser avó! Sasha anuncia gravidez do primeiro filho",
+   "veiculos": 10,
+   "veiculos_3h": 10,
    "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Alberto Weretilneck confirmó que Río Negro adelantará las elecciones y respaldó la eliminación de las PASO",
+   "veiculos": 9,
+   "veiculos_3h": 2,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Cuauhtémoc Cárdenas, historic Mexican politician and former presidential candidate, dies at 92",
+   "veiculos": 8,
+   "veiculos_3h": 1,
+   "motivo": "fora: crime ou tragedia (dies)"
   },
   {
    "manchete": "BC decreta liquidação extrajudicial da instituição de pagamento MW",
    "veiculos": 7,
    "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Brasil manifesta solidariedade à Espanha após colisão de trens com mais de 60 mortos",
-   "veiculos": 7,
-   "veiculos_3h": 2,
-   "motivo": "fora: crime ou tragedia (mortos)"
-  },
-  {
-   "manchete": "Cuauhtémoc Cárdenas, historic Mexican politician and former presidential candidate, dies at 92",
-   "veiculos": 6,
-   "veiculos_3h": 3,
-   "motivo": "fora: crime ou tragedia (dies)"
-  },
-  {
-   "manchete": "Cinco estados concentram quase metade dos fragmentos de vegetação nativa do Brasil",
-   "veiculos": 5,
-   "veiculos_3h": 4,
    "motivo": "sem editoria"
   }
  ]
