@@ -1,5 +1,5 @@
 {
-  "status": "renderizar",
+  "status": "erro_render",
   "formato": "unico",
   "editoria": "politica",
   "chapeu": "ASSÉDIO ELEITORAL",
@@ -66,5 +66,12 @@
       "lista do DOPS com 460 trabalhadores de 63 empresas do ABC (Brasil 247) — legenda com 'segundo o Brasil 247'"
     ],
     "fonte_primaria": null
+  },
+  "render": {
+    "quando": "2026-10-30T15:20:12Z",
+    "artes": [],
+    "avisos": [],
+    "erro": "ValueError: foto com 600x400; o mínimo é 1000 px de largura. Escolha outra foto (use a sonda).",
+    "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/cbr-bot/cbr-bot/bot/render.py\", line 239, in processar\n    meta = baixar_foto(post[\"foto_url\"], pasta / \"foto.jpg\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/cbr-bot/cbr-bot/bot/render.py\", line 62, in baixar_foto\n    raise ValueError(f\"foto com {w}x{h}; o mínimo é {LARGURA_MIN} px de largura. Escolha outra foto (use a sonda).\")\nValueError: foto com 600x400; o mínimo é 1000 px de largura. Escolha outra foto (use a sonda).\n"
   }
 }
