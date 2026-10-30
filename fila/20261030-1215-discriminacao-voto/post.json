@@ -1,12 +1,12 @@
 {
-  "status": "erro_render",
+  "status": "renderizar",
   "formato": "unico",
   "editoria": "politica",
   "chapeu": "ASSÉDIO ELEITORAL",
   "titulo": "Demitir trabalhador por causa do voto pode virar *crime*, propõe PT",
   "subtitulo": "Projeto da bancada na Câmara prevê de **2 a 5 anos** de prisão para quem demitir, boicotar ou fazer lista por voto, e até **6 anos** se for pelas redes.",
   "credito_foto": "Foto: Câmara dos Deputados",
-  "foto_url": "repo:fila/20261030-1215-discriminacao-voto/candidatas/02.jpg",
+  "foto_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Pedro_Uczai_03.jpg/3840px-Pedro_Uczai_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "foto_posicao": "35% 30%",
   "alt": "O deputado Pedro Uczai, de terno azul e gravata vermelha, fala ao microfone numa comissão da Câmara, com a mão direita erguida.",
   "legenda": "Demitir alguém porque votou diferente do patrão pode virar crime.\n\nA bancada do PT na Câmara protocolou na quinta (29) um projeto de lei liderado por Pedro Uczai (PT-SC) que põe no Código Penal a discriminação por voto ou convicção política no trabalho e nos negócios. Segundo o Metrópoles, 65 deputados assinam.\n\nO que vira crime: montar ou espalhar lista de pessoas por causa do voto para estimular demissão ou boicote, demitir ou deixar de contratar por motivo político, exigir que o trabalhador revele em quem votou e vigiar o que o funcionário posta para persegui-lo.\n\nA pena prevista é de 2 a 5 anos de prisão, mais multa. Se a perseguição for feita pelas redes sociais, aplicativos ou meios de comunicação, sobe para até 6 anos. E pode aumentar de um terço até a metade quando houver ação combinada de três ou mais pessoas, uso de cargo público ou prejuízo real à vítima, como perder o emprego.\n\nO projeto também muda a lei que proíbe discriminação no trabalho (Lei 9.029/1995) para incluir o voto e a filiação partidária. Na justificativa, os autores citam listas de boicote contra comerciantes e trabalhadores depois da eleição e 1.937 denúncias de assédio eleitoral recebidas pelo Ministério Público do Trabalho até o dia seguinte à votação. Segundo o Brasil 247, eles lembram também a lista do DOPS com 460 trabalhadores de 63 empresas do ABC, feita com ajuda de patrões na ditadura.\n\nPor enquanto é só proposta: ainda precisa passar pela Câmara e pelo Senado. As reportagens não trouxeram reação da oposição.\n\nVoto é secreto. Emprego não é prêmio para quem vota do jeito que o patrão quer.\n\nManda pra quem levou recado do chefe por causa do voto.\n\nFontes: Metrópoles, Brasil 247 (out/2026). Foto: Câmara dos Deputados.",
@@ -67,11 +67,10 @@
     ],
     "fonte_primaria": null
   },
-  "render": {
-    "quando": "2026-10-30T15:20:12Z",
-    "artes": [],
-    "avisos": [],
-    "erro": "ValueError: foto com 600x400; o mínimo é 1000 px de largura. Escolha outra foto (use a sonda).",
-    "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/cbr-bot/cbr-bot/bot/render.py\", line 239, in processar\n    meta = baixar_foto(post[\"foto_url\"], pasta / \"foto.jpg\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/cbr-bot/cbr-bot/bot/render.py\", line 62, in baixar_foto\n    raise ValueError(f\"foto com {w}x{h}; o mínimo é {LARGURA_MIN} px de largura. Escolha outra foto (use a sonda).\")\nValueError: foto com 600x400; o mínimo é 1000 px de largura. Escolha outra foto (use a sonda).\n"
-  }
+  "historico_revisao": [
+    {
+      "quando": "2026-10-30T15:32Z",
+      "motivo": "erro_render: candidata local era miniatura 600x400; troca para o arquivo original do Commons (3840 px)"
+    }
+  ]
 }
