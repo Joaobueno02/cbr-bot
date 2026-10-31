@@ -1,6 +1,6 @@
 {
- "quando": "2026-10-31T19:07:28Z",
- "pauta_quando": "2026-10-31T19:07:24Z",
+ "quando": "2026-10-31T19:33:36Z",
+ "pauta_quando": "2026-10-31T19:33:32Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,14 +9,14 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 20,
+  "avaliados_agora": 17,
   "falhas_antes": null,
-  "pedidos_hoje": 11
+  "pedidos_hoje": 12
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 174,
+ "total_assuntos": 179,
  "novos_3h": 0,
- "esquentaram": 0,
+ "esquentaram": 1,
  "candidatos": [
   {
    "manchete": "Itamaraty convoca representante da Embaixada da Argentina após Flávio cruzar fronteira do Brasil com o país vizinho e fugir para EUA",
@@ -24,13 +24,13 @@
     "B",
     "D-america_latina"
    ],
-   "veiculos": 158,
-   "veiculos_3h": 84,
+   "veiculos": 352,
+   "veiculos_3h": 201,
    "na_pauta_desde": "2026-10-30T14:07:29Z",
    "link": "https://g1.globo.com/politica/noticia/2026/10/30/itamaraty-convoca-representante-da-embaixada-da-argentina-apos-flavio-cruzar-fronteira-do-brasil-com-o-pais-vizinho-e-fugir-para-eua.ghtml",
    "editoria": "america_latina",
    "nota": 6,
-   "esquentou": false,
+   "esquentou": true,
    "lente": [
     "flavio"
    ],
@@ -38,11 +38,38 @@
     "editoria": "america_latina",
     "I": 3,
     "V": 3,
-    "P": 3,
+    "P": 2,
     "formato": "reels",
     "repetido": false,
     "risco": "",
-    "motivo": "Itamaraty convoca diplomata argentino após fuga de Flávio; alta repercussão.",
+    "motivo": "Crise diplomática com a Argentina pela fuga de Flávio Bolsonaro.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Desemprego em 5,2% no 3° trimestre é o menor para o período desde 2012",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 46,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-10-30T14:07:29Z",
+   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQc1NCQzFBWlFJS01STm5WejlicnhhQkpzS0tSQkFkU2RhVnlZRlk4UXpIc1RUcm4yZWJodWQzYi0yUS1QMnFFU0JJYm1EMWVaUEJ6bGdoSkNnTkNDRC1LWEE3czhXcUhvZ0ItZnUwMjlWTmlTaUNtTElxV1h0U1JtM1EzeGRua3R5U3hWNDFIeWh2OWZEUk5Z?oc=5",
+   "editoria": "economia",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "desemprego"
+   ],
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Queda histórica do desemprego atinge grande parte dos trabalhadores.",
     "soma": 6
    }
   },
@@ -74,6 +101,34 @@
    }
   },
   {
+   "manchete": "Cesta básica pesa no orçamento: alta de preços em outubro exige planejamento",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-30T18:06:52Z",
+   "link": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQaHR4Q00yTmtLeGJ6cHNJSWFxUzNOOW5RaWNIcW8tRHZWNDhQWHVtQkxCei1leDhTUy1Fb0E1M1hERkFhTXdZOU9CdDRxVUtyMmtPbkRWeXV0dTdPbUktaTJQajlhUTVMUl90Q1d4NXdCSWVKd2ZEYV9LMjIyT0pFSjJpZzhIMHZhbllXRWRQbVIzdE0yb1k3MDBHRmVfRURyc0Nydk9ObmVzQ0xlQ0JjS3pvWnE4elBjZG16cWlZMmNqTFlrNzhaSUxuQ0VSRHQtbUNMalJ0QVFWRmZVNDBINEN6eGNGTzlYUzNiZEQyN2ZzSmpBNDN2ems4ejdHN1XSAf8BQVVfeXFMUGh0eENNMk5rS3hienBzSUlhcVMzTjluUWljSHFvLUR2VjQ4UFh1bUJMQnotZXg4U1MtRW9BNTNYREZBYU13WTlPQnQ0cVVLcjJrT25EVnl1dHU3T21JLWkyUGo5YVE1TFJfdENXeDV3QkllSndmRGFfSzIyMk9KRUoyaWc4SDB2YW5ZV0VkUG1SM3RNMm9ZNzAwR0ZlX0VEcnNDcnZPTm5lc0NMZUNCY0t6b1pxOHpQY2RtenFpWTJjakxZazc4WklMbkNFUkR0LW1DTGpSdEFRVkZmVTQwSDRDenhjRk85WFMzYmREMjdmc0pqQTQzdnprOHo3RzdV?oc=5",
+   "editoria": "roca",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "cesta basica",
+    "orcamento"
+   ],
+   "ia": {
+    "editoria": "roca",
+    "I": 3,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Alta na cesta básica afeta o orçamento popular.",
+    "soma": 5
+   }
+  },
+  {
    "manchete": null,
    "secoes": [
     "A"
@@ -92,13 +147,13 @@
    "ia": {
     "editoria": "politica",
     "I": 3,
-    "V": 3,
+    "V": 2,
     "P": 2,
-    "formato": "reels",
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Alerta sobre movimentação da direita contra o fim da escala 6x1.",
-    "soma": 6
+    "motivo": "Ataque à escala 6x1 por senadores mobiliza trabalhadores.",
+    "soma": 5
    }
   },
   {
@@ -117,13 +172,13 @@
    "ia": {
     "editoria": "politica",
     "I": 3,
-    "V": 3,
+    "V": 2,
     "P": 2,
-    "formato": "reels",
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Alerta sobre movimentação da direita contra o fim da escala 6x1.",
-    "soma": 6
+    "motivo": "Ataque à escala 6x1 por senadores mobiliza trabalhadores.",
+    "soma": 5
    }
   },
   {
@@ -144,13 +199,13 @@
    "ia": {
     "editoria": "politica",
     "I": 3,
-    "V": 3,
+    "V": 2,
     "P": 2,
-    "formato": "reels",
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Alerta sobre movimentação da direita contra o fim da escala 6x1.",
-    "soma": 6
+    "motivo": "Ataque à escala 6x1 por senadores mobiliza trabalhadores.",
+    "soma": 5
    }
   },
   {
@@ -169,13 +224,13 @@
    "ia": {
     "editoria": "politica",
     "I": 3,
-    "V": 3,
+    "V": 2,
     "P": 2,
-    "formato": "reels",
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Alerta sobre movimentação da direita contra o fim da escala 6x1.",
-    "soma": 6
+    "motivo": "Ataque à escala 6x1 por senadores mobiliza trabalhadores.",
+    "soma": 5
    }
   },
   {
@@ -194,13 +249,13 @@
    "ia": {
     "editoria": "politica",
     "I": 3,
-    "V": 3,
+    "V": 2,
     "P": 2,
-    "formato": "reels",
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Alerta sobre movimentação da direita contra o fim da escala 6x1.",
-    "soma": 6
+    "motivo": "Ataque à escala 6x1 por senadores mobiliza trabalhadores.",
+    "soma": 5
    }
   },
   {
@@ -219,13 +274,13 @@
    "ia": {
     "editoria": "politica",
     "I": 3,
-    "V": 3,
+    "V": 2,
     "P": 2,
-    "formato": "reels",
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Alerta sobre movimentação da direita contra o fim da escala 6x1.",
-    "soma": 6
+    "motivo": "Ataque à escala 6x1 por senadores mobiliza trabalhadores.",
+    "soma": 5
    }
   },
   {
@@ -244,13 +299,40 @@
    "ia": {
     "editoria": "politica",
     "I": 3,
-    "V": 3,
+    "V": 2,
     "P": 2,
-    "formato": "reels",
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Alerta sobre movimentação da direita contra o fim da escala 6x1.",
-    "soma": 6
+    "motivo": "Ataque à escala 6x1 por senadores mobiliza trabalhadores.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A2"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 2,
+   "esquentou": false,
+   "lente": [
+    "indigena"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 3,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Ataque à escala 6x1 por senadores mobiliza trabalhadores.",
+    "soma": 5
    }
   },
   {
@@ -269,13 +351,13 @@
    "ia": {
     "editoria": "politica",
     "I": 3,
-    "V": 3,
+    "V": 2,
     "P": 2,
-    "formato": "reels",
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Alerta sobre movimentação da direita contra o fim da escala 6x1.",
-    "soma": 6
+    "motivo": "Ataque à escala 6x1 por senadores mobiliza trabalhadores.",
+    "soma": 5
    }
   },
   {
@@ -294,13 +376,13 @@
    "ia": {
     "editoria": "politica",
     "I": 3,
-    "V": 3,
+    "V": 2,
     "P": 2,
-    "formato": "reels",
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Alerta sobre movimentação da direita contra o fim da escala 6x1.",
-    "soma": 6
+    "motivo": "Ataque à escala 6x1 por senadores mobiliza trabalhadores.",
+    "soma": 5
    }
   },
   {
@@ -319,13 +401,13 @@
    "ia": {
     "editoria": "politica",
     "I": 3,
-    "V": 3,
+    "V": 2,
     "P": 2,
-    "formato": "reels",
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Alerta sobre movimentação da direita contra o fim da escala 6x1.",
-    "soma": 6
+    "motivo": "Ataque à escala 6x1 por senadores mobiliza trabalhadores.",
+    "soma": 5
    }
   },
   {
@@ -344,13 +426,13 @@
    "ia": {
     "editoria": "politica",
     "I": 3,
-    "V": 3,
+    "V": 2,
     "P": 2,
-    "formato": "reels",
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Alerta sobre movimentação da direita contra o fim da escala 6x1.",
-    "soma": 6
+    "motivo": "Ataque à escala 6x1 por senadores mobiliza trabalhadores.",
+    "soma": 5
    }
   },
   {
@@ -369,13 +451,13 @@
    "ia": {
     "editoria": "politica",
     "I": 3,
-    "V": 3,
+    "V": 2,
     "P": 2,
-    "formato": "reels",
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Alerta sobre movimentação da direita contra o fim da escala 6x1.",
-    "soma": 6
+    "motivo": "Ataque à escala 6x1 por senadores mobiliza trabalhadores.",
+    "soma": 5
    }
   },
   {
@@ -394,13 +476,13 @@
    "ia": {
     "editoria": "politica",
     "I": 3,
-    "V": 3,
+    "V": 2,
     "P": 2,
-    "formato": "reels",
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Alerta sobre movimentação da direita contra o fim da escala 6x1.",
-    "soma": 6
+    "motivo": "Ataque à escala 6x1 por senadores mobiliza trabalhadores.",
+    "soma": 5
    }
   },
   {
@@ -419,13 +501,13 @@
    "ia": {
     "editoria": "politica",
     "I": 3,
-    "V": 3,
+    "V": 2,
     "P": 2,
-    "formato": "reels",
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Alerta sobre movimentação da direita contra o fim da escala 6x1.",
-    "soma": 6
+    "motivo": "Ataque à escala 6x1 por senadores mobiliza trabalhadores.",
+    "soma": 5
    }
   },
   {
@@ -444,186 +526,21 @@
    "ia": {
     "editoria": "politica",
     "I": 3,
-    "V": 3,
+    "V": 2,
     "P": 2,
-    "formato": "reels",
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Alerta sobre movimentação da direita contra o fim da escala 6x1.",
-    "soma": 6
-   }
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "politica",
-    "I": 3,
-    "V": 3,
-    "P": 2,
-    "formato": "reels",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Alerta sobre movimentação da direita contra o fim da escala 6x1.",
-    "soma": 6
-   }
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "politica",
-    "I": 3,
-    "V": 3,
-    "P": 2,
-    "formato": "reels",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Alerta sobre movimentação da direita contra o fim da escala 6x1.",
-    "soma": 6
-   }
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "politica",
-    "I": 3,
-    "V": 3,
-    "P": 2,
-    "formato": "reels",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Alerta sobre movimentação da direita contra o fim da escala 6x1.",
-    "soma": 6
+    "motivo": "Ataque à escala 6x1 por senadores mobiliza trabalhadores.",
+    "soma": 5
    }
   }
  ],
  "rebaixados": [
   {
-   "manchete": "Após ameaças de morte e ataques a indígenas, governo federal aciona PF e amplia investigação no Mato Grosso do Sul",
-   "veiculos": 16,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-10-30T14:07:29Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 1,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Governo aciona PF contra violência e ameaças a indígenas no MS.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Michelle Bolsonaro publica mensagem atribuída a Jair Bolsonaro e pede união da direita após derrota eleitoral",
-   "veiculos": 82,
-   "veiculos_3h": 18,
-   "na_pauta_desde": "2026-10-30T20:53:58Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 1,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Apelo de Michelle por união da direita após derrota.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "SUS detecta quase 10 mil testes positivos para HPV de alto risco",
-   "veiculos": 42,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-10-31T12:07:38Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "saude",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Dados do SUS sobre testes positivos para HPV.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Enem 2026: veja como consultar o local de prova e imprimir o cartão de confirmação",
-   "veiculos": 17,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-10-30T20:07:21Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "educacao",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Consulta de local de prova do Enem.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "CAE do Senado confirma Eduardo Braga como relator da CBS e convidará Durigan para debate",
-   "veiculos": 9,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-10-31T14:06:50Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Eduardo Braga relator da CBS no Senado.",
-    "soma": 3
-   }
-  },
-  {
    "manchete": "Chilli Beans pede recuperação extrajudicial para renegociar dívida de R$ 340 milhões",
-   "veiculos": 6,
-   "veiculos_3h": 4,
+   "veiculos": 9,
+   "veiculos_3h": 6,
    "na_pauta_desde": "2026-10-31T19:07:24Z",
    "esquentou": false,
    "ia": {
@@ -639,62 +556,8 @@
    }
   },
   {
-   "manchete": "Itens do Banco Master vão a leilão com peças de grife para escritório; veja lista",
-   "veiculos": 25,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-10-30T14:07:29Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "economia",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Leilão de itens do Banco Master com peças de grife.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Vice-ministro da Justiça do Chile renuncia após redução de penas de abusadores de menores",
-   "veiculos": 8,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-10-31T15:24:57Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Renúncia de vice-ministro no Chile.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Bahia tem 17 pesquisadores entre os cientistas mais influentes do mundo; veja lista",
-   "veiculos": 7,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-10-31T17:06:58Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "educacao",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Pesquisadores baianos entre os mais influentes do mundo.",
-    "soma": 2
-   }
-  },
-  {
    "manchete": "Rogério Marinho pode presidir o Senado? Veja a conta de votos contra Alcolumbre em 2027",
-   "veiculos": 5,
+   "veiculos": 7,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-30T14:07:29Z",
    "esquentou": false,
@@ -709,18 +572,162 @@
     "motivo": "Repercussão de falas de Flávio e disputa pelo Senado.",
     "soma": 2
    }
+  },
+  {
+   "manchete": "Lula participará da COP31 da Turquia, diz governo federal",
+   "veiculos": 7,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-10-30T20:07:21Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "gerais",
+    "I": 1,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Participação do Brasil em cúpula internacional de clima.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Sorocaba reforça linhas de ônibus para os domingos de prova do Enem 2026",
+   "veiculos": 5,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-10-31T19:33:32Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "educacao",
+    "I": 1,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Reforço no transporte público para o Enem.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Banco Master e Will Financeira leiloam 400 lotes com móveis de luxo e eletrônicos",
+   "veiculos": 20,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-30T14:07:29Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "gerais",
+    "I": 1,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Leilão de bens de luxo de banco falido.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Brasil institui Política Nacional de Informação e Saúde Digital e consolida transformação digital do SUS",
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-31T17:06:58Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "saude",
+    "I": 1,
+    "V": 0,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Instituição da Política Nacional de Informação e Saúde Digital.",
+    "soma": 1
+   }
+  },
+  {
+   "manchete": "Boulos fala em chantagem do mercado sobre ajuste fiscal e defende corte em desoneração e supersalário",
+   "veiculos": 7,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-10-31T17:06:58Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": true,
+    "risco": "",
+    "motivo": "Boulos critica chantagem do mercado e defende corte de privilégios.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Brazil summons Argentine diplomat over role in Bolsonaro’s flight to U.S., sources say - The Spokesman-Review",
+   "veiculos": 24,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-10-30T20:07:21Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": true,
+    "risco": "",
+    "motivo": "Versão em inglês sobre convocação de diplomata argentino.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Ex-sócio afirma que Vorcaro conhecia operação de consignados do Master",
+   "veiculos": 3,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-30T14:07:29Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": true,
+    "risco": "",
+    "motivo": "Desdobramento sobre caso Banco Master já mencionado.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Batalha judicial no TSE entre Lula e Flávio Bolsonaro continua mesmo após eleição",
+   "veiculos": 3,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-30T20:53:58Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": true,
+    "risco": "",
+    "motivo": "Fato já coberto anteriormente sobre a disputa pós-eleitoral.",
+    "soma": 2
+   }
   }
  ],
  "obrigatorios": [
   {
-   "manchete": "Entenda como funcionam as eleições de meio de mandato nos Estados Unidos",
+   "manchete": "Votação antecipada nos EUA tem recorde de 48 mi de eleitores",
    "secoes": [
     "A"
    ],
-   "veiculos": 1,
+   "veiculos": 2,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-30T18:06:52Z",
-   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPX2JKekdnb1Q5d29fOGVlMHd5YVlqR0NnU0JJcG9YbkY1RkxfNjJLX05HLWV1aU1NYjRkZVZuWUk0UFBXa1BELWNidHlHajhTTzVNaWItRS1LYml0XzNnWW12OThpM0xKV0tsdFRKUDNOVjB0YTRIZ2laWktnQms0Y0Z6T1pGLVpNR2xIeTBSN0FsMDI3SzJ3TDZHNkl0MzY0aWZpZzVmSjdueGJwR3NNeVFhTkZNT28?oc=5",
+   "na_pauta_desde": "2026-10-31T19:33:32Z",
+   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQa0wzeElSZl9XMk1udWJZM05rcmVDX2NQenFlbkpYLTZaczB2TVJ1b0F3SENuS3dDcTR2NkNXT21taHRvS01DTkQtTHdPUkF6a0xXNVNzNWltY0Z6LTNsbGlFTWNPbTF0Q2xzMkhBSWVlN3NiVWhlUzRPaC1LTHRWQ1dDQ0VTcnhfaDlrY2p2aGVUdHkySjl0UV9ZY2JNbjlHOW9INE5udkltQ0x6VGc?oc=5",
    "editoria": null,
    "nota": null,
    "parceiro": {
@@ -808,16 +815,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Jornal Midiamax. . A senadora eleita Michelle Bolsonaro (PL-DF) publicou uma mensagem no Instagram, na tarde desta sexta-feira (30), em que atribui um recado do ex-presidente Jair Bolsonaro — que está em prisão domiciliar e sem acesso a celular ou re",
+   "manchete": "Batalha judicial no TSE entre Lula e Flávio Bolsonaro continua mesmo após eleição",
    "secoes": [
     "A"
    ],
    "veiculos": 3,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-31T17:06:58Z",
-   "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOcTRnQmlUNGlpZHE0dG5saW5lcnNGd3NkNVhGQ2Y3S0VkSTNPbWhwOUU3LTlrMjFCYWhxd0V1VmhXdDVjMHdzaFJ6d1hReWxVY1lUX2VHVTF4UE9ZZy1zOFVRQVVraUs0QU1XNDlRdVAxdW1BRHJWUVdWRGlSamp3QzBZUEV4dlFOeVRDeWhyM2FRS1F3dDZCcExzYjRiZzI1dGpJMU0zLTZEUlFQbUlQSWpPWVpZQzI1NHpLMXBzVlFXTUVCcWw5VU1USGRueFZESm1LUlNB?oc=5",
+   "na_pauta_desde": "2026-10-30T20:53:58Z",
+   "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOMHVlLTIzWVUya1ZSdzFyd0R4MS03TUxiMGJVdGctMldKVXhhcjJMcWpUTEVTRXBxS3lQOExwdFY0aDNOeUdLNENNR0ZTb3lnY0RiVDV2SmxsY3B2V0xKWV9teFNBRXNsbEdFR1BWS0tSR0ZrOWJVSk5VSzNsTnF5VUxLVl94XzBaalRBNXdTUDlNRTNJUmgyM2ZFZTZ3NGRGblFacXducDFPUWNSVXpRWEFWU1hwMnVuejNxbGRn?oc=5",
    "editoria": "eleicoes",
-   "nota": 6,
+   "nota": 7,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-10-31T10:30:37Z",
@@ -888,7 +895,7 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 4,
+   "veiculos": 3,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-31T14:06:50Z",
    "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPeDlPMElpRmgxUU1YbDFGSUFTYXRQT3otNzY4RHVFRXN4QVhLMkRYbXIzLXdaTzFlTThwSUxJR0hiWkJLWld0eHJ3TnV2aUpndHBaOFJ5VTRlUlpiNG5MaFN2WHRqakNqaDZRd2VyZ0Fxc0o2cTJ2c0pFdFM2MXdhQmxUZ2paX1RYRUs3RUhzRkpZdWpXa0p3bG1FNllFQzMtTGVUd0pCN1lwRFd0NVdTSw?oc=5",
@@ -964,7 +971,7 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 5,
+   "veiculos": 7,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-10-30T14:07:29Z",
    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBMa3pKTE1XN0dfYjJKMjBXUmJLMlg1azB4VGVhdlQ3R3NReWZnaDNlT3hoWGVGTGdPOUhuR2ZxamgtMmw3b3g2aEJyTE15ZElwTDd1TkJXS21XRm9mcXUtZk55MUhBcWJzdmxzcng2YmFIbEIxQ3c?oc=5",
@@ -1303,16 +1310,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Irã \"não vê necessidade\" de uma reunião com os EUA neste momento",
+   "manchete": null,
    "secoes": [
     "A2"
    ],
-   "veiculos": 2,
+   "veiculos": 0,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-31T19:07:24Z",
-   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNbnFzTF9OSTBYRUhSRVp5aTZKZ2kzSTFRbDZfQVB3WTZJam5UbWRCLWFqM3JoRWt5cFRfbnF2WkpOY0ljUkdHQWlfSXZERl9YZnZTR2NyZ29USjRSVzZDUWdFOXJMeE9fWXJfX083bDZBdkhld3hFM2Y5MTV1NHc1YVlyVjYzczNoR015RnZZaFljUXdnWUhfVTRqb3hhSWRrUzdoMUM5ZDhfNExudk9yNFcwdmI5LTlLUE9abnBIVVo5dk5R?oc=5",
+   "na_pauta_desde": null,
+   "link": null,
    "editoria": "gerais",
-   "nota": 3,
+   "nota": 2,
    "parceiro": {
     "perfil": "apiboficial",
     "quando": "2026-10-31T13:02:27Z",
@@ -1322,16 +1329,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "‘Brasil com S’: estudantes organizam novos atos em defesa da democracia",
+   "manchete": null,
    "secoes": [
     "A2"
    ],
-   "veiculos": 2,
+   "veiculos": 0,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-31T19:07:24Z",
-   "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNUW0yTUhvNkNlVDBYY0VHVTR1MGQyY3RxbXZXRFNHZkJ1VnpPX1VaU2lqQXpfWXhJMDFLZFNUVURUdU5Fb2RvbDE0SDNpQnI4UzBtYXpsVHlKN29USFBVdTBaSUdjVXhYb2Utb014ZXN4OW8xNUZrTXkzOHdlenMza3ZNOGVOczNlWEludkJNdHhURVROaUtPbTh4NnRkZmpZaEtDanZGcUNFb25heXJZR0hiYmZDSGlqZE5nN1MxeDdZazM3V3FFQ1pxONIB2gFBVV95cUxOTndrUXBueElpdFc2SXJyYmhvNy0yZ2UtWlhSSmZSRHh3Zjl5NmotYW43Y3g3T0lObTY3eVdkMlZ5TWhweHlvY2pSVDdaZWVNZ0N5Rld2Tk9JSXA4a0E5S3QxQTRsRkFaZVZmMlQwS1pINXhEbDVmRF90MVJucXRTMzhMMFpzeEVWS0VQVU80ZG53WnU1ZEJjdzRudExLdkU1ODZ1UnJKbDlYcjV5UWY2dDQ4dmM2dXZ4NmVFY0VlLXZKWVo1OVNTb0xhRmVLWjhGUVJ2LThULTdzZw?oc=5",
-   "editoria": "educacao",
-   "nota": 3,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
    "parceiro": {
     "perfil": "uneoficial",
     "quando": "2026-10-31T11:00:03Z",
@@ -1476,63 +1483,63 @@
  ],
  "descartados_mais_quentes": [
   {
-   "manchete": "Mauro Vieira se reunirá com ministros da Índia e Alemanha no G20",
-   "veiculos": 30,
-   "veiculos_3h": 3,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
    "manchete": "Sérgio Maurício é condenado a indenizar Erika Hilton por transfobia",
-   "veiculos": 23,
-   "veiculos_3h": 3,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Voto antecipado para eleições de meio de mandato nos EUA bate recorde e chega a quase 48 milhões",
-   "veiculos": 22,
-   "veiculos_3h": 5,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Líder supremo do Irã ameaça resposta sem limites geográficos a ataques dos EUA e Israel",
-   "veiculos": 19,
+   "veiculos": 27,
    "veiculos_3h": 4,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Agência russa diz que EUA fizeram alerta sobre possível ataque terrorista em Moscou",
-   "veiculos": 12,
-   "veiculos_3h": 7,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
+   "motivo": "sem editoria"
   },
   {
    "manchete": "Jornalista Eduardo Sotto Mayor morre aos 36 anos após AVC hemorrágico",
-   "veiculos": 12,
-   "veiculos_3h": 2,
+   "veiculos": 16,
+   "veiculos_3h": 4,
    "motivo": "fora: crime ou tragedia (morre)"
   },
   {
-   "manchete": "Exército do Lula impulsiona canais de WhatsApp pelo mundo",
-   "veiculos": 11,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
    "manchete": "Moradores de Oleshky chegam à Bielorrússia em rota para a Ucrânia sob trégua temporária",
-   "veiculos": 10,
+   "veiculos": 11,
    "veiculos_3h": 4,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Waldo Cortes Acosta e Johnny Walker fazem a luta principal do UFC Vegas 124",
+   "manchete": "Corinthians x Mirassol: onde assistir ao vivo e horário",
    "veiculos": 10,
-   "veiculos_3h": 2,
-   "motivo": "fora: esporte (ufc)"
+   "veiculos_3h": 3,
+   "motivo": "fora: esporte (corinthians)"
   },
   {
-   "manchete": "Jogo Político: 'Governo Lula já procurou o PSD, e podemos ter uma relação mais profunda', diz Kassab",
-   "veiculos": 10,
+   "manchete": "Flávio Bolsonaro’s departure to the US sparks a flurry of viral Brazilian memes",
+   "veiculos": 9,
    "veiculos_3h": 2,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Morre Solano Ribeiro, produtor que marcou os festivais da MPB, aos 87 anos",
+   "veiculos": 8,
+   "veiculos_3h": 4,
+   "motivo": "fora: crime ou tragedia (morre)"
+  },
+  {
+   "manchete": "Mexico comes alive during annual Day of the Dead celebrations",
+   "veiculos": 7,
+   "veiculos_3h": 3,
+   "motivo": "fora: crime ou tragedia (dead)"
+  },
+  {
+   "manchete": "Ibama aplica R$ 890 mil em multas por cultivo de milho transgênico no entorno do Parque Nacional das Emas",
+   "veiculos": 7,
+   "veiculos_3h": 2,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Protestos da geração Z chegam à Alemanha, com fantasia e desalento",
+   "veiculos": 6,
+   "veiculos_3h": 4,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Velório de reitor da PUCPR é marcado para quarta-feira (04)",
+   "veiculos": 6,
+   "veiculos_3h": 4,
    "motivo": "sem editoria"
   }
  ]
