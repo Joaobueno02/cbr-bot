@@ -1,6 +1,6 @@
 {
- "quando": "2026-10-31T10:07:07Z",
- "pauta_quando": "2026-10-31T10:07:06Z",
+ "quando": "2026-10-31T12:07:39Z",
+ "pauta_quando": "2026-10-31T12:07:38Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,15 +9,42 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 13,
+  "avaliados_agora": 18,
   "falhas_antes": null,
-  "pedidos_hoje": 5
+  "pedidos_hoje": 6
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 127,
- "novos_3h": 2,
- "esquentaram": 3,
+ "total_assuntos": 144,
+ "novos_3h": 7,
+ "esquentaram": 4,
  "candidatos": [
+  {
+   "manchete": "Desemprego cai no Brasil e atinge menor taxa para o 3º trimestre em 14 anos",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 119,
+   "veiculos_3h": 10,
+   "na_pauta_desde": "2026-10-30T16:01:09Z",
+   "link": "https://g1.globo.com/economia/noticia/2026/10/30/desocupacao-fica-em-52percent-a-menor-para-um-terceiro-trimestre-desde-2012.ghtml",
+   "editoria": "economia",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "desemprego"
+   ],
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Queda histórica do desemprego atinge menor taxa em 14 anos.",
+    "soma": 6
+   }
+  },
   {
    "manchete": "Brazil summons Argentine diplomat over Flávio Bolsonaro's escape",
    "secoes": [
@@ -25,9 +52,9 @@
     "D-america_latina"
    ],
    "veiculos": 27,
-   "veiculos_3h": 4,
+   "veiculos_3h": 5,
    "na_pauta_desde": "2026-10-30T20:07:21Z",
-   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQd1Uybk9TVlZZUDl1LWI4ZFljVjY4RlBtbWpvRVdSQ0ZPY3RSeW9idzRPMjNqd196NjlET1g3MVJXN0lVaDFPX0VUNC02VnF5TWktcnFOc2xsX2QzSjczVm5XazcwVk4xSGFSaFJDVkhaNnA5Tl9jSjdOSTZVemRIeDBDWGhfMmhSQTBKUDNQcXJZZkhwU1BQcVVGUmRGclhreUY3S0hoZG5iWm9qNk5zU1ZKc3h4VDh6WlNJckVVekt6QdIBxwFBVV95cUxNYTFTbXRnenF0THVwSVVuTG5ZSER3UUkxdTBsX2NCTFJTVFBpaU5DRXMyTXNBVzJLeFhER3NxbXNVWEdOS0VKWDFUTVVvWWJqenVXVm9YVmdjQ2I5TkxJd0M1R1l4d2NoVGpYb19CQlRUaEwxczNhTFVtQm8waU9qUWY3eEduaGlvaVhhdzdFNXdUUVA4NjlST2xuTU9yVkdfUVJoNmFqS0VUcXhPcW8zYVZ6QzZDVW1LNklnbGVDZ0VrbVcxcTA0?oc=5",
+   "link": "https://www.aljazeera.com/video/newsfeed/2026/10/31/flavio-bolsonaro-vows-to-continue-fathers-political-fight-in-brazil?traffic_source=rss",
    "editoria": "america_latina",
    "nota": 7,
    "esquentou": true,
@@ -35,7 +62,6 @@
     "bolsonar",
     "flavio"
    ],
-   "outras_manchetes": 1,
    "ia": {
     "editoria": "america_latina",
     "I": 3,
@@ -49,43 +75,16 @@
    }
   },
   {
-   "manchete": "Desemprego no 3° trimestre de 2026 é o menor para o período desde 2012",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 116,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-10-31T10:07:06Z",
-   "link": "https://g1.globo.com/economia/noticia/2026/10/30/desocupacao-fica-em-52percent-a-menor-para-um-terceiro-trimestre-desde-2012.ghtml",
-   "editoria": "economia",
-   "nota": 5,
-   "esquentou": true,
-   "lente": [
-    "desemprego"
-   ],
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 3,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Queda do desemprego atinge menor taxa histórica para o período.",
-    "soma": 6
-   }
-  },
-  {
    "manchete": "CNU 2027 pode ter até 3.000 vagas após aval do Congresso, diz Ministério da Gestão; veja como será",
    "secoes": [
     "B"
    ],
-   "veiculos": 13,
+   "veiculos": 15,
    "veiculos_3h": 2,
    "na_pauta_desde": "2026-10-31T00:52:57Z",
    "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/10/cnu-2027-pode-ter-ate-3000-vagas-apos-aval-do-congresso-diz-ministerio-da-gestao-veja-como-sera.shtml",
    "editoria": "politica",
-   "nota": 4,
+   "nota": 5,
    "esquentou": false,
    "lente": [
     "vagas"
@@ -103,42 +102,47 @@
    }
   },
   {
-   "manchete": "Risco de invasão de Cuba pelos EUA é real, avalia embaixador",
+   "manchete": "La derecha de Brasil, incluido el partido de Flavio Bolsonaro, reconoce el triunfo electoral de Lula",
    "secoes": [
+    "B",
     "D-america_latina"
    ],
-   "veiculos": 26,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-30T21:04:30Z",
-   "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/10/governo-trump-prepara-deportacao-em-massa-de-afegaos-mesmo-sob-risco-de-perseguicao-do-taliba.shtml",
+   "veiculos": 15,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-31T07:06:04Z",
+   "link": "https://www.nodal.am/2026/10/brasil-la-embajada-de-ee-uu-en-el-pais-reconoce-el-triunfo-definitivo-de-lula-da-silva-en-la-segunda-vuelta-electoral/",
    "editoria": "america_latina",
-   "nota": 5,
+   "nota": 7,
    "esquentou": false,
-   "lente": [],
+   "lente": [
+    "bolsonar",
+    "flavio"
+   ],
    "ia": {
-    "editoria": "america_latina",
+    "editoria": "eleicoes",
     "I": 3,
     "V": 2,
-    "P": 2,
-    "formato": "carrossel",
+    "P": 1,
+    "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Risco real de invasão de Cuba pelos EUA.",
+    "motivo": "Direita reconhece vitória de Lula, fechando ciclo eleitoral.",
     "soma": 5
    }
   },
   {
-   "manchete": "A Desoneração da cesta básica nacional : efeitos distributivos e sobre o bem-estar das famílias brasileiras",
+   "manchete": "Cesta básica no Rio sobe 1,35% e chega a R$ 972 em setembro",
    "secoes": [
+    "B",
     "D-terra"
    ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-31T07:06:04Z",
-   "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPR2pKOVhYa0VkR2gxNGZxUmZWZEVqc2pReUhZVU5HdWdsNTE5Z2oxZ0pkczJfSnFqS2FsbUozM3VxR1VWUWZNUjYtb2MwV2V0cXlRdjJZUDB3ZnQzQkdocGhsNFowWmRtWl9SdFdNT3VHc01NU19BbldTd3N3NF9SQ0NXdEZJSTl1cEhUUlVTZm4yZWM?oc=5",
+   "veiculos": 7,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-30T18:06:52Z",
+   "link": "https://g1.globo.com/sp/piracicaba-regiao/noticia/2026/10/31/cesta-basica-em-piracicaba-sobe-416percent-em-setembro-e-chega-a-r-14-mil-aponta-esalqusp.ghtml",
    "editoria": "roca",
-   "nota": 3,
-   "esquentou": false,
+   "nota": 5,
+   "esquentou": true,
    "lente": [
     "cesta basica"
    ],
@@ -146,184 +150,325 @@
     "editoria": "economia",
     "I": 3,
     "V": 2,
-    "P": 2,
-    "formato": "carrossel",
+    "P": 1,
+    "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Impacto da desoneração da cesta básica na vida do trabalhador.",
+    "motivo": "Alta da cesta básica no Rio afeta custo de vida.",
     "soma": 5
    }
   },
   {
-   "manchete": "“Exército do Lula” inspira grupos políticos na Europa e Argentina, que dobram de tamanho em dois dias",
-   "secoes": [
-    "B",
-    "D-america_latina"
-   ],
-   "veiculos": 23,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-10-30T14:07:29Z",
-   "link": "https://tvtnews.com.br/exercito-do-lula-impulsiona-canais-de-whatsapp-pelo-mundo/",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Grupo inspirados em Lula cresce na Europa e Argentina.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Programa da OMS propõe acompanhar saúde, autonomia e cognição de idosos no SUS anualmente",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-31T07:06:04Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/equilibrioesaude/2026/10/programa-da-oms-propoe-acompanhar-saude-autonomia-e-cognicao-de-idosos-no-sus-anualmente.shtml",
-   "editoria": "saude",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "sus"
-   ],
-   "ia": {
-    "editoria": "saude",
-    "I": 3,
-    "V": 1,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Novo programa da OMS no SUS para idosos.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Operação resgata trabalhador ferido e destrói máquinas em terra indígena no Pará",
+   "manchete": "Inep libera cartão do Enem 2026 com local de prova para 8 e 15 de novembro",
    "secoes": [
     "B"
    ],
    "veiculos": 12,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-30T14:07:29Z",
-   "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPZGtIR2NIdmluYjZfTW5MOHFsWXhIVHN2SUIzTlZhWk9acGc1NTJwOWdmbTdHa0RyVDJ2MFpDaGVsQi03am1ZSFNtQ0RjcDdvak11Vzd6WTk5VWVJalhtTVVlZXhnVkxHTlJOWS1fbzVwNkc4RlRiREZJd3hiNmxCMzdnQzB1UDZMaE9GdUw0R2ZlX3FrMEJDTlhRVlJoNUtBa2lGQTlsSlY4R1BBNENSRTRfdmdyYUtQbXgxX2syZnMtbUpKNHNPbVF6VHBDcVRtOThkdlpZU1lrMUEtQlHSAd4BQVVfeXFMT2RrSEdjSHZpbmI2X01uTDhxbFl4SFRzdklCM05WYVpPWnBnNTUycDlnZm03R2tEclQydjBaQ2hlbEItN2ptWUhTbUNEY3A3b2pNdVc3elk5OVVlSWpYbU1VZWV4Z1ZMR05STlktX281cDZHOEZUYkRGSXd4YjZsQjM3Z0MwdVA2TGhPRnVMNEdmZV9xazBCQ05YUVZSaDVLQWtpRkE5bEpWOEdQQTRDUkU0X3ZncmFLUG14MV9rMmZzLW1KSjRzT21RelRwQ3FUbTk4ZHZaWVNZazFBLUJR?oc=5",
-   "editoria": "roca",
-   "nota": 6,
-   "esquentou": true,
-   "lente": [
-    "trabalhador",
-    "indigena"
-   ],
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-10-30T20:07:21Z",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNWEJLeDNscWNybm11UDNRVDFoN2lMOGVfRjRiN3A0a3dJWDZ6bmpDMkplRlN6OS1mYmowcjBfTGVDSVJCeHliVkFDZFBpMEs0WkRqOUVaM3pudU9NZjkwUzVUTWd2eV8zTDZZbEd2Z281alN1WTQwNmZ6X1BIUjYzY2dVVmpndHpWZHl0Mm5GYnc4LUpWSFNBLUdRcmt1am5mejhaMXVZSQ?oc=5",
+   "editoria": "educacao",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "outras_manchetes": 1,
    "ia": {
-    "editoria": "roca",
+    "editoria": "educacao",
+    "I": 3,
+    "V": 2,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Inep libera cartão do Enem 2026 para milhões de estudantes.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Senado marca votação da PEC da Segurança Pública para terça-feira",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 37,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-10-30T20:53:58Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/10/30/alcolumbre-pauta-votacao-da-pec-da-seguranca-publica-para-a-proxima-terca-feira.ghtml",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": true,
+   "lente": [],
+   "ia": {
+    "editoria": "politica",
     "I": 2,
     "V": 2,
     "P": 2,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Operação combate exploração e crime ambiental em terra indígena.",
+    "motivo": "Senado marca votação da PEC da Segurança Pública.",
     "soma": 4
    }
   },
   {
-   "manchete": "Ato de estudantes da UFF deu pontapé em mobilização por virada de Lula",
+   "manchete": "Alcolumbre pauta PEC da Segurança para terça e governo costura acordo sobre maioridade",
    "secoes": [
     "B"
    ],
-   "veiculos": 40,
+   "veiculos": 14,
    "veiculos_3h": 3,
-   "na_pauta_desde": "2026-10-30T14:07:29Z",
-   "link": "https://vermelho.org.br/2026/10/30/ex-presidente-da-ubes-revela-como-estudantes-de-niteroi-iniciaram-a-virada/?utm_source=rss&utm_medium=rss&utm_campaign=ex-presidente-da-ubes-revela-como-estudantes-de-niteroi-iniciaram-a-virada",
-   "editoria": "educacao",
+   "na_pauta_desde": "2026-10-30T20:53:58Z",
+   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/colunas/painel/2026/10/alcolumbre-pauta-pec-da-seguranca-para-terca-e-governo-costura-acordo-sobre-maioridade.shtml",
+   "editoria": "politica",
    "nota": 4,
    "esquentou": false,
    "lente": [],
    "ia": {
-    "editoria": "educacao",
+    "editoria": "politica",
     "I": 2,
     "V": 2,
-    "P": 1,
-    "formato": "feed",
+    "P": 2,
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Estudantes da UFF mobilizados.",
+    "motivo": "Alcolumbre pauta PEC e governo costura acordos.",
     "soma": 4
    }
   },
   {
-   "manchete": "Lula convidará Trump e Milei para cerimônia de posse em janeiro",
+   "manchete": "Greve geral paralisa 50 cidades na Itália em protesto contra governo Meloni e seu aumento de gastos militares",
    "secoes": [
-    "B",
+    "B"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-31T12:07:38Z",
+   "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOeHpDS1Y4UnJqVXRad3oxbXZHdzZQaVd4VGRoU0VpbnZnc3dkQjY5dUd4LXR0UVhaZFRTby0xS20zci1faHloUlFhZ1NaU1FLbWFDeXQ1MFJyc21GZUloeUYzWG91YW84UkJfNTYzY3NvS2l4UmVFMFlDRzlodmI2aG9mU3QzUUN2akRBMDVGMjl5aWstSVhTcmE5NVJKNE9pdTVPT2lqMGpyYV9tRTVxLXZhRmtUSk5IRUMwUU5CWGN3M294T0xCb2UzMDBsR000X1Ezd0ttbVBaSGE2R0loZkNBMzhDUHFw?oc=5",
+   "editoria": "economia",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "greve",
+    "protesto"
+   ],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Greve geral na Itália contra governo Meloni e gastos militares.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Denuncian que el gobierno de Milei operó la fuga de Flávio Bolsonaro a Miami",
+   "secoes": [
     "D-america_latina"
    ],
-   "veiculos": 35,
+   "veiculos": 5,
    "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-30T18:06:52Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/10/31/novo-segue-sem-reconhecer-resultado-das-eleicoes-27-partidos-validam-vitoria-de-lula.ghtml",
+   "na_pauta_desde": "2026-10-30T14:07:29Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/10/elos-de-milei-em-fuga-de-flavio-bolsonaro-incluem-suspeitas-sobre-jato-e-assessor-entenda-o-que-se-sabe.shtml",
    "editoria": "america_latina",
    "nota": 7,
    "esquentou": false,
    "lente": [
-    "trump",
-    "milei"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Lula convidará Trump e Milei para posse.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Celso Amorim: Milei quebrou o protocolo mínimo das relações internacionais",
-   "secoes": [
-    "B",
-    "C-internacional",
-    "D-america_latina"
-   ],
-   "veiculos": 2,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-31T10:07:06Z",
-   "link": "https://noticias.uol.com.br/colunas/janaina-figueiredo/2026/10/31/amorim-milei-quebrou-o-protocolo-minimo-das-relacoes-internacionais.htm",
-   "editoria": "america_latina",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
+    "bolsonar",
+    "flavio",
     "milei"
    ],
    "ia": {
     "editoria": "america_latina",
     "I": 2,
     "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Denúncia envolve governo Milei na fuga de Flávio Bolsonaro.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Anvisa aprova cinco novas canetas emagrecedoras e para diabetes",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 10,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-10-30T23:06:29Z",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQWExXeHByOTgxWldtR0xnSUZBcXhtNkNwTFJRQWE3Sk1zMmNmdzUtM3FkZFd0SnFydXR0VlRPT1g1YS1oZGMwZ3lXZWd3S1V1VUNxMzVIZzRkdnpWMEE3UUdjNVNnZTdMUExvNHVaOXhkUFVDYWpZZkJabExmWWZ5MThJcGlhUU5pWXptMGRLNEM1Vkd4V3ZFdQ?oc=5",
+   "editoria": "saude",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "saude",
+    "I": 2,
+    "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Celso Amorim critica quebra de protocolo por Milei.",
+    "motivo": "Anvisa aprova novas canetas para diabetes e emagrecimento.",
     "soma": 4
    }
+  },
+  {
+   "manchete": "PF apreende mais de R$ 4,3 milhões, 167 relógios, 31 veículos e armas em operação que prendeu presidente do TCE-MT | RepórterMT - Notícias de Mato Grosso e Cuiabá Hoje",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 8,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-30T14:07:29Z",
+   "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPYnBBTHFEQ3FZYW1jRWtVa0NFUHlQRkkwaTRsUDJUTGs2T3hCMkY0ZEM1Y0tCWml3eUpndHYxU1ZKbVdJcDk3OU5ESTlrcjRJenlobkNTejNrVE1VQW0yMXdsYUVFdDB6OWhYc2xOQVVmN0VHQ3pvQWM1V2lodTB3T1JzLW1VelNKcldoODFQTFRHbWNYUG1CSGg0a0FXTlR0aDhEeEd3dTVRbmlVNk1pdnhoTG9jQTZFckJ1UHpTUHNjcEphSTZaVWVGRVdlUzZJQXA0SGZIcmY1eTNwQlc1MFRZcVNZbnN6?oc=5",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "PF apreende milhões e bens em operação contra presidente do TCE-MT.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Hackeo a la empresa Binance afecta US$6,300 millones en activos digitales, en el mayor robo de criptomonedas conocido (y con impacto en América Latina)",
+   "secoes": [
+    "D-america_latina"
+   ],
+   "veiculos": 10,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-31T12:07:38Z",
+   "link": "https://www.bbc.com/mundo/articles/cvze42lk562ko?at_medium=RSS&at_campaign=rss",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": true,
+   "lente": [],
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Roubo milionário em criptomoedas afeta mercado.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Cesta básica sobe em 7 capitais e preço se aproxima de R$ 1 mil -",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-30T18:06:52Z",
+   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQb2xMeW1lMUhZSk5xNkdpRFlweXdLODFIT1VTZVJFUkp4RnN2c2swdHdzV2ZKb1FnUndRWHQ0NUtJSXBFeVpZN2o2Mm0xdnRPQnZqTXF5cVhuMU1acnhpTXVQVU5CODAtak9nUDNvV1dTVzZ1RnlXcFZ2SzZ5dkpyNjRuNDRBTG5OQVpramJNX2hoekpPenZ6LXRWc2NTdGfSAacBQVVfeXFMTnNlVXpoZy1NZjJrMWFTdEJFQVoxMkJGTXZ0NHdfMldfZ2JTTWJPb0hhMVhkNnlGZU5sNXBlQUc2T2lpWFVZdUpUbXdieEhqQllYUkRpa2psbGJ4RFZSNDFvQjZTSEI4VnZoaDhURW81YXV3b3JGVUI3LXd3Ql82cUJxT3hyZ2NtSl9uTExRU1YtckxHaVlvdXRsQXNiRmJHWHR3WU9VTkE?oc=5",
+   "editoria": "roca",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "cesta basica"
+   ]
+  },
+  {
+   "manchete": "Antes de ser o \"rei dos mortais\" e o \"braço direito\" de Ronaldo na Seleção, pediu na rua e passou fome: o lado mais íntimo da vida de Nani que poucos conhecem - Notícias de hoje",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-31T12:07:38Z",
+   "link": "https://news.google.com/rss/articles/CBMioAJBVV95cUxQeVZBQ2dvU2JBZWVpRUh2NTBzRXBVbEdRamZXUHFXVm14bXpTTTdvS3ZEbVd0dmpwZnBlUkZKaE9JM3VDTGhpZXRRZTlaRnlHRDRsRko4M3pvb3Q0cWc1RTZ1bVBfUkhGZ25hVnVERWdnbzk3M1FwUFFFRkFqemRWbjdzWU9lNVNGdGNiTVRFdC1mVlhWNTJLZmFVUUVyYTdpT2RnVUp4dHFwVk01aERtS3EycVAzUXZyMXNSTTBTYndvd0FLQ3VfTFhJTTFnXzNZQkRLaUNGSUc5RTRnSHNsV1YtbUNndzRyRU43bU96LXBxZTFMVG84OGhQZnhNUE1taFAxR1QyUUxrYTdyVWkzcldlaDluRkpGeXE5ejdXdXQ?oc=5",
+   "editoria": "roca",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "direito",
+    "fome"
+   ]
+  },
+  {
+   "manchete": "Maior favela do país fez o L: mobilização popular consolidou vitória de Lula na Rocinha",
+   "secoes": [
+    "D-famosos"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-31T12:07:38Z",
+   "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQeFNRTlowVmJRZnA3UTdaMkE1ZmxUUVNHNHdIQzV6MXdJbUtxZkxVRTNPRWJuUmZ2N1pMbFhIbG5vcGN1WTdTWDQxbkpUNDJiSTBwYjg0VE9mcGljek45MU1Wdzd4aS1jY0ZQdUhMOWhCS3dIeE9WOUhVVWF1TjRka1NZdDFDSjZLeW1pQzlYWXM0RDRYcFJMWDZBQmlFOENQUFhiVmJ3eTNmcjlnOXVVLTZPV0JGckNoV0tnak9CUm9GcDdFb1k0cGJ3?oc=5",
+   "editoria": "eleicoes",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "favela"
+   ]
+  },
+  {
+   "manchete": "Fachin acelera pente-fino e tenta concluir arquivamentos no inquérito das fake news este ano",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-31T12:07:38Z",
+   "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOYWJNYkJuRWdkYktLa2RJdzV2eDl4cTd2S1Q2a2NVZGJORUtYVmMzUGxjbkVrVk9SR1lVMjJDbHM4UkxrOUMzOHNfOGJWZWt3ZUluRE5jVDhYc3E2RUx6Z1pMNWY5UE15YWN6b1h6NG4wSU9oSnJHT0M2WUs2RXFnQ1pPNjl5SGhFQ2F4a1NUYzZqMmhTSVUzdkhMX3FBa1R2QU1pMm5JNVBQcnNLcWUwbGdlN3RtUGswWV9ZZURWRTJ6TElaU0Rwb0RLNVA5MENCZVpFaTJYdlJmWldSb0F2bA?oc=5",
+   "editoria": "politica",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "inquerito"
+   ]
+  },
+  {
+   "manchete": "Cesta básica tem trégua semanal na capital de Mato Grosso",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-31T12:07:38Z",
+   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPNDQ1dWtjQmpTQ2tPczE2dEpLcDhVZVhzOG9GNDM2REhaUWd4WGQwRG1IU2tRNk1RcEpjMnVEZnZWc0VWU3l1SXAwcnA3QlZ3MWtETElPbTljUEVmZU9JSWs2MFZjMjhISGtkcG9oWldKNkpncEktNFJQX3VXU3dTVlFqMzhQX2M1Y29WLUpNMVRsamk1b2lyaXlzQQ?oc=5",
+   "editoria": "roca",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "cesta basica"
+   ]
+  },
+  {
+   "manchete": "Cesta básica de Anápolis custa mais que a de Goiânia e supera quase todas as capitais",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-10-31T12:07:38Z",
+   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOZThBMktyRHM1WEdaLXliMHNUWUFmUWt4SFh3clJDWTlpa0I2dUNXdldTX1pZRmZGbG5OTUxJNlFoeWNUT0VUVV9YRndaeEhGMHUwT2N4QTJTX2xlTVJBMmVrbm4waDRBNDEwOXdwYWEzdjZRbkdzWjI0TWQtS2pJcDlHd0pCR3JCSl9TY1ZMa05VYWV4b2FsZ0x6N3lZUFIycEN2YVlfZkJRcXZJQThDaFZtdWphMDhmVzB6TQ?oc=5",
+   "editoria": "roca",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "cesta basica"
+   ]
   }
  ],
  "rebaixados": [
   {
    "manchete": "Supremo valida regra que altera isenção de contribuição previdenciária para servidores com doenças graves",
-   "veiculos": 3,
-   "veiculos_3h": 1,
+   "veiculos": 5,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-10-31T10:07:06Z",
    "esquentou": false,
    "ia": {
@@ -339,7 +484,79 @@
    }
   },
   {
-   "manchete": "L’opposition en Argentine et en Equateur s’indigne de l’aide apportée à Flavio Bolsonaro dans sa fuite vers les Etats-Unis",
+   "manchete": "Vorcaro tinha pleno conhecimento e comandava operações de consignado no Master, diz ex-sócio à PF",
+   "veiculos": 6,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-30T20:07:21Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 1,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Ex-sócio relata participação de Vorcaro em fraudes no Master.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "SUS registra 9,9 mil testes positivos para HPV de alto risco",
+   "veiculos": 26,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-10-31T12:07:38Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "saude",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Dados do SUS sobre testes positivos para HPV.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Defesa de Vorcaro aponta alteração em mais de 650 arquivos de celular apreendido pela PF",
+   "veiculos": 16,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-30T12:18:01Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Defesa aponta alteração em arquivos de celular apreendido.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Comissão da Câmara aprova projeto que amplia prevenção e tratamento do câncer de próstata no SUS",
+   "veiculos": 3,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-31T12:07:38Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "saude",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Câmara aprova projeto para prevenção de câncer de próstata no SUS.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "L’aide apportée à Flavio Bolsonaro dans sa fuite vers les Etats-Unis indigne les camps de l’opposition en Argentine et en Equateur",
    "veiculos": 2,
    "veiculos_3h": 2,
    "na_pauta_desde": "2026-10-31T10:07:06Z",
@@ -357,211 +574,139 @@
    }
   },
   {
-   "manchete": "Anvisa aprova medicamento para uso em atrofia muscular espinhal (AME)",
-   "veiculos": 11,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-30T18:06:52Z",
+   "manchete": "Advogada de preso no caso Master critica STF, vê erros de processo e fala em anulação",
+   "veiculos": 4,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-10-31T12:07:38Z",
    "esquentou": false,
    "ia": {
-    "editoria": "saude",
-    "I": 2,
+    "editoria": "politica",
+    "I": 1,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Anvisa aprova remédio para AME no SUS.",
-    "soma": 3
+    "motivo": "Defesa de preso no caso Master critica STF.",
+    "soma": 2
    }
   },
   {
-   "manchete": "Brasil: la reelección de Lula constituye una victoria para la democracia y los trabajadores",
-   "veiculos": 6,
-   "veiculos_3h": 0,
+   "manchete": "María Corina diz que repressão chavista continua de pé na Venezuela",
+   "veiculos": 11,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-10-30T16:01:09Z",
    "esquentou": false,
    "ia": {
     "editoria": "america_latina",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Reeleição de Lula vista como vitória para trabalhadores.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "\"No es una invasión\": Bukele justifica el despliegue de más de 2.000 soldados en Haití",
-   "veiculos": 6,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-31T10:07:06Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
     "I": 1,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Bukele justifica envio de soldados ao Haiti.",
+    "motivo": "María Corina fala sobre repressão na Venezuela.",
     "soma": 2
    }
   },
   {
-   "manchete": "Bukele envia milhares de soldados ao Haiti após ataque de gangues",
-   "veiculos": 5,
+   "manchete": "Trump adota tom distinto com Flávio em relação a líderes da direita",
+   "veiculos": 3,
    "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-31T10:07:06Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Tropas de Bukele no Haiti após ataque de gangues.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Real hoy: precio y a cuánto cotiza este viernes 30 de octubre de 2026",
-   "veiculos": 5,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-31T07:31:55Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "economia",
-    "I": 1,
-    "V": 0,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Cotação de moeda em veículo estrangeiro, baixo interesse geral no Brasil.",
-    "soma": 1
-   }
-  },
-  {
-   "manchete": "Zucco afirma que integração de secretarias não reduzirá apoio à agricultura familiar",
-   "veiculos": 7,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-30T20:07:21Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "roca",
-    "I": 1,
-    "V": 0,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Declaração de deputado sobre apoio à agricultura familiar",
-    "soma": 1
-   }
-  },
-  {
-   "manchete": "TSE amplia regras da Ficha Limpa e pode barrar candidatos condenados por violência contra mulher",
-   "veiculos": 20,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-31T10:07:06Z",
+   "na_pauta_desde": "2026-10-31T12:07:38Z",
    "esquentou": false,
    "ia": {
     "editoria": "eleicoes",
-    "I": 2,
-    "V": 2,
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Trump adota tom distinto com Flávio Bolsonaro.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Justiça manda Meta tirar do ar publicações que defendem demissão de funcionários por causa do voto",
+   "veiculos": 18,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-10-30T20:07:21Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 3,
+    "V": 3,
     "P": 1,
     "formato": "feed",
     "repetido": true,
     "risco": "",
-    "motivo": "Ficha Limpa para violência contra a mulher já publicado.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Mexico City Grand Prix: Charles Leclerc sets pace in first practice for Ferrari",
-   "veiculos": 15,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-10-30T20:07:21Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "fora",
-    "I": 0,
-    "V": 0,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Esporte, fora da linha editorial.",
-    "soma": 0
+    "motivo": "Decisão contra demissão por voto já foi publicada.",
+    "soma": 6
    }
   }
  ],
  "obrigatorios": [],
  "descartados_mais_quentes": [
   {
+   "manchete": "Governo Lula não quer transformar em crise ajuda da Casa Branca para fuga de Flávio Bolsonaro",
+   "veiculos": 131,
+   "veiculos_3h": 38,
+   "motivo": "sem editoria"
+  },
+  {
    "manchete": "Michelle faz postagem em nome de Jair Bolsonaro e defende 'respeito' a aliados",
-   "veiculos": 115,
-   "veiculos_3h": 11,
+   "veiculos": 117,
+   "veiculos_3h": 21,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Grupo de democratas pede explicações do governo Trump sobre jato que teria sido fretado para Flávio fugir: 'Relações sensíveis'",
-   "veiculos": 46,
-   "veiculos_3h": 0,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Governo Trump não pretende apoiar Flávio como líder do Brasil, diz Reuters",
-   "veiculos": 29,
-   "veiculos_3h": 0,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "palpite jogo do bicho para hoje – Apps no Google Play",
-   "veiculos": 19,
-   "veiculos_3h": 6,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Concurso IPAM Porto Velho-RO: Sai edital com 69 vagas de até R$ 5 mil",
-   "veiculos": 18,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "La derecha de Brasil, incluido el partido de Flavio Bolsonaro, reconoce el triunfo electoral de Lula",
-   "veiculos": 13,
-   "veiculos_3h": 1,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Santa Cruz x Atlético-MG ao vivo: onde assistir, horário e escalações pela Copa do Brasil Sub-20",
-   "veiculos": 11,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "UFC Fight Night: Moicano vs Nolan: que horas começa e onde assistir",
-   "veiculos": 10,
+   "manchete": "Papa Leão 14 pede voto por correio em eleição nos EUA",
+   "veiculos": 41,
    "veiculos_3h": 3,
-   "motivo": "fora: esporte (ufc)"
-  },
-  {
-   "manchete": "Las grietas de Estados Unidos",
-   "veiculos": 9,
-   "veiculos_3h": 1,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Cost of living protests to spread to Germany and reignite in France on Halloween",
-   "veiculos": 6,
+   "manchete": "Trump descarta apoiar Flávio Bolsonaro como \"líder do Brasil\", dizem aliados",
+   "veiculos": 39,
+   "veiculos_3h": 2,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Imprensa internacional destaca elo entre conselheiro de Trump e fuga de Flávio Bolsonaro do Brasil",
+   "veiculos": 30,
+   "veiculos_3h": 3,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Mauro Vieira participa de reunião do G20 em meio a tensões com EUA",
+   "veiculos": 23,
    "veiculos_3h": 2,
    "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Grêmio x Atlético-MG: onde assistir ao vivo, horário e prováveis escalações pela semifinal da Copa do Brasil",
+   "veiculos": 18,
+   "veiculos_3h": 5,
+   "motivo": "fora: esporte (gremio)"
+  },
+  {
+   "manchete": "Outro Canal: Narrador Sérgio Maurício é condenado a indenizar Erika Hilton por transfobia na internet",
+   "veiculos": 17,
+   "veiculos_3h": 2,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Presidente da Polônia convoca reuniões após crise no Tribunal Constitucional e acusação de golpe",
+   "veiculos": 16,
+   "veiculos_3h": 4,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Avenida Paulista ficará aberta para carros neste domingo durante a primeira fase da Fuvest 2027",
+   "veiculos": 15,
+   "veiculos_3h": 4,
+   "motivo": "sem editoria"
   }
  ]
 }
