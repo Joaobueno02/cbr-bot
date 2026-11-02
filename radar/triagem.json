@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-02T10:08:24Z",
- "pauta_quando": "2026-11-02T10:08:23Z",
+ "quando": "2026-11-02T12:11:20Z",
+ "pauta_quando": "2026-11-02T12:11:19Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,41 +9,93 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 17,
-  "falhas_antes": null,
-  "pedidos_hoje": 6
+  "avaliados_agora": 19,
+  "falhas_antes": "gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in",
+  "pedidos_hoje": 8
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 134,
- "novos_3h": 3,
- "esquentaram": 1,
+ "total_assuntos": 149,
+ "novos_3h": 8,
+ "esquentaram": 2,
  "candidatos": [
   {
-   "manchete": "Escolas, hospitais e serviços a 'meio-gás': Hoje há greve na Função Pública com adesão esperada de 90% e estes são os setores mais afetados",
+   "manchete": "Vídeo: Lula acusa extrema direita de espalhar fake news e garante manutenção de programas sociais",
    "secoes": [
-    "B",
-    "C-nacional"
+    "B"
    ],
-   "veiculos": 8,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-01T16:25:38Z",
-   "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPc084MkxYa2QzMF9hQXZKX000M3I5TFdNcHhQT04xQVExWTVGdnJlT1A4SGp4REZ6cVNteUZIUk1UVkVoZGh0bEtlUmJGSUFlNjd2ZThJSl9tWXBSU0hCa3BIM3IzVFl5dW1TQjJqZFk1eEhkV3FER1hDQXJfMy01Mzg1aFNkbkpscHc2N09XWGNwVkxzTDJVbDh6MzVnejB0akdlcFFuX0gxREZlWEtZSk1UVXBPUjlud0ZHMXhhY2ZNejZJc2NOYnZ5TzZ1SVB6TEF5aGswUnZsREJDUzg1NDZMSXZWV05zc3ZwbmlJbXh4TjBrTXdvYmltNA?oc=5",
-   "editoria": "economia",
+   "veiculos": 46,
+   "veiculos_3h": 10,
+   "na_pauta_desde": "2026-11-01T20:07:11Z",
+   "link": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/lula-garante-que-programas-sociais-serao-mantidos",
+   "editoria": "gerais",
    "nota": 5,
-   "esquentou": false,
+   "esquentou": true,
    "lente": [
-    "greve"
+    "extrema direita"
    ],
    "ia": {
-    "editoria": "gerais",
+    "editoria": "politica",
     "I": 3,
     "V": 3,
-    "P": 3,
+    "P": 2,
     "formato": "reels",
     "repetido": false,
     "risco": "",
-    "motivo": "Greve massiva no serviço público afeta diretamente a população.",
+    "motivo": "Lula desmente boatos da extrema direita sobre programas sociais.",
     "soma": 6
+   }
+  },
+  {
+   "manchete": "Fux inclui Ministério da Saúde e da Justiça em audiência do STF sobre bets",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 38,
+   "veiculos_3h": 10,
+   "na_pauta_desde": "2026-11-01T20:07:11Z",
+   "link": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-11/fux-atende-agu-e-inclui-ministerios-e-abras-em-debate-sobre-bets",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "gerais",
+    "I": 3,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "STF debate impactos sociais e econômicos das bets.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Obesidade dispara no SUS e número de brasileiros atendidos triplica em apenas 10 anos - JETSS ENTRETENIMENTO -",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 14,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-01T20:07:11Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/equilibrioesaude/2026/11/numero-de-brasileiros-com-obesidade-atendidos-na-rede-basica-do-sus-aumenta-259-em-dez-anos.shtml",
+   "editoria": "saude",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "sus",
+    "dispara"
+   ],
+   "ia": {
+    "editoria": "saude",
+    "I": 3,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Aumento expressivo de atendimentos por obesidade no SUS.",
+    "soma": 5
    }
   },
   {
@@ -52,10 +104,10 @@
     "B",
     "D-terra"
    ],
-   "veiculos": 7,
+   "veiculos": 8,
    "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-02T00:53:08Z",
-   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5kMWJrUGhBaWhROFg0RW5HTzNWNFFOcm83aGV2Ti1YMDRUVWxhT0xGMjBoRl9EV0N0N0FSV2phNk9kMUVxdzBRQzQzeEtVTUNIU3p0RElYSG9ycVJWS3dkWVRoekRZT1ZVWXpfSGxBdi16UjA?oc=5",
+   "link": "https://www.brasil247.com/economia/cesta-basica-em-bh-tem-alta-acumulada-de-1172-em-um-ano-e-consome-metade-do-salario-minimo/",
    "editoria": "roca",
    "nota": 5,
    "esquentou": true,
@@ -63,109 +115,27 @@
     "cesta basica"
    ],
    "ia": {
-    "editoria": "economia",
+    "editoria": "roca",
     "I": 3,
     "V": 2,
-    "P": 2,
-    "formato": "carrossel",
+    "P": 1,
+    "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Alta da cesta básica afeta diretamente o bolso de quem trabalha.",
+    "motivo": "Cesta básica sobe na maioria das capitais.",
     "soma": 5
    }
   },
   {
-   "manchete": "Fux marca audiência pública no STF sobre proibição das bets",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 39,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-01T20:07:11Z",
-   "link": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-11/fux-atende-agu-e-inclui-ministerios-e-abras-em-debate-sobre-bets",
-   "editoria": "politica",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "STF debate proibição das bets, impactando o orçamento das famílias.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Trabalhadores 40+ já são quase metade das vagas com carteira assinada",
-   "secoes": [
-    "C-nacional"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-02T07:47:15Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/trabalhadores-40-ja-sao-quase-metade-das-vagas-com-carteira-assinada.shtml",
-   "editoria": "economia",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "trabalhador",
-    "vagas"
-   ],
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Perfil etário do mercado de trabalho formal e precarização.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Vieira encontra Rubio nos EUA após vitória de Lula e fuga de Flávio Bolsonaro do país",
+   "manchete": "Bolívia decreta emergência nacional diante de previsão de secas e enchentes provocadas pelo El Niño",
    "secoes": [
     "B",
     "D-america_latina"
    ],
-   "veiculos": 9,
+   "veiculos": 22,
    "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-02T08:20:21Z",
-   "link": "https://www.brasil247.com/brasil/eduardo-bolsonaro-aconselhou-flavio-a-fugir-do-brasil-logo-apos-confirmacao-da-derrota-para-lula/",
-   "editoria": "america_latina",
-   "nota": 7,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Reunião diplomática de alto nível após fuga de Flávio.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Bolívia decreta estado de emergência devido a um \"super El Niño\"",
-   "secoes": [
-    "B",
-    "D-america_latina"
-   ],
-   "veiculos": 19,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-01T02:36:45Z",
-   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQWG5wT005ZmdCNGpfZ29lX2J4WTlMM29KVUNCOW9Kb0Qzb0xaUzJFa0JseGRFRENDMmw5Sml4Nm1Xa0dJcF9Xa3RxU2xqSEtiQjNJd0pMb3QySmFRYjREM2NtaU11QWlGdFdWSUMzclJrOUhFcXlrREg4OGtTRkE5V3JqeDRrdWJ3YzQ0SEFYSUtxdVhHc0Mw?oc=5",
+   "na_pauta_desde": "2026-11-02T12:11:19Z",
+   "link": "https://operamundi.uol.com.br/america-latina/seca-na-bolivia-inundacoes-no-equador-paises-declaram-emergencia-por-efeitos-do-super-el-nino/",
    "editoria": "america_latina",
    "nota": 5,
    "esquentou": false,
@@ -178,7 +148,7 @@
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Crise climática grave na Bolívia com impacto regional.",
+    "motivo": "Bolívia decreta emergência nacional por eventos climáticos extremos.",
     "soma": 4
    }
   },
@@ -188,12 +158,12 @@
     "B",
     "C-nacional"
    ],
-   "veiculos": 2,
-   "veiculos_3h": 2,
+   "veiculos": 3,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-02T10:08:23Z",
-   "link": "https://www.brasil247.com/brasil/flavio-bolsonaro-e-seis-senadores-derrotados-deixarao-congresso-com-pendencias-no-stf/",
+   "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPNi01MnUwazRPTDV6ZXNiVF83V052ai05X3ByeXVXU3FQb0ZNcDliNW9lTUN3c3cxb3BGaUZQQk1LVjlUSkY0M2VnY3FnUUZBeFJ4TUhqRl9LYmlIOXl2QVNZeW1Rb2FMREdOYzdWZjVJMFktbDR2NmVSMFJkMWM3aVFnS2Z2R3lZSzRsdFV1b2xLT3pZSlpUbHZxcHROWEJlazAxSU5qemZNNTZEU3Q0eVdCalZWWEc1X1g5TGpIR0xBUTZiRG0yaXViZEswZ9IB0wFBVV95cUxOVG1MNkxZcEYycVhlQkJjUUJkM0NiM3ROMU9hM2ZhZUx1THhGQmo5ZGYxUnprM0V5dTF1RkpUM0Jld29ja0FvenFHc3ZFRmplai0xaWdnUWZjNWxsNl9ZNGhIRXlDbEFzeHFiWG5vb2FsNFB6V0pJTzdNd1FQd1dib0JJQmNYVU92TlBrNlNSSDlaNXkyc0VJY3R2RHFMVV9KOWtRbVZfdmxFZzQ3UENtNnlKM0h0MVlERHRoTUNCZm5wQUpvd1dKWWpvbl82MnNJLTkw?oc=5",
    "editoria": "politica",
-   "nota": 5,
+   "nota": 6,
    "esquentou": false,
    "lente": [
     "bolsonar",
@@ -212,19 +182,74 @@
    }
   },
   {
-   "manchete": "Carlos Bolsonaro visita o pai e declara apoio a Rogério Marinho para presidir o Senado",
+   "manchete": "Copom: O que fez o mercado rever a aposta em novos cortes da Selic",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-02T12:11:19Z",
+   "link": "https://www.brasil247.com/economia/copom-define-nova-taxa-selic-em-meio-a-pressoes-do-mercado-pelo-fim-do-ciclo-de-cortes/",
+   "editoria": "economia",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "corte"
+   ],
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 1,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Copom e apostas na taxa Selic afetam o custo de vida.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Brasil — Faz o L: vitória de Lula inspira movimentos internacionais de resistência à extrema direita",
    "secoes": [
     "D-famosos"
    ],
-   "veiculos": 5,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-01T13:10:55Z",
-   "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOY0JXbmxZQVByQjNtTXdGWVc0czg5Zy0xODhjWEJjNXFQR0Nqc0NselB5NFBJcDc0U3NqVEV4NUh4MmplMkpGSGY0dEduR2hiY19lT1piMWJTUEl1dEYycFVLVWprLU8xVWtGcDNjM1AxMVhDVkJfZkFFZUJXeDlQQmxCeVV0MFl4OFFTdHQ1b1dCek9iSlJNOTdOTHRybDl6VU8xdE9xMHNRdkxMR2RCZFk4MktBNlJybDEtVFc2dl94T3NwVXlnbktUejFxZGs?oc=5",
-   "editoria": "eleicoes",
-   "nota": 5,
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-02T12:11:19Z",
+   "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPZjVVS2RtWWQ2QzJyclZ5cTFsb3U2RmZ0REFCMUtScTFPVzVVM1FGOHFsRXN2WkNzRm5GcWJqX3B5SHBjU1ZUQVpSLVozN0d5RjhUSEJpMzhjRTFwY1h1dWZwX3JhbVFublJUY0hjYUNfRFpDMHFUSjFic1VMSTd6ZHlZaVkzci11WW4ybW4wUUVxNnhSNWxmXzlra3pGQ3FCTWJReVlXS0VNRXFoVUdYNHlYSjFjY09Nd3FIMU5odTFpSmtnUk9abDdqSXB4OGNUZ1E?oc=5",
+   "editoria": "america_latina",
+   "nota": 4,
    "esquentou": false,
    "lente": [
-    "bolsonar"
+    "extrema direita"
+   ],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Vitória de Lula inspira movimentos internacionais contra a extrema direita.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Greve na administração pública com adesão de 60% na educação e saúde, refere sindicato",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-01T16:25:38Z",
+   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNeEdqdmt3SkM5SWFvOGlQekVCUDJGQTBjZmlJVVRGclFpUHB4VklpUW80THhnSmxxdXp5NDF5YUdnZUI2b0NVTGp1TU1FWEptZzAzV0dEcFVGUnZmNG5xZXB4Zjd5N0dkYUdIYktwQzhTa2NsbTY4X1VYN1haaGtPLUZYeTctMUNZbG1hT1RuTlNJQXZLZ2NDZVBKUHBVcmFnVTc1S0pBY0NUaHA3dlJYa0haNFB2d1NFS2JuWVBncmphSmFr?oc=5",
+   "editoria": "economia",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "greve"
    ],
    "ia": {
     "editoria": "politica",
@@ -234,106 +259,228 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Articulação do clã Bolsonaro no Senado.",
+    "motivo": "Greve na administração pública com alta adesão.",
     "soma": 4
    }
+  },
+  {
+   "manchete": "Trabalhadores de fábricas têxteis fazem protestos em Bangladesh",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-02T12:11:19Z",
+   "link": "https://www.infomoney.com.br/mercados/greve-em-bangladesh-paralisa-529-fabricas-texteis-e-ameaca-exportacoes-globais/",
+   "editoria": "economia",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "trabalhador",
+    "protesto"
+   ],
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Trabalhadores têxteis protestam em Bangladesh.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Candidato é preso suspeito de usar inteligência artificial para responder prova de concurso para delegado em São Luís",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-02T12:11:19Z",
+   "link": "https://g1.globo.com/ma/maranhao/noticia/2026/11/02/candidato-e-preso-suspeito-de-usar-inteligencia-artificial-para-responder-prova-do-concurso-para-delegado-em-sao-luis.ghtml",
+   "editoria": "eleicoes",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "preso"
+   ]
+  },
+  {
+   "manchete": "Juros da casa própria subiram. O que acontece com quem comprou imóvel na planta?",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-02T12:11:19Z",
+   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPUGg5NE5Dejkxc2FsWG41S0VzSlhvMlVNaWpHVHdIRENpY21Tazhna0hGREJLZ1ZwLV9RdjNXZ1FNenYzRVRjUnpMUGdPMU45cFY2TTgzM3F3anJYeU9DRGlKWUZoS3l5TXRiblAzTnBZUVF0WUw4bm5FVThKS1ZfYlZFTmpXekhWNm9MZW4zLV9pSmJPZGlZSVBxYkdiTy1lMWpNQ252UXZVekhuNVZwMFpvaw?oc=5",
+   "editoria": "economia",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "juros"
+   ]
+  },
+  {
+   "manchete": "Fome emocional: como o cérebro influencia a alimentação e dificulta o emagrecimento",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-02T12:11:19Z",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1aOUE4Q01Ccy1oRmZLYXJsQWh6emJXdERSd0htbFlpY3BEbjJzLVBwRDdTeUtxYWlBWFpDRlZ2UHFPUUsyRDRlUDNxdmVET1J4aGdOVGc5a0JIcmlsSWlQMENCSlMtbkdYSlVSR01jZWMyaW0wN0JLZA?oc=5",
+   "editoria": "roca",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "fome"
+   ]
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "eleicoes",
+   "nota": 3,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "politica",
+   "nota": 2,
+   "esquentou": false,
+   "lente": []
   }
  ],
  "rebaixados": [
   {
-   "manchete": "Fachin dá primeiros passos para encerrar inquérito das fake news",
-   "veiculos": 3,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-02T10:08:23Z",
-   "esquentou": false,
+   "manchete": "Agricultura: exportações do agro à UE crescem 14,8% em receita após acordo com Mercosul",
+   "veiculos": 6,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-01T20:38:37Z",
+   "esquentou": true,
    "ia": {
-    "editoria": "politica",
+    "editoria": "roca",
     "I": 2,
     "V": 1,
     "P": 2,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Movimentações no STF sobre inquérito sensível.",
+    "motivo": "Exportações do agro crescem após acordo UE-Mercosul.",
     "soma": 3
    }
   },
   {
-   "manchete": "Desmatamento e queimadas colocam em risco preservação das árvores do Cerrado",
-   "veiculos": 1,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-02T10:08:23Z",
+   "manchete": "Anvisa aprova mais 5 canetas de semaglutida e liraglutida para diabetes e obesidade",
+   "veiculos": 37,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-01T16:25:38Z",
    "esquentou": false,
    "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 1,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Ataque ambiental grave ao Cerrado.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Modelo da reforma eleitoral divide Câmara e ameaça implodir acordo para frear PL",
-   "veiculos": 3,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-02T07:47:15Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 1,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Discussões sobre reforma eleitoral e acordos no parlamento.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Projetos da Seduc aproximam estudantes quilombolas de suas raízes culturais e fortalecem a aprendizagem",
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-02T07:47:15Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "educacao",
+    "editoria": "saude",
     "I": 2,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Projetos educacionais para comunidades quilombolas.",
+    "motivo": "Anvisa aprova novos medicamentos para diabetes e obesidade.",
     "soma": 3
    }
   },
   {
-   "manchete": "Disputa pelo controle do Congresso pode limitar poder de Trump e repercutir nas relações com o Brasil",
-   "veiculos": 5,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-01T20:38:37Z",
+   "manchete": "Paraguai inicia programa para receber e regularizar imigrantes brasileiros após vitória de Lula",
+   "veiculos": 13,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-01T16:08:30Z",
    "esquentou": true,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Paraguai regulariza imigrantes brasileiros após eleição de Lula.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Finados: bancos, INSS e Correios fecham na segunda-feira; veja o que abre e o que funciona",
+   "veiculos": 5,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-02T07:47:15Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Serviços públicos e funcionamento em feriado afetam trabalhadores.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Trump diz que alta da gasolina é 'pequeno preço a pagar' em troca de segurança global",
+   "veiculos": 4,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-02T12:11:19Z",
+   "esquentou": false,
    "ia": {
     "editoria": "america_latina",
     "I": 1,
     "V": 1,
-    "P": 2,
+    "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Análise internacional de impacto indireto no Brasil.",
+    "motivo": "Declaração de Trump sobre alta de combustíveis.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Brasil tem 573 vagas e salário de até R$ 35,8 mil em concursos jurídicos abertos",
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-02T12:11:19Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "politica",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Concursos públicos com vagas e altos salários.",
     "soma": 2
    }
   },
   {
    "manchete": "Argentina’s Milei pitches a regulation-free AI haven at the end of the world",
-   "veiculos": 3,
-   "veiculos_3h": 3,
+   "veiculos": 4,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-02T08:20:21Z",
    "esquentou": false,
    "ia": {
@@ -349,45 +496,9 @@
    }
   },
   {
-   "manchete": "La tensa relación entre la Iglesia y el Gobierno de Milei que el Papa encontrará en su visita a Argentina",
-   "veiculos": 2,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-02T10:08:23Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Tensão institucional entre governo Milei e Igreja.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Milei apuesta por la minería, un motor cuestionado por su bajo impacto real en la economía",
-   "veiculos": 2,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-02T10:08:23Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Modelo de mineração predatória na Argentina.",
-    "soma": 2
-   }
-  },
-  {
    "manchete": "Prepare o apetite: Há uma feira numa aldeia de Oliveira do Hospital onde o porco é rei e a fome não tem lugar",
    "veiculos": 1,
-   "veiculos_3h": 1,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-02T07:47:15Z",
    "esquentou": false,
    "ia": {
@@ -403,84 +514,198 @@
    }
   },
   {
-   "manchete": "Ritualistic Use of Plants in Quilombola Communities in Mato Grosso: A Bibliographic Review",
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-02T08:20:21Z",
+   "manchete": "Petrobras aumenta preço do querosene de aviação em novembro",
+   "veiculos": 33,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-01T16:08:30Z",
    "esquentou": false,
    "ia": {
-    "editoria": "roca",
+    "editoria": "economia",
+    "I": 1,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Aumento do querosene de aviação tem impacto limitado no consumo popular.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Derrotada nas primárias, democrata declara apoio a candidato de Trump em disputa crucial pelo Senado no Michigan",
+   "veiculos": 5,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-01T20:07:11Z",
+   "esquentou": true,
+   "ia": {
+    "editoria": "america_latina",
     "I": 1,
     "V": 0,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Revisão bibliográfica sobre uso de plantas em comunidades quilombolas.",
+    "motivo": "Disputa eleitoral nos EUA sem impacto direto no Brasil.",
     "soma": 1
    }
   }
  ],
- "obrigatorios": [],
+ "obrigatorios": [
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "eleicoes",
+   "nota": 3,
+   "parceiro": {
+    "perfil": "luzmanifesto",
+    "quando": "2026-11-02T09:43:19Z",
+    "legenda": "Um dado curioso e preocupante chamou a atenção nas estatísticas do segundo turno das eleições: 14.840 eleitores digitaram o número 88 nas urnas eletrônicas, emb",
+    "link": "https://www.instagram.com/p/DfPAiQbvIRg/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Dia de Finados: por que 2 de novembro é feriado nacional",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-02T10:08:23Z",
+   "link": "https://www.gazetadopovo.com.br/economia/dia-de-finados-quem-trabalha-no-feriado/",
+   "editoria": "america_latina",
+   "nota": 4,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-02T10:53:04Z",
+    "legenda": "Dia 02 de novembro, Dia de Finados 🕯️",
+    "link": "https://www.instagram.com/reel/DfPIg9Mhpxt/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": null,
+   "nota": null,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-02T10:34:14Z",
+    "legenda": "A redução de repasses e ajuda humanitária internacional, principalmente por parte do governo dos Estados Unidos, provocou uma crise no abastecimento de insumos ",
+    "link": "https://www.instagram.com/p/DfPGkupByCJ/"
+   },
+   "triagem": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "politica",
+   "nota": 2,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-02T03:00:26Z",
+    "legenda": "O ministro da Saúde, Alexandre Padilha, anunciou a destinação de R$ 3,95 bilhões em imunidade tributária para o novo ciclo do Programa de Apoio ao Desenvolvimen",
+    "link": "https://www.instagram.com/p/DfOSq6GjDcO/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Elecciones en Brasil: Lula logró récord histórico en redes y superó a Milei por más de 20 veces en volumen",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-02T12:11:19Z",
+   "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOc2NqREdQRmRRT25EN1EyMW1rSXpabHdhSVIyVDNSRzNsbXd0RmkxTjM0aERWNzRPRWREZ0lJaFFLZTdxV1FBNm92cjAxemVsLV92U0dkVFRaTS14RFB5Q0N2T0JBQXlYWU9Yc096dWpWRUYyNENuN185QmNtd05kemxIbVE0NElKdFF4VmxHNHk2Tm8?oc=5",
+   "editoria": "america_latina",
+   "nota": 5,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-02T09:01:01Z",
+    "legenda": "O Brasil atraiu US$ 5,607 bilhões em investimentos estrangeiros diretos no setor de telecomunicação, informação e comunicação entre janeiro e setembro de 2026, ",
+    "link": "https://www.instagram.com/p/DfO77mrAmCu/"
+   },
+   "triagem": "candidato"
+  }
+ ],
  "descartados_mais_quentes": [
   {
-   "manchete": "Fuvest aplica prova em Fortaleza pela 1ª vez neste domingo; 1.640 se inscreveram",
-   "veiculos": 51,
-   "veiculos_3h": 6,
+   "manchete": "Trump diz que Flávio pode ficar nos EUA pelo tempo que quiser, mas descarta encontro",
+   "veiculos": 131,
+   "veiculos_3h": 61,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Lula descarta cortes em programas sociais e critica extrema direita",
-   "veiculos": 39,
-   "veiculos_3h": 3,
+   "manchete": "UFPR aplica vestibular 2027 neste domingo em 12 cidades",
+   "veiculos": 88,
+   "veiculos_3h": 24,
    "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Política: Trump diz que Flávio pode ficar nos EUA",
-   "veiculos": 38,
-   "veiculos_3h": 4,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Grêmio x Atlético-MG: veja onde assistir ao vivo, horário e prováveis escalações",
-   "veiculos": 27,
-   "veiculos_3h": 6,
-   "motivo": "fora: esporte (gremio)"
   },
   {
    "manchete": "Kimi Antonelli pode conquistar título mundial de Fórmula 1 no GP do México neste domingo",
-   "veiculos": 26,
-   "veiculos_3h": 1,
+   "veiculos": 29,
+   "veiculos_3h": 3,
    "motivo": "fora: esporte (formula 1)"
   },
   {
-   "manchete": "Lula volta às redes e diz que nenhum programa social será extinto",
-   "veiculos": 25,
+   "manchete": "Palmeiras x Vasco na Copa do Brasil: onde assistir, horário e escalações",
+   "veiculos": 28,
+   "veiculos_3h": 7,
+   "motivo": "fora: esporte (palmeiras)"
+  },
+  {
+   "manchete": "Rússia retoma ataques em região ucraniana após fim da trégua local",
+   "veiculos": 21,
+   "veiculos_3h": 20,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Confira o resultado da Quina, concurso 7157, deste domingo (01/11); prêmio é de R$ 9,5 milhões",
+   "veiculos": 20,
    "veiculos_3h": 3,
+   "motivo": "fora: entretenimento (quina)"
+  },
+  {
+   "manchete": "13º salário: 1ª parcela tem de cair até 30 de novembro",
+   "veiculos": 20,
+   "veiculos_3h": 3,
+   "motivo": "repetido (20261101-1230-13-salario-prazo)"
+  },
+  {
+   "manchete": "Eleição nos Estados Unidos define futuro de Trump nesta terça-feira",
+   "veiculos": 17,
+   "veiculos_3h": 6,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Binance retoma saques após ataque hacker roubar US$ 6,3 bilhões",
+   "veiculos": 17,
+   "veiculos_3h": 4,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Inflação, emprego e PIB: os números da economia de Trump antes das eleições de meio de mandato nos EUA",
-   "veiculos": 16,
-   "veiculos_3h": 4,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Elecciones en EE. UU.: qué puede pasar con el poder de Donald Trump si los republicanos pierden el control del Congreso",
-   "veiculos": 13,
-   "veiculos_3h": 2,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Irã alerta que nova guerra com os EUA pode ser mais longa e ameaça ampliar ataques",
-   "veiculos": 11,
-   "veiculos_3h": 2,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Reforço no Transporte Público de Cuiabá Garante Acesso a Cemitérios no Dia de Finados: Veja as Linhas e Horários",
-   "veiculos": 9,
-   "veiculos_3h": 2,
+   "manchete": "Avión privado se estrella en Texas con nueve personas a bordo",
+   "veiculos": 14,
+   "veiculos_3h": 3,
    "motivo": "sem editoria"
   }
  ]
