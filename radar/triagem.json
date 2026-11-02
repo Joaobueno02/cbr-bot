@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-02T07:47:16Z",
- "pauta_quando": "2026-11-02T07:47:15Z",
+ "quando": "2026-11-02T08:20:22Z",
+ "pauta_quando": "2026-11-02T08:20:21Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,23 +9,52 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 20,
+  "avaliados_agora": 9,
   "falhas_antes": null,
-  "pedidos_hoje": 4
+  "pedidos_hoje": 5
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 126,
- "novos_3h": 3,
- "esquentaram": 2,
+ "total_assuntos": 124,
+ "novos_3h": 6,
+ "esquentaram": 1,
  "candidatos": [
+  {
+   "manchete": "Ex-agente do Mossad ajudou Flávio Bolsonaro a fugir do Brasil",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 39,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-02T08:20:21Z",
+   "link": "https://www.cartacapital.com.br/mundo/marco-rubio-afirma-que-eua-nao-teve-envolvimento-na-fuga-de-flavio-bolsonaro-do-brasil/",
+   "editoria": "america_latina",
+   "nota": 7,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 3,
+    "V": 3,
+    "P": 3,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "Acusação de crime sem fonte oficial",
+    "motivo": "Ex-agente do Mossad ajudou na fuga de Flávio, gerando alta repercussão.",
+    "soma": 6
+   }
+  },
   {
    "manchete": "Estudantes fazem ato em 9 estados contra Flávio Bolsonaro e de apoio à reeleição de Lula",
    "secoes": [
     "B"
    ],
-   "veiculos": 42,
+   "veiculos": 24,
    "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-31T19:33:32Z",
+   "na_pauta_desde": "2026-11-02T08:20:21Z",
    "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/estudantes-fazem-ato-em-9-estados-contra-flavio-bolsonaro-e-de-apoio-a-reeleicao-de-lula.shtml",
    "editoria": "educacao",
    "nota": 6,
@@ -47,17 +76,46 @@
    }
   },
   {
-   "manchete": "Supremo Tribunal Federal debate proibição das bets em audiência pública nesta terça",
+   "manchete": "O alerta a um aliado de Lula que adiou a fuga de Flávio Bolsonaro para os EUA",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 30,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-02T08:20:21Z",
+   "link": "https://www.nexojornal.com.br/ensaio/2026/11/01/pcc-cv-donald-trump-empresas-brasileiras-nos-estados-unidos",
+   "editoria": "america_latina",
+   "nota": 7,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 3,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Alerta a aliado adiou fuga de Flávio, mantendo o caso em alta.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Fux marca audiência pública no STF sobre proibição das bets",
    "secoes": [
     "B"
    ],
-   "veiculos": 37,
+   "veiculos": 36,
    "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-01T20:07:11Z",
    "link": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-11/fux-atende-agu-e-inclui-ministerios-e-abras-em-debate-sobre-bets",
-   "editoria": "eleicoes",
+   "editoria": "politica",
    "nota": 4,
-   "esquentou": true,
+   "esquentou": false,
    "lente": [],
    "ia": {
     "editoria": "economia",
@@ -67,7 +125,7 @@
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "STF debate proibição das bets em audiência pública.",
+    "motivo": "STF debate proibição das bets, impactando o orçamento das famílias.",
     "soma": 5
    }
   },
@@ -77,12 +135,12 @@
     "B",
     "D-terra"
    ],
-   "veiculos": 4,
+   "veiculos": 5,
    "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-02T00:53:08Z",
    "link": "https://www.metropoles.com/minas-gerais/cesta-basica-sobe-1172-em-1-ano-em-bh-e-custa-metade-do-salario-minimo",
    "editoria": "roca",
-   "nota": 4,
+   "nota": 5,
    "esquentou": true,
    "lente": [
     "cesta basica"
@@ -102,11 +160,10 @@
   {
    "manchete": "Greve da Função Pública pode deixar escolas fechadas e serviços de saúde condicionados",
    "secoes": [
-    "B",
     "C-nacional"
    ],
-   "veiculos": 3,
-   "veiculos_3h": 2,
+   "veiculos": 2,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-02T07:47:15Z",
    "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNNWtSTFRscVVfdHVoTldtRG9lQWpGd0RCV3ZEMkpBclRGUm02dm9xQzMySjVBVFlSXzBUeTFyU2lNUndQOVFJUWxiUDdlV3F5eVBzZmRjZFhKS0xOWWo5eF8yUHRZVFRuNXIwMkdLUmc1amVQY25Mc3M3MnlJMEFJZ0JRQURBSk9Xam50QVI4SnlaWVE3cGhldEtjR1ltSWxoMHY3aDRKZXJIZkZnWHRvS1lYVlQ0N2d1?oc=5",
    "editoria": "economia",
@@ -124,31 +181,6 @@
     "repetido": false,
     "risco": "",
     "motivo": "Greve na função pública afeta serviços essenciais à população.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Governo tenta acelerar PEC da Segurança; oposição insiste em maioridade",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 23,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-01T16:25:38Z",
-   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOM01YNjYwQ0gzLXlyLUlNUkduMU9UR25YSlVQQ2luSEU4MXg5TWt3bVJHQng0N2xVdTd3ZG4wSmQ4TmF1T3VrMWs2UVZyd0loTTBpUmlDYjFGZ2piMDE4QUsxTUM4OHJGeWtaWWtwVWZmSHVJT3hIZ2hMak1NYUxicVdET0ZwQzJwXzFCSzJTQ3M0ZmFDN21mTXlUYkJjM09VbkMxTTNXeDc4cXFDamc?oc=5",
-   "editoria": "politica",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "politica",
-    "I": 3,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "PEC da Segurança pública mobiliza governo e oposição no Congresso.",
     "soma": 5
    }
   },
@@ -207,37 +239,30 @@
     "motivo": "Desdobramento da fuga de Flávio alimentando fake news nas redes.",
     "soma": 4
    }
-  },
-  {
-   "manchete": "Chef de projeto social comemora doações após boicote de Nikolas",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-01T18:07:31Z",
-   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNM3J4R19pdHRCOU1Za0FoOXdrMVRNXzA3RDNqNlNlQUNLS1hEQUU2TmV3Z2N3S3FPT2d1dzNCcVhLaU4zM3lfQlk4MFZKbm1wa3RoT2JDRWZIcW92UnlVb0lBSmRBb2o0OWtGdjgyWjN0V2p1TE13dXBWTklqUHUzQWUtUzV6NVZFcmNaY2ppQmpZTVR5TXJnY0lhUmZCYmhzTXBtcUhKVFRiaVZrUndKa1F4X3R6d9IBuwFBVV95cUxPM2pURDVjcnI2VmJ0UmluSkVISzM3SHNQOGtXaC1SWV91bUszTi1CNVZWTWx3NE9RUVA1QVVPazdPOVhPUjIzeTJaNFQwWXRhOXV5bWNDbl9KQWFFaDFaZTg1Y0FscDZ0Ri0yZWw1U1Q0ek5fRktHd3NCRXpOMTdpNFk4NVRlS1ZwdXBLNlNqaGU2MldWZmE3aHU0SkMzNFA2TVRKbHRHVHE5UWxqZXM4bGpBVzUxelUyR0VB?oc=5",
-   "editoria": "roca",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Solidariedade e ataque da extrema-direita a projeto social.",
-    "soma": 4
-   }
   }
  ],
  "rebaixados": [
   {
+   "manchete": "Agenda de política: Senado retoma análise da PEC da segurança pública",
+   "veiculos": 14,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-01T16:25:38Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 1,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Senado retoma análise da PEC da segurança pública, afeta serviços e direitos.",
+    "soma": 3
+   }
+  },
+  {
    "manchete": "Oposição argentina vê no “Lulazo” uma lição para derrotar Milei em 2027",
-   "veiculos": 10,
+   "veiculos": 9,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-01T20:51:01Z",
    "esquentou": false,
@@ -274,7 +299,7 @@
   {
    "manchete": "Finados: bancos, INSS e Correios fecham na segunda-feira; veja o que abre e o que funciona",
    "veiculos": 4,
-   "veiculos_3h": 2,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-02T07:47:15Z",
    "esquentou": false,
    "ia": {
@@ -290,29 +315,11 @@
    }
   },
   {
-   "manchete": "Projetos da Seduc aproximam estudantes quilombolas de suas raízes culturais e fortalecem a aprendizagem",
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-02T07:47:15Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "educacao",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Projetos educacionais para comunidades quilombolas.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Elecciones en EE. UU.: qué puede pasar con el poder de Donald Trump si los republicanos pierden el control del Congreso",
-   "veiculos": 14,
+   "manchete": "A Ilha de Coiba, a brutal prisão a céu aberto que se tornou um paraíso natural e para onde o Panamá está enviando prisioneiros novamente",
+   "veiculos": 5,
    "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-01T20:07:11Z",
-   "esquentou": true,
+   "na_pauta_desde": "2026-11-01T18:07:31Z",
+   "esquentou": false,
    "ia": {
     "editoria": "america_latina",
     "I": 1,
@@ -321,7 +328,7 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Política dos EUA e Congresso, impacto indireto na região.",
+    "motivo": "Tema internacional sobre prisões no Panamá, baixo impacto direto.",
     "soma": 2
    }
   },
@@ -340,42 +347,6 @@
     "repetido": false,
     "risco": "",
     "motivo": "Análise eleitoral dos EUA (eleitores hispânicos no Texas).",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "A Ilha de Coiba, a brutal prisão a céu aberto que se tornou um paraíso natural e para onde o Panamá está enviando prisioneiros novamente",
-   "veiculos": 5,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-01T18:07:31Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Tema internacional sobre prisões no Panamá, baixo impacto direto.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Midterms 2026 : les reniements de Donald Trump l’exposent à un vote sanction de la part des électeurs américains",
-   "veiculos": 2,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-02T07:47:15Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Análise das eleições de meio de termo nos EUA.",
     "soma": 2
    }
   },
@@ -414,69 +385,105 @@
     "motivo": "Feira gastronômica local em Portugal, fora do foco Brasil.",
     "soma": 2
    }
+  },
+  {
+   "manchete": "André Janones diz que não será ministro de Lula e que continuará na Câmara",
+   "veiculos": 8,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-02T07:47:15Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "politica",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Declaração de deputado sobre cargo no governo.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "2 Universidades abrem seleção para Licenciatura em Matemática EAD; 545 vagas",
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-02T07:47:15Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "educacao",
+    "I": 1,
+    "V": 0,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Abertura de vagas em universidade pública a distância.",
+    "soma": 1
+   }
   }
  ],
  "obrigatorios": [],
  "descartados_mais_quentes": [
   {
-   "manchete": "Ex-agente do Mossad ajudou Flávio Bolsonaro a fugir do Brasil",
-   "veiculos": 49,
-   "veiculos_3h": 5,
-   "motivo": "sem editoria"
-  },
-  {
    "manchete": "Fuvest aplica prova em Fortaleza pela 1ª vez neste domingo; 1.640 se inscreveram",
-   "veiculos": 44,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Lula garante que programas sociais serão mantidos",
-   "veiculos": 44,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Trump não vai se reunir com Flávio Bolsonaro, mas diz que ele pode ficar o tempo que quiser",
-   "veiculos": 36,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Semifinal da Copa do Brasil entre Palmeiras e Vasco opõe legado de Abel Ferreira e impacto de Pedro Emanuel",
-   "veiculos": 28,
+   "veiculos": 58,
    "veiculos_3h": 3,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Palmeiras x Vasco: onde assistir, horário e escalações do jogo de ida da semifinal da Copa do Brasil",
+   "veiculos": 25,
+   "veiculos_3h": 2,
    "motivo": "fora: esporte (palmeiras)"
   },
   {
    "manchete": "Kimi Antonelli pode conquistar título mundial de Fórmula 1 no GP do México neste domingo",
-   "veiculos": 23,
+   "veiculos": 24,
    "veiculos_3h": 1,
    "motivo": "fora: esporte (formula 1)"
   },
   {
    "manchete": "Justiça dos EUA barra nova tentativa de Trump de processar Wall Street Journal",
-   "veiculos": 21,
+   "veiculos": 19,
    "veiculos_3h": 1,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
    "manchete": "Polymarket aponta que partido de Trump deve perder eleições de meio de mandato nos Estados Unidos",
-   "veiculos": 19,
-   "veiculos_3h": 0,
+   "veiculos": 18,
+   "veiculos_3h": 1,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Avión privado se estrella en Texas con nueve personas a bordo",
+   "manchete": "Bombardeamento de campo da guerrilha colombiana na Venezuela faz vários mortos",
    "veiculos": 14,
    "veiculos_3h": 2,
+   "motivo": "fora: crime ou tragedia (mortos)"
+  },
+  {
+   "manchete": "Bombardeios israelenses em Gaza matam oito pessoas, dizem socorristas",
+   "veiculos": 13,
+   "veiculos_3h": 2,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "França reúne 320 mil em atos; mobilização \"gen Z\" decepciona na Alemanha, mas violência toma ruas à noite",
+   "veiculos": 11,
+   "veiculos_3h": 1,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Parlamentares recorrem ao MP contra exoneração de servidora que criticou Flávio Bolsonaro",
+   "veiculos": 9,
+   "veiculos_3h": 1,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Suposto bombardeio da Venezuela contra guerrilha colombiana do ELN deixa vários mortos",
-   "veiculos": 12,
-   "veiculos_3h": 1,
-   "motivo": "fora: crime ou tragedia (mortos)"
+   "manchete": "All nine people aboard business jet that crashed in Florida have died",
+   "veiculos": 7,
+   "veiculos_3h": 3,
+   "motivo": "sem editoria"
   }
  ]
 }
