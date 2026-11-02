@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-01T22:07:13Z",
- "pauta_quando": "2026-11-01T22:07:10Z",
+ "quando": "2026-11-02T00:07:52Z",
+ "pauta_quando": "2026-11-02T00:07:49Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,21 +9,49 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 11,
-  "falhas_antes": "gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in",
-  "pedidos_hoje": 15
+  "avaliados_agora": 18,
+  "falhas_antes": null,
+  "pedidos_hoje": 1
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 169,
- "novos_3h": 9,
- "esquentaram": 2,
+ "total_assuntos": 174,
+ "novos_3h": 6,
+ "esquentaram": 1,
  "candidatos": [
+  {
+   "manchete": "Estudantes fazem ato em 9 estados contra Flávio Bolsonaro e de apoio à reeleição de Lula",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 27,
+   "veiculos_3h": 7,
+   "na_pauta_desde": "2026-10-31T22:07:06Z",
+   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/estudantes-fazem-ato-em-9-estados-contra-flavio-bolsonaro-e-de-apoio-a-reeleicao-de-lula.shtml",
+   "editoria": "educacao",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Protestos estudantis em vários estados contra Flávio Bolsonaro.",
+    "soma": 6
+   }
+  },
   {
    "manchete": "Supremo Tribunal Federal debate proibição das bets em audiência pública nesta terça",
    "secoes": [
     "B"
    ],
-   "veiculos": 26,
+   "veiculos": 36,
    "veiculos_3h": 16,
    "na_pauta_desde": "2026-11-01T20:07:11Z",
    "link": "https://www.poder360.com.br/poder-justica/fux-inclui-ministerios-da-saude-e-da-justica-em-audiencia-sobre-bets/",
@@ -48,8 +76,8 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 32,
-   "veiculos_3h": 9,
+   "veiculos": 36,
+   "veiculos_3h": 6,
    "na_pauta_desde": "2026-11-01T16:08:30Z",
    "link": "https://g1.globo.com/economia/noticia/2026/11/01/petrobras-querosene-aviacao-novembro.ghtml",
    "editoria": "economia",
@@ -73,8 +101,8 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 27,
-   "veiculos_3h": 6,
+   "veiculos": 26,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-01T16:25:38Z",
    "link": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/anvisa-aprova-5-novas-canetas-para-tratamento-de-diabetes-e-obesidade",
    "editoria": "saude",
@@ -94,183 +122,79 @@
    }
   },
   {
-   "manchete": "Violência política: MEC aciona PF para investigar ataques e ameaças a estudantes",
+   "manchete": "INSS paga nova rodada do 13º salário em novembro a aposentados e pensionistas",
    "secoes": [
     "B"
    ],
-   "veiculos": 24,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-01T01:06:59Z",
-   "link": "https://vermelho.org.br/2026/11/01/mec-aciona-pf-contra-violencia-politica-nas-universidades-federais/?utm_source=rss&utm_medium=rss&utm_campaign=mec-aciona-pf-contra-violencia-politica-nas-universidades-federais",
-   "editoria": "educacao",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "educacao",
-    "I": 3,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "MEC aciona PF contra violência política direcionada a estudantes.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Proposta de Lara Resende para limitar Selic entra no radar de Lula e assusta mercado",
-   "secoes": [
-    "B",
-    "C-nacional"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-01T20:38:37Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/proposta-de-lara-resende-para-limitar-selic-entra-no-radar-de-lula-e-assusta-mercado.shtml",
+   "veiculos": 4,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-01T13:10:55Z",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPY0ZkRHlIYlcxY1lTSkZLeEhkdkg0cVhoQ1BQU2N3TDAwQllPNTJHdFVmMXV1NFc5ZFNTU1RIN19KMDNaV1pmMGtaNFFyS0ZwcVcxTVgwVko0bHFsaFZzRTRFYVlyVXhZakZLZTJ5UmlGS0Y2MVlJa055U0dEQnR2Wk4xYnJuQmptbC0xXzhSejhmVUx1Z25TYktOVXdyclhsT252QnozN3N0a0xaa2psWlUxaG1ZMVhncGx3?oc=5",
    "editoria": "economia",
-   "nota": 4,
-   "esquentou": true,
-   "lente": [],
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Proposta para limitar Selic entra no radar e gera atrito.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Lula fará equilíbrio fiscal com corte em privilégios, não em programas sociais, diz Rafael Fonteles",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 6,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-10-31T17:06:58Z",
-   "link": "https://www.diariodocentrodomundo.com.br/video-lula-desmente-boatos-da-extrema-direita-sobre-fim-dos-programas-sociais/",
-   "editoria": "economia",
-   "nota": 5,
+   "nota": 6,
    "esquentou": false,
    "lente": [
-    "corte"
+    "salario",
+    "aposentad",
+    "inss"
    ],
    "ia": {
     "editoria": "economia",
     "I": 3,
     "V": 2,
-    "P": 2,
+    "P": 1,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Debate sobre corte de privilégios versus programas sociais.",
+    "motivo": "Pagamento do 13º do INSS afeta milhões de aposentados.",
     "soma": 5
    }
   },
   {
-   "manchete": "Atendimentos a brasileiros com obesidade no SUS triplicam em 10 anos",
+   "manchete": "Golpe do Outubro Rosa: falso mutirão do SUS cobrou até R$ 3 mil por cirurgias que nunca existiram",
    "secoes": [
     "B"
    ],
-   "veiculos": 6,
+   "veiculos": 4,
    "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-01T20:07:11Z",
-   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQWFRid1JZdGRKREJtMkZKano4YWV0QnRQaUpEQzVCVkFWN0pzTkNmT0NlUDdSQnFxZHl3QVd6a1ViZ0xWWnBUdTRoNDhSNXhfRzlyRnVjN19PMDdXTFZKbFg0eUZzLTZRMlFlYjA4Wk5qZ21FeG9ERUVVRXRBSkI3QVpIZk5xTEZ0ZXNvN3JxaFRCNmhiRXdGNmwwOA?oc=5",
+   "link": "https://www.metropoles.com/distrito-federal/ses-df-alerta-populacao-sobre-golpe-do-falso-mutirao-do-outubro-rosa",
    "editoria": "saude",
    "nota": 5,
    "esquentou": false,
    "lente": [
-    "sus"
+    "sus",
+    "golpe"
    ],
    "ia": {
     "editoria": "saude",
-    "I": 3,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Crescimento de atendimentos no SUS envolve saúde pública.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Estudantes fazem ato em 9 estados contra Flávio Bolsonaro e de apoio à reeleição de Lula",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 23,
-   "veiculos_3h": 12,
-   "na_pauta_desde": "2026-10-31T15:24:57Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/11/estudantes-fazem-ato-em-9-estados-contra-flavio-bolsonaro-e-de-apoio-a-reeleicao-de-lula.shtml",
-   "editoria": "educacao",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ],
-   "ia": {
-    "editoria": "gerais",
     "I": 2,
     "V": 2,
     "P": 2,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Atos estudantis contra Flávio Bolsonaro em nove estados.",
+    "motivo": "Golpe contra pacientes do SUS usando Outubro Rosa.",
     "soma": 4
    }
   },
   {
-   "manchete": "Servidora é exonerada por gestão Tarcísio após criticar fala de Flávio Bolsonaro sobre 9 dedos de Lula; secretário nega motivos políticos",
+   "manchete": "Flávio Bolsonaro pede que Alexandre de Moraes deixe investigação no STF",
    "secoes": [
-    "A"
+    "A",
+    "B"
    ],
-   "veiculos": 7,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-31T22:07:06Z",
-   "link": "https://www.gazetadopovo.com.br/opiniao/editoriais/divida-publica-global-alerta/",
+   "veiculos": 15,
+   "veiculos_3h": 7,
+   "na_pauta_desde": "2026-11-01T13:10:55Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/11/defesa-de-flavio-bolsonaro-pede-que-moraes-seja-impedido-de-relatar-inquerito-e-quer-troca-por-mendonca.shtml",
    "editoria": "politica",
-   "nota": 7,
+   "nota": 9,
    "esquentou": false,
    "lente": [
     "bolsonar",
     "flavio",
     "pl"
-   ],
-   "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Servidora exonerada por criticar fuga de Flávio Bolsonaro.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Marco Rubio nega que governo Trump tenha auxiliado Flávio a ir para os EUA",
-   "secoes": [
-    "B",
-    "D-america_latina"
-   ],
-   "veiculos": 95,
-   "veiculos_3h": 24,
-   "na_pauta_desde": "2026-10-31T15:24:57Z",
-   "link": "https://www.gazetadopovo.com.br/mundo/marco-rubio-afirma-que-governo-trump-nao-auxiliou-flavio-a-ir-para-eua/",
-   "editoria": "america_latina",
-   "nota": 7,
-   "esquentou": false,
-   "lente": [
-    "flavio",
-    "trump"
    ],
    "ia": {
     "editoria": "politica",
@@ -280,43 +204,17 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Envolve governo dos EUA negando ajuda na fuga de Flávio.",
+    "motivo": "Flávio tenta afastar Moraes do caso no STF.",
     "soma": 4
    }
   },
   {
-   "manchete": "Uma semana para o Enem 2026: relaxar ou estudar?",
+   "manchete": "Fuvest 2027 traz temas de cultura pop e aborda escala 6x1; veja análises",
    "secoes": [
     "B"
    ],
-   "veiculos": 35,
-   "veiculos_3h": 17,
-   "na_pauta_desde": "2026-10-31T19:33:32Z",
-   "link": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-11/falta-uma-semana-para-o-enem-2026-veja-horarios-e-o-que-levar",
-   "editoria": "educacao",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "educacao",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Dicas para estudantes na reta final do Enem.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Cultura pop marca Fuvest 2027, com 'Stranger Things' e Bad Bunny; prova também aborda escala 6x1 e influenciadores fitness",
-   "secoes": [
-    "B",
-    "C-nacional"
-   ],
-   "veiculos": 16,
-   "veiculos_3h": 16,
+   "veiculos": 19,
+   "veiculos_3h": 6,
    "na_pauta_desde": "2026-11-01T20:07:11Z",
    "link": "https://g1.globo.com/sp/sao-paulo/educacao/noticia/2026/11/01/cultura-pop-marca-fuvest-2027-com-stranger-things-e-bad-bunny-prova-tambem-aborda-escala-6x1-e-influenciadores-fitness.ghtml",
    "editoria": "economia",
@@ -333,215 +231,260 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Fuvest aborda escala 6x1 e cultura pop na prova.",
+    "motivo": "Fuvest aborda escala 6x1 e cultura pop.",
     "soma": 4
    }
   },
   {
-   "manchete": "Flávio Bolsonaro pede que Alexandre de Moraes deixe investigação no STF",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 12,
-   "veiculos_3h": 8,
-   "na_pauta_desde": "2026-11-01T13:10:55Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/11/defesa-de-flavio-bolsonaro-pede-que-moraes-seja-impedido-de-relatar-inquerito-e-quer-troca-por-mendonca.shtml",
-   "editoria": "politica",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Flávio tenta afastar Moraes do caso no STF.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Bolívia decreta estado de emergência por 'Super El Niño'",
+   "manchete": "Papa inicia intensa viagem pela América do Sul que culminará no Peru, sua pátria adotiva",
    "secoes": [
     "B",
-    "D-america_latina"
-   ],
-   "veiculos": 37,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-01T02:36:45Z",
-   "link": "https://www.telesurtv.net/bolivia-decreta-la-emergencia-nacional-por-el-nino-pide-apoyo-a-la-comunidad-internacional/",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Bolívia em emergência climática afeta região e economia.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Agentes dos EUA assumiram controle de aeroporto para fuga de Flávio, diz jornal argentino",
-   "secoes": [
     "D-america_latina"
    ],
    "veiculos": 5,
    "veiculos_3h": 2,
-   "na_pauta_desde": "2026-10-31T19:33:32Z",
-   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNUHRTUXZQbTFCSnJVcVpDQmZ3MnliREI2R1JWeFluYTBNNFhBVC1QdVhnUVNwVVJJUmFaMjFmbWFLWDFVTk02dW9hNEJsMHRKQWY4bFZFbm1MRnQxbGxDMk9NYlF5UFAwTHJkRGlaTGxFcTRkcXJtb0FOYXJIXzJkbg?oc=5",
+   "na_pauta_desde": "2026-11-01T18:07:31Z",
+   "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNZTBHbHN2T3lTMm5xaEdrQkUyNkE4dEF5U2RYc1pGRlVicS1QWURsbU9wUzFqNFpiQW1Zd1hXazNYeE0wdVNXcU16Smpab21zWlFiVzFZRENUTWd3NF8xVUdMY3daMUxYbXdWY0J3eGd2TjdQWmZzTlNyQkkyQnp4WHVkYXhQejN1VFR5azJjU0MyZlp0Z3J1LXFJWml1S3ktaWxKbktJUFhEcnNDYkpNSDR4WE5idVRwTW1WS0xnXzFrRkhtOFNsTDgzc2FBdk9ZZzljeFF6MnI2NW8?oc=5",
    "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "flavio"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Nova acusação sobre agentes dos EUA na fuga de Flávio.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Tudo o que foi prometido na campanha vai acontecer, podem ter certeza, diz presidente Lula",
-   "secoes": [
-    "B",
-    "C-nacional"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-01T22:07:10Z",
-   "link": "https://www.infomoney.com.br/politica/tudo-o-que-foi-prometido-na-campanha-vai-acontecer-podem-ter-certeza-diz-lula/",
-   "editoria": "eleicoes",
    "nota": 4,
    "esquentou": false,
    "lente": []
   },
   {
-   "manchete": "Exportações do agronegócio brasileiro para a União Europeia crescem 14,8% em 6 meses",
+   "manchete": "Chef de projeto social comemora doações após boicote de Nikolas",
    "secoes": [
-    "B",
-    "C-nacional",
-    "D-america_latina",
     "D-terra"
    ],
-   "veiculos": 4,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-01T20:38:37Z",
-   "link": "https://www.metropoles.com/mundo/mercosul-ue-exportacoes-do-agronegocio-brasileiro-sobem-148-em-6-meses",
+   "veiculos": 5,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-01T18:07:31Z",
+   "link": "https://www.poder360.com.br/poder-eleicoes-2026/chef-julio-ritta-rebate-nikolas-e-defende-acao-social-em-video/",
    "editoria": "roca",
    "nota": 4,
    "esquentou": false,
    "lente": []
   },
   {
-   "manchete": "Mexico City GP: CHAOS on opening lap as Charles Leclerc gets five-second penalty after overtaking Lewis Hamilton for lead",
+   "manchete": "Comunidades quilombolas conquistam vitórias na Justiça em casos de Mato Grosso e Maranhão - HiperNotícias",
    "secoes": [
-    "B",
-    "C-internacional",
-    "D-america_latina"
+    "C-nacional",
+    "D-terra"
    ],
-   "veiculos": 3,
-   "veiculos_3h": 3,
+   "veiculos": 2,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-01T22:07:10Z",
-   "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNZUtjcDBCOFl4N2psWjZhM1pOMXRyZVVzcDJDNXg0VFdLN05xTmQ1TTVDeGg1U0JyZDIxQmlfNjNkc016d2sxOENhbDJRQ2VLOWJCdlExQlZwWW5OSnhxQ04wVnpTVzJiQUJaV1pBQ2xxSDVpWUkyWXJxQjlWdm9DMVZYVExCNTJiVkxwUEZhMVJzRHNueGd3Ym40aFVDM1QwRndoMkNEbmxONlBTcF9RTmRXXzRMNTZfUEN5bEtDak03S3pvZnJSTU5nQ2EzSFZFQmQ2TTA3cUQ3cEhH?oc=5",
-   "editoria": "america_latina",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Cleitinho repudia ataque a criança e cobra políticos que pregam boicote: ‘Abram mão do salário’",
-   "secoes": [
-    "B",
-    "C-nacional"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-01T20:38:37Z",
-   "link": "https://www.congressoemfoco.com.br/noticia/131091/cleitinho-critica-boicotes-e-desafia-politicos--abram-mao-do-salario",
-   "editoria": "economia",
+   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOQUhGWDYxWjJDWVdNN0pDMmw2NUhENHJUTW1MenZsRjUzRC03NDVzQVRFRzZWUGhxRllyczR0bGg2ejdRRXZwWGwzRWlvaHRwN3EyV0t0ZU8zYWQ5X2REVXVQNG1wMnFUbGhRT2hUTk1lV0dQU3JzUG9lcDdYWUFfWGNfV3hjMjlDSlpXOUhjTHJPX2FGN3V6bXN2dlhIZXpQdC1KWFUzUllRa29wdGRIZ3cySFhRYmMyMDlQT3ZUNDdfV2pRY2c?oc=5",
+   "editoria": "roca",
    "nota": 4,
    "esquentou": false,
    "lente": [
-    "salario"
+    "quilombola"
    ]
   },
   {
-   "manchete": "Aliados de Tarcísio apostam no desgaste do bolsonarismo para lançar candidatura em 2030",
+   "manchete": "Lula se encontra com formulador do Plano Real para discutir redução da taxa de juros",
    "secoes": [
-    "B",
-    "C-nacional"
+    "A"
    ],
-   "veiculos": 3,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-01T20:07:11Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/colunas/painel/2026/11/aliados-de-tarcisio-apostam-no-desgaste-do-bolsonarismo-para-lancar-candidatura-em-2030.shtml",
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-01T16:08:30Z",
+   "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNd3I1RUx3aGdxcENyLURYS0o2cVpOZk1JUjNtUnBtaFFXT2ZqckphRWdlWm9sUHo2YXJXQzIxSlVFRVFrRkowUXlSR21KcHlJMHdwR0hJM1B6cTFEVVpmcXFZbzVQb25jeXpDMDNaQkhFc1JxeFRQN1FiMERONFpEYnNnUkR5eE5GM1h6a3RkcmpGNWxXNkRTRjZFUWFDV3BuLTNhNDdSTlJUSHhRVGh4Z25kSzBjeWl3VnFHMXptcWVrbEpMcjN6TEl1RXkwWEJ4?oc=5",
    "editoria": "eleicoes",
    "nota": 4,
    "esquentou": false,
    "lente": [
-    "bolsonar"
+    "juros"
+   ]
+  },
+  {
+   "manchete": "Derrotada nas primárias, democrata declara apoio a candidato de Trump em disputa crucial pelo Senado no Michigan",
+   "secoes": [
+    "D-famosos"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-01T20:07:11Z",
+   "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQSkpCMnZGM09QdGh4MVhwNUlUNU5VZm15MEtOYmJEUmFlbjQ1UndyckUyOUNwUjJUbGNhRFdrbHphbkxELTljazNEUWctcmJsMlVIR0ZoQ0MycWxfLWlkbDUtc3dPUzhYYlpsenhUMURYV3ZBUEs0U2JUTEI5MHhZaEptczlWLXl5RXB4VnhNOEZUUEQ1SXpkbGlXWVlGVl81NHhyMEJwZ3JQV2NYZ2x4N0NXWjAtQ3VkeWFHTHBrSmtldVpRVnBxTElleWxiVjRkbzRKczdMM3RBR3Z4ZDBoNVFvSVVSbFVOaWZRcWhwYmdrT3Y4MlZEc2FiONIBigJBVV95cUxPd3BvbThPVGpFb2twWk9NUC1vVUhnc0Y0eXJOR25UNkZzNkY5Uk9sU1Byb0t3bmgyX1RZWDJjeUR3YWV4clUwcVJtSzNSUG9fQWp6VkFDWlZNeGlGZWRHc1JtWWhLOXVWYkV1ZWpZUHhTTGNOem1JM0ViWUxfZVFVTUt3aFpxTVpFdGQzME55N2U1RWNYSFhNdUdUcncxSGR3T2dOY3I3bGxJY2dhU3hhck9iVmJVLUhzaVROQ2VLQjhFMjQ3RHdBWlp2VVJBQ2lBdjFhRUlibDlQUmRRWHBLbmdjZU00eTBuenZiT3RLTV8zSzFnNENkMlowRlNfSlg0cFdYeXRZMi02QQ?oc=5",
+   "editoria": "eleicoes",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "trump"
+   ]
+  },
+  {
+   "manchete": "SUS terá nova política para integrar histórico de pacientes, ampliar telessaúde e proteger dados de saúde",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-01T22:07:10Z",
+   "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPMFZkaHJpYmtkNHZ4VDBiUkNzd0trcDNlWHBSZ1UxNmxfSnNGVFpid3JlMEVTR1NXeXJ3X1NXeEM5anFxdTg5OHRqLWg0cTBjbF8yWXpHNEVNYmp1WlhPNWhfMXFIQmtuVG5obTJmSW1wOXFJM09PSnh4U2ZtLUMxLVBma1BvN1dpV3RXSVhEcHFzeDFTRGlpVDdZX3FiejMxNk90TS1KaDBpMHg0U2VtU2J3M2M4ZTlqNXpqMElOS3ZxWEUyRlJja213SzBmNy1FMEt0ZW5ZanY?oc=5",
+   "editoria": "saude",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "sus"
+   ]
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "saude",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "sus"
+   ]
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "saude",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "sus"
+   ]
+  },
+  {
+   "manchete": "Preso foge de hospital após pedir para retirar algemas para tomar banho na Grande BH",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-02T00:07:49Z",
+   "link": "https://g1.globo.com/mg/minas-gerais/noticia/2026/11/01/preso-foge-de-hospital-apos-pedir-para-retirar-algemas-para-tomar-banho-na-grande-bh.ghtml",
+   "editoria": "saude",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "preso"
+   ]
+  },
+  {
+   "manchete": "Lula dice que mantendrá todos sus programas sociales frente a las presiones por un ajuste",
+   "secoes": [
+    "C-internacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-02T00:07:49Z",
+   "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOc3MyYzVmdEh2UHJrV0o0Rk12UlQ4b2FfMU9oNU9Vc1dpRzhVcUgtN3hYUDJpc1RmMEdGUG9wLUNUNk4wdDlkTVZJV3FlY1JmSm9RUzdCX3Iwc3RORnRmQ0xIRFpyekRrdTYxVlVrdEVrZjl6WlRYOXpZMkdfblJSSExqSklzNDdyMzN1NTNLQ3IwT3VnWG5RdGVXMF9ISWhvNktCVHlZUmhNZmVwTFlPRXI5eWZ2Zi1TNklzNmI5QTczMzZTbHFrS2ZpUWxKVWJRNTlKUVMxS2pPZ9IB9AFBVV95cUxNbGpyMk1WTHBTdlBqY2pSYmlxMnpxckdxSkhmd1EzWGF6Ui01MnJPMFFaRjRZVnRIQnNrVVlCUFVQZjlyanpCemk1RHBXdVdzcWsyTDNZRkRWRUhUMlZTOVpwZFBLZWNVTENCZHlnZDZOWU9MbUtrNjhEYWloZTBkNmRDNGwtb0t1cDhOZ3hwVmF0NjhZbVZkYzJxdFNjN182T0REWlVmYnFpX09SY0FpWFl1eHIyYThrek03ZXZ2NzI3b295c056RHVObHFXZlhlS0VNOTZ2cVpzcE1CQ1hmR3l0bEV2SEJpQlR4V2ZCVWhCX3dh?oc=5",
+   "editoria": "saude",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "sus"
+   ]
+  },
+  {
+   "manchete": "Mulher morre após botijão de gás explodir e provocar incêndio em casa no TO; polícia investiga",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-02T00:07:49Z",
+   "link": "https://g1.globo.com/sp/santos-regiao/noticia/2026/11/01/homem-morre-apos-ser-baleado-rua-no-litoral-de-sp-policia-investiga.ghtml",
+   "editoria": "gerais",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "incendio"
+   ]
+  },
+  {
+   "manchete": "O que o acordo entre Trump e o Canadá sinaliza para o tarifaço ao Brasil",
+   "secoes": [
+    "C-internacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-02T00:07:49Z",
+   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNVFJsc21ESGI1eklDWmJZbElZZk5DWXhxTWpHYU8xOWtYM0c5eXZ6emxCdDZ0WlNoaHBQWEpyTzlRQVlFdWZFNzV1MVI0c0gyV0Jhd2NlVEJKNl9GcW5aRVlhWC1FVUFCZUxLdW1MazdZdHZHdVQyb2ZiLVpvazlfcDlEa2pTZ1d5RzRTMjBWR2VRUGRxek9rWTg5SkszVFFIcVJHUzNrNE00Zw?oc=5",
+   "editoria": "economia",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "trump"
    ]
   }
  ],
  "rebaixados": [
   {
-   "manchete": "Ação Popular pede suspensão de salário do senador Flávio Bolsonaro - O São Gonçalo",
-   "veiculos": 14,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-10-31T19:33:32Z",
-   "esquentou": false,
+   "manchete": "Fuvest 2027: 1ª fase do vestibular da USP acontece neste domingo e tem 106 mil inscritos; saiba o que levar",
+   "veiculos": 31,
+   "veiculos_3h": 11,
+   "na_pauta_desde": "2026-11-01T06:25:46Z",
+   "esquentou": true,
    "ia": {
-    "editoria": "politica",
+    "editoria": "educacao",
     "I": 2,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Ação pede suspensão de salário de senador foragido.",
+    "motivo": "Informações práticas sobre a realização da Fuvest.",
     "soma": 3
    }
   },
   {
-   "manchete": "Incêndio de grandes proporções em Alter do Chão (PA) é controlado; bombeiros e brigadistas combatem novos focos",
-   "veiculos": 6,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-10-31T17:06:58Z",
+   "manchete": "Donald Trump aseguró que Flávio Bolsonaro podrá quedarse “el tiempo que quiera” en Estados Unidos",
+   "veiculos": 10,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-02T00:07:49Z",
    "esquentou": false,
    "ia": {
     "editoria": "gerais",
+    "I": 1,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Padre critica fuga de Flávio Bolsonaro, gerando repercussão.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Tabelamento de juros não está na mesa de Lula, diz ministro da Fazenda",
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-02T00:07:49Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "economia",
     "I": 2,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Incêndio controlado em Alter do Chão, meio ambiente.",
+    "motivo": "Ministério da Fazenda descarta tabelamento de juros.",
     "soma": 3
    }
   },
   {
    "manchete": "Julie Milk, que apoiou Flávio Bolsonaro, diz que campanha para demissão de petistas é crueldade",
    "veiculos": 3,
-   "veiculos_3h": 0,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-01T11:07:06Z",
    "esquentou": false,
    "ia": {
@@ -557,29 +500,29 @@
    }
   },
   {
-   "manchete": "Elecciones en EE. UU.: qué puede pasar con el poder de Donald Trump si los republicanos pierden el control del Congreso",
-   "veiculos": 6,
-   "veiculos_3h": 4,
+   "manchete": "Boulos critica Tarcísio por preço do diesel, mas ignora aumento de petistas",
+   "veiculos": 8,
+   "veiculos_3h": 5,
    "na_pauta_desde": "2026-11-01T20:07:11Z",
-   "esquentou": false,
+   "esquentou": true,
    "ia": {
-    "editoria": "america_latina",
+    "editoria": "politica",
     "I": 1,
     "V": 1,
-    "P": 2,
+    "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Duplicado conceitualmente com o item 3.",
+    "motivo": "Crítica política sobre preços de combustíveis.",
     "soma": 2
    }
   },
   {
-   "manchete": "PF deflagra Operação Escala, no Rio, contra o tráfico internacional de drogas",
-   "veiculos": 14,
-   "veiculos_3h": 9,
-   "na_pauta_desde": "2026-11-01T18:07:31Z",
-   "esquentou": true,
+   "manchete": "Acervo pessoal de Mãe Bernadete é doado ao Museu Nacional",
+   "veiculos": 7,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-01T20:07:11Z",
+   "esquentou": false,
    "ia": {
     "editoria": "gerais",
     "I": 1,
@@ -588,15 +531,15 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Operação policial contra tráfico internacional de drogas.",
+    "motivo": "Doação do acervo de Mãe Bernadete ao Museu Nacional.",
     "soma": 2
    }
   },
   {
-   "manchete": "Destino procurado por bolsonaristas, Paraguai abre mutirão de migração nesta segunda",
-   "veiculos": 7,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-01T09:45:49Z",
+   "manchete": "Eleições de meio de mandato podem mudar o Congresso e pressionar Trump | #SBTBrasil",
+   "veiculos": 12,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-31T17:06:58Z",
    "esquentou": false,
    "ia": {
     "editoria": "america_latina",
@@ -606,80 +549,62 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Reflexo do fluxo migratório de figuras da extrema-direita para países vizinhos.",
+    "motivo": "Eleições de meio de mandato nos EUA.",
     "soma": 2
    }
   },
   {
-   "manchete": "Justiça rejeita ação de Trump contra eleição no Alasca com candidatos homônimos",
-   "veiculos": 14,
-   "veiculos_3h": 12,
-   "na_pauta_desde": "2026-11-01T22:07:10Z",
+   "manchete": "Carlos Bolsonaro aposta em Marinho para presidir o Senado",
+   "veiculos": 7,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-02T00:07:49Z",
    "esquentou": false,
    "ia": {
-    "editoria": "america_latina",
-    "I": 0,
-    "V": 0,
-    "P": 0,
+    "editoria": "politica",
+    "I": 1,
+    "V": 1,
+    "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Eleição nos EUA sem impacto direto no Brasil.",
-    "soma": 0
+    "motivo": "Articulações para a presidência do Senado.",
+    "soma": 2
    }
   },
   {
-   "manchete": "Vídeo: Lula acusa extrema direita de espalhar fake news e garante manutenção de programas sociais",
-   "veiculos": 14,
-   "veiculos_3h": 14,
-   "na_pauta_desde": "2026-11-01T20:38:37Z",
-   "esquentou": true,
+   "manchete": "ICMS dos combustíveis sobe em fevereiro de 2027 e reajuste valerá em todo o Brasil",
+   "veiculos": 3,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-02T00:07:49Z",
+   "esquentou": false,
    "ia": {
-    "editoria": "eleicoes",
-    "I": 1,
+    "editoria": "economia",
+    "I": 3,
+    "V": 2,
+    "P": 1,
+    "formato": "carrossel",
+    "repetido": true,
+    "risco": "",
+    "motivo": "Aumento do ICMS dos combustíveis já foi publicado.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Ministros vão ao MS verificar denúncias de violência contra indígenas depois da eleição",
+   "veiculos": 3,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-31T19:07:24Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
     "V": 1,
-    "P": 0,
+    "P": 1,
     "formato": "feed",
     "repetido": true,
     "risco": "",
-    "motivo": "Fato já coberto anteriormente sobre desmentido de fake news.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Antes e depois da prisão: mudança no visual de Daniel Vorcaro chama atenção nas redes sociais",
-   "veiculos": 7,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-10-31T22:07:06Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "fora",
-    "I": 0,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Fofoca visual de preso não interessa à classe trabalhadora.",
-    "soma": 1
-   }
-  },
-  {
-   "manchete": "Mexico City Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
-   "veiculos": 8,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-01T01:06:59Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "fora",
-    "I": 0,
-    "V": 0,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Esporte, fora do escopo.",
-    "soma": 0
+    "motivo": "Violência contra indígenas já foi abordada anteriormente.",
+    "soma": 3
    }
   }
  ],
@@ -704,16 +629,17 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Servidora é exonerada por gestão Tarcísio após criticar fala de Flávio Bolsonaro sobre 9 dedos de Lula; secretário nega motivos políticos",
+   "manchete": "Donald Trump aseguró que Flávio Bolsonaro podrá quedarse “el tiempo que quiera” en Estados Unidos",
    "secoes": [
-    "A"
+    "A",
+    "B"
    ],
-   "veiculos": 7,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-10-31T22:07:06Z",
-   "link": "https://www.gazetadopovo.com.br/opiniao/editoriais/divida-publica-global-alerta/",
+   "veiculos": 10,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-02T00:07:49Z",
+   "link": "https://www.bbc.com/mundo/articles/cqg7x42xg9m8o?at_medium=RSS&at_campaign=rss",
    "editoria": "politica",
-   "nota": 7,
+   "nota": 8,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-01T15:41:07Z",
@@ -726,12 +652,11 @@
    "manchete": "Vídeo: Lula acusa extrema direita de espalhar fake news e garante manutenção de programas sociais",
    "secoes": [
     "A",
-    "B",
-    "C-nacional"
+    "B"
    ],
-   "veiculos": 14,
-   "veiculos_3h": 14,
-   "na_pauta_desde": "2026-11-01T20:38:37Z",
+   "veiculos": 23,
+   "veiculos_3h": 16,
+   "na_pauta_desde": "2026-10-31T17:06:58Z",
    "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQQzExLXc4ZW41bEZaUXExV2xETTRrNmJiMk0tQ2xQdXR0RVFmbFBveEx2MFNVeEhoVlZoYmRkTTVOMHhiN1NMcG5PLVJiVXNrQjBOM1J1LVN1aEVtSG1jSWNKdUpqSi1vM1ozWEtoY3l5ajR6RU5kQ3p3d3RPMVp6djdkb3Y0c1lSTi1HazBjdjlXZ0ZtMGRtWGdGUDlIcHQ0cnluZUpKOFNXdl9LNHZTLXpockM1RkdCb2FoWg?oc=5",
    "editoria": "gerais",
    "nota": 6,
@@ -744,14 +669,14 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "O encontro marcado de Lula com um dos pais do Plano Real",
+   "manchete": "Lula se encontra com formulador do Plano Real para discutir redução da taxa de juros",
    "secoes": [
     "A"
    ],
    "veiculos": 2,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-01T16:08:30Z",
-   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNZF8xVzR6LU5HQVJPeVhDb0ZnOVNadExmSE8wSGtBSXFad0tBNHU2LTJnajV5bS10ZEdKRTBQNzc2b3JPMGFKMUxGcTBSNF9KSDVRTU1jUGJRTTBqOUFaUXpVUzhlV3BCd3k5UzNwbGl3QS1ULXB4bVZldEc1cC0zYzlxeWxHT1BLSkwycGxWSHB6QktxSDBiSFNIdm01RVhxMHJrazZGZ3N0dXhzSmpYYjVJajdNdmVaa0pJ0gHKAUFVX3lxTE9WVVJuTEtaMlJob18zbXYxZVhyN1piT0ZhNjBnLW91VmYyLVpBRXdMLVFRSFM3Rzg0eFA5SU9YMVFxbjVRWWt5Tm83SFlRQTNTYjVPcHRKUUo3RDhWMHAxaG15akJrQVVGTjZCSk84eGt5M281VHRWbGVMeS1VNURqdWV4cXJhMkJqbmFYTXhDQTNwTlJiWktwQlVUcWhhbmZiOEVDTmhGczJIb1dfVHA3TlRvMEcwOXFXWklaSlNMeXJkb2U0enhGZnc?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNd3I1RUx3aGdxcENyLURYS0o2cVpOZk1JUjNtUnBtaFFXT2ZqckphRWdlWm9sUHo2YXJXQzIxSlVFRVFrRkowUXlSR21KcHlJMHdwR0hJM1B6cTFEVVpmcXFZbzVQb25jeXpDMDNaQkhFc1JxeFRQN1FiMERONFpEYnNnUkR5eE5GM1h6a3RkcmpGNWxXNkRTRjZFUWFDV3BuLTNhNDdSTlJUSHhRVGh4Z25kSzBjeWl3VnFHMXptcWVrbEpMcjN6TEl1RXkwWEJ4?oc=5",
    "editoria": "eleicoes",
    "nota": 4,
    "parceiro": {
@@ -775,9 +700,29 @@
    "nota": 1,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-01T12:34:53Z",
+    "quando": "2026-11-01T21:43:28Z",
     "legenda": "🔥💭",
-    "link": "https://www.instagram.com/p/DfMvm-FBDvx/"
+    "link": "https://www.instagram.com/p/DfNuX_WB3Ez/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Flávio Bolsonaro pede que Alexandre de Moraes deixe investigação no STF",
+   "secoes": [
+    "A",
+    "B"
+   ],
+   "veiculos": 15,
+   "veiculos_3h": 7,
+   "na_pauta_desde": "2026-11-01T13:10:55Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/11/defesa-de-flavio-bolsonaro-pede-que-moraes-seja-impedido-de-relatar-inquerito-e-quer-troca-por-mendonca.shtml",
+   "editoria": "politica",
+   "nota": 9,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-01T21:16:23Z",
+    "legenda": "A defesa do senador Flávio Bolsonaro (PL-RJ) apresentou três petições ao Supremo Tribunal Federal (STF) solicitando o afastamento do ministro Alexandre de Morae",
+    "link": "https://www.instagram.com/p/DfNrI0zhgdb/"
    },
    "triagem": "candidato"
   },
@@ -790,13 +735,32 @@
    "veiculos_3h": 0,
    "na_pauta_desde": null,
    "link": null,
-   "editoria": "gerais",
-   "nota": 1,
+   "editoria": "saude",
+   "nota": 4,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-01T17:42:09Z",
-    "legenda": "🔥💭",
-    "link": "https://www.instagram.com/p/DfNSxMthsbx/"
+    "quando": "2026-11-01T21:30:05Z",
+    "legenda": "A estratégia de telessaúde do Sistema Único de Saúde (SUS) consolidou um salto de 384,6% no número de Núcleos de Telessaúde entre 2022 e 2026, passando de 13 pa",
+    "link": "https://www.instagram.com/p/DfNs3QMAYUf/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Ministros vão ao MS verificar denúncias de violência contra indígenas depois da eleição",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-10-31T19:07:24Z",
+   "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQS25wMmV1OWlMc3lkWWN4d0poejZqSlMxaXR2SEtUWGwwQ3dpMjlLZzhBeWx2SDAyei1zWDlfdUFVMkpoVjlXLWV6eENnMDI1Tnp6NzJDNDBYNW9PV01OcXQxNjk0RFZRR2VTcURxN1RsOU96LUNKYUk3R0czZU5pVm5QT05HUnJmTUszeUNtQVZsclJBaDhFbnY0UFI1cW41REwxQjZRZFdXbWs3bVFETXNwTy03OE5ycm5NUW9YMnh2OEwzc1NKZXp3WUdyZ9IB0wFBVV95cUxNbDM3ODhqQ0tON0J2N1hFNlU0SnJ1cVBVdEdLSmNiWjBhejlqak1ndE94R3k3N2lsbE5LMjFzeEM2MEhtLUluQTduRlFoX1IwUERSMWhSbV84X1RoZk83d2VlRmpIOFdkTG1YQjk2cWRiMFJYR3lRRkNfT0kzOTl6LW10NlN1QnhXWTRtU0R0RF8zYVdYNGNHdHcxYXp1ODVOSFZVRUsxU3FieU9MMFJJWGJxejI2UElwaElUdmhNM0JqWkJPeTFRXzZJbnk5Q1lDV2dV?oc=5",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-01T20:49:37Z",
+    "legenda": "Cuidar da natureza brasileira também é defender a vida e os direitos dos povos originários. Diante das graves denúncias de violência contra comunidades indígena",
+    "link": "https://www.instagram.com/reel/DfNoDFihswZ/"
    },
    "triagem": "candidato"
   },
@@ -828,13 +792,13 @@
    "veiculos_3h": 0,
    "na_pauta_desde": null,
    "link": null,
-   "editoria": "saude",
-   "nota": 2,
+   "editoria": "gerais",
+   "nota": 1,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-01T19:30:04Z",
-    "legenda": "A Agência Nacional de Vigilância Sanitária (Anvisa) aprovou a ampliação do prazo de validade do implante contraceptivo subdérmico de etonogestrel, estendendo su",
-    "link": "https://www.instagram.com/p/DfNfIRcCcCd/"
+    "quando": "2026-11-01T17:42:09Z",
+    "legenda": "🔥💭",
+    "link": "https://www.instagram.com/p/DfNSxMthsbx/"
    },
    "triagem": "candidato"
   },
@@ -847,13 +811,13 @@
    "veiculos_3h": 0,
    "na_pauta_desde": null,
    "link": null,
-   "editoria": "gerais",
-   "nota": 3,
+   "editoria": "saude",
+   "nota": 2,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-01T20:49:37Z",
-    "legenda": "Cuidar da natureza brasileira também é defender a vida e os direitos dos povos originários. Diante das graves denúncias de violência contra comunidades indígena",
-    "link": "https://www.instagram.com/reel/DfNoDFihswZ/"
+    "quando": "2026-11-01T19:30:04Z",
+    "legenda": "A Agência Nacional de Vigilância Sanitária (Anvisa) aprovou a ampliação do prazo de validade do implante contraceptivo subdérmico de etonogestrel, estendendo su",
+    "link": "https://www.instagram.com/p/DfNfIRcCcCd/"
    },
    "triagem": "candidato"
   },
@@ -885,44 +849,6 @@
    "veiculos_3h": 0,
    "na_pauta_desde": null,
    "link": null,
-   "editoria": "saude",
-   "nota": 2,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-01T20:30:03Z",
-    "legenda": "Uma publicação divulgada pelo Instituto Nacional de Câncer (Inca) revela que a mortalidade por câncer de mama é quase quatro vezes maior entre mulheres negras, ",
-    "link": "https://www.instagram.com/p/DfNl_q-jRbG/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "ICMS sobre gasolina, diesel e gás de cozinha vai subir em fevereiro de 2027; veja valores",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-01T15:07:22Z",
-   "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQLXZiNW5GRE42cE9VOGJoNmhFZzk0UjlCaVprcTB5dlRGOW5tVlhhYWlnN1VpNFZNeVRhdElrMlI3REhka3RtVkVNMHhldmNpWFM2WU0wRFZ6V0UxQzBrZXZkZTVaSlJxOTFNeTVEZ3Z4eERRckh1ZG5qTk15azhqdUNkQjd6NTBHS0huZmItMU9FdVJiSlNWc0U1NHI4SjNoS1VlNG43XzdDSTNxUG8yLXF3UWJONm9XUEoxZEJDcUxUek00NHRLaEtFdXdWM3RGVHc?oc=5",
-   "editoria": "economia",
-   "nota": 3,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-01T14:02:42Z",
-    "legenda": "#MAISLIDADASEMANA Os governos estaduais aprovaram um aumento do ICMS sobre gasolina, diesel e gás de cozinha, que entrará em vigor em 1º de fevereiro de 2027. A",
-    "link": "https://www.instagram.com/p/DfM5nR0RwPs/"
-   },
-   "triagem": "repetido (20261028-2310-icms-gas-cozinha)"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
    "editoria": null,
    "nota": null,
    "parceiro": {
@@ -932,6 +858,25 @@
     "link": "https://www.instagram.com/p/DfMn62uNzEH/"
    },
    "triagem": "fora: crime ou tragedia (morreu)"
+  },
+  {
+   "manchete": "ICMS dos combustíveis sobe em fevereiro de 2027 e reajuste valerá em todo o Brasil",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-02T00:07:49Z",
+   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQZUVuMVVpeFE2X0pFVmN1OWlMTGJWUGdwbmEtUHJzQk94LXNhaXFDRm1xN1lOMF9wT3I3QjA3VWpRdU5wUjdpRHlHNDBKSnJqWDVLdDBOcHJicUZGRi1scVJITk1pdzEwMktqMDNlRi1jNTI4VUM3ZC1mblZ1R3pqZnQteFF5QXpiYkNhNUlhVXpQTmpLZUpoZFY2b2dxZWZETmhpc0pEMG9BN2JaV2xQM1N4RDNQbjNPVHdGTjd5ejJodkE?oc=5",
+   "editoria": "economia",
+   "nota": 5,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-01T14:02:42Z",
+    "legenda": "#MAISLIDADASEMANA Os governos estaduais aprovaram um aumento do ICMS sobre gasolina, diesel e gás de cozinha, que entrará em vigor em 1º de fevereiro de 2027. A",
+    "link": "https://www.instagram.com/p/DfM5nR0RwPs/"
+   },
+   "triagem": "candidato"
   },
   {
    "manchete": null,
@@ -953,21 +898,21 @@
    "triagem": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "INFLAÇÃO | A reeleição de Luiz Inácio Lula da Silva (PT) no segundo turno fez saltar as expectativas de inflação de analistas de mercado para os próximos anos, mostra pesquisa realizada pela corretora BGC Liquidez com cerca de 30 participantes de merc",
+   "manchete": null,
    "secoes": [
     "A"
    ],
-   "veiculos": 3,
+   "veiculos": 0,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-10-31T17:06:58Z",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0tNHRzeE9fbUFleUJDS0pTa1BucXRQYXBxWEFaVzZJQl9SdWRJT2ZjMUNuQkg0NUpSM2ZrX0had1hxbm5XUy1Bb1dldElhMC03TUE?oc=5",
-   "editoria": "eleicoes",
-   "nota": 3,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "saude",
+   "nota": 2,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-01T12:49:34Z",
-    "legenda": "#MAISLIDADASEMANA Uma jovem de 18 anos foi brutalmente atacada pelo próprio namorado após comemorar a reeleição do presidente Luiz Inácio Lula da Silva (PT), no",
-    "link": "https://www.instagram.com/p/DfMxQJjB_CY/"
+    "quando": "2026-11-01T20:30:03Z",
+    "legenda": "Uma publicação divulgada pelo Instituto Nacional de Câncer (Inca) revela que a mortalidade por câncer de mama é quase quatro vezes maior entre mulheres negras, ",
+    "link": "https://www.instagram.com/p/DfNl_q-jRbG/"
    },
    "triagem": "candidato"
   },
@@ -987,25 +932,6 @@
     "quando": "2026-11-01T18:01:17Z",
     "legenda": "🔥💭",
     "link": "https://www.instagram.com/p/DfNU9oWBkiY/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-01T20:00:15Z",
-    "legenda": "O Governo da Paraíba formalizou a assinatura de dois contratos de financiamento internacional que somam US$ 167,5 milhões (mais de R$ 500 milhões) para a expans",
-    "link": "https://www.instagram.com/p/DfNilXSDPbv/"
    },
    "triagem": "candidato"
   },
@@ -1075,34 +1001,15 @@
    "veiculos_3h": 0,
    "na_pauta_desde": null,
    "link": null,
-   "editoria": "saude",
-   "nota": 4,
+   "editoria": "gerais",
+   "nota": 1,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-01T18:00:10Z",
-    "legenda": "O Ministério da Saúde oficializou a publicação de 18 novos documentos e diretrizes clínicas para a atenção oncológica no Sistema Único de Saúde (SUS), abrangend",
-    "link": "https://www.instagram.com/p/DfNU16WiTDc/"
+    "quando": "2026-11-01T20:00:15Z",
+    "legenda": "O Governo da Paraíba formalizou a assinatura de dois contratos de financiamento internacional que somam US$ 167,5 milhões (mais de R$ 500 milhões) para a expans",
+    "link": "https://www.instagram.com/p/DfNilXSDPbv/"
    },
    "triagem": "candidato"
-  },
-  {
-   "manchete": "Câncer de próstata matou 50 homens por dia no país em 2025",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 8,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-01T13:10:55Z",
-   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxORDM3TmhtZm5oVFVaZnpMTnZpQkRKXzBvTmN0YTY1dkdCYlNOOFRtNXhUZGZZTkZwd3ZqQ3Q1Y2hFQXJLOW9jVU9mNGVsaEhJdEdBMzNVUENLNmhzOTBlTTk2TFBTX19lMW9OM2lZQ1U0R2p0QTFybUctcVg3aS11SXlDcy05eHZSa2dYaThYbUFsX3RaWi1SUGlldHlIN2k2Ulg1MU85ZldfNmloQlJwcWduMA?oc=5",
-   "editoria": null,
-   "nota": null,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-01T13:14:27Z",
-    "legenda": "Cerca de 18,5 mil homens morreram no Brasil em 2025 vítimas do câncer de próstata. Isso equivale a 50 mortes por dia, segundo dados do Ministério da Saúde, divu",
-    "link": "https://www.instagram.com/p/DfM0FwbxGYc/"
-   },
-   "triagem": "fora: crime ou tragedia (matou)"
   },
   {
    "manchete": null,
@@ -1122,6 +1029,44 @@
     "link": "https://www.instagram.com/p/DfM5ZmiGyWf/"
    },
    "triagem": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "saude",
+   "nota": 4,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-01T18:00:10Z",
+    "legenda": "O Ministério da Saúde oficializou a publicação de 18 novos documentos e diretrizes clínicas para a atenção oncológica no Sistema Único de Saúde (SUS), abrangend",
+    "link": "https://www.instagram.com/p/DfNU16WiTDc/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-01T22:00:22Z",
+    "legenda": "O acesso à internet deve chegar a dezenas de Centros de Referência de Assistência Social (CRAS) no Amapá, Amazonas, Acre e Alagoas, ampliando as condições de at",
+    "link": "https://www.instagram.com/p/DfNwVIOgcvD/"
+   },
+   "triagem": "candidato"
   },
   {
    "manchete": null,
@@ -1212,9 +1157,9 @@
    "nota": 1,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-01T18:30:04Z",
-    "legenda": "A República Democrática do Congo ultrapassou a marca de 10.060 casos confirmados e 4.887 mortes por Ebola, conforme apontou relatório divulgado pelo instituto d",
-    "link": "https://www.instagram.com/p/DfNYQ0wDB3X/"
+    "quando": "2026-11-01T21:00:28Z",
+    "legenda": "Em 1976, a voz inconfundível de Elza Soares imortalizou no disco Lição de vida o samba \"Malandro\", abrindo caminho para a consagração pública de um dos autores ",
+    "link": "https://www.instagram.com/p/DfNpebXDZO7/"
    },
    "triagem": "candidato"
   },
@@ -1238,25 +1183,6 @@
    "triagem": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Travessia de Amyr Klink no Atlântico ganha versão no cinema em '100 dias'",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-01T16:25:38Z",
-   "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNX3RRNTZIa1gwQmdRdzQ1ZVdlbzR6bE1ocDNBNHNrR3prZTRENENlOVpaY29iZG1TVDc0bDloWTlTMnQtUFRiZmF0U3lYbl9mMDE1SEJ3R21hQjZDTU1xR2F1OEttY2p3ZVlQV3NrMzRKdEJlOUpTQ2ptY1BSNk16cE5VOHJsLUwzdWNIX1N6TUtodUs1cUhEMTBEWkZTVGFWc3NyWjZsdHdWUVFBYktNVVNsbFMxdTZuaFZ0SllDemo5R2JXSUVhdzRoOXlrQnZwb1NmSXhRZTZxdGpRenV30gHkAUFVX3lxTE82QlRJQ0FnYjlCVlU0bl9ya09SbjZndS12Mm82bHhqbzJqWE96STdwbHJpRS16VDU5WDhWRF9heFFGcjUweHh6YThmWGUxVEctNFRZQ054anAzVktHamFVbmU4ajZyZnZzeHpjVXU4S0Mwb1BvS0w1VzJZNFpBTEw2S2ZFMTZxM2NOcWdmZFRrdlFzOGlqa21NMGxwbERwMk03NnFxWTlFZll5RnZMeTMxLUNtUndSeVRFVkszLTlVVFlpMm1oNzgyZmQxdHZMdEh2NjhneXpDblRoeVhjMmp6bC03UA?oc=5",
-   "editoria": "gerais",
-   "nota": 1,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-01T13:30:05Z",
-    "legenda": "Exibido como encerramento da Première Brasil no Festival do Rio e em cartaz nos cinemas brasileiros desde quinta-feira (29), o longa-metragem \"100 Dias\" adapta ",
-    "link": "https://www.instagram.com/p/DfM17uliZ_m/"
-   },
-   "triagem": "candidato"
-  },
-  {
    "manchete": null,
    "secoes": [
     "A"
@@ -1269,9 +1195,9 @@
    "nota": 1,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-01T21:00:28Z",
-    "legenda": "Em 1976, a voz inconfundível de Elza Soares imortalizou no disco Lição de vida o samba \"Malandro\", abrindo caminho para a consagração pública de um dos autores ",
-    "link": "https://www.instagram.com/p/DfNpebXDZO7/"
+    "quando": "2026-11-01T18:30:04Z",
+    "legenda": "A República Democrática do Congo ultrapassou a marca de 10.060 casos confirmados e 4.887 mortes por Ebola, conforme apontou relatório divulgado pelo instituto d",
+    "link": "https://www.instagram.com/p/DfNYQ0wDB3X/"
    },
    "triagem": "candidato"
   },
@@ -1335,63 +1261,63 @@
  ],
  "descartados_mais_quentes": [
   {
-   "manchete": "Efemérides de novembro de 2026: veja feriados e datas comemorativas",
-   "veiculos": 46,
-   "veiculos_3h": 9,
+   "manchete": "Governo dos EUA \"não participou diretamente\" da fuga de Flávio Bolsonaro do Brasil, diz Marco Rubio",
+   "veiculos": 100,
+   "veiculos_3h": 33,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "CRUZEIRO x CORINTHIANS | FINAL DA LIBERTADORES | Transmissão, React e Placar Ao Vivo",
-   "veiculos": 37,
-   "veiculos_3h": 24,
+   "manchete": "Calendário BPC/Loas novembro 2026: veja datas de pagamento",
+   "veiculos": 83,
+   "veiculos_3h": 12,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Corinthians x Cruzeiro pela Libertadores feminina: onde assistir ao vivo, horário e escalação",
+   "veiculos": 36,
+   "veiculos_3h": 9,
    "motivo": "fora: esporte (corinthians)"
   },
   {
-   "manchete": "F1: Hamilton conquista sua primeira pole do ano no GP do México; Bortoleto larga em 14º.",
+   "manchete": "Queda de avião em área residencial de Palm Beach deixa nove mortos na Flórida",
+   "veiculos": 26,
+   "veiculos_3h": 23,
+   "motivo": "fora: crime ou tragedia (mortos)"
+  },
+  {
+   "manchete": "F1 Mexico Grand Prix live updates: Follow latest from today’s race as Kimi Antonelli looks to win Drivers' Championship",
    "veiculos": 23,
-   "veiculos_3h": 3,
+   "veiculos_3h": 22,
    "motivo": "fora: esporte (f1)"
   },
   {
-   "manchete": "Bolsonaro volta a ter crises de soluço e preocupa família, relata Carlos",
-   "veiculos": 22,
-   "veiculos_3h": 6,
-   "motivo": "sem editoria"
-  },
-  {
    "manchete": "Mega-Sena 3080 pode pagar R$ 42 milhões neste domingo; g1 transmite ao vivo",
-   "veiculos": 21,
-   "veiculos_3h": 4,
+   "veiculos": 23,
+   "veiculos_3h": 2,
    "motivo": "fora: entretenimento (mega sena)"
   },
   {
-   "manchete": "Aldeias Guarani Kaiowá vão receber proteção da Força Nacional",
-   "veiculos": 21,
-   "veiculos_3h": 3,
+   "manchete": "Flávio Bolsonaro após fugir do Brasil: 'Não me arrependo de absolutamente nada do que fiz'",
+   "veiculos": 20,
+   "veiculos_3h": 17,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "O que são as eleições de meio de mandato dos EUA e por que elas podem selar futuro de Trump?",
+   "manchete": "Lula volta às redes e diz que nenhum programa social será extinto",
    "veiculos": 17,
-   "veiculos_3h": 4,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Justiça quebra sigilo de documentos da morte de Tancredo Neves; entenda o que pode vir à tona",
-   "veiculos": 15,
-   "veiculos_3h": 3,
-   "motivo": "fora: crime ou tragedia (morte)"
-  },
-  {
-   "manchete": "Lula afirma que nenhum programa social será extinto em seu quarto mandato",
-   "veiculos": 14,
-   "veiculos_3h": 13,
+   "veiculos_3h": 10,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Gabarito oficial da Fuvest 2027 é divulgado; veja respostas da 1ª fase",
-   "veiculos": 13,
-   "veiculos_3h": 10,
+   "manchete": "Vasco vai receber caminhão de dinheiro se eliminar o Palmeiras na Copa do Brasil",
+   "veiculos": 14,
+   "veiculos_3h": 5,
+   "motivo": "fora: esporte (palmeiras)"
+  },
+  {
+   "manchete": "Avión privado se estrella en Texas con nueve personas a bordo",
+   "veiculos": 11,
+   "veiculos_3h": 8,
    "motivo": "sem editoria"
   }
  ]
