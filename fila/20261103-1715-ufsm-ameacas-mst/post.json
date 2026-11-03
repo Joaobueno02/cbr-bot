@@ -1,5 +1,5 @@
 {
-  "status": "renderizar",
+  "status": "renderizado",
   "formato": "unico",
   "editoria": "educacao",
   "chapeu": "ÓDIO NO CAMPUS",
@@ -65,15 +65,38 @@
     "fonte_primaria": null
   },
   "render": {
-    "quando": "2026-11-03T20:36:05Z",
-    "artes": [],
+    "quando": "2026-11-03T20:40:51Z",
+    "artes": [
+      {
+        "arquivo": "arte-1.jpg",
+        "ok": true,
+        "tamanho": 52,
+        "topo_bloco": 745,
+        "fontes_ok": true,
+        "fontes": [
+          "Fraunces",
+          "Archivo",
+          "Unbounded"
+        ]
+      }
+    ],
     "avisos": [],
-    "erro": "FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/cbr-bot/cbr-bot/fila/20261103-1715-ufsm-ameacas-mst/foto-tarjada.jpg'",
-    "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/cbr-bot/cbr-bot/bot/render.py\", line 239, in processar\n    meta = baixar_foto(post[\"foto_url\"], pasta / \"foto.jpg\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/cbr-bot/cbr-bot/bot/render.py\", line 41, in baixar_foto\n    dados = (RAIZ / url[5:]).read_bytes()\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/pathlib.py\", line 1019, in read_bytes\n    with self.open(mode='rb') as f:\n         ^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/cbr-bot/cbr-bot/fila/20261103-1715-ufsm-ameacas-mst/foto-tarjada.jpg'\n"
+    "foto": {
+      "largura": 1600,
+      "altura": 1114,
+      "aviso": null
+    },
+    "story": "story.jpg",
+    "reels": {
+      "video": "reels.mp4",
+      "capa": "capa.jpg",
+      "animado": true,
+      "trilha": "educacao.m4a"
+    }
   },
   "design_auto": {
-    "quando": "2026-11-03T20:29:12Z",
-    "render_quando": "2026-11-03T20:27:22Z",
+    "quando": "2026-11-03T20:42:46Z",
+    "render_quando": "2026-11-03T20:40:51Z",
     "graves": 0,
     "avisos_gerais": [],
     "artes": [
@@ -87,14 +110,14 @@
           "subtitulo_linhas": 2,
           "topo_bloco": 745,
           "fundo_marca": {
-            "luminancia": 0.75,
-            "variacao": 0.22
+            "luminancia": 0.76,
+            "variacao": 0.2
           },
           "foto": {
-            "largura": 2560,
-            "altura": 1783,
-            "ampliacao": 0.44,
-            "nitidez": 1845.8
+            "largura": 1600,
+            "altura": 1114,
+            "ampliacao": 0.7,
+            "nitidez": 1463.4
           }
         }
       }
