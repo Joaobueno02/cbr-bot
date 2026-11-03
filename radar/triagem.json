@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-03T17:10:22Z",
- "pauta_quando": "2026-11-03T17:10:20Z",
+ "quando": "2026-11-03T18:06:51Z",
+ "pauta_quando": "2026-11-03T18:06:48Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,40 +9,142 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 13,
+  "avaliados_agora": 16,
   "falhas_antes": null,
-  "pedidos_hoje": 8
+  "pedidos_hoje": 9
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 154,
- "novos_3h": 11,
- "esquentaram": 3,
+ "total_assuntos": 160,
+ "novos_3h": 9,
+ "esquentaram": 2,
  "candidatos": [
   {
-   "manchete": "Janones visita Cristina Kirchner para lançar “Ejército del peronismo” contra reeleição de Milei",
+   "manchete": "Senado vota nesta terça (3) a PEC da Segurança",
    "secoes": [
-    "B",
-    "D-america_latina"
+    "B"
    ],
-   "veiculos": 14,
+   "veiculos": 32,
    "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-03T14:08:53Z",
-   "link": "https://www.gazetadopovo.com.br/mundo/janones-peronista-exportar-estrategia-digital-contra-reeleicao-de-milei/",
-   "editoria": "america_latina",
+   "na_pauta_desde": "2026-11-03T01:07:31Z",
+   "link": "https://tvtnews.com.br/senado-vota-a-pec-da-seguranca-publica/",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "politica",
+    "I": 3,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Senado vota PEC da Segurança Pública.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "STF debate proibição das bets em audiência com clubes e governo",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 8,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-03T10:06:53Z",
+   "link": "https://www.congressoemfoco.com.br/noticia/131254/ao-vivo-stf-debate-proibicao-das-bets-com-governo-clubes-e-empresas",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Abaixo-assinado contra bets e debate no STF.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Lula indicará seis diretores do Banco Central até o fim de 2027, e mercado teme mudança de perfil",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-03T02:26:57Z",
+   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/lula-indicara-seis-diretores-do-banco-central-ate-o-fim-de-2027-e-mercado-teme-mudanca-de-perfil.shtml",
+   "editoria": "economia",
    "nota": 6,
    "esquentou": false,
    "lente": [
-    "milei"
+    "banco",
+    "juros"
+   ],
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Indicações ao Banco Central afetam juros e economia.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Governo Trump intensifica caça a eleitores estrangeiros nas eleições de meio de mandato",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 521,
+   "veiculos_3h": 390,
+   "na_pauta_desde": "2026-11-02T18:19:00Z",
+   "link": "https://www1.folha.uol.com.br/mundo/2026/11/governo-trump-intensifica-caca-a-eleitores-estrangeiros-nas-eleicoes-de-meio-de-mandato.shtml",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "trump"
    ],
    "ia": {
     "editoria": "america_latina",
     "I": 2,
     "V": 3,
-    "P": 2,
+    "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Articulação de Janones na Argentina repercute nas redes.",
+    "motivo": "Governo dos EUA intensifica repressão eleitoral.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Enem 2026: veja horários, o que levar e orientações para as provas",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 17,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-03T01:50:53Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/educacao/2026/11/relembre-o-que-e-necessario-e-o-que-e-proibido-levar-para-o-enem-2026.shtml",
+   "editoria": "educacao",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "educacao",
+    "I": 3,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Orientações e horários para o Enem 2026.",
     "soma": 5
    }
   },
@@ -74,93 +176,130 @@
    }
   },
   {
-   "manchete": "PGR envia nesta semana ao STF parecer pelo encerramento do inquérito das fake news",
+   "manchete": "Janones se reúne com opositor de Milei na Argentina para compartilhar estratégias da campanha de Lula",
    "secoes": [
-    "B"
+    "B",
+    "D-america_latina"
    ],
-   "veiculos": 7,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-03T17:10:20Z",
-   "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQaVk4UmtraDhYelNYREVQSUlrVFRjLWlhRlZITWcydm5RR1hVYlNjS09UMzFCLTRKNHduSTZoczJobkpjZ0RUcmNzT1ZEcnhTQkVpc1NYd1lBMlphSDE3LWxkTVV6YXFhcWN4a18zOC1uelpmci1IUnY4M0EwU2J4S1dsejZEdGtXcUdIdVNWM0d6d0dKV2JSLVh1bFRWbVNPZ2RlSmRKd0ItYXJkc3VaNlV5dUU3QTdrRTN3X1QyZmdHY1VUN2JaTlc2QlpjLTR0NVNBNDdoSVNINnd50gHrAUFVX3lxTE9paC11blpwMzliandwWDZ5bVJfU2tvVWNYODlsYUJMS29vX2tmSVlCQXZaNlFCSVhRdDBOeVBVdUFKbVYxVFl0N3puM2xVQWJzQjNuZEVqTEliNC0yWjN3QUw1Q2l6Q09peDhXb3FDVUlSS2J0NzVYYjJZRjJZQkJyNTFpUHE2MXJ6MEozY01aTU9ueTZEdEJINnR1TkJGVVpXaFpfVTZNQ1ItTmMyQWR4TG0zRl9MTjdMS2ZuWkNpV2k0dkktem9aTGhER2thbGl3M0VadVdHTlBFZnc0MW1lbkFOWGpXeDhRNmM?oc=5",
-   "editoria": "politica",
+   "veiculos": 42,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-02T13:48:26Z",
+   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/na-argentina-janones-se-reune-com-opositor-de-milei-e-vai-encontrar-cristina-kirchner.shtml",
+   "editoria": "america_latina",
    "nota": 6,
    "esquentou": false,
    "lente": [
-    "inquerito"
+    "milei"
    ],
    "ia": {
-    "editoria": "politica",
+    "editoria": "america_latina",
     "I": 2,
     "V": 2,
     "P": 2,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "PGR avalia encerramento do inquérito das fake news no STF.",
+    "motivo": "Janones articula com opositor de Milei na Argentina.",
     "soma": 4
    }
   },
   {
-   "manchete": "PEC da Segurança volta ao Senado em impasse sobre maioridade penal",
+   "manchete": "EE.UU. acude a las urnas en unas elecciones de medio mandato cruciales para el futuro del gobierno de Trump",
    "secoes": [
-    "B"
+    "D-america_latina"
    ],
-   "veiculos": 5,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-03T01:07:31Z",
-   "link": "https://www.metropoles.com/brasil/marinho-oposicao-mantera-emenda-sobre-maioridade-penal-na-pec-da-seguranca",
-   "editoria": "politica",
-   "nota": 5,
+   "veiculos": 15,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-02T21:07:16Z",
+   "link": "https://www.bbc.co.uk/mundo/live/cq9vz4g97xy2t?at_medium=RSS&at_campaign=rss",
+   "editoria": "america_latina",
+   "nota": 6,
    "esquentou": false,
-   "lente": [],
+   "lente": [
+    "trump"
+   ],
    "ia": {
-    "editoria": "politica",
+    "editoria": "america_latina",
     "I": 2,
     "V": 2,
     "P": 2,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "PEC da Segurança traz debate sensível sobre maioridade penal.",
+    "motivo": "Eleições de meio mandato nos EUA afetam a geopolítica e a região.",
     "soma": 4
    }
   },
   {
-   "manchete": "Gilmar critica comando do TSE e elogia atuação do colegiado",
+   "manchete": "Derrota de Trump pode aumentar pressão sobre Flávio Bolsonaro nos Estados Unidos",
    "secoes": [
+    "A"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-03T18:06:48Z",
+   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNMVhiR3lRRWVYSjNjQklVMlh6WU04UTRGS2o2cGNybnNxd3doRnFwVGJkUXQ0OEdGMXNsUFVoVjZhWm9QWEZXR05zWU5EdUpwZTNLX09iYUdqV2JlTDJGZXVxemF1UWxHZXhOQlI3dHpLaXpWTXJQTGJLX3BROTlGdmpHbXg2MkJBU1lIYnBsSmJNYUdxRm0zS3FONFFjcWs4YWktOUxybDdzUnRKeWZMZ0YzYWV0b0dx?oc=5",
+   "editoria": "eleicoes",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio",
+    "trump"
+   ],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Midterms nos EUA podem impactar situação de Flávio.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Zambelli pede ajuda de R$ 50 por mês para conseguir viver na Itália",
+   "secoes": [
+    "A",
     "B"
    ],
-   "veiculos": 20,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-03T10:06:53Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/03/gilmar-mendes-diz-que-comando-do-tse-deve-agir-como-arbitro-equidistante.ghtml",
-   "editoria": "eleicoes",
-   "nota": 4,
+   "veiculos": 15,
+   "veiculos_3h": 8,
+   "na_pauta_desde": "2026-11-03T12:09:43Z",
+   "link": "https://www.congressoemfoco.com.br/noticia/131252/zambelli-pede-ajuda-de-r-50-por-mes-para-conseguir-viver-na-italia",
+   "editoria": "politica",
+   "nota": 7,
    "esquentou": true,
-   "lente": [],
+   "lente": [
+    "extrema direita"
+   ],
    "ia": {
-    "editoria": "eleicoes",
+    "editoria": "gerais",
     "I": 2,
     "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Crítica de Gilmar Mendes sobre o papel do TSE.",
+    "motivo": "Ex-deputada condenada pede doações na Itália.",
     "soma": 4
    }
   },
   {
    "manchete": "Ministério da Justiça autoriza Força Nacional por 180 dias na Terra Indígena Ituna-Itatá, no Pará",
    "secoes": [
+    "A",
+    "B",
     "D-terra"
    ],
    "veiculos": 15,
    "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-03T10:06:53Z",
-   "link": "https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-11/forca-nacional-apoiara-funai-na-terra-indigena-ituna-itata-no-para",
+   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQNHJSYU80dU9UZHc1bXJsdzBacEFUczN2OGc4Y2FGcGtkRTBYd29RZ2I2VGNNMjR5dnRwYkRRYW1qSTJqWUFsYlh2WEVUa1pTOU44ekhfbENLdVpXc0xSTE8tWG52UE5YQm5yc1lYX182ZnlKZU9IVWNJQTJPNjAxMEJRVEFTMG45U19fbmlBM3RWbkdxZ2RyUmFnTVRiYUJQUzFB?oc=5",
    "editoria": "roca",
-   "nota": 6,
+   "nota": 7,
    "esquentou": true,
    "lente": [
     "indigena"
@@ -178,212 +317,167 @@
    }
   },
   {
-   "manchete": "Salário mínimo de 2027 pode passar dos R$ 1.741 e trabalhador pode ganhar mais do que os R$ 120 previstos a partir de janeiro",
+   "manchete": "Perfis bolsonaristas afirmam que alas do PL ofereceram dinheiro para atacar integrantes do partido",
    "secoes": [
-    "C-nacional"
+    "A",
+    "B"
    ],
-   "veiculos": 2,
+   "veiculos": 7,
    "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-03T17:10:20Z",
-   "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOQ0xianI3VmlXTWZNWHdNRWhXb2YwTjgxbWIxaVhLWFY3clRZeC05bmFGS3ZTRXpiS0tlcWRXVVc3cXJIRHQ5a1N1OHRkWW1UQU1iNVJkUG5tcHJTOHhxaEZPbmVSeHAtT2V4Y2dZX3FYZmFLR2hCT0xhQzVqV1lFSUlCYlVhTFNycldiMVVLbTVjZV9jbTVkY01oeXNzNC0zUnNrejRXcFE0M2FmSHlISXBzOFZfQUJqN0lwZ0tHcDhoU0VqTFBFVUVxbG91UF9Wb0ZmNHc2eF9XSWFEVWc3LUNLTU0wS3g5Q3E0eVVkOA?oc=5",
-   "editoria": "economia",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "trabalhador",
-    "salario"
-   ]
-  },
-  {
-   "manchete": "Defesas de investigados no caso Master acionam Fachin diante de paralisação no STF",
-   "secoes": [
-    "C-nacional"
-   ],
-   "veiculos": 2,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-03T17:10:20Z",
-   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOR2c3LXhXNlllQWxWQkctZHc2T2JOQTZYbTFWVTA5bEo5RE1pN1h3T0h2TE55cXZYcXBQNzdkRW5GRi1IUHJQcENzZVowSHJPU21HbTAzbE9uLWU2RjgtdFNVWm1IQzFYajdWbE01bXlreW1iWUxROXF1SnR1bndqTjFINklfQ3k0SFBZN2ZjcVg3MHEzdGhBSjNHeElsZ3o0Y3BjRlpYVExaSDVrejJWRTZDQTZPZw?oc=5",
-   "editoria": "politica",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "investigad",
-    "master"
-   ]
-  },
-  {
-   "manchete": "Homem é preso durante operação da Polícia Federal em Charrua",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-03T16:10:21Z",
-   "link": "https://news.google.com/rss/articles/CBMingJBVV95cUxONktDOGUyOE1wYVJjTUl4dGw2MEctMUM1VU01ZDJrNzN6VnB6R3R4VzRMa2R1dHJXTTYycG9oV0tIaWl4S2wwcHZOekxhX2VhNi05NU8xYklYNFZBNzJWTjFrUlhYeFM5RjlhdGdBeE1jQVRkclpGYy05ZE9TLVRuWlFmSXM0U2FpdUcwbnNrRWNIVk10ZWREUXBvR002UVJnalFwRVNWTkoybFFHX1plWnBzeXJPOHdyZXhUSmR2X3FSRGhBMU1vaEpoZXpMRjZYeUdaNXNLRUxWUGQ5cHpGRGNCTTRaV08zSUVqNGZUcFEwcUFHNC1wODFGbzBRVnBtTmQ4VDV6LW9RcDFId2h6dEFkWlJmLXZNeXRULUJ30gGsAkFVX3lxTFBoU0ZPR2JUdFgwQmFqb2dyemYwcFRta3NBbkFPOFJkaU10allDZzE5Qzd5UlROV0JwZmc1Y3lYZF92QVhSSlZ2WjgtNU05SnhZMkhNOEJvUHVWSVlWRkRsNmxjamVfbExTa2tVTk9aOUY3RDQ5VkxaTlRuaEY5WEY5UXhybWx2NHFENHdzWWtlOXUya3lqX3dVZk5tbnFHY0VCSkk1cGt3eFBSWlhESHFkVllXR3o5am9oWTRqTDNHSEJfaUUwVWtvNXRhOHZzT1RhcnFFMDZSVDRLbjk0blBXMkR5SUEyekk3OVF0SldLS3dwb3RxQ2FWOU42U2tfaDQ1cWtoNVNQdHI0ckNJSU11YmV4a1B0T00zb1dVWnFTUUFqbVlsYmpRM1dQOA?oc=5",
-   "editoria": "politica",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "preso",
-    "indigena"
-   ]
-  },
-  {
-   "manchete": "STF debate proibição das bets no Brasil com participação de Flamengo, Corinthians e CBF",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 66,
-   "veiculos_3h": 48,
-   "na_pauta_desde": "2026-11-03T10:06:53Z",
-   "link": "https://www.congressoemfoco.com.br/noticia/131254/ao-vivo-stf-debate-proibicao-das-bets-com-governo-clubes-e-empresas",
-   "editoria": "eleicoes",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Anvisa interdita parte de terminal portuário em Santos",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 15,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-03T14:08:53Z",
-   "link": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/anvisa-interdita-parte-de-terminal-no-porto-de-santos",
-   "editoria": "saude",
-   "nota": 4,
-   "esquentou": true,
-   "lente": []
-  },
-  {
-   "manchete": "Prova do Enem começa neste domingo (08)",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 11,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-03T01:50:53Z",
-   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPNXg1dlk1bFdPT0hFU1Bnb0FHZlR6dTVXb1F6MmZDWkltRFlJbGUxLW9ZU1hXNFFTZDMtUHYwMVF2MXhDTVNyMXZiTUNqZnEzM1h3aW82RkM1bjFkMUhfNFFaZGM2blk0WVBseVlpQzF6aEE3SS15SVFGcVZOXy1jMzhHX3EwbTV5V1Bick90X3NaSFllS0RDZQ?oc=5",
-   "editoria": "educacao",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "\"Joguem esse lixo pela janela\": livro de agente da PF revela bastidores da prisão de Lula em Curitiba",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 6,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-03T10:06:53Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/11/joguem-esse-lixo-da-janela-agente-da-pf-relata-dias-de-lula-em-curitiba.shtml",
-   "editoria": "politica",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Professor da UFU é acusado de agredir adolescente de 16 anos em Uberlândia",
-   "secoes": [
-    "C-universidades"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-03T16:10:21Z",
-   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPZEtYa3hsall4QWw3Ul9OT0x0aHBjdDJxZHZjSjdNdUJkSFFUdUo1LVVuYnlFZmFZVkxIQTJIdktWU2VyNWIyeEpSOUtZX1k1alpjVGxzZGdPMFVOdGZJYkY1Y0Zxc3N1bTNudWlIV01EUkFjdGlGNGF5dktONmZZeUJMeXlkWVRkTk90TDV4WlBySk81ZWRXSU9zOVRCVnhEVDVjcE56eGhBYkpUS0lzNlRJSmx1cnFGeVE?oc=5",
-   "editoria": "educacao",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Bertioga oferece transporte público gratuito para participantes do Enem nos dias de prova",
-   "secoes": [
-    "C-nacional"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-03T16:10:21Z",
-   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNRVlFenREWlZFWnRyMnd1UURiM2xrcFNtM2RQeTVsakQ2MlpWM3NJeldKVFdmR25OVGh2dmtEb2JEdnZxX2VCTm41OGZJcE1PdHFzblUzVVZpQnJwNFlwbmZoeUhlc25TdkF5N2E3Q1BjZDRtc2xIVVF4RFdrbU5pdnlQa1RYdG9fMXc3TC1Pd0EycTJodVlhMjdUR3hGODVaSzg5blB3R1RZdUkzWXpxdUFpeDdQUzVkeEtHODFieFVCeXgxWUE?oc=5",
-   "editoria": "educacao",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "transporte publico"
-   ]
-  },
-  {
-   "manchete": "Voto distrital misto pode limitar influência de puxadores de votos e influenciadores, avalia cientista político",
-   "secoes": [
-    "C-nacional"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-03T17:10:20Z",
-   "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNMF9sV2hfM0pfeVRvTW9FRGFrZnRaYXZacXhEMUFvR0VLOTNKbHJidUo4UjhzMkI1LVpSX0hFVFJnNXg5UW1XdFk3SjBqWEZVU0tSdWl3b0dZWXRUTk5OZG5BNUNDWWNWMk5EdG5DWXo4REh4SmlmSzdpc01PUlFEXzRhcFZxUGZ5dGVIcGRrZ1k2MUg3dXBmRmFQLTRGNFZXX0x5TzVUM1dGLVlTNVIxNlhqNUQyRm5OSE1rWXNHN0dKMGRmY0RWQ2p3WVZDTmVHdnNjSU1pV0QtdUNQOEtWLUxmdks4eU1IakVNZ2lB?oc=5",
-   "editoria": "eleicoes",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Brasil apresenta mapas do caminho para fósseis e desmatamento a seis dias da COP31",
-   "secoes": [
-    "C-nacional"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-03T16:10:21Z",
-   "link": "https://g1.globo.com/meio-ambiente/noticia/2026/11/03/brasil-lanca-mapas-do-caminho-para-incentivar-os-paises-a-diminuirem-o-desmatamento-e-o-uso-dos-combustiveis-fosseis.ghtml",
+   "na_pauta_desde": "2026-11-03T02:26:57Z",
+   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/perfis-bolsonaristas-afirmam-que-alas-do-pl-ofereceram-dinheiro-para-atacar-integrantes-do-partido.shtml",
    "editoria": "gerais",
-   "nota": 4,
+   "nota": 5,
    "esquentou": false,
    "lente": [
-    "desmatamento"
-   ]
+    "bolsonar",
+    "pl"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Relatos de compra de ataques entre alas do PL.",
+    "soma": 4
+   }
   },
   {
-   "manchete": "Posição do governo é votar a PEC da segurança com texto da Câmara, diz José Guimarães",
+   "manchete": "Mensagem atribuída a executiva do Banco Master diz que Toffoli pediu a Vorcaro ingressos para semifinal da Champions",
    "secoes": [
     "C-nacional"
    ],
-   "veiculos": 3,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-03T17:10:20Z",
-   "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOTjFFVFJsbTVvVGNqTFp6UEMwRGdCNUtoVnZVNHh4Qy1pSEM3SnRxdU1YZjdCQTBNSHVaZDk3RXFqVXg1LVp5U2d1ejU3YWJORVlhTElKWHhHZnAyV0ZmTDlOSi1sN3liaFRGVnowd3FEbC1VcEJOcXI3WjdaUDVpZ0xFcmJNNXk3U0VNQnlFT3oyLVZJaThRRlg5NDVVRklBVW9sTTJrOWQyb2g2Q3ZoRGtSRWk1a3QxOTkwbkdvblRXb1BySmI1aGZ6cC1uX25yd3FFeHBNQno3ODgw?oc=5",
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-03T18:06:48Z",
+   "link": "https://news.google.com/rss/articles/CBMikAJBVV95cUxOTUlHb1M3cU5KRW9RallJMHhEeXZObk91MEZqbnFtOTBGTGE4WXUtOVlXYlBQUzczSTN3eEtzYkZ3OTUzdDBOVXlFNXR6THNJRW1laDc3eTVEQlZyZ3JRWnVTaHFKeGFYbm1QV1h3amQ5SGhibzFLY2xzWF80dHpQYkVVQWs5Tk5sTVRoNGc5QUl5Y0tfV0hTX3lEWHdqWGF2ZlE2WEhFeUxoNmlFUHZDS3NuR2NlamJOcHVsSlVITWNjQ0tMSjFsNDR2MnRZY3VybFVFc0ZDcUExNG82eDUtWGFYOHphTGsydHhzc1c4bTJIRDJFQVc0Q0dZMXFSYmdaQUVHb1RhamE1NWFDbFhxeQ?oc=5",
    "editoria": "politica",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "vorcaro",
+    "master",
+    "banco"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "Acusação de crime sem fonte oficial",
+    "motivo": "Suposta mensagem cita ministro do STF e banqueiro.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Quieren minar elecciones de 2027: Sheinbaum por escándalos del INE",
+   "secoes": [
+    "B",
+    "C-internacional",
+    "D-america_latina"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-03T18:06:48Z",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOdllFbHFseThZQWNmdFF3R1l0UEJPdjNJODl3b1ZLcDlrVEdZZWsyRFNDYjJvVWdsUEdhTmw4VkFpSXExQlE5elljb3BFa2xCV1pUSnVLdXh2NzEwWjU1a1dBMEEyeDhjYWIwSHg4eEZTNWxxeGUtenV6c3Y3OGxGV2FqQ1puNzh5VVVwSVJn?oc=5",
+   "editoria": "america_latina",
    "nota": 4,
    "esquentou": false,
    "lente": []
   },
   {
-   "manchete": "Comissão aprova diretrizes para atender pacientes com condições pós-Covid no SUS",
+   "manchete": "María José Pinto representa a Ecuador en la Cumbre Iberoamericana sobre inteligencia artificial y desastres",
    "secoes": [
+    "B",
+    "C-internacional",
+    "D-america_latina"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-03T18:06:48Z",
+   "link": "https://www.prensa-latina.cu/2026/11/03/vicepresidenta-de-ecuador-asiste-a-cumbre-iberoamericana-en-espana/",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Charles III expressa 'horror' no Caribe por 'monstruosa injustiça' da escravidão",
+   "secoes": [
+    "B",
+    "C-internacional",
+    "D-america_latina"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-03T18:06:48Z",
+   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQS0dFLVEwUFB4TGJtdEF5b2hoVnVwdnlyNjNENldSbzY3Q1NjRnhRTDFBb3I5Q09MNGRrSkRvelZ1bF9rTVBDSDBtTFB4Y0J2WFg3TWZ5NFFuR21Sem1taHFzdEd4eUEzM1UtNWdrZERUaE43ZUhGU0kyQkZndEVUSkU3YUNQNnYxdXRxQ01xSGhCVkI1a0dyZkJQLXZreUNBRm9GUGl2Um1EX1BDOThBdWNpRjZfZGRFYXZlU1hrNmZJRW5nc0HSAcsBQVVfeXFMTWVGRVZ6S0xrNXRpYkZfWTRCQUVkLWtSb05SZDJBaW9lYlNpWTl0Q2hFUVhwdW40OUVIdERGamFuV1hTcmdZSG80eVdNVGpsblVYYXpHV2txM2p3OWlwMXQ5UktGUkN5c3Nkam9YWVF4d1BoT2RVcUtnX2d6RmtVVm5SVWZ2ajkyUU91OTdkS1BuTXpWUjYtY0dXd29Sdi1qY1ZzcFZQLUN3REl2a2RRQU5SbUhmOFd5TGU5cUxTWmhEbGRMdkNZUzJGSnM?oc=5",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Polícia Federal realiza operação no Aeroporto de Palmas e fiscaliza cargas e encomendas para combater tráfico de armas e munições",
+   "secoes": [
+    "B",
     "C-nacional"
    ],
    "veiculos": 3,
    "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-03T16:10:21Z",
-   "link": "https://www.camara.leg.br/noticias/1315082-comissao-aprova-diretrizes-para-atender-pacientes-com-condicoes-pos-covid-no-sus",
-   "editoria": "saude",
+   "na_pauta_desde": "2026-11-03T17:10:20Z",
+   "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOeVBXN2FVOGdKY1IwcnQwSDMtczJlaGtYNTFyellZOVMxbXl2QnlzQTV5TEVfVGgxY1RkNmk4LVlJUjY1TkU5T09Cemx4NktPSkFybzFpR29vakYtcjY2anQzRzg2WS1qR01ob2hTeWF4TnBMSE51R29CSmlTck9rWTRDSVBibUFtYXZpQVNOLUZscTVhYm9OYnpzUkJhN3FjWDB2VzBpVFFOYXNvcEtLTFdfVGw0czJTNVBWZWtJUENoVGNYMzVFakp5M0VyWEs5U1VHVnJDUC1yVVkxeVRUemRDbXJiTVVLc1FRYzNMLXhESlA3NmpPblRXRnVaWTFzWm1Z?oc=5",
+   "editoria": "politica",
    "nota": 4,
    "esquentou": false,
-   "lente": [
-    "sus"
-   ]
+   "lente": []
   },
   {
    "manchete": "Mexico analysts slightly lift inflation, growth forecasts",
    "secoes": [
+    "B",
     "C-internacional",
     "D-america_latina"
    ],
    "veiculos": 3,
    "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-03T16:10:21Z",
-   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOcU9jMEpEVTdGWnduNVhuWEh0OVJJWU1RSzFNVVF2WkV4ZlNHQ1R0ZHo3UkRGX3pxV1M4RFdtVVVodklfT3dUMU5FRmlyM3dkSWtKNlFYYXBaM0VaWGhOTUlhMDhsM256Qy1TcTlDNUZWRUIzOXo2cDZ3bXltcWxfQllpTk5wWllkc0JVWTBPbVNrakhmUFhXaVA5ek5mZkhHMTF3VnFxMUc2d0RlYWVtalJRd1BrZ3RyRzFFdFp5QlFMUFVs?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNbVRiMlpXRHhfQ1FaMkpPTkJ0UDI5RDJuU2VDaU1FTVdOWTFmeFEwS3dqcmZRNDN1ZnRRbGx0Z1lHMXhEUS1kS25lYzVweV9jclU1X2tJcnl4TUNsNl9FUDRzd24tRE9QczljRV9SVUJZbVUybFhoUVZETkRQWkY5REpPWF94YTRpTndRMXhrSE05NWw1WVdXNDdNektNbWV4RFJKSWVRRGRySks0U0psWlNzMmgxUE1rU3lrWENsVzdTLVJhZXR5dHV1ZVFYcHJCZ3RRX3NjSVJqQTVwMnVZMFFYVDliNUZsOUNN?oc=5",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "IdeiaSUS Fiocruz promove encontro sobre saberes tradicionais, plantas medicinais e saúde",
+   "secoes": [
+    "B",
+    "C-pesquisa"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-03T16:10:21Z",
+   "link": "https://agencia.fiocruz.br/ideiasus-fiocruz-promove-encontro-sobre-saberes-tradicionais-plantas-medicinais-e-saude",
+   "editoria": "saude",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Colombia será la sede del Suramericano Sub-20 de 2027: la Conmebol anunció las fechas del torneo",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-03T17:10:20Z",
+   "link": "https://ladiaria.com.uy/deporte/articulo/2026/11/sudamericano-sub-20-colombia-sera-la-sede-del-torneo/",
    "editoria": "america_latina",
    "nota": 4,
    "esquentou": false,
@@ -392,45 +486,9 @@
  ],
  "rebaixados": [
   {
-   "manchete": "Ministro da Fazenda diz que alíquota do Imposto Seletivo deve ser mantida e MP pode ser enviada hoje ao Congresso",
-   "veiculos": 18,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-03T16:10:21Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "economia",
-    "I": 2,
-    "V": 1,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Discussão sobre a alíquota do Imposto Seletivo e impacto econômico.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Juros futuros pressionados por mercado receoso após vitória de Lula",
-   "veiculos": 22,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-03T12:09:43Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "economia",
-    "I": 2,
-    "V": 1,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Juros futuros e reação do mercado financeiro.",
-    "soma": 3
-   }
-  },
-  {
    "manchete": "Governo atualiza regras para compra de alimentos da agricultura familiar para a merenda escolar",
-   "veiculos": 4,
-   "veiculos_3h": 3,
+   "veiculos": 3,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-03T14:08:53Z",
    "esquentou": false,
    "ia": {
@@ -446,62 +504,44 @@
    }
   },
   {
-   "manchete": "Janones se reúne com Sergio Massa na Argentina",
-   "veiculos": 44,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-02T13:48:26Z",
+   "manchete": "Ministro da Fazenda diz que alíquota do Imposto Seletivo deve ser mantida e MP pode ser enviada hoje ao Congresso",
+   "veiculos": 5,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-03T16:10:21Z",
    "esquentou": false,
    "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
+    "editoria": "economia",
+    "I": 2,
+    "V": 1,
+    "P": 2,
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Janones em articulação na Argentina.",
+    "motivo": "Discussão sobre a alíquota do Imposto Seletivo e impacto econômico.",
     "soma": 3
    }
   },
   {
-   "manchete": "Massa se reunió con el estratega de Lula y comienza a delinear la estrategia digital anti Milei",
-   "veiculos": 26,
+   "manchete": "Porto de Santos tem área interditada pela Anvisa por falhas no armazenamento",
+   "veiculos": 5,
    "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-02T13:48:26Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Articulação política internacional na Argentina.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Governo de Trump leva disputa eleitoral da Califórnia à Suprema Corte",
-   "veiculos": 29,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-02T19:36:49Z",
+   "na_pauta_desde": "2026-11-03T14:08:53Z",
    "esquentou": true,
    "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 2,
+    "editoria": "gerais",
+    "I": 2,
+    "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Disputa eleitoral de Trump na Suprema Corte afeta indiretamente a regiao.",
+    "motivo": "Anvisa interdita área no Porto de Santos por falhas.",
     "soma": 3
    }
   },
   {
    "manchete": "Proposta assegura exame periódico no SUS para pessoas com diabetes",
-   "veiculos": 7,
+   "veiculos": 6,
    "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-03T14:08:53Z",
    "esquentou": false,
@@ -514,6 +554,24 @@
     "repetido": false,
     "risco": "",
     "motivo": "Melhoria em atendimento e exames preventivos no SUS.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Líder do governo lista prioridades no Senado e diz esperar votação de Orçamento em 17/12",
+   "veiculos": 4,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-03T18:06:48Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Definição de votação do Orçamento no Senado.",
     "soma": 3
    }
   },
@@ -554,11 +612,29 @@
    }
   },
   {
-   "manchete": "El futuro de la diáspora salvadoreña se define en las urnas de Estados Unidos",
-   "veiculos": 26,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-02T18:19:00Z",
-   "esquentou": false,
+   "manchete": "Pai de Vorcaro pede prisão domiciliar e apresenta laudo que aponta risco de complicação intestinal",
+   "veiculos": 28,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-02T19:36:49Z",
+   "esquentou": true,
+   "ia": {
+    "editoria": "gerais",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Pedido de prisão domiciliar para pai de banqueiro.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Lula, Sheinbaum y Delcy Rodríguez no participarán en la cumbre iberoamericana de Madrid",
+   "veiculos": 22,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-03T10:06:53Z",
+   "esquentou": true,
    "ia": {
     "editoria": "america_latina",
     "I": 1,
@@ -567,15 +643,209 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Eleições nos EUA e impacto na diáspora salvadorenha.",
+    "motivo": "Ausência de líderes em cúpula ibero-americana tem impacto diplomático limitado.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Elmano envia projeto à Alece que garante direito a manter arma de fogo para agentes de segurança aposentados",
+   "veiculos": 10,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-03T14:08:53Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "politica",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Projeto sobre porte de arma para agentes no Ceará.",
     "soma": 2
    }
   }
  ],
  "obrigatorios": [
   {
+   "manchete": "Zambelli pede ajuda de R$ 50 por mês para conseguir viver na Itália",
+   "secoes": [
+    "A",
+    "B"
+   ],
+   "veiculos": 15,
+   "veiculos_3h": 8,
+   "na_pauta_desde": "2026-11-03T12:09:43Z",
+   "link": "https://www.congressoemfoco.com.br/noticia/131252/zambelli-pede-ajuda-de-r-50-por-mes-para-conseguir-viver-na-italia",
+   "editoria": "politica",
+   "nota": 7,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-03T16:02:12Z",
+    "legenda": "A ex-deputada de extrema-direita, Carla Zambelli, está foragida na Itália desde 2025, após ser condenada a dez anos de prisão pelo STF. Zambelli foi incriminada",
+    "link": "https://www.instagram.com/reel/DfSQw_ClFZN/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Brasil chega a 84,2 milhões de inadimplentes; mulheres são maioria",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-03T18:06:48Z",
+   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOYWstZVM5SU53OU1udWFMRVhSN1BiQ3diNThFbThkWHFLUElmb0xpbm9KQ1R6RWZKTGpRaVJNSVRJU19iQWVJNnhfNWpSSEpoYTB5TmtabHkwQl81eFRLcWNGNGY1WkhPUWNIb0pNOHpmMjNkZTZsRjllaTBIRTljTElBTExqcThoWXNSeWZrcHpVMkxaRnoweHNhd1l0RDU0WkF4ZGpXVHVvSGMyUHY0aNIBsAFBVV95cUxOYWstZVM5SU53OU1udWFMRVhSN1BiQ3diNThFbThkWHFLUElmb0xpbm9KQ1R6RWZKTGpRaVJNSVRJU19iQWVJNnhfNWpSSEpoYTB5TmtabHkwQl81eFRLcWNGNGY1WkhPUWNIb0pNOHpmMjNkZTZsRjllaTBIRTljTElBTExqcThoWXNSeWZrcHpVMkxaRnoweHNhd1l0RDU0WkF4ZGpXVHVvSGMyUHY0aA?oc=5",
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "luzmanifesto",
+    "quando": "2026-11-03T15:27:16Z",
+    "legenda": "🚨 CHEGA DE PRIORIDADES INVERTIDAS! Enquanto milhares de brasileiros ainda vivem sem acesso à água tratada, coleta e tratamento de esgoto, milhões de reais são d",
+    "link": "https://www.instagram.com/p/DfSMylFxjbM/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Corpo é encontrado próximo à fazenda de idoso suspeito de matar ex de 24 anos com tiro na cabeça",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-03T18:06:48Z",
+   "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPZG83SFhScGRXR3M4N0ZPSS1lODFwTlpFNkdlTXo5aVVCSTZVa0ZsNHpXRl9hb1E3aF95VTM2ckRRdDRiVHhyYmtFWVpzcmZ3TUctY1JnQ2RBS205Nk41VkNVS3I4b3I3UlZBMlVfUUlqUGpUX3lXVWo2Y3JJMDY4MWZDMUVkcXlQZ2xUSjhac1dTMm5mVmRORVZWQkFfQVN2SndTYkUtc1UtSHBvVVB3bGZ6Z1o1R05yeDJFSkNUcG9wTXpGcVNneDM2cnFpeVlOdUFoSlNzdw?oc=5",
+   "editoria": null,
+   "nota": null,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-03T15:44:12Z",
+    "legenda": "Denis Young Kim, de 43 anos, investigado por agredir um idoso de 79 anos em Osasco, na Grande São Paulo, foi condenado a 14 anos de prisão pelo assassinato do c",
+    "link": "https://www.instagram.com/p/DfSO3yikUpL/"
+   },
+   "triagem": "fora: entretenimento (a fazenda)"
+  },
+  {
+   "manchete": "STF faz audiência pública sobre bets nesta 3ª feira",
+   "secoes": [
+    "A",
+    "A"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-03T10:06:53Z",
+   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNdEJFT2FuRzBXWWF0cHNmWm1PRDBSWHhqcDRrMzZZUVZrb1RvZ29YUVBkNnZBWlV2WHgxY0I3QXpyMkZ1blNDSVZyanplU2YyS0ZLcHUxZ0UxS0gxQnBFbWlXYjhKSkU1azVBQ1lZRDY5am1ZUWw0bnZyUWJqU3pHMkYwX19UTUIyMDNmRXlaNjhNZ3VMQmVXRDhVTmc?oc=5",
+   "editoria": "politica",
+   "nota": 4,
+   "parceiro": {
+    "perfil": "luzmanifesto",
+    "quando": "2026-11-03T15:08:21Z",
+    "legenda": "🚨 Durante audiência pública no STF, realizada nesta terça-feira (3), para discutir o futuro das bets no Brasil, o ministro Luiz Fux apontou o avanço de platafor",
+    "link": "https://www.instagram.com/p/DfSKoa3xLUp/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "educacao",
+   "nota": 2,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-03T14:45:06Z",
+    "legenda": "Uma professora da rede municipal de Melgaço, no arquipélago do Marajó, no Pará, foi afastada de suas funções após publicar mensagens nas redes sociais incitando",
+    "link": "https://www.instagram.com/p/DfSIG_aEe32/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-03T13:39:30Z",
+    "legenda": "andrejanones 🔥💭",
+    "link": "https://www.instagram.com/p/DfSAmhyDIbi/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "america_latina",
+   "nota": 3,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-03T13:45:18Z",
+    "legenda": "Um músico que se identifica como Christian Castro usou as redes sociais para destilar ódio contra os povos indígenas. Em uma postagem de ameaça aos povos origin",
+    "link": "https://www.instagram.com/p/DfSBQ8ijZ9j/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": null,
+   "nota": null,
+   "parceiro": {
+    "perfil": "luzmanifesto",
+    "quando": "2026-11-03T15:10:50Z",
+    "legenda": "A GRANDEZA DO FLAMENGO NÃO CABE NUM CONTRATO DE PATROCÍNIO. E A VIDA DO SEU TORCEDOR VALE MAIS QUE QUALQUER UM DELES. BETS NUNCA MAIS Manifeste-se conosco. LUZM",
+    "link": "https://www.instagram.com/p/DfSK4irRwtN/"
+   },
+   "triagem": "fora: esporte (flamengo)"
+  },
+  {
+   "manchete": "Ministério da Justiça autoriza Força Nacional por 180 dias na Terra Indígena Ituna-Itatá, no Pará",
+   "secoes": [
+    "A",
+    "B",
+    "D-terra"
+   ],
+   "veiculos": 15,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-03T10:06:53Z",
+   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQNHJSYU80dU9UZHc1bXJsdzBacEFUczN2OGc4Y2FGcGtkRTBYd29RZ2I2VGNNMjR5dnRwYkRRYW1qSTJqWUFsYlh2WEVUa1pTOU44ekhfbENLdVpXc0xSTE8tWG52UE5YQm5yc1lYX182ZnlKZU9IVWNJQTJPNjAxMEJRVEFTMG45U19fbmlBM3RWbkdxZ2RyUmFnTVRiYUJQUzFB?oc=5",
+   "editoria": "roca",
+   "nota": 7,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-03T16:45:10Z",
+    "legenda": "Agentes da Força Nacional de Segurança Pública vão atuar na Terra Indígena Ituna-Itatá, no Pará, em apoio à Fundação Nacional dos Povos Indígenas (Funai). O Min",
+    "link": "https://www.instagram.com/p/DfSV2EwgpBh/"
+   },
+   "triagem": "candidato"
+  },
+  {
    "manchete": "Homem é preso durante operação da Polícia Federal em Charrua",
    "secoes": [
+    "A",
     "A"
    ],
    "veiculos": 1,
@@ -583,12 +853,261 @@
    "na_pauta_desde": "2026-11-03T16:10:21Z",
    "link": "https://news.google.com/rss/articles/CBMingJBVV95cUxONktDOGUyOE1wYVJjTUl4dGw2MEctMUM1VU01ZDJrNzN6VnB6R3R4VzRMa2R1dHJXTTYycG9oV0tIaWl4S2wwcHZOekxhX2VhNi05NU8xYklYNFZBNzJWTjFrUlhYeFM5RjlhdGdBeE1jQVRkclpGYy05ZE9TLVRuWlFmSXM0U2FpdUcwbnNrRWNIVk10ZWREUXBvR002UVJnalFwRVNWTkoybFFHX1plWnBzeXJPOHdyZXhUSmR2X3FSRGhBMU1vaEpoZXpMRjZYeUdaNXNLRUxWUGQ5cHpGRGNCTTRaV08zSUVqNGZUcFEwcUFHNC1wODFGbzBRVnBtTmQ4VDV6LW9RcDFId2h6dEFkWlJmLXZNeXRULUJ30gGsAkFVX3lxTFBoU0ZPR2JUdFgwQmFqb2dyemYwcFRta3NBbkFPOFJkaU10allDZzE5Qzd5UlROV0JwZmc1Y3lYZF92QVhSSlZ2WjgtNU05SnhZMkhNOEJvUHVWSVlWRkRsNmxjamVfbExTa2tVTk9aOUY3RDQ5VkxaTlRuaEY5WEY5UXhybWx2NHFENHdzWWtlOXUya3lqX3dVZk5tbnFHY0VCSkk1cGt3eFBSWlhESHFkVllXR3o5am9oWTRqTDNHSEJfaUUwVWtvNXRhOHZzT1RhcnFFMDZSVDRLbjk0blBXMkR5SUEyekk3OVF0SldLS3dwb3RxQ2FWOU42U2tfaDQ1cWtoNVNQdHI0ckNJSU11YmV4a1B0T00zb1dVWnFTUUFqbVlsYmpRM1dQOA?oc=5",
    "editoria": "politica",
+   "nota": 4,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-03T16:16:03Z",
+    "legenda": "A Polícia Federal junto ao Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis (Ibama) realizaram na sexta-feira (30) a segunda fase da Ope",
+    "link": "https://www.instagram.com/reel/DfSSdsyEYmu/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Lula indicará seis diretores do Banco Central até o fim de 2027, e mercado teme mudança de perfil",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-03T02:26:57Z",
+   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/lula-indicara-seis-diretores-do-banco-central-ate-o-fim-de-2027-e-mercado-teme-mudanca-de-perfil.shtml",
+   "editoria": "economia",
+   "nota": 6,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-03T14:30:08Z",
+    "legenda": "*Lula poderá indicar seis diretores ao Banco Central e ampliar influência sobre política de juros* O presidente Luiz Inácio Lula da Silva (PT) poderá indicar se",
+    "link": "https://www.instagram.com/p/DfSGZIbivg3/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "STF debate proibição das bets em audiência com clubes e governo",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 8,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-03T10:06:53Z",
+   "link": "https://www.congressoemfoco.com.br/noticia/131254/ao-vivo-stf-debate-proibicao-das-bets-com-governo-clubes-e-empresas",
+   "editoria": "politica",
    "nota": 5,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-03T10:42:14Z",
-    "legenda": "A Polícia Federal, em conjunto com a Funai, realizou na na última semana a Operação Escudo na Terra Indígena Kayapó, área que faz parte do município de Cumaru d",
-    "link": "https://www.instagram.com/p/DfRsM1fhTB4/"
+    "quando": "2026-11-03T14:15:04Z",
+    "legenda": "Um abaixo-assinado pela manutenção da proibição das apostas online no Brasil ultrapassou 800 mil adesões nesta terça-feira (3), poucas horas antes de o Supremo ",
+    "link": "https://www.instagram.com/p/DfSEq-xDxLN/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Ministro da Fazenda diz que alíquota do Imposto Seletivo deve ser mantida e MP pode ser enviada hoje ao Congresso",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-03T16:10:21Z",
+   "link": "https://g1.globo.com/economia/noticia/2026/11/03/ministro-da-fazenda-diz-que-proposta-para-o-imposto-do-pecado-pode-ser-enviada-hoje-ao-congresso-objetivo-e-manter-carga-atual-em-2027.ghtml",
+   "editoria": "politica",
+   "nota": 5,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-03T15:15:08Z",
+    "legenda": "O atual ministro da Fazenda, Dario Durigan, disse que terá uma reunião hoje com o presidente Luiz Inácio Lula da Silva (PT) para discutir a MP do Imposto seleti",
+    "link": "https://www.instagram.com/p/DfSLisZij1i/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-03T17:14:49Z",
+    "legenda": "#BFCNASRUAS e o fim das bets no Brasil.",
+    "link": "https://www.instagram.com/reel/DfSZMQQAV4A/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Perfis bolsonaristas afirmam que alas do PL ofereceram dinheiro para atacar integrantes do partido",
+   "secoes": [
+    "A",
+    "B"
+   ],
+   "veiculos": 7,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-03T02:26:57Z",
+   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/perfis-bolsonaristas-afirmam-que-alas-do-pl-ofereceram-dinheiro-para-atacar-integrantes-do-partido.shtml",
+   "editoria": "gerais",
+   "nota": 5,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-03T14:00:15Z",
+    "legenda": "Perfis bolsonaristas relatam ter recebido propostas de dinheiro para atacar, nas redes sociais, integrantes de alas rivais do próprio partido. Segundo relatos p",
+    "link": "https://www.instagram.com/p/DfSC-bajVt5/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Derrota de Trump pode aumentar pressão sobre Flávio Bolsonaro nos Estados Unidos",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-03T18:06:48Z",
+   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNMVhiR3lRRWVYSjNjQklVMlh6WU04UTRGS2o2cGNybnNxd3doRnFwVGJkUXQ0OEdGMXNsUFVoVjZhWm9QWEZXR05zWU5EdUpwZTNLX09iYUdqV2JlTDJGZXVxemF1UWxHZXhOQlI3dHpLaXpWTXJQTGJLX3BROTlGdmpHbXg2MkJBU1lIYnBsSmJNYUdxRm0zS3FONFFjcWs4YWktOUxybDdzUnRKeWZMZ0YzYWV0b0dx?oc=5",
+   "editoria": "eleicoes",
+   "nota": 6,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-03T12:36:35Z",
+    "legenda": "As urnas começaram a ser abertas nesta terça-feira (3) nos Estados Unidos para as eleições de meio de mandato, conhecidas como midterms. A votação ocorre na met",
+    "link": "https://www.instagram.com/p/DfR5ZqiDmAy/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Trump acude a la Corte Suprema para nuevo intento de bloqueo de 20 mil votos",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 25,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-02T19:36:49Z",
+   "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/na-vespera-das-eleicoes-trump-quer-que-suprema-corte-suspenda-votos-de-20-mil-eleitores-na-california.shtml",
+   "editoria": null,
+   "nota": null,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-03T12:58:11Z",
+    "legenda": "A Suprema Corte dos Estados Unidos rejeitou, na segunda-feira (2), o pedido do governo de Donald Trump para impedir a contagem de aproximadamente 20 mil votos e",
+    "link": "https://www.instagram.com/p/DfR73y4jkbA/"
+   },
+   "triagem": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Previsão do tempo: São Paulo volta a esquentar nesta terça-feira; saiba a máxima",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 6,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-02T16:08:52Z",
+   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/sao-paulo-deve-ter-terca-feira-3-com-temperatura-acima-de-30c.shtml",
+   "editoria": "gerais",
+   "nota": 3,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-03T15:00:12Z",
+    "legenda": "A Biblioteca Pública Municipal \"Ateneu Ubatubense\", em Ubatuba (SP), sediará nesta terça-feira (3) o segundo bate-papo de 2026 do projeto \"Nas Trincheiras da Lu",
+    "link": "https://www.instagram.com/p/DfSJ1jBDCZ1/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-03T15:45:08Z",
+    "legenda": "Quando o dinheiro deixa de fluir para a ilusão dos jogos virtuais, ele volta para onde nunca deveria ter saído: a mesa da população. Apenas na primeira semana a",
+    "link": "https://www.instagram.com/p/DfSO-fcio3v/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "saude",
+   "nota": 3,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-03T17:00:20Z",
+    "legenda": "Saúde não é rifa e remédio não é luxo. Pesquisas apontavam um dado alarmante: cerca de 43% dos apostadores recorrentes admitiam ter cortado ou sacrificado a com",
+    "link": "https://www.instagram.com/p/DfSXlbbjOKh/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Corpo de jovem desaparece do IML na Grande São Paulo",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-02T16:08:52Z",
+   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQRkpBWGdWLWpCM2pYeFhoSHhPVk1TWVdRbFJsR0dGeDFEMWs5c3ljbzNEeFZwb1gzLWtCY3huYmhPdlNLUExjajlpYkI1ODFRc3ktSmxFVzNxdEYxQ0VkVEs1UUZROVcwcTZnbkE2NWN5d2p5bklPZXdHRDVTTE5mN2R0UWU5VHViVXJ6bHBmRk5DU01i0gGcAUFVX3lxTE1pOTZUaVlBZnlYWm1VdXQyZWExTjZsNjNFLW8zd283OTlsZ1owN3E0QThZQTNxbVlrQVRPVlo1clpJSTU2dHVsWWVYNlAwbngxVktoWmxQZFU5TGVEb3pKS1NzOTd3LVpxTWVuNDhWWkJDUmxWQVUxZi0zbUdjbTM1RHM2NFBhT09lTXJ6MEtQeFN4dWRtalJ4UlZhMg?oc=5",
+   "editoria": "roca",
+   "nota": 3,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-03T16:30:06Z",
+    "legenda": "A Rede Permaperifa reúne moradores da Grande São Paulo e do litoral paulista em mutirões que combinam cultivo de alimentos, construção coletiva e atividades cul",
+    "link": "https://www.instagram.com/p/DfSUH2YjflJ/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "luzmanifesto",
+    "quando": "2026-11-03T17:23:05Z",
+    "legenda": "Uma das falas mais nojentas do século no Brasil. Se manifeste. Luz Manifesto | luzmanifesto",
+    "link": "https://www.instagram.com/p/DfSZ_9tPtHT/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Jundiaí prepara programação especial para o Mês da Consciência Negra",
+   "secoes": [
+    "A",
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-03T17:10:20Z",
+   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOcC1nNXczODQ2WDNvQ1EydWlPdFhQdFdMMWtvUXgzbjJ0dEhoVUpucFltVHBlczhOTFpJZ3FTSjdOM0N5VGxkXzQ3a05QbmxBdGxSSWN4dmh0enhHb2FLOGtpbTFkenZBS1dpMnZ1VldiX2J5YVBxSllCSVowX0VwVWxiM2NmRlZqYXV1NmticmUwWmpoeTZub1RFYWJ3V0JhZ1NHOU41Q3JBS085V0NDTUVwOA?oc=5",
+   "editoria": "eleicoes",
+   "nota": 3,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-03T13:31:15Z",
+    "legenda": "A ministra da Igualdade Racial, Rachel Barros anunciou a campanha do Mês da Consciência Negra 2026 com o tema \"Brasil pela Igualdade Racial: o Legado para o Fut",
+    "link": "https://www.instagram.com/p/DfR_p6-DmAC/"
    },
    "triagem": "candidato"
   },
@@ -624,6 +1143,25 @@
    "nota": 1,
    "parceiro": {
     "perfil": "brasilforadacaverna",
+    "quando": "2026-11-03T13:21:09Z",
+    "legenda": "Ontem (02), tive o grande prazer de bater um ótimo papo com os meus amigos (e agora parceiros) thiagosuman e oricardomello, no cosmopoliticabr. Programa na ínte",
+    "link": "https://www.instagram.com/reel/DfR-KLFxlGR/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
     "quando": "2026-11-03T11:03:43Z",
     "legenda": "Berço histórico e cultural da capital pernambucana e palco tradicional do carnaval, o bairro do Recife Antigo vai receber folia diferente a partir da próxima se",
     "link": "https://www.instagram.com/p/DfRuw09hXPF/"
@@ -633,64 +1171,64 @@
  ],
  "descartados_mais_quentes": [
   {
-   "manchete": "Eleições de meio de mandato nos EUA: o que está em jogo para o governo de Donald Trump",
-   "veiculos": 78,
-   "veiculos_3h": 44,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Flávio Bolsonaro recorre, pede de volta passaportes e alega impedimento de Moraes",
-   "veiculos": 41,
-   "veiculos_3h": 7,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "EUA atacaram a ilha de Qeshm, no Irã, diz jornal",
-   "veiculos": 40,
-   "veiculos_3h": 12,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Quem é Jesús de Miguel, atacante do Tenerife que sofreu parada cardíaca durante partida na Espanha",
-   "veiculos": 31,
-   "veiculos_3h": 12,
+   "manchete": "Atacante sofre parada cardíaca após dividida na Espanha",
+   "veiculos": 56,
+   "veiculos_3h": 16,
    "motivo": "fora: esporte (atacante)"
   },
   {
-   "manchete": "Filha de brasileiros era copilota de avião que caiu na Flórida e deixou 9 mortos",
-   "veiculos": 29,
-   "veiculos_3h": 8,
-   "motivo": "fora: crime ou tragedia (mortos)"
-  },
-  {
-   "manchete": "Trump diz que EUA vão suspender financiamento de US$4 bilhões para Israel no final de 2026",
-   "veiculos": 26,
-   "veiculos_3h": 23,
+   "manchete": "Trump acude a la Corte Suprema para nuevo intento de bloqueo de 20 mil votos",
+   "veiculos": 25,
+   "veiculos_3h": 0,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "EUA: Entenda o que é a eleição desta terça e como é a apuração",
-   "veiculos": 24,
+   "manchete": "Jorge & Mateus sofrem boicote após shows de Réveillon no Nordeste",
+   "veiculos": 22,
+   "veiculos_3h": 6,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Ucrânia acusa Rússia de frustrar esperanças de paz após ataque que deixou 26 mortos",
+   "veiculos": 20,
+   "veiculos_3h": 3,
+   "motivo": "fora: crime ou tragedia (mortos)"
+  },
+  {
+   "manchete": "EUA mediarão negociações entre Rússia e Ucrânia em Abu Dhabi na próxima semana (emissário americano)",
+   "veiculos": 15,
    "veiculos_3h": 3,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Jorge & Mateus provocam revolta após confirmação de shows no Nordeste",
-   "veiculos": 21,
-   "veiculos_3h": 6,
+   "manchete": "Defesa de Flávio pede Mendonça como relator de investigação no lugar de Moraes e fim de proibição de contato com Willer Tomaz",
+   "veiculos": 14,
+   "veiculos_3h": 4,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Futbolista del Tenerife sufre paro cardiorrespiratorio tras choque con portero del Andorra",
-   "veiculos": 17,
-   "veiculos_3h": 6,
+   "manchete": "'Quem planta narcisismo e hipocrisia vai colher solidão': ex-amiga de Marina Ruy Barbosa solta comentário ácido sobre polêmica entre atriz e Luma Costa",
+   "veiculos": 14,
+   "veiculos_3h": 2,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Zambelli pede ajuda de R$ 50 por mês para conseguir viver na Itália",
-   "veiculos": 16,
-   "veiculos_3h": 12,
+   "manchete": "Inscrições para vagas remanescentes do Fies terminam na terça-feira",
+   "veiculos": 13,
+   "veiculos_3h": 3,
    "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Melania Trump receberá 'representantes' de Rússia e Ucrânia na Casa Branca",
+   "veiculos": 9,
+   "veiculos_3h": 2,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Flamengo x Operário: onde assistir, escalações e arbitragem",
+   "veiculos": 7,
+   "veiculos_3h": 4,
+   "motivo": "fora: esporte (flamengo)"
   }
  ]
 }
