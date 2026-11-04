@@ -21,7 +21,20 @@ O dono é o João. Ele acompanha cada post pela notificação e pede para parar 
      collab aceita mesmo se o agendamento falhar); na rodada das 23h, se `radar/benchmark.json`
      tiver mais de 3 h, rode `gh workflow run manutencao.yml -R Joaobueno02/cbr-bot -f tarefa=benchmark`
      e espere ~2 min antes do dossiê. Se o `gh` não funcionar, siga com o que houver e registre
-     no resumo da rodada.
+     no resumo da rodada;
+   - **disparos fixos (pedido do João, 04/11/2026)**: o agendamento do GitHub está atrasando até 7 h
+     (o benchmark das 22h45 chegava às 5h30; a saúde das 6h40, às 14h18). Por isso: na **rodada das 22h**,
+     dispare o benchmark logo no início, mesmo em rodada curta (`gh api -X POST
+     repos/Joaobueno02/cbr-bot/actions/workflows/manutencao.yml/dispatches -f ref=main -f "inputs[tarefa]=benchmark"`),
+     para o ChatGPT do João ler o dia inteiro às 22h50; na **rodada das 7h**, se `registro/saude.json` tiver
+     mais de 20 h, dispare a saúde do mesmo jeito (`-f "inputs[tarefa]=saude"`). Os horários do
+     `manutencao.yml` ficam como reserva;
+   - **registro de rodadas** (desde 04/11/2026, se existir `bot/registrar_rodada.py`): a rodada curta é
+     gravada sozinha pelo `bot/rodada_curta.py`; no fim da rodada completa, rode
+     `python bot/registrar_rodada.py --tipo completa --candidatos N --publicados N --descartados-antes N
+     --descartados-depois N --sites "dominio1,dominio2" --ia-ok true|false`. Nos dois casos, commit e push
+     só de `registro/rodadas.jsonl` (é gerado por script; o resto de `registro/` continua intocável). O
+     dossiê das 23h conta rodadas curtas, descartes, sites bloqueados e quedas do Gemini por esse arquivo.
 1. `git pull`. Leia `registro/posts.jsonl` (o que já saiu) e a fila (`fila/*/post.json`).
    Se houver post com `erro_render`, `erro_publicacao` ou parado em `renderizado` de execução
    anterior, resolva ou descarte (status `descartado` + motivo) antes de pautas novas.
@@ -99,7 +112,9 @@ O dono é o João. Ele acompanha cada post pela notificação e pede para parar 
    Se nada passar no filtro, não publique nada. Volume varia com o que acontece.
 3. Para cada pauta: apure (seção 3), escreva o `post.json` (seção 4) com `status: "renderizar"`,
    commit e push. O GitHub Actions baixa a foto e gera a arte.
-4. Espere a arte (`git pull` a cada ~30 s; leva de 1 a 4 min). Status vira `renderizado`
+4. Espere a arte (`git pull` a cada ~30 s; leva de 1 a 4 min). **Não empurre correção do mesmo `post.json`
+   enquanto o run dele estiver rodando** (pedido do João, 04/11/2026): espere o commit "bot: render/publicação"
+   chegar no `git pull` e só depois corrija; senão o commit do robô bate com o seu e o run falha. Status vira `renderizado`
    ou `erro_render` (o motivo está em `render.erro`).
 5. **Revisão de design** (seção 6): leia `design_auto` no post.json (medidas automáticas), confira
    a arte você mesmo contra `referencias/<editoria>.jpg` e rode o **revisor de design** (subagente).
