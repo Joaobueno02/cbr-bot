@@ -214,6 +214,18 @@ Pontue cada candidata de 0 a 3 nos dois eixos e fique com as de maior soma (mín
 - **Potencial de viralizar**: conflito claro, número forte, contradição de político,
   vitória concreta de quem trabalha, algo que a pessoa quer mandar no grupo.
 
+**Ângulo próprio (desempate, pedido do João, 04/11/2026; adaptado do newsjacking do marketingskills)**: entre
+duas pautas de nota parecida, fique com a que tem um ângulo que os grandes veículos não estão dando. É isso que
+faz a pessoa mandar o NOSSO post, e não o da Folha. Ângulos da CBR, em ordem de preferência:
+1. **quem paga a conta**: a mesma notícia contada por quem perde (trabalhador, aposentado, morador);
+2. **o número na escala da pessoa**: o dado oficial dividido por pessoa, por dia ou em salários mínimos
+   (skill `titulo-cbr`), com a conta explicada na legenda;
+3. **discurso x prática**: o que o político disse e o que fez, com data e fonte das duas coisas;
+4. **não é caso isolado**: o 3º caso do mês, ligado aos anteriores (só com os casos apurados, e citando
+   nossos posts de `registro/posts.jsonl` quando houver);
+5. **o explicador**: a notícia é complicada e a cobertura está confusa (carrossel "Entenda").
+Sem ângulo próprio e sem fato novo, o assunto que todo mundo já deu há mais de 24 h fica de fora.
+
 Descarte o que já está em `registro/posts.jsonl` (mesmo fato, mesmo que com outra manchete),
 a menos que haja fato novo relevante. Prefira notícia das últimas horas.
 
@@ -417,8 +429,11 @@ mesma notícia nas outras fontes, compare as versões e escreva a **nossa** a pa
 **Visual do carrossel (regra do João, 20/10/2026)**: o carrossel segue a estética da editoria, como o post único
 (marca, cor de destaque e fundo da editoria: Saúde em turquesa, Eleições em amarelo, Economia/Educação no fundo claro etc.).
 Só Gerais usa o modelo crítico vermelho com o CBR simples. O campo `fundo` dos slides é ignorado fora de Gerais.
-De 4 a 8 slides. A capa precisa prender sozinha. O último slide chama para ação
-(salvar, compartilhar, seguir).
+De 4 a 8 slides. A capa precisa prender sozinha. O render acrescenta sozinho o último slide (chamada de envio
+e fontes): não escreva slide de fechamento. **Antes de escrever os slides (desde 04/11/2026), siga a skill
+`.claude/skills/carrossel-cbr/SKILL.md`** (quando existir): escolha uma das 4 estruturas (entenda em N pontos,
+o número e a prova, seu direito passo a passo, discurso x prática com o slide do outro lado), títulos internos
+com até 10 palavras, e rode `python bot/conferir_titulo.py fila/<id>/post.json` antes do push.
 
 ## 5. Foto
 
@@ -492,7 +507,11 @@ passando o caminho da pasta do post e este manual. Instrução ao revisor:
 > fonte primária) e o título/subtítulo só usam o que está em `em_comum`; (3) o título não é mais
 > conclusivo que as fontes; (4) acusações têm quem acusa e a negativa; (5) nada viola a seção 3
 > ou "Não publique"; (6) a legenda segue a seção 8 e tem 5 hashtags; (7) a editoria e o formato
-> (feed, carrossel, Reels) seguem a seção 2.
+> (feed, carrossel, Reels) seguem a seção 2; (8) **"e daí?"**: cada parágrafo da legenda responde o que
+> aquilo muda para quem trabalha, ou traz o fato que sustenta isso (parágrafo que só repete ou só opina sem
+> fato sai); (9) **"prove"**: cada número da arte e da legenda aparece numa versão da `apuracao` ou na fonte
+> primária, e conta feita por nós (por pessoa, em salários mínimos) está explicada na legenda com a fonte da
+> base; (10) no carrossel "discurso x prática", o slide do outro lado existe e é fiel à resposta do acusado.
 > Responda só com JSON: {"aprovado": true|false, "problemas": ["..."], "correcoes": ["..."]}.
 
 Grave o veredito em `post.json` como `"revisao": {"aprovado": ..., "problemas": [...], "quando": "..."}`.
@@ -643,14 +662,22 @@ para melhorar**. No máximo ~1.200 palavras, 80% delas propositivas):
    aceite seguidos); posts do dia com foto de veículo/agência paga em vez de licença aberta; posts com
    acusação de crime ou sobre o resultado eleitoral; pautas boas que a triagem perdeu; falhas do Gemini;
    token (dias até o acesso vencer). Se algum risco ficou alto, diga o que propõe, sem aplicar.
-6. **Experimentos para amanhã**: até 3, cada um com hipótese, como medir e esforço
+6. **Experimentos**: até 3, cada um com hipótese, como medir e esforço
    (pequeno/médio/grande). Ex.: "Reels com 1ª frase em texto grande: mais alcance que o post de foto
    da mesma editoria? Medir alcance em 24 h."
+   **Regras de experimento (pedido do João, 04/11/2026; adaptado do ab-testing do marketingskills)**: com uns
+   100 de alcance médio, um dia contra outro é ruído. Todo experimento proposto diz: (a) **uma variável só**
+   (horário OU formato OU tipo de título, nunca dois juntos); (b) a **métrica principal escolhida antes**
+   (alcance em 24 h, envios ou seguidores ganhos) e uma **métrica de proteção** que não pode piorar (ex.: envios
+   quando o teste é de alcance); (c) **duração mínima de 7 dias ou 10 posts de cada lado**, o que vier depois;
+   (d) **não declarar vencedor antes do prazo**, mesmo que o primeiro dia pareça claro. Experimento em andamento
+   aparece no dossiê só com "dia N de 7, sem conclusão" até fechar. No fim, o dossiê diz o resultado com os dois
+   números e a diferença, e chama de sinal se a diferença for pequena.
 
 Regras: separe fato (número) de interpretação; não trate correlação de um dia como regra;
 **não aplique nada** por conta própria: toda mudança depende do OK do João numa conversa.
 
-## 11. Correção (errata)
+## 11. Correção (errata) e crise
 
 Se descobrir erro em post já publicado (seu ou apontado nos comentários):
 1. Não apague o post original.
@@ -659,6 +686,27 @@ Se descobrir erro em post já publicado (seu ou apontado nos comentários):
 3. Passa pelo revisor como qualquer post.
 4. Na notificação ao João, destaque que foi errata e qual post corrige.
 Erro grave (acusação errada contra pessoa): avise o João e não publique nada até ele responder.
+
+**Protocolo de crise (pedido do João, 04/11/2026; adaptado do public-relations do marketingskills).** Página
+política pequena é alvo fácil: print fora de contexto, acusação de fake news, ataque coordenado nos comentários.
+Classifique pelo nível e, na dúvida, suba um nível (responder pouco a um nível 3 é pior que responder demais a um 2).
+
+| Nível | O que é | O que fazer |
+|---|---|---|
+| **1. Pequeno** | erro que não muda o sentido: grafia, nome de cargo, data trocada sem efeito | avise o João na mensagem da rodada para ele corrigir a legenda no app (a API não edita legenda); sem post de correção |
+| **2. Erro de fato** | número, data ou atribuição errados que mudam o entendimento | post de correção (passos 1 a 4 acima) **na mesma rodada**, no **mesmo formato** do original (Reels corrige Reels), para chegar a quem viu o erro; avise o João |
+| **3. Grave** | acusação errada contra pessoa; post com erro espalhando (envios ou alcance acima de 2x a nossa mediana); pedido de remoção, notificação ou ameaça de processo; ataque coordenado | **pare de publicar**, avise o João com PushNotification na hora e não publique nada até ele responder |
+| **Fake atribuído à CBR** | arte falsa com a nossa marca circulando | avise o João; o desmentido mostra a arte verdadeira ao lado da falsa e diz que a falsa não é nossa |
+
+Regras de qualquer nível:
+- **Reconheça antes de explicar.** A correção abre com o que estava errado e o que é o certo, com a fonte.
+  Contexto e explicação vêm depois, se couberem.
+- **Sem "mas".** "Erramos o número; o certo é X, segundo Y." Nada de "erramos, mas o importante é...".
+- **Nunca apague crítica nem o post original.** Apagar vira print e uma segunda história, sobre a CBR esconder.
+- **Não especule.** Diga só o que está confirmado e o que ainda está sendo checado.
+- **Não discuta nos comentários.** Os fatos vão no post de correção; o bot não responde provocação.
+- **Registre** no dossiê do dia: o que errou, em que etapa (apuração, título, revisão) e a mudança proposta
+  para não repetir.
 
 ## 12. Segurança
 
