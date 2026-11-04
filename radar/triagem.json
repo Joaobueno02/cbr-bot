@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-04T03:03:05Z",
- "pauta_quando": "2026-11-04T03:03:04Z",
+ "quando": "2026-11-04T03:19:54Z",
+ "pauta_quando": "2026-11-04T03:19:53Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -8,23 +8,48 @@
   "ia": "gemini",
   "ok": true,
   "erro": null,
-  "modelo": "gemini-3.5-flash",
-  "avaliados_agora": 14,
-  "falhas_antes": "gemini-3.8-flash: ReadTimeout",
-  "pedidos_hoje": 4
+  "modelo": "gemini-3.5-flash-lite",
+  "avaliados_agora": 5,
+  "falhas_antes": null,
+  "pedidos_hoje": 5
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 138,
- "novos_3h": 3,
- "esquentaram": 5,
+ "total_assuntos": 140,
+ "novos_3h": 4,
+ "esquentaram": 6,
  "candidatos": [
+  {
+   "manchete": "PEC da Segurança amplia papel federal na área e governo Lula planeja estrutura de novo ministério",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 26,
+   "veiculos_3h": 7,
+   "na_pauta_desde": "2026-11-03T02:26:57Z",
+   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/pec-da-seguranca-amplia-papel-federal-na-area-e-governo-lula-planeja-estrutura-de-novo-ministerio.shtml",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "politica",
+    "I": 3,
+    "V": 3,
+    "P": 3,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "PEC da Segurança mexe com pacto federativo e estrutura do governo Lula.",
+    "soma": 6
+   }
+  },
   {
    "manchete": "Planalto aposta na aprovação da PEC da Segurança, mas redução da maioridade penal sobe no telhado",
    "secoes": [
     "B"
    ],
-   "veiculos": 43,
-   "veiculos_3h": 5,
+   "veiculos": 58,
+   "veiculos_3h": 11,
    "na_pauta_desde": "2026-11-03T01:07:31Z",
    "link": "https://www.congressoemfoco.com.br/noticia/131259/ao-vivo-plenario-do-senado-vota-pec-da-seguranca-publica",
    "editoria": "politica",
@@ -72,29 +97,108 @@
    }
   },
   {
-   "manchete": "STJ retoma julgamento que pode aumentar penas dos condenados pelo incêndio da Boate Kiss",
+   "manchete": "Lei da dosimetria pode reduzir pena de Bolsonaro no STF",
    "secoes": [
     "B"
    ],
-   "veiculos": 8,
+   "veiculos": 16,
    "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-03T22:19:44Z",
-   "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQbmFERlUtellrdDd1Sy16cmRUM18ySTgteFdnLV9jbUkweTUtaUFVLXlFMzgydE5Rak10R3ZOMS1oUUxmTngwbWlOYjYta1FCWE50Y082MjgxX1RGX0JscUVoZ05xVGR4SDloZXZUMTZVU09yLVBsbURGTlFzWk5kLUV5ckRxYWNEMzlkdkt4ZEFGZmpfRldTazkxRjJMeUhxUHJUQUZWaGNqekRPUGc0S2t5NkFCY1JQYkIya0gyR24yNUJxMVEzY0tPRVBQM0tYNzMwQlNFUE1LR3JVR2c?oc=5",
-   "editoria": "gerais",
+   "na_pauta_desde": "2026-11-02T23:07:13Z",
+   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1FejVUcS1pZzlvNjJvX0pKOV9pRDFjdlVIWktyaUtKUHBFMnM4MllhNUVncDJhenJGdHlhamxwdE9nS2oyQlZYREhQQ1MyMEFvckNjaHQ0czlma3VSTVFhVy10T0MwblRUVElVUGR0Tk1kX1E?oc=5",
+   "editoria": "politica",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "bolsonar"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 3,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Lei da dosimetria pode reduzir pena de Bolsonaro no STF.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Bolsa Família de novembro de 2026: confira o calendário completo de pagamentos por final do NIS",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 6,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-04T03:19:53Z",
+   "link": "https://g1.globo.com/economia/noticia/2026/11/04/calendario-de-novembro-2026.ghtml",
+   "editoria": "economia",
    "nota": 4,
    "esquentou": false,
    "lente": [
-    "incendio"
+    "bolsa familia"
    ],
    "ia": {
-    "editoria": "gerais",
+    "editoria": "economia",
+    "I": 3,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Calendário do Bolsa Família atinge milhões de famílias trabalhadoras.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Guiana coloca Brasil no centro da disputa por 159 mil km² com a Venezuela, discute possível entrada brasileira em aliança dos EUA e fecha acordo de defesa com Washington",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 9,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-03T22:19:44Z",
+   "link": "https://www12.senado.leg.br/noticias/materias/2026/11/03/vai-a-promulgacao-acordo-de-cooperacao-espacial-entre-brasil-e-venezuela",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": true,
+   "lente": [],
+   "ia": {
+    "editoria": "america_latina",
     "I": 2,
     "V": 2,
     "P": 2,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "STJ pode aumentar penas de condenados pelo incêndio da Boate Kiss.",
+    "motivo": "Tensão geopolítica envolvendo Guiana, Venezuela e EUA na região.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Líder de gangue pede trégua à ONU após Bukele enviar 2 mil tropas ao Haiti",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 7,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-03T20:12:41Z",
+   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNdEYwUTE1alF0LTE1YzBubUhQQy1ZbXlJdVdnOHdWaVk1Q1V4LUY5VG5QX283SXY2VmdONExJdjFBSGtBTTB6aXlreF9Sc2F1czlaaGF6RjdKS2Z0Yi1yWFZHcnhWV01lVkxCdS1nLVhSeHY3djhHS3FBRVVIR3R5MTNNTHp0RDRIdnNzSUN5cXBSbXNELWhNNHZXSExRWlFHNzV5eV9RYW5PdWc?oc=5",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": true,
+   "lente": [],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Envolve intervenção militar no Haiti e repercussão de Bukele.",
     "soma": 4
    }
   },
@@ -129,7 +233,7 @@
    "secoes": [
     "D-america_latina"
    ],
-   "veiculos": 8,
+   "veiculos": 9,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-03T14:08:53Z",
    "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQdElYTXJMdUJ3R0s0ZFBrYjlBZ3VVTFg1VEx0MEcxOFJsNFh6SVVoQjBOc3hNQ0s2LUxRbmhrTVpUZDhfWjNKMF9rZ1V4VTVyVHNVb0VIZzg3MHdPOTJ4d3ZwSFYtUFlzNlRKLWM5bDJFTnF3TFVRc3RkU2hzVmFuYUlrcVctZVB3S08ySThaSGUxd29ndWZZcTJfbk5kMk40VW9oLV9xd1NkQ3pVbVBOX1lqSTk5UEJkdjlxd2dBQi1jbGxiZFJabzlFSi10MnZEM2RmOFJEclAtbmh2YTZMSjRDLUg3WExHTk9iTGExOA?oc=5",
@@ -148,56 +252,6 @@
     "repetido": false,
     "risco": "",
     "motivo": "Governo Lula se distancia de ação de Janones na Argentina após ironia de Milei.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Guiana coloca Brasil no centro da disputa por 159 mil km² com a Venezuela, discute possível entrada brasileira em aliança dos EUA e fecha acordo de defesa com Washington",
-   "secoes": [
-    "D-america_latina"
-   ],
-   "veiculos": 8,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-03T22:19:44Z",
-   "link": "https://www12.senado.leg.br/noticias/materias/2026/11/03/vai-a-promulgacao-acordo-de-cooperacao-espacial-entre-brasil-e-venezuela",
-   "editoria": "america_latina",
-   "nota": 4,
-   "esquentou": true,
-   "lente": [],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Tensão geopolítica envolvendo Guiana, Venezuela e EUA na região.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Del Ejército de Lula al Ejército peronista: la oposición argentina recluta al ‘general’ digital que impulsó la remontada en Brasil",
-   "secoes": [
-    "D-america_latina"
-   ],
-   "veiculos": 7,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-03T22:19:44Z",
-   "link": "https://elpais.com/america/2026-11-03/lula-arenga-al-ejercito-digital-que-impulso-su-triunfo-en-brasil-para-marcar-el-paso-al-tribunal-supremo.html",
-   "editoria": "america_latina",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Oposição argentina busca reproduzir estratégias de mobilização digital usadas no Brasil.",
     "soma": 4
    }
   },
@@ -223,59 +277,6 @@
     "repetido": false,
     "risco": "",
     "motivo": "Aproximação diplomática do Brasil com a Venezuela fortalece integração regional.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Fim da escala 6x1 motiva Colégio Cruzeiro a recalcular reajuste para 2027",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 6,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-03T20:12:41Z",
-   "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNcWZ6eEtsQ1VtTzV3SUpTbWVmQVNIQ05zZ3Fyb3p5XzBxSkxBeEptVmxnTzIya1M2TzZiV2NIOVJvYTlnRUszSDM1SVFFbzZnMmFOdHRZTDNkcnE1cnFrQkgxRHB4VmJwVHJQS0lxNXRLdHBUNmNicE02UzQ2RjhOTXpJUUo0NVZNSGJVb0hGQ0dKZjJ6dTFlUTcxOUhJNFZVSGxaVTd3OFVDRUJCaVZCc1RoQ01QWXdoc2ltSUJDbWRIYTVCQ3JpWTZxdlVyM25xRnfSAeABQVVfeXFMTTJJSW5nUGNrVUtOQllqeThwYWNoX1JVQVg5Qng3RHhndDZ2NjhBeTRLY2RHRGtOWmdLbTJESkREaEhBdlYyNXBtZFM4ZnREd2hGU1hsSlMwbmo0SU9uZHNhaHZpN1hSLVg4RVFrQUU2d05kNjdvSkdmMjhFN2ZLMUJxNnRBOFItbDc0WjhtTzZCcGJuaDI1QUdwQWk3YnpXdDVEblJST0ZKR2FfcElIR2Q4dWZjMjlmaUdpdzFGbXk3V3U3STEzQ09qYi0wLXZzVlNQcjFrd05aMWs0bG9FUWM?oc=5",
-   "editoria": "economia",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "6x1",
-    "reajuste"
-   ],
-   "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Fim da escala 6x1 repercute em reajuste escolar.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Cristina Kirchner se reunió con estrategas de la campaña que llevó a Lula a la presidencia de Brasil",
-   "secoes": [
-    "D-america_latina"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-03T22:19:44Z",
-   "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNejA2WUtTU056NzJ6WVNPS3Vkek9DXzg5NDRYRkl4Y2pYc2NTcXppV3BiU01oMm1nd01VajlieDdWRTVNOVNGNXppSjh4YzBJMlZYa04zSGt1ZXpkUktNMUVxVVVUQm9GUWNETXcxRHY4NTZhTFUtejFnVkZ2eG9nem03WE5ZemFjUFJYV2pQckMtRk1tZDRqY0wzTGNxU1dHa096WjUteFR2ay1Xc2Nqa25wRGdUT0ZBNm5DeV9BNC1sYlBWTkM0aUdkdjlXX0c4NXpsVV9MSTRXTExqTkZrZ0hYOG5MWHAxdlJ2bmZn?oc=5",
-   "editoria": "america_latina",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Reunião de Cristina Kirchner com estrategistas brasileiros amplia debate na América Latina.",
     "soma": 4
    }
   },
@@ -307,20 +308,18 @@
    }
   },
   {
-   "manchete": "Novembro Negro: 10 comunidades quilombolas recebem títulos fundiários",
+   "manchete": "PROGRAMA DE PÓS-GRADUAÇÃO EM CIÊNCIAS DA INFORMAÇÃO",
    "secoes": [
     "D-terra"
    ],
-   "veiculos": 4,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-03T22:19:44Z",
-   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPRXhXNnpPVnh4WHNJTUJhSWpwRGI5eFNxZW9VMWdJZGR2NlUwRy1tbUJzQW5XT05jcnN3dXdVZ1plX1lmb3J4S0JPbU4yNGFhTmNpZ2hZWDd4U3RJWXFQdC1zS0pIeXJmUXdiTlJHcjEtaGtQSlBqZG5jXzVhXzJYMld4eFZRUUI5VThmYTNoVGU3MzlROHhma3FzcUxyWGpUVGtDU3FQVDFfQVNTdjhZQkVZOA?oc=5",
+   "veiculos": 5,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-04T03:19:53Z",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQRHJicTctRDI5ZW1BWG1udG1JSHJ6Z3I5RHdOd2RzVHFYZHJfbS1VeUMyWGhBZWptalIyOXVQNHVwZWZuSm5NLXZMdWF6bXFZTmRjR3RtWVdQMkEyNHFYTjlyNnZodHcwaHlRZGFFdVBqNXIzcEJPVnBTR3d1ZUdvYUNRc1lfbEhkczNvN3dnb1ZWTWxkcVExUw?oc=5",
    "editoria": "roca",
    "nota": 4,
    "esquentou": false,
-   "lente": [
-    "quilombola"
-   ]
+   "lente": []
   },
   {
    "manchete": "Cleitinho critica políticos sobre boicote a comerciantes por voto: ‘Abram mão do salário’",
@@ -336,6 +335,22 @@
    "esquentou": false,
    "lente": [
     "salario"
+   ]
+  },
+  {
+   "manchete": "Novembro Negro: 10 comunidades quilombolas recebem títulos fundiários",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-03T22:19:44Z",
+   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPRXhXNnpPVnh4WHNJTUJhSWpwRGI5eFNxZW9VMWdJZGR2NlUwRy1tbUJzQW5XT05jcnN3dXdVZ1plX1lmb3J4S0JPbU4yNGFhTmNpZ2hZWDd4U3RJWXFQdC1zS0pIeXJmUXdiTlJHcjEtaGtQSlBqZG5jXzVhXzJYMld4eFZRUUI5VThmYTNoVGU3MzlROHhma3FzcUxyWGpUVGtDU3FQVDFfQVNTdjhZQkVZOA?oc=5",
+   "editoria": "roca",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "quilombola"
    ]
   },
   {
@@ -402,28 +417,12 @@
    "lente": [
     "racismo"
    ]
-  },
-  {
-   "manchete": "Tesouro prevê dívida bruta em 89,7% do PIB em 2030 com pressão de juros elevados",
-   "secoes": [
-    "C-nacional"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-04T03:03:04Z",
-   "link": "https://www.gazetadopovo.com.br/economia/tesouro-preve-divida-bruta-em-897-do-pib-em-2030-com-pressao-de-juros-elevados/",
-   "editoria": "economia",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [
-    "juros"
-   ]
   }
  ],
  "rebaixados": [
   {
    "manchete": "Brasil apresenta mapas do caminho para fósseis e desmatamento a seis dias da COP31",
-   "veiculos": 23,
+   "veiculos": 21,
    "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-03T16:10:21Z",
    "esquentou": true,
@@ -441,7 +440,7 @@
   },
   {
    "manchete": "IPC-S sobe 0,32% em outubro e acumula alta de 4,14% em 12 meses",
-   "veiculos": 8,
+   "veiculos": 15,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-03T10:06:53Z",
    "esquentou": true,
@@ -458,27 +457,27 @@
    }
   },
   {
-   "manchete": "Governo atualiza regras para compra de alimentos da agricultura familiar para a merenda escolar",
-   "veiculos": 5,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-03T14:08:53Z",
-   "esquentou": true,
+   "manchete": "Hospital do Coração Alagoano alcança a marca de 70 transplantes realizados pelo SUS",
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-04T03:19:53Z",
+   "esquentou": false,
    "ia": {
-    "editoria": "roca",
+    "editoria": "saude",
     "I": 2,
     "V": 1,
-    "P": 2,
-    "formato": "carrossel",
+    "P": 1,
+    "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Fortalecimento da agricultura familiar na merenda escolar.",
+    "motivo": "Marco positivo para o SUS e transplantes cardíacos.",
     "soma": 3
    }
   },
   {
    "manchete": "Cesta básica fica mais cara pelo 2º mês seguido no Vale",
-   "veiculos": 7,
-   "veiculos_3h": 1,
+   "veiculos": 6,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-03T10:06:53Z",
    "esquentou": false,
    "ia": {
@@ -494,27 +493,9 @@
    }
   },
   {
-   "manchete": "OVALE: Cesta básica sobe 1,63% no Vale e chega a R$ 2.994 em outubro",
-   "veiculos": 8,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-03T10:06:53Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "economia",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Aumento no preço dos alimentos afeta o custo de vida dos trabalhadores.",
-    "soma": 3
-   }
-  },
-  {
    "manchete": "Operação integrada prende três pessoas e inutiliza caminhão com madeira retirada de Terra Indígena em Nova Mamoré/RO — Polícia Federal",
    "veiculos": 5,
-   "veiculos_3h": 5,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-04T01:07:40Z",
    "esquentou": true,
    "ia": {
@@ -531,7 +512,7 @@
   },
   {
    "manchete": "Charles III expressa 'horror' no Caribe por 'monstruosa injustiça' da escravidão",
-   "veiculos": 8,
+   "veiculos": 7,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-03T18:06:48Z",
    "esquentou": true,
@@ -545,6 +526,60 @@
     "risco": "",
     "motivo": "Charles III comenta sobre passado escravista no Caribe.",
     "soma": 2
+   }
+  },
+  {
+   "manchete": "Dólar, Bolsa e juros refletem clima de terror após reeleição do descondenado Lula",
+   "veiculos": 19,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-03T12:09:43Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "economia",
+    "I": 1,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Choro do mercado financeiro sem foco nos direitos da classe.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Lula, Sheinbaum y Delcy Rodríguez no participarán en la cumbre iberoamericana de Madrid",
+   "veiculos": 26,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-03T10:06:53Z",
+   "esquentou": true,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Ausência de líderes latino-americanos em cúpula ibero-americana.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Senado deve votar nesta terça PEC da Segurança Pública",
+   "veiculos": 53,
+   "veiculos_3h": 13,
+   "na_pauta_desde": "2026-11-03T01:07:31Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "politica",
+    "I": 3,
+    "V": 3,
+    "P": 3,
+    "formato": "reels",
+    "repetido": true,
+    "risco": "",
+    "motivo": "Aprovação da PEC da Segurança no Senado já foi publicada.",
+    "soma": 6
    }
   },
   {
@@ -564,105 +599,69 @@
     "motivo": "Operação contra ameaças à Talíria Petrone já foi publicada.",
     "soma": 4
    }
-  },
-  {
-   "manchete": "Los demócratas se quedan con las primeras grandes victorias de las elecciones de medio mandato en EE.UU., cruciales para el futuro del gobierno de Trump",
-   "veiculos": 41,
-   "veiculos_3h": 17,
-   "na_pauta_desde": "2026-11-02T21:07:16Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "fora",
-    "I": 1,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Eleições nos EUA sem impacto direto no Brasil ou na América Latina.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "MP pede 22 anos de prisão para Valdivia por crimes sexuais",
-   "veiculos": 5,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-04T03:03:04Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "fora",
-    "I": 0,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Crime comum envolvendo ex-jogador de futebol sem ligação política.",
-    "soma": 1
-   }
   }
  ],
  "obrigatorios": [],
  "descartados_mais_quentes": [
   {
    "manchete": "Eleições nos EUA: americanos vão às urnas em votação que pode redefinir o poder de Trump no Congresso",
-   "veiculos": 203,
-   "veiculos_3h": 99,
+   "veiculos": 115,
+   "veiculos_3h": 43,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
    "manchete": "Lula pede mobilização da sociedade civil pela manutenção do fim das bets",
-   "veiculos": 61,
-   "veiculos_3h": 7,
+   "veiculos": 72,
+   "veiculos_3h": 13,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Muere Jesús de Miguel, delantero del Tenerife, tras el brutal choque con el portero del Andorra",
-   "veiculos": 61,
-   "veiculos_3h": 4,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Eleições de meio de mandato nos EUA: o que são as midterms, quando será a votação e o que está em jogo em 2026",
-   "veiculos": 40,
-   "veiculos_3h": 2,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Senado aprova PEC da Segurança Pública em primeiro e segundo turno turno; emendas sobre maioridade penal terão tramitação separada",
+   "manchete": "Democratas podem agir contra Flávio Bolsonaro nos EUA? Entenda o que está em jogo nas eleições desta terça",
    "veiculos": 37,
-   "veiculos_3h": 9,
-   "motivo": "repetido (20261103-1915-pec-seguranca-1turno)"
+   "veiculos_3h": 4,
+   "motivo": "sem editoria"
   },
   {
    "manchete": "Trump diz que EUA deixarão de financiar Israel após fim do ano",
-   "veiculos": 29,
+   "veiculos": 28,
    "veiculos_3h": 2,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Jogos hoje (03/11/26) ao vivo de futebol: onde assistir e horário",
-   "veiculos": 21,
-   "veiculos_3h": 6,
-   "motivo": "fora: esporte (futebol)"
+   "manchete": "Jogador espanhol morre em campo após choque com goleiro e parada cardíaca",
+   "veiculos": 25,
+   "veiculos_3h": 2,
+   "motivo": "fora: esporte (goleiro)"
   },
   {
-   "manchete": "Marina Ruy Barbosa recebe apoio de amigos em meio a polêmica com Luma Costa",
-   "veiculos": 19,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
+   "manchete": "¿Cuándo se sabrá quiénes ganaron las elecciones de medio término en Estados Unidos?",
+   "veiculos": 23,
+   "veiculos_3h": 10,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Barcelona x Aston Villa ao vivo: onde assistir, horário e prováveis escalações pela 4ª rodada da Champions League",
+   "veiculos": 18,
+   "veiculos_3h": 9,
+   "motivo": "fora: esporte (champions)"
   },
   {
    "manchete": "Justiça dos EUA convoca Martha Graeff a depor sobre ligações financeiras com Vorcaro, seu ex-noivo",
-   "veiculos": 14,
+   "veiculos": 16,
    "veiculos_3h": 5,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
    "manchete": "Morre Eliana Rocha, atriz de Pé na Cova, aos 82 anos",
-   "veiculos": 13,
-   "veiculos_3h": 5,
+   "veiculos": 12,
+   "veiculos_3h": 3,
    "motivo": "fora: crime ou tragedia (morre)"
+  },
+  {
+   "manchete": "EUA: Democrata Roy Cooper vence disputa pelo Senado na Carolina do Norte",
+   "veiculos": 10,
+   "veiculos_3h": 7,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
   }
  ]
 }
