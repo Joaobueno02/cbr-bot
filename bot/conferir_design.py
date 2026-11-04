@@ -134,6 +134,9 @@ def conferir_arte(pagina, pasta: Path, n: int, post: dict, slide: dict | None) -
         if "PermanentMarker" not in carregadas:
             graves.append("a letra manuscrita do \"da roça\" não carregou: renderize de novo")
 
+    if slide is None and len(sl) > 2:  # 04/11/2026: subtítulo em 30 px, até 2 linhas; o resto vai para a legenda
+        avisos.append(f"subtítulo com {len(sl)} linhas (padrão de 04/11: até 2); corte e leve o resto para a legenda")
+
     # contraste da marca do topo
     medidas = {"titulo_tamanho": fit.get("tamanho"), "titulo_linhas": len(lin), "subtitulo_linhas": len(sl),
                "topo_bloco": fit.get("topo_bloco")}

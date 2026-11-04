@@ -407,14 +407,17 @@ mesma notícia nas outras fontes, compare as versões e escreva a **nossa** a pa
   `==trecho==` com marca-texto (Economia/Educação), `|` força quebra de linha.
 - **subtitulo**: 1 ou 2 frases com o dado que sustenta o título e a negativa, se houver.
   Até ~260 caracteres. `**negrito**` para números. Em Política pode ficar vazio.
-- **credito_foto**: em Gerais/Economia/Educação vai acima do título. Formato: "Foto: <fonte>"
-  ou "<quem aparece> · Foto: <fonte>". Política, Eleições e Saúde **não têm rodapé**: nelas o
-  crédito vai só na legenda. Em **todas** as editorias, a última linha da legenda traz fontes e
-  crédito: "Fontes: ... Foto: <fonte>."
-- Padrão visual (aprovado em 15/10, vale para todas as editorias, cada uma na sua cor): título
-  menor e mais fino, bloco de texto mais alto, destaque `*...*` em marca-texto inclinado na cor da
-  editoria (no fundo claro, mais baixo e translúcido), barra com a cor predominante, CBR do topo
-  25% menor, sem texto abaixo da barra. Vermelho de Política e Gerais: #D0021B. Já está no
+- **credito_foto**: formato "Foto: <fonte>" ou "<quem aparece> · Foto: <fonte>". **Desde 04/11/2026, em todas
+  as editorias**, o gerador monta sozinho uma linha só embaixo da barra com a foto, as fontes (as que couberem
+  em ~78 caracteres) e a data; nada de crédito acima do título. Use nomes curtos em `fontes`. Em **todas** as
+  editorias, a última linha da legenda continua trazendo fontes e crédito: "Fontes: ... Foto: <fonte>."
+- Padrão visual (aprovado em 15/10, ajustado em 04/11/2026 a partir das skills `frontend-design` e
+  `canvas-design`; vale para todas as editorias, cada uma na sua cor): título fino (Fraunces 640) de até
+  60 px, bloco de texto perto da barra e foto maior, apoio (subtítulo) em 30 px com **até 2 linhas** (~105
+  caracteres; o resto vai para a legenda), destaque `*...*` em marca-texto inclinado na cor da editoria (no
+  fundo claro, mais baixo e translúcido; na grade preta com chapéu, mais leve, para o chapéu liderar), barra
+  com a cor predominante, CBR do topo 25% menor e a linha de crédito embaixo da barra. Vermelho de Política e
+  Gerais: #D0021B. A filosofia e a régua da revisão estão na skill `.claude/skills/design-cbr`. Já está no
   gerador; não precisa preencher nada.
 - O renderizador diminui o título até caber. Se der `erro_render` por texto, encurte.
 
@@ -487,7 +490,8 @@ post (texto, quebras, foto, enquadramento, legibilidade).
 **c) Revisor de design** (subagente pela ferramenta Agent com `model: "sonnet"`, para gastar menos;
 diferente do revisor da notícia):
 
-> Você é o revisor de design da CBR. Leia a seção 6 do MANUAL.md e fila/<id>/post.json
+> Você é o revisor de design da CBR. Leia a seção 6 do MANUAL.md, a skill .claude/skills/design-cbr/SKILL.md
+> (a filosofia visual e as 5 perguntas da revisão, inclusive "o que dá para tirar?") e fila/<id>/post.json
 > (inclusive `design_auto`). Abra fila/<id>/arte-*.jpg e referencias/<editoria>.jpg e compare
 > lado a lado; depois corte e amplie com PIL (topo 0-260, foto, bloco de texto, barra 1180-1350)
 > e abra cada recorte. Confira um por um os itens da seção 6b. O padrão visual travado (seção 4 e

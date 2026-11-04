@@ -128,16 +128,16 @@ CLARO = dict(bg="#ECEAE5", texto="#101010", sub="#4E4B47", rodape="#4E4B47",
 EDITORIAS = {
     "politica": dict(ESCURO, destaque="#E0302A", icone="#E0302A", icone_top=70, marca="lockup", esquerda=80, credito="rodape", foto_min=880),
     "eleicoes": dict(ESCURO, destaque="#FED700", icone="#FED700", icone_top=70, marca="lockup", esquerda=120, credito="rodape", foto_min=780),
-    "saude":    dict(CLARO, destaque="#087A6D", icone="#E3AD16", icone_top=72, marca="lockup", esquerda=120, credito="topo", foto_min=780),
-    "gerais":   dict(ESCURO, destaque="#E0302A", icone=None, icone_top=60, marca="simples", esquerda=120, credito="topo", foto_min=760),
+    "saude":    dict(CLARO, destaque="#087A6D", icone="#E3AD16", icone_top=72, marca="lockup", esquerda=120, credito="rodape", foto_min=780),
+    "gerais":   dict(ESCURO, destaque="#E0302A", icone=None, icone_top=60, marca="simples", esquerda=120, credito="rodape", foto_min=760),
     "america_latina": dict(ESCURO, destaque="#FF5A1F", icone="#FF5A1F", icone_top=70, marca="lockup", esquerda=120, credito="rodape", foto_min=800),
     # grade branca (pedido do João, 28/10/2026): papel creme, folha escura e café
     "roca": dict(CLARO, bg="#F2EBDD", texto="#1E1610", sub="#5A4A3A", rodape="#5A4A3A", barra="rgba(30,22,16,0.16)",
                  barra_solida="#D9CCB4", papel_op=0.2, grad_rgb="242,235,221", destaque="#4F7A1C", risco="#8A6A45", icone=None, icone_top=70, marca="roca",
                  esquerda=120, credito="rodape", foto_min=800,
                  foto_filtro="filter:saturate(1.08) sepia(.12) contrast(1.04)"),
-    "economia": dict(CLARO, destaque="#1646E0", icone="#E3AD16", icone_top=72, marca="lockup", esquerda=120, credito="topo", foto_min=760),
-    "educacao": dict(CLARO, destaque="#56622C", icone="#E3AD16", icone_top=72, marca="lockup", esquerda=120, credito="topo", foto_min=780),
+    "economia": dict(CLARO, destaque="#1646E0", icone="#E3AD16", icone_top=72, marca="lockup", esquerda=120, credito="rodape", foto_min=760),
+    "educacao": dict(CLARO, destaque="#56622C", icone="#E3AD16", icone_top=72, marca="lockup", esquerda=120, credito="rodape", foto_min=780),
 }
 
 TITULO_MAX = {"politica": 70, "eleicoes": 58, "saude": 60, "gerais": 58, "economia": 60, "educacao": 76, "america_latina": 58, "roca": 58}
@@ -322,9 +322,12 @@ def _foto_educacao(c: dict, foto_uri: str, recorte: bool, posicao: str, alt: str
 # Padrão visual aprovado pelo João em 15/10/2026 (post da PEC da Segurança).
 # Cada editoria pode ter os seus; o post.json ainda pode sobrescrever qualquer item.
 PADRAO_COMUM = {
-    "titulo_max": 52, "bloco_subir": 110, "barra_invertida": True, "cbr_escala": 0.75,
+    # 04/11/2026 (pedido do João, a partir das skills frontend-design e canvas-design): título 52 -> 60 px e
+    # bloco mais perto da barra (bloco_subir 110 -> 30), aproveitando a faixa vazia de baixo e deixando a foto
+    # maior; e uma linha só de crédito embaixo da barra em todas as editorias (sem_rodape False)
+    "titulo_max": 60, "bloco_subir": 30, "barra_invertida": True, "cbr_escala": 0.75,
     "peso_titulo": 640, "destaque_estilo": "marca_inclinada", "destaque_faixa": [55, 95],
-    "sem_rodape": True,
+    "sem_rodape": False,
 }
 PADROES = {
     "politica": {**PADRAO_COMUM, "cor_destaque": "#D0021B"},
@@ -337,6 +340,34 @@ PADROES = {
     "economia": {**PADRAO_COMUM, "destaque_faixa": [64, 100], "destaque_opacidade": 0.45},
     "educacao": {**PADRAO_COMUM, "destaque_faixa": [64, 100], "destaque_opacidade": 0.45},
 }
+
+
+def rodape_auto(post: dict, limite: int = 78) -> str:
+    """Linha única de crédito embaixo da barra (regra de 29/10/2026): foto, fontes e data, até `limite`
+    caracteres (em caixa alta e espaçada, ~78 cabem numa linha de 880 px). As fontes que não couberem ficam
+    só na legenda."""
+    partes = []
+    credito = (post.get("credito_foto") or "").strip()
+    if credito:
+        partes.append(credito)
+    m = re.match(r"(\d{4})(\d{2})(\d{2})", str(post.get("id") or post.get("_id") or ""))
+    if m:
+        data = f"{m.group(3)}/{m.group(2)}/{m.group(1)}"
+    else:  # o post.json não traz o id: vale a data do render (que é a do post), no horário de Brasília
+        from datetime import datetime, timedelta, timezone
+        data = datetime.now(timezone(timedelta(hours=-3))).strftime("%d/%m/%Y")
+    nomes = [str(f.get("veiculo", "")).split("(")[0].strip() for f in (post.get("fontes") or []) if isinstance(f, dict)]
+    nomes = [n for n in nomes if n]
+    for k in range(len(nomes), -1, -1):
+        trecho = list(partes)
+        if k:
+            trecho.append("Fontes: " + ", ".join(nomes[:k]))
+        if data:
+            trecho.append(data)
+        linha = " · ".join(trecho)
+        if len(linha) <= limite:
+            return linha
+    return " · ".join(partes)[:limite]
 
 
 def post_unico(post: dict, foto_uri: str, recorte: bool = False, altura: int = H) -> str:
@@ -367,7 +398,7 @@ def post_unico(post: dict, foto_uri: str, recorte: bool = False, altura: int = H
 
     partes = []
     credito = post.get("credito_foto", "")
-    if c["credito"] == "topo" and credito:
+    if c["credito"] == "topo" and credito:  # nenhuma editoria usa mais desde 04/11/2026 (crédito vai embaixo da barra)
         partes.append(f'<p style="margin:0 0 26px;font-family:Archivo,sans-serif;font-weight:700;font-size:17px;letter-spacing:2px;text-transform:uppercase;color:{c["sub"]}">{html.escape(credito)}</p>')
     if ed == "america_latina" and post.get("pais"):
         partes.append(_selo_pais(post["pais"], d, c["texto"]))
@@ -378,11 +409,14 @@ def post_unico(post: dict, foto_uri: str, recorte: bool = False, altura: int = H
     if story:
         maxt = int(maxt * 1.12)
     peso = int(post.get("peso_titulo", 800))
+    opac = float(post.get("destaque_opacidade", 0.9))
+    if post.get("chapeu") and c.get("tema") == "escuro":
+        opac = min(opac, 0.6)  # 04/11/2026: com chapéu, o chapéu lidera e o destaque acompanha
     partes.append(f'<p id="titulo" data-max="{maxt}" data-min="44" style="margin:0;font-family:Fraunces,Georgia,serif;font-weight:{peso};font-size:{maxt}px;line-height:1.05;letter-spacing:-1px;color:{c["texto"]}">'
                   f'{marcar(post["titulo"], d, c["texto"], titulo=True, peso_destaque=min(900, peso + 100), estilo=post.get("destaque_estilo", "cor"), faixa=tuple(post.get("destaque_faixa", (55, 95))),
-                         opacidade=float(post.get("destaque_opacidade", 0.9)))}</p>')
+                         opacidade=opac)}</p>')
     if post.get("subtitulo"):
-        partes.append(f'<p style="margin:26px 0 0;font-family:Archivo,sans-serif;font-size:{27 if story else 24}px;line-height:1.42;color:{c["sub"]}">{marcar(post["subtitulo"], d, c["texto"])}</p>')
+        partes.append(f'<p style="margin:26px 0 0;font-family:Archivo,sans-serif;font-size:{33 if story else 30}px;line-height:1.36;color:{c["sub"]}">{marcar(post["subtitulo"], d, c["texto"])}</p>')
 
     fundo_bloco = c["barra_y"] - 40 - int(post.get("bloco_subir", 0))
     limite = 760 if story else 300  # o bloco nunca sobe acima disso (no Story a foto fica com a metade de cima)
@@ -390,10 +424,11 @@ def post_unico(post: dict, foto_uri: str, recorte: bool = False, altura: int = H
              f'bottom:{altura - fundo_bloco}px">{"".join(partes)}</div>')
 
     rodape = ""
-    texto_rodape = "" if post.get("sem_rodape") else (post.get("rodape") or (credito if c["credito"] == "rodape" else ""))
+    texto_rodape = "" if post.get("sem_rodape") else (post.get("rodape") or (rodape_auto(post) if c["credito"] == "rodape" else ""))
     if texto_rodape:
         rodape = (f'<p style="position:absolute;z-index:3;left:{esq}px;right:80px;top:{c["barra_y"]+18}px;margin:0;font-family:Archivo,sans-serif;'
-                  f'font-weight:700;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:{c["rodape"]}">{html.escape(texto_rodape)}</p>')
+                  f'font-weight:700;font-size:14px;letter-spacing:2px;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;'
+                  f'color:{c["rodape"]}">{html.escape(texto_rodape)}</p>')
 
     marca = _marca(ed, c, float(post.get("cbr_escala", 1.0)))
     if story:  # abaixo do nome do perfil e da barra de progresso do Story
