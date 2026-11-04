@@ -693,8 +693,8 @@ Classifique pelo nível e, na dúvida, suba um nível (responder pouco a um nív
 
 | Nível | O que é | O que fazer |
 |---|---|---|
-| **1. Pequeno** | erro que não muda o sentido: grafia, nome de cargo, data trocada sem efeito | avise o João na mensagem da rodada para ele corrigir a legenda no app (a API não edita legenda); sem post de correção |
-| **2. Erro de fato** | número, data ou atribuição errados que mudam o entendimento | post de correção (passos 1 a 4 acima) **na mesma rodada**, no **mesmo formato** do original (Reels corrige Reels), para chegar a quem viu o erro; avise o João |
+| **1. Pequeno** | erro que não muda o sentido: grafia, nome de cargo, data trocada sem efeito | avise o João na mensagem da rodada para ele corrigir a legenda no app (o publicador não edita legenda); sem post de correção |
+| **2. Erro de fato** | número, data ou atribuição errados que mudam o entendimento | post de correção (passos 1 a 4 acima) **na mesma rodada**, no feed como manda a seção 2 (o Story automático leva a correção a quem segue); se o original rendeu muito, diga isso ao João, que decide se vale também um Reels; avise o João |
 | **3. Grave** | acusação errada contra pessoa; post com erro espalhando (envios ou alcance acima de 2x a nossa mediana); pedido de remoção, notificação ou ameaça de processo; ataque coordenado | **pare de publicar**, avise o João com PushNotification na hora e não publique nada até ele responder |
 | **Fake atribuído à CBR** | arte falsa com a nossa marca circulando | avise o João; o desmentido mostra a arte verdadeira ao lado da falsa e diz que a falsa não é nossa |
 
