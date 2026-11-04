@@ -8,7 +8,7 @@ description: >-
 
 # titulo-cbr
 
-Adaptado do `yt-package` e das 21 fórmulas do `yt-script` (youtube-agent-skill, MIT) para notícia
+Adaptado do `yt-package` e das 21 fórmulas do `yt-script` (youtube-agent-skill, MIT), com partes do `marketing-psychology` (marketingskills, MIT), para notícia
 no Instagram, em português, para quem trabalha. Vale junto com o MANUAL.md e com a regra de 29/10
 ("Texto feito para ser enviado"). **Nunca muda fato, número ou atribuição apurados**: a fórmula
 escolhe o enquadramento, a apuração escolhe o conteúdo.
@@ -40,7 +40,9 @@ legenda** (a que aparece antes do "mais", por volta de 125 caracteres). Cada par
    ```bash
    python bot/conferir_titulo.py fila/<id>/post.json
    ```
-   Corrija os `x` (avisos) e pese os `?` (sugestões). O render grava o mesmo resultado em
+   Corrija os `x` (avisos) e pese os `?` (sugestões). O mesmo comando confere a legenda: expressões
+   proibidas da seção 8, "não é X, é Y", pergunta que o próprio texto responde, "O pior: ...", isca
+   ("Concorda?"), travessões, emojis demais e as 5 hashtags. O render grava o mesmo resultado em
    `design_auto.texto`.
 
 A nota é um **piso de qualidade, não uma previsão de alcance**: em 03/11, posts de 3 e de 725 de
@@ -65,6 +67,24 @@ não regra.
 | **Desmentido** | o boato e o fato, quem desmente | "Lula garante que *nenhum programa social* vai acabar e desmente boato da extrema direita" |
 | **Placar** | a votação em número | "Senado aprova PEC da Segurança por *73 a 0* e separa maioridade penal" (4 de alcance: placar sozinho não basta; diga o que muda para quem) |
 | **Pergunta** | só quando a resposta está no slide ou na 1ª linha | use pouco: pergunta sem resposta vira isca |
+
+## O número na escala da pessoa
+
+Adaptado do `marketing-psychology` (marketingskills, MIT), só com o que é honesto para notícia.
+Número grande demais não pesa para ninguém; o mesmo número na escala de quem lê pesa.
+
+- **Divida pela pessoa ou pelo tempo**: "R$ 1,4 trilhão em juros" vira quanto isso dá por brasileiro
+  ou por dia, **com a conta feita a partir de dado oficial** (IBGE para população, por exemplo) e
+  explicada na legenda ("dividindo pela população do IBGE, dá...").
+- **Compare com o que a pessoa conhece**: em salários mínimos, cestas básicas (DIEESE), botijões,
+  meses de aluguel. Só com a fonte da referência na legenda.
+- **Diga o que a pessoa perde**, quando é isso que o fato diz: "Gerdau demite 280" pesa mais que
+  "Gerdau reorganiza a produção". É o mesmo fato, contado por quem paga a conta.
+- **Antes e depois**: o valor de hoje e o de antes, com as duas datas.
+
+Limites: a conta tem de estar certa e a fonte, citada; arredonde para baixo; nada de comparação que
+mude o sentido do fato; nada de urgência falsa ("corre!", "últimas horas") sem prazo real. Se a
+conta não fecha com dado oficial, não use.
 
 ## Regras do título (o `conferir_titulo.py` confere)
 
