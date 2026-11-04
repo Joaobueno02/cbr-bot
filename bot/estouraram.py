@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import statistics
 import sys
 from datetime import datetime, timezone
@@ -29,6 +30,11 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from triagem import EDITORIAS, FORA, LENTE, SALVA_FORA, norm, parecido, tem, tokens  # noqa: E402
+
+try:  # fórmula do gancho (a 1ª frase), com a mesma régua dos nossos títulos; ideia do ig-hook-extractor (MIT)
+    from conferir_titulo import formula as formula_titulo
+except Exception:  # sem o conferidor, segue sem a fórmula
+    formula_titulo = lambda _t: None  # noqa: E731
 
 BENCH = RAIZ / "radar" / "benchmark.json"
 ATUAL = RAIZ / "radar" / "atual.json"
@@ -135,6 +141,7 @@ def main() -> int:
                     "quando": p.get("quando"), "link": p.get("link"), "miniatura": p.get("miniatura"),
                     "inicio": texto[:200], **c}
             item["editoria_provavel"] = item.pop("editoria")
+            item["formula"] = formula_titulo(re.split(r"(?<=[.!?])\s", texto.strip(), maxsplit=1)[0][:200])
             if c["fora"]:
                 fora.append(item)
             elif not c["lente"]:  # rendeu, mas sem nada da lente da CBR (trabalho, bolso, direito, poder)
@@ -167,6 +174,9 @@ def main() -> int:
         "na_lente": na_lente[:a.top],
         "pautas_que_nao_demos": pautas,
         "fora_da_linha": fora[:5],
+        "formulas_que_estouraram": dict(sorted(
+            {f: sum(1 for x in na_lente if x.get("formula") == f) for f in {x.get("formula") for x in na_lente}
+             if f}.items(), key=lambda kv: -kv[1])),
         "paginas_sem_dados": puladas,
         "cbr": nosso,
     }
