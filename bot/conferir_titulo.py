@@ -39,6 +39,56 @@ STOP = set("a o os as de da do das dos e em no na nos nas um uma uns umas para p
            "apos após diz e é ser foi vai mais menos seu sua seus suas ele ela eles elas isso esse essa este esta "
            "como ja já nao não sem ate até entre quem".split())
 
+# "cara de IA" na legenda (adaptado da lista ai-tells do marketingskills, MIT, e da seção 8 do MANUAL)
+IA_PROIBIDAS = ["ou seja", "em suma", "alem disso", "ademais", "nesse sentido", "vale ressaltar", "vale lembrar",
+                "e importante destacar", "e importante ressaltar", "fundamental", "crucial", "significativo",
+                "significativa", "no cenario atual", "cabe destacar", "nao e de hoje", "em meio a"]
+IA_PADROES = [
+    ("contraste encenado ('não é X, é Y')",
+     re.compile(r"\bn[aã]o (e|é|foi|se trata de|era)\b[^.!?\n]{1,60}[,.;:]\s*(e|é|foi|era|mas)\b|\bn[aã]o s[oó]\b[^.!?\n]{1,60}\bmas (tamb[eé]m)?", re.I)),
+    ("pergunta que o próprio texto responde ('O resultado? ...')",
+     re.compile(r"(^|[.!\n]\s*)(o|a|os|as|e|e o|e a)\s+\w+(\s+\w+)?\?\s+\S", re.I)),
+    ("revelação com dois-pontos ('O pior: ...')",
+     re.compile(r"(^|[.!\n]\s*)(o|a)\s+(pior|melhor|detalhe|resumo|recado|segredo|problema|motivo|ponto)(\s+\w+)?:\s", re.I)),
+    ("isca de engajamento ('Concorda?', 'Leia de novo')",
+     re.compile(r"\b(concorda|faz sentido|leia de novo|leia outra vez|pensa nisso|reflita|comenta a[ií])\b\s*[?!.]", re.I)),
+]
+EMOJI = re.compile("[\U0001F300-\U0001FAFF\u2600-\u27BF]")
+
+
+def conferir_legenda(legenda: str, hashtags: list | None = None) -> tuple[list[str], list[str]]:
+    """Avisos e sugestões só da legenda: marcas de texto de IA, travessão, emoji, ritmo e hashtags."""
+    avisos, sugestoes = [], []
+    corpo = "\n".join(l for l in (legenda or "").splitlines() if not l.strip().lower().startswith(("fontes", "fonte:")))
+    sa = sem_acento(corpo)
+    achadas = sorted({w for w in IA_PROIBIDAS if re.search(rf"\b{w}\b", sa)})
+    if achadas:
+        avisos.append(f"expressões proibidas pela seção 8 do manual: {', '.join(achadas)}")
+    for nome, rx in IA_PADROES:
+        m = rx.search(corpo)
+        if m:
+            avisos.append(f"{nome}: \"{m.group(0).strip()[:60]}\"; diga a coisa direto, com o fato")
+    trav = corpo.count("—") + corpo.count(" – ")
+    if trav > 1:
+        avisos.append(f"{trav} travessões na legenda: troque por ponto ou vírgula (no máximo 1)")
+    emojis = EMOJI.findall(corpo)
+    if len(emojis) > 2:
+        avisos.append(f"{len(emojis)} emojis na legenda (manual: no máximo 1 ou 2)")
+    linhas = [l.strip() for l in corpo.splitlines() if l.strip()]
+    if sum(1 for l in linhas if EMOJI.match(l)) >= 3:
+        avisos.append("emoji abrindo várias linhas, como marcador de lista: escreva em parágrafo")
+    if len(linhas) >= 6 and sum(1 for l in linhas if len(l) < 60 and l.count(".") <= 1) / len(linhas) > 0.7:
+        sugestoes.append("quase toda linha é uma frase curta solta: junte em parágrafos onde uma pessoa pausaria")
+    if hashtags is not None:
+        if len(hashtags) != 5:
+            avisos.append(f"{len(hashtags)} hashtags (o manual pede exatamente 5: 3 do assunto, 1 da editoria, #ComunaBrasileira)")
+        elif hashtags[-1] != "#ComunaBrasileira":
+            sugestoes.append("a última hashtag deveria ser #ComunaBrasileira")
+        if re.search(r"(^|\s)#\w", corpo):
+            avisos.append("hashtag escrita dentro da legenda: elas vão só no campo hashtags")
+    return avisos, sugestoes
+
+
 # fórmulas de título da CBR (ver .claude/skills/titulo-cbr/SKILL.md); a classificação é sobre as
 # palavras do título, não uma explicação de por que o post rendeu
 FORMULAS = [
@@ -92,7 +142,8 @@ def formula(titulo: str) -> str | None:
     return None
 
 
-def conferir_texto(titulo: str, chapeu: str = "", subtitulo: str = "", legenda: str = "") -> dict:
+def conferir_texto(titulo: str, chapeu: str = "", subtitulo: str = "", legenda: str = "",
+                   hashtags: list | None = None) -> dict:
     avisos, sugestoes, bons = [], [], []
     t = limpo(titulo)
     ws = t.split()
@@ -132,6 +183,9 @@ def conferir_texto(titulo: str, chapeu: str = "", subtitulo: str = "", legenda: 
         corpo = [l for l in linhas if not l.lower().startswith(("fontes", "fonte:", "foto"))]
         if corpo and not any(ENVIO.search(l) for l in corpo[-2:]):
             avisos.append("legenda sem pedido de envio no fim (regra de 29/10: 'Manda pra quem...', variando a frase)")
+        la, ls = conferir_legenda(legenda, hashtags)
+        avisos += la
+        sugestoes += ls
     f = formula(titulo)
     if f:
         bons.append(f"fórmula: {f}")
@@ -142,10 +196,30 @@ def conferir_texto(titulo: str, chapeu: str = "", subtitulo: str = "", legenda: 
 def conferir_post(post: dict) -> dict:
     if post.get("formato") == "carrossel":
         capa = next((s for s in post.get("slides", []) if s.get("tipo") == "capa"), (post.get("slides") or [{}])[0])
-        return conferir_texto(capa.get("titulo", ""), capa.get("chamada", ""), capa.get("texto", ""),
-                              post.get("legenda", ""))
+        r = conferir_texto(capa.get("titulo", ""), capa.get("chamada", ""), capa.get("texto", ""),
+                           post.get("legenda", ""), post.get("hashtags"))
+        r["avisos"] += conferir_slides(post.get("slides", []))
+        return r
     return conferir_texto(post.get("titulo", ""), post.get("chapeu", ""), post.get("subtitulo", ""),
-                          post.get("legenda", ""))
+                          post.get("legenda", ""), post.get("hashtags"))
+
+
+def conferir_slides(slides: list[dict]) -> list[str]:
+    """Carrossel (skill carrossel-cbr): cada slide sobrevive sozinho, sem fechamento escrito à mão."""
+    avisos = []
+    if not 4 <= len(slides) <= 8:
+        avisos.append(f"carrossel com {len(slides)} slides (manual: 4 a 8, sem contar o fechamento automático)")
+    titulos = [limpo(x.get("titulo", "")) for x in slides]
+    for i, t in enumerate(titulos[1:], start=2):
+        if len(t.split()) > 10:
+            avisos.append(f"slide {i}: título com {len(t.split())} palavras (até 10; título longo é o que mais gera órfã)")
+        if re.search(r"\b(siga|salve|compartilhe|mande pra quem)\b", sem_acento(t)):
+            avisos.append(f"slide {i}: parece slide de fechamento; o render já acrescenta o último slide sozinho")
+    for i in range(1, len(titulos)):
+        for j in range(i):
+            if titulos[i] and titulos[j] and sobreposicao(titulos[i], titulos[j]) >= 0.7:
+                avisos.append(f"slide {i + 1} repete o título do slide {j + 1}: junte os dois ou corte um")
+    return avisos
 
 
 def mostrar(rotulo: str, r: dict) -> None:
