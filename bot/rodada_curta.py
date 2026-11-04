@@ -8,6 +8,8 @@ Uso: python bot/rodada_curta.py            (janela padrão: 65 min)
 
 Saída: a primeira linha é "VEREDITO: CURTA" ou "VEREDITO: COMPLETA"; depois os motivos e, em poucas
 linhas, os itens que a rodada precisa olhar (candidatos novos, rebaixados/descartes quentes a conferir).
+Na rodada curta grava uma linha em registro/rodadas.jsonl (bot/registrar_rodada.py); a rodada completa
+chama o bot/registrar_rodada.py no fim, com os números dela.
 """
 from __future__ import annotations
 
@@ -124,6 +126,11 @@ def main() -> None:
                 olhar.append(f"- conferir: {(c.get('manchete') or '')[:110]} | {c.get('veiculos_3h')} em 3 h"
                              f" | {c.get('motivo') or (c.get('ia') or {}).get('motivo', '')}"[:200])
 
+    if not motivos:  # rodada curta: grava a linha sozinha (registro de rodadas, 04/11/2026)
+        from registrar_rodada import registrar
+        ia = (t or {}).get("ia") if t else None
+        registrar("curta", ia_ok=ia.get("ok") if isinstance(ia, dict) else None,
+                  obs="triagem sem candidatos novos")
     print("VEREDITO: " + ("COMPLETA" if motivos else "CURTA"))
     print(f"agora {local:%d/%m %Hh%M} (Brasília) · janela desde {corte}")
     for m in motivos:
