@@ -8,7 +8,8 @@ description: >-
 
 # carrossel-cbr
 
-Adaptado das cinco estruturas de carrossel do `social` (marketingskills, MIT) para notícia, em
+Adaptado das cinco estruturas de carrossel do `social` (marketingskills, MIT) e do mito x verdade do
+`instagram-skills` (MIT) para notícia, em
 português, para quem trabalha. Vale junto com o MANUAL.md (seção 2, "Formato") e com a skill
 `titulo-cbr` (a capa é um título). **Nunca muda fato, número ou atribuição apurados.**
 
@@ -28,12 +29,17 @@ choque do fato, é Reels.
 
 ## Escolha a estrutura antes de escrever
 
-| A notícia é... | Estrutura | Por que a pessoa desliza |
-|---|---|---|
-| uma lista de mudanças, pontos ou números | **A. Entenda em N pontos** | o número da capa é uma promessa que dá para conferir |
-| um dado forte que tem documento por trás | **B. O número e a prova** | a capa afirma, o último slide mostra a prova |
-| um direito com prazo e caminho | **C. Seu direito passo a passo** | ver o caminho inteiro antes faz terminar |
-| um político ou empresa dizendo uma coisa e fazendo outra | **D. Discurso x prática** | cada slide aumenta a contradição, e o slide do "outro lado" a torna justa |
+| A notícia é... | Estrutura | Por que a pessoa desliza | Objetivo |
+|---|---|---|---|
+| uma lista de mudanças, pontos ou números | **A. Entenda em N pontos** | o número da capa é uma promessa que dá para conferir | salvar |
+| um dado forte que tem documento por trás | **B. O número e a prova** | a capa afirma, o último slide mostra a prova | envio |
+| um direito com prazo e caminho | **C. Seu direito passo a passo** | ver o caminho inteiro antes faz terminar | salvar |
+| um político ou empresa dizendo uma coisa e fazendo outra | **D. Discurso x prática** | cada slide aumenta a contradição, e o slide do "outro lado" a torna justa | envio |
+| boatos que estão circulando e foram desmentidos | **E. Mentira x verdade** | cada slide dá à pessoa o argumento para responder no grupo | envio |
+
+O objetivo decide o fim da legenda: **envio** pede "Manda pra quem..."; **salvar** pede "Salva pra não
+perder o prazo" (o Instagram conta envio e salvamento muito acima da curtida; pedir marcação ou
+comentário é isca e é rebaixado).
 
 ### A. Entenda em N pontos (4 a 7 slides)
 
@@ -80,6 +86,19 @@ fonte oficial (órgão, lei, nota do ministério).
 O slide do outro lado não é opcional. Ele torna a crítica justa, se adianta ao comentário hostil e
 cumpre a regra de que toda acusação traz a negativa do acusado. Deboche só com o político e só na
 legenda (seção 8).
+
+### E. Mentira x verdade (4 a 7 slides)
+
+| Slide | Função | Tipo |
+|---|---|---|
+| 1, capa | quantos boatos e sobre o quê: "*3 mentiras* sobre o Bolsa Família que circulam no WhatsApp" | `capa` |
+| 2 a N | um boato por slide: "Circula: ..." e "O fato: ...", com quem desmentiu (órgão ou agência de checagem) | `texto` |
+| último escrito | onde a pessoa confere sozinha (site do órgão, canal oficial) | `texto`, com `fonte` |
+
+Só boato **real e documentado**: que um órgão oficial ou uma agência de checagem desmentiu, ou que o
+radar mostra circulando. Nunca invente o boato para derrubar depois: isso é espantalho e os
+comentários percebem. Não reproduza a imagem do boato (ela espalha a mentira); descreva em uma frase.
+Foi o formato do carrossel da Secom em 27/10.
 
 ## Regras de texto dos slides (o `conferir_titulo.py` confere)
 

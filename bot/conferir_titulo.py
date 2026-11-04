@@ -30,7 +30,9 @@ VAGAS = ["chocante", "inacreditavel", "absurdo", "absurda", "bomba", "bombastico
          "veja", "confira", "importante", "grave", "serio"]
 INSTITUICOES = ["governo", "ministerio", "senado", "camara", "stf", "stj", "tse", "tcu", "comissao", "conselho",
                 "tribunal", "prefeitura", "secretaria", "estados", "orgao", "agencia", "assembleia", "congresso"]
-ENVIO = re.compile(r"\b(manda|mande|envia|envie|compartilh\w*|encaminh\w*|passa pra|passe pra|marca quem|marque)\b", re.I)
+# pedido de envio (o sinal que mais espalha) ou de salvar (post de prazo, direito, serviço); "marca quem" e
+# "comenta" ficam de fora: pedir marcação é isca que o Instagram rebaixa (instagram-skills, MIT)
+ENVIO = re.compile(r"\b(manda|mande|envia|envie|compartilh\w*|encaminh\w*|passa pra|passe pra|salva|salve|guarda)\b", re.I)
 NUMERO = re.compile(r"\d")
 DATA = re.compile(r"\b(\d{1,2}/\d{1,2}|\d{1,2} de (janeiro|fevereiro|marco|março|abril|maio|junho|julho|agosto|"
                   r"setembro|outubro|novembro|dezembro)|segunda|terca|terça|quarta|quinta|sexta|sabado|sábado|domingo|"
@@ -42,7 +44,10 @@ STOP = set("a o os as de da do das dos e em no na nos nas um uma uns umas para p
 # "cara de IA" na legenda (adaptado da lista ai-tells do marketingskills, MIT, e da seção 8 do MANUAL)
 IA_PROIBIDAS = ["ou seja", "em suma", "alem disso", "ademais", "nesse sentido", "vale ressaltar", "vale lembrar",
                 "e importante destacar", "e importante ressaltar", "fundamental", "crucial", "significativo",
-                "significativa", "no cenario atual", "cabe destacar", "nao e de hoje", "em meio a"]
+                "significativa", "no cenario atual", "cabe destacar", "nao e de hoje", "em meio a",
+                # sinceridade encenada e clichê de rede (instagram-skills, scrub-rules, adaptado)
+                "a verdade e que", "sejamos sinceros", "vamos combinar", "e sobre isso", "fica a reflexao",
+                "e ta tudo bem", "simples assim", "pasmem", "acredite se quiser"]
 IA_PADROES = [
     ("contraste encenado ('não é X, é Y')",
      re.compile(r"\bn[aã]o (e|é|foi|se trata de|era)\b[^.!?\n]{1,60}[,.;:]\s*(e|é|foi|era|mas)\b|\bn[aã]o s[oó]\b[^.!?\n]{1,60}\bmas (tamb[eé]m)?", re.I)),
@@ -51,7 +56,8 @@ IA_PADROES = [
     ("revelação com dois-pontos ('O pior: ...')",
      re.compile(r"(^|[.!\n]\s*)(o|a)\s+(pior|melhor|detalhe|resumo|recado|segredo|problema|motivo|ponto)(\s+\w+)?:\s", re.I)),
     ("isca de engajamento ('Concorda?', 'Leia de novo')",
-     re.compile(r"\b(concorda|faz sentido|leia de novo|leia outra vez|pensa nisso|reflita|comenta a[ií])\b\s*[?!.]", re.I)),
+     re.compile(r"\b(concorda|faz sentido|leia de novo|leia outra vez|pensa nisso|reflita|comenta a[ií])\b\s*[?!.]"
+                r"|\b(marca|marque) (quem|um amigo|uma amiga|\d)|\bo que voc[eê]s acham\b|\bcomente (sim|eu|aqui)\b", re.I)),
 ]
 EMOJI = re.compile("[\U0001F300-\U0001FAFF\u2600-\u27BF]")
 
@@ -182,7 +188,8 @@ def conferir_texto(titulo: str, chapeu: str = "", subtitulo: str = "", legenda: 
         linhas = [l.strip() for l in legenda.splitlines() if l.strip()]
         corpo = [l for l in linhas if not l.lower().startswith(("fontes", "fonte:", "foto"))]
         if corpo and not any(ENVIO.search(l) for l in corpo[-2:]):
-            avisos.append("legenda sem pedido de envio no fim (regra de 29/10: 'Manda pra quem...', variando a frase)")
+            avisos.append("legenda sem pedido de envio no fim (regra de 29/10: 'Manda pra quem...'; em post de prazo ou "
+                          "direito, 'Salva pra não perder o prazo' também vale)")
         la, ls = conferir_legenda(legenda, hashtags)
         avisos += la
         sugestoes += ls

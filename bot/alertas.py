@@ -10,6 +10,9 @@
    quando foi publicado no mesmo dia a partir das 7h, tem pelo menos 1 h de vida e engajamento
    por hora no quartil de cima dos posts do próprio perfil nas últimas 48 h (régua de comparação). Máximo de 5 alertas por perfil por dia, só das 7h às 23h.
 
+3. Comentários dos nossos posts das últimas 24 h (bot/comentarios.py, no máximo a cada 30 min):
+   contestação ("é fake", "cadê a fonte") vira alerta na hora; perguntas vão para radar/comentarios.json.
+
 O tópico do ntfy fica no secret NTFY_TOPIC (o repositório é público). Sem ele, nada é enviado.
 Estado em registro/alertas.json.
 """
@@ -176,6 +179,11 @@ def main() -> None:
     estado.setdefault("log", [])
     collabs(estado)
     parceiros(estado)
+    try:  # comentários dos nossos posts (04/11/2026): contestação vira alerta; nunca derruba os alertas
+        from comentarios import conferir as conferir_comentarios
+        conferir_comentarios(estado, chamar, enviar, CONFIG.get("ig_user_id"))
+    except Exception as e:
+        print(f"comentários falharam: {type(e).__name__}")
     estado["log"] = estado["log"][-200:]
     ESTADO.write_text(json.dumps(estado, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("alertas ok")

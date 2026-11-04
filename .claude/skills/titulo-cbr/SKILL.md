@@ -26,6 +26,21 @@ legenda** (a que aparece antes do "mais", por volta de 125 caracteres). Cada par
   cabe nos primeiros 125 caracteres.
 - **fim da legenda**: o pedido de envio ligado ao assunto, variando a frase.
 
+## Antes do título: o objetivo do post
+
+O Instagram distribui pelo que a pessoa faz depois de ver, e os pesos não são iguais: **envio por DM**
+pesa mais, depois **salvar**, depois comentário; a curtida pesa pouco (instagram-skills, MIT, a partir
+das falas públicas do Instagram). Escolha **um** objetivo antes de escrever:
+
+- **envio**: contradição, frase de efeito, detalhe ridículo, povo x eles, desmentido. A pergunta é:
+  "a pessoa pensaria em alguém específico para mandar isto?" O fim da legenda pede o envio.
+- **salvar**: prazo, direito, passo a passo, entenda. A pergunta é: "a pessoa vai voltar aqui depois?"
+  O fim da legenda pede para salvar ("Salva pra não perder o prazo de 30/11").
+
+Nunca peça marcação ("marque quem..."), "comente SIM" ou "o que vocês acham?": o Instagram rebaixa
+isca de engajamento. A pergunta do primeiro comentário (`comentario`) continua valendo, porque pede
+experiência, não clique.
+
 ## Escreva cinco, fique com um
 
 1. Escreva **5 títulos** para a pauta aprovada, cada um com uma fórmula diferente (lista abaixo).
@@ -42,7 +57,8 @@ legenda** (a que aparece antes do "mais", por volta de 125 caracteres). Cada par
    ```
    Corrija os `x` (avisos) e pese os `?` (sugestões). O mesmo comando confere a legenda: expressões
    proibidas da seção 8, "não é X, é Y", pergunta que o próprio texto responde, "O pior: ...", isca
-   ("Concorda?"), travessões, emojis demais e as 5 hashtags. O render grava o mesmo resultado em
+   ("Concorda?", "marque quem", "o que vocês acham?"), clichês ("a verdade é que", "é sobre isso"),
+   travessões, emojis demais e as 5 hashtags. O render grava o mesmo resultado em
    `design_auto.texto`.
 
 A nota é um **piso de qualidade, não uma previsão de alcance**: em 03/11, posts de 3 e de 725 de
