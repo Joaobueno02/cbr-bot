@@ -38,6 +38,11 @@ O dono é o João. Ele acompanha cada post pela notificação e pede para parar 
 1. `git pull`. Leia `registro/posts.jsonl` (o que já saiu) e a fila (`fila/*/post.json`).
    Se houver post com `erro_render`, `erro_publicacao` ou parado em `renderizado` de execução
    anterior, resolva ou descarte (status `descartado` + motivo) antes de pautas novas.
+   **Comentários** (desde 04/11/2026, quando existir `radar/comentarios.json`, atualizado a cada 30 min pelos
+   alertas): toda **contestação** ("é fake", "tá errado", "cadê a fonte") é conferida nesta rodada, antes de pauta
+   nova, contra a `apuracao` do post. Procede: siga o protocolo de crise (seção 11). Não procede: registre no
+   resumo o que foi conferido (o João já recebeu o alerta no celular e decide se responde). O bot não responde
+   comentário nenhum. Pergunta repetida por 2 ou mais pessoas vira candidata a pauta de serviço.
    Post com `status: "agendado"` e `publicar_apos` (UTC) já vencido: confira se a notícia
    continua valendo (nada mudou, não ficou velha nem foi desmentida); se sim, mude para
    `publicar`; se não, corrija ou descarte. Use `agendado` para notícia apurada de madrugada
@@ -530,7 +535,13 @@ mesmo subagente com SendMessage em vez de abrir outro. Se reprovar: aplique as c
 - Fechamento com uma frase de posicionamento curta, quando couber. Não resuma o post.
 - No fim, uma linha: `Fontes: Veículo 1, Veículo 2 (mês/ano).`
 - Exatamente 5 hashtags em `hashtags` (não escreva na legenda): 3 do assunto + 1 da
-  editoria + `#ComunaBrasileira`.
+  editoria + `#ComunaBrasileira`. **Tamanho das do assunto (04/11/2026, adaptado do instagram-skills)**: hashtag
+  gigante some em segundos para uma página pequena. Das 3 do assunto, 2 específicas (o nome, o lugar, a
+  categoria: `#MetalúrgicosDeDivinópolis`, `#Gerdau`, `#13ºSalário`) e 1 média, que muita gente segue mas não
+  é universal (`#FimDa6x1`, `#ReformaAgrária`); a da editoria já faz o papel da ampla.
+- **Fim da legenda pelo objetivo do post** (skill `titulo-cbr`): post de envio pede o envio; post de prazo,
+  direito ou "entenda" pode pedir para salvar ("Salva pra não perder o prazo"). Nunca "marque quem",
+  "comente SIM" ou "o que vocês acham?": o Instagram rebaixa isca de engajamento.
 - Evite marcas de texto de IA: nada de "Ou seja", "Em suma", "além disso", "ademais",
   "nesse sentido", "vale ressaltar", "é importante destacar"; nada de listas de três
   forçadas, adjetivos vazios ("fundamental", "crucial", "significativo"), travessões em
@@ -617,6 +628,9 @@ melhorias** e mande ao João com SendUserMessage. Salve também em `dossies/AAAA
 sugestão já feita (se repetir, diga que é reforço e por quê).
 
 **Dados** (não sugira nada sem dado ou exemplo):
+- `radar/comentarios.json` (quando existir): comentários dos nossos posts do dia por classe; liste as
+  **perguntas que se repetem** (viram pauta de serviço ou um slide de "entenda") e as **contestações**, com o
+  que foi conferido e o nível do protocolo de crise (seção 11);
 - `radar/benchmark.json` (22h45): posts das últimas 24 h de ~13 páginas de notícia, com
   engajamento, formato, horário, tamanho e começo da legenda, hashtags. A **BFC é a referência
   principal**. Abra as miniaturas em `radar/benchmark/img/` (ferramenta Read) para analisar o
