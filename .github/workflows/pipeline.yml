@@ -96,7 +96,19 @@ jobs:
           python bot/checar_vazamento.py $arquivos
           git commit -m "bot: render/publicação $(date -u +%FT%TZ)"
           for i in 1 2 3; do
-            git pull --rebase origin main && git push && exit 0
+            if git pull --rebase origin main; then
+              git push && exit 0
+            elif git status | grep -q "rebase in progress"; then
+              git rebase --abort
+              if [ "${{ steps.fila.outputs.publicar }}" = "0" ]; then
+                # o post.json mudou durante o render (correção empurrada pela rodada): o push novo
+                # já disparou outro run, que refaz o render; este resultado pode ser descartado
+                echo "post mudou durante o render; o próximo run refaz"
+                exit 0
+              fi
+              echo "conflito depois de publicar: não descarto o registro da publicação"
+              exit 1
+            fi
             sleep 5
           done
           exit 1
