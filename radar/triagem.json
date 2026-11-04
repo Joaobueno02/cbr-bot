@@ -1,44 +1,45 @@
 {
- "quando": "2026-11-04T17:22:28Z",
- "pauta_quando": "2026-11-04T17:22:25Z",
+ "quando": "2026-11-04T17:33:48Z",
+ "pauta_quando": "2026-11-04T17:33:44Z",
  "ok": true,
  "erro": null,
- "metodo": "regras",
+ "metodo": "regras + gemini",
  "ia": {
   "ia": "gemini",
-  "ok": false,
-  "erro": "Gemini: gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in | gemi",
-  "modelo": null,
-  "avaliados_agora": 0,
-  "pedidos_hoje": 11
+  "ok": true,
+  "erro": null,
+  "modelo": "gemini-3.5-flash-lite",
+  "avaliados_agora": 21,
+  "falhas_antes": null,
+  "pedidos_hoje": 12
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 168,
- "novos_3h": 6,
- "esquentaram": 5,
+ "total_assuntos": 173,
+ "novos_3h": 10,
+ "esquentaram": 3,
  "candidatos": [
   {
-   "manchete": "Governo Lula tenta separar redução da maioridade penal de PEC da Segurança e sugere proposta paralela",
+   "manchete": "Ministro de Lula diz que governo votará PEC da Segurança sem redução da maioridade penal",
    "secoes": [
     "B"
    ],
-   "veiculos": 468,
-   "veiculos_3h": 357,
+   "veiculos": 495,
+   "veiculos_3h": 380,
    "na_pauta_desde": "2026-11-03T17:10:20Z",
-   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/governo-lula-tenta-separar-reducao-da-maioridade-penal-de-pec-da-seguranca-e-propoe-proposta-paralela.shtml",
+   "link": "https://www.gazetadopovo.com.br/republica/ministro-de-lula-diz-que-governo-votara-pec-da-seguranca-sem-reducao-da-maioridade-penal/",
    "editoria": "politica",
-   "nota": 4,
-   "esquentou": true,
+   "nota": 5,
+   "esquentou": false,
    "lente": [],
    "ia": {
     "editoria": "politica",
     "I": 3,
     "V": 3,
-    "P": 2,
+    "P": 3,
     "formato": "reels",
     "repetido": false,
     "risco": "",
-    "motivo": "Governo articula contra retrocesso na maioridade penal.",
+    "motivo": "Debate crucial sobre segurança pública e maioridade penal mobiliza o Congresso.",
     "soma": 6
    }
   },
@@ -47,7 +48,7 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 8,
+   "veiculos": 9,
    "veiculos_3h": 6,
    "na_pauta_desde": "2026-11-04T14:07:42Z",
    "link": "https://www.infomoney.com.br/politica/cnc-aciona-stf-para-adiar-fim-da-escala-6x1/",
@@ -67,6 +68,63 @@
     "risco": "",
     "motivo": "Patronato tenta barrar conquistas trabalhistas no STF.",
     "soma": 6
+   }
+  },
+  {
+   "manchete": "Construtoras são orientadas a adiar acordos sobre redução da jornada",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-04T16:08:13Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/construtoras-sao-orientadas-a-adiar-acordos-sobre-reducao-da-jornada.shtml",
+   "editoria": "economia",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "jornada"
+   ],
+   "ia": {
+    "editoria": "gerais",
+    "I": 3,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Patrões resistem e orientam adiar acordos sobre redução da jornada de trabalho.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Jorge e Mateus enfrentam boicote no Nordeste após apoio a Flávio Bolsonaro",
+   "secoes": [
+    "B",
+    "D-famosos"
+   ],
+   "veiculos": 39,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-04T12:08:05Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://f5.folha.uol.com.br/musica/2026/11/dupla-jorge-e-mateus-tem-shows-cancelados-no-nordeste-apos-apoio-politico-entenda.shtml",
+   "editoria": "eleicoes",
+   "nota": 7,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio"
+   ],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 3,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Dupla sertaneja sofre boicote popular após apoiar candidato da extrema-direita.",
+    "soma": 5
    }
   },
   {
@@ -97,71 +155,30 @@
    }
   },
   {
-   "manchete": "Jorge e Mateus enfrentam boicote no Nordeste após apoio a Flávio Bolsonaro",
+   "manchete": "Lula 4 reabre debate sobre fim dos supersalários e avaliação de servidores",
    "secoes": [
-    "B"
-   ],
-   "veiculos": 41,
-   "veiculos_3h": 8,
-   "na_pauta_desde": "2026-11-04T12:08:05Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://f5.folha.uol.com.br/musica/2026/11/dupla-jorge-e-mateus-tem-shows-cancelados-no-nordeste-apos-apoio-politico-entenda.shtml",
-   "editoria": "eleicoes",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ]
-  },
-  {
-   "manchete": "INSS: veja as datas de pagamento de novembro para aposentados e pensionistas",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 8,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-03T16:10:21Z",
-   "link": "https://g1.globo.com/economia/noticia/2026/11/04/calendario-de-novembro-2026.ghtml",
-   "editoria": "economia",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "aposentad",
-    "inss"
-   ]
-  },
-  {
-   "manchete": "Deputado candidato à reeleição nos EUA pede que Flávio seja deportado",
-   "secoes": [
-    "A"
+    "B",
+    "C-nacional"
    ],
    "veiculos": 5,
-   "veiculos_3h": 1,
+   "veiculos_3h": 5,
    "na_pauta_desde": "2026-11-04T16:08:13Z",
-   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQQ21UUjhRTFhCSTlNYmNfNUNZbm5iNVBhYWNWQ3lvVlk1LVBhU1VKc29yR1pZWGZoQkczcmhHUTY4M25lYnNRbzNXal93M1Zld3hoWk51MWk1XzdlcXJQNGo3LXJpenQwQkprSmREdEJ0V0ZmbS12OVFtalpveEFWNlpjWldrRHBoZzFHaXd2d0FDZlBKQjRBdk5iWk91X1hNRm03bA?oc=5",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/lula-4-reabre-debate-sobre-fim-dos-supersalarios-e-avaliacao-de-servidores.shtml",
    "editoria": "eleicoes",
-   "nota": 6,
+   "nota": 4,
    "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ]
-  },
-  {
-   "manchete": "Democrata se torna primeiro brasileiro eleito deputado estadual na Flórida",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 21,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-04T03:03:04Z",
-   "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/democrata-se-torna-primeiro-brasileiro-eleito-deputado-estadual-na-florida.shtml",
-   "editoria": "politica",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "direito"
-   ]
+   "lente": [],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Debate sobre fim de supersalários no funcionalismo público.",
+    "soma": 4
+   }
   },
   {
    "manchete": "BNDES e Petrobras destinam R$ 10 milhões à agricultura familiar no semiárido da Bahia",
@@ -169,7 +186,7 @@
     "B",
     "D-terra"
    ],
-   "veiculos": 9,
+   "veiculos": 10,
    "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-03T14:08:53Z",
    "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQSTZOV0RqSVZkNlZWZFgxb2xGYWpERVVVYW9jRE9wdDNEQ3Z5SzdYRE1GNmg5YlJXNlpZdFc3dlc4RXAtNkgyNUM3eVh5Q3ZCN1ZVVEtJeXNKelJ5eDJGRWc2bE15WkcyR3FBbXo4UXlSRkpJR1NPLXBDR0cxakczb0Yzd2JmMGI5amZyaHdQbWxmczhmZ3BqOF9jR1hfNWsweTJlYmlPTnZkZmNDUERzSlFCWmZ4blVLVlBtU09zQW10N2Q1TXc?oc=5",
@@ -186,6 +203,31 @@
     "repetido": false,
     "risco": "",
     "motivo": "Investimento público direto para fortalecer a agricultura familiar no semiárido baiano.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Ministro da Justiça defende no STF a proibição das bets e cita endividamento e suicídios",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 22,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-04T17:22:25Z",
+   "link": "https://jornalggn.com.br/justica/ministro-da-justica-defende-no-stf-a-proibicao-das-bets-e-cita-endividamento-e-suicidios/",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "saude",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Governo ataca mercado de apostas online defendendo saúde pública e endividamento.",
     "soma": 4
    }
   },
@@ -215,180 +257,268 @@
    }
   },
   {
-   "manchete": "Presidente do BC paraguaio renuncia após colapso financeiro do Ueno Bank",
-   "secoes": [
-    "B",
-    "D-america_latina"
-   ],
-   "veiculos": 55,
-   "veiculos_3h": 12,
-   "na_pauta_desde": "2026-11-03T20:12:41Z",
-   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://c-level.folha.uol.com.br/negocios/2026/11/paraguai-intervem-no-ueno-bank-e-presidente-do-banco-central-renuncia.shtml",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "PL oficializa nesta quarta candidatura de Rogério Marinho à presidência do Senado",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 10,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-03T22:19:44Z",
-   "link": "https://www.gazetadopovo.com.br/republica/pl-confirma-candidatura-de-rogerio-marinho-a-presidencia-do-senado/",
-   "editoria": "eleicoes",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "pl"
-   ]
-  },
-  {
-   "manchete": "Geórgia elege 1ª mulher negra governadora da história dos EUA",
-   "secoes": [
-    "A",
-    "A",
-    "B"
-   ],
-   "veiculos": 13,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-04T03:19:53Z",
-   "link": "https://g1.globo.com/mundo/noticia/2026/11/03/georgia-elege-1a-mulher-negra-governadora-da-historia-dos-eua.ghtml",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": true,
-   "lente": []
-  },
-  {
-   "manchete": "PF e Receita Federal fazem operação contra organização criminosa ligada a núcleo familiar de Ponta Porã",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 15,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-03T18:06:48Z",
-   "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNSGJxcTNFQWJTQzk0dlk0MUk3MWt6Yk42Y0N0N1dJZHJxM0VxbU5YMElPcXJORTdXcXlIaWwwVzdRbkNHVXg5Y3BYOGxfdmZoZWtJUjFsYlJqdE50b29IUTFkLTZ1andLRVR6Ymh5X2FlX3RYeURNOEw0M1BRVUluUWtIZVlfUE1GZEprQlNYVjJHUTcyNjFHLW9DaHVVa2trNTZpNlBNZ3Z3cFZPNVp3R2FLVXB3R213ZmpaSzRNUV9OSC11ZS1pdF8zeUJYLU9kV05DZEo3WQ?oc=5",
-   "editoria": "politica",
-   "nota": 5,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Escândalo em banco do Paraguai tem oito presos, protestos e pedido de impeachment do presidente",
-   "secoes": [
-    "C-nacional",
-    "D-america_latina"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-04T17:22:25Z",
-   "link": "https://c-level.folha.uol.com.br/negocios/2026/11/escandalo-em-banco-do-paraguai-tem-oito-presos-protestos-e-pedido-de-impeachment-do-presidente.shtml",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "protesto",
-    "banco"
-   ]
-  },
-  {
-   "manchete": "Cesta básica fica 1,63% mais cara em outubro no Vale do Paraíba, segundo Nupes",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-04T17:22:25Z",
-   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPaDZfZTBiTHZNTkFrSkUtcXJqRm9RU3BoQVNvQmJ1ZGtYVktDTkQtN2l2TmI5ajZIZzJ2WEZKR0lDanZ2M3lLbEdvalppX3VHcHBYRjQ1TmpydDZFSnQxemlkXzRqV0l0dXlFOXYwT01SOXVrYVBOVm5QOXVMczhuZFo0RWktRXBrM3ZSbndrampIakJWc1AzZHVDLVEtZW5ISTlmNTlEZkREcjdGS1E5WWpOdmxWSmptY2dzcw?oc=5",
-   "editoria": "roca",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "cesta basica",
-    "mais cara"
-   ]
-  },
-  {
-   "manchete": "André Janones sai em defesa de Marina Ruy Barbosa, atacada após declarar voto no presidente Lula no segundo turno",
-   "secoes": [
-    "D-famosos"
-   ],
-   "veiculos": 16,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-03T12:09:43Z",
-   "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBnQ0tsLVhIcHVNOHhJbERiX0ZNWDFvYUJyUGtkNkJSY2o2R3JBV3BOX0ltSjVtbzVURWRwSklabGdJM3M2aU9jNGxGeHE1a09HdHZwQnAtWDJWM3QxWUhYa0F2TUVtLWxwUTNOZXgxcE1jR3czODhlaW1R?oc=5",
-   "editoria": "eleicoes",
-   "nota": 5,
-   "esquentou": false,
-   "lente": []
-  },
-  {
    "manchete": "Anvisa aprova Wegovy em comprimido, 1ª versão oral das canetas emagrecedoras",
    "secoes": [
     "B"
    ],
-   "veiculos": 77,
-   "veiculos_3h": 34,
+   "veiculos": 82,
+   "veiculos_3h": 38,
    "na_pauta_desde": "2026-11-04T12:08:05Z",
    "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/equilibrioesaude/2026/11/anvisa-autoriza-semaglutida-oral-de-wegovy-para-obesidade-e-sobrepeso.shtml",
    "editoria": "saude",
    "nota": 4,
    "esquentou": true,
-   "lente": []
+   "lente": [],
+   "ia": {
+    "editoria": "saude",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Anvisa aprova primeira versão oral de medicamento para emagrecimento.",
+    "soma": 4
+   }
   },
   {
-   "manchete": "Como lidar com a pressão da reta final do Enem 2026?",
+   "manchete": "Após invasão de 200 pessoas, Força Nacional é autorizada a atuar em terra indígena no Pará",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 8,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-04T17:33:44Z",
+   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPZ01aaWVGV2VFdUU2Zkt0NFJoaWxfdkd4V1JpczdRUTUxQV91VkZRNGhaZVJVU3dNdXJCYmQzelhwYzc3TGJUclVTMzcwUW9GdklPanVDZGhpc1lEZ0tyYUprTmhPMkVVTjZTVkZQakNhakdVajF6cl9tMHpfRFFlOXFNUV81U1RXUnFDeVUwQnBUV25CNGJLWk5kdnlxVXpjSnVDQ19IUXhCaVZpYWduaTU4SHdkUHRQTElEbHVLR1RadEhsVzYw?oc=5",
+   "editoria": "roca",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "indigena"
+   ],
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Força Nacional atua para proteger terra indígena após invasão.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Deputado candidato à reeleição nos EUA pede que Flávio seja deportado",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-04T16:08:13Z",
+   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQQ21UUjhRTFhCSTlNYmNfNUNZbm5iNVBhYWNWQ3lvVlk1LVBhU1VKc29yR1pZWGZoQkczcmhHUTY4M25lYnNRbzNXal93M1Zld3hoWk51MWk1XzdlcXJQNGo3LXJpenQwQkprSmREdEJ0V0ZmbS12OVFtalpveEFWNlpjWldrRHBoZzFHaXd2d0FDZlBKQjRBdk5iWk91X1hNRm03bA?oc=5",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio"
+   ],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Deputado americano cobra retorno e deportação de Flávio Bolsonaro.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Operação IFRIT: PF mira facção ligada ao PCC em 7 estados",
    "secoes": [
     "B"
    ],
-   "veiculos": 10,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-03T14:08:53Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/educacao/2026/11/vai-fazer-o-enem-2026-confira-uma-checklist-para-se-organizar-na-reta-final.shtml",
-   "editoria": "educacao",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Lula 4 reabre debate sobre fim dos supersalários e avaliação de servidores",
-   "secoes": [
-    "B",
-    "C-nacional"
-   ],
    "veiculos": 5,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-04T16:08:13Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/lula-4-reabre-debate-sobre-fim-dos-supersalarios-e-avaliacao-de-servidores.shtml",
-   "editoria": "eleicoes",
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-03T18:06:48Z",
+   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNMnl6NVNxM3BCaW0zVXBaRG5LMXY4bEhxSTMyeTZ2RUpfY2VZb3BiQjBtSkdJQ0czTkFScnA0b1ZDWTNKZkpSQk9LSnNqc1VGNjdUWl9GeFp2M0pmVUk2OEtPYXJoSDV5MjMwYzB0NHZHYUhzRnVmV1dZUExqUVFnLVJIYnBUaHdfV3czYTdXc3ZHdUhyV1puNGtvVTNyOGRhNlpTa2ZJNkU3ZUU0UmtNaWxQZ3ZNNDQtZWRkMS1TSdIBvwFBVV95cUxOOWZLVjN1Zkd1M2dQYzU1eTFzS2RQYjVUYjRubTE2RkRQZ19KZExzblk1bnJISno5Y3VSZlBncmwxY1haVWs3MDcwaHkwUFBxMDJBaGVXVENmZndlRzMwMHVBN0tRcFN2UkIyQnRCQlR5Skk2ZmVqVjM1R1dOWFlncTAzWE5WV05saUtrSG5oQ0lWNEk4WVZLMEVKS3J0aEhuQXhnbG5HazEzYWlCNDc1YUNMbzJrR2JPMXFKNmpsZw?oc=5",
+   "editoria": "politica",
    "nota": 4,
    "esquentou": false,
    "lente": []
   },
   {
-   "manchete": "Etoro targets Latin America through LB Finanzas acquisition",
+   "manchete": "Campus Ouro Preto desenvolve observatório para acompanhar custo da cesta básica e poder de compra das famílias",
    "secoes": [
     "B",
+    "D-terra"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-04T16:08:13Z",
+   "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQX05lOWxYaFpTRXFfNGxLdWpvcElsX3Z6UDNIdlVxal9JM0VwTGl6enFaaXZFVFcwOXVibVA3Sy1KZG1HYWR6SjJ5OHFhNnV5YnJBVVVmZ2JWb3EzTUFVZkNMY2QwMkhxQW5zUjB3S1BLNXloVk9KOG9yRU9aQmg2eE1Gb2ZzSlUtN3kzVks1U3dYUGhucXJSTFd0TUJJRk54S2M1WFlYaGZ6akt3a3JqVkRaUTQzTFRsVGNzMW1xOExxYi1mQ3dEMi1MN000b1lMRE5VNDNzb3J0MlNCYU02ekFGRUQ?oc=5",
+   "editoria": "roca",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "cesta basica"
+   ]
+  },
+  {
+   "manchete": "‘Cometerra’, o romance argentino perseguido pelo governo Milei",
+   "secoes": [
     "C-internacional",
     "D-america_latina"
    ],
-   "veiculos": 4,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-04T16:08:13Z",
-   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOLXF1eUFud3lhMllFRWt0SWhXNVhhZV9PdVl1QnZ4ZWt3ek00WURjZ09pQnZhVmVSMDJxVXFKV29mU2xldlRHYVdVZVZ0Y0wxVHlGZHhkek1ZVUdUQU8zc1JfbnJuNDZLMmgxRE1hMkJ4UVRYY1Mzb3J0WEI1aDl5ZEliZldocWpzTFBmRUMwVnVUamt5ck1lcjYxTmV1VEdSbDQ5Tg?oc=5",
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-04T17:22:25Z",
+   "link": "https://operamundi.uol.com.br/cultura/cometerra-o-romance-argentino-perseguido-pelo-governo-milei/",
    "editoria": "america_latina",
    "nota": 4,
    "esquentou": false,
+   "lente": [
+    "milei"
+   ]
+  },
+  {
+   "manchete": "La demócrata Gina Hinojosa es elegida como gobernadora de Texas, derrota a Greg Abbott",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 10,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-04T10:09:24Z",
+   "link": "https://elpais.com/us/2026-11-04/la-democrata-gina-hinojosa-da-la-sorpresa-en-texas-para-convertirse-en-la-primera-mujer-hispana-en-ser-gobernadora.html",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": false,
    "lente": []
+  },
+  {
+   "manchete": "Casa Quilombola Caxambú, em Salto de Pirapora, recebe a Mostra de Contação de Histórias no sábado (07/11)",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-04T17:22:25Z",
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBSY2R6cUFaRklqaXhaNzNsdl90THd5QzlXbzN6TFBaWnBDblNuN2luMFJocGtISE5Xd24tS002ZW56Ry1wQmJPMm05RjcydnJJcGk3VV84eTBwWVV1MTNHRFVaZGVUNkx2TEgwTDJkXy1wdw?oc=5",
+   "editoria": "roca",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "quilombola"
+   ]
+  },
+  {
+   "manchete": "Ministério da Segurança Pública deve ficar só para 2027",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 33,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-04T12:08:05Z",
+   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/colunas/painel/2026/11/ministerio-da-seguranca-publica-pode-ficar-so-para-2027.shtml",
+   "editoria": "gerais",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Corinthians, Flamengo, Fluminense e São Paulo defendem volta das bets em audiência no STF",
+   "secoes": [
+    "A",
+    "A"
+   ],
+   "veiculos": 8,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-04T17:22:25Z",
+   "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQQ0dKT3FyNXEwVVpOUlVKMDg4MUJJR29Vd1A2NUtQSWUyQVpZcUpoT0NjVkJWS3VjTjR2YzFHRnRqcGNtY2RQa005WmdvQ2lQal9HZ25kbHFrNy1wQ210NGZVa0RNbWR5MXJnT1NhU0VhVi04bEFLX1pYSEk0ZVF2LWdSZmhmWkVsM3AySkNMQ0g1NUhEN3J4NGUwLUp2Y184X01wbzZaanhERTNoVDZDV1hlRnY3MTQyanlXSmhBYlM1b1d5Vk5RYkEwLWU0bGpZdXNuMTY3bmFFQWU4UkpwR3JZeUtvcWQxSE9sMFU4M0lNVVFGQkk1QmVqQmxYOGYtakVMV09n?oc=5",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Aposentados de Aracaju devem fazer Prova de Vida até dia 30",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-04T12:08:05Z",
+   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPcHRHTlFGOFY4eTJRU1dsVmVyODdnS04xbzMwUV9vNnlXRDBpTS1CRFVyc0dHUzR5MEhUUE1ad1JwZWNyTEw4aDZBM1Z6eUxacHlWYU16RUkxdklwWTEzS0lOM0tKcW4zdFpuYWh6SUNGa2ZKREFHRnB6S1F1bVlpa2VDZnVOR0NKd2w5MXFBWGtybkZEbHFsTzhuNW1kUzJBTFVKUEswb2pXNkNPS09RaQ?oc=5",
+   "editoria": "roca",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "aposentad"
+   ]
   }
  ],
  "rebaixados": [
   {
-   "manchete": "PF prende homem em flagrante em operação contra crimes de abuso sexual infantojuvenil — Polícia Federal",
-   "veiculos": 19,
-   "veiculos_3h": 8,
+   "manchete": "Escândalo em banco do Paraguai tem oito presos, protestos e pedido de impeachment do presidente",
+   "veiculos": 3,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-04T17:22:25Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Protestos e prisões por escândalo bancário no Paraguai.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Presidente do BC paraguaio renuncia após colapso financeiro do Ueno Bank",
+   "veiculos": 66,
+   "veiculos_3h": 16,
+   "na_pauta_desde": "2026-11-03T20:12:41Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Crise financeira e renúncia no banco central do Paraguai.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Alcolumbre diz a aliados que indicará Tereza Cristina para relatar diretrizes do Orçamento de 2027",
+   "veiculos": 4,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-04T17:22:25Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Articulações no Congresso para relatoria do Orçamento.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "PF combate fraudes em contratos públicos de transporte no Rio Grande do Sul — Polícia Federal",
+   "veiculos": 12,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-03T16:10:21Z",
    "esquentou": false,
    "ia": {
@@ -398,33 +528,69 @@
     "P": 1,
     "formato": "feed",
     "repetido": false,
-    "risco": "acusação de crime sem fonte oficial",
-    "motivo": "Operação da PF contra abuso sexual infantojuvenil.",
+    "risco": "",
+    "motivo": "Operação da PF combate fraudes em contratos públicos no RS.",
     "soma": 3
    }
   },
   {
-   "manchete": "Programa de saúde mental para pessoas idosas no SUS avança",
-   "veiculos": 3,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-04T16:08:13Z",
+   "manchete": "Cesta básica fica 1,63% mais cara em outubro no Vale do Paraíba, segundo Nupes",
+   "veiculos": 4,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-04T17:22:25Z",
    "esquentou": false,
    "ia": {
-    "editoria": "saude",
+    "editoria": "economia",
     "I": 2,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Avanço de programa de saúde mental no SUS.",
+    "motivo": "Aumento do custo da cesta básica aperta o orçamento familiar local.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Comissão da Câmara aprova plano de proteção à criança indígena e quilombola",
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-04T17:33:44Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Comissão aprova plano de proteção a crianças indígenas e quilombolas.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "André Janones sai em defesa de Marina Ruy Barbosa, atacada após declarar voto no presidente Lula no segundo turno",
+   "veiculos": 17,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-03T12:09:43Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 1,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Famosa sofre ataques virtuais após declarar voto em Lula.",
     "soma": 3
    }
   },
   {
    "manchete": "PF atua na prisão de três pessoas e no combate à extração ilegal de madeira — Polícia Federal",
    "veiculos": 14,
-   "veiculos_3h": 1,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-03T18:06:48Z",
    "esquentou": true,
    "ia": {
@@ -474,109 +640,19 @@
     "motivo": "Participação de Milei em cúpula na Espanha.",
     "soma": 2
    }
-  },
-  {
-   "manchete": "Ueno Bank: Paraguay interviene el banco ligado a Peña, aliado de Milei",
-   "veiculos": 8,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-03T20:12:41Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Intervenção em banco paraguaio aliado de Milei.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "IPAM Porto Velho abre 71 vagas; salários de até R$ 5.000",
-   "veiculos": 8,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-04T12:08:05Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "gerais",
-    "I": 1,
-    "V": 0,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Concurso público local sem relevância editorial nacional.",
-    "soma": 1
-   }
-  },
-  {
-   "manchete": "MP pede 22 anos de prisão para Valdivia por crimes sexuais",
-   "veiculos": 6,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-04T03:03:04Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "fora",
-    "I": 0,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Crime comum envolvendo ex-jogador de futebol sem ligação política.",
-    "soma": 1
-   }
-  },
-  {
-   "manchete": "Bayer expande atuação em biológicos com nova marca e prevê 17 lançamentos na América Latina até 2030, oito deles no Brasil",
-   "veiculos": 5,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-04T16:08:13Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "fora",
-    "I": 0,
-    "V": 0,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Expansão de mercado de multinacional agrícola.",
-    "soma": 0
-   }
-  },
-  {
-   "manchete": "La policía de Filipinas confirma la existencia de pornografía infantil en la casa del padre de Meghan Markle",
-   "veiculos": 5,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-04T14:07:42Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "fora",
-    "I": 0,
-    "V": 0,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Fofoca internacional sem relevância política.",
-    "soma": 0
-   }
   }
  ],
  "obrigatorios": [
   {
-   "manchete": "ELEIÇÕES EUA: urnas abertas em mais de 40 estados para as midterms | Chamada Geral 1",
+   "manchete": "Até quando vai o mandato de Trump? Entenda o que muda após eleições nos EUA",
    "secoes": [
     "A"
    ],
-   "veiculos": 3,
+   "veiculos": 4,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-03T14:08:53Z",
-   "link": "https://g1.globo.com/mundo/noticia/2026/11/03/eleicoes-eua-estados-brasileiros.ghtml",
-   "editoria": "eleicoes",
+   "link": "https://noticias.uol.com.br/internacional/ultimas-noticias/2026/11/04/ate-quando-vai-o-mandato-de-trump-entenda-o-que-muda-apos-eleicoes-nos-eua.ghtm",
+   "editoria": "gerais",
    "nota": 3,
    "parceiro": {
     "perfil": "luzmanifesto",
@@ -591,12 +667,12 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 5,
+   "veiculos": 4,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-04T16:08:13Z",
    "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQQ21UUjhRTFhCSTlNYmNfNUNZbm5iNVBhYWNWQ3lvVlk1LVBhU1VKc29yR1pZWGZoQkczcmhHUTY4M25lYnNRbzNXal93M1Zld3hoWk51MWk1XzdlcXJQNGo3LXJpenQwQkprSmREdEJ0V0ZmbS12OVFtalpveEFWNlpjWldrRHBoZzFHaXd2d0FDZlBKQjRBdk5iWk91X1hNRm03bA?oc=5",
    "editoria": "eleicoes",
-   "nota": 6,
+   "nota": 5,
    "parceiro": {
     "perfil": "luzmanifesto",
     "quando": "2026-11-04T12:24:42Z",
@@ -627,10 +703,9 @@
   {
    "manchete": "Eleições nos EUA: democratas conquistam 205 cadeiras, contra 123 dos republicanos; acompanhe",
    "secoes": [
-    "A",
     "A"
    ],
-   "veiculos": 7,
+   "veiculos": 5,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-04T01:07:40Z",
    "link": "https://g1.globo.com/mundo/noticia/2026/11/03/eleicoes-nos-eua-acompanhe-os-resultados-para-a-camara.ghtml",
@@ -683,15 +758,15 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Elecciones en EE. UU.: demócratas recuperan terreno en la Cámara de Representantes",
+   "manchete": "Em derrota para Trump, democratas conquistam maioria na Câmara e no Senado",
    "secoes": [
     "A",
     "A"
    ],
-   "veiculos": 2,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-04T10:09:24Z",
-   "link": "https://www.telesurtv.net/democratas-conquistan-la-camara-de-representantes/",
+   "veiculos": 7,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-04T01:07:40Z",
+   "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/comeca-apuracao-nos-eua-em-disputa-que-ameaca-maioria-pro-trump.shtml",
    "editoria": null,
    "nota": null,
    "parceiro": {
@@ -722,19 +797,20 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "SAIBA MAIS-Do Irã ao comércio: como as eleições de meio de mandato nos EUA afetam o restante do mundo",
+   "manchete": "Trump acredita que os republicanos vão se sair bem nas eleições de meio de mandato nos EUA",
    "secoes": [
     "A",
     "A",
     "A",
     "A",
     "A",
-    "B"
+    "A",
+    "A"
    ],
-   "veiculos": 16,
-   "veiculos_3h": 2,
+   "veiculos": 3,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-03T16:10:21Z",
-   "link": "https://noticias.uol.com.br/ultimas-noticias/reuters/2026/11/04/saiba-mais-do-ira-ao-comercio-como-as-eleicoes-de-meio-de-mandato-nos-eua-afetam-o-restante-do-mundo.htm",
+   "link": "https://www.gazetadopovo.com.br/mundo/trump-acredita-que-os-republicanos-vao-se-sair-bem-nas-eleicoes-de-meio-de-mandato-nos-eua/",
    "editoria": null,
    "nota": null,
    "parceiro": {
@@ -765,16 +841,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Agente da Polícia Federal revela rotina e diálogos de Lula na prisão",
+   "manchete": null,
    "secoes": [
     "A"
    ],
-   "veiculos": 3,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-04T14:07:42Z",
-   "link": "https://www.gazetadopovo.com.br/brasil/agente-da-policia-federal-revela-rotina-e-dialogos-de-lula-na-prisao/",
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
    "editoria": "politica",
-   "nota": 4,
+   "nota": 3,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-04T11:34:15Z",
@@ -786,11 +862,10 @@
   {
    "manchete": "Ministério da Segurança Pública deve ficar só para 2027",
    "secoes": [
-    "A",
-    "B"
+    "A"
    ],
-   "veiculos": 31,
-   "veiculos_3h": 3,
+   "veiculos": 33,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-04T12:08:05Z",
    "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/colunas/painel/2026/11/ministerio-da-seguranca-publica-pode-ficar-so-para-2027.shtml",
    "editoria": "gerais",
@@ -808,7 +883,7 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 21,
+   "veiculos": 19,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-04T03:03:04Z",
    "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/democrata-se-torna-primeiro-brasileiro-eleito-deputado-estadual-na-florida.shtml",
@@ -906,7 +981,7 @@
     "A",
     "A"
    ],
-   "veiculos": 5,
+   "veiculos": 8,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-04T17:22:25Z",
    "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQQ0dKT3FyNXEwVVpOUlVKMDg4MUJJR29Vd1A2NUtQSWUyQVpZcUpoT0NjVkJWS3VjTjR2YzFHRnRqcGNtY2RQa005WmdvQ2lQal9HZ25kbHFrNy1wQ210NGZVa0RNbWR5MXJnT1NhU0VhVi04bEFLX1pYSEk0ZVF2LWdSZmhmWkVsM3AySkNMQ0g1NUhEN3J4NGUwLUp2Y184X01wbzZaanhERTNoVDZDV1hlRnY3MTQyanlXSmhBYlM1b1d5Vk5RYkEwLWU0bGpZdXNuMTY3bmFFQWU4UkpwR3JZeUtvcWQxSE9sMFU4M0lNVVFGQkk1QmVqQmxYOGYtakVMV09n?oc=5",
@@ -942,11 +1017,10 @@
   {
    "manchete": "La demócrata Gina Hinojosa es elegida como gobernadora de Texas, derrota a Greg Abbott",
    "secoes": [
-    "A",
-    "B"
+    "A"
    ],
-   "veiculos": 11,
-   "veiculos_3h": 2,
+   "veiculos": 10,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-04T10:09:24Z",
    "link": "https://elpais.com/us/2026-11-04/la-democrata-gina-hinojosa-da-la-sorpresa-en-texas-para-convertirse-en-la-primera-mujer-hispana-en-ser-gobernadora.html",
    "editoria": "politica",
@@ -964,7 +1038,7 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 6,
+   "veiculos": 7,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-04T03:03:04Z",
    "link": "https://g1.globo.com/mundo/noticia/2026/11/03/chris-pappas-se-torna-primeiro-homem-abertamente-gay-eleito-para-o-senado-dos-eua.ghtml",
@@ -979,14 +1053,14 @@
    "triagem": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Trump comemora \"vitória\" republicana em Guam, mas omite contexto importante",
+   "manchete": "Governo Trump intensifica caça a eleitores estrangeiros nas eleições de meio de mandato",
    "secoes": [
     "A"
    ],
    "veiculos": 2,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-04T17:22:25Z",
-   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNeEg3bHRRM2VaYUlxamtxMlJMd2pzcE9FUENYeF9rZ2FQR1lEZTY1dFdkaWd6TmhLV1lNbDktNW8weGRPODRwdFFxNWVXUWRORWtjRkYtbGRZOEVOUGNIcm9mSDBvUXBwVHBVeEc5MzdUYi1BVU0ybFFtcVRjQTZDMlJLSmpaQkMwS3hNT1UyekRmcUI1MnBfS1Rmb3BoYXpXdW5fTkhHSUkxNVNXUEgzTDM4TDVMbTg?oc=5",
+   "na_pauta_desde": "2026-11-04T10:09:24Z",
+   "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/governo-trump-intensifica-caca-a-eleitores-estrangeiros-nas-eleicoes-de-meio-de-mandato.shtml",
    "editoria": null,
    "nota": null,
    "parceiro": {
@@ -1017,25 +1091,6 @@
    "triagem": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Eleições nos EUA: Primeiras cadeiras são preenchidas por democratas; urnas seguem em apuração",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-04T17:22:25Z",
-   "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOVGdfMWpFNDBtSkxWLU9FQTRBRURnU1VuTEp4b21kUUNxSDBxeTJoY0VUYmlYLWhlNnduMlNQLXl4VnFmcjV4NE80Rk0wVm9BUnc2c3Nub0NYT2lWWGotWjdoc0pIeHRMblFwYnFKNG9OT0E4TDRXTjZCODJKTjdYVHJ5aGNwaFpvMEIwRzBON3B4NkMtR3RkSVJQUFZNcG1OYzYtbDBqVWxJTEtvME1Cb0RmeXhxX185d1N0eGJyMkh2V21hQjd4Yi1ZQmJuQW1WODBoVw?oc=5",
-   "editoria": null,
-   "nota": null,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-04T12:30:42Z",
-    "legenda": "Os democratas rasgaram o mapa político de Donald Trump nas eleições de meio de mandato nos Estados Unidos, em uma noite que deixará marcas profundas na política",
-    "link": "https://www.instagram.com/p/DfUdhWEDWaC/"
-   },
-   "triagem": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
    "manchete": null,
    "secoes": [
     "A"
@@ -1059,7 +1114,7 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 12,
+   "veiculos": 9,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-03T17:10:20Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/03/lula-vai-a-sao-paulo-nesta-terca-para-fazer-exames-de-rotina.ghtml",
@@ -1172,22 +1227,22 @@
  ],
  "descartados_mais_quentes": [
   {
+   "manchete": "\"Trump sigue siendo su presidente\": la Casa Blanca reacciona a la ola de triunfos demócratas en las elecciones de mitad de mandato; sigue aquí los resultados",
+   "veiculos": 26,
+   "veiculos_3h": 5,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
    "manchete": "Elecciones en Estados Unidos 2026: el mapa de resultados estado por estado de republicanos y demócratas, en vivo",
-   "veiculos": 40,
-   "veiculos_3h": 13,
+   "veiculos": 22,
+   "veiculos_3h": 3,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "\"Trump sigue siendo su presidente\": la Casa Blanca reacciona a la ola de triunfos demócratas en las elecciones de mitad de mandato; sigue aquí los resultados y las reacciones",
-   "veiculos": 25,
-   "veiculos_3h": 6,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "SAIBA MAIS-Do Irã ao comércio: como as eleições de meio de mandato nos EUA afetam o restante do mundo",
-   "veiculos": 16,
-   "veiculos_3h": 2,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
+   "manchete": "Jesús de Miguel, jogador do Tenerife, morre aos 30 anos após sofrer parada cardíaca durante partida",
+   "veiculos": 17,
+   "veiculos_3h": 8,
+   "motivo": "fora: esporte (jogador)"
   },
   {
    "manchete": "Republicanos articula saída de Michelle Bolsonaro do PL",
@@ -1196,10 +1251,10 @@
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Jesús de Miguel, jogador do Tenerife, morre aos 30 anos após sofrer parada cardíaca durante partida",
-   "veiculos": 14,
+   "manchete": "SAIBA MAIS-Do Irã ao comércio: como as eleições de meio de mandato nos EUA afetam o restante do mundo",
+   "veiculos": 16,
    "veiculos_3h": 2,
-   "motivo": "fora: esporte (jogador)"
+   "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
    "manchete": "Antonio Tabet critica “nepobaby hipócrita” após post de João Vicente",
@@ -1208,28 +1263,28 @@
    "motivo": "sem editoria"
   },
   {
+   "manchete": "Democrats win control of US Congress in midterm rebuke of Trump",
+   "veiculos": 10,
+   "veiculos_3h": 5,
+   "motivo": "sem editoria"
+  },
+  {
    "manchete": "Justiça proíbe Meta de usar conteúdo jornalístico sem autorização após ação de ANJ, Abert e Aner",
    "veiculos": 10,
+   "veiculos_3h": 3,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Governo Lula não proibiu exibição de desenhos bíblicos",
+   "veiculos": 9,
    "veiculos_3h": 2,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "URGENTE: Morre aos 48 anos, Janaína Barbosa, ex-apresentadora do 'TV Fama'",
-   "veiculos": 9,
-   "veiculos_3h": 8,
-   "motivo": "fora: crime ou tragedia (morre)"
-  },
-  {
-   "manchete": "Crise de moradia em Portugal mobiliza manifestantes e gera acampamentos",
+   "manchete": "Sete brasileiros são eleitos nos EUA; veja quem são",
    "veiculos": 8,
    "veiculos_3h": 3,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Eleições nos EUA: democratas conquistam 205 cadeiras, contra 123 dos republicanos; acompanhe",
-   "veiculos": 7,
-   "veiculos_3h": 0,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
+   "motivo": "sem editoria"
   }
  ]
 }
