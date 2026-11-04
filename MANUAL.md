@@ -183,6 +183,14 @@ vitórias de trabalhadores e movimentos sociais, e contradições, escândalos e
 vindos da direita e da extrema-direita. Notícia que só interessa ao mercado ou a celebridade
 fica de fora, a não ser que mexa no bolso de quem trabalha. A lente decide **o que** cobrir e o
 tom da legenda; os fatos seguem a seção 3 à risca.
+**Ângulo de mobilização (pedido do João, 04/11/2026)**: em 03/11 a Mídia Ninja fez 82 interações por mil
+seguidores com "78% dos brasileiros é favorável ao fim das bets" e o nosso Reels das bets (fala do Fux) teve
+13 de alcance. Quando a pauta for um tema em que a maioria da população quer uma coisa e o Congresso, o STF,
+o governo ou as empresas seguram (bets, 6x1, juros, isenção do IR, tarifa zero), prefira o ângulo "o povo
+quer x eles seguram": título com o número da pesquisa (`*78%*`), instituto e data no subtítulo ou na legenda,
+e quem está segurando. A fala de autoridade entra como apoio, não como manchete. A pesquisa precisa ser de
+instituto identificado, com data e, de preferência, margem de erro (seção 3); nada de enquete de rede social.
+A chamada de envio da legenda vira chamada de pressão ("Manda pra quem ainda acha que bet é diversão.").
 Pontue cada candidata de 0 a 3 nos dois eixos e fique com as de maior soma (mínimo 4):
 - **Impacto**: afeta muita gente, bolso, direito, serviço público, ou o resultado da eleição.
 - **Potencial de viralizar**: conflito claro, número forte, contradição de político,
@@ -515,6 +523,10 @@ o erro (o texto já vem sem token).
 (03/11/2026) o publicador **não convida ninguém** (nem BFC/Luz nas bombásticas, nem a cada 3 posts, nem o
 rodízio); só a instituição (regras 1 e 3). Motivo: em 26/10 os Reels com convite pendente tiveram alcance
 1-2 contra 1.234-4.734 dos sem collab. O dossiê compara o alcance da semana para decidir se volta.
+**Só instituição, sem prazo (pedido do João, 04/11/2026)**: depois de 0 aceites em 12 convites da BFC e da
+Luz e 0 em 2 do Sleeping Giants, a pausa foi estendida sem data (`collab_automatica_pausada_ate` = 2099-12-31).
+Só se convida a instituição (regras 1 e 3) ou quem o João pedir no post (`collab_forcar`). As regras 2, 4 e 5
+abaixo ficam suspensas até ele mandar voltar.
 
 O publicador decide sozinho, nesta ordem:
 1. **Bombástica envolvendo instituição** → a instituição + @brasilforadacaverna.
