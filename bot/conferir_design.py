@@ -192,10 +192,17 @@ def conferir(pasta: Path, pagina) -> None:
     sub = re.sub(r"[*=]", "", post.get("subtitulo") or "")
     if len(sub) > 265:
         avisos.append(f"subtítulo com {len(sub)} caracteres (padrão: até ~260)")
+    texto = None
+    try:  # título, chapéu e legenda como um conjunto (bot/conferir_titulo.py, 04/11/2026); só avisos
+        from conferir_titulo import conferir_post
+        texto = conferir_post(post)
+        avisos += [f"texto: {x}" for x in texto["avisos"]]
+    except Exception as e:
+        print(f"{pasta.name}: conferência do texto falhou: {type(e).__name__}: {e}")
     total = sum(len(a["graves"]) for a in artes)
     post["design_auto"] = {"quando": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
                            "render_quando": rel.get("quando"), "graves": total,
-                           "avisos_gerais": avisos, "artes": artes}
+                           "avisos_gerais": avisos, "texto": texto, "artes": artes}
     arq.write_text(json.dumps(post, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"{pasta.name}: design_auto {total} grave(s), {sum(len(a['avisos']) for a in artes) + len(avisos)} aviso(s)")
 
