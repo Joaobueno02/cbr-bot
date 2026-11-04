@@ -65,6 +65,7 @@ jobs:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
         run: |
           python bot/benchmark.py
+          python bot/estouraram.py || echo "estouraram falhou (o dossiê segue sem ele)"
           python bot/saude.py || true
           python bot/collab_metricas.py || echo "números das collabs falharam (o dossiê segue sem eles)"
 
