@@ -176,6 +176,9 @@ def conferir_texto(titulo: str, chapeu: str = "", subtitulo: str = "", legenda: 
         rep = conteudo(chapeu) & conteudo(titulo)
         if rep:
             avisos.append(f"chapéu repete o título ({', '.join(sorted(rep))}): o chapéu é o enquadramento, não a mesma palavra")
+    if subtitulo and len(limpo(subtitulo)) > 110:
+        sugestoes.append(f"subtítulo com {len(limpo(subtitulo))} caracteres: em 30 px cabem ~105 em 2 linhas; "
+                         "deixe o dado principal e leve o resto para a legenda")
     if subtitulo and sobreposicao(titulo, subtitulo) >= 0.6:
         avisos.append("subtítulo repete o título: use-o para o dado que sustenta e a resposta do outro lado")
     if legenda:
