@@ -2,7 +2,9 @@
 abre cada URL (página de matéria ou imagem direta), encontra as imagens e mede a resolução real.
 
 Resultado em fila/<id>/fotos.json: lista ordenada por área, cada item com url, largura, altura,
-origem (og:image, srcset, img...) e a página de onde veio. Também salva miniaturas
+origem (og:image, srcset, img...) e a página de onde veio. Nas candidatas com 1000 px ou mais,
+"avaliacao" traz nitidez, ampliação estimada no feed e no story e as prévias dos dois recortes
+(candidatas/NN-feed.jpg e NN-story.jpg), respeitando "foto_posicao" do pedido. Também salva miniaturas
 fila/<id>/candidatas/NN.jpg (600 px) para conferir o conteúdo da foto. Com "grande": N no
 pedido, guarda também as N maiores em até 1600 px (NN-grande.jpg), para protótipos de design.
 """
@@ -17,12 +19,60 @@ from pathlib import Path
 from urllib.parse import urljoin
 
 import requests
-from PIL import Image
+from PIL import Image, ImageFilter, ImageStat
 
 RAIZ = Path(__file__).resolve().parent.parent
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/141.0 Safari/537.36")
 MAX_POR_PAGINA = 20
+# área aproximada da foto na arte (estimativa: o render ajusta pelo tamanho do texto)
+AREAS = {"feed": (1080, 880), "story": (1080, 960)}
+LIMITE_NITIDEZ = 120      # mesmo corte do bot/conferir_design.py
+LIMITE_AMPLIACAO = 1.15   # acima disso o conferir_design dá grave
+
+
+def nitidez(im: Image.Image, largura_exibida: int = 1080) -> float:
+    """Mesma medida do bot/conferir_design.py (variância das bordas na largura exibida)."""
+    g = im.convert("L")
+    if g.width > largura_exibida:
+        g = g.resize((largura_exibida, round(g.height * largura_exibida / g.width)))
+    return round(ImageStat.Stat(g.filter(ImageFilter.FIND_EDGES)).var[0], 1)
+
+
+def posicao(texto: str | None) -> tuple[float, float]:
+    """'50% 25%' (CSS object-position) -> (0.5, 0.25)."""
+    try:
+        x, y = (float(v.strip().rstrip("%")) / 100 for v in (texto or "50% 50%").split()[:2])
+        return min(max(x, 0), 1), min(max(y, 0), 1)
+    except ValueError:
+        return 0.5, 0.5
+
+
+def recorte(im: Image.Image, area: tuple[int, int], pos: tuple[float, float]) -> tuple[Image.Image, float]:
+    """Recorta como object-fit: cover com object-position; devolve a prévia e a ampliação."""
+    w, h = area
+    escala = max(w / im.width, h / im.height)
+    nw, nh = round(im.width * escala), round(im.height * escala)
+    g = im.resize((nw, nh))
+    x, y = round((nw - w) * pos[0]), round((nh - h) * pos[1])
+    return g.crop((x, y, x + w, y + h)), round(escala, 2)
+
+
+def avaliar(im: Image.Image, pasta: Path, i: int, pos: tuple[float, float]) -> dict:
+    """Nitidez, ampliação e prévia dos recortes de feed e story, para escolher a foto antes do render."""
+    av = {"nitidez": nitidez(im), "ampliacao": {}, "previas": {}, "avisos": []}
+    if av["nitidez"] < LIMITE_NITIDEZ:
+        av["avisos"].append(f"pouca nitidez ({av['nitidez']}): confira se está borrada")
+    for nome, area in AREAS.items():
+        prev, escala = recorte(im, area, pos)
+        av["ampliacao"][nome] = escala
+        if escala > LIMITE_AMPLIACAO:
+            av["avisos"].append(f"{nome}: ampliada {escala}x (o render dá grave)")
+        prev.thumbnail((540, 540))
+        arq = f"candidatas/{i:02d}-{nome}.jpg"
+        prev.save(pasta / arq, quality=80)
+        av["previas"][nome] = arq
+    return av
 
 
 class Coletor(HTMLParser):
@@ -112,8 +162,11 @@ def sondar(pasta: Path) -> None:
     (pasta / "candidatas").mkdir(exist_ok=True)
     saida = []
     grandes = int(pedido.get("grande", 0) or 0)   # opcional: guarda também as N maiores em até 1600 px
+    pos = posicao(pedido.get("foto_posicao"))
     for i, m in enumerate(resultados[:15], start=1):
         im = m.pop("_im").convert("RGB")
+        if im.width >= 1000:
+            m["avaliacao"] = avaliar(im, pasta, i, pos)
         if i <= grandes:
             g = im.copy()
             g.thumbnail((1600, 1600))
