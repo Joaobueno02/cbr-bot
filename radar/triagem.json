@@ -1,30 +1,29 @@
 {
- "quando": "2026-11-05T01:07:35Z",
- "pauta_quando": "2026-11-05T01:07:31Z",
+ "quando": "2026-11-05T03:45:57Z",
+ "pauta_quando": "2026-11-05T03:45:56Z",
  "ok": true,
  "erro": null,
- "metodo": "regras + gemini",
+ "metodo": "regras",
  "ia": {
   "ia": "gemini",
-  "ok": true,
-  "erro": null,
-  "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 19,
-  "falhas_antes": null,
-  "pedidos_hoje": 1
+  "ok": false,
+  "erro": "Gemini: gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in | gemi",
+  "modelo": null,
+  "avaliados_agora": 0,
+  "pedidos_hoje": 3
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 174,
- "novos_3h": 7,
- "esquentaram": 4,
+ "total_assuntos": 134,
+ "novos_3h": 6,
+ "esquentaram": 1,
  "candidatos": [
   {
    "manchete": "CNC vai ao STF pedir adiamento do início da nova jornada de trabalho",
    "secoes": [
     "B"
    ],
-   "veiculos": 46,
-   "veiculos_3h": 17,
+   "veiculos": 44,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-04T14:07:42Z",
    "link": "https://www.gazetadopovo.com.br/economia/confederacao-do-comercio-pede-que-stf-adie-transicao-para-o-fim-da-escala-6-1/",
    "editoria": "politica",
@@ -50,8 +49,8 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 19,
-   "veiculos_3h": 3,
+   "veiculos": 21,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-04T23:46:34Z",
    "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPOWJMSlRMMFBOLXZ0SGljbkg1cGxfTEhCZmdPWFdDRC1XQ3ppRlNDM25BcnF5SnlwYlhkYVoyRGcxdkltYXFSclZBcU9INmE4MEhGbnpQNk9zSGFsM1E0MEhWNVdxa1lkcDZJa20zWllZR1FRbWQ2ZFNtTHhqekZNcjhxdGZnOXR0RU1uSFFZN0I4Yl9GU3NmcXZuTmU4TjVFdjIyaDRNVFVicGJ2OHRhNWdJMnZYTWV4QVd3REFRaThHaGFJaXBIQXlTal9nREN4UFHSAeABQVVfeXFMUG9KbkhRNEF0WVY1TjFHSGZ5QjYyejRMcUNKSU92R1o5R2dkUFc1VUkzYUlKNGtpQUx6NjUwOXRlNHFlUV92UXZfNWpCaDBaVHg0QnZHSl93U0pNMk41RW1NaDJ6UlZhSjB2VDNCenAzUE15ZmNxRkIwV3F2MG5oMGR0dlVmdmJ0czRjRTliZUl3emFZdXBTMmxsT01QQ2RSSWhQQ3AzTlQxRGViRjlQZWZCWXlMVEVKd2hPQV9aRFN4dEtGRnk1OU1WS2NpeXZCVmdpNkVQYWtLREw0cFdZOVU?oc=5",
    "editoria": "politica",
@@ -73,362 +72,145 @@
    }
   },
   {
-   "manchete": "Estados Unidos — O que pode acontecer com Flávio e Eduardo Bolsonaro se Trump perder as eleições de meio de mandato nos EUA",
-   "secoes": [
-    "A",
-    "B"
-   ],
-   "veiculos": 63,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-04T01:07:40Z",
-   "link": "https://g1.globo.com/economia/noticia/2026/11/04/vitoria-democrata-impactos-tarifaco-trump.ghtml",
-   "editoria": "eleicoes",
-   "nota": 9,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio",
-    "trump"
-   ],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 3,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Revés do trumpismo nos EUA repercute na política internacional.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "BC interrompe sequência de cortes e mantém Selic em 13,75%",
+   "manchete": "Crise no Paraguai provoca renúncia de presidente do Banco Central",
    "secoes": [
     "B",
-    "C-nacional"
+    "D-america_latina"
    ],
-   "veiculos": 13,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-04T23:46:34Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/banco-central-mantem-selic-em-1375-ao-ano-e-interrompe-ciclo-de-cortes-de-juros-apos-choque-eleitoral.shtml",
-   "editoria": "economia",
-   "nota": 5,
+   "veiculos": 76,
+   "veiculos_3h": 8,
+   "na_pauta_desde": "2026-11-03T20:12:41Z",
+   "link": "https://g1.globo.com/economia/noticia/2026/11/04/paraguai-crise-banco-renuncia-presidente-do-bc.ghtml",
+   "editoria": "america_latina",
+   "nota": 6,
    "esquentou": false,
    "lente": [
-    "corte"
+    "banco"
+   ]
+  },
+  {
+   "manchete": "Ministério Público do Trabalho registra 465 denúncias de assédio eleitoral no Paraná",
+   "secoes": [
+    "B"
    ],
+   "veiculos": 7,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-04T23:46:34Z",
+   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNZlJxM2ZyWTdvbENGcGZ3T1pfVmlLMzBDMjhyN2NUM2pmTTNsem52OFhsS0NycU13VnBxMDk5dTZCTUtFakJZNmc4ZzBGdFRCdWF4dHVFTkEyV2g1REdMZlRCRFJNdWlERTR1SFE0a1F5VDc3OXQzQ1J4UEdHMG5iTVI2dUlyRjRZX0JybmJYZjNYOENSamoxb1ZJalMtM3VXUm53ZXJkWG56c0JhWk1MR3FWSHBjbk02bUN6T2VFdm9DajRtVHNF?oc=5",
+   "editoria": "eleicoes",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
    "ia": {
-    "editoria": "economia",
-    "I": 3,
+    "editoria": "roca",
+    "I": 2,
     "V": 2,
-    "P": 2,
-    "formato": "carrossel",
+    "P": 1,
+    "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Manutenção da taxa Selic alta afeta juros e economia popular.",
-    "soma": 5
+    "motivo": "Denúncias de assédio eleitoral no Paraná.",
+    "soma": 4
    }
   },
   {
-   "manchete": "Lula comemora aprovação da PEC da Segurança Pública e reforça criação de ministério",
+   "manchete": "Mendonça dá 15 dias para PGR analisar indiciamento de Vorcaro",
    "secoes": [
-    "A",
-    "A",
     "B"
    ],
-   "veiculos": 27,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-04T12:08:05Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/03/lula-comemora-aprovacao-da-pec-da-seguranca-publica.ghtml",
+   "veiculos": 37,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-11-04T23:46:34Z",
+   "link": "https://www.cartacapital.com.br/justica/fachin-da-15-dias-para-pgr-analisar-indiciamento-de-vorcaro/",
    "editoria": "politica",
    "nota": 5,
    "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Lula sonda promotor para comando da segurança pública.",
-    "soma": 4
-   }
+   "lente": [
+    "vorcaro"
+   ]
   },
   {
-   "manchete": "What a Democratic Congress Means for Latin America",
+   "manchete": "Na edição de hoje: PEC da Segurança Pública: veja o que muda com a proposta aprovada pelo Senado",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 20,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-04T12:08:05Z",
+   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/tire-suas-duvidas-sobre-a-pec-da-seguranca-publica.shtml",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "\"Ha enviado una gran bendición\": presidente Kast se reúne con el papa León XIV en el Vaticano",
    "secoes": [
     "B",
     "D-america_latina"
    ],
-   "veiculos": 8,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-04T10:09:24Z",
-   "link": "https://www.aljazeera.com/video/newsfeed/2026/11/4/aje-onl-nf_how-us-midterm-could-reshape-trumps-foreign-policy-041126?traffic_source=rss",
+   "veiculos": 20,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-03T22:24:55Z",
+   "link": "https://elpais.com/cultura/2026-11-04/el-papa-leon-xiv-recibe-a-bob-dylan-en-el-vaticano.html",
    "editoria": "america_latina",
    "nota": 5,
    "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Impacto de congresso dos EUA na América Latina.",
-    "soma": 4
-   }
+   "lente": []
   },
   {
-   "manchete": "Democratas assumem controle do Congresso dos EUA e impõem derrota a Trump; veja cobertura da eleição minuto a minuto",
-   "secoes": [
-    "D-america_latina"
-   ],
-   "veiculos": 10,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-04T01:07:40Z",
-   "link": "https://www.bbc.co.uk/portuguese/live/c6073r14jp7gt?at_medium=RSS&at_campaign=rss",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "trump"
-   ],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Mudança de controle no Congresso dos EUA.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Correção: Fachin dá prazo de 15 dias para PGR se manifestar sobre indiciamento de Vorcaro",
+   "manchete": "Em acordo, Senado tentará votar redução da maioridade penal ainda nesta semana",
    "secoes": [
     "B"
    ],
    "veiculos": 35,
-   "veiculos_3h": 24,
-   "na_pauta_desde": "2026-11-04T23:46:34Z",
-   "link": "https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2026/11/04/correcao-fachin-da-prazo-de-15-dias-para-pgr-se-manifestar-sobre-indiciamento-de-vorcaro.htm",
+   "veiculos_3h": 9,
+   "na_pauta_desde": "2026-11-04T01:07:40Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/04/em-acordo-senado-tentara-votar-reducao-da-maioridade-penal-ainda-nesta-semana.ghtml",
    "editoria": "politica",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "vorcaro"
-   ],
-   "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Prazo da PGR sobre indiciamento movuje bastidores da política.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Anvisa aprova Wegovy em comprimido, 1ª versão oral das canetas emagrecedoras",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 87,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-04T12:08:05Z",
-   "link": "https://redir.folha.com.br/redir/online/equilibrioesaude/rss091/*https://www1.folha.uol.com.br/equilibrioesaude/2026/11/anvisa-autoriza-semaglutida-oral-de-wegovy-para-obesidade-e-sobrepeso.shtml",
-   "editoria": "saude",
    "nota": 4,
-   "esquentou": true,
-   "lente": [],
-   "ia": {
-    "editoria": "saude",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Anvisa aprova primeira versão oral de medicamento para emagrecimento.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Presidente do Tribunal Supremo da Bolívia deixa o país e diz que sua vida corre perigo",
-   "secoes": [
-    "B",
-    "D-america_latina"
-   ],
-   "veiculos": 7,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-05T01:07:31Z",
-   "link": "https://www.gazetadopovo.com.br/mundo/presidente-do-tribunal-supremo-da-bolivia-deixa-o-pais-e-diz-que-sua-vida-corre-perigo/",
-   "editoria": "america_latina",
-   "nota": 5,
    "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Crise institucional na Bolívia.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Vorcaro enviou mensagem secreta a Flávio Bolsonaro na véspera de prisão e mencionou dificuldades em transferências",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-05T01:07:31Z",
-   "link": "https://iclnoticias.com.br/vorcaro-disse-flavio-bolsonaro/",
-   "editoria": "politica",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio",
-    "vorcaro"
-   ],
-   "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Mensagem secreta liga investigado a figuras políticas.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Deputado Federal dos EUAs pede deportação de Flávio Bolsonaro",
-   "secoes": [
-    "A",
-    "A"
-   ],
-   "veiculos": 6,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-04T16:08:13Z",
-   "link": "https://www.cartacapital.com.br/politica/deputado-democrata-pede-a-deportacao-de-flavio-bolsonaro-dos-eua/",
-   "editoria": "politica",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Deputado dos EUA cobra retorno de Flávio Bolsonaro.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Rogério Marinho lançará candidatura à Presidência do Senado | #NewsNoite",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 13,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-03T22:19:44Z",
-   "link": "https://www.gazetadopovo.com.br/republica/pl-confirma-candidatura-de-rogerio-marinho-a-presidencia-do-senado/",
-   "editoria": "eleicoes",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "pl"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Disputa pela presidência do Senado movimenta o parlamento.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Instituto Federal de Santos inscreve para curso técnico gratuito de informática",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 9,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-04T16:08:13Z",
-   "link": "https://g1.globo.com/sp/santos-regiao/noticia/2026/11/04/instituto-federal-abre-40-vagas-para-curso-gratuito-de-informatica-em-santos-veja-como-participar.ghtml",
-   "editoria": "educacao",
-   "nota": 4,
-   "esquentou": true,
    "lente": []
   },
   {
-   "manchete": "Polêmica religiosa dos juros leva Lula à TV e BC para a malhação do Judas",
+   "manchete": "Governo define alíquotas do 'imposto do pecado' para 2027 e propõe manutenção do IPI em janeiro",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 8,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-11-05T03:45:56Z",
+   "link": "https://www1.folha.uol.com.br/mercado/2026/11/governo-define-aliquotas-do-imposto-do-pecado-para-2027-e-propoe-manutencao-do-ipi-em-janeiro.shtml",
+   "editoria": "economia",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Brasil cria 121 mil empregos formais em setembro, pior resultado para o mês desde 2020",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 65,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-04T19:07:26Z",
+   "link": "https://g1.globo.com/economia/noticia/2026/11/04/brasil-cria-1213-mil-empregos-formais-em-setembro-queda-de-43percent-na-comparacao-com-mesmo-mes-de-2025.ghtml",
+   "editoria": "economia",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Fluor Signs MOU with Inelectra in Venezuela",
    "secoes": [
     "B",
-    "C-nacional"
+    "C-internacional",
+    "D-america_latina"
    ],
    "veiculos": 3,
    "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-05T01:07:31Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/colunas/viniciustorres/2026/11/polemica-religiosa-dos-juros-leva-lula-a-tv-e-bc-para-a-malhacao-do-judas.shtml",
-   "editoria": "economia",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "juros"
-   ]
-  },
-  {
-   "manchete": "Gerdau fecha fábrica em MG e demite quase 300 trabalhadores",
-   "secoes": [
-    "C-nacional"
-   ],
-   "veiculos": 2,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-05T01:07:31Z",
-   "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOS1RUN2psb3pDNmlqaG54VElWVVVBNC1YRklCQi1nMlEwbWNGODZUcGxiWWpNZEQzdFo5SVA5SG5GaHBJdnpMbFpaeDQ0SWxRVkowN0tXUnB6NWFTaTNlZ1pRbFh6dlM2WkpIZk9nZ3p1VUxPRVN4UzRjUFc0blFGTG1uTWZkbVB6eTZ1VzF1YXNXT2dEOTBnUVZQMnFXTmJIYnJyRml6aTFkdGRWT3pZY093?oc=5",
-   "editoria": "economia",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "trabalhador"
-   ]
-  },
-  {
-   "manchete": "Governo e RNP lançam painel climático para Brasil e América Latina",
-   "secoes": [
-    "D-america_latina"
-   ],
-   "veiculos": 9,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-04T14:07:42Z",
-   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQT3FjTDRtNjZ6RHNYQnJRZjNFV0RTd2VpNVZ5d1pGQl96dzZKZC02TWh4MDlIZXB2dGg4MHZyOGJIanVZblo1dXNXcHdXblBNTlZJODlSeWpKbVY4cGQ3Mkttcy1mQ3pSRnhMSEQ3dkk4LTd5eHFSOUlTSzRqc3JCUXNJalJFc1VzX2RpSnVhQi1TTU9qX3hLVmRQTWJWbGlmVjNCVDR3MERHdGoyd0pjU25NV3BOOE3SAbwBQVVfeXFMTWtPWnFMWC01NTZ4MVVIMDZDM0pXYmx3VFNoS1daSGJQa29JTnpkM294YkhYcjh4dHI5YVJsUlM4TTBDRDF3ekdpVFF1Uld1MFhwUVRpSldoaFdfLTJjM3BCMmZielRLR3dDTlc0UE94a2E0Vmg0UWFiZ0JzaFFLNVF1M29SS0xNY1ZxSTF4TGpZRE1Pcm9PbURWMmtJcXVBVEUtWmJMRmZsNXVSSnd2TFRUMW5FdEFyRFU2TXQ?oc=5",
+   "na_pauta_desde": "2026-11-05T03:45:56Z",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOZ1FxZG9uTE03RmxNdFJuazlRT1FtMGFBQTk5WklpTFJpRURzOHdycF8tbjJxeG5TWVJtQU44ZU1WdzBpYkt0X2IwMVBUQmxQQVFDM1dWM3JiZ3k4NUtTQ1drOHZGVkhqX282Q2kzaHp6UkE1cTkyMVliTGpDM05fN3N2NS1zTFVlT21vcGY4Yw?oc=5",
    "editoria": "america_latina",
    "nota": 4,
    "esquentou": false,
@@ -437,52 +219,145 @@
   {
    "manchete": "Ni Lula, ni Sheinbaum, ni Delcy: la izquierda abandona a Sánchez en la que iba a ser su gran Cumbre Iberoamericana",
    "secoes": [
+    "B",
     "D-america_latina"
    ],
-   "veiculos": 8,
-   "veiculos_3h": 1,
+   "veiculos": 11,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-04T19:07:26Z",
-   "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPcUlQdE45UDBSRUZia0pJMTRTQlRtQTV3Z29hdXJvT2gxQ1NodEZpVEd0ZFdmN3FoTlpKTzhvU2RpejB0NUVKLUxFN0p5MDZ4WGZnc1R0RG1pSTRSOGZvellBQVRvUld3RXVTMzdzdUZHVk1ZR0lsbjl3R0ZFOXk0dDNfS25URmRxQWVIZjh1aTVXNEs3dERoWldOckJkeFpheVp5MFlQZEN3REc5UlVVejdSLTNrOURYaWNxc3JmZDQtVnVQNzJCaENKUXRvNGtHcTJKejBJSU_SAd4BQVVfeXFMTy12WHdubG9JWmp6R2otc2U5aVlUaUtRSkFhZ1gzN2ZtQk90aWJWb1Bvblh3Rm9hS2FDWl9oQ19UeVFtZ2JESU5Vb0tfVlBuUy1NcUlFLW9Ua3BhejROTnVYVlhuWHlsczBKOUg4Tl9KQ1JvOWtmZVJjV3FrcmlqMnFOamkwVDNEYkdWU2ZXVmJCMHo5dnlaRXluakI4WGhjYmsxcGtuSVRRQUxhOTAxOWtFNzZZWXpDSlFEdl9WeTFuS2FnZXJnU2hJcWw0NVdxS21LWnpoaHQ0Z3BtZ3dR?oc=5",
+   "link": "https://www.prensa-latina.cu/2026/11/04/milei-se-ausento-de-jornada-inaugural-de-xxx-cumbre-iberoamericana/",
    "editoria": "america_latina",
    "nota": 4,
    "esquentou": false,
    "lente": []
   },
   {
-   "manchete": "Incra cria assentamento para 276 famílias em Jaraguari (MS)",
+   "manchete": "SUS e Einstein desenvolvem IA para identificação de doenças de pele",
    "secoes": [
-    "D-terra"
+    "B",
+    "C-nacional"
    ],
-   "veiculos": 6,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-04T14:07:42Z",
-   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNMkh1cF8zaG5GeExfV3ZsbUItb2Z1OEhUdWJsb0Q5Zml3WUxDSzlxZE9XZ0ZwRlR4YzhKTVIzVE92UUltMnJxeDJ1VWlnOVFDNHhLYzllYnBBeGl4VlhhN0NtRnY1eW04LVk4MndkMXRYS1BOeHVzN3p5MGN2R2wxS2xkWjdZRTlRQWcxdk9lbnRtWlkzQllzNVFucDdRQUZXU1o2QTZoTEFnNTl3Ymw5QWxlbzF4ZFotMVlHb2ZBONIBvwFBVV95cUxQelRWVzJfLTVuOWdLQnJsU2drRkEyVV9Cd3NJaXhEcy1CaWpTb3FMcGpOYm5TOVlRVUU3S241eXJxOVNpMTBzOEJVYW5ZU2h5MW9zR2kyY3NFamxHZWhoazNTZ2ZCNm4xalRGdV9TbEJCTWN2QldqTHJQOU9rWVZlVjhVazlUN3o0c0QzVjNZXzNvYWhMdTdsN09Jb08xdkI2Uk5GSi1uT3FlMUlGbVVLQlQyYkh5QkN5dnVmcGYwWQ?oc=5",
-   "editoria": "roca",
-   "nota": 4,
-   "esquentou": true,
-   "lente": []
-  },
-  {
-   "manchete": "Força Nacional apoiará Funai na Terra Indígena Ituna-Itatá, no Pará",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-04T17:33:44Z",
-   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOTDJCMG5halZWZ2ZwNDY5LWJiRTcxUzRGLXR5OE9CV3pqbUpwb3BmU2ZXZ3dXNUgxYUJHUklGVjQ4Y2VFaTRzMW51bjFwVkttX2hta3hTbzJpOWJHSUxvNDdHVDkxMlJCcnR4TXRMRWk3VGJzREtGSzNkNEZWcUl2MmlVbEt4cVlmWnlpdXFSY2VqakFRVUg5Q194cEVoT3F3SjhHSm82Sm5TV0RD?oc=5",
-   "editoria": "roca",
+   "veiculos": 9,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-05T01:07:31Z",
+   "link": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/sus-e-einstein-desenvolvem-ia-para-identificacao-de-doencas-de-pele",
+   "editoria": "saude",
    "nota": 4,
    "esquentou": false,
    "lente": [
-    "indigena"
+    "sus"
+   ]
+  },
+  {
+   "manchete": "Guardas invisíveis ao orçamento ameaçam cidades de exclusão dos repasses da PEC da Segurança",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-05T03:45:56Z",
+   "link": "https://www1.folha.uol.com.br/cotidiano/2026/11/guardas-invisiveis-ao-orcamento-ameacam-cidades-de-exclusao-dos-repasses-da-pec-da-seguranca.shtml",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "orcamento"
+   ]
+  },
+  {
+   "manchete": "Brasil aprobó una reforma de seguridad impulsada por Lula",
+   "secoes": [
+    "D-america_latina"
+   ],
+   "veiculos": 8,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-04T03:19:53Z",
+   "link": "https://www.telesurtv.net/senado-brasil-aprueba-pec-seguridad-publica-lula/",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Deb Haaland wins in New Mexico and will become first female Native American governor | US midterm elections 2026",
+   "secoes": [
+    "D-america_latina"
+   ],
+   "veiculos": 6,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-04T10:09:24Z",
+   "link": "https://www.aljazeera.com/news/2026/11/4/democratic-socialists-of-america-see-record-wins-in-us-midterm-elections?traffic_source=rss",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Bukele dice que ayudará a los haitianos a \"retomar el país\"",
+   "secoes": [
+    "D-america_latina"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-04T12:08:05Z",
+   "link": "https://www.jornada.com.mx/2026/11/04/mundo/027n3mun?partner=rss",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Cara ou coroa decide eleição para prefeito no Peru",
+   "secoes": [
+    "D-america_latina"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-04T23:46:34Z",
+   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNazZDWE1GNnVwZEsxcTVTTkJyR1BHbUZQbmpaQ3JTajVrdTB3VmJlQUxVS2xBNEFsSUNfLUVHOVRKejFwUUctVEcxQlItNHp4LXhYSlZKU0hxQjBtQldWUnJ6dEZxcXJETmozbERfSTZDTVMtSFJpMGhaS1pSemxZcGhOZHA0czB0SDhBS0ZpaXhxZU9rS1pjczROVXgxVWhubm53OWxEUHR1WkRxdjkxbzIxSUs?oc=5",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Hospitais e clínicas suspendem atendimentos pelo SUS e Servir no TO por dívida de R$ 274 milhões",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-05T01:07:31Z",
+   "link": "https://g1.globo.com/to/tocantins/noticia/2026/11/04/hospitais-e-clinicas-suspendem-atendimentos-pelo-sus-e-servir-no-to-por-divida-de-r-274-milhoes.ghtml",
+   "editoria": "saude",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "sus"
+   ]
+  },
+  {
+   "manchete": "São Sebastião amplia o acesso à vasectomia com mutirão no Hospital de Clínicas da Costa Sul pelo SUS",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-05T03:45:56Z",
+   "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPSkxrUTlZZ0QwZTRFTmhwOEROY2tlMVo1b1lKQk85eDJhaGQ0TUh4c1pZTi1uUS1OOVVmeFVpeTBWSm92ZUxFd0ZUZFoyN2RaOGV1OWY0UFd4SEVTZDBIemFNOFV2UTdMclhTMkl0UGVtQTFPdEZ1UnU2enJ2aE9vR3Y2eGxSQ1RZeW9vTGcxb0pldllBcXBVWU1ua0d0RnFsZWc1a2JUVDNjVngxamdaS1oxZXp2eTBpNFFSVENxYlJ0UXlPS2c5LWprTDUwYXladzJYNnZmQzFXVDd3V1E?oc=5",
+   "editoria": "saude",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "sus"
    ]
   }
  ],
  "rebaixados": [
   {
    "manchete": "Operação Faroeste: STJ condena desembargadora do TJ-BA e outros três réus por corrupção e lavagem de dinheiro",
-   "veiculos": 10,
+   "veiculos": 14,
    "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-04T22:54:21Z",
    "esquentou": false,
@@ -501,7 +376,7 @@
   {
    "manchete": "14ª Feira de Produtores Rurais reúne agricultura familiar e economia solidária nesta sexta-feira - São Leopoldo",
    "veiculos": 5,
-   "veiculos_3h": 0,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-04T16:08:13Z",
    "esquentou": true,
    "ia": {
@@ -517,869 +392,85 @@
    }
   },
   {
-   "manchete": "Mineradora financiada por Vorcaro tem interesse em minerais críticos da Terra Yanomami",
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-05T01:07:31Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "roca",
-    "I": 2,
-    "V": 1,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Mineradora ligada a banqueiro avança sobre terras indígenas e proteção.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Crise no Banco Ueno provoca protestos e aumenta pressão sobre presidente do Paraguai",
-   "veiculos": 64,
-   "veiculos_3h": 12,
-   "na_pauta_desde": "2026-11-03T20:12:41Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Crise bancária no Paraguai afeta vizinhança mas tem baixo impacto direto no Brasil.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "SUS e Einstein desenvolvem IA para identificação de doenças de pele",
-   "veiculos": 7,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-05T01:07:31Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "saude",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Avanço tecnológico no SUS é positivo para serviços públicos.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Campanha Natal Sem Fome começa com 24 pontos de coleta em Campinas",
+   "manchete": "Javier Milei ya está en Madrid para participar de la XXX Cumbre Iberoamericana, pero no fue a la inauguración oficial ni a la cena de gala con el Rey",
    "veiculos": 6,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-03T20:12:41Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "roca",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Campanha contra a fome mobiliza solidariedade.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Trump pode sofrer impeachment após democratas conquistarem maioria no Congresso? Entenda",
-   "veiculos": 3,
-   "veiculos_3h": 0,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-04T21:08:08Z",
    "esquentou": false,
    "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 1,
-    "P": 1,
+    "editoria": "fora",
+    "I": 0,
+    "V": 0,
+    "P": 0,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Regulação de mercados digitais no radar do governo.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "León XIV recibe al presidente de Chile, José Antonio Kast, y conversa sobre paz, familia y migración",
-   "veiculos": 20,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-03T22:24:55Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Encontro diplomático sem grandes desdobramentos populares.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Presidente do BC paraguaio renuncia após crise financeira no Ueno Bank",
-   "veiculos": 27,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-03T20:12:41Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Queda de presidente de BC estrangeiro rende pouco.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "O revés de Trump nas urnas e o freio na extrema direita",
-   "veiculos": 2,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-04T22:54:21Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Análise sobre avanço e recuo da extrema-direita.",
-    "soma": 2
+    "motivo": "Agenda de cúpula internacional sem impacto direto para trabalhadores brasileiros.",
+    "soma": 0
    }
   }
  ],
- "obrigatorios": [
-  {
-   "manchete": "Premiê da Espanha exalta vitória democrata “contra o ódio” de Trump nos Estados Unidos",
-   "secoes": [
-    "A",
-    "A",
-    "A"
-   ],
-   "veiculos": 2,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-04T23:46:34Z",
-   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQdWVkbDhYdzh1R2lKa3U1V2hkdHBsRjFGdXU3dHdTUjdfVWFhVVB6VHB1WmQ0Szk0NUF0ZGFTZ0FPbmMwVktPblBubFhtTlFiekxGNUgyUDR5UzZyQXRmbVgwWURDNm01amRUV1FRbEVQRnFqTjdJcnBwNUI0RG1pMGlMT2Q1blB4alU2UFFTbG51VWY2OXFKclF5QnlJRDdCNzVOWUJHNWZIdnhpc3JqY1RhS1JzUi1D?oc=5",
-   "editoria": "gerais",
-   "nota": 3,
-   "parceiro": {
-    "perfil": "luzmanifesto",
-    "quando": "2026-11-04T10:51:32Z",
-    "legenda": "🇧🇷🌎 O Brasil virou referência internacional na resistência democrática! Durante as eleições nos Estados Unidos, o líder democrata Isaiah Martin publicou uma men",
-    "link": "https://www.instagram.com/p/DfUSBemR8H3/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Deputado Federal dos EUAs pede deportação de Flávio Bolsonaro",
-   "secoes": [
-    "A",
-    "A"
-   ],
-   "veiculos": 6,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-04T16:08:13Z",
-   "link": "https://www.cartacapital.com.br/politica/deputado-democrata-pede-a-deportacao-de-flavio-bolsonaro-dos-eua/",
-   "editoria": "politica",
-   "nota": 6,
-   "parceiro": {
-    "perfil": "luzmanifesto",
-    "quando": "2026-11-04T12:24:42Z",
-    "legenda": "ROBERT GARCIA COBRA RETORNO IMEDIATO DE FLÁVIO BOLSONARO AO BRASIL Reeleito pela Califórnia, o deputado democrata Robert Garcia pediu ao secretário de Estado am",
-    "link": "https://www.instagram.com/p/DfUcp0Jxt-F/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Crise no Banco Ueno provoca protestos e aumenta pressão sobre presidente do Paraguai",
-   "secoes": [
-    "A",
-    "B",
-    "D-america_latina"
-   ],
-   "veiculos": 64,
-   "veiculos_3h": 12,
-   "na_pauta_desde": "2026-11-03T20:12:41Z",
-   "link": "https://g1.globo.com/economia/noticia/2026/11/04/paraguai-crise-banco-renuncia-presidente-do-bc.ghtml",
-   "editoria": "america_latina",
-   "nota": 9,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-04T21:45:59Z",
-    "legenda": "Maior banco digital do Paraguai, o Ueno Bank foi liquidado pelo Banco Central do país vizinho, em um escândalo bilionário, que provocou de executivos e em forte",
-    "link": "https://www.instagram.com/reel/DfVdBGOCNiT/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Governo Bolsonaro buscou compradores no exterior para respiradores em meio à crise da Covid-19, diz site",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-04T17:22:25Z",
-   "link": "https://tvtnews.com.br/governo-bolsonaro-quis-vender-respiradores-pandemia/",
-   "editoria": "saude",
-   "nota": 4,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-04T18:30:05Z",
-    "legenda": "O governo Jair Bolsonaro mobilizou dez embaixadas em 17 de junho de 2020 para buscar interessados em respiradores brasileiros no exterior, enquanto hospitais do",
-    "link": "https://www.instagram.com/p/DfVGpnUCVyG/"
-   },
-   "triagem": "repetido (20261104-1815-respiradores-exterior)"
-  },
-  {
-   "manchete": "Relatório distorce dados eleitorais para alegar fraude no segundo turno das eleições de 2026",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-05T01:07:31Z",
-   "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBKYXNSTURPM3BNWnhnVm1hVjNmdEZRNXJ1cU5JNUk2ZzEyUFBLQXR3aGNFN2doSXFGMUk2T3ZVTmtBS1F4YUNHakdPdnIzeUlNZndJc1VhUQ?oc=5",
-   "editoria": "eleicoes",
-   "nota": 3,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-04T23:00:10Z",
-    "legenda": "Um levantamento de votos nulos do segundo turno das eleições presidenciais de 2026 aponta que quase 15 mil eleitores teriam digitado o número 88 nas urnas eletr",
-    "link": "https://www.instagram.com/p/DfVlj0zlCpR/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Vitrine com manequins negros servindo brancos provoca denúncia ao Ministério Público",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-05T01:07:31Z",
-   "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQZ3kyaHUwZlZsMkVtZk9RcWQxSnpPa0txY09IZkE4TWlpM1V1Nm5KR1lvcS0zN3BCYW84X0ZIc2J4SzB0aUpwaDd5cWdVRHlPTGs1MTNldWw3N2UwOG1mRHhQdkQ0OWtEeEZvTjVEVDE1MjhXWkNGMGNWdnVDZW9xWXJOX05XazZoY3Y5UjJmRHFjWVpqMWZSQVNFaGJRVHdzczBpWjlpbW5YZ2JFREZCbUNBNUxrWjRUbnhmYW1xTXBnRkpLamdldWQ0SkI4alB4UjYyaHJSTQ?oc=5",
-   "editoria": "politica",
-   "nota": 2,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-04T23:30:06Z",
-    "legenda": "Uma vitrine da loja de vestidos de festa Arthur Caliman, na Avenida Santo Amaro, na Zona Sul de São Paulo, é alvo de uma representação protocolada no Ministério",
-    "link": "https://www.instagram.com/p/DfVo--2ifpX/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Em derrota para Trump, democratas conquistam maioria na Câmara e no Senado",
-   "secoes": [
-    "A",
-    "A"
-   ],
-   "veiculos": 28,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-04T01:07:40Z",
-   "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/comeca-apuracao-nos-eua-em-disputa-que-ameaca-maioria-pro-trump.shtml",
-   "editoria": null,
-   "nota": null,
-   "parceiro": {
-    "perfil": "luzmanifesto",
-    "quando": "2026-11-04T10:26:53Z",
-    "legenda": "As eleições nos EUA seguem em apurações dos resultados, mas já é possível cravar a vitória dos Democratas que pelas apurações já garantiram maioria tanto no sen",
-    "link": "https://www.instagram.com/p/DfUPUiwBEZn/"
-   },
-   "triagem": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": null,
-   "nota": null,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-04T20:59:24Z",
-    "legenda": "Carlos Marighella foi assassinado há exatos 57 anos, em 4 de novembro de 1969, na Alameda Casa Branca, na zona oeste de São Paulo. Ele tinha 57 anos. Nascido em",
-    "link": "https://www.instagram.com/p/DfVXvMbiZMH/"
-   },
-   "triagem": "fora: crime ou tragedia (assassin)"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "america_latina",
-   "nota": 2,
-   "parceiro": {
-    "perfil": "luzmanifesto",
-    "quando": "2026-11-04T09:20:42Z",
-    "legenda": "🚨 LEMBRA DA “SUÍÇA SUL-AMERICANA”? Durante anos, setores da direita brasileira utilizaram o Paraguai como exemplo de país que teria dado certo, exaltando seu mo",
-    "link": "https://www.instagram.com/p/DfUHkweB8tI/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Lula comemora aprovação da PEC da Segurança Pública e reforça criação de ministério",
-   "secoes": [
-    "A",
-    "A",
-    "B"
-   ],
-   "veiculos": 27,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-04T12:08:05Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/03/lula-comemora-aprovacao-da-pec-da-seguranca-publica.ghtml",
-   "editoria": "politica",
-   "nota": 5,
-   "parceiro": {
-    "perfil": "luzmanifesto",
-    "quando": "2026-11-04T09:05:50Z",
-    "legenda": "🚨 LULA QUER UM DOS PRINCIPAIS NOMES DO COMBATE AO CRIME ORGANIZADO NO COMANDO DA SEGURANÇA PÚBLICA! O presidente Lula já sondou o promotor Lincoln Gakiya para c",
-    "link": "https://www.instagram.com/p/DfUFzkFt_ma/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-04T20:45:04Z",
-    "legenda": "O 1% mais rico do planeta responde por 20% do aquecimento global acumulado desde 1990, segundo relatório divulgado pela Oxfam Internacional na terça-feira (27).",
-    "link": "https://www.instagram.com/p/DfVWGRrlJDv/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-04T21:25:55Z",
-    "legenda": "🔥💭",
-    "link": "https://www.instagram.com/p/DfVawa2BhKe/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-04T17:29:59Z",
-    "legenda": "Uma fotografia do Cerrado brasileiro conquistou o Grande Prêmio Global do 17º Greenstorm Photography Festival, uma das competições internacionais dedicadas à fo",
-    "link": "https://www.instagram.com/p/DfU_xiFiVyn/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "‘Devolveram esperança ao mundo’: norte-americanos atribuem ao Brasil inspiração para derrotar Trump",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-04T22:54:21Z",
-   "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQbHBIVkI3T0FGd0VwT1hNMkh0Q1JnRzVubXJNeGdhMnU1aExQa09mUlJwbzVlTFo0VHA2QWVjanZiUm1rcG5vcG9IMVhfXzVXOURTU1NVSkxfYnFscUtTODNvM1ktNzBWR1VxWVpwdkRadmJwWFdSY0x0S0dWTVZ5MkZZQnRrdnJ5dGgzZ1NTQ3BrRF9oSTlWcHdHTmE5amluYWlLdDlhdnowUHEtem9jOHBOdHFyVE1teWt1Nm13YWhlaTFGbHk5SFRZRmd3UkZZSDhJVQ?oc=5",
-   "editoria": "gerais",
-   "nota": 3,
-   "parceiro": {
-    "perfil": "luzmanifesto",
-    "quando": "2026-11-04T13:33:06Z",
-    "legenda": "Enquanto bolsonaristas idolatram o presidente americano, os norte-americanos acabaram de mostrar ao mundo sua insatisfação histórica com o governo de Donald Tru",
-    "link": "https://www.instagram.com/p/DfUkm70x3SG/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Janones recua após acusar STF sobre audiência de bets",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-04T17:22:25Z",
-   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPRFY4aW5vd1AxcjBpbE1tTnFodW5kbmRVMzloR0o3Rk9MNDRObW94a1pQMXAzc1RXQlRsM3NMVzRHZEJ4RzdmN1llV2VNdWwyRklYV09BNUpJanAzdm5mMFdobjdjQ2M2M1BwdXhJakUtZjNxYWdzc3ktcUFwNFNVSUZEbDZ6cWRTcURDTUN3NnRkcDZuR1RMU0Rxa00?oc=5",
-   "editoria": "politica",
-   "nota": 3,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-04T19:45:04Z",
-    "legenda": "Dados do Ministério da Justiça apresentados ao Supremo Tribunal Federal (STF) revelam que já foram bloqueados R$ 3,3 bilhões em movimentações suspeitas ligadas ",
-    "link": "https://www.instagram.com/p/DfVPO06mS4H/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-04T22:03:02Z",
-    "legenda": "🔥💭",
-    "link": "https://www.instagram.com/p/DfVfAqHhlg2/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "O revés de Trump nas urnas e o freio na extrema direita",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 2,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-04T22:54:21Z",
-   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPYWtrWG80QUFuYnJZSjNxQ1NSUjlzRjJpbDRkOXU2d0I3eFAxQmdpcXN6TllfRFFaT2MxZ1VNb1pWSmZRVS1Fd2x4N1B6ZEtSLVlTNkZiZVhyWmlYYjhEbkhGYThWZVBFTUw3VkEzRVItQlBJVk50Mzdpdm5xNFFRZ0kyaWhDUUJXQk94ZGhrTWc1ZVRFRi1pUUhuRHk5M1JWNnZz?oc=5",
-   "editoria": "eleicoes",
-   "nota": 5,
-   "parceiro": {
-    "perfil": "luzmanifesto",
-    "quando": "2026-11-04T13:49:26Z",
-    "legenda": "ELES ACHARAM QUE O MUNDO ESTAVA DE JOELHOS. ESQUECERAM QUE O POVO PODE SE LEVANTAR. O nosso horizonte é uma onda de esquerda capaz de varrer a extrema direita d",
-    "link": "https://www.instagram.com/p/DfUl4dZROGy/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Mineradora financiada por Vorcaro tem interesse em minerais críticos da Terra Yanomami",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-05T01:07:31Z",
-   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNcGd0Y21vRi1zOWp6NFh0bGNwczhMc2hRMEFQRTJ6ZkxPaElUa2lpZ2U0eWwzc0JwbFktZ0xnbHpuaFpfWE5HSzFfS0NFYVVFMnIyNWFjemM1VVVHY093cVRkREJLMWtKY2xDWU1BVkhvVVc5S0JuUHU2TEsxTTEyUDFPemllVy0zYlV0cHhDZW1lMUhsTUxaRi1rcVFiT180cUVMRW9tM1l3Rk9ZZnpQR1RpYWNxYjcwelRIQ25PRQ?oc=5",
-   "editoria": "politica",
-   "nota": 6,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-04T21:15:07Z",
-    "legenda": "A 3D Minerals, mineradora financiada pelo Banco Master, reúne 88 áreas de minerais críticos sobrepostas a territórios protegidos ou situadas em suas zonas de im",
-    "link": "https://www.instagram.com/p/DfVZiQgFc2y/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": null,
-   "nota": null,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-04T19:01:06Z",
-    "legenda": "O democrata cristão sabe qual é a maior batalha a ser travada nos EUA e no mundo hoje.",
-    "link": "https://www.instagram.com/reel/DfVKIWvDnsk/"
-   },
-   "triagem": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Estados Unidos — O que pode acontecer com Flávio e Eduardo Bolsonaro se Trump perder as eleições de meio de mandato nos EUA",
-   "secoes": [
-    "A",
-    "B"
-   ],
-   "veiculos": 63,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-04T01:07:40Z",
-   "link": "https://g1.globo.com/economia/noticia/2026/11/04/vitoria-democrata-impactos-tarifaco-trump.ghtml",
-   "editoria": "eleicoes",
-   "nota": 9,
-   "parceiro": {
-    "perfil": "luzmanifesto",
-    "quando": "2026-11-04T03:36:26Z",
-    "legenda": "O trumpismo está enfrentando um importante revés eleitoral nos Estados Unidos. Nas eleições de meio de mandato realizadas nesta terça-feira (3), os democratas f",
-    "link": "https://www.instagram.com/p/DfTgRgjxWlH/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Trump pode sofrer impeachment após democratas conquistarem maioria no Congresso? Entenda",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-04T21:08:08Z",
-   "link": "https://g1.globo.com/mundo/noticia/2026/11/04/trump-pode-sofrer-impeachment-apos-vitoria-democratas-midterms-entenda.ghtml",
-   "editoria": "politica",
-   "nota": 5,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-04T18:00:08Z",
-    "legenda": "O Palácio do Planalto pretende conseguir, ainda em 2026, a aprovação do projeto que estabelece regras de concorrência para os mercados digitais no Brasil, segun",
-    "link": "https://www.instagram.com/p/DfVDOMij2p-/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Senado aprova PEC da Segurança sem redução da maioridade penal",
-   "secoes": [
-    "A",
-    "A"
-   ],
-   "veiculos": 15,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-05T01:07:31Z",
-   "link": "https://www.bbc.com/portuguese/articles/cw4g13g56zljo?at_medium=RSS&at_campaign=rss",
-   "editoria": "politica",
-   "nota": 6,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-04T20:01:50Z",
-    "legenda": "BFCNASRUAS e a redução da maioridade penal.",
-    "link": "https://www.instagram.com/reel/DfVRAvkETL9/"
-   },
-   "triagem": "repetido (20261103-1915-pec-seguranca-1turno)"
-  },
-  {
-   "manchete": "Rogério Marinho lançará candidatura à Presidência do Senado | #NewsNoite",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 13,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-03T22:19:44Z",
-   "link": "https://www.gazetadopovo.com.br/republica/pl-confirma-candidatura-de-rogerio-marinho-a-presidencia-do-senado/",
-   "editoria": "eleicoes",
-   "nota": 5,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-04T22:00:09Z",
-    "legenda": "O senador Rogério Marinho (PL-RN) anunciou nesta quarta-feira (4), após reunião partidária em Brasília, sua candidatura à presidência do Senado para o biênio 20",
-    "link": "https://www.instagram.com/p/DfVesM4EUvU/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": null,
-   "nota": null,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-05T00:00:09Z",
-    "legenda": "Anelis Assumpção - aassumpcao lança em novembro seu quinto álbum de estúdio, “Anelis e o favo favorito”, com estreia em vinil antes da distribuição nas platafor",
-    "link": "https://www.instagram.com/p/DfVsbCjIC5J/"
-   },
-   "triagem": "fora: entretenimento (album)"
-  },
-  {
-   "manchete": "Facape está com inscrições abertas para primeiro congresso de psicologia",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-04T22:54:21Z",
-   "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOS1RscUxZY0JNdHQ3dHFSTlA3R2gxSkN3dFNZaERvWXk1LTduN2RwVFRJMkJPTUw2WGtNTkk4aUc5ZDFIbGhVWlV6OWxvY29qai05LXlydWdlUXR2ZFBrU29EWHladEZtSU1zcVZTNXE2SXZMdENCN1ZIaDliZXZ5XzJydEt3ZVd2d2RfZjdjR0YxcWpydlp0c1RSU3N0LTBHMkh1REtwc2NSRlVfdkpfcnRUb2cwZGVPb0xCakxwRGVyNWZyTXQzejdRY1JkeU9aRkpQMlFZTUV4RU1Bb2QzTDU0aEFJa2JVaUpr0gH6AUFVX3lxTE91VzJOMERpekwzYlN6YU9yeDlJQ3hlRTlBQXNaTzA2OEp5SlZxbU9PYWd0TDFjMDBWUm5WUGNQV0RlOE9lN29pNU1ZQ1NEemdydGJtTVVJZm5qWk9JRnF5ZTBVY255TE9uaGFtOVhPcGJZcnZMQkFEbElMVWctUzZ1RERFUUtYNEc5aG5DN0J6WXNyb1lHb1lUZzJXYk1USnRfZFFJREFQN3FmeXRYbUl2TC1rT0xyVl83aW1iZExwQWZPM0FnX3BYamRTQjc2SF9CSmowWmo3Sk9QaVBUc3FYV2NoOTFkczlmb1Nfc0JYaGF0eTJIa0F0d2c?oc=5",
-   "editoria": "politica",
-   "nota": 3,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-04T20:15:05Z",
-    "legenda": "O O Fundo de Combate e Prevenção aos Incêndios nos Territórios está com inscrições abertas para projetos comunitários de prevenção, combate e recuperação de áre",
-    "link": "https://www.instagram.com/p/DfVSqrKAMLl/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": null,
-   "nota": null,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-04T17:45:05Z",
-    "legenda": "Uma associação que representa General Motors, Volkswagen, Toyota e outras grandes montadoras pediu ao Congresso dos Estados Unidos que aprove ainda neste ano um",
-    "link": "https://www.instagram.com/p/DfVBf98DTHc/"
-   },
-   "triagem": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-04T17:04:15Z",
-    "legenda": "Curitiba será palco de um dos principais encontros da gastronomia internacional neste domingo (08). O evento “Gastronomia, Identidade e Transformação”, que inte",
-    "link": "https://www.instagram.com/p/DfU8smYhzRy/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-05T00:06:08Z",
-    "legenda": "Fiquem gostosas e gostosos, mas respeitem os profissionais que limpam a bagunça de vocês. 🎥: tota_oficiall",
-    "link": "https://www.instagram.com/reel/DfVs6RMuBUE/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "14ª Feira de Produtores Rurais reúne agricultura familiar e economia solidária nesta sexta-feira - São Leopoldo",
-   "secoes": [
-    "A",
-    "D-terra"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-04T16:08:13Z",
-   "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxOWUJ5ZmJTWTZIaW9MbFhVVjFCaW1XaVlSaUx0VUxyekVIUzJQLV9EU1o4U3l1UUEtMTE1MWFTVVZEVDRpeHY4aU9oS21GSHFpQXFqWEtZd3p4QWZnT2NvMS1nc293aGlTNHRfRlVIRFZfTEUya0FkYndhbEhKS2kwQ19ub1JOaExFQUJCM01mTUdaRG8tR29HS2NDWTV1aF83c2pWOUZvREhSemhZSXBlQTE4dF9XZzRTSUp6ZkhVby1vZUliTEtHaGRZbXB6UGRTd3RZMlp5bzd0VjhjOVhQMnJNZm5td2dueERpYnlwdTI1Zzl3b2ZYUA?oc=5",
-   "editoria": "roca",
-   "nota": 5,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-04T22:45:06Z",
-    "legenda": "O Brasil apresenta suas experiências em políticas de acesso à terra e fortalecimento da agricultura familiar durante um encontro internacional realizado nos dia",
-    "link": "https://www.instagram.com/p/DfVj1V_DzU5/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "economia",
-   "nota": 3,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-04T22:30:03Z",
-    "legenda": "Onde está indo o seu dinheiro? Dados oficiais do Banco Central registraram uma queda imediata de 10% nas transações via Pix logo após a desativação das platafor",
-    "link": "https://www.instagram.com/p/DfViHMUgLJE/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Quem é Abdul El-Sayed, que pode se tornar o 1º senador muçulmano da história dos EUA",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 19,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-04T01:07:40Z",
-   "link": "https://g1.globo.com/mundo/noticia/2026/11/03/eleicoes-nos-eua-senado-pode-ter-primeiro-muculmano-de-sua-historia.ghtml",
-   "editoria": null,
-   "nota": null,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-04T17:15:04Z",
-    "legenda": "O democrata Abdul El-Sayed venceu a eleição para o Senado dos Estados Unidos em Michigan, derrotando o republicano Mike Rogers. Com o resultado, ele se tornou o",
-    "link": "https://www.instagram.com/p/DfU-ENQFNWW/"
-   },
-   "triagem": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-04T19:30:04Z",
-    "legenda": "Para 67% das brasileiras, as apostas on-line estão acabando com as famílias do país, segundo pesquisa “Mulheres & Bets: o custo das apostas online para as brasi",
-    "link": "https://www.instagram.com/p/DfVNg_BFMmd/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "▶⭕JORNAL RÁDIO UNIVERSIDADE (quarta-feira, 04 de novembro de 2026)",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-04T12:08:05Z",
-   "link": "https://g1.globo.com/rj/rio-de-janeiro/videos-rj2/playlist/videos-rj2-de-quarta-feira-4-de-novembro-de-2026.ghtml",
-   "editoria": "economia",
-   "nota": 3,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-04T20:30:08Z",
-    "legenda": "O preço do milho voltou a subir nesta quarta-feira (4) no mercado internacional, depois de registrar duas quedas consecutivas. Na bolsa de Chicago, nos Estados ",
-    "link": "https://www.instagram.com/p/DfVUYriChOv/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "parceiro": {
-    "perfil": "luzmanifesto",
-    "quando": "2026-11-04T15:33:26Z",
-    "legenda": "✨ ESTREIA | LUZ NO ASSUNTO EP 01 | Cadu Libonati Fraude nas eleições - Brasil & EUA Toda transformação começa com informação, reflexão e consciência. O Luz no A",
-    "link": "https://www.instagram.com/reel/DfUyGbDx0s_/"
-   },
-   "triagem": "candidato"
-  }
- ],
+ "obrigatorios": [],
  "descartados_mais_quentes": [
   {
-   "manchete": "Eleições nos EUA: veja os resultados da disputa para governador",
-   "veiculos": 245,
-   "veiculos_3h": 136,
+   "manchete": "Democratas assumem controle do Congresso dos EUA e impõem derrota a Trump; veja cobertura da eleição minuto a minuto",
+   "veiculos": 201,
+   "veiculos_3h": 76,
    "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "O que muda para Flávio e Eduardo Bolsonaro com a derrota de Trump?",
+   "veiculos": 67,
+   "veiculos_3h": 2,
+   "motivo": "sem editoria"
   },
   {
    "manchete": "Los demócratas ganan el control del Congreso, Trump es criticado por su propio partido y EE.UU. entra en una nueva era política tras las elecciones de medio término",
-   "veiculos": 174,
-   "veiculos_3h": 49,
+   "veiculos": 58,
+   "veiculos_3h": 14,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Brasil cria 121,3 mil postos de trabalho em setembro, aponta Caged",
-   "veiculos": 66,
-   "veiculos_3h": 10,
+   "manchete": "O que Jorge, da dupla com Mateus, falou para ter shows cancelados no Nordeste?",
+   "veiculos": 38,
+   "veiculos_3h": 2,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Governo e oposição fecham acordo para votar redução da maioridade penal, mas tema ainda divide PT",
-   "veiculos": 43,
-   "veiculos_3h": 13,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Em derrota para Trump, democratas conquistam maioria na Câmara e no Senado",
-   "veiculos": 28,
-   "veiculos_3h": 0,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Quem é Abdul El-Sayed, que pode se tornar o 1º senador muçulmano da história dos EUA",
-   "veiculos": 19,
-   "veiculos_3h": 1,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Morre Eliana Rocha, Luz Divina de “Pé na Cova”, aos 82 anos",
-   "veiculos": 19,
-   "veiculos_3h": 3,
-   "motivo": "fora: crime ou tragedia (morre)"
-  },
-  {
-   "manchete": "Ex-noiva de Vorcaro entra na mira da Justiça dos EUA em investigação sobre o Master",
-   "veiculos": 18,
+   "manchete": "Trump reconhece impacto da guerra no Irã na derrota republicana",
+   "veiculos": 38,
    "veiculos_3h": 2,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Senado aprova PEC da Segurança sem redução da maioridade penal",
-   "veiculos": 15,
-   "veiculos_3h": 1,
-   "motivo": "repetido (20261103-1915-pec-seguranca-1turno)"
+   "manchete": "Atlético-MG x Santa Cruz ao vivo: onde assistir, horário e escalações pela Copa do Brasil Sub-20",
+   "veiculos": 14,
+   "veiculos_3h": 4,
+   "motivo": "sem editoria"
   },
   {
-   "manchete": "Zambelli diz que comunidade paga foi cancelada e abre nova vaquinha; entenda",
-   "veiculos": 15,
-   "veiculos_3h": 9,
+   "manchete": "Mega-Sena sorteia R$ 46 milhões nesta quarta-feira",
+   "veiculos": 13,
+   "veiculos_3h": 6,
+   "motivo": "fora: entretenimento (mega sena)"
+  },
+  {
+   "manchete": "Valdemar Costa Neto nega ofensiva sobre Michelle",
+   "veiculos": 10,
+   "veiculos_3h": 2,
    "motivo": "sem editoria"
+  },
+  {
+   "manchete": "São Paulo e Corinthians desperdiçam chances e empatam sem gols na Vila",
+   "veiculos": 7,
+   "veiculos_3h": 5,
+   "motivo": "fora: esporte (corinthians)"
+  },
+  {
+   "manchete": "Advogada e filho são encontrados mortos em Cotia (SP)",
+   "veiculos": 7,
+   "veiculos_3h": 3,
+   "motivo": "fora: crime ou tragedia (mortos)"
   }
  ]
 }
