@@ -1,297 +1,532 @@
 {
- "quando": "2026-11-05T07:00:25Z",
- "pauta_quando": "2026-11-05T07:00:24Z",
+ "quando": "2026-11-05T10:07:15Z",
+ "pauta_quando": "2026-11-05T10:07:14Z",
  "ok": true,
  "erro": null,
- "metodo": "regras",
+ "metodo": "regras + gemini",
  "ia": {
   "ia": "gemini",
-  "ok": false,
-  "erro": "Gemini: gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in | gemi",
-  "modelo": null,
-  "avaliados_agora": 0,
-  "pedidos_hoje": 5
+  "ok": true,
+  "erro": null,
+  "modelo": "gemini-3.5-flash",
+  "avaliados_agora": 21,
+  "falhas_antes": "gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-3.8-flash: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-3.8-flash: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-3.5-flash: HTTP 503 This model is currently experiencing high demand. Spikes in",
+  "pedidos_hoje": 11
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 108,
- "novos_3h": 4,
- "esquentaram": 0,
+ "total_assuntos": 137,
+ "novos_3h": 2,
+ "esquentaram": 2,
  "candidatos": [
   {
-   "manchete": "Paraguai: entenda a crise que colocou banco sob suspeita e levou à renúncia do presidente do BC",
-   "secoes": [
-    "D-america_latina"
-   ],
-   "veiculos": 67,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-05T07:00:24Z",
-   "link": "https://g1.globo.com/economia/noticia/2026/11/04/paraguai-crise-banco-renuncia-presidente-do-bc.ghtml",
-   "editoria": "america_latina",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "banco"
-   ]
-  },
-  {
-   "manchete": "A still-recovering pope will head home to Latin America and his beloved Peru for a 12-day trip",
-   "secoes": [
-    "B",
-    "C-internacional",
-    "D-america_latina"
-   ],
-   "veiculos": 7,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-05T07:00:24Z",
-   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQN1pVQ24wRDJCaDNmT2ducVRTVlFfdXFybjUtSG9QemFuQmZCenJscDZXT1NqdWZSTFFlbnBvaXgwZ2NiYXNhcWVvOEdGVTRPUEkzSDJYQTROQm5LcjVoZUdMQUV6SEFQalJ2bjZ6MXlCMWgwR1Q0Q0dUR2tsTlBIWHByaXlBWTJwTUt5d2dCdGI0M2R4Zlc5RDhLaw?oc=5",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Congresso da Colômbia aprova projeto que substitui abordagem de 'paz total' de Petro",
-   "secoes": [
-    "B",
-    "D-america_latina"
-   ],
-   "veiculos": 6,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-05T07:00:24Z",
-   "link": "https://www1.folha.uol.com.br/mundo/2026/11/congresso-da-colombia-aprova-projeto-que-substitui-abordagem-de-paz-total-de-petro.shtml",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "\"Ha enviado una gran bendición\": presidente Kast se reúne con el papa León XIV en el Vaticano",
-   "secoes": [
-    "D-america_latina"
-   ],
-   "veiculos": 18,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-03T22:24:55Z",
-   "link": "https://elpais.com/cultura/2026-11-04/el-papa-leon-xiv-recibe-a-bob-dylan-en-el-vaticano.html",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "CBP agents shoot at pursuit suspect near U.S.–Mexico border",
-   "secoes": [
-    "B",
-    "C-internacional",
-    "D-america_latina"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-05T07:00:24Z",
-   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNNEVFZUNSMXZDMG10ZVppVG9zWGE5dS02SHFyNnA1eGVxNF9OTVJKM2p3b3dQNlY3WnZkaF9EZm9maEJRTHF3UlBjc1lfM1ZzdnBBVkd3Rmh1V0hLd2d6RzdWV2FVbGdBaGppQklWTmFjZGpHVjREX1luMmFsQTl0VzJab05YSkFINzVIMDZFVF9ILVhiZFY4VklORE1aU21k?oc=5",
-   "editoria": "america_latina",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "SUS e Einstein desenvolvem IA para identificação de doenças de pele",
+   "manchete": "CNC vai ao STF pedir adiamento do início da nova jornada de trabalho",
    "secoes": [
     "B"
    ],
-   "veiculos": 11,
-   "veiculos_3h": 1,
+   "veiculos": 27,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-04T14:07:42Z",
+   "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNUHh2WVRVcVIyZUwwRFpPaEo2aXFiLUVjTkpoeTRob093M2NGR1A2dGM5aS1oLUxyQmZoTk93S08wMFZRS2FMNVJhU29TR3BJazlxMEtKYllRM0lMZVJvZlNPRy1mU25BdEVHMi1QQ3AyenlWeE9Cc2Y4TmpBZkl2QVBId1dhRG9RSkRzQ0hFcDNldS1HYURQRXVOTjN4WTZwRktBd1d2WjlCRjlQLVp1MzlGdldFRVpDN21zNVNPYWpBOXRjTmdiV0IzZzLSAdsBQVVfeXFMTTFHckMyOHliZ0VwZFV1dTllVDVqbTdqUkR5NGVIMGIyNHZBaEpfR1hFcDdrRGZqVm82RWxJb0tLUzJIZi1hUUFoNW1ORUMxWjUtV0UxZ1BValltYUlzUFhjMWFwazNWVGF2S1VURUJOSFlUQ0F0R09xYnlBa29mNFhmSnRweG85ZlMtNVZVX0RJekdnNFlTUjdKRFBOblRFQnpYNnBIWjluM0RSaXNYVzlBU0lETUtaQ0N0bnpTZmsyYzcxMGdXdjNIcUJqTkJtSnpxUWVYNXI0cUM4?oc=5",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": true,
+   "lente": [
+    "jornada"
+   ],
+   "ia": {
+    "editoria": "roca",
+    "I": 3,
+    "V": 3,
+    "P": 3,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Patrões recorrem ao STF contra nova jornada.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Decreto do fim da escala 6x1 deve ser publicado na segunda-feira, diz ministro",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 19,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-04T23:46:34Z",
+   "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPOWJMSlRMMFBOLXZ0SGljbkg1cGxfTEhCZmdPWFdDRC1XQ3ppRlNDM25BcnF5SnlwYlhkYVoyRGcxdkltYXFSclZBcU9INmE4MEhGbnpQNk9zSGFsM1E0MEhWNVdxa1lkcDZJa20zWllZR1FRbWQ2ZFNtTHhqekZNcjhxdGZnOXR0RU1uSFFZN0I4Yl9GU3NmcXZuTmU4TjVFdjIyaDRNVFVicGJ2OHRhNWdJMnZYTWV4QVd3REFRaThHaGFJaXBIQXlTal9nREN4UFHSAeABQVVfeXFMUG9KbkhRNEF0WVY1TjFHSGZ5QjYyejRMcUNKSU92R1o5R2dkUFc1VUkzYUlKNGtpQUx6NjUwOXRlNHFlUV92UXZfNWpCaDBaVHg0QnZHSl93U0pNMk41RW1NaDJ6UlZhSjB2VDNCenAzUE15ZmNxRkIwV3F2MG5oMGR0dlVmdmJ0czRjRTliZUl3emFZdXBTMmxsT01QQ2RSSWhQQ3AzTlQxRGViRjlQZWZCWXlMVEVKd2hPQV9aRFN4dEtGRnk1OU1WS2NpeXZCVmdpNkVQYWtLREw0cFdZOVU?oc=5",
+   "editoria": "politica",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "6x1"
+   ],
+   "ia": {
+    "editoria": "roca",
+    "I": 3,
+    "V": 3,
+    "P": 3,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Fim da escala 6x1 atinge milhões de trabalhadores.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Brasil cria 121 mil empregos formais em setembro, pior resultado para o mês desde 2020",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 61,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-04T19:07:26Z",
+   "link": "https://g1.globo.com/economia/noticia/2026/11/04/brasil-cria-1213-mil-empregos-formais-em-setembro-queda-de-43percent-na-comparacao-com-mesmo-mes-de-2025.ghtml",
+   "editoria": "economia",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Queda na criação de empregos formais indica desaceleração e afeta diretamente a classe trabalhadora.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Alcolumbre quer votar nesta quarta PEC da redução da maioridade penal em busca de apoio da direita para reeleição",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 16,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-04T01:07:40Z",
+   "link": "https://g1.globo.com/politica/blog/valdo-cruz/noticia/2026/11/04/alcolumbre-quer-votar-ainda-nesta-quarta-pec-da-reducao-da-maioridade-penal-em-busca-de-apoio-da-direita-para-reeleicao.ghtml",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "politica",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Alcolumbre negocia maioridade penal com a extrema-direita em troca de apoio político pessoal.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Crise no Paraguai: Colapso do Ueno Bank derruba presidente do Banco Central e gera protestos em Assunção",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 70,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-05T07:00:24Z",
+   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://c-level.folha.uol.com.br/negocios/2026/11/escandalo-em-banco-do-paraguai-tem-oito-presos-protestos-e-pedido-de-impeachment-do-presidente.shtml",
+   "editoria": "america_latina",
+   "nota": 7,
+   "esquentou": false,
+   "lente": [
+    "protesto",
+    "banco"
+   ],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 3,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Crise bancária no Paraguai escala com queda do presidente do BC e protestos nas ruas.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Lula deve fazer pronunciamento no domingo, garantir que não haverá estelionato eleitoral e que fará ajuste fiscal",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 13,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-04T22:54:21Z",
+   "link": "https://g1.globo.com/politica/blog/valdo-cruz/post/2026/11/04/lula-deve-fazer-pronunciamento-no-domingo-garantir-que-nao-havera-estelionato-eleitoral-e-que-fara-ajuste-fiscal.ghtml",
+   "editoria": "eleicoes",
+   "nota": 4,
+   "esquentou": true,
+   "lente": [],
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Pronunciamento sobre ajuste fiscal ameaça orçamentos sociais e serviços públicos prestados ao povo.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "What a Democratic Congress Means for Latin America",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 9,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-04T10:09:24Z",
+   "link": "https://www.nytimes.com/2026/11/04/world/asia/midterms-trump-foreign-policy-world.html",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Impacto de congresso dos EUA na América Latina.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Midterms nos EUA: vitória democrata ameaça planos de Trump e pode afetar dólar e juros no Brasil",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 7,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-05T10:07:14Z",
+   "link": "https://g1.globo.com/economia/noticia/2026/11/04/midterms-nos-eua-vitoria-democrata-ameaca-planos-de-trump-e-pode-afetar-dolar-e-juros-no-brasil.ghtml",
+   "editoria": "economia",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "trump",
+    "juros"
+   ],
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Derrota de Trump nas eleições americanas pode impactar juros e câmbio no Brasil.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Presidente de Tribunal Supremo de Bolivia se exilia al denunciar riesgos contra su vida y persecución política",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 6,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-05T01:07:31Z",
-   "link": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/sus-e-einstein-desenvolvem-ia-para-identificacao-de-doencas-de-pele",
+   "link": "https://www.gazetadopovo.com.br/mundo/presidente-do-tribunal-supremo-da-bolivia-deixa-o-pais-e-diz-que-sua-vida-corre-perigo/",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Exílio do presidente do Supremo boliviano demonstra acirramento da crise institucional no país.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Mulheres denunciam golpe da falsa cirurgia plástica pelo SUS no DF; vítimas pagaram até R$ 3 mil por procedimentos",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-05T10:07:14Z",
+   "link": "https://g1.globo.com/df/distrito-federal/noticia/2026/11/05/mulheres-denunciam-golpe-da-falsa-cirurgia-plastica-pelo-sus-no-df-vitimas-pagaram-ate-r-3-mil-por-procedimentos.ghtml",
    "editoria": "saude",
    "nota": 4,
    "esquentou": false,
    "lente": [
-    "sus"
-   ]
-  },
-  {
-   "manchete": "BNDES e Petrobras destinam R$ 10 milhões ao semiárido da Bahia",
-   "secoes": [
-    "B",
-    "D-terra"
+    "sus",
+    "golpe"
    ],
-   "veiculos": 11,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-04T22:54:21Z",
-   "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOQUZTczIwLWdfbi1faENXTHNPdEhJNjQ3RklvTHIxNEtaV0w1Vmpjc1FGbFZzYnB0UHVKQTFTUmtDemdUUU9SY2xLMllITjRfWEZGNE1La3ZkWTdHZGpEdnBtdm13Unl1WURYenlKUFRfdjI3Nms0YVhXWDU3cU0xcDVFcVM2TFU4ajVCdlJwdUxCd0ZWbE9oNEZZZE5uLUJoc1VNRHQ0ZFVUZXJZSjlMNTk4VXNRUExOVWFWZWs1RXM1N0ZxZWhBWXZMYWZjYU9aV1RJ0gHYAUFVX3lxTFBQUVZpeGlkdHQ0UzNXRlJ1a29LRjRhdXF3VnpDM1UtYkhkWDl1eVpBTmt4Z003MEQtemZoWjVaUW1VWVhOZjdlRXFMbkRLZTN1emYyT3dKRFQ0RzNPVDFsajE3WUF6MXZxVkFOREoxVzVBYkRrWlh2SnozSEJadXBTR3RBTnFzYmN5c0xINmp3S2M4aEsyOHdNb0NCWlBRTU13U29LVEFteG5tdEhPNHJmNld3ZEZxYXhpMzFSbkQzWlZFbU1MMGdmZzdFR002WUEyejlKVG1kRQ?oc=5",
-   "editoria": "roca",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Brasil aprobó una reforma de seguridad impulsada por Lula",
-   "secoes": [
-    "D-america_latina"
-   ],
-   "veiculos": 6,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-04T03:19:53Z",
-   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNckc2amVsbm1ZQTBQZUl3NTRQaUV6S3VrTHhKMGE0YjREN3ZybXhMRGRNVF95VTZkMDlKY1pLNGNBTEdnOUhuZEtDb2FUUXpOZ3VLS3BncEV3THFBVks5dW1lWTNsX3ZlS19sMjFFci1tb05aYzV3N3hOckpUU1p1bEtURHljYzNoYWFuX01ERWxWUEZMa3FGQmtNNA?oc=5",
-   "editoria": "america_latina",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Comlurb inaugura Banco de Alimentos de Del Castilho para combater a fome e o desperdício",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-05T03:45:56Z",
-   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQaXh4QkFnTnhmSVdkcC1mSWQyRXlhQ2ZNV1FiRHYyeEZEYjNIUFNGcElIWnExb21kRGZtTkUtZGU3UzQ4STl4c3UyWGtzM1pVdFZwTi1Fa2dreWh5RlBDcWNOcm9ubU5fcXRJczFBY1JnbERtdWQxVjJoaE9EVTBhS2NqbU1NaUhIRkVjb3VzX2VISk9QZzhCYk01YUZJRmNvQTdQVDI5LWNkeldvY1FXNTczWnpLS0lHQTJidllJVQ?oc=5",
-   "editoria": "roca",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "fome",
-    "banco"
-   ]
+   "ia": {
+    "editoria": "saude",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "acusação de crime sem fonte oficial",
+    "motivo": "Fraude usando o nome do SUS prejudica mulheres trabalhadoras que buscavam atendimento médico.",
+    "soma": 4
+   }
   }
  ],
  "rebaixados": [
   {
-   "manchete": "Operação Faroeste: STJ condena desembargadora do TJ-BA e outros três réus por corrupção e lavagem de dinheiro",
-   "veiculos": 16,
+   "manchete": "Ministério da Saúde projeta alta da dengue em 2027 e quer voltar a usar vacina do Butantan",
+   "veiculos": 9,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-04T22:54:21Z",
+   "na_pauta_desde": "2026-11-04T19:07:26Z",
    "esquentou": false,
    "ia": {
-    "editoria": "gerais",
+    "editoria": "saude",
     "I": 2,
     "V": 1,
     "P": 2,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Condenação por corrupção no judiciário reforça debate sobre impunidade.",
+    "motivo": "Ações do Ministério da Saúde contra a dengue envolvem a produção nacional de vacinas.",
     "soma": 3
    }
   },
   {
-   "manchete": "Anvisa aprova nova semaglutida em comprimido para o tratamento da obesidade",
-   "veiculos": 83,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-04T12:08:05Z",
+   "manchete": "14ª Feira de Produtores Rurais reúne agricultura familiar e economia solidária nesta sexta-feira - São Leopoldo",
+   "veiculos": 5,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-04T16:08:13Z",
+   "esquentou": true,
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
+    "V": 1,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Valorização da agricultura familiar e reforma agrária.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Fachin aciona PGR depois de PF pedir mais prazo para investigar Vorcaro",
+   "veiculos": 42,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-04T23:46:34Z",
    "esquentou": false,
    "ia": {
-    "editoria": "saude",
+    "editoria": "politica",
+    "I": 1,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Fachin aciona PGR em investigação contra o banqueiro Vorcaro a pedido da PF.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "BNDES e Petrobras destinam R$ 10 milhões ao semiárido da Bahia",
+   "veiculos": 11,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-04T22:54:21Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "roca",
     "I": 2,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Nova medicação para obesidade aprovada, mas alto custo limita acesso popular.",
+    "motivo": "Investimento do BNDES e Petrobras fortalece a infraestrutura e convivência com o semiárido.",
     "soma": 3
    }
   },
   {
-   "manchete": "Atlético-MG x Santa Cruz ao vivo: onde assistir, horário e escalações pela Copa do Brasil Sub-20",
-   "veiculos": 10,
+   "manchete": "Capa da revista 'Time' ilustra Trump com boca tapada por adesivo de eleitores após derrota histórica no Congresso",
+   "veiculos": 5,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-04T22:54:21Z",
-   "esquentou": true,
+   "na_pauta_desde": "2026-11-05T10:07:14Z",
+   "esquentou": false,
    "ia": {
-    "editoria": "fora",
-    "I": 0,
-    "V": 0,
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 2,
     "P": 0,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Partida de futebol de base.",
-    "soma": 0
+    "motivo": "Capa de revista repercute derrota política de Trump, mas possui baixo rendimento expositivo.",
+    "soma": 3
    }
   },
   {
-   "manchete": "Javier Milei ya está en Madrid para participar de la XXX Cumbre Iberoamericana, pero no fue a la inauguración oficial ni a la cena de gala con el Rey",
-   "veiculos": 5,
+   "manchete": "Operação IFRIT: PF mira facção ligada ao PCC em 7 estados",
+   "veiculos": 13,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-04T19:07:26Z",
-   "esquentou": false,
+   "na_pauta_desde": "2026-11-04T12:08:05Z",
+   "esquentou": true,
    "ia": {
-    "editoria": "fora",
-    "I": 0,
-    "V": 0,
-    "P": 0,
+    "editoria": "gerais",
+    "I": 1,
+    "V": 1,
+    "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Agenda de cúpula internacional sem impacto direto para trabalhadores brasileiros.",
-    "soma": 0
+    "motivo": "Operação policial contra facção sem desdobramento político de grande relevância editorial.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "¿El primer gendarme de Trump en América Latina?",
+   "veiculos": 8,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-04T10:09:24Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Análise sobre alinhamento e política externa de Trump em relação à América Latina.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Brasil. Lecturas de la victoria electoral de Lula - Resumen Latinoamericano -",
+   "veiculos": 8,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-04T23:46:34Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Análise da imprensa internacional sobre resultado eleitoral brasileiro não traz fato novo.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Colômbia aprova nova lei para que criminosos se entreguem à justiça",
+   "veiculos": 6,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-04T17:22:25Z",
+   "esquentou": true,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Nova lei de rendição na Colômbia tem apelo restrito ao cenário político local.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Presidente do Chile defende ‘manutenção da democracia’ e diz que virá ao Brasil para posse de Lula",
+   "veiculos": 6,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-04T23:46:34Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Declaração diplomática do presidente do Chile sobre presença na posse de Lula.",
+    "soma": 2
    }
   }
  ],
  "obrigatorios": [],
  "descartados_mais_quentes": [
   {
-   "manchete": "Democratas assumem controle do Congresso dos EUA e impõem derrota a Trump; veja cobertura da eleição minuto a minuto",
-   "veiculos": 561,
-   "veiculos_3h": 88,
+   "manchete": "Onda azul histórica nos EUA: números ilustram a vitória esmagadora dos democratas",
+   "veiculos": 467,
+   "veiculos_3h": 157,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "5 victorias que muestran la magnitud del histórico triunfo demócrata en las elecciones de mitad de mandato en EE.UU.",
-   "veiculos": 52,
-   "veiculos_3h": 3,
+   "manchete": "Los demócratas ganan el control del Congreso, Trump es criticado por su propio partido y EE.UU. entra en una nueva era política tras las elecciones de medio término",
+   "veiculos": 83,
+   "veiculos_3h": 10,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "O que Jorge, da dupla com Mateus, falou para ter shows cancelados no Nordeste?",
-   "veiculos": 42,
+   "manchete": "'Prometo que não vou roubar sua namorada': o recado de Talarico ao Brasil",
+   "veiculos": 13,
+   "veiculos_3h": 2,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Valdemar Costa Neto nega ofensiva sobre Michelle",
+   "veiculos": 13,
    "veiculos_3h": 0,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Ex-noiva de Vorcaro é intimada a depor nos EUA sobre Banco Master",
+   "manchete": "Zambelli diz que comunidade paga foi cancelada e abre nova vaquinha; entenda",
+   "veiculos": 13,
+   "veiculos_3h": 0,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "BNDES recupera patamar recorde de confiança popular em nova pesquisa",
+   "veiculos": 12,
+   "veiculos_3h": 0,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Ativista Joshua Wong é condenado a mais 10 anos de prisão em Hong Kong",
    "veiculos": 11,
-   "veiculos_3h": 0,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "5 Especializações com inscrições abertas até 15 de Novembro de 2026",
-   "veiculos": 10,
-   "veiculos_3h": 0,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Exames de Lula apresentam resultados dentro da normalidade, diz boletim médico",
-   "veiculos": 9,
-   "veiculos_3h": 0,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Guinness World Record set in Brazil soccer match",
-   "veiculos": 8,
    "veiculos_3h": 4,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "“Muito triste”, diz Otávio Mesquita após a morte da ex, Janaína Barbosa",
-   "veiculos": 8,
-   "veiculos_3h": 0,
-   "motivo": "fora: crime ou tragedia (morte)"
-  },
-  {
-   "manchete": "Hong Kong activist Joshua Wong sentenced to 10 years in prison in second national security case",
-   "veiculos": 7,
-   "veiculos_3h": 5,
+   "manchete": "Brazilian Soccer Teams Shatter World Record For Most Red Cards In A Match After Massive Brawl Breaks Out (Video)",
+   "veiculos": 9,
+   "veiculos_3h": 2,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Zelensky condecora Melania Trump por papel em trégua humanitária de Oleshky",
+   "manchete": "Faroeste: Por unanimidade, STJ condena Sandra Inês e filho a 15 anos de prisão no último julgamento de Og Fe…",
    "veiculos": 7,
    "veiculos_3h": 0,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Champions: Valverde anotó un golazo para darle el triunfo agónico a Real Madrid sobre AEK",
+   "veiculos": 6,
+   "veiculos_3h": 0,
+   "motivo": "fora: esporte (champions)"
   }
  ]
 }
