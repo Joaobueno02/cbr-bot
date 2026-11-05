@@ -1,5 +1,5 @@
 {
-  "status": "renderizado",
+  "status": "descartado",
   "formato": "unico",
   "editoria": "america_latina",
   "pais": "Paraguai",
@@ -149,5 +149,21 @@
         }
       }
     ]
-  }
+  },
+  "revisao": {
+    "aprovado": true,
+    "problemas": [
+      "menores: 'horas depois' só no Diario de Pernambuco; data da negativa do banco"
+    ],
+    "quando": "2026-11-05T17:50:00Z"
+  },
+  "revisao_design": {
+    "aprovado": false,
+    "problemas": [
+      "story.jpg: título em 4 linhas com 'renuncia' órfã na última linha (render 3, o último permitido)",
+      "renders 1 e 2: foto em close com testa cortada e marca pouco legível no story"
+    ],
+    "quando": "2026-11-05T17:50:00Z"
+  },
+  "motivo_descarte": "Revisão de design reprovou o 3º render (palavra órfã no título do story.jpg); o manual limita a 3 renders. Notícia aprovada pelo revisor da notícia. Sugestão para o dossiê: balancear a quebra do título no story (text-wrap: balance) e conferir o título também na largura do story antes do 1º render."
 }
