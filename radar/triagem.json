@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-05T21:11:03Z",
- "pauta_quando": "2026-11-05T21:11:02Z",
+ "quando": "2026-11-05T22:56:01Z",
+ "pauta_quando": "2026-11-05T22:56:00Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -8,24 +8,26 @@
   "ia": "gemini",
   "ok": true,
   "erro": null,
-  "modelo": "gemini-3.5-flash",
-  "avaliados_agora": 24,
-  "falhas_antes": "gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-3.8-flash: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-3.8-flash: HTTP 503 This model is currently experiencing high demand. Spikes in",
-  "pedidos_hoje": 29
+  "modelo": "gemini-3.5-flash-lite",
+  "avaliados_agora": 17,
+  "falhas_antes": null,
+  "pedidos_hoje": 30
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 109,
- "novos_3h": 12,
- "esquentaram": 0,
+ "total_assuntos": 105,
+ "novos_3h": 13,
+ "esquentaram": 1,
  "candidatos": [
   {
    "manchete": "Crise bancária leva oposição a pedir impeachment do presidente do Paraguai",
    "secoes": [
     "A",
+    "A",
+    "A",
     "B",
     "D-america_latina"
    ],
-   "veiculos": 16,
+   "veiculos": 18,
    "veiculos_3h": 8,
    "na_pauta_desde": "2026-11-04T17:22:25Z",
    "link": "https://g1.globo.com/economia/noticia/2026/11/05/crise-bancaria-leva-oposicao-a-pedir-impeachment-do-presidente-do-paraguai.ghtml",
@@ -51,8 +53,8 @@
     "B",
     "C-nacional"
    ],
-   "veiculos": 7,
-   "veiculos_3h": 7,
+   "veiculos": 6,
+   "veiculos_3h": 5,
    "na_pauta_desde": "2026-11-05T21:11:02Z",
    "link": "https://www.congressoemfoco.com.br/noticia/131359/flavio-dino-nega-suspender-periodo-de-transicao-para-fim-da-escala-6x1",
    "editoria": "economia",
@@ -75,17 +77,17 @@
    }
   },
   {
-   "manchete": "Crisis en Paraguay: el Senado debate si acepta la renuncia del presidente Santiago Peña o avanza el juicio político",
+   "manchete": "Crisis en Paraguay: el presidente Santiago Peña se someterá a juicio político horas después de anunciar su renuncia",
    "secoes": [
     "B",
     "D-america_latina"
    ],
-   "veiculos": 7,
-   "veiculos_3h": 3,
+   "veiculos": 6,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-05T07:00:24Z",
    "link": "https://www.bbc.co.uk/mundo/live/cmgr8vrv5w55t?at_medium=RSS&at_campaign=rss",
    "editoria": "america_latina",
-   "nota": 5,
+   "nota": 4,
    "esquentou": false,
    "lente": [],
    "ia": {
@@ -101,30 +103,31 @@
    }
   },
   {
-   "manchete": "Banco digital que quebrou no Paraguai administrava mais de US$ 800 milhões em dinheiro público; Santiago Peña foi sócio do grupo controlador",
+   "manchete": "Vitória democrata no Senado amplia pressão sobre tarifas de Trump ao Brasil",
    "secoes": [
-    "D-america_latina"
+    "A",
+    "B"
    ],
-   "veiculos": 2,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-05T21:11:02Z",
-   "link": "https://g1.globo.com/bom-dia-brasil/noticia/2026/11/05/banco-digital-que-quebrou-no-paraguai-administrava-mais-de-us-800-milhoes-em-dinheiro-publico.ghtml",
-   "editoria": "america_latina",
-   "nota": 4,
+   "veiculos": 7,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-05T22:56:00Z",
+   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/vitoria-democrata-no-senado-amplia-pressao-sobre-tarifas-de-trump-ao-brasil.shtml",
+   "editoria": "politica",
+   "nota": 7,
    "esquentou": false,
    "lente": [
-    "banco"
+    "trump"
    ],
    "ia": {
     "editoria": "america_latina",
     "I": 2,
-    "V": 3,
+    "V": 2,
     "P": 2,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Uso de verba pública e conflito de interesse em banco quebrou no Paraguai.",
-    "soma": 5
+    "motivo": "Democratas assumem Congresso e pressionam Trump.",
+    "soma": 4
    }
   },
   {
@@ -134,7 +137,7 @@
     "C-nacional"
    ],
    "veiculos": 6,
-   "veiculos_3h": 6,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-05T21:11:02Z",
    "link": "https://g1.globo.com/economia/noticia/2026/11/05/apos-reuniao-com-lula-e-economistas-ministro-da-fazenda-diz-que-nao-ha-formula-magica-e-fala-em-manter-compromissos-fiscais.ghtml",
    "editoria": "eleicoes",
@@ -154,22 +157,51 @@
    }
   },
   {
-   "manchete": "Crise do Ueno Bank paralisa pagamentos no Paraguai",
+   "manchete": "Governo do DF acusa Master de gestão fraudulenta, se diz vítima e pede transferência de R$ 2 bi bloqueados",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-05T22:56:00Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://c-level.folha.uol.com.br/financas/2026/11/governo-do-df-acusa-master-de-gestao-fraudulenta-se-diz-vitima-e-pede-transferencia-de-r-2-bi-bloqueados.shtml",
+   "editoria": "politica",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "master"
+   ],
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Governo do DF acusa Banco Master de gestão fraudulenta.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Presidente do Paraguai renuncia em meio à crise de um dos maiores bancos do país, que congelou dinheiro de milhões; siga",
    "secoes": [
     "A",
     "A",
-    "B",
+    "A",
+    "A",
     "D-america_latina"
    ],
    "veiculos": 4,
-   "veiculos_3h": 2,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-04T17:22:25Z",
-   "link": "https://jornalggn.com.br/noticia/crise-ueno-bank-paraguai-clientes-investigacao/",
+   "link": "https://www.bbc.co.uk/portuguese/live/cqwy7zykezl6t?at_medium=RSS&at_campaign=rss",
    "editoria": "america_latina",
    "nota": 6,
    "esquentou": false,
    "lente": [
-    "bolsonar",
+    "congel",
     "banco"
    ],
    "ia": {
@@ -180,20 +212,20 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Crise financeira no Paraguai com paralisação de pagamentos após colapso bancário.",
+    "motivo": "Fato novo central na crise bancária paraguaia com renúncia do presidente.",
     "soma": 4
    }
   },
   {
-   "manchete": "Presidente do Paraguai renuncia: entenda crise econômica no país",
+   "manchete": "Santiago Peña, que renunciou no Paraguai, é de direita ou esquerda?",
    "secoes": [
     "A",
-    "D-america_latina"
+    "A"
    ],
    "veiculos": 2,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-04T17:22:25Z",
-   "link": "https://brasilescola.uol.com.br/noticias/presidente-paraguai-santiago-pena-renuncia-cargo-crise-economica-politica-pais/3133502.html",
+   "na_pauta_desde": "2026-11-05T21:11:02Z",
+   "link": "https://noticias.uol.com.br/internacional/ultimas-noticias/2026/11/05/santiago-pena-que-renunciou-no-paraguai-e-de-direita-ou-esquerda.ghtm",
    "editoria": "america_latina",
    "nota": 4,
    "esquentou": false,
@@ -203,10 +235,36 @@
     "I": 2,
     "V": 2,
     "P": 2,
-    "formato": "feed",
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Contexto detalhado sobre a crise política e econômica que derrubou Santiago Peña.",
+    "motivo": "Renúncia de Santiago Peña gera crise no Paraguai.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Presidente paraguaio Peña diz que se apresentará a julgamento político perante o Congresso (publicação no X)",
+   "secoes": [
+    "A",
+    "A"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-05T21:11:02Z",
+   "link": "https://noticias.uol.com.br/ultimas-noticias/afp/2026/11/05/presidente-paraguaio-pena-diz-que-se-apresentara-a-julgamento-politico-perante-o-congresso-publicacao-no-x.htm",
+   "editoria": "politica",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Presidente paraguaio enfrenta julgamento político no Congresso.",
     "soma": 4
    }
   },
@@ -240,48 +298,44 @@
    }
   },
   {
-   "manchete": "Flávio diz ao NYT que levará para o túmulo segredo sobre como fugiu do Brasil e chegou aos EUA",
+   "manchete": "TSE aceita ação do Novo e pede informações à chapa Lula-Alckmin",
    "secoes": [
-    "A",
     "B",
     "C-nacional"
    ],
-   "veiculos": 4,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-05T19:06:42Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/11/flavio-diz-ao-nyt-que-levara-para-o-tumulo-segredo-sobre-como-fugiu-do-brasil-e-chegou-aos-eua.shtml",
+   "veiculos": 6,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-05T21:11:02Z",
+   "link": "https://noticias.uol.com.br/ultimas-noticias/reuters/2026/11/05/tse-aceita-acao-do-novo-e-pede-informacoes-a-chapa-lula-alckmin.htm",
    "editoria": "eleicoes",
-   "nota": 7,
+   "nota": 4,
    "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio",
-    "pl"
-   ],
+   "lente": [],
    "ia": {
-    "editoria": "gerais",
+    "editoria": "eleicoes",
     "I": 2,
     "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Repercussão da fuga de Flávio Bolsonaro e entrevista ao NYT.",
+    "motivo": "TSE aceita ação do Novo contra chapa Lula-Alckmin.",
     "soma": 4
    }
   },
   {
-   "manchete": "Flávio Bolsonaro nomeia assessores para gabinete no Senado após fuga para os EUA",
+   "manchete": "Mendonça extingue ação do TSE que discutia quebras de sigilo de Lula e de Flávio Bolsonaro",
    "secoes": [
-    "B"
+    "B",
+    "C-nacional"
    ],
    "veiculos": 5,
    "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-04T23:46:34Z",
-   "link": "https://www1.folha.uol.com.br/poder/2026/11/flavio-bolsonaro-nomeia-assessores-para-gabinete-no-senado-apos-fuga-para-os-eua.shtml",
-   "editoria": "politica",
+   "na_pauta_desde": "2026-11-05T21:11:02Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/11/mendonca-extingue-acao-do-tse-que-discutia-quebras-de-sigilo-de-lula-e-de-flavio-bolsonaro.shtml",
+   "editoria": "eleicoes",
    "nota": 6,
-   "esquentou": false,
+   "esquentou": true,
    "lente": [
     "bolsonar",
     "flavio"
@@ -294,108 +348,113 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Escândalo de manutenção de gabinete e assessores por senador foragido.",
+    "motivo": "Mendonça extingue ação do TSE sobre sigilos.",
     "soma": 4
    }
   },
   {
-   "manchete": "Alvo de mandado de prisão por tráfico de drogas, presidente do Supremo da Bolívia foge do país",
+   "manchete": "PL confirma Rogério Marinho na disputa pela presidência do Senado",
    "secoes": [
-    "B",
-    "C-internacional",
-    "D-america_latina"
+    "B"
    ],
-   "veiculos": 3,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-05T19:06:42Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/alvo-de-mandado-de-prisao-por-trafico-de-drogas-presidente-do-supremo-da-bolivia-foge-do-pais.shtml",
-   "editoria": "america_latina",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Fuga de autoridade judicial da Bolívia investigada por ligação com o narcotráfico.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "“Perdi para o sistema”, diz Flávio Bolsonaro ao New York Times sobre eleição presidencial",
-   "secoes": [
-    "B",
-    "C-internacional"
-   ],
-   "veiculos": 2,
+   "veiculos": 4,
    "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-05T21:11:02Z",
-   "link": "https://www.gazetadopovo.com.br/mundo/perdi-para-o-sistema-diz-flavio-bolsonaro-ao-new-york-times-sobre-eleicao-presidencial/",
-   "editoria": "eleicoes",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ],
-   "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Vitimização de Flávio Bolsonaro em entrevista internacional após deixar o país.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Polícia Civil faz operação contra lavagem de dinheiro com bets que movimentaram R$ 1 bi via fintech",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-05T15:07:27Z",
-   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://c-level.folha.uol.com.br/financas/2026/11/policia-civil-faz-operacao-contra-lavagem-de-dinheiro-com-bets-que-movimentaram-r-1-bi-via-fintech.shtml",
-   "editoria": "politica",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "bilionari",
-    "lavagem"
-   ],
-   "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "acusação de crime sem fonte oficial",
-    "motivo": "Operação contra esquema bilionário de lavagem de dinheiro envolvendo bets.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "PT pede a partidos planos para ministérios e estimativa de votos para desenhar governo Lula 4",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-05T19:06:42Z",
-   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/pt-pede-a-partidos-planos-para-ministerios-e-estimativa-de-votos-para-desenhar-governo-lula-4.shtml",
-   "editoria": "eleicoes",
+   "link": "https://www.gazetadopovo.com.br/cafe-com-a-gazeta/pl-confirma-rogerio-marinho-na-disputa-pela-presidencia-do-senado/",
+   "editoria": "politica",
    "nota": 3,
    "esquentou": false,
    "lente": [
-    "trabalhador"
+    "pl"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "PL confirma Rogério Marinho na disputa do Senado.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Flávio Bolsonaro nomeia assessores para gabinete no Senado após fuga para EUA",
+   "secoes": [
+    "A",
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-04T23:46:34Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/11/flavio-bolsonaro-nomeia-assessores-para-gabinete-no-senado-apos-fuga-para-os-eua.shtml",
+   "editoria": "politica",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio",
+    "pl"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Alcolumbre sinaliza proteger mandato de Flávio Bolsonaro.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Alcolumbre diz que analisará situação de Flávio Bolsonaro, que votou em sessão estando nos EUA",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-04T23:46:34Z",
+   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/alcolumbre-diz-que-analisara-situacao-de-flavio-bolsonaro-que-votou-em-sessao-estando-nos-eua.shtml",
+   "editoria": "politica",
+   "nota": 7,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio",
+    "pl"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Randolfe questiona voto de Flávio Bolsonaro à distância.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Eleitores de Flávio rejeitam contestação de derrota e pedem que ele volte ao trabalho como senador",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-05T19:06:42Z",
+   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/colunas/painel/2026/11/eleitores-de-flavio-rejeitam-contestacao-de-derrota-e-pedem-que-ele-volte-ao-trabalho-como-senador.shtml",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio",
+    "pl"
    ],
    "ia": {
     "editoria": "eleicoes",
@@ -405,9 +464,39 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Negociações partidárias para montagem do ministério e governabilidade.",
+    "motivo": "Pesquisa divide eleitores sobre fuga de Flávio.",
     "soma": 4
    }
+  },
+  {
+   "manchete": "Denúncias de assédio eleitoral passam de 8 mil e Marinho avisa: “Haverá punição”",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-05T22:56:00Z",
+   "link": "https://vermelho.org.br/2026/11/05/assedio-eleitoral-passa-de-8-mil-denuncias-e-marinho-avisa-havera-punicao/?utm_source=rss&utm_medium=rss&utm_campaign=assedio-eleitoral-passa-de-8-mil-denuncias-e-marinho-avisa-havera-punicao",
+   "editoria": "eleicoes",
+   "nota": 3,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Cidade de São Paulo tem o segundo outubro mais chuvoso em 31 anos",
+   "secoes": [
+    "A",
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-05T22:56:00Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/cidade-de-sao-paulo-tem-o-segundo-outubro-mais-chuvoso-em-31-anos.shtml",
+   "editoria": "gerais",
+   "nota": 2,
+   "esquentou": false,
+   "lente": []
   },
   {
    "manchete": "Anvisa aprova Wegovy em comprimido: o que falta para versão oral da caneta emagrecedora chegar às farmácias do Brasil?",
@@ -424,42 +513,14 @@
    "lente": []
   },
   {
-   "manchete": "'Imposto do pecado': o que é e como vai funcionar a tributação sobre produtos prejudiciais à saúde",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-05T21:11:02Z",
-   "link": "https://g1.globo.com/economia/noticia/2026/11/05/imposto-do-pecado-o-que-e-e-como-vai-funcionar.ghtml",
-   "editoria": "politica",
-   "nota": 2,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Lula deve defender cuidado com contas públicas e agradecer por votos em 1º pronunciamento na TV após reeleição",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-05T21:11:02Z",
-   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/lula-deve-defender-cuidado-com-contas-publicas-e-agradecer-por-votos-em-1o-pronunciamento-na-tv-apos-reeleicao.shtml",
-   "editoria": "eleicoes",
-   "nota": 2,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Feira Internacional de Gastronomia Amazônica 2026: confira a programação dos três dias de evento",
+   "manchete": "VÍDEOS: JL1 de quinta-feira, 5 de novembro de 2026",
    "secoes": [
     "A"
    ],
    "veiculos": 1,
    "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-05T21:11:02Z",
-   "link": "https://g1.globo.com/am/amazonas/role-amazonas/noticia/2026/11/05/feira-internacional-de-gastronomia-amazonica-2026-confira-a-programacao-dos-tres-dias-de-evento.ghtml",
+   "na_pauta_desde": "2026-11-05T22:56:00Z",
+   "link": "https://g1.globo.com/pa/para/edicao/2026/11/05/videos-jl1-de-quinta-feira-5-de-novembro-de-2026.ghtml",
    "editoria": "gerais",
    "nota": 1,
    "esquentou": false,
@@ -468,27 +529,45 @@
  ],
  "rebaixados": [
   {
-   "manchete": "Bolsonaro pede a Moraes autorização para receber Marinho e Tereza, pré-candidatos à presidência do Senado",
+   "manchete": "Dívida externa de países em desenvolvimento atinge recorde de US$ 9,4 tri em 2025, diz Banco Mundial",
    "veiculos": 3,
    "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-05T19:06:42Z",
+   "na_pauta_desde": "2026-11-05T22:56:00Z",
    "esquentou": false,
    "ia": {
-    "editoria": "politica",
-    "I": 1,
-    "V": 2,
-    "P": 1,
+    "editoria": "economia",
+    "I": 2,
+    "V": 1,
+    "P": 2,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Articulação da extrema-direita para a disputa da presidência do Senado.",
+    "motivo": "Dívida externa de países em desenvolvimento atinge recorde.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Alcolumbre segura votação de PEC da maioridade penal após disputa entre Câmara e Senado",
+   "veiculos": 3,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-05T22:56:00Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 1,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Alcolumbre segura votação de PEC da maioridade penal.",
     "soma": 3
    }
   },
   {
    "manchete": "Risco-país da Argentina dispara após eleição nos EUA e temor de menor apoio de Trump",
    "veiculos": 2,
-   "veiculos_3h": 2,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-05T21:11:02Z",
    "esquentou": false,
    "ia": {
@@ -510,14 +589,14 @@
    "na_pauta_desde": null,
    "esquentou": false,
    "ia": {
-    "editoria": "eleicoes",
-    "I": 1,
-    "V": 2,
+    "editoria": "saude",
+    "I": 2,
+    "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Resgate do histórico e polêmicas de senadores eleitos pela extrema-direita.",
+    "motivo": "Nova estrutura hospitalar do SUS em Minas Gerais.",
     "soma": 3
    }
   },
@@ -528,14 +607,14 @@
    "na_pauta_desde": null,
    "esquentou": false,
    "ia": {
-    "editoria": "eleicoes",
-    "I": 1,
-    "V": 2,
+    "editoria": "saude",
+    "I": 2,
+    "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Resgate do histórico e polêmicas de senadores eleitos pela extrema-direita.",
+    "motivo": "Nova estrutura hospitalar do SUS em Minas Gerais.",
     "soma": 3
    }
   },
@@ -546,14 +625,14 @@
    "na_pauta_desde": null,
    "esquentou": false,
    "ia": {
-    "editoria": "eleicoes",
-    "I": 1,
-    "V": 2,
+    "editoria": "saude",
+    "I": 2,
+    "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Resgate do histórico e polêmicas de senadores eleitos pela extrema-direita.",
+    "motivo": "Nova estrutura hospitalar do SUS em Minas Gerais.",
     "soma": 3
    }
   },
@@ -564,14 +643,14 @@
    "na_pauta_desde": null,
    "esquentou": false,
    "ia": {
-    "editoria": "eleicoes",
-    "I": 1,
-    "V": 2,
+    "editoria": "saude",
+    "I": 2,
+    "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Resgate do histórico e polêmicas de senadores eleitos pela extrema-direita.",
+    "motivo": "Nova estrutura hospitalar do SUS em Minas Gerais.",
     "soma": 3
    }
   },
@@ -582,14 +661,14 @@
    "na_pauta_desde": null,
    "esquentou": false,
    "ia": {
-    "editoria": "eleicoes",
-    "I": 1,
-    "V": 2,
+    "editoria": "saude",
+    "I": 2,
+    "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Resgate do histórico e polêmicas de senadores eleitos pela extrema-direita.",
+    "motivo": "Nova estrutura hospitalar do SUS em Minas Gerais.",
     "soma": 3
    }
   },
@@ -600,14 +679,14 @@
    "na_pauta_desde": null,
    "esquentou": false,
    "ia": {
-    "editoria": "eleicoes",
-    "I": 1,
-    "V": 2,
+    "editoria": "saude",
+    "I": 2,
+    "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Resgate do histórico e polêmicas de senadores eleitos pela extrema-direita.",
+    "motivo": "Nova estrutura hospitalar do SUS em Minas Gerais.",
     "soma": 3
    }
   },
@@ -618,78 +697,19 @@
    "na_pauta_desde": null,
    "esquentou": false,
    "ia": {
-    "editoria": "eleicoes",
-    "I": 1,
-    "V": 2,
+    "editoria": "saude",
+    "I": 2,
+    "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Resgate do histórico e polêmicas de senadores eleitos pela extrema-direita.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": null,
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "esquentou": false,
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 1,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Resgate do histórico e polêmicas de senadores eleitos pela extrema-direita.",
+    "motivo": "Nova estrutura hospitalar do SUS em Minas Gerais.",
     "soma": 3
    }
   }
  ],
  "obrigatorios": [
-  {
-   "manchete": "Presidente do Paraguai renuncia: entenda crise econômica no país",
-   "secoes": [
-    "A",
-    "D-america_latina"
-   ],
-   "veiculos": 2,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-04T17:22:25Z",
-   "link": "https://brasilescola.uol.com.br/noticias/presidente-paraguai-santiago-pena-renuncia-cargo-crise-economica-politica-pais/3133502.html",
-   "editoria": "america_latina",
-   "nota": 4,
-   "parceiro": {
-    "perfil": "luzmanifesto",
-    "quando": "2026-11-05T17:10:20Z",
-    "legenda": "O cenário político no Paraguai ganhou novos contornos após a renúncia de Santiago Peña, anunciada em meio a uma profunda crise política e financeira no país. A ",
-    "link": "https://www.instagram.com/reel/DfXiMhIPTJ7/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Crise bancária leva oposição a pedir impeachment do presidente do Paraguai",
-   "secoes": [
-    "A",
-    "B",
-    "D-america_latina"
-   ],
-   "veiculos": 16,
-   "veiculos_3h": 8,
-   "na_pauta_desde": "2026-11-04T17:22:25Z",
-   "link": "https://g1.globo.com/economia/noticia/2026/11/05/crise-bancaria-leva-oposicao-a-pedir-impeachment-do-presidente-do-paraguai.ghtml",
-   "editoria": "america_latina",
-   "nota": 6,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-05T17:05:38Z",
-    "legenda": "O presidente do Paraguai, Santiago Peña, renunciou ao cargo nesta quinta-feira (5), após uma crise bancária que desencadeou um processo de impeachment com apoio",
-    "link": "https://www.instagram.com/reel/DfXhpq5iP8G/"
-   },
-   "triagem": "candidato"
-  },
   {
    "manchete": "Pé-de-Meia Universitário: o que se sabe sobre início do programa em 2027 e o que ainda é dúvida",
    "secoes": [
@@ -711,21 +731,146 @@
    "triagem": "candidato"
   },
   {
-   "manchete": null,
+   "manchete": "Presidente do Paraguai renuncia em meio à crise de um dos maiores bancos do país, que congelou dinheiro de milhões; siga",
+   "secoes": [
+    "A",
+    "A",
+    "A",
+    "A",
+    "D-america_latina"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-04T17:22:25Z",
+   "link": "https://www.bbc.co.uk/portuguese/live/cqwy7zykezl6t?at_medium=RSS&at_campaign=rss",
+   "editoria": "america_latina",
+   "nota": 6,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-05T19:46:06Z",
+    "legenda": "Cerca de 60% da população adulta do Paraguai ficou temporariamente sem acesso às próprias contas bancárias após o Banco Central do país assumir o controle do Ue",
+    "link": "https://www.instagram.com/reel/DfX0GWOGIYb/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Alcolumbre diz que analisará situação de Flávio Bolsonaro, que votou em sessão estando nos EUA",
    "secoes": [
     "A"
    ],
-   "veiculos": 0,
+   "veiculos": 2,
    "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
+   "na_pauta_desde": "2026-11-04T23:46:34Z",
+   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/alcolumbre-diz-que-analisara-situacao-de-flavio-bolsonaro-que-votou-em-sessao-estando-nos-eua.shtml",
+   "editoria": "politica",
+   "nota": 7,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-05T12:58:48Z",
-    "legenda": "nabil_bonduki 🔥💭",
-    "link": "https://www.instagram.com/p/DfXFiGOEVT4/"
+    "quando": "2026-11-05T18:02:06Z",
+    "legenda": "O líder do governo no Congresso, senador Randolfe Rodrigues (PT-AP), questionou, na quarta-feira (4), a participação do senador Flávio Bolsonaro (PL-RJ) nas vot",
+    "link": "https://www.instagram.com/reel/DfXoHwXk5aa/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Santiago Peña, que renunciou no Paraguai, é de direita ou esquerda?",
+   "secoes": [
+    "A",
+    "A"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-05T21:11:02Z",
+   "link": "https://noticias.uol.com.br/internacional/ultimas-noticias/2026/11/05/santiago-pena-que-renunciou-no-paraguai-e-de-direita-ou-esquerda.ghtm",
+   "editoria": "america_latina",
+   "nota": 4,
+   "parceiro": {
+    "perfil": "luzmanifesto",
+    "quando": "2026-11-05T17:10:20Z",
+    "legenda": "O cenário político no Paraguai ganhou novos contornos após a renúncia de Santiago Peña, anunciada em meio a uma profunda crise política e financeira no país. A ",
+    "link": "https://www.instagram.com/reel/DfXiMhIPTJ7/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Crise bancária leva oposição a pedir impeachment do presidente do Paraguai",
+   "secoes": [
+    "A",
+    "A",
+    "A",
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 18,
+   "veiculos_3h": 8,
+   "na_pauta_desde": "2026-11-04T17:22:25Z",
+   "link": "https://g1.globo.com/economia/noticia/2026/11/05/crise-bancaria-leva-oposicao-a-pedir-impeachment-do-presidente-do-paraguai.ghtml",
+   "editoria": "america_latina",
+   "nota": 6,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-05T17:05:38Z",
+    "legenda": "O presidente do Paraguai, Santiago Peña, renunciou ao cargo nesta quinta-feira (5), após uma crise bancária que desencadeou um processo de impeachment com apoio",
+    "link": "https://www.instagram.com/reel/DfXhpq5iP8G/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Flávio Bolsonaro nomeia assessores para gabinete no Senado após fuga para EUA",
+   "secoes": [
+    "A",
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-04T23:46:34Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/11/flavio-bolsonaro-nomeia-assessores-para-gabinete-no-senado-apos-fuga-para-os-eua.shtml",
+   "editoria": "politica",
+   "nota": 6,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-05T18:15:05Z",
+    "legenda": "O presidente do Senado, Davi Alcolumbre (União-AP), sinalizou a bolsonaristas, nos bastidores, que protegerá o restante do mandato de Flávio Bolsonaro (PL-RJ) a",
+    "link": "https://www.instagram.com/p/DfXpup4jAOQ/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Alcolumbre segura votação de PEC da maioridade penal após disputa entre Câmara e Senado",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-05T22:56:00Z",
+   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/alcolumbre-segura-votacao-de-pec-da-maioridade-penal-apos-disputa-entre-camara-e-senado.shtml",
+   "editoria": "politica",
+   "nota": 5,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-05T18:33:11Z",
+    "legenda": "Davi ALcolumbre respondeu no dia de ontem (04) o senador Carlos Portinho (PL), após este apresentar suas críticas sobre o adiamento da votação da redução da mai",
+    "link": "https://www.instagram.com/reel/DfXroXeERHY/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Eleitores de Flávio rejeitam contestação de derrota e pedem que ele volte ao trabalho como senador",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-05T19:06:42Z",
+   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/colunas/painel/2026/11/eleitores-de-flavio-rejeitam-contestacao-de-derrota-e-pedem-que-ele-volte-ao-trabalho-como-senador.shtml",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-05T15:30:05Z",
+    "legenda": "A saída de Flávio Bolsonaro (PL) do Brasil após a derrota presidencial divide os eleitores: 49,2% consideram que ele fugiu para evitar uma prisão, enquanto 47% ",
+    "link": "https://www.instagram.com/p/DfXW2H2IEbO/"
    },
    "triagem": "candidato"
   },
@@ -749,58 +894,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Crise do Ueno Bank paralisa pagamentos no Paraguai",
+   "manchete": "Presidente paraguaio Peña diz que se apresentará a julgamento político perante o Congresso (publicação no X)",
    "secoes": [
     "A",
-    "A",
-    "B",
-    "D-america_latina"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-04T17:22:25Z",
-   "link": "https://jornalggn.com.br/noticia/crise-ueno-bank-paraguai-clientes-investigacao/",
-   "editoria": "america_latina",
-   "nota": 6,
-   "parceiro": {
-    "perfil": "luzmanifesto",
-    "quando": "2026-11-05T13:11:15Z",
-    "legenda": "O Paraguai, entitulado como “a Suíça Sul-Americana” pelos bolsonaristas, enfrenta uma profunda crise financeira e política. Após o fechamento do banco Ueno, mil",
-    "link": "https://www.instagram.com/p/DfXGyBnxxew/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Flávio diz ao NYT que levará para o túmulo segredo sobre como fugiu do Brasil e chegou aos EUA",
-   "secoes": [
-    "A",
-    "B",
-    "C-nacional"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-05T19:06:42Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/11/flavio-diz-ao-nyt-que-levara-para-o-tumulo-segredo-sobre-como-fugiu-do-brasil-e-chegou-aos-eua.shtml",
-   "editoria": "eleicoes",
-   "nota": 7,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-05T15:30:05Z",
-    "legenda": "A saída de Flávio Bolsonaro (PL) do Brasil após a derrota presidencial divide os eleitores: 49,2% consideram que ele fugiu para evitar uma prisão, enquanto 47% ",
-    "link": "https://www.instagram.com/p/DfXW2H2IEbO/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Sem vencedor claro, presidente de Israel busca acordo; partido árabe apoia rival de Netanyahu",
-   "secoes": [
     "A"
    ],
    "veiculos": 2,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-05T21:11:02Z",
-   "link": "https://www.rfi.fr/br/mundo/20261104-sem-vencedor-claro-presidente-de-israel-busca-acordo-partido-%C3%A1rabe-apoia-rival-de-netanyahu",
-   "editoria": "america_latina",
+   "link": "https://noticias.uol.com.br/ultimas-noticias/afp/2026/11/05/presidente-paraguaio-pena-diz-que-se-apresentara-a-julgamento-politico-perante-o-congresso-publicacao-no-x.htm",
+   "editoria": "politica",
    "nota": 3,
    "parceiro": {
     "perfil": "brasilforadacaverna",
@@ -811,116 +914,78 @@
    "triagem": "candidato"
   },
   {
-   "manchete": null,
+   "manchete": "Presidente da Câmara dos EUA decide renunciar após derrota republicana",
    "secoes": [
     "A"
    ],
-   "veiculos": 0,
+   "veiculos": 3,
    "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "politica",
-   "nota": 2,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-05T14:34:47Z",
-    "legenda": "A Assembleia Legislativa do Paraná (Alep) aprovou, nesta quarta-feira (4), uma emenda da deputada estadual Ana Júlia Ribeiro (PT) - najulia.ribeiro que garante ",
-    "link": "https://www.instagram.com/reel/DfXQaErxNF7/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "'Imposto do pecado': o que é e como vai funcionar a tributação sobre produtos prejudiciais à saúde",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-05T21:11:02Z",
-   "link": "https://g1.globo.com/economia/noticia/2026/11/05/imposto-do-pecado-o-que-e-e-como-vai-funcionar.ghtml",
-   "editoria": "politica",
-   "nota": 2,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-05T12:30:31Z",
-    "legenda": "O governo federal definiu as regras de cobrança do Imposto Seletivo, conhecido como “imposto do pecado”, que começará a valer em 2 de fevereiro de 2027. Criado ",
-    "link": "https://www.instagram.com/p/DfXCS4XESoX/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Democratas são azuis e republicanos são vermelhos, mas já foi o contrário: entenda origem das cores dos partidos nos EUA",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-05T21:11:02Z",
-   "link": "https://g1.globo.com/mundo/noticia/2026/11/05/democratas-sao-azuis-e-republicanos-sao-vermelhos-mas-ja-foi-o-contrario-entenda-origem-das-cores-dos-partidos-nos-eua.ghtml",
+   "na_pauta_desde": "2026-11-04T23:46:34Z",
+   "link": "https://g1.globo.com/mundo/noticia/2026/11/04/presidente-da-camara-dos-representantes-decide-renunciar-apos-derrota-republicana.ghtml",
    "editoria": null,
    "nota": null,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-05T11:51:59Z",
-    "legenda": "Pior que é verdade, eu conferi! 🤣 Vale destacar que nos EUA os republicanos usam vermelho, enquanto os democratas são azuis.",
-    "link": "https://www.instagram.com/p/DfW9xRHBzDq/"
+    "quando": "2026-11-05T18:45:06Z",
+    "legenda": "O presidente da Câmara dos Representantes dos Estados Unidos, Mike Johnson, confirmou que não concorrerá à liderança do Partido Republicano na próxima legislatu",
+    "link": "https://www.instagram.com/p/DfXtKa0DsYr/"
    },
    "triagem": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Lula deve defender cuidado com contas públicas e agradecer por votos em 1º pronunciamento na TV após reeleição",
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "politica",
+   "nota": 4,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-05T19:15:04Z",
+    "legenda": "O governo federal prevê uma pressão de R$ 26,3 bilhões sobre o Orçamento de 2027, provocada pela redução dos dividendos das estatais e pelo aumento dos repasses",
+    "link": "https://www.instagram.com/p/DfXwl90lDqd/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Copom mantém taxa básica de juros da economia em 13,75% ao ano",
    "secoes": [
     "A"
    ],
    "veiculos": 1,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-05T21:11:02Z",
-   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/lula-deve-defender-cuidado-com-contas-publicas-e-agradecer-por-votos-em-1o-pronunciamento-na-tv-apos-reeleicao.shtml",
-   "editoria": "eleicoes",
-   "nota": 2,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-05T14:00:39Z",
-    "legenda": "O presidente Luiz Inácio Lula da Silva (PT) deve fazer um pronunciamento em rede nacional de rádio e televisão no próximo domingo (8) para tentar conter a desco",
-    "link": "https://www.instagram.com/p/DfXMnFPkazD/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-05T14:30:09Z",
-    "legenda": "O empresário João Adibe, presidente e controlador do grupo Cimed, é acusado de utilizar informações técnicas obtidas durante uma negociação de sociedade para la",
-    "link": "https://www.instagram.com/p/DfXP-8wAios/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "saude",
+   "na_pauta_desde": "2026-11-05T19:06:42Z",
+   "link": "https://g1.globo.com/economia/noticia/2026/11/04/copom-mantem-taxa-basica-de-juros-da-economia-em-1375percent-ao-ano.ghtml",
+   "editoria": "economia",
    "nota": 4,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-05T17:00:07Z",
-    "legenda": "A população de Belo Horizonte e dos municípios mineiros contará com uma nova estrutura hospitalar de atendimento integral pelo Sistema Único de Saúde (SUS). O a",
-    "link": "https://www.instagram.com/p/DfXhJlCARMu/"
+    "quando": "2026-11-05T19:38:02Z",
+    "legenda": "O Copom decidiu manter a taxa básica de juros, a Selic, em 13,75% ao ano na primeira reunião do órgão após as eleições. A decisão, tomada nesta quarta-feira (4)",
+    "link": "https://www.instagram.com/reel/DfXzFnLiona/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "politica",
+   "nota": 2,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-05T18:27:44Z",
+    "legenda": "A Assembleia Legislativa do Paraná (Alep) aprovou, nesta quarta-feira (4), uma emenda da deputada estadual Ana Júlia Ribeiro (PT) - najulia.ribeiro que garante ",
+    "link": "https://www.instagram.com/p/DfXrKYqBL19/"
    },
    "triagem": "candidato"
   },
@@ -952,89 +1017,32 @@
    "veiculos_3h": 0,
    "na_pauta_desde": null,
    "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-05T15:12:08Z",
-    "legenda": "🔥💭",
-    "link": "https://www.instagram.com/p/DfXUxuhRipb/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Copom mantém taxa básica de juros da economia em 13,75% ao ano",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-05T19:06:42Z",
-   "link": "https://g1.globo.com/economia/noticia/2026/11/04/copom-mantem-taxa-basica-de-juros-da-economia-em-1375percent-ao-ano.ghtml",
-   "editoria": "economia",
+   "editoria": "saude",
    "nota": 4,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-05T14:04:19Z",
-    "legenda": "O Copom decidiu manter a taxa básica de juros, a Selic, em 13,75% ao ano na primeira reunião do órgão após as eleições. A decisão, tomada nesta quarta-feira (4)",
-    "link": "https://www.instagram.com/reel/DfXM3R0Rpdc/"
+    "quando": "2026-11-05T17:00:07Z",
+    "legenda": "A população de Belo Horizonte e dos municípios mineiros contará com uma nova estrutura hospitalar de atendimento integral pelo Sistema Único de Saúde (SUS). O a",
+    "link": "https://www.instagram.com/p/DfXhJlCARMu/"
    },
    "triagem": "candidato"
   },
   {
-   "manchete": "Brasil cria 121,3 mil empregos formais em setembro, aponta Caged",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-04T19:07:26Z",
-   "link": "https://jornalggn.com.br/economia/caged-brasil-cria-121-mil-empregos-formais-setembro-2026/",
-   "editoria": "economia",
-   "nota": 3,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-05T15:02:50Z",
-    "legenda": "O Brasil chegou a 48,3 milhões de empregos com carteira assinada em setembro de 2026, após registrar saldo de 121.305 novas vagas no mês, impulsionado principal",
-    "link": "https://www.instagram.com/p/DfXTulLkdU4/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Feira Internacional de Gastronomia Amazônica 2026: confira a programação dos três dias de evento",
+   "manchete": "VÍDEOS: JL1 de quinta-feira, 5 de novembro de 2026",
    "secoes": [
     "A"
    ],
    "veiculos": 1,
    "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-05T21:11:02Z",
-   "link": "https://g1.globo.com/am/amazonas/role-amazonas/noticia/2026/11/05/feira-internacional-de-gastronomia-amazonica-2026-confira-a-programacao-dos-tres-dias-de-evento.ghtml",
+   "na_pauta_desde": "2026-11-05T22:56:00Z",
+   "link": "https://g1.globo.com/pa/para/edicao/2026/11/05/videos-jl1-de-quinta-feira-5-de-novembro-de-2026.ghtml",
    "editoria": "gerais",
    "nota": 1,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-05T11:40:22Z",
-    "legenda": "O Brasil conquistou um lugar de destaque na mais importante premiação da gastronomia internacional. Dois restaurantes brasileiros foram reconhecidos entre os 50",
-    "link": "https://www.instagram.com/p/DfW8jqtlqnP/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Polícia Civil faz operação contra lavagem de dinheiro com bets que movimentaram R$ 1 bi via fintech",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-05T15:07:27Z",
-   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://c-level.folha.uol.com.br/financas/2026/11/policia-civil-faz-operacao-contra-lavagem-de-dinheiro-com-bets-que-movimentaram-r-1-bi-via-fintech.shtml",
-   "editoria": "politica",
-   "nota": 5,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-05T13:29:36Z",
-    "legenda": "A Polícia Civil do Distrito Federal deflagrou nesta quinta-feira (5) a Operação Azzardo, que mira um esquema bilionário de exploração de apostas ilegais e lavag",
-    "link": "https://www.instagram.com/p/DfXJDokkaPa/"
+    "quando": "2026-11-05T20:00:10Z",
+    "legenda": "A inadimplência das famílias brasileiras caiu pelo segundo mês seguido e chegou a 29,3% em outubro, menor nível de 2026, segundo pesquisa divulgada nesta quinta",
+    "link": "https://www.instagram.com/p/DfX1wT6jxKz/"
    },
    "triagem": "candidato"
   },
@@ -1047,13 +1055,70 @@
    "veiculos_3h": 0,
    "na_pauta_desde": null,
    "link": null,
-   "editoria": "politica",
-   "nota": 2,
+   "editoria": "gerais",
+   "nota": 1,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-05T14:15:05Z",
-    "legenda": "Uma operação de reintegração de posse realizada pela Polícia Militar na manhã de quarta-feira (4), no Bom Retiro, região central de São Paulo, deixou 18 família",
-    "link": "https://www.instagram.com/p/DfXOQzKD_KA/"
+    "quando": "2026-11-05T15:12:08Z",
+    "legenda": "🔥💭",
+    "link": "https://www.instagram.com/p/DfXUxuhRipb/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Denúncias de assédio eleitoral passam de 8 mil e Marinho avisa: “Haverá punição”",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-05T22:56:00Z",
+   "link": "https://vermelho.org.br/2026/11/05/assedio-eleitoral-passa-de-8-mil-denuncias-e-marinho-avisa-havera-punicao/?utm_source=rss&utm_medium=rss&utm_campaign=assedio-eleitoral-passa-de-8-mil-denuncias-e-marinho-avisa-havera-punicao",
+   "editoria": "eleicoes",
+   "nota": 3,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-05T21:00:05Z",
+    "legenda": "O Ministério do Trabalho e Emprego (MTE) já recebeu mais de 7 mil denúncias de assédio eleitoral no ambiente de trabalho em 2026. O volume quase dobrou na seman",
+    "link": "https://www.instagram.com/p/DfX8nICiZ4w/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "economia",
+   "nota": 3,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-05T15:02:50Z",
+    "legenda": "O Brasil chegou a 48,3 milhões de empregos com carteira assinada em setembro de 2026, após registrar saldo de 121.305 novas vagas no mês, impulsionado principal",
+    "link": "https://www.instagram.com/p/DfXTulLkdU4/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-05T20:15:07Z",
+    "legenda": "Roubo e tráfico de drogas concentraram 57% dos atos infracionais registrados em 2025 entre adolescentes com restrição ou privação de liberdade no Brasil, enquan",
+    "link": "https://www.instagram.com/p/DfX3ddWDYX8/"
    },
    "triagem": "candidato"
   },
@@ -1073,6 +1138,26 @@
     "quando": "2026-11-05T16:45:05Z",
     "legenda": "Dez anos após a estreia com o disco Agradece (2016), a cantora e compositora sul-mato-grossense Marina Peralta - originalmarinaperalta lançou “FRONT”, seu terce",
     "link": "https://www.instagram.com/p/DfXfbZfEgMx/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Vitória democrata no Senado amplia pressão sobre tarifas de Trump ao Brasil",
+   "secoes": [
+    "A",
+    "B"
+   ],
+   "veiculos": 7,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-05T22:56:00Z",
+   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/vitoria-democrata-no-senado-amplia-pressao-sobre-tarifas-de-trump-ao-brasil.shtml",
+   "editoria": "politica",
+   "nota": 7,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-05T19:00:05Z",
+    "legenda": "O Partido Democrata conquistou o controle da Câmara e do Senado dos Estados Unidos nas eleições de terça-feira (3), aumentando sua capacidade de pressionar Dona",
+    "link": "https://www.instagram.com/p/DfXu4KmjK8R/"
    },
    "triagem": "candidato"
   },
@@ -1100,7 +1185,7 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 3,
+   "veiculos": 4,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-05T12:08:04Z",
    "link": "https://g1.globo.com/mundo/noticia/2026/11/05/voos-na-europa-fazem-pouso-de-emergencia-por-ameaca-de-bomba.ghtml",
@@ -1115,6 +1200,27 @@
    "triagem": "fora: internacional sem Brasil nem América Latina"
   },
   {
+   "manchete": "Cidade de São Paulo tem o segundo outubro mais chuvoso em 31 anos",
+   "secoes": [
+    "A",
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-05T22:56:00Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/cidade-de-sao-paulo-tem-o-segundo-outubro-mais-chuvoso-em-31-anos.shtml",
+   "editoria": "gerais",
+   "nota": 2,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-05T15:15:05Z",
+    "legenda": "O programa SuperAção, principal marca social da gestão Tarcísio de Freitas (Republicanos) em São Paulo, tem até o momento 2,4 mil famílias com acesso efetivado ",
+    "link": "https://www.instagram.com/p/DfXVIUPj2J4/"
+   },
+   "triagem": "candidato"
+  },
+  {
    "manchete": null,
    "secoes": [
     "A"
@@ -1123,13 +1229,13 @@
    "veiculos_3h": 0,
    "na_pauta_desde": null,
    "link": null,
-   "editoria": "politica",
-   "nota": 2,
+   "editoria": "gerais",
+   "nota": 1,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-05T11:01:19Z",
-    "legenda": "#BFCNASRUAS e a PEC da Segurança Pública.",
-    "link": "https://www.instagram.com/reel/DfW39bsBhoG/"
+    "quando": "2026-11-05T17:54:21Z",
+    "legenda": "A partir da próxima semana, oricardomello diariamente no BFC 🔥",
+    "link": "https://www.instagram.com/p/DfXnJ3iBOKu/"
    },
    "triagem": "candidato"
   },
@@ -1165,184 +1271,70 @@
    "nota": 1,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-05T15:15:05Z",
-    "legenda": "O programa SuperAção, principal marca social da gestão Tarcísio de Freitas (Republicanos) em São Paulo, tem até o momento 2,4 mil famílias com acesso efetivado ",
-    "link": "https://www.instagram.com/p/DfXVIUPj2J4/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "PT pede a partidos planos para ministérios e estimativa de votos para desenhar governo Lula 4",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-05T19:06:42Z",
-   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/pt-pede-a-partidos-planos-para-ministerios-e-estimativa-de-votos-para-desenhar-governo-lula-4.shtml",
-   "editoria": "eleicoes",
-   "nota": 3,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-05T13:15:09Z",
-    "legenda": "O Partido dos Trabalhadores (PT) começou a organizar as negociações para a composição do próximo governo do presidente Luiz Inácio Lula da Silva (PT). A legenda",
-    "link": "https://www.instagram.com/p/DfXHZxqEUx4/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
     "quando": "2026-11-05T17:30:08Z",
     "legenda": "Lasombra - lasombraoperarock é uma ópera rock transmídia que constrói seu universo a partir da integração entre música, cinema, videoclipes, HQs, performance e ",
     "link": "https://www.instagram.com/p/DfXklgMCdG9/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-05T12:44:49Z",
-    "legenda": "Entre campos naturais, florestas de araucárias, cachoeiras e imponentes formações rochosas, os Campos Gerais revelam uma das paisagens mais surpreendentes do Pa",
-    "link": "https://www.instagram.com/p/DfXD7oakWJu/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-05T11:00:09Z",
-    "legenda": "Penedo, em Alagoas, receberá mais de 200 produções audiovisuais entre 9 e 15 de novembro, durante a 16ª edição do Circuito Penedo de Cinema, com programação abe",
-    "link": "https://www.instagram.com/p/DfW381Fgt04/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-05T13:45:06Z",
-    "legenda": "Em atividade desde 2007, o núcleo de pesquisa em dança IMP - Investigação do Movimento Particular é um projeto coletivo artístico-pedagógico idealizado e coorde",
-    "link": "https://www.instagram.com/p/DfXK1RrkSxl/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-05T10:30:55Z",
-    "legenda": "Desendividamento e respiro financeiro! Estudos mostram que o avanço descontrolado das apostas empurrou cerca de 269 mil famílias para a inadimplência severa no ",
-    "link": "https://www.instagram.com/p/DfW0m6Kj5us/"
    },
    "triagem": "candidato"
   }
  ],
  "descartados_mais_quentes": [
   {
+   "manchete": "Lula diz que economia precisa estar 'arrumada' para atrair investimentos",
+   "veiculos": 5,
+   "veiculos_3h": 5,
+   "motivo": "sem editoria"
+  },
+  {
    "manchete": "Voos na Europa fazem pousos de emergência por ameaça de bomba; nenhum explosivo foi encontrado",
+   "veiculos": 4,
+   "veiculos_3h": 0,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Flávio diz ao NYT que levará para o túmulo segredo sobre como fugiu do Brasil e chegou aos EUA",
+   "veiculos": 4,
+   "veiculos_3h": 2,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Presidente da Câmara dos EUA decide renunciar após derrota republicana",
    "veiculos": 3,
    "veiculos_3h": 0,
    "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Brasil define 27 minerais críticos e estratégicos e estabelece prioridades para o setor",
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Casal suspeito de matar norte-americano em Maringá (PR) é preso na Argentina",
+   "veiculos": 3,
+   "veiculos_3h": 2,
+   "motivo": "fora: crime ou tragedia (matar)"
+  },
+  {
+   "manchete": "Onda azul nos Estados Unidos pode favorecer produtor brasileiro",
+   "veiculos": 3,
+   "veiculos_3h": 2,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Dólar sobe e fecha a R$ 5,48 após decisão do Copom e com política econômica no radar; Ibovespa cai",
+   "veiculos": 3,
+   "veiculos_3h": 2,
+   "motivo": "sem editoria"
   },
   {
    "manchete": "Derrota histórica de Trump nas eleições legislativas dos EUA reflete desgaste econômico, analisa pesquisadora do INCT INEU",
    "veiculos": 3,
-   "veiculos_3h": 3,
+   "veiculos_3h": 2,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Principais partidos árabes anunciam apoio a Gadi Eisenkot para formar governo em Israel",
-   "veiculos": 3,
-   "veiculos_3h": 3,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Nithya Raman desbanca a Karen Bass y será la primera alcaldesa de origen asiático de Los Ángeles",
-   "veiculos": 3,
-   "veiculos_3h": 3,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Rumo a coisas melhores: Antártida!",
-   "veiculos": 3,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Câmeras que usam IA para flagrar falta de cinto e uso de celular começam a operar na rodovia dos Tamoios",
-   "veiculos": 3,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Fundo canadense oferece bolsa de R$ 15 mil para jornalistas que investiguem igualdade de gênero",
-   "veiculos": 3,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Justiça do DF invalida uso de imóveis públicos para reforçar patrimônio do BRB",
-   "veiculos": 3,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "'A vida com estudo fica muito mais rica', diz Tony Ramos ao incentivar vestibulandos a não desistir dos sonhos",
-   "veiculos": 3,
-   "veiculos_3h": 0,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Por que uma boa empresa nem sempre é um bom investimento?",
+   "manchete": "Erika Hilton diz que tem interesse em disputar Prefeitura de SP e que ainda não decidiu se vai trocar o PSOL pelo PT",
    "veiculos": 2,
    "veiculos_3h": 2,
    "motivo": "sem editoria"
