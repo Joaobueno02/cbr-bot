@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-05T17:29:35Z",
- "pauta_quando": "2026-11-05T17:29:34Z",
+ "quando": "2026-11-05T17:40:44Z",
+ "pauta_quando": "2026-11-05T17:40:43Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -8,23 +8,23 @@
   "ia": "gemini",
   "ok": true,
   "erro": null,
-  "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 23,
-  "falhas_antes": null,
-  "pedidos_hoje": 18
+  "modelo": "gemini-3.5-flash",
+  "avaliados_agora": 9,
+  "falhas_antes": "gemini-3.8-flash: ReadTimeout | gemini-3.8-flash: HTTP 503 This model is currently experiencing high demand. Spikes in",
+  "pedidos_hoje": 22
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 138,
+ "total_assuntos": 136,
  "novos_3h": 5,
- "esquentaram": 1,
+ "esquentaram": 2,
  "candidatos": [
   {
    "manchete": "Decreto do fim da escala 6x1 deve ser publicado na segunda-feira, diz ministro",
    "secoes": [
     "B"
    ],
-   "veiculos": 20,
-   "veiculos_3h": 4,
+   "veiculos": 22,
+   "veiculos_3h": 5,
    "na_pauta_desde": "2026-11-04T23:46:34Z",
    "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/colunas/painel/2026/11/ministro-do-trabalho-se-reune-com-transportadores-de-cargas-apos-fim-da-escala-6x1.shtml",
    "editoria": "politica",
@@ -46,40 +46,12 @@
    }
   },
   {
-   "manchete": "Entenda como Flávio Bolsonaro participou de votação no Senado mesmo após fugir para os EUA",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 82,
-   "veiculos_3h": 29,
-   "na_pauta_desde": "2026-11-04T23:46:34Z",
-   "link": "https://www.gazetadopovo.com.br/republica/flavio-bolsonaro-articula-oposicao-internacional-contra-o-governo-lula-nos-eua/",
-   "editoria": "politica",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ],
-   "ia": {
-    "editoria": "gerais",
-    "I": 3,
-    "V": 3,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Flávio Bolsonaro vota no Senado após fuga; absurdo institucional.",
-    "soma": 6
-   }
-  },
-  {
    "manchete": "Lula pede ajuda de Haddad, Durigan e Alckmin contra dívida pública",
    "secoes": [
     "B"
    ],
    "veiculos": 36,
-   "veiculos_3h": 16,
+   "veiculos_3h": 15,
    "na_pauta_desde": "2026-11-05T15:07:27Z",
    "link": "https://www.gazetadopovo.com.br/republica/lula-convoca-reuniao-para-discutir-politica-economica-em-meio-a-pressao-fiscal/",
    "editoria": "economia",
@@ -103,8 +75,8 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 64,
-   "veiculos_3h": 7,
+   "veiculos": 63,
+   "veiculos_3h": 9,
    "na_pauta_desde": "2026-11-04T19:07:26Z",
    "link": "https://g1.globo.com/economia/noticia/2026/11/04/brasil-cria-1213-mil-empregos-formais-em-setembro-queda-de-43percent-na-comparacao-com-mesmo-mes-de-2025.ghtml",
    "editoria": "economia",
@@ -124,18 +96,71 @@
    }
   },
   {
+   "manchete": "Entenda como Flávio Bolsonaro participou de votação no Senado mesmo após fugir para os EUA",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 35,
+   "veiculos_3h": 7,
+   "na_pauta_desde": "2026-11-04T23:46:34Z",
+   "link": "https://www.gazetadopovo.com.br/republica/flavio-bolsonaro-articula-oposicao-internacional-contra-o-governo-lula-nos-eua/",
+   "editoria": "politica",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Senador votando após fugir para os EUA gera indignação, absurdo e alto engajamento.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "CNI aciona o STF contra o fim da escala 6×1 aprovado no Congresso",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 18,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-04T14:07:42Z",
+   "link": "https://www.congressoemfoco.com.br/noticia/131325/fim-da-escala-6x1-cni-vai-ao-stf-contra-regras-da-nova-jornada",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Ataque patronal da CNI contra o fim da escala 6x1 mobiliza a classe trabalhadora.",
+    "soma": 6
+   }
+  },
+  {
    "manchete": "Crise bancária no Paraguai derruba chefe do BC e gera protestos contra Peña; entenda",
    "secoes": [
     "B",
     "D-america_latina"
    ],
-   "veiculos": 68,
-   "veiculos_3h": 65,
+   "veiculos": 72,
+   "veiculos_3h": 68,
    "na_pauta_desde": "2026-11-04T17:22:25Z",
    "link": "https://www.gazetadopovo.com.br/mundo/quebra-de-banco-digital-desencadeia-crise-no-paraguai-e-derruba-chefe-do-banco-central/",
    "editoria": "america_latina",
    "nota": 6,
-   "esquentou": false,
+   "esquentou": true,
    "lente": [
     "protesto"
    ],
@@ -152,37 +177,11 @@
    }
   },
   {
-   "manchete": "Santiago Peña renuncia como presidente de Paraguay por la crisis de Ueno Bank",
-   "secoes": [
-    "B",
-    "D-america_latina"
-   ],
-   "veiculos": 26,
-   "veiculos_3h": 21,
-   "na_pauta_desde": "2026-11-05T07:00:24Z",
-   "link": "https://www.bbc.co.uk/mundo/live/cmgr8vrv5w55t?at_medium=RSS&at_campaign=rss",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 3,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Presidente do Paraguai renuncia por crise bancária.",
-    "soma": 5
-   }
-  },
-  {
    "manchete": "Governo assina MP com regras do Imposto Seletivo",
    "secoes": [
     "B"
    ],
-   "veiculos": 32,
+   "veiculos": 33,
    "veiculos_3h": 11,
    "na_pauta_desde": "2026-11-05T03:45:56Z",
    "link": "https://g1.globo.com/economia/noticia/2026/11/04/governo-edita-medida-provisoria-que-define-aliquotas-do-imposto-do-pecado.ghtml",
@@ -199,6 +198,32 @@
     "repetido": false,
     "risco": "",
     "motivo": "Governo assina MP com regras do Imposto Seletivo.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "El Congreso de Paraguay aprueba el juicio político a Santiago Peña pese a su renuncia como presidente",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 18,
+   "veiculos_3h": 9,
+   "na_pauta_desde": "2026-11-05T07:00:24Z",
+   "link": "https://www.bbc.co.uk/mundo/live/cmgr8vrv5w55t?at_medium=RSS&at_campaign=rss",
+   "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 3,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Presidente do Paraguai renuncia por crise bancária.",
     "soma": 5
    }
   },
@@ -231,18 +256,49 @@
    }
   },
   {
-   "manchete": "João Pessoa terá ônibus gratuitos para estudantes nos dias de prova do Enem 2026",
+   "manchete": "Presidente do Paraguai renuncia em meio à crise de um dos maiores bancos do país, que congelou dinheiro de milhões; siga",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-04T17:22:25Z",
+   "link": "https://www.bbc.co.uk/portuguese/live/cqwy7zykezl6t?at_medium=RSS&at_campaign=rss",
+   "editoria": "america_latina",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "congel",
+    "banco"
+   ],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Fato novo central na crise bancária paraguaia com renúncia do presidente.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Salvador terá transporte público gratuito para estudantes nos dias de aplicação do Enem 2026",
    "secoes": [
     "B"
    ],
    "veiculos": 31,
-   "veiculos_3h": 15,
+   "veiculos_3h": 17,
    "na_pauta_desde": "2026-11-04T23:46:34Z",
    "link": "https://g1.globo.com/educacao/enem/2026/noticia/2026/11/05/gabarito-enem-2026-extraoficial-e-correcao-das-provas.ghtml",
    "editoria": "educacao",
-   "nota": 5,
+   "nota": 6,
    "esquentou": false,
-   "lente": [],
+   "lente": [
+    "transporte publico"
+   ],
    "ia": {
     "editoria": "educacao",
     "I": 2,
@@ -251,7 +307,33 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "João Pessoa terá ônibus gratuitos para estudantes no Enem.",
+    "motivo": "Garante acesso de estudantes ao Enem, com grande relevância social e impacto em Salvador.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Paraguay: Crisis bancaria de Ueno Bank desata protestas y detenciones",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 18,
+   "veiculos_3h": 14,
+   "na_pauta_desde": "2026-11-05T07:00:24Z",
+   "link": "https://www.telesurtv.net/presidente-paraguay-renuncia-crisis/",
+   "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Protestos e prisões mostram a revolta popular contra a crise bancária no Paraguai.",
     "soma": 4
    }
   },
@@ -260,8 +342,8 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 36,
-   "veiculos_3h": 14,
+   "veiculos": 34,
+   "veiculos_3h": 13,
    "na_pauta_desde": "2026-11-05T12:08:04Z",
    "link": "https://www.gazetadopovo.com.br/republica/pl-confirma-candidatura-de-rogerio-marinho-a-presidencia-do-senado/",
    "editoria": "eleicoes",
@@ -283,54 +365,28 @@
    }
   },
   {
-   "manchete": "PF combate grupo suspeito de enviar brasileiras a Israel para prostituição — Polícia Federal",
+   "manchete": "María Corina Machado apoia proposta dos EUA para declarar vacante a Presidência da Venezuela",
    "secoes": [
-    "B"
+    "B",
+    "D-america_latina"
    ],
-   "veiculos": 11,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-04T12:08:05Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/pf-faz-operacao-contra-grupo-suspeito-de-recrutar-brasileiras-para-exploracao-sexual-em-israel.shtml",
-   "editoria": "politica",
+   "veiculos": 7,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-05T17:40:43Z",
+   "link": "https://noticias.uol.com.br/ultimas-noticias/afp/2026/11/05/maria-corina-machado-apoia-proposta-dos-eua-para-declarar-vacante-a-presidencia-da-venezuela.htm",
+   "editoria": "america_latina",
    "nota": 5,
    "esquentou": false,
    "lente": [],
    "ia": {
-    "editoria": "gerais",
+    "editoria": "america_latina",
     "I": 2,
     "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "PF combate grupo suspeito de enviar brasileiras para prostituição.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Funcionários da CET iniciam greve nesta quinta-feira (5)",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 9,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-05T12:08:04Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/agentes-da-cet-anunciam-greve-a-partir-das-22h-desta-quinta-feira-22.shtml",
-   "editoria": "economia",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "greve"
-   ],
-   "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Funcionários da CET iniciam greve em São Paulo.",
+    "motivo": "Oposição venezuelana apoia intervenção política proposta pelos Estados Unidos na região.",
     "soma": 4
    }
   },
@@ -343,7 +399,7 @@
    "veiculos": 4,
    "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-05T17:07:29Z",
-   "link": "https://www.diariodocentrodomundo.com.br/bolsonaro-visitas-rogerio-marinho-tereza-cristina-moraes/",
+   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNUXNFNzdVQW5VTDhHZGVBOUlVTHNNZXdhXzlDQW5nbzE1NjgxQVMtSDljMDlSRlhfZllCM29LUDB0RjFXSHJFdktuVHBsNEx6ZHFkVU9nWU5yUUVxT1gya2J5TTZTSmJ1dUVYY0xwNklRekwzUndQV2Rna2kycVRrVjFnYUlYTTRHSTV1NWF3bXpFd3VqWk03cVpHSlhzYWFwRC1DNlp0aENVTHRuNW5hOG9QMFlKcFN4R0RlS1g1Yw?oc=5",
    "editoria": "politica",
    "nota": 5,
    "esquentou": false,
@@ -363,29 +419,28 @@
    }
   },
   {
-   "manchete": "Ministro da Fazenda diz que início da Reforma Tributária está mantido para janeiro de 2027 após entidades pediram adiamento",
+   "manchete": "'Todo ano tem uma certa polêmica': ministro diz que redação do Enem reflete o que vivemos em nossa época; veja temas",
    "secoes": [
-    "B",
-    "C-nacional"
+    "B"
    ],
-   "veiculos": 9,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-05T17:07:29Z",
-   "link": "https://www.poder360.com.br/reforma-tributaria-2027/reforma-tributaria-nao-sera-adiada-e-comeca-em-2027-diz-durigan/",
+   "veiculos": 10,
+   "veiculos_3h": 7,
+   "na_pauta_desde": "2026-11-04T23:46:34Z",
+   "link": "https://g1.globo.com/educacao/noticia/2026/11/04/ministro-da-educacao-temas-da-redacao-enem.ghtml",
    "editoria": "politica",
    "nota": 4,
    "esquentou": false,
    "lente": []
   },
   {
-   "manchete": "'Todo ano tem uma certa polêmica': ministro diz que redação do Enem reflete o que vivemos em nossa época; veja temas",
+   "manchete": "Operação no DF e em 5 estados mira bets que movimentaram milhões com empresas de fachada",
    "secoes": [
     "B"
    ],
-   "veiculos": 9,
+   "veiculos": 12,
    "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-04T23:46:34Z",
-   "link": "https://g1.globo.com/educacao/noticia/2026/11/04/ministro-da-educacao-temas-da-redacao-enem.ghtml",
+   "na_pauta_desde": "2026-11-05T15:07:27Z",
+   "link": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-11/operacao-mira-rede-ilegal-de-bets-que-movimentou-r-734-milhoes",
    "editoria": "politica",
    "nota": 4,
    "esquentou": false,
@@ -396,7 +451,7 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 53,
+   "veiculos": 50,
    "veiculos_3h": 5,
    "na_pauta_desde": "2026-11-04T12:08:05Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/04/alcolumbre-decide-aguardar-camara-votar-reducao-da-maioridade-penal-para-pautar-tema-no-senado.ghtml",
@@ -406,57 +461,29 @@
    "lente": []
   },
   {
-   "manchete": "Enem 2026: confira dicas de especialistas para a reta final",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 7,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-04T23:46:34Z",
-   "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQZTJkSFhvaF9mRVk5bEYydC1aQTZXVWpXOEtHMzRrVi15ZzBfZ2xZQ1J2QXd3bVlmQlRQY1BZVk0zYW1EODVjRnFHclNKenFjVUFMLUw5dFdNZGpfSWFmc2FsYkZWSmlzUV94N3o5Z3JTRnBrbWtRYzNKdkZ4Q0NFOFJURC00OWl4T2lPQVFRSXE5bG4yQi1oQ2w5Z1g3UFNuU1Z0Y3p5TWVNQ0dRWWhoQXR4QzQwYmRYeFpXNDFHaU9kU1ZWOHh3Mkc0OUNWMzVxdXc?oc=5",
-   "editoria": "educacao",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Lula volta ao Planalto 10 dias depois da eleição, tem encontro com ministro da Fazenda e faz reunião sobre minerais críticos",
+   "manchete": "Ministro da Fazenda diz que início da Reforma Tributária está mantido para janeiro de 2027 após entidades pediram adiamento",
    "secoes": [
     "B",
     "C-nacional"
    ],
-   "veiculos": 7,
+   "veiculos": 9,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-05T17:07:29Z",
+   "link": "https://www.poder360.com.br/reforma-tributaria-2027/reforma-tributaria-nao-sera-adiada-e-comeca-em-2027-diz-durigan/",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Operação em João Pessoa combate armazenamento de imagens e vídeos com conteúdo de abuso sexual infantojuvenil",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 9,
    "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-05T15:07:27Z",
-   "link": "https://news.google.com/rss/articles/CBMijwJBVV95cUxNNHJpRTBLTWNsUEdyQ3lmSG5Rc0hGeGpPMmh6TlFVYzNqTGJJejBPT09BSjNRUGZFSnJydngwc1ZJejR3V1h3QlhLdkRiY2pXRHF5U3hoVXRHdEw0RjFOY2pHU0hlamt3dG1CT091NnJZUjJkMkxIUHp0bWYwQUx4YlVTWXZTbldmQVk3UVNrSF9mRENwaVo2bHNUVW1WVC1fNFViV3E1N0p0SW9QT0IyNU42ZnEyWjVQSWlaU3lOMExtcnJFVjc4S0RydndTckpTMHdISUQybU1FZ1N1Rkx3UVFtdHUwR2tHVUdpX1hndmlSaGdoa2UzdFptSHhrWGZhd1dzb2s2OXVwdDl5c1JJ0gGeAkFVX3lxTE8taW1HSnRHcW13VXZOQ094Qk9lUHNyN2lKc1VXaEV1TmNJYThVbTREOGhDYTV5c2FNQ2d6MnZaMVNkUFNxT1dlY0w4N05YVm5uQ1lRQV9iZmt4N21ybmRaMm0zUGtKUmJLcVJoQkFsaTZ4VXozb0ZBRGFadGhKb180b04zbG95X0d5MXZKWU1NTERGTlBsOEZKcHJaLWltY3kxMG5Za0ZYTzVjUno3U0laT3FRYzN3QUR0akVRS0k3T0Z3MjNrRlVDaU56MDk1RHFzZ3BRY29YcEU1a2R6ekxnUzQxaG5kWU53RWZNcF9KeGtOaEcxYzh0MC1GQjJKVm9HeUJNU2JUME55bXNxVGxmMG9IajJlZEJueTVMaVE?oc=5",
-   "editoria": "eleicoes",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Alcolumbre ironiza ataques a urna e lamenta eleitos sem proposta",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 18,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-05T15:07:27Z",
-   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPS2xWcnhPYnRBN3RlNDM1TzFfMG9EMVg1cjdtd3IxbHkwcnZSSVZCN0k3SkRfZkg0ckcxejlENU94OERMT2cwTElXOFVFVENDVmIyWVZuNVhzRmJsMjhLWUhiaHAwV0hOMEtSTVNxTlVXUTdyTU1Ld1RkWUtkcnloVlRFNzl5dDdsRHZQLVRFcDVYLWFVWVU3RlBobUp3VXdSR1g5WEIzdzFyNGlXWDE4am16bFA?oc=5",
-   "editoria": "eleicoes",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Confederação do comércio pede que STF adie transição para o fim da escala 6×1",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 10,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-04T14:07:42Z",
-   "link": "https://www.gazetadopovo.com.br/economia/confederacao-do-comercio-pede-que-stf-adie-transicao-para-o-fim-da-escala-6-1/",
+   "na_pauta_desde": "2026-11-04T12:08:05Z",
+   "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPZU1EOUlnSTRKV1Y1QTZfUzNvTTZaRnlGcHhrUEpFalg5NEh2QUQ0c1lZOUMwRTh6NkNLQ2JkRENlM2g2czJESG01a0gzOXBwY3N4VFBfaFJzVHhkREhBQV9FVE43V1NyOEM0eG9XTGlJT1pWZ0xvTEpXaU9GTlNVOG1JN2EzVkZZbW1uMTVoUGJ0OEJoRXF0SVFvVnoxb3pMZ0x6ZW9qTmpjX2VQRDd2Wng5Z0JMcW9wR2NQNlEtWm1sYXdaZml2NDFGUGJmZWlnWXcwYWVn?oc=5",
    "editoria": "politica",
    "nota": 4,
    "esquentou": false,
@@ -466,8 +493,8 @@
  "rebaixados": [
   {
    "manchete": "Ministério da Saúde autoriza aquisição de 20 mil doses da vacina contra mpox por meio da Opas",
-   "veiculos": 12,
-   "veiculos_3h": 10,
+   "veiculos": 13,
+   "veiculos_3h": 11,
    "na_pauta_desde": "2026-11-05T15:07:27Z",
    "esquentou": false,
    "ia": {
@@ -479,24 +506,6 @@
     "repetido": false,
     "risco": "",
     "motivo": "Ministério da Saúde compra 20 mil doses da vacina contra mpox.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "SUS e Einstein desenvolvem IA para identificação de doenças de pele",
-   "veiculos": 27,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-05T01:07:31Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "saude",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "SUS e Einstein desenvolvem IA para doenças de pele.",
     "soma": 3
    }
   },
@@ -519,9 +528,27 @@
    }
   },
   {
+   "manchete": "SUS e Einstein desenvolvem IA para identificação de doenças de pele",
+   "veiculos": 21,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-05T01:07:31Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "saude",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "SUS e Einstein desenvolvem IA para doenças de pele.",
+    "soma": 3
+   }
+  },
+  {
    "manchete": "União Brasil formaliza apoio à reeleição de Motta na Câmara",
    "veiculos": 13,
-   "veiculos_3h": 3,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-05T15:07:27Z",
    "esquentou": false,
    "ia": {
@@ -537,45 +564,9 @@
    }
   },
   {
-   "manchete": "Tenda vê reforma tributária e fim da escala 6x1 como aliados de seu modelo industrial",
-   "veiculos": 6,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-05T17:29:34Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "economia",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Tenda vê reforma tributária e fim da 6x1 como aliados.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Aplicativo gratuito do MEC ajuda na preparação para o Enem",
-   "veiculos": 4,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-05T17:07:29Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "educacao",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Aplicativo gratuito do MEC ajuda na preparação para o Enem.",
-    "soma": 3
-   }
-  },
-  {
    "manchete": "Quem é Pedro Alliana, vice que pode assumir a Presidência do Paraguai",
-   "veiculos": 8,
-   "veiculos_3h": 6,
+   "veiculos": 6,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-05T17:07:29Z",
    "esquentou": false,
    "ia": {
@@ -587,42 +578,6 @@
     "repetido": false,
     "risco": "",
     "motivo": "Quem é Pedro Alliana, vice que pode assumir o Paraguai.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Oposição diz que não deve aceitar renúncia do presidente do Paraguai",
-   "veiculos": 9,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-04T17:22:25Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Oposição questiona renúncia do presidente do Paraguai.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Milei se reúne con Abascal tras dar plantón al Rey en la inauguración de la Cumbre Iberoamericana",
-   "veiculos": 8,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-04T19:07:26Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Milei se reúne com Abascal; pouca repercussão direta no Brasil.",
     "soma": 2
    }
   },
@@ -643,39 +598,111 @@
     "motivo": "Análise da imprensa internacional sobre resultado eleitoral brasileiro não traz fato novo.",
     "soma": 2
    }
+  },
+  {
+   "manchete": "Milei se reúne con Abascal tras dar plantón al Rey en la inauguración de la Cumbre Iberoamericana",
+   "veiculos": 9,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-04T19:07:26Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Milei se reúne com Abascal; pouca repercussão direta no Brasil.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Paraopeba recebe 24ª Festa Quilombola da Pontinha com programação cultural e shows de 20 a 22 de novembro",
+   "veiculos": 3,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-04T22:54:21Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "gerais",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Festival cultural e quilombola em Fortaleza.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Instituto Federal de Prudente tem 40 vagas para curso Técnico em Agroindústria",
+   "veiculos": 12,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-04T16:08:13Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "educacao",
+    "I": 1,
+    "V": 0,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Vagas em Instituto Federal são positivas, mas possuem alcance estritamente local.",
+    "soma": 1
+   }
+  },
+  {
+   "manchete": "BC interrompe sequência de cortes e mantém Selic em 13,75%",
+   "veiculos": 30,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-04T23:46:34Z",
+   "esquentou": true,
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": true,
+    "risco": "",
+    "motivo": "Assunto já publicado anteriormente sobre a manutenção da Selic pelo Banco Central.",
+    "soma": 4
+   }
   }
  ],
  "obrigatorios": [],
  "descartados_mais_quentes": [
   {
+   "manchete": "Vice de Trump culpa guerra no Irã por derrota republicana no Congresso: 'O próprio presidente disse isso'",
+   "veiculos": 109,
+   "veiculos_3h": 66,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
    "manchete": "Cristiano Ronaldo anuncia aposentadoria da seleção portuguesa após 23 anos: \"Portugal estará sempre em mim\"",
-   "veiculos": 72,
-   "veiculos_3h": 30,
+   "veiculos": 69,
+   "veiculos_3h": 27,
    "motivo": "fora: esporte (cristiano ronaldo)"
   },
   {
-   "manchete": "Vice de Trump culpa guerra no Irã por derrota republicana no Congresso: 'O próprio presidente disse isso'",
-   "veiculos": 66,
-   "veiculos_3h": 39,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "CNC aciona STF para adiar fim da escala 6x1",
-   "veiculos": 31,
-   "veiculos_3h": 9,
-   "motivo": "repetido (20261105-0005-cnc-6x1-documento)"
-  },
-  {
-   "manchete": "Live da vitória: Janones anuncia transmissão com Lula nesta quinta",
-   "veiculos": 31,
-   "veiculos_3h": 5,
+   "manchete": "Janones confirma “live da vitória” com Lula nesta quinta-feira (5)",
+   "veiculos": 26,
+   "veiculos_3h": 6,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Voos na Europa fazem pousos de emergência por ameaça de bomba; nenhum explosivo foi encontrado",
-   "veiculos": 18,
-   "veiculos_3h": 5,
+   "manchete": "Vance atribuye a guerra contra Irán la debacle de los republicanos en elecciones: \"Es la razón obvia\"",
+   "veiculos": 21,
+   "veiculos_3h": 6,
    "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "CNC vai ao STF para adiar o fim da escala 6×1 e que redução da jornada só comece em 2027",
+   "veiculos": 17,
+   "veiculos_3h": 3,
+   "motivo": "repetido (20261105-0005-cnc-6x1-documento)"
   },
   {
    "manchete": "Kremlin confirma encontro de “defensora dos direitos humanos da Rússia” com Melania Trump na Casa Branca",
@@ -684,27 +711,27 @@
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Flávio discursará nos EUA em evento de aliados de Trump ao lado de ator que interpreta Bolsonaro em ‘Dark Horse’",
-   "veiculos": 15,
+   "manchete": "Voos na Europa fazem pousos de emergência por ameaça de bomba; nenhum explosivo foi encontrado",
+   "veiculos": 16,
    "veiculos_3h": 4,
-   "motivo": "sem editoria"
+   "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Concurso da UFBA oferece 139 vagas e inscrições até sexta-feira",
+   "manchete": "Flávio discursará nos EUA em evento de aliados de Trump ao lado de ator que interpreta Bolsonaro em ‘Dark Horse’",
    "veiculos": 14,
-   "veiculos_3h": 10,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "FGC sofre invasão que expõe nomes, CPFs e outros dados pessoais de clientes",
-   "veiculos": 14,
-   "veiculos_3h": 7,
+   "veiculos_3h": 4,
    "motivo": "sem editoria"
   },
   {
    "manchete": "World-record 53 red cards shown in Brazilian under-20s match",
    "veiculos": 14,
-   "veiculos_3h": 4,
+   "veiculos_3h": 3,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "FGC sofre invasão que expõe nomes, CPFs e outros dados pessoais de clientes",
+   "veiculos": 13,
+   "veiculos_3h": 3,
    "motivo": "sem editoria"
   }
  ]
