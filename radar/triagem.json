@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-06T16:50:33Z",
- "pauta_quando": "2026-11-06T16:50:30Z",
+ "quando": "2026-11-06T16:56:57Z",
+ "pauta_quando": "2026-11-06T16:56:55Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -8,14 +8,14 @@
   "ia": "gemini",
   "ok": true,
   "erro": null,
-  "modelo": "gemini-3.5-flash",
-  "avaliados_agora": 10,
-  "falhas_antes": "gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-3.8-flash: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-3.8-flash: HTTP 503 This model is currently experiencing high demand. Spikes in",
-  "pedidos_hoje": 13
+  "modelo": "gemini-3.5-flash-lite",
+  "avaliados_agora": 4,
+  "falhas_antes": "gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in",
+  "pedidos_hoje": 15
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 152,
- "novos_3h": 7,
+ "total_assuntos": 150,
+ "novos_3h": 5,
  "esquentaram": 3,
  "candidatos": [
   {
@@ -24,9 +24,9 @@
     "B",
     "D-america_latina"
    ],
-   "veiculos": 55,
-   "veiculos_3h": 12,
-   "na_pauta_desde": "2026-11-06T16:07:14Z",
+   "veiculos": 86,
+   "veiculos_3h": 31,
+   "na_pauta_desde": "2026-11-05T17:07:29Z",
    "link": "https://www.bbc.co.uk/mundo/live/c54g11vvvemkt?at_medium=RSS&at_campaign=rss",
    "editoria": "america_latina",
    "nota": 6,
@@ -51,8 +51,8 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 42,
-   "veiculos_3h": 8,
+   "veiculos": 40,
+   "veiculos_3h": 7,
    "na_pauta_desde": "2026-11-05T21:11:02Z",
    "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/dino-marca-conciliacao-entre-empresas-trabalhadores-e-governo-sobre-transicao-para-o-fim-da-6x1.shtml",
    "editoria": "economia",
@@ -75,13 +75,40 @@
    }
   },
   {
+   "manchete": "Enem: transporte público será gratuito para estudantes de Aracaju e região metropolitana",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 36,
+   "veiculos_3h": 24,
+   "na_pauta_desde": "2026-11-06T10:06:56Z",
+   "link": "https://g1.globo.com/sp/vale-do-paraiba-regiao/noticia/2026/11/06/vale-e-regiao-tem-57-mil-inscritos-para-o-enem-neste-fim-de-semana-veja-as-orientacoes-para-a-prova.ghtml",
+   "editoria": "educacao",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "transporte publico"
+   ],
+   "ia": {
+    "editoria": "educacao",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Impacta milhares de estudantes, alta viralização e forte apelo de serviço público.",
+    "soma": 6
+   }
+  },
+  {
    "manchete": "Quem é Santiago Peña? Presidente de direita do Paraguai renunciou ao cargo em meio a crise bancária",
    "secoes": [
     "B",
     "D-america_latina"
    ],
-   "veiculos": 252,
-   "veiculos_3h": 176,
+   "veiculos": 136,
+   "veiculos_3h": 85,
    "na_pauta_desde": "2026-11-05T17:07:29Z",
    "link": "https://g1.globo.com/mundo/noticia/2026/11/05/quem-e-santiago-pena-presidente-do-paraguai-enfrenta-crise-politica-e-pode-renunciar.ghtml",
    "editoria": "america_latina",
@@ -105,7 +132,7 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 33,
+   "veiculos": 34,
    "veiculos_3h": 21,
    "na_pauta_desde": "2026-11-06T10:06:56Z",
    "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/inss-muda-regra-do-auxilio-doenca-e-cria-reanalise-em-10-dias-no-atestmed-entenda.shtml",
@@ -125,63 +152,6 @@
     "repetido": false,
     "risco": "",
     "motivo": "Mudança nas regras do auxílio-doença do INSS impacta diretamente trabalhadores.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Fuga de Flávio: irmãos Bolsonaro obtiveram cidadania italiana quatro dias após posse de Lula, deputado denuncia",
-   "secoes": [
-    "B",
-    "C-nacional"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-06T14:08:49Z",
-   "link": "https://www.congressoemfoco.com.br/noticia/131375/deputado-italiano-denuncia-cidadania-acelerada-dos-irmaos-bolsonaro",
-   "editoria": "politica",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 3,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Denúncia revela articulação prévia da família Bolsonaro para cidadania italiana e fuga.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Goiana de 25 anos faz história e se torna primeira quilombola a assumir cargo de diplomata no Brasil",
-   "secoes": [
-    "B",
-    "D-terra"
-   ],
-   "veiculos": 8,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-06T12:08:02Z",
-   "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPbUhMWFRzRFRtaUVxdm1LbkNfX1JNSW4zT09GenNRdFBrZDBHd3MzUUxuOGkxMnI5bXZrYXc1cmEtcmh0NkljengyT0Jud1drVnRlZnZiTF9rQnFxWm5ZNmk0VHM2Tkc4VXdOVnR0NUt4Sjh0aUNMMF9zYmpna2RBaUR3VDRzcHVfWHlsY3lkZmFWWm5xLUZoWXVnaFdCYXlxVGJVZWVFaVgxN2FYVGxaZEwwdU9uSWF3N2dMQUNjUV82bXVBQzNjOWtiV1BWbDha?oc=5",
-   "editoria": "roca",
-   "nota": 6,
-   "esquentou": true,
-   "lente": [
-    "quilombola"
-   ],
-   "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 3,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Primeira mulher quilombola a assumir cargo de diplomata no Brasil é conquista histórica.",
     "soma": 5
    }
   },
@@ -214,11 +184,66 @@
    }
   },
   {
+   "manchete": "Goiana e formada na UFG, Helen Borgens toma posse como 1ª diplomata quilombola do País",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 8,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-06T01:07:00Z",
+   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQRTRMMUM4alBtTnhldDRXcTBMaEVISDlpakFCZk9xT1ZWTVlpYm9XTUFKeU9ZZHFaUy0zYXV2b0cyT0dnYWFOQkwzdHhWZ0xkVkZUSVcxa3FxNlg3aWZTeWlmTjUyY0ZlTnFzb2k0VDZkOVFpc3hnSnhPeVRRZ2hIYnR1dk41bzF4Ml9rQnRITGNGZHJvYmN6YmVKaXMtNEJwYl9tLTk3VmRJM2RiUEVNMkN6Wkd1ZnlUaGdHdDN5MEd3TXlB?oc=5",
+   "editoria": "roca",
+   "nota": 5,
+   "esquentou": true,
+   "lente": [
+    "quilombola"
+   ],
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 3,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Primeira diplomata quilombola é conquista histórica com forte apelo positivo e identitário.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Fuga de Flávio: irmãos Bolsonaro obtiveram cidadania italiana quatro dias após posse de Lula, deputado denuncia",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 6,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-06T14:08:49Z",
+   "link": "https://www.congressoemfoco.com.br/noticia/131375/deputado-italiano-denuncia-cidadania-acelerada-dos-irmaos-bolsonaro",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 3,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Denúncia revela articulação prévia da família Bolsonaro para cidadania italiana e fuga.",
+    "soma": 5
+   }
+  },
+  {
    "manchete": "Mendonça manda para prisão domiciliar empresário suspeito de desvios no INSS encarcerado há 13 meses",
    "secoes": [
     "B"
    ],
-   "veiculos": 28,
+   "veiculos": 27,
    "veiculos_3h": 5,
    "na_pauta_desde": "2026-11-05T22:56:00Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/05/fraudes-no-inss-mendonca-substitui-prisao-preventiva-de-empresario-mauricio-camisotti-por-prisao-domiciliar.ghtml",
@@ -241,29 +266,28 @@
    }
   },
   {
-   "manchete": "Caso Master: DF pede ao STF repasse de R$ 2,2 bi bloqueados ao BRB",
+   "manchete": "Operação da Polícia Federal prende três suspeitos por garimpo ilegal de ouro no Maranhão",
    "secoes": [
-    "B"
+    "B",
+    "D-terra"
    ],
-   "veiculos": 16,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-05T22:56:00Z",
-   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://c-level.folha.uol.com.br/financas/2026/11/governo-do-df-acusa-master-de-gestao-fraudulenta-se-diz-vitima-e-pede-transferencia-de-r-2-bi-bloqueados.shtml",
+   "veiculos": 5,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-05T23:43:00Z",
+   "link": "https://news.google.com/rss/articles/CBMihAJBVV95cUxQOW5hRWpWR0JrS19pa3dvMzhLNUx5bi15SVpVNTFWWGdmaF94NWZpQ080QXJCUVQxbHYzNXZCSHhmTGRTdWpwNWd2NVNCQ1loeml0SnUxbDhzdEZoV1dnVnQ1Q0ZROFlaU3BVa1pRblFzcmo5bVJnLVEweEZsS0l2ck5taXl4Ujk0b0p6Nkp4NWJzUVpEMTgwa09nWGxTVkpLX0M2R2dNUDBHU2lhN28tVm5UZkZzcHY4Y0g1MXV1OGszOTg3ZEtrV0xvdE9XbmplQm9EbnhPU0cwOXlzWko1S2dWNy0zRTd6b0U4ZVd4R0JsWjBMeWtZdnVBNXBVNlZ6YjRtdNIBhAJBVV95cUxQOW5hRWpWR0JrS19pa3dvMzhLNUx5bi15SVpVNTFWWGdmaF94NWZpQ080QXJCUVQxbHYzNXZCSHhmTGRTdWpwNWd2NVNCQ1loeml0SnUxbDhzdEZoV1dnVnQ1Q0ZROFlaU3BVa1pRblFzcmo5bVJnLVEweEZsS0l2ck5taXl4Ujk0b0p6Nkp4NWJzUVpEMTgwa09nWGxTVkpLX0M2R2dNUDBHU2lhN28tVm5UZkZzcHY4Y0g1MXV1OGszOTg3ZEtrV0xvdE9XbmplQm9EbnhPU0cwOXlzWko1S2dWNy0zRTd6b0U4ZVd4R0JsWjBMeWtZdnVBNXBVNlZ6YjRtdA?oc=5",
    "editoria": "politica",
-   "nota": 6,
+   "nota": 5,
    "esquentou": false,
-   "lente": [
-    "master"
-   ],
+   "lente": [],
    "ia": {
-    "editoria": "politica",
+    "editoria": "roca",
     "I": 2,
     "V": 2,
     "P": 2,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Disputa bilionária envolvendo recursos do Caso Master e BRB.",
+    "motivo": "Combate ao garimpo ilegal afeta diretamente comunidades tradicionais e o meio ambiente.",
     "soma": 4
    }
   },
@@ -329,7 +353,7 @@
     "B"
    ],
    "veiculos": 35,
-   "veiculos_3h": 7,
+   "veiculos_3h": 8,
    "na_pauta_desde": "2026-11-05T15:07:27Z",
    "link": "https://redir.folha.com.br/redir/online/equilibrioesaude/rss091/*https://www1.folha.uol.com.br/equilibrioesaude/2026/11/ministerio-da-saude-autoriza-compra-de-20-mil-doses-de-vacina-contra-mpox.shtml",
    "editoria": "saude",
@@ -354,7 +378,7 @@
     "B",
     "D-america_latina"
    ],
-   "veiculos": 25,
+   "veiculos": 26,
    "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-05T19:06:42Z",
    "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/flavio-bolsonaro-nomeia-assessores-para-gabinete-no-senado-apos-fuga-para-os-eua.shtml",
@@ -408,7 +432,6 @@
   {
    "manchete": "Indígena do povo Kariri, Terena e quilombola ingressam pela primeira vez na carreira diplomática brasileira",
    "secoes": [
-    "B",
     "C-nacional",
     "D-terra"
    ],
@@ -423,7 +446,6 @@
     "indigena",
     "quilombola"
    ],
-   "outras_manchetes": 1,
    "ia": {
     "editoria": "gerais",
     "I": 2,
@@ -437,12 +459,43 @@
    }
   },
   {
+   "manchete": "Lula e Janones promovem Live da Vitória nesta quinta-feira (5)",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 15,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-05T15:07:27Z",
+   "link": "https://tvtnews.com.br/janones-lula-live-da-vitoria-quinta-5/",
+   "editoria": "economia",
+   "nota": 5,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Governo de MT destina R$ 27 milhões à compra de 119 máquinas e implementos para agricultura familiar",
+   "secoes": [
+    "A",
+    "C-nacional"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-06T16:07:14Z",
+   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNQ3lKSlNBNzdQblpuX0tjdlRMWWswWHNTX0JRalNnb2lhQlhsX0hOblg3LWkwTWNiLWg3dWtmMGxKN2xnODVuT3J3WkZJcXhmb0lVUjFmTVJoT21USEJIc21aYVBtMGZoTjdhNnpTRjlLMXU1TzRON3FQNnY3YUJwWHNJR2pfdmRtRzhHb2xQQ2VuaWRlTHE1Q2lVTmY4T09YZFNfR3VFakVtQ0dZZ0l4VVhHd2NkYkRfVGhlcVJVMA?oc=5",
+   "editoria": "roca",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "banco"
+   ]
+  },
+  {
    "manchete": "Enem 2026: Amapá tem 34,5 mil inscritos; veja o perfil dos candidatos",
    "secoes": [
     "B"
    ],
-   "veiculos": 14,
-   "veiculos_3h": 10,
+   "veiculos": 9,
+   "veiculos_3h": 6,
    "na_pauta_desde": "2026-11-06T10:06:56Z",
    "link": "https://g1.globo.com/rj/rio-de-janeiro/noticia/2026/11/06/enem-2026-rj-tem-3637-mil-inscritos.ghtml",
    "editoria": "eleicoes",
@@ -451,61 +504,15 @@
    "lente": []
   },
   {
-   "manchete": "País pode chegar a 860 mil casos prováveis de dengue em 2027",
+   "manchete": "Anvisa proíbe fabricação e venda de três produtos de limpeza sem registro",
    "secoes": [
-    "B",
-    "C-nacional"
+    "B"
    ],
-   "veiculos": 5,
+   "veiculos": 7,
    "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-06T16:07:14Z",
-   "link": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/pais-pode-chegar-860-mil-casos-provaveis-de-dengue-em-2027",
-   "editoria": "saude",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Hospital Universitário realiza mutirão com milhares de atendimentos neste sábado, 7",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 15,
-   "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-06T12:08:02Z",
-   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNOVpwWXp2V25VemJqcVdxbHhJeEQxY3c2OE9lYU1Fai1xMXZWR0V5eW13dlIzR05rdzVNaUxkYVdpejR0UUdTdTJuenJ4U1hzVkFsZ3ZGT05XaVNLVjMyX25RbHhFUWNnVWp4TngxdlhiclhhQmdYWlE5ODhKNjFNUjJRUHdObjJGT0ZOXy1pSEdXN3d5dW9pZ0F4a1FBVlM3WHQ1cnZON3NsREp3VHZzOQ?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNS2VYQVcyNjBEY0FWcGEwdDQ5SGF4R2Zvem1OMWdrRUhhS3EtcHlXMk9BY01CaF96VmVMT1BCN0ZGZ0lyZkFPYy15emFGeXVsMDVlRGk4WWRqZ1VmYm5pVFd5U0ZFV056d0pZRTlHMVBiZEx0WTYtZFJYaW1RazY0ZlJCaGZla1E4WlgwaUFYWV8zc0tyU2VNMnhJZm7SAaIBQVVfeXFMUDFWYzY3aURibTc3Tk9DY3dlSWVaZ2dPcWtOVGw0NXZTd2MwM3FoUzFQOUlyQm1wWWNUUVpuS0ZHNDB3ZV9KT0MtcWtoblp5Y19FY1MxclF1bUx6MzdKWTBkOVBrLXNXdmJIb2tiTEZmQVVobXBRNkxrcFVma2JteDcwdldYSmtuN1VvR2tkcHdaZkhoQmpEWHVhTTQ2WmNEU3BR?oc=5",
    "editoria": "saude",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Governo aprova Mapa do Caminho para zerar desmatamento até 2030",
-   "secoes": [
-    "B",
-    "C-pesquisa"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-06T16:07:14Z",
-   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNMGhseUI4Y3B6Q0xpY1dTUGVrWUQ1Vm1WUkk4QTUzbTlxSXZlUFM2V2drQ1U2RXcxMzJQMnBVODVscUhudjdQSERUY0Y4R0IyV3UwSWhEUlRJYW1FdTR4VnlLcE5hQTZ2bUtlV0FSTWJEWmlscjdIVjBuRHl6SGlNcWhNRFlpWEctam1uU1hhazUxNmRwZGRMMFBadl8xU01FQ2twRkFYOA?oc=5",
-   "editoria": "gerais",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "desmatamento"
-   ]
-  },
-  {
-   "manchete": "Secretário do PT defende código de ética para STF e reforma do Judiciário",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-05T19:06:42Z",
-   "link": "https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2026/11/06/secretario-do-pt-defende-codigo-de-etica-para-stf-e-reforma-do-judiciario.htm",
-   "editoria": "politica",
    "nota": 4,
    "esquentou": false,
    "lente": []
@@ -513,8 +520,26 @@
  ],
  "rebaixados": [
   {
-   "manchete": "Alvo de mandado de prisão por tráfico de drogas, presidente do Supremo da Bolívia foge do país",
+   "manchete": "Governo aprova Mapa do Caminho para zerar desmatamento até 2030",
    "veiculos": 7,
+   "veiculos_3h": 7,
+   "na_pauta_desde": "2026-11-06T16:07:14Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 1,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Meta ambiental importante, mas apelo popular moderado para redes sociais.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Alvo de mandado de prisão por tráfico de drogas, presidente do Supremo da Bolívia foge do país",
+   "veiculos": 8,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-05T19:06:42Z",
    "esquentou": false,
@@ -531,44 +556,26 @@
    }
   },
   {
-   "manchete": "Comissão aprova projeto de incentivo à agricultura familiar em compras públicas",
+   "manchete": "Operação investiga comércio ilegal de madeira retirada de terra indígena em MT | HiperNotícias - Você bem informado - HiperNotícias",
    "veiculos": 3,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-05T21:11:02Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "roca",
-    "I": 2,
-    "V": 1,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Comissão aprova incentivo à agricultura familiar em compras públicas.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Governo federal destina R$ 120 milhões para inovação na pesca artesanal e agricultura familiar",
-   "veiculos": 2,
-   "veiculos_3h": 1,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-06T16:07:14Z",
    "esquentou": false,
    "ia": {
     "editoria": "roca",
     "I": 2,
     "V": 1,
-    "P": 2,
+    "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Verba pública destina recursos essenciais para fortalecimento da agricultura familiar e pesca.",
+    "motivo": "Operação contra comércio ilegal de madeira em terra indígena no MT.",
     "soma": 3
    }
   },
   {
    "manchete": "Fachin pede que PGR se manifeste sobre pedidos de soltura de pai e primo de Vorcaro",
-   "veiculos": 55,
+   "veiculos": 57,
    "veiculos_3h": 20,
    "na_pauta_desde": "2026-11-05T22:56:00Z",
    "esquentou": true,
@@ -586,8 +593,8 @@
   },
   {
    "manchete": "Projeto inclui vinagre colonial nas regras aplicadas ao vinho da agricultura familiar",
-   "veiculos": 7,
-   "veiculos_3h": 7,
+   "veiculos": 6,
+   "veiculos_3h": 6,
    "na_pauta_desde": "2026-11-06T14:08:49Z",
    "esquentou": true,
    "ia": {
@@ -603,9 +610,27 @@
    }
   },
   {
+   "manchete": "GDF pede transferência de R$ 2,2 bilhões do pai de Vorcaro para BRB",
+   "veiculos": 12,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-05T22:56:00Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "gerais",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Movimentação financeira envolvendo o Banco Master e o GDF.",
+    "soma": 2
+   }
+  },
+  {
    "manchete": "Papa Leão 14 desembarca na América Latina para viagem de 12 dias menos de um mês após diagnóstico de câncer",
-   "veiculos": 22,
-   "veiculos_3h": 6,
+   "veiculos": 19,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-06T01:07:00Z",
    "esquentou": false,
    "ia": {
@@ -658,8 +683,8 @@
   },
   {
    "manchete": "Leilão do Banco Master tem disputa acirrada por cadeiras de luxo; veja os itens mais cobiçados",
-   "veiculos": 10,
-   "veiculos_3h": 6,
+   "veiculos": 11,
+   "veiculos_3h": 7,
    "na_pauta_desde": "2026-11-06T12:08:02Z",
    "esquentou": false,
    "ia": {
@@ -671,24 +696,6 @@
     "repetido": false,
     "risco": "",
     "motivo": "Leilão de itens de luxo de banco falido sem relevância para os trabalhadores.",
-    "soma": 1
-   }
-  },
-  {
-   "manchete": "A visita do Papa Leão XIV ao Uruguai, Argentina e Peru de 6 a 17 de novembro: uma viagem de escuta e unidade",
-   "veiculos": 21,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-06T01:07:00Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "fora",
-    "I": 0,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Viagem do Papa na América do Sul tem baixo impacto prático.",
     "soma": 1
    }
   }
@@ -741,8 +748,8 @@
     "B",
     "C-nacional"
    ],
-   "veiculos": 6,
-   "veiculos_3h": 5,
+   "veiculos": 7,
+   "veiculos_3h": 6,
    "na_pauta_desde": "2026-11-06T16:07:14Z",
    "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/lutador-de-jiu-jitsu-espanca-mulheres-tenta-agredir-policial-e-e-baleado-e-preso-no-rio-de-janeiro.shtml",
    "editoria": null,
@@ -817,7 +824,7 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 7,
+   "veiculos": 8,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-05T19:06:42Z",
    "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/alvo-de-mandado-de-prisao-por-trafico-de-drogas-presidente-do-supremo-da-bolivia-foge-do-pais.shtml",
@@ -889,14 +896,15 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Governo federal destina R$ 120 milhões para inovação na pesca artesanal e agricultura familiar",
+   "manchete": "Governo de MT destina R$ 27 milhões à compra de 119 máquinas e implementos para agricultura familiar",
    "secoes": [
-    "A"
+    "A",
+    "C-nacional"
    ],
-   "veiculos": 2,
+   "veiculos": 3,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-06T16:07:14Z",
-   "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNdXJheXJwTElZRTBMdEZFZzJQNEZScDdZRnJrdVRBUGdmaVNENkpDQk5MX1VNWE1kdGd1Ulc0V05wZFBkSndJNWxyOUFVYVQ5OFktSFdMVm1QTC1wMVIyOHl2UHNOOTZoUi1SNFhHaXhISVc4VGxIS0JlNTlJT0p4V1kwdDBSSlp1bDdCTWxodXh6UWJyWk1lQURQazJZNVpxWUQ1cDllc1o3VC1pM3dUWVUtM0RKWktfd0VrYUtRRjgwVGM4QnJXWlFDSGRpUQ?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNQ3lKSlNBNzdQblpuX0tjdlRMWWswWHNTX0JRalNnb2lhQlhsX0hOblg3LWkwTWNiLWg3dWtmMGxKN2xnODVuT3J3WkZJcXhmb0lVUjFmTVJoT21USEJIc21aYVBtMGZoTjdhNnpTRjlLMXU1TzRON3FQNnY3YUJwWHNJR2pfdmRtRzhHb2xQQ2VuaWRlTHE1Q2lVTmY4T09YZFNfR3VFakVtQ0dZZ0l4VVhHd2NkYkRfVGhlcVJVMA?oc=5",
    "editoria": "roca",
    "nota": 5,
    "parceiro": {
@@ -931,12 +939,12 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 9,
-   "veiculos_3h": 0,
+   "veiculos": 15,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-05T15:07:27Z",
    "link": "https://tvtnews.com.br/janones-lula-live-da-vitoria-quinta-5/",
    "editoria": "economia",
-   "nota": 4,
+   "nota": 5,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-06T06:05:16Z",
@@ -965,14 +973,14 @@
    "triagem": "candidato"
   },
   {
-   "manchete": null,
+   "manchete": "Rio recebe Finalíssima de futsal com direito a Brasil x Argentina nesta sexta-feira (6)",
    "secoes": [
     "A"
    ],
-   "veiculos": 0,
+   "veiculos": 1,
    "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
+   "na_pauta_desde": "2026-11-06T16:56:55Z",
+   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOMGRXWjZvcjBSMml3dmFYRE9TYkhXWVhkZGpOTzh4VnZiZm1VY3l4bW5ESUx5bWdrOTJmcTF4WkdJcUotWUJSalFkUUk0Zk9DZVpNeWQ1YTJGNGpOREZucC1zYkRPd094RzBNUWkxbC14TzhaQ3B2dGtiT0NLNHFpbkRNNDFzY0dWWmFobXJHLU9pOUtOcjNHdVU1TG91bDVnd0pUcVNHWUJFcVVFSUHSAbIBQVVfeXFMTnRQYTFmbmlYb0ZWdXczQlVfR2JHTnpvcDByelVZdkRQWC1mMm9YbGttX3BlMmUxSzRpY2owa01zQkhwdWI5LS1QS0l0V2wyQjlhMzlDRVFiN1BFRDNDV05WWW42T0dfZVFlQ0VvVnlhV1lmZC03emowYVUyNmRPMVRRZTB1WWdWLWNBb3BhZmRXa1R4NlRCVW8xS19YUFk5Y09yanJOcFNyb3ljd2hHc0hpdw?oc=5",
    "editoria": null,
    "nota": null,
    "parceiro": {
@@ -1003,16 +1011,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "VÍDEOS: Jornal Anhanguera 1ª Edição-TO de quinta-feira, 05 de novembro de 2026",
+   "manchete": "Guia de Programação: a grade dos canais da TV aberta desta sexta-feira, dia 6 de novembro de 2026",
    "secoes": [
     "A"
    ],
-   "veiculos": 6,
+   "veiculos": 4,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-05T12:08:04Z",
    "link": "https://g1.globo.com/pe/petrolina-regiao/edicao/2026/11/06/videos-gr1-de-sexta-feira-6-de-novembro-de-2026.ghtml",
    "editoria": "educacao",
-   "nota": 4,
+   "nota": 3,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-06T13:01:06Z",
@@ -1043,15 +1051,15 @@
  ],
  "descartados_mais_quentes": [
   {
-   "manchete": "Flávio Bolsonaro diz ao NY Times que vai contestar legalmente vitória de Lula e nega ajuda em fuga: 'Levarei para o túmulo'",
-   "veiculos": 73,
+   "manchete": "Flávio Bolsonaro encontra ator de 'Dark Horse' em conferência conservadora no resort de Trump",
+   "veiculos": 60,
    "veiculos_3h": 13,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Flávio Bolsonaro encontra ator de 'Dark Horse' em conferência conservadora no resort de Trump",
-   "veiculos": 60,
-   "veiculos_3h": 16,
+   "manchete": "Flávio Bolsonaro diz ao NY Times que vai contestar legalmente vitória de Lula e nega ajuda em fuga: 'Levarei para o túmulo'",
+   "veiculos": 58,
+   "veiculos_3h": 7,
    "motivo": "sem editoria"
   },
   {
@@ -1061,27 +1069,33 @@
    "motivo": "sem editoria"
   },
   {
+   "manchete": "Lula fará 1ª reunião sobre Ministério da Segurança na sexta",
+   "veiculos": 34,
+   "veiculos_3h": 8,
+   "motivo": "sem editoria"
+  },
+  {
    "manchete": "Vitória democrata nos EUA pode aumentar pressão sobre Flávio e Eduardo Bolsonaro",
-   "veiculos": 35,
+   "veiculos": 34,
    "veiculos_3h": 3,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Lula fará 1ª reunião sobre Ministério da Segurança na sexta",
+   "manchete": "TRF3 libera três sites de apostas e chama MP de “confisco”",
    "veiculos": 33,
-   "veiculos_3h": 8,
+   "veiculos_3h": 14,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Lula chama Flávio de ‘pé-frio’ após derrota de Trump",
+   "veiculos": 25,
+   "veiculos_3h": 4,
    "motivo": "sem editoria"
   },
   {
    "manchete": "Moradores do campo receberão moradias do Minha Casa, Minha Vida",
    "veiculos": 20,
    "veiculos_3h": 5,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "TRF3 libera três sites de apostas e chama MP de “confisco”",
-   "veiculos": 19,
-   "veiculos_3h": 3,
    "motivo": "sem editoria"
   },
   {
@@ -1092,14 +1106,8 @@
   },
   {
    "manchete": "De olho na COP31, Lula convida Janones para fazer lives durante viagem à Turquia",
-   "veiculos": 17,
-   "veiculos_3h": 9,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Justiça do DF rejeita ação contra Bolsonaro e Wal do Açaí por funcionária fantasma",
-   "veiculos": 12,
-   "veiculos_3h": 8,
+   "veiculos": 14,
+   "veiculos_3h": 7,
    "motivo": "sem editoria"
   }
  ]
