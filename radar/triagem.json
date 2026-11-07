@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-07T11:07:23Z",
- "pauta_quando": "2026-11-07T11:07:22Z",
+ "quando": "2026-11-07T13:07:30Z",
+ "pauta_quando": "2026-11-07T13:07:29Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,22 +9,48 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 16,
+  "avaliados_agora": 20,
   "falhas_antes": null,
-  "pedidos_hoje": 6
+  "pedidos_hoje": 7
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 137,
- "novos_3h": 7,
- "esquentaram": 2,
+ "total_assuntos": 147,
+ "novos_3h": 8,
+ "esquentaram": 4,
  "candidatos": [
+  {
+   "manchete": "Senado do Paraguai rejeita pedido de Peña para adiar defesa e retoma processo de impeachment",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 73,
+   "veiculos_3h": 27,
+   "na_pauta_desde": "2026-11-06T21:07:01Z",
+   "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/presidente-do-paraguai-pede-mais-tempo-para-apresentar-defesa-no-processo-de-impeachment-no-senado.shtml",
+   "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 3,
+    "V": 3,
+    "P": 3,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Crise política no Paraguai com processo de impeachment e repercussão regional.",
+    "soma": 6
+   }
+  },
   {
    "manchete": "Crisis en Paraguay: Santiago Peña, en arresto domiciliario tras ser destituido por el Congreso en juicio político",
    "secoes": [
     "B",
     "D-america_latina"
    ],
-   "veiculos": 39,
+   "veiculos": 40,
    "veiculos_3h": 5,
    "na_pauta_desde": "2026-11-07T02:02:03Z",
    "link": "https://www.bbc.co.uk/mundo/live/c54g11vvvemkt?at_medium=RSS&at_campaign=rss",
@@ -45,28 +71,55 @@
    }
   },
   {
-   "manchete": "Senado do Paraguai retoma sessão de impeachment de Santiago Peña, que promete se defender 'com argumentos e provas'",
+   "manchete": "INSS muda regras do auxílio-doença sem perícia e cria reanálise após benefício negado",
    "secoes": [
-    "B",
-    "D-america_latina"
+    "B"
    ],
-   "veiculos": 72,
-   "veiculos_3h": 8,
-   "na_pauta_desde": "2026-11-06T21:07:01Z",
-   "link": "https://www.rfi.fr/br/am%C3%A9ricas/20261106-senado-do-paraguai-retoma-sess%C3%A3o-de-impeachment-de-santiago-pe%C3%B1a-que-promete-se-defender-com-argumentos-e-provas",
-   "editoria": "america_latina",
-   "nota": 5,
+   "veiculos": 28,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-06T10:06:56Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/06/inss-muda-regras-do-auxilio-doenca-sem-pericia-e-cria-reanalise-apos-beneficio-negado.ghtml",
+   "editoria": "economia",
+   "nota": 6,
    "esquentou": false,
+   "lente": [
+    "inss",
+    "auxilio"
+   ],
+   "ia": {
+    "editoria": "saude",
+    "I": 3,
+    "V": 2,
+    "P": 3,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Mudança no INSS afeta direitos de trabalhadores que dependem de benefício.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Fiocruz alerta para alta no número de casos de síndrome respiratória por metapneumovírus, rinovírus e Covid-19",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 12,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-06T21:07:01Z",
+   "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQU2hGOVlOQUFmVGlQY2RObkZkU3BBWC1HVXNHZjQzZW0wcGNIM2FNTHZwWE0xbDE1cjRORng4TVpnTm9OTmRsQU9yVllIc0MwSkZGMUN1YlVHVHQ1N1lJWXJtVEphWEhGdlNRQ1Uzem9pcWNEcEhieVhvTjhWa1F5b2NPRy05Y1lGUk5KcDc2MmlfbG5zWXZneDAzMkpZUmt5ejZOZjdaRUJiM09kWEFJMEdIMjNNZ0Y4N2ZGd1Z0LURnbUJVVmlpZi03SEpGZWVjdUcySUJ6S2xGYmFoQ1B0WDlCV1NpMnZ3c05qQnVGWGtIZ01GX3hiQtIBhwJBVV95cUxQRzRXMXJtN0s4bmp5TUZGckVXN2lWNmFIa1BlTnVXYzJRc0hnTXZUR3J2cWFmcjFGeGFCUnNibFNMNWlNRXhPc3B5N0dnYlJaaUYybVlWUFJwVXBmblR6T2VJWjFZV2JnUVpNazRucTNlWVYyWHBLWmtDb0pmQS0zMG5vXzJkMnphaEdBQTlKblc1RVFLWXhlTlBRbFdqRkhYT0h6NXdzbEQydF9YOUhqX0ZOUzZsUlZLYXdhWUJWd2tQV3pURFA1OUZldzhnUkdYdEJoYnJpMDNZblRLMmt0UG1Ud0NuZ2hVeWJadTY5amRtdGlVYXY4c3d0U0c4U00yZTdTY0xDNA?oc=5",
+   "editoria": "saude",
+   "nota": 4,
+   "esquentou": true,
    "lente": [],
    "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 3,
+    "editoria": "saude",
+    "I": 3,
+    "V": 2,
     "P": 2,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Impeachment no Paraguai atrai forte interesse internacional.",
+    "motivo": "Alerta da Fiocruz sobre alta de doenças respiratórias afeta saúde pública.",
     "soma": 5
    }
   },
@@ -75,25 +128,25 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 3,
-   "veiculos_3h": 2,
+   "veiculos": 6,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-07T11:07:22Z",
    "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPV3RLTVhveExmOEtyZVBzbWROdElqb3ktT1Q2OHF3N0pKZ3VvVnVCekNaXzQwN3lVb3EwaW5nTjFGaHdaWFVkcjRlbS1FbUFzUWZVZjVETFpidzdtSHdSNUVuTUR5bk9ibnlrMUpUSXd6c081RUdJVlZrLUxHdDlHRGNsSlJIRVB5UEllc1N1eko1NzlKRTJ4djBGQTlmN0ItVGszN1p1ZjA2dzNlQTFTbzJ3LWh1R28?oc=5",
    "editoria": "politica",
-   "nota": 3,
-   "esquentou": false,
+   "nota": 5,
+   "esquentou": true,
    "lente": [
     "aposentad"
    ],
    "ia": {
-    "editoria": "politica",
+    "editoria": "economia",
     "I": 3,
     "V": 2,
     "P": 2,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Decisão do STF sobre idade mínima de aposentadoria afeta direitos trabalhistas.",
+    "motivo": "Decisão do STF sobre aposentadoria especial afeta direitos trabalhistas.",
     "soma": 5
    }
   },
@@ -125,125 +178,69 @@
    }
   },
   {
-   "manchete": "Cesta básica em Caçador atinge novo recorde de preço em outubro",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-07T11:07:22Z",
-   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPQWZhQko5OE1uOWxtenA5Z1c2Z3g4ZTZyWGtzRjFOVUFDbDMtZFNOQkM2djBjQ2l0RGhmQVdqbzB6cUhKMnZud2F5ZG1fdlZOb1lBZUduOElqRmRVWkoxT0h3ZUpWcWRWcHlNVk5oWlVCdTQ2cXR4SmZybFlaZ0NrdHdvNGJXcXNtRTZ0YlRpVnZRZw?oc=5",
-   "editoria": "roca",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "cesta basica"
-   ],
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Preço recorde da cesta básica afeta o bolso da classe trabalhadora.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Meta diz ao TSE que não favoreceu Flávio Bolsonaro em 2026",
+   "manchete": "AGU vai recorrer de decisão da Justiça de SP que autoriza três bets a funcionar após proibição determinada pelo governo federal",
    "secoes": [
     "B"
    ],
-   "veiculos": 5,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-07T08:56:40Z",
-   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPdEdMSHVueC1WSy1RdkphZWFfYmd2WnlXTDhtTzZZN2ZyYnJNVUl5MW9rY3JHbGprRmwxaS0yVlpKNlF1ZmNWM2xZd3Zvb2VneGxFTnFrOVRaTEdfN3NNSER2WFJFTVdnMmpvYnc0bms4WG5sQ2pEbTBnUk5KdVlIVTRYT2Qxck1lUjJYLTd6bkpJVWs3TnA2NExGc1NyNFRGQWdXYktKa2t4WFlwZHNjRWJZRnI4eGhW?oc=5",
-   "editoria": "eleicoes",
-   "nota": 5,
+   "veiculos": 44,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-11-06T16:07:14Z",
+   "link": "https://www.gazetadopovo.com.br/economia/desembargadora-libera-tres-bets-e-chama-proibicao-de-lula-de-confisco/",
+   "editoria": "politica",
+   "nota": 4,
    "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ],
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Envolve redes sociais, regulação eleitoral e a família Bolsonaro.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Debate sobre juros tem tudo a ver com mobilização juvenil e popular que levou Lula à vitória, diz André Singer",
-   "secoes": [
-    "B",
-    "C-nacional"
-   ],
-   "veiculos": 2,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-07T11:07:22Z",
-   "link": "https://www.bbc.com/portuguese/articles/cr62yv4gjd97o?at_medium=RSS&at_campaign=rss",
-   "editoria": "eleicoes",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [
-    "juros"
-   ],
-   "ia": {
-    "editoria": "economia",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Análise econômica vinculando taxa de juros à base popular de sustentação.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Enem 2026: Prefeitura do Rio oferece transporte gratuito a estudantes inscritos nos dias de prova",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 21,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-06T10:06:56Z",
-   "link": "https://g1.globo.com/sp/ribeirao-preto-franca/noticia/2026/11/07/enem-2026-ribeirao-preto-sp-tera-transporte-publico-gratuito-nos-dias-de-prova.ghtml",
-   "editoria": "educacao",
-   "nota": 5,
-   "esquentou": true,
    "lente": [],
    "ia": {
-    "editoria": "educacao",
+    "editoria": "politica",
     "I": 2,
     "V": 2,
-    "P": 1,
+    "P": 2,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Prefeitura do Rio oferece transporte gratuito para o Enem 2026.",
+    "motivo": "Disputa judicial sobre funcionamento de bets envolve governo federal.",
     "soma": 4
    }
   },
   {
-   "manchete": "Primeiro dia do Enem 2026 tem reforço no transporte público com 23 ônibus no próximo domingo (8/11)",
+   "manchete": "O que é o Ueno Bank e como ele desencadeou a crise que derrubou o presidente do Paraguai",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 17,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-06T21:07:01Z",
+   "link": "https://midianinja.org/opiniao/como-a-queda-do-banco-ueno-no-paraguai-derrubou-o-governo-do-presidente-santiago-pena/",
+   "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "outras_manchetes": 1,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Contexto do banco envolvido na queda do governo paraguaio.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Petrolina reforça transporte público nos dias de aplicação do Enem",
    "secoes": [
     "B"
    ],
-   "veiculos": 13,
-   "veiculos_3h": 4,
+   "veiculos": 69,
+   "veiculos_3h": 37,
    "na_pauta_desde": "2026-11-06T10:06:56Z",
    "link": "https://g1.globo.com/educacao/enem/2026/ao-vivo/enem-2026-gabarito-correcao-das-questoes-videos-cadernos-prova.ghtml",
    "editoria": "educacao",
    "nota": 5,
-   "esquentou": false,
+   "esquentou": true,
    "lente": [
     "transporte publico"
    ],
@@ -255,22 +252,22 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Reforço no transporte público para o Enem ajuda estudantes, mas foco é local.",
+    "motivo": "Reforço no transporte para o Enem garante acesso à prova.",
     "soma": 4
    }
   },
   {
-   "manchete": "Diputados recortan al presupuesto del INE, en total, 6 mil millones de pesos para las elecciones del 2027",
+   "manchete": "Quem é a filha do presidente do Paraguai que usou camiseta com a frase 'Taxem os pobres' após renúncia do pai",
    "secoes": [
     "B",
     "D-america_latina"
    ],
-   "veiculos": 5,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-07T08:56:40Z",
-   "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOdDE1Slo0MUVRa1JYdFJkNEhoQXhuc2xtX1pZV0FxdjNOZHllV1RwNDFkcXhTS2FxWS1IYkJyaHQzTkk5UXBIM0lUZlJVOUY5SlE1dkFxdkFUcUFnWmU2WGp3djlxU2pFS0tLRXRlQTJ1RXJRZWFaa0F0X3ZFN3M2SFhvWERaX2ZXZlFZUktWX2lSREk3bkJtaUlScktlcVV5ZHV5N2JUMmczdjYtcWNzWFYtREN2eFJyaW5uMEk0MTg0TU1RaW1vWjlIWUY5SXl5UkxBYkR1SWtkekppOFhmNVFrU1Zqa2p2cWxkOFFBc2hjQzhiRjJWQmdzS3YzQ2FBSHc?oc=5",
+   "veiculos": 19,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-06T21:07:01Z",
+   "link": "https://tvtnews.com.br/filha-presidente-paraguai-taxem-pobres-impeachment/",
    "editoria": "america_latina",
-   "nota": 4,
+   "nota": 5,
    "esquentou": false,
    "lente": [],
    "ia": {
@@ -281,78 +278,148 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Corte de orçamento eleitoral no México. Pouco impacto direto no Brasil.",
+    "motivo": "Polêmica com filha de ex-presidente paraguaio após queda do governo.",
     "soma": 4
    }
   },
   {
-   "manchete": "Lula se irrita com vídeo sobre brasileiros que passam fome exibido na TV: “A Globo está mentindo”",
+   "manchete": "Goiana é a primeira quilombola aprovada em concurso para diplomata - PAIPEE -",
    "secoes": [
     "D-terra"
    ],
-   "veiculos": 1,
+   "veiculos": 13,
    "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-07T11:07:22Z",
-   "link": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxPdVNPMk5oV3Fpclp2aVNXUVBPNE1ZMklWdWFIV3ZfOWNYMmc1MXhBN1o2VXBKbUw2c1VySnNwWjhZNU5TaUJlVVJLSTVFQlVRUDlXMlphU2MzYzlVOV91Nmx6MnNUczN2eWJScVFsbHlod0Y0endUMjUwU290b1BobTJ5WkEyX2VHREVkenh5Y3lpV2tQa1cyZzFNWVp6SWdDOTRRUFpNTXhRNWVJcHVzMUxweVdWbVFfUUFweFVFWHpCeFFoQjlqMGdwb0YtNlF4Yk1zOHowemlqdVZKNHNEMk5QWlhHYkszbURtSlFRNHFYWGp0aU5oNzBJd25pSjJ1Z1puOC0wX2g?oc=5",
+   "na_pauta_desde": "2026-11-07T13:07:29Z",
+   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNcUdoZXlnUHpqZm5INjE0V0xCYkFPOWxUV1NRWFcwYllrYVZ0VkFYd1QzbzhVU1QyT3BOYWtUZFhPQ0p4enZOYVJOZjhkLWs1anRRNzdSeDJBRkRoaW1BVVl0MmxxU2JvdWpnR1VIYXY5WmhwQllQREJfa3Z6T3ltYWViek5vclNYM3RvZ24xRmhvRkU3VVVYbDhwWDJpWGt5ZXc?oc=5",
    "editoria": "roca",
-   "nota": 3,
+   "nota": 5,
    "esquentou": false,
    "lente": [
-    "fome"
+    "quilombola"
    ],
    "ia": {
-    "editoria": "gerais",
+    "editoria": "educacao",
     "I": 2,
     "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Crítica de Lula à cobertura da imprensa sobre a fome.",
+    "motivo": "Vitória histórica com primeira quilombola aprovada para diplomacia.",
     "soma": 4
    }
   },
   {
-   "manchete": "Estudantes terão transporte público gratuito em Salvador nos dois domingos do Enem",
+   "manchete": "Treta por rango vira humilhação em Restaurante Comunitário: \"Morta de fome\"",
    "secoes": [
-    "B"
-   ],
-   "veiculos": 17,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-06T10:06:56Z",
-   "link": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-11/enem-cidades-de-seara-e-canoinhas-sc-tem-locais-de-prova-alterados",
-   "editoria": "educacao",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "transporte publico"
-   ],
-   "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 2,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Estudantes terão transporte gratuito no Enem em Salvador.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Fome noturna atinge um terço das pessoas, indica estudo",
-   "secoes": [
+    "C-nacional",
     "D-terra"
    ],
-   "veiculos": 1,
+   "veiculos": 3,
    "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-07T11:07:22Z",
-   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPY1BRaXNjdTZuMjRvS2RSdm1odjlUX2thUHVqN2JsVGhoS1hGUUJ1VlVwY20xZ1FzS1JlZzVSZVJMNTZQS1lwdHduZkdJTFlVZklHUHg1X256SjhwSWhTTzNYVFNocU8zbjJzMUNOVnBGeV9heE14aTYtYlFsVW5odXpPUGdsanplUmZTWGEyVThNUXdVLVpYVDhaamM?oc=5",
+   "na_pauta_desde": "2026-11-07T13:07:29Z",
+   "link": "https://www.metropoles.com/distrito-federal/na-mira/treta-por-rango-vira-humilhacao-em-restaurante-comunitario-morta-de-fome",
    "editoria": "roca",
-   "nota": 3,
+   "nota": 4,
    "esquentou": false,
    "lente": [
     "fome"
+   ]
+  },
+  {
+   "manchete": "Ibama multa fazendas em R$ 1,4 milhão por uso de agrotóxicos ilegais e vencidos em região paradisíaca de MS",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-07T08:56:40Z",
+   "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPUUwzNGdQWmlLNk05MGFFaGxlTVhtbFJwam9JQ0wtTjc0NlIzdy1kMG4yYm9Qd01tVklWVks5dkxIRU5wZGJmdHZQeU5OSElOcUdiOVdwNmRmLW1aSmp6SjBteTNlaGR2b2dab1lPOU9td2dZOWVIS2pFakdWZFVia1BqRkI1THhWV2h2RW9SdmJ1VEMtUmJOU09FYTN5V3huTHoxVDdNdTVqZ3NkQ0F2MU1OdlJLRmM2c09pU1N2RG91RUVMbTFWb1VaUEIyTVRLRE9YeDZ0aTFwVVhkRXEwbjFWbXhDMHczUVNldEIzR05YR3JVNjE2VXVaZ2FwcndNYjdj0gGSAkFVX3lxTE1EZDZkZlJ3U1VYRUlUY0hqU05SVDQzWDlZd1VYYXktcDRoaXRyNUVSWFV0RS1QRXlrVk5hTzRtUXNzdWhpTEg5a3ZPcU13azVUQTJTT01PcW1jV3NIaDdzTU1Bck5Pak1FOTB6Y3NvMUhuUDZVUDBOWjJsWGhaa3JjSFhoZnk5WEZhTmtobzdiS0U2aUtPVlMzSzFobDhtOE9FNDljSDdncmVsc0NRNmRlU2tBVElvU29ldGZCQkRldlFmb2pxcHZxWjR5NlMtbHFTQm12THBpa2ZldjlMczctQ3J4aDVWOUtkQkdhdU5QTVJpajNlVXZQa2ZNQklCNmRHbXp1ekE3cFVSbjBzcXRMeVE?oc=5",
+   "editoria": "roca",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "agrotoxic"
+   ]
+  },
+  {
+   "manchete": "Maricá renova frota de ônibus do Tarifa Zero",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-07T13:07:29Z",
+   "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE83dW9HcmtQRGtzb1BwbEpJcmFxRE8xQ3VyU004ZEEzV3htYmZxTUNYcjNHQ1gzRWpKajVTcUV5ZENRNzNoR0t5SERrMVE0cUdrcThNUVd3T0JYMjNmOS1oRXhFRjVHRFNwQ2o5ZVdDVVBPT0xNOWE0?oc=5",
+   "editoria": "economia",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "tarifa zero"
+   ]
+  },
+  {
+   "manchete": "Clínica-Escola abre vagas para atendimentos de saúde com taxa social em Caruaru",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-07T13:07:29Z",
+   "link": "https://g1.globo.com/pe/caruaru-regiao/noticia/2026/11/07/clinica-escola-abre-vagas-para-atendimentos-de-saude-com-taxa-social-em-caruaru.ghtml",
+   "editoria": "saude",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "vagas"
+   ]
+  },
+  {
+   "manchete": "Proposta assegura exame periódico no SUS para pessoas com diabetes",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-07T13:07:29Z",
+   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPbHhZZmE0bGZkQjhMUVByUUlVQ0dnT01nZldMdFA0SnRvd0FPdFA4bXNMWVY3Z3dqYk1rV0NCZDJMTV8xdzdzYWJYSVlwQUJWWk9MVkdkQVQ0QmR0UTlLdjJYdTJaVUxjbXJXU1V3THlVSzlkam9iZGpPRjZuVUtwbjAyZFp3ZkVQdTZXZXNNQ1k5NExSUEZTdXlHVFRVa0xFZ3BjNnJBQ0NXUUlaemt6UA?oc=5",
+   "editoria": "saude",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "sus"
+   ]
+  },
+  {
+   "manchete": "Incêndio em oficina deixa uma pessoa ferida em Resende",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-07T13:07:29Z",
+   "link": "https://g1.globo.com/rj/sul-do-rio-costa-verde/noticia/2026/11/07/incendio-em-oficina-deixa-uma-pessoa-ferida-em-resende.ghtml",
+   "editoria": "gerais",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "incendio"
+   ]
+  },
+  {
+   "manchete": "Água congelada, fuso horário e Chico Buarque: tudo o que os inscritos no Enem de MT precisam saber antes da prova",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-07T13:07:29Z",
+   "link": "https://g1.globo.com/mt/mato-grosso/noticia/2026/11/07/agua-congelada-fuso-horario-e-chico-buarque-tudo-o-que-os-inscritos-no-enem-de-mt-precisam-saber-antes-da-prova.ghtml",
+   "editoria": "educacao",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "congel"
    ]
   },
   {
@@ -365,53 +432,31 @@
    "na_pauta_desde": null,
    "link": null,
    "editoria": "gerais",
-   "nota": 1,
+   "nota": 2,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "educacao",
+   "nota": 2,
    "esquentou": false,
    "lente": []
   }
  ],
  "rebaixados": [
   {
-   "manchete": "Lucia Borges Maggi: A bilionária que transformou o agronegócio",
-   "veiculos": 1,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-07T11:07:22Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "roca",
-    "I": 2,
-    "V": 1,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Perfil de bilionária do agronegócio. Aborda concentração de terra e riqueza.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Ibama multa fazendas em R$ 1,4 milhão por uso de agrotóxicos ilegais e vencidos em região paradisíaca de MS",
-   "veiculos": 2,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-07T08:56:40Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "roca",
-    "I": 2,
-    "V": 1,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Ibama multa fazendas por agrotóxicos ilegais.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Presidência do Senado: Reinaldo declara apoio a Marinho e Tereza ganha respaldo de líder do PL",
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-07T08:56:40Z",
+   "manchete": "Gonet pede ao STF que suspenda todas as ações sobre bets no Brasil",
+   "veiculos": 16,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-11-07T00:07:04Z",
    "esquentou": false,
    "ia": {
     "editoria": "politica",
@@ -421,14 +466,122 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Disputa de poder na presidência do Senado.",
+    "motivo": "Procuradoria pede suspensão de ações sobre bets no STF.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Enem tem recorde de inscritos concluintes do ensino médio com desafio de garantir participação",
+   "veiculos": 7,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-06T16:07:14Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "educacao",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Recorde de inscritos no Enem mobiliza estudantes da rede pública.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "TSE abre três novas investigações eleitorais contra Flávio Bolsonaro",
+   "veiculos": 7,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-07T02:02:03Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "TSE abre novas investigações eleitorais contra Flávio Bolsonaro.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Operação Lenha Fria combate extração ilegal de madeira na Terra Indígena Sete de Setembro em Rondônia",
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-07T13:07:29Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Operação contra extração ilegal de madeira protege territórios indígenas.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Pesquisa do Procon aponta aumento de 5,02% no preço da cesta básica em novembro em São Bento do Sul",
+   "veiculos": 6,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-07T11:07:22Z",
+   "esquentou": true,
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Alta na cesta básica pesa no orçamento das famílias.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Operação investiga comércio ilegal de madeira retirada de terra indígena em MT | HiperNotícias - Você bem informado - HiperNotícias",
+   "veiculos": 4,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-06T16:07:14Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Operação contra comércio ilegal de madeira em terra indígena no MT.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Primeira-dama Lia Freitas lança hoje a campanha Natal Ceará Sem Fome 2026",
+   "veiculos": 4,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-06T16:56:55Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Campanha de combate à fome no Ceará aborda segurança alimentar.",
     "soma": 3
    }
   },
   {
    "manchete": "Candidatos podem consultar local de prova do Enem por ligação gratuita",
-   "veiculos": 9,
-   "veiculos_3h": 5,
+   "veiculos": 10,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-07T02:02:03Z",
    "esquentou": false,
    "ia": {
@@ -444,110 +597,38 @@
    }
   },
   {
-   "manchete": "Papa Leão 14 inicia viagem de 12 dias por Uruguai, Argentina e Peru",
-   "veiculos": 61,
+   "manchete": "León XIV comienza su gira por Sudamérica: Uruguay, el primer destino",
+   "veiculos": 35,
+   "veiculos_3h": 9,
+   "na_pauta_desde": "2026-11-06T21:07:01Z",
+   "esquentou": true,
+   "ia": {
+    "editoria": "gerais",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Viagem do Papa à América do Sul tem baixa repercussão direta trabalhista.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Papa Leão XIV inicia missão estratégica em uma América do Sul cada vez menos católica",
+   "veiculos": 54,
    "veiculos_3h": 6,
    "na_pauta_desde": "2026-11-07T09:16:45Z",
    "esquentou": false,
    "ia": {
-    "editoria": "america_latina",
+    "editoria": "gerais",
     "I": 1,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Visita do Papa à região gera baixa repercussão política direta no Brasil.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Presidente da Suprema Corte da Bolívia deixa o país após ordem de prisão",
-   "veiculos": 4,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-07T11:07:22Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Crise institucional na Bolívia com fuga de autoridade judicial.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "BH recebe maior festival de quadrinhos da América Latina",
-   "veiculos": 3,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-07T11:07:22Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "educacao",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Presença do MEC em festival de quadrinhos. Impacto cultural limitado.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Enem: psicóloga orienta estudantes a controlar a ansiedade antes da prova",
-   "veiculos": 6,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-06T10:06:56Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "educacao",
-    "I": 1,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Dicas de psicologia para o Enem são de serviço e apelo genérico.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Papa garante estar \"em forma\" ao iniciar, no Uruguai, giro pela América do Sul",
-   "veiculos": 5,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-07T11:07:22Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Declaração do Papa sobre sua saúde na América do Sul.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Aida Fazendeiro é a nova presidente do Banco Alimentar Contra a Fome da Cova da Beira",
-   "veiculos": 2,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-07T11:07:22Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "roca",
-    "I": 1,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Nomeação de banco de alimentos em Portugal/exterior foge do foco nacional.",
+    "motivo": "Duplicado internacional sobre viagem do Papa.",
     "soma": 2
    }
   }
@@ -573,14 +654,33 @@
    "triagem": "candidato"
   },
   {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 2,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-07T10:30:06Z",
+    "legenda": "Pela primeira vez em quase nove décadas, desde 1937, as autoridades ambientais de Ohio não emitiram licenças públicas para a caça do galo-da-campina (ruffed gro",
+    "link": "https://www.instagram.com/p/Dfb-GvFiWi6/"
+   },
+   "triagem": "candidato"
+  },
+  {
    "manchete": "Fome oculta causa 50 mil mortes por ano na Alemanha",
    "secoes": [
     "A"
    ],
-   "veiculos": 2,
+   "veiculos": 3,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-06T16:07:14Z",
-   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPaGNMME9GNUpCN3dkZ0dvRkVzRDRQYmhrek1YV0JEU3dMWHRjODNMUjN0Vkp1WU1mYnREX2x3WkhEaGxMTllLVFpkcjZlYUxobmxTWTZBbXdtS3NmV1otY0dJX25YUTVoZVIzREg1ZEpWcUtKMFRETHliM2IzZjhCNlNOQ2dad2JCeXJuYW1ZT1DSAZABQVVfeXFMUElFel85S0lKc1YyLV9zQ1EzUmxfTTR6bGJGZ0ZzYW5zR3NoYnhKaTF1QlBHcnYzQ280WFBucE9oYmZhN0p4M2FBbnVKYjZTOVQ3NVFHcHExbnhZT3FxSU42SjJMLW5HZ0FLcnRzbFJHZ1NqZ1AtZVM4WnY3Q2Z5NTJ0UGlxbm5FaXdfRXAwankx?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNWjQzdnV2bndZaC1ycWJjX2U4NVNwSFVmMGh0Nnd1dmthTXBwcl85el8wV0hEczVYbU9lRmRoSEg0M3FGcG9LOVh4elQ2QVVwRWJjbEVHY1V5OHkyd0hkV1Jsc1M2WXAtNkl1UGNsR19WTlFYVTdLeFR1SHgxNXJRZWxIeWM1OV9Pem85cFY1R2E2NHlWOS01UzdYcDExUklTV1htUlBtRHZJaXlsYTJjcVFEdVFfUdIBtgFBVV95cUxNWjQzdnV2bndZaC1ycWJjX2U4NVNwSFVmMGh0Nnd1dmthTXBwcl85el8wV0hEczVYbU9lRmRoSEg0M3FGcG9LOVh4elQ2QVVwRWJjbEVHY1V5OHkyd0hkV1Jsc1M2WXAtNkl1UGNsR19WTlFYVTdLeFR1SHgxNXJRZWxIeWM1OV9Pem85cFY1R2E2NHlWOS01UzdYcDExUklTV1htUlBtRHZJaXlsYTJjcVFEdVFfUQ?oc=5",
    "editoria": null,
    "nota": null,
    "parceiro": {
@@ -609,68 +709,87 @@
     "link": "https://www.instagram.com/p/Dfb6rS-DOND/"
    },
    "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "educacao",
+   "nota": 2,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-07T11:00:06Z",
+    "legenda": "Um estudo conduzido por pesquisadores da Universiti Malaysia Terengganu (UMT) e publicado no periódico científico Regional Studies in Marine Science revelou que",
+    "link": "https://www.instagram.com/p/DfcBifUFE2K/"
+   },
+   "triagem": "candidato"
   }
  ],
  "descartados_mais_quentes": [
   {
-   "manchete": "Trump escolhe linha-dura Stephen Miller como novo chefe de gabinete",
-   "veiculos": 66,
-   "veiculos_3h": 7,
+   "manchete": "Trump anuncia que Stephen Miller, linha-dura anti-imigração, será seu novo chefe de gabinete",
+   "veiculos": 71,
+   "veiculos_3h": 9,
    "motivo": "sem editoria"
   },
   {
    "manchete": "Flávio admite não ter prova de fraude, critica volta de Jair ao Brasil e diz querer 2030 assim como Tarcísio",
-   "veiculos": 34,
-   "veiculos_3h": 10,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Dino é sorteado relator e marca audiência sobre transição para o fim da escala 6×1",
-   "veiculos": 32,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "“No fue una victoria solo para Brasil, fue una victoria para el mundo”: Lula vinculó su triunfo con las derrotas de Trump y Netanyahu",
-   "veiculos": 32,
-   "veiculos_3h": 2,
+   "veiculos": 39,
+   "veiculos_3h": 4,
    "motivo": "sem editoria"
   },
   {
    "manchete": "Prédio de 4 andares desaba no Brás e 35 pessoas conseguem escapar",
-   "veiculos": 20,
-   "veiculos_3h": 3,
+   "veiculos": 21,
+   "veiculos_3h": 6,
    "motivo": "sem editoria"
   },
   {
    "manchete": "Venezuelano é detido com armas perto da Casa Branca e diz que pretendia matar Trump",
-   "veiculos": 13,
-   "veiculos_3h": 5,
+   "veiculos": 20,
+   "veiculos_3h": 8,
    "motivo": "fora: crime ou tragedia (matar)"
   },
   {
-   "manchete": "Líder de seita acusado pela morte de 190 crianças é condenado a 200 anos de prisão",
-   "veiculos": 11,
-   "veiculos_3h": 0,
-   "motivo": "fora: crime ou tragedia (morte)"
+   "manchete": "LIVE COVERAGE: First practice for the Sao Paulo GP",
+   "veiculos": 18,
+   "veiculos_3h": 5,
+   "motivo": "sem editoria"
   },
   {
-   "manchete": "Stephen Miller, architect of Trump’s immigration crackdown, to become White House chief of staff",
+   "manchete": "Lotomania 2996 hoje (sexta-feira, 6/11) pode pagar R$ 3,2 milhões",
+   "veiculos": 17,
+   "veiculos_3h": 2,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Atlético x Grêmio: onde assistir, prováveis escalações e mais da semifinal da Copa do Brasil",
+   "veiculos": 13,
+   "veiculos_3h": 5,
+   "motivo": "fora: esporte (gremio)"
+  },
+  {
+   "manchete": "Prédio no Brás: risco de novo desabamento limita buscas por vítimas",
+   "veiculos": 9,
+   "veiculos_3h": 4,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "GP de São Paulo de F1: veja a previsão do tempo para Interlagos no fim de semana",
+   "veiculos": 9,
+   "veiculos_3h": 4,
+   "motivo": "fora: esporte (f1)"
+  },
+  {
+   "manchete": "UE rejeita \"grande\" acordo de segurança de Trump com a Rússia e \"toda a Europa\"",
    "veiculos": 9,
    "veiculos_3h": 3,
    "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Trump promete um acordo de segurança europeu \"grande e extraordinário\" após reunião com enviado de Putin. Os aliados estão perplexos",
-   "veiculos": 9,
-   "veiculos_3h": 2,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "LIVE COVERAGE: First practice for the Sao Paulo GP",
-   "veiculos": 9,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
   }
  ]
 }
