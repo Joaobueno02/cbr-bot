@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-07T23:43:49Z",
- "pauta_quando": "2026-11-07T23:43:45Z",
+ "quando": "2026-11-08T00:00:21Z",
+ "pauta_quando": "2026-11-08T00:00:17Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,14 +9,14 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 16,
+  "avaliados_agora": 6,
   "falhas_antes": null,
-  "pedidos_hoje": 16
+  "pedidos_hoje": 1
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 178,
- "novos_3h": 10,
- "esquentaram": 3,
+ "total_assuntos": 174,
+ "novos_3h": 12,
+ "esquentaram": 4,
  "candidatos": [
   {
    "manchete": "Justiça do Paraguai decreta prisão preventiva de Santiago Peña após impeachment",
@@ -24,8 +24,8 @@
     "B",
     "D-america_latina"
    ],
-   "veiculos": 97,
-   "veiculos_3h": 49,
+   "veiculos": 66,
+   "veiculos_3h": 35,
    "na_pauta_desde": "2026-11-06T21:07:01Z",
    "link": "https://www1.folha.uol.com.br/mundo/2026/11/justica-do-paraguai-decreta-prisao-preventiva-de-santiago-pena-apos-impeachment.shtml",
    "editoria": "america_latina",
@@ -99,13 +99,40 @@
    }
   },
   {
+   "manchete": "Enem 2026: o que é permitido e o que é proibido levar nos dias da prova?",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 78,
+   "veiculos_3h": 39,
+   "na_pauta_desde": "2026-11-07T11:07:22Z",
+   "link": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-11/enem-confira-regras-os-horarios-e-os-itens-proibidos-na-prova",
+   "editoria": "educacao",
+   "nota": 4,
+   "esquentou": true,
+   "lente": [],
+   "outras_manchetes": 1,
+   "ia": {
+    "editoria": "educacao",
+    "I": 3,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Alto impacto para milhões de estudantes no Enem.",
+    "soma": 5
+   }
+  },
+  {
    "manchete": "Lula acusa Globo de mentir sobre número da fome no Brasil",
    "secoes": [
+    "B",
     "D-terra"
    ],
-   "veiculos": 17,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-06T16:56:55Z",
+   "veiculos": 18,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-08T00:00:17Z",
    "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/lula-critica-globo-e-questiona-propaganda-sobre-criancas-com-fome.shtml",
    "editoria": "roca",
    "nota": 6,
@@ -126,12 +153,65 @@
    }
   },
   {
+   "manchete": "PGR pede ao STF suspensão de ações sobre proibição das bets em todo o país",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 47,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-07T00:07:04Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/07/gonet-pede-ao-stf-suspensao-de-acoes-contra-mp-do-fim-das-bets-ate-corte-decidir-sobre-proibicao.ghtml",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "PGR atua sobre regulação das bets no STF.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Agentes da PF, Ibama e Funai são alvos de tiros durante ação em terra indígena",
+   "secoes": [
+    "B",
+    "D-terra"
+   ],
+   "veiculos": 7,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-07T23:43:45Z",
+   "link": "https://www1.folha.uol.com.br/cotidiano/2026/11/agentes-da-pf-ibama-e-funai-sao-alvos-de-tiros-durante-acao-em-terra-indigena.shtml",
+   "editoria": "roca",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "indigena"
+   ],
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Violência contra agentes públicos e indígenas em terra demarcada.",
+    "soma": 4
+   }
+  },
+  {
    "manchete": "“Não sabe do que fala”, diz Flávio sobre aval de Nunes Marques à eleição",
    "secoes": [
     "B"
    ],
    "veiculos": 10,
-   "veiculos_3h": 9,
+   "veiculos_3h": 8,
    "na_pauta_desde": "2026-11-06T22:25:31Z",
    "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/11/flavio-bolsonaro-diz-que-nunes-marques-nao-sabe-do-que-esta-falando-sobre-a-eleicao.shtml",
    "editoria": "eleicoes",
@@ -149,31 +229,6 @@
     "repetido": false,
     "risco": "",
     "motivo": "Atrito político envolvendo Flávio e Nunes Marques.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Enem 2026: o que é permitido e o que é proibido levar nos dias da prova?",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 20,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-07T11:07:22Z",
-   "link": "https://www.cartacapital.com.br/educacao/enem-saiba-o-que-levar-no-dia-da-prova/",
-   "editoria": "educacao",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "educacao",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Enem 2026: regras sobre o que é permitido e proibido levar.",
     "soma": 4
    }
   },
@@ -237,7 +292,7 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 7,
+   "veiculos": 8,
    "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-07T23:43:45Z",
    "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPUjlvLVJUS3ZDQTFFZ25sOWZxeTdXMjZnWUJQeVdMSmZTaE15aUJuQ3dlWkx6WU1uU0syVEVQVVRkWmQyNFZENHMzQk9RYjUzalRmZWlTOWl1ODh1Mm9ldk9UM0xSTFMtWGN0SHVNRTZ6YVVnQjNCLVNOb1NZVWdlbU8zUTRVaE9OMl90UUdfdmRZSWx6enZCODg5MDR1Wk1MMUlNb25TNlRpRjBYc1RuZlU2Y1JiSHdCU0Zz?oc=5",
@@ -256,33 +311,6 @@
     "repetido": false,
     "risco": "",
     "motivo": "Flávio admite falta de provas sobre fraude e mira 2030.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Damares ignora PL e faz campanha por Tereza para presidente do Senado",
-   "secoes": [
-    "D-famosos"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-07T23:43:45Z",
-   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNUjZEOFh2YmRzM1U5cTV3U3JMN2lrZnpGQnN3YlJsUWRfNTR2WDFkUWdmeUxWVnFuMlBwT3Nud1pDRldsSnhadHBDMlJqQ25fbVpYUzdNU0tBTF9pMkRsTjJvWmdteEFLb0Zyd0hWYVlwbXZjWklldGxUMFAzcXNlVmp2aDN0U1FMN2dIZ2k2TWw4bENRWXRyNkItdGdzRDhkelc2T01n?oc=5",
-   "editoria": "eleicoes",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "pl"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Articulações para a presidência do Senado.",
     "soma": 4
    }
   },
@@ -315,13 +343,40 @@
    }
   },
   {
+   "manchete": "Damares ignora PL e faz campanha por Tereza para presidente do Senado",
+   "secoes": [
+    "D-famosos"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-07T23:43:45Z",
+   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNUjZEOFh2YmRzM1U5cTV3U3JMN2lrZnpGQnN3YlJsUWRfNTR2WDFkUWdmeUxWVnFuMlBwT3Nud1pDRldsSnhadHBDMlJqQ25fbVpYUzdNU0tBTF9pMkRsTjJvWmdteEFLb0Zyd0hWYVlwbXZjWklldGxUMFAzcXNlVmp2aDN0U1FMN2dIZ2k2TWw4bENRWXRyNkItdGdzRDhkelc2T01n?oc=5",
+   "editoria": "eleicoes",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "pl"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Articulações para a presidência do Senado.",
+    "soma": 4
+   }
+  },
+  {
    "manchete": "Quilombola e indígenas são aprovados em concurso para diplomata pela primeira vez na história do país",
    "secoes": [
     "D-terra"
    ],
    "veiculos": 5,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-06T16:50:30Z",
+   "na_pauta_desde": "2026-11-08T00:00:17Z",
    "link": "https://www.gazetadopovo.com.br/mundo/pela-primeira-vez-na-historia-dos-eua-ha-mais-solteiros-que-casados/",
    "editoria": "roca",
    "nota": 6,
@@ -343,6 +398,20 @@
    }
   },
   {
+   "manchete": "Fiocruz aponta alta de covid-19 e novos vírus respiratórios no país",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 25,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-06T21:07:01Z",
+   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNOGRkNHFsWjlaMUNsRXkwT09Ib2xhMTVZU0NxckRneXpjRFo1V0tndllCc3lpT2x1Nk1nVTRadENHNmZtVzFXUHJPNGdhdGNxb0F3Qi1za0J3NVJ6TWNWY2tOWXJjRnlPQ3dLQjQ4Y0pBenJHOUdLR05fd09TOVU3WHh0VHAzeUtDcGNPam5BYVdDLU1SdVc0cXpjWjBBWkFOUk5hZ0JLZV9KM1k?oc=5",
+   "editoria": "saude",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
    "manchete": "País pode chegar a 860 mil casos prováveis de dengue em 2027",
    "secoes": [
     "B"
@@ -352,6 +421,22 @@
    "na_pauta_desde": "2026-11-07T23:43:45Z",
    "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTFB1SUg2RGEyOEZMOS1ZNlJSRnNDY2FfSmdkZlViVkFFTjFybDY0LXdMQVByazRkVDJoQzlNRktvMFg2NVpRWlVHUjRRVnpYZ1l2NG9hMnFqX3ZvQm5kQlhXZzhkajl4REdhU24xbDFDMV9Eb1NJOE16MERn?oc=5",
    "editoria": "saude",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Argentina Pride Parade",
+   "secoes": [
+    "B",
+    "C-internacional",
+    "D-america_latina"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-07T23:43:45Z",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOVVF4dkVjTXV2VnpOSDlHQ0pnRF9paE44YzdyMnFGUzZ5QmRHVXY3VkgtaVRSbk4xaUZyeXhzTHpmRjROekJUeFhuWGxsSEJfeGlrbFJxMHhtZ1dOTWVORXhFcHB6YWtDbU5Ib3Q5dlRNalVBV3RFR3EtRDVkckJNTVNLV0tUeXpEOFBpRDZlN0hiLXBxVEh1LXFDb2xmZEFROWlNYzhLc0tIdFE2Q3dTRmV5NmpSOVE?oc=5",
+   "editoria": "america_latina",
    "nota": 4,
    "esquentou": false,
    "lente": []
@@ -373,94 +458,33 @@
    "lente": []
   },
   {
-   "manchete": "Enem: candidatos podem consultar o local de prova por telefone",
+   "manchete": "El papa León XIV en Uruguay | Este fue el primer discurso del pontífice en Sudamérica",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 11,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-06T21:07:01Z",
+   "link": "https://www.telesurtv.net/papa-leon-xiv-construir-puentes-comunidad-estrechar-lazos/",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Marinho confirma candidatura ao comando do Senado, diz ter 40 votos e busca apoio de Tereza Cristina",
    "secoes": [
     "B"
    ],
-   "veiculos": 26,
+   "veiculos": 8,
    "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-07T02:02:03Z",
-   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOV0tLaE5HM2JYZmxNZXZ6dG5UN0EtOE1sODI1TjhTVmJrWE9fVHRwRllyWk1WNmlYcUpOczZ3UWp6ejZOWm94ekx6VDUzajJhb2ZIYzVlU1RqZHlvRjVZbk1GcENnd0xMcThWbEhFM0NwVm55bEx4S0o2SkNKd2VBa0E4TTg1cTNUWTE3cjB1bFoyRVFzRDh5ckNOMzJFT3EzOFBndHpR?oc=5",
+   "na_pauta_desde": "2026-11-07T23:43:45Z",
+   "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPUVpJNk9qcWFaV1prVnRRbnBfcGUtcXpYMmVwT2dXSnVXU0wzVWgzVW8yNFlRNWtIdWpER3ZrWjRwTEQyRU5HRi1GcHlMVkpkZDdwYlZ1VWFaUG91b3B1Y0FpZThBWGhTdlFsSFcwTzhmUmZmMC1iMzhGczNjaXJHVlpHangzZHE0Z2JaZkRuejVLU2ZTNEstdUd2OXoycFlJTEFPbTlpSU11OUszN3M1NkI4SVE3aWdWekI1NTZNdWNWNHo2a01Ldm5Wa1RRaXNLbFpaZ1BPRFZDeEVU?oc=5",
    "editoria": "eleicoes",
    "nota": 4,
    "esquentou": false,
    "lente": []
-  },
-  {
-   "manchete": "Ousted Paraguay president under house arrest after banking crisis leaves 60% of country unable to access accounts",
-   "secoes": [
-    "B",
-    "D-america_latina"
-   ],
-   "veiculos": 9,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-06T16:50:30Z",
-   "link": "https://www.theguardian.com/world/2026/nov/07/ousted-paraguay-president-under-house-arrest-after-banking-crisis-leaves-60-of-country-unable-to-access-accounts",
-   "editoria": "america_latina",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Nas Américas, só EUA e Argentina não se manifestaram sobre reeleição de Lula, diz TSE",
-   "secoes": [
-    "B",
-    "D-america_latina"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-07T23:43:45Z",
-   "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNS0tXSXJqNDZmNWhBNU5HWVBtV1hUMm1NR1UtckVod3hpdnBLNVdsMzBJRE4waGMyd2pKWUR1N0NVNkdkUGRXMllSQ1ZxZThrNm5hLXlpTjBqZHBRclBudU8xdE5DdFVhbEZOQngyN2hIeHNPNnRfemVieWlXSHB5bkRnX2FCTndQWXF5TDlJUFZhbmQ4NU4zQjFwNmU4NFlyazkzWE9yOWZDUkJtTTRwNWVwSElXMHB5b2lydEp2QnRWNXN2S1ZlR1FYRUJydVlneENLWElLZlowZ9IB2gFBVV95cUxNS0tXSXJqNDZmNWhBNU5HWVBtV1hUMm1NR1UtckVod3hpdnBLNVdsMzBJRE4waGMyd2pKWUR1N0NVNkdkUGRXMllSQ1ZxZThrNm5hLXlpTjBqZHBRclBudU8xdE5DdFVhbEZOQngyN2hIeHNPNnRfemVieWlXSHB5bkRnX2FCTndQWXF5TDlJUFZhbmQ4NU4zQjFwNmU4NFlyazkzWE9yOWZDUkJtTTRwNWVwSElXMHB5b2lydEp2QnRWNXN2S1ZlR1FYRUJydVlneENLWElLZlowZw?oc=5",
-   "editoria": "america_latina",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Argentina FA appeals World Cup final sanctions to CAS; FIFA rejected appeal against Paredes and association",
-   "secoes": [
-    "D-america_latina"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-07T13:07:29Z",
-   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPOTdEb25DWGk1bFJVeV9VMnZTOENIWXQyZXZzT28tRXl4NXlqcHNodmFTZDBTUm5TbkFweEp2eHVjc2xxcWJlREwyemE5RzNCR2ZWTzBQVDdUMFN1cWJwOW83S01XM2h0Y2JGNmpNT2thVmZLQVZ2bDUtZEE3STNOWi1oaXBQVjZ3S002Ynh3MTVtYkJPb3VMeFZtd2N6ajZ4WjVlU0kwRGhPY2x1RVdoN3I1U29QMUXSAb4BQVVfeXFMTnhLVmdPcG5zU2tINFVUY0dObEV0YWVLQUFmZWNwdTc5RG1GbU0xV1dfMW9rcldueGhSSTRJbENEZHZtck96U0xhNlVONDM5S1p4X1FwQWhiWHpNS1UtSXR3cjcxZE1sajVPVDBoeDI0QUhFc2FyMU5mZEFXMjR5XzViSDBNczdKVlFXZl9HT010cV9qbnNiR3dXbHFBakxGNEtoZmRSRTBNRXR1bDNQR0dKajdCeGZSQko2RE1VZw?oc=5",
-   "editoria": "america_latina",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Brazil probes possible US, Argentine, Israeli involvement in Bolsonaro’s escape, Washington Post reports",
-   "secoes": [
-    "C-internacional"
-   ],
-   "veiculos": 2,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-07T23:43:45Z",
-   "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNUVB2X1V1VkJKSUFhenV1THRHTHp4YndfcGZOZTd1UTRNQmU0amkwMlBlejZzYnM4VGQ1YzZfOE9mTE5uZHJldUloaDhIWlF6QkVhbF9zdjNqMFRFYWY4YjNxTkZzWldRRUg2T1NuaHYydF96SE1jYndmV3o1N3Z1Y0I1X0R1d1REQVBJd0NwZmhndVFqNnpPQWx6dHpfSE5KR0U1QmJVVjdMU2o2dzZCZVBjZm5RYk11R1ZXX0FXYWdJU0NRbkRHRGtGLU5RRUxWRENvMzM1MUo2dDQ?oc=5",
-   "editoria": "america_latina",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "bolsonar"
-   ]
-  },
-  {
-   "manchete": "Preço da cesta básica sobe em novembro nos supermercados de Manaus",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-07T23:43:45Z",
-   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPRURUSkhYeGx1LXQ1VkJmTkluRHVnQTEzVHdObVdFRGdqNmRLRDM2ak9aZ0ZsN2JrVXZuMVFTRlM4djRnd2hDZEhBVTJndXhLSnN5bGZMV1lsWnJ5c1dvMzdjbmp1RjNmUGcyd0k3bWpZeFlOVVBMZmdZMU9Lano3QVB3OERSSEdxNHRLR0Via0pXLVEtNERYTUZuREpoOHRjU2RMZ05mYWdzMm44ejdr?oc=5",
-   "editoria": "roca",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "cesta basica"
-   ]
   }
  ],
  "rebaixados": [
@@ -483,20 +507,38 @@
    }
   },
   {
-   "manchete": "PF investiga retirada e comércio ilegal de madeira de terra indígena em MT",
-   "veiculos": 14,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-07T23:43:45Z",
+   "manchete": "Papa León XIV en Uruguay: \"El valor de las personas no se puede medir por lo que produce\"",
+   "veiculos": 17,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-06T21:07:01Z",
    "esquentou": false,
    "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 1,
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "PF investiga extração ilegal de madeira em terra indígena.",
+    "motivo": "Frase de líder religioso sobre valor do trabalho.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Ueno Bank, do Paraguai, patrocinou evento de extrema direita com Eduardo Bolsonaro nos EUA",
+   "veiculos": 9,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-08T00:00:17Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "politica",
+    "I": 1,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Envolve banco falido e filho do Bolsonaro.",
     "soma": 3
    }
   },
@@ -519,20 +561,20 @@
    }
   },
   {
-   "manchete": "CEO aos 18 anos, piloto e triatleta: quem é o Vorcaro do Paraguai, fundador do Ueno",
-   "veiculos": 4,
+   "manchete": "Operação Lenha Fria combate extração ilegal de madeira na Terra Indígena Sete de Setembro em Rondônia",
+   "veiculos": 9,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-07T23:43:45Z",
-   "esquentou": false,
+   "esquentou": true,
    "ia": {
-    "editoria": "america_latina",
+    "editoria": "gerais",
     "I": 2,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Banco paraguaio ligado a escândalo financeiro.",
+    "motivo": "Operação combate extração ilegal de madeira em Terra Indígena em RO.",
     "soma": 3
    }
   },
@@ -556,8 +598,8 @@
   },
   {
    "manchete": "Quem é Pedro Alliana, vice que assumiu a Presidência do Paraguai após impeachment",
-   "veiculos": 44,
-   "veiculos_3h": 1,
+   "veiculos": 49,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-06T21:07:01Z",
    "esquentou": false,
    "ia": {
@@ -592,10 +634,10 @@
   },
   {
    "manchete": "Por onde começar o Enem? Professor dá dicas para a prova deste domingo (8)",
-   "veiculos": 8,
+   "veiculos": 7,
    "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-07T11:07:22Z",
-   "esquentou": true,
+   "esquentou": false,
    "ia": {
     "editoria": "educacao",
     "I": 1,
@@ -609,38 +651,20 @@
    }
   },
   {
-   "manchete": "El discurso del papa León XIV: las referencias al aborto y la eutanasia en Uruguay",
-   "veiculos": 33,
-   "veiculos_3h": 10,
-   "na_pauta_desde": "2026-11-06T21:07:01Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Discurso do Papa no Uruguai.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Papa Leão conclui primeiro dia na América do Sul com orações no Uruguai",
-   "veiculos": 22,
+   "manchete": "Papa envia mensagem a Lula ao sobrevoar o Brasil em viagem à América do Sul",
+   "veiculos": 21,
    "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-06T21:07:01Z",
    "esquentou": false,
    "ia": {
-    "editoria": "america_latina",
+    "editoria": "politica",
     "I": 1,
     "V": 1,
     "P": 0,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Visita do Papa ao Uruguai.",
+    "motivo": "Papa enviou mensagem protocolar ao sobrevoar o país.",
     "soma": 2
    }
   }
@@ -706,10 +730,12 @@
   {
    "manchete": "Quem é Pedro Alliana, vice que assumiu a Presidência do Paraguai após impeachment",
    "secoes": [
-    "A"
+    "A",
+    "B",
+    "D-america_latina"
    ],
-   "veiculos": 44,
-   "veiculos_3h": 1,
+   "veiculos": 49,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-06T21:07:01Z",
    "link": "https://g1.globo.com/mundo/noticia/2026/11/06/quem-e-pedro-alliana-vice-que-assume-a-presidencia-do-paraguai-apos-impeachment.ghtml",
    "editoria": "america_latina",
@@ -742,16 +768,18 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "CEO aos 18 anos, piloto e triatleta: quem é o Vorcaro do Paraguai, fundador do Ueno",
+   "manchete": "Ueno Bank, do Paraguai, patrocinou evento de extrema direita com Eduardo Bolsonaro nos EUA",
    "secoes": [
-    "A"
+    "A",
+    "B",
+    "D-america_latina"
    ],
-   "veiculos": 4,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-07T23:43:45Z",
-   "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPTWNnMHZ3NElRTkpqZDlIM2JCZkdqVVVUX0FqeVhBclMtcjctYUIwejFGd3hmdHhYYXNnVUNIdzBIc0xFREtnZTAtUFQ3VFJWRENUME9YX1h0Z29NRDRycHV3T1lKLVlsQWdKTFYwd1lqWkJWbjJMRi16VXNHY0wxa1FnN3FHWjNXMUxIRDdlRzdISW5VeEJJNkJVblRreFdnS3BmT010TEVGY3dhdUMyc0hkaHdTOUhNTnhYelMtODVZSGZ4aGI1cnBiSkthNV9k?oc=5",
+   "veiculos": 9,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-08T00:00:17Z",
+   "link": "https://www.poder360.com.br/poder-internacional/ueno-bank-patrocinou-evento-com-eduardo-bolsonaro-nos-eua/",
    "editoria": "america_latina",
-   "nota": 6,
+   "nota": 9,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-07T12:02:16Z",
@@ -1297,62 +1325,62 @@
  "descartados_mais_quentes": [
   {
    "manchete": "Trump oferece cargo de secretário de imprensa da Casa Branca ao diretor do UFC, Dana White",
-   "veiculos": 56,
-   "veiculos_3h": 30,
+   "veiculos": 59,
+   "veiculos_3h": 31,
    "motivo": "fora: esporte (ufc)"
   },
   {
-   "manchete": "transporte público gratuito",
-   "veiculos": 56,
-   "veiculos_3h": 23,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Presidente de Israel escolhe rival de Netanyahu para formar novo governo em Israel",
-   "veiculos": 41,
-   "veiculos_3h": 22,
+   "manchete": "Opositor a Netanyahu tentará formar governo em Israel sem mudar impasse palestino",
+   "veiculos": 52,
+   "veiculos_3h": 30,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
    "manchete": "Covid-19: pelo menos 5 estados registram aumento de casos graves",
-   "veiculos": 41,
-   "veiculos_3h": 10,
+   "veiculos": 27,
+   "veiculos_3h": 4,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Russell, Hamilton and Verstappen face Brazil grid penalties",
+   "veiculos": 24,
+   "veiculos_3h": 6,
    "motivo": "sem editoria"
   },
   {
    "manchete": "F1: Verstappen lidera 3º treino em São Paulo; Bortoleto é 10º e Câmara 15º",
-   "veiculos": 23,
-   "veiculos_3h": 18,
+   "veiculos": 22,
+   "veiculos_3h": 11,
    "motivo": "fora: esporte (f1)"
-  },
-  {
-   "manchete": "Russell, Hamilton and Verstappen face Brazil grid penalties",
-   "veiculos": 23,
-   "veiculos_3h": 7,
-   "motivo": "sem editoria"
   },
   {
    "manchete": "Lula pede tropa “de prontidão” e anuncia live com Janones na Turquia",
    "veiculos": 22,
-   "veiculos_3h": 10,
+   "veiculos_3h": 6,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Rússia faz grande ataque à região de Kiev e deixa ao menos cinco feridos",
+   "manchete": "Grêmio segura o Atlético-MG em BH e vai à final da Copa do Brasil",
    "veiculos": 19,
+   "veiculos_3h": 14,
+   "motivo": "fora: esporte (gremio)"
+  },
+  {
+   "manchete": "Rússia faz grande ataque à região de Kiev e deixa ao menos cinco feridos",
+   "veiculos": 17,
    "veiculos_3h": 5,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Novorizontino x Fortaleza na Série B: veja horário, onde assistir e prováveis escalações",
-   "veiculos": 15,
-   "veiculos_3h": 7,
-   "motivo": "fora: entretenimento (serie)"
+   "manchete": "Helicóptero cai no Sul de Minas; bombeiros confirmam vítimas",
+   "veiculos": 14,
+   "veiculos_3h": 4,
+   "motivo": "sem editoria"
   },
   {
    "manchete": "Jogos hoje (07/11/26) ao vivo de futebol: onde assistir e horário",
    "veiculos": 13,
-   "veiculos_3h": 3,
+   "veiculos_3h": 4,
    "motivo": "fora: esporte (futebol)"
   }
  ]
