@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-08T20:47:09Z",
- "pauta_quando": "2026-11-08T20:47:07Z",
+ "quando": "2026-11-08T22:08:08Z",
+ "pauta_quando": "2026-11-08T22:08:05Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,52 +9,27 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 5,
-  "falhas_antes": null,
-  "pedidos_hoje": 14
+  "avaliados_agora": 15,
+  "falhas_antes": "gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in",
+  "pedidos_hoje": 16
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 162,
- "novos_3h": 8,
- "esquentaram": 6,
+ "total_assuntos": 170,
+ "novos_3h": 4,
+ "esquentaram": 9,
  "candidatos": [
-  {
-   "manchete": "Após eleição, 48% aprovam e 44% desaprovam governo Lula; economia é principal preocupação",
-   "secoes": [
-    "A",
-    "B"
-   ],
-   "veiculos": 20,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-08T06:44:04Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/08/quaest-48percent-aprovam-e-44percent-desaprovam-governo-lula-na-primeira-pesquisa-apos-a-eleicao.ghtml",
-   "editoria": "eleicoes",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "politica",
-    "I": 3,
-    "V": 3,
-    "P": 3,
-    "formato": "reels",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Alta popularidade e preocupação econômica em foco.",
-    "soma": 6
-   }
-  },
   {
    "manchete": "Quaest: Fim da 6x1 e isenção da cesta básica lideram prioridades de eleitores para Lula 4",
    "secoes": [
+    "B",
     "D-terra"
    ],
-   "veiculos": 14,
-   "veiculos_3h": 2,
+   "veiculos": 16,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-08T12:07:57Z",
    "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/11/quaest-fim-da-6x1-e-isencao-da-cesta-basica-lideram-prioridades-de-eleitores-para-lula-4.shtml",
    "editoria": "economia",
-   "nota": 7,
+   "nota": 8,
    "esquentou": false,
    "lente": [
     "6x1",
@@ -75,12 +50,67 @@
    }
   },
   {
+   "manchete": "Após eleição, 48% aprovam e 44% desaprovam governo Lula; economia é principal preocupação",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 19,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-08T06:44:04Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/08/quaest-48percent-aprovam-e-44percent-desaprovam-governo-lula-na-primeira-pesquisa-apos-a-eleicao.ghtml",
+   "editoria": "eleicoes",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "politica",
+    "I": 3,
+    "V": 3,
+    "P": 3,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Alta popularidade e preocupação econômica em foco.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Quando vai sair o gabarito oficial do Enem 2026; veja previsão",
+   "secoes": [
+    "A",
+    "A",
+    "B"
+   ],
+   "veiculos": 92,
+   "veiculos_3h": 30,
+   "na_pauta_desde": "2026-11-08T16:05:42Z",
+   "link": "https://g1.globo.com/educacao/enem/2026/noticia/2026/11/08/tema-da-redacao-do-enem-2026-e-a-valorizacao-do-sistema-unico-de-saude-sus-como-direito-universal.ghtml",
+   "editoria": "educacao",
+   "nota": 7,
+   "esquentou": false,
+   "lente": [
+    "direito",
+    "indigena"
+   ],
+   "ia": {
+    "editoria": "educacao",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Enem em pauta mobiliza estudantes com temas da esquerda.",
+    "soma": 6
+   }
+  },
+  {
    "manchete": "Fuga e postura golpista de Flávio Bolsonaro dividem direita e são rejeitadas por seis em cada dez brasileiros, aponta Quaest",
    "secoes": [
     "B"
    ],
-   "veiculos": 91,
-   "veiculos_3h": 17,
+   "veiculos": 58,
+   "veiculos_3h": 13,
    "na_pauta_desde": "2026-11-08T06:44:04Z",
    "link": "https://www.cartacapital.com.br/carta-capital/quaest-62-dos-eleitores-reprovam-fuga-de-flavio-aos-eua/",
    "editoria": "eleicoes",
@@ -103,84 +133,29 @@
    }
   },
   {
-   "manchete": "Servidores e PFs são atacados a tiros durante ação em terra indígena em MT",
+   "manchete": "\"Razones de seguridad\": la Fiscalía de Paraguay pidió prisión preventiva contra el expresidente Santiago Peña",
    "secoes": [
     "B",
-    "D-terra"
+    "D-america_latina"
    ],
-   "veiculos": 28,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-07T23:43:45Z",
-   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/agentes-da-pf-ibama-e-funai-sao-alvos-de-tiros-durante-acao-em-terra-indigena.shtml",
-   "editoria": "roca",
-   "nota": 6,
-   "esquentou": true,
-   "lente": [
-    "indigena"
-   ],
+   "veiculos": 81,
+   "veiculos_3h": 7,
+   "na_pauta_desde": "2026-11-08T06:44:04Z",
+   "link": "https://g1.globo.com/mundo/noticia/2026/11/07/justica-do-paraguai-decreta-prisao-preventiva-de-ex-presidente-santiago-pena.ghtml",
+   "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
    "ia": {
-    "editoria": "roca",
+    "editoria": "america_latina",
     "I": 3,
     "V": 3,
     "P": 2,
     "formato": "reels",
     "repetido": false,
     "risco": "",
-    "motivo": "Servidores e PFs atacados a tiros em terra indígena no MT.",
+    "motivo": "Prisão preventiva pedida contra ex-presidente do Paraguai.",
     "soma": 6
-   }
-  },
-  {
-   "manchete": "Enem 2026: Gabarito oficial e como funciona a nota TRI",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 103,
-   "veiculos_3h": 55,
-   "na_pauta_desde": "2026-11-08T16:05:42Z",
-   "link": "https://g1.globo.com/educacao/enem/2026/noticia/2026/11/08/tema-da-redacao-do-enem-2026-e-a-valorizacao-do-sistema-unico-de-saude-sus-como-direito-universal.ghtml",
-   "editoria": "educacao",
-   "nota": 4,
-   "esquentou": true,
-   "lente": [],
-   "ia": {
-    "editoria": "educacao",
-    "I": 3,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Gabarito e nota TRI do Enem 2026 interessam milhões.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Caiu no Enem 2026: exame citou Lei Rouanet, MST e a importância do voto",
-   "secoes": [
-    "B",
-    "D-terra"
-   ],
-   "veiculos": 12,
-   "veiculos_3h": 12,
-   "na_pauta_desde": "2026-11-08T20:07:33Z",
-   "link": "https://g1.globo.com/educacao/enem/2026/noticia/2026/11/08/caiu-no-enem-2026.ghtml",
-   "editoria": "roca",
-   "nota": 6,
-   "esquentou": true,
-   "lente": [
-    "mst"
-   ],
-   "ia": {
-    "editoria": "educacao",
-    "I": 3,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Enem aborda Lei Rouanet, MST e voto; debate cultural forte.",
-    "soma": 5
    }
   },
   {
@@ -188,13 +163,13 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 6,
-   "veiculos_3h": 3,
+   "veiculos": 32,
+   "veiculos_3h": 11,
    "na_pauta_desde": "2026-11-08T20:07:33Z",
    "link": "https://g1.globo.com/educacao/enem/2026/noticia/2026/11/08/enem-2026-comeca-neste-domingo-8.ghtml",
    "editoria": "educacao",
    "nota": 4,
-   "esquentou": false,
+   "esquentou": true,
    "lente": [],
    "ia": {
     "editoria": "educacao",
@@ -209,12 +184,38 @@
    }
   },
   {
+   "manchete": "León XIV llega al país con una gestualidad que desafía al modelo libertario",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 25,
+   "veiculos_3h": 13,
+   "na_pauta_desde": "2026-11-07T15:07:18Z",
+   "link": "https://www.telesurtv.net/papa-leon-xiv-historica-visita-argentina/",
+   "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Papa desafia modelo libertario de Milei.",
+    "soma": 4
+   }
+  },
+  {
    "manchete": "Pope’s visit to Argentina sets up showdown with ‘hyper-capitalist’ Milei",
    "secoes": [
     "B",
     "D-america_latina"
    ],
-   "veiculos": 20,
+   "veiculos": 19,
    "veiculos_3h": 13,
    "na_pauta_desde": "2026-11-07T15:56:35Z",
    "link": "https://www.theguardian.com/world/2026/nov/08/popes-visit-to-argentina-sets-up-showdown-with-hyper-capitalist-milei",
@@ -242,8 +243,8 @@
     "B",
     "C-nacional"
    ],
-   "veiculos": 7,
-   "veiculos_3h": 7,
+   "veiculos": 11,
+   "veiculos_3h": 8,
    "na_pauta_desde": "2026-11-08T20:07:33Z",
    "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/blogs/brasilia-hoje/2026/11/tre-mg-suspende-investigacao-da-pf-contra-deputada-eleita-apos-denuncia-de-flavio-bolsonaro.shtml",
    "editoria": "politica",
@@ -266,94 +267,42 @@
    }
   },
   {
-   "manchete": "MP do Paraguai indicia e pede prisão preventiva de Santiago Peña e ex-presidente do BC",
+   "manchete": "Caiu no Enem 2026: exame citou Lei Rouanet, MST e a importância do voto",
    "secoes": [
     "B",
-    "D-america_latina"
+    "D-terra"
    ],
-   "veiculos": 67,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-08T06:44:04Z",
-   "link": "https://g1.globo.com/mundo/noticia/2026/11/07/justica-do-paraguai-decreta-prisao-preventiva-de-ex-presidente-santiago-pena.ghtml",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [],
+   "veiculos": 26,
+   "veiculos_3h": 25,
+   "na_pauta_desde": "2026-11-08T20:07:33Z",
+   "link": "https://g1.globo.com/educacao/enem/2026/noticia/2026/11/08/caiu-no-enem-2026.ghtml",
+   "editoria": "roca",
+   "nota": 6,
+   "esquentou": true,
+   "lente": [
+    "mst"
+   ],
    "ia": {
-    "editoria": "america_latina",
+    "editoria": "educacao",
     "I": 2,
     "V": 2,
-    "P": 2,
+    "P": 1,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "MP do Paraguai indicia e pede prisão de Santiago Peña.",
+    "motivo": "Temas do Enem geram debate cultural e político.",
     "soma": 4
    }
   },
   {
-   "manchete": "Paraguai: MP estima prejuízo de US$ 809 mi em caso Ueno; Justiça bloqueia bens de Peña",
-   "secoes": [
-    "B",
-    "C-nacional",
-    "D-america_latina"
-   ],
-   "veiculos": 8,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-08T18:07:59Z",
-   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQbHlROFExVy1uVDZobkJQWXZmSHRmaVRBalVlRkp3ZmFUTjBpeVdVX0tuZU95azZYWUFzVzhXWHRmWTRDV29EOHRhYldiUDdzUVlmOGV5UlhkbXhEeFp3UFcxY1Fvbnk0cnR0NVEyMU10MFJFTHBldzZjOGFGalVIOWxNS0tfa2JjU3RyS2c4OVYwSzRpRFVrTHBmRFBvVUlqMDdhcmxLY2RqdlhYbGlZdnNlb1RrU2ZacnlrNzhjdU1jRXJpUFdN?oc=5",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Justiça bloqueia bens de Peña e estima grande prejuízo no Paraguai.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Fachin avança para encerrar inquérito das fake news após arquivar ao menos oito investigações",
+   "manchete": "PF investiga ameaças contra a deputada federal eleita Ana Elisa (PT-MG)",
    "secoes": [
     "B"
    ],
-   "veiculos": 6,
-   "veiculos_3h": 3,
+   "veiculos": 12,
+   "veiculos_3h": 11,
    "na_pauta_desde": "2026-11-08T16:05:42Z",
-   "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOcUhHc3owbFdLTU80UU12X090OTRzQjZYTmVfdzVhR0dDVmFwMld4VVNkVVlVeG9oaEdueE9wUzBMb0xSS3cweGxhVjBmZHRqS29Yd2w3VV9aSjh4c1MzRzdGUWxCa3ZUTXdoY25FaGhRQ1ZBU01ZV2tGS1ZBOVp6SG5yWjBNSWtrWEF6QjYyWlp4MU5hTWhWdHhXb3E0eVVTQlJuUUhQbUdhM1dvXzBvMWZkd2lVUmYxQXlyeFBkZmYwVVBVMks4MFQ2SmtzVFdMLWc?oc=5",
-   "editoria": "politica",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "inquerito"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Fachin avança para encerrar inquérito das fake news no STF.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Milton Leite e outros 12 são indiciados sob suspeita de organização criminosa e promoção do PCC",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-07T20:07:06Z",
-   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/milton-leite-e-outros-12-sao-indiciados-sob-suspeita-de-organizacao-criminosa-e-promocao-do-pcc.shtml",
+   "link": "https://noticias.uol.com.br/politica/ultimas-noticias/2026/11/08/pf-investiga-ameacas-contra-a-deputada-eleita-ana-elisa.htm",
    "editoria": "politica",
    "nota": 5,
    "esquentou": false,
@@ -362,106 +311,79 @@
     "editoria": "gerais",
     "I": 2,
     "V": 2,
-    "P": 2,
+    "P": 1,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Milton Leite e outros são indiciados por suspeita com PCC.",
+    "motivo": "Ameaças contra deputada eleita do PT.",
     "soma": 4
    }
   },
   {
-   "manchete": "Estudantes afetados por questões climáticas farão Enem em nova data",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 12,
-   "veiculos_3h": 11,
-   "na_pauta_desde": "2026-11-08T16:05:42Z",
-   "link": "https://g1.globo.com/educacao/noticia/2026/11/08/ministro-da-educacao-garante-nova-oportunidade-em-dezembro-para-estudantes-que-perderam-enem-por-questoes-climaticas.ghtml",
-   "editoria": "educacao",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "educacao",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Estudantes afetados por clima farão Enem em nova data.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Transporte público terá reforço para atender candidatos do Enem nos dois domingos de provas no DF",
+   "manchete": "Enem: estudantes afetados por questões climáticas terão nova data de prova",
    "secoes": [
     "B"
    ],
    "veiculos": 15,
    "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-08T20:07:33Z",
-   "link": "https://www.poder360.com.br/poder-sportsmkt/f1-tem-recorde-de-publico-no-gp-de-sao-paulo-com-317-mil-pessoas/",
-   "editoria": "eleicoes",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "transporte publico"
-   ],
-   "outras_manchetes": 1,
-   "ia": {
-    "editoria": "educacao",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Reforço no transporte para candidatos do Enem.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Enem: mais de cinco milhões de estudantes fazem a primeira prova neste domingo (8)",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 15,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-08T20:07:33Z",
-   "link": "https://www.cartacapital.com.br/educacao/mais-de-5-milhoes-de-estudantes-participam-do-enem-neste-domingo/",
+   "na_pauta_desde": "2026-11-08T16:05:42Z",
+   "link": "https://g1.globo.com/educacao/noticia/2026/11/08/ministro-da-educacao-garante-nova-oportunidade-em-dezembro-para-estudantes-que-perderam-enem-por-questoes-climaticas.ghtml",
    "editoria": "educacao",
    "nota": 5,
-   "esquentou": false,
+   "esquentou": true,
    "lente": [],
    "ia": {
     "editoria": "educacao",
     "I": 2,
     "V": 2,
     "P": 1,
-    "formato": "feed",
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Enem com cinco milhões de estudantes atrai grande público.",
+    "motivo": "Nova data do Enem para afetados por clima.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "PF investiga ataque a tiros contra agentes durante operação em terra indígena entre RO e MT",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 27,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-07T23:43:45Z",
+   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/agentes-da-pf-ibama-e-funai-sao-alvos-de-tiros-durante-acao-em-terra-indigena.shtml",
+   "editoria": "roca",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "indigena"
+   ],
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Violência contra agentes em terra indígena.",
     "soma": 4
    }
   },
   {
    "manchete": "MST denuncia ataque criminoso ao Acampamento Marilene Dantas, na Paraíba",
    "secoes": [
-    "B",
     "C-nacional",
     "D-terra"
    ],
-   "veiculos": 4,
-   "veiculos_3h": 4,
+   "veiculos": 5,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-08T20:07:33Z",
    "link": "https://mst.org.br/2026/11/08/mst-denuncia-ataque-criminoso-ao-acampamento-marilene-dantas-na-paraiba/",
    "editoria": "roca",
    "nota": 5,
-   "esquentou": false,
+   "esquentou": true,
    "lente": [
     "mst"
    ],
@@ -507,30 +429,82 @@
    }
   },
   {
-   "manchete": "Enem 2026 volta a ter 'textão' e traz questões como IA, terras raras e ECA Digital",
+   "manchete": "Que horas abre o portão do Enem? Que horas fecha o portão do Enem?",
    "secoes": [
-    "B",
-    "C-nacional"
+    "B"
    ],
-   "veiculos": 8,
-   "veiculos_3h": 8,
-   "na_pauta_desde": "2026-11-08T20:07:33Z",
-   "link": "https://www.infomoney.com.br/brasil/terras-raras-lei-rouanet-guerra-no-ira-professores-comentam-o-que-caiu-no-enem/",
+   "veiculos": 24,
+   "veiculos_3h": 10,
+   "na_pauta_desde": "2026-11-08T10:07:45Z",
+   "link": "https://g1.globo.com/educacao/enem/2026/noticia/2026/11/08/que-horas-abre-o-portao-do-enem-que-horas-fecha-o-portao-do-enem.ghtml",
    "editoria": "educacao",
+   "nota": 4,
+   "esquentou": true,
+   "lente": [],
+   "ia": {
+    "editoria": "educacao",
+    "I": 2,
+    "V": 2,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Serviço básico sobre horários do Enem.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "PT pede Pix de R$ 13 para quitar custos de R$ 7 milhões da campanha de Lula",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 23,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-08T00:00:17Z",
+   "link": "https://www.gazetadopovo.com.br/republica/pt-pede-7-milhoes-em-vaquinha-para-quitar-dividas-da-campanha-de-lula/",
+   "editoria": "eleicoes",
    "nota": 4,
    "esquentou": false,
    "lente": []
   },
   {
-   "manchete": "O espinhoso desafio da deputada eleita Ana Elisa",
+   "manchete": "Decisão de Pivetta inspira governador eleito de Minas Gerais a proibir dinheiro público em shows e festas; veja vídeo",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 13,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-07T22:07:16Z",
+   "link": "https://www.diariodocentrodomundo.com.br/cleitinho-promete-barrar-dinheiro-publico-para-shows-em-mg/",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Lula avançou em todas as faixas de renda; maior alta foi em áreas de classe média baixa",
    "secoes": [
     "B"
    ],
    "veiculos": 8,
-   "veiculos_3h": 8,
-   "na_pauta_desde": "2026-11-08T16:05:42Z",
-   "link": "https://g1.globo.com/mg/minas-gerais/noticia/2026/11/08/ministerio-dos-direitos-humanos-pede-investigacao-de-ameacas-contra-deputada-eleita-ana-elisa.ghtml",
-   "editoria": "politica",
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-08T16:21:58Z",
+   "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/11/08/votacao-lula-faixas-de-renda.ghtml",
+   "editoria": "economia",
+   "nota": 4,
+   "esquentou": true,
+   "lente": []
+  },
+  {
+   "manchete": "Dengue no Acre em 2027: estudo aponta aumento de casos e acende alerta",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 13,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-07T23:43:45Z",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1nRGxCXzVmMXM1U081WUFfR3FvSWJwRy02cmpRbGRiZWVOLU1JZ01XejBaZFhGUjNqRl81aUo0dzA0TEFqYW03ZjluNXltRVpuZE8wQ3dnM2FKWGhlM2hzRHVXazlyVGpHakhvRQ?oc=5",
+   "editoria": "saude",
    "nota": 4,
    "esquentou": false,
    "lente": []
@@ -538,29 +512,11 @@
  ],
  "rebaixados": [
   {
-   "manchete": "Acre entra na lista de estados com risco de surto de dengue em 2027, aponta estudo",
-   "veiculos": 14,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-07T23:43:45Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "saude",
-    "I": 2,
-    "V": 1,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Alerta de risco de surto de dengue.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Altas expectativas de cooperativas y mutuales con la llegada del papa León XIV",
-   "veiculos": 25,
-   "veiculos_3h": 17,
+   "manchete": "Papa Leão XIV faz 1ª missa na América Latina",
+   "veiculos": 48,
+   "veiculos_3h": 28,
    "na_pauta_desde": "2026-11-07T15:07:18Z",
-   "esquentou": true,
+   "esquentou": false,
    "ia": {
     "editoria": "america_latina",
     "I": 1,
@@ -569,14 +525,68 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Expectativas de cooperativas argentinas com chegada do papa.",
+    "motivo": "Primeira missa do Papa na América Latina repercute.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Enem 2026 volta a ter 'textão' e traz questões como IA, terras raras e ECA Digital",
+   "veiculos": 10,
+   "veiculos_3h": 9,
+   "na_pauta_desde": "2026-11-08T20:07:33Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "educacao",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Novidades nas questões do Enem 2026.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Lula vai pregar união e responsabilidade fiscal em pronunciamento na TV, mas sem anunciar medidas",
+   "veiculos": 17,
+   "veiculos_3h": 8,
+   "na_pauta_desde": "2026-11-08T10:07:45Z",
+   "esquentou": true,
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Pronunciamento de Lula na TV.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Mãe de Oruam deixa presídio e passa para prisão domiciliar por decisão do STF",
+   "veiculos": 10,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-11-08T18:07:59Z",
+   "esquentou": true,
+   "ia": {
+    "editoria": "gerais",
+    "I": 1,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "STF concede prisão domiciliar para mãe de Oruam.",
     "soma": 3
    }
   },
   {
    "manchete": "Enem 2026: tema sobre valorização do SUS exige que aluno identifique problema implícito no enunciado, avaliam professores",
-   "veiculos": 6,
-   "veiculos_3h": 3,
+   "veiculos": 9,
+   "veiculos_3h": 5,
    "na_pauta_desde": "2026-11-08T20:07:33Z",
    "esquentou": false,
    "ia": {
@@ -592,28 +602,46 @@
    }
   },
   {
-   "manchete": "Pope Leo heads to Milei’s Argentina as tensions loom over austerity, Iran",
-   "veiculos": 5,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-07T15:56:35Z",
+   "manchete": "Vacina contra mpox: Ministério da Saúde amplia compra para 25 mil doses; veja quem pode se imunizar",
+   "veiculos": 7,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-08T18:07:59Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "saude",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Compra de vacinas reforça o SUS.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Altas expectativas de cooperativas y mutuales con la llegada del papa León XIV",
+   "veiculos": 7,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-07T15:07:18Z",
    "esquentou": false,
    "ia": {
     "editoria": "america_latina",
     "I": 1,
-    "V": 1,
-    "P": 2,
+    "V": 2,
+    "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Viagem do Papa à Argentina aborda tensões econômicas.",
-    "soma": 2
+    "motivo": "Expectativas de cooperativas argentinas com chegada do papa.",
+    "soma": 3
    }
   },
   {
-   "manchete": "Papa Leão XIV inicia viagem à América Latina poucas semanas depois de cirurgia ao pulmão",
-   "veiculos": 19,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-08T06:44:04Z",
+   "manchete": "In Argentina, Pope Leo to Meet Church at Odds With President Milei",
+   "veiculos": 14,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-07T15:56:35Z",
    "esquentou": false,
    "ia": {
     "editoria": "america_latina",
@@ -623,14 +651,14 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Papa Leão XIV inicia viagem à América Latina.",
+    "motivo": "Visita do Papa à Argentina em tensão com Milei.",
     "soma": 2
    }
   },
   {
    "manchete": "Papa Leão vai à Argentina e deve reunir 7 milhões de pessoas",
-   "veiculos": 13,
-   "veiculos_3h": 6,
+   "veiculos": 10,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-07T15:07:18Z",
    "esquentou": false,
    "ia": {
@@ -646,115 +674,43 @@
    }
   },
   {
-   "manchete": "DF recebe 100 doses da vacina contra mpox",
-   "veiculos": 6,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-08T18:07:59Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "saude",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Ministério da Saúde adquire vacinas contra mpox via OPAS.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "El papa León XIV envió un poderoso mensaje en Uruguay: pidió a los fieles “ser puentes” y fortalecer la fe de los jóvenes",
-   "veiculos": 8,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-07T15:07:18Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Papa Leão XIV envia mensagem no Uruguai.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Damares apoia Tereza Cristina e contraria PL na disputa pelo Senado",
-   "veiculos": 5,
+   "manchete": "Tras la derrota de Trump, EEUU ratificó su apoyo a Milei, pero crecen las dudas sobre la asistencia financiera en 2027",
+   "veiculos": 2,
    "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-07T23:43:45Z",
+   "na_pauta_desde": "2026-11-08T22:08:05Z",
    "esquentou": false,
    "ia": {
-    "editoria": "politica",
+    "editoria": "america_latina",
     "I": 1,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Damares apoia Tereza Cristina e contraria PL.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Alcalde de Santa Rosa asegura que ataque con drones deja tres muertos y más de 35 heridos",
-   "veiculos": 16,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-08T20:07:33Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Duplicado em espanhol sobre ataque com drones na Colômbia.",
+    "motivo": "EUA apoiam Milei com dúvidas financeiras.",
     "soma": 2
    }
   }
  ],
  "obrigatorios": [
   {
-   "manchete": null,
+   "manchete": "Quando vai sair o gabarito oficial do Enem 2026; veja previsão",
    "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "educacao",
-   "nota": 2,
-   "parceiro": {
-    "perfil": "luzmanifesto",
-    "quando": "2026-11-08T12:52:17Z",
-    "legenda": "Viva a educação ❤️ Via lulaoficial 💭 Desejamos uma prova a todos que irão realizar o Enem no dia senhor. Manifeste-se conosco. LUZMANIFESTO",
-    "link": "https://www.instagram.com/p/DfezAU4RwYs/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Após eleição, 48% aprovam e 44% desaprovam governo Lula; economia é principal preocupação",
-   "secoes": [
+    "A",
     "A",
     "B"
    ],
-   "veiculos": 20,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-08T06:44:04Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/08/quaest-48percent-aprovam-e-44percent-desaprovam-governo-lula-na-primeira-pesquisa-apos-a-eleicao.ghtml",
-   "editoria": "eleicoes",
-   "nota": 6,
+   "veiculos": 92,
+   "veiculos_3h": 30,
+   "na_pauta_desde": "2026-11-08T16:05:42Z",
+   "link": "https://g1.globo.com/educacao/enem/2026/noticia/2026/11/08/tema-da-redacao-do-enem-2026-e-a-valorizacao-do-sistema-unico-de-saude-sus-como-direito-universal.ghtml",
+   "editoria": "educacao",
+   "nota": 7,
    "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-08T15:27:26Z",
-    "legenda": "Pesquisa Quaest divulgada neste domingo (8) aponta que 48% dos brasileiros aprovam o governo do presidente Luiz Inácio Lula da Silva (PT), enquanto 44% desaprov",
-    "link": "https://www.instagram.com/p/DffE3H9RjJr/"
+    "perfil": "luzmanifesto",
+    "quando": "2026-11-08T20:40:01Z",
+    "legenda": "O Enem 2026 colocou em pauta temas fundamentais para compreender o Brasil: direitos dos povos indígenas, movimento feminista, reforma agrária, cultura, mudanças",
+    "link": "https://www.instagram.com/p/DffoTPcteoi/"
    },
    "triagem": "candidato"
   },
@@ -771,9 +727,66 @@
    "nota": 1,
    "parceiro": {
     "perfil": "luzmanifesto",
-    "quando": "2026-11-08T11:40:11Z",
-    "legenda": "“Até você tornar o inconsciente consciente, ele dirigirá sua vida e você o chamará de destino” Jung. Manifeste-se conosco. LUZMANIFESTO | luzmanifesto",
-    "link": "https://www.instagram.com/p/DfeqXf9xHP1/"
+    "quando": "2026-11-08T19:13:45Z",
+    "legenda": "#Enem2026 Se manifeste. Luz Manifesto | luzmanifesto",
+    "link": "https://www.instagram.com/reel/DffewAdOt7g/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-08T19:37:14Z",
+    "legenda": "🔥💭",
+    "link": "https://www.instagram.com/p/DffhgHqBTVY/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-08T17:01:03Z",
+    "legenda": "🔥💭",
+    "link": "https://www.instagram.com/p/DffPoisRGJp/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "luzmanifesto",
+    "quando": "2026-11-08T16:59:57Z",
+    "legenda": "#Enem2026 Se manifeste. Luz Manifesto | luzmanifesto",
+    "link": "https://www.instagram.com/p/DffPVZ3xTwC/"
    },
    "triagem": "candidato"
   },
@@ -797,42 +810,80 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Milton Leite e outros 12 são indiciados sob suspeita de organização criminosa e promoção do PCC",
+   "manchete": null,
    "secoes": [
     "A"
    ],
-   "veiculos": 5,
+   "veiculos": 0,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-07T20:07:06Z",
-   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/milton-leite-e-outros-12-sao-indiciados-sob-suspeita-de-organizacao-criminosa-e-promocao-do-pcc.shtml",
-   "editoria": "politica",
-   "nota": 5,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "saude",
+   "nota": 3,
    "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-08T10:36:24Z",
-    "legenda": "O ex-presidente da Câmara Municipal de São Paulo, Milton Leite (União Brasil), foi indiciado pela Polícia Civil por suspeita de envolvimento com um esquema do P",
-    "link": "https://www.instagram.com/p/DfejjX1scR2/"
+    "perfil": "luzmanifesto",
+    "quando": "2026-11-08T19:38:30Z",
+    "legenda": "“A saúde não é um privilégio, nem uma mercadoria. É um direito humano fundamental.” A afirmação é da médica Carissa F. Etienne, feita em 26 de outubro de 2018, ",
+    "link": "https://www.instagram.com/p/DffhO-qufiB/"
    },
    "triagem": "candidato"
   },
   {
-   "manchete": "Flávio Bolsonaro diz que Nunes Marques 'não sabe do que está falando' sobre a eleição",
+   "manchete": null,
    "secoes": [
     "A"
    ],
-   "veiculos": 11,
+   "veiculos": 0,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-07T23:43:45Z",
-   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/flavio-bolsonaro-diz-que-nunes-marques-nao-sabe-do-que-esta-falando-sobre-a-eleicao.shtml",
-   "editoria": "eleicoes",
-   "nota": 8,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "educacao",
+   "nota": 2,
+   "parceiro": {
+    "perfil": "luzmanifesto",
+    "quando": "2026-11-08T12:52:17Z",
+    "legenda": "Viva a educação ❤️ Via lulaoficial 💭 Desejamos uma prova a todos que irão realizar o Enem no dia senhor. Manifeste-se conosco. LUZMANIFESTO",
+    "link": "https://www.instagram.com/p/DfezAU4RwYs/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "roca",
+   "nota": 3,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-08T11:26:03Z",
-    "legenda": "O senador Flávio Bolsonaro (PL-RJ) criticou duramente o presidente do Tribunal Superior Eleitoral (TSE), Kassio Nunes Marques, por reconhecer a legitimidade das",
-    "link": "https://www.instagram.com/p/Dfeo91nhWSl/"
+    "quando": "2026-11-08T19:30:03Z",
+    "legenda": "A Terra Indígena Yanomami não registrou nenhuma morte por malária no primeiro semestre de 2026, marco histórico divulgado no Informe 10 da Missão Yanomami pelo ",
+    "link": "https://www.instagram.com/p/DffgsT9DryI/"
    },
-   "triagem": "repetido (20261108-1015-flavio-nunes-marques)"
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "São Paulo e Rio de Janeiro sofrem estragos por tempestades; veja imagens",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-08T20:07:33Z",
+   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOLW44eVhEQkpGNVltdkl5aUpSOEZidWpqdWY4RFBhYUYtV3dUZnFQZWZwYXprR09NOF84UHNqZTV2bDI2SE5kZUpfbXo1VDVHRVpDYWFVbG1yQXZCdkZqNEhMdmNuWDJOWXNsVjhhcUwzM1FNOHRycUFUQjN6aTVudGVHVTNyWDBubnZ3Tkdlbm9mN0Y2SXFOdGFxSkpBbDlDMTVFZ21zZjJhekhIZW1XS0VRbnhFSFJu?oc=5",
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-08T20:00:24Z",
+    "legenda": "O rapper baiano Baco Exu do Blues anunciou duas apresentações de grande porte programadas para janeiro de 2027 nas capitais paulista e fluminense: no dia 22 de ",
+    "link": "https://www.instagram.com/p/DffkKbcCC5a/"
+   },
+   "triagem": "candidato"
   },
   {
    "manchete": null,
@@ -847,9 +898,104 @@
    "nota": 1,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-08T03:53:28Z",
-    "legenda": "marinasilvaoficial / anaelisast 🔥💭",
-    "link": "https://www.instagram.com/p/Dfd1gmiAHU0/"
+    "quando": "2026-11-08T20:30:07Z",
+    "legenda": "O observatório europeu Copernicus confirmou que o mês de outubro de 2026 foi o mais quente já documentado na história das medições meteorológicas mundiais, com ",
+    "link": "https://www.instagram.com/p/DffnkN3jdRz/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "luzmanifesto",
+    "quando": "2026-11-08T11:40:11Z",
+    "legenda": "“Até você tornar o inconsciente consciente, ele dirigirá sua vida e você o chamará de destino” Jung. Manifeste-se conosco. LUZMANIFESTO | luzmanifesto",
+    "link": "https://www.instagram.com/p/DfeqXf9xHP1/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Milton Leite é indiciado por suspeita de ligação com esquema do PCC em SP",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-07T20:07:06Z",
+   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxORzBHdWtVR0ExZGdvQ3pwclREejZqWS1va2MxNE5PVXBYU2dnTEZ3eVRvU2VUZzZMUG95bzVoVEVIUktkczdIeWRkTHVSdW02cElOc3dqM28tOUZ0N1lyRjZZZ3BNQTFvZDk4aXAxT3hhUGtDeENWd0JTcmFFSkEwRmNmTVFEWGNfcUh1NFRmODYtTHhoZXNYYjZpaFBzV1FJZC1VdmIzc08wYjdRbHRjYXVMX0tGeHYyRnpQaC1ZaFc?oc=5",
+   "editoria": "politica",
+   "nota": 4,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-08T10:36:24Z",
+    "legenda": "O ex-presidente da Câmara Municipal de São Paulo, Milton Leite (União Brasil), foi indiciado pela Polícia Civil por suspeita de envolvimento com um esquema do P",
+    "link": "https://www.instagram.com/p/DfejjX1scR2/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-08T17:00:30Z",
+    "legenda": "Uma ampla meta-análise publicada na revista Science revelou que a poluição sonora gerada pela atividade humana, do tráfego de navios cargueiros e motores a jato",
+    "link": "https://www.instagram.com/p/DffPk-PHJQn/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Flávio Bolsonaro diz que Nunes Marques 'não sabe do que está falando' sobre a eleição",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 10,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-07T23:43:45Z",
+   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/flavio-bolsonaro-diz-que-nunes-marques-nao-sabe-do-que-esta-falando-sobre-a-eleicao.shtml",
+   "editoria": "eleicoes",
+   "nota": 8,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-08T11:26:03Z",
+    "legenda": "O senador Flávio Bolsonaro (PL-RJ) criticou duramente o presidente do Tribunal Superior Eleitoral (TSE), Kassio Nunes Marques, por reconhecer a legitimidade das",
+    "link": "https://www.instagram.com/p/Dfeo91nhWSl/"
+   },
+   "triagem": "repetido (20261108-1015-flavio-nunes-marques)"
+  },
+  {
+   "manchete": "Após eleição, 48% aprovam e 44% desaprovam governo Lula; economia é principal preocupação",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 19,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-08T06:44:04Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/08/quaest-48percent-aprovam-e-44percent-desaprovam-governo-lula-na-primeira-pesquisa-apos-a-eleicao.ghtml",
+   "editoria": "eleicoes",
+   "nota": 6,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-08T15:27:26Z",
+    "legenda": "Pesquisa Quaest divulgada neste domingo (8) aponta que 48% dos brasileiros aprovam o governo do presidente Luiz Inácio Lula da Silva (PT), enquanto 44% desaprov",
+    "link": "https://www.instagram.com/p/DffE3H9RjJr/"
    },
    "triagem": "candidato"
   },
@@ -873,43 +1019,42 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "São Paulo e Rio de Janeiro sofrem estragos por tempestades; veja imagens",
+   "manchete": null,
    "secoes": [
     "A"
    ],
-   "veiculos": 1,
+   "veiculos": 0,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-08T20:07:33Z",
-   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOLW44eVhEQkpGNVltdkl5aUpSOEZidWpqdWY4RFBhYUYtV3dUZnFQZWZwYXprR09NOF84UHNqZTV2bDI2SE5kZUpfbXo1VDVHRVpDYWFVbG1yQXZCdkZqNEhMdmNuWDJOWXNsVjhhcUwzM1FNOHRycUFUQjN6aTVudGVHVTNyWDBubnZ3Tkdlbm9mN0Y2SXFOdGFxSkpBbDlDMTVFZ21zZjJhekhIZW1XS0VRbnhFSFJu?oc=5",
-   "editoria": "gerais",
-   "nota": 1,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": null,
+   "nota": null,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-08T09:00:34Z",
-    "legenda": "A cantora e compositora Hayley Williams, mundialmente conhecida como a voz líder do Paramore, desembarca no Brasil neste mês de novembro com The Hayley Williams",
-    "link": "https://www.instagram.com/p/DfeYp4Uj7vl/"
+    "quando": "2026-11-08T18:30:07Z",
+    "legenda": "A agência reguladora de alimentos e medicamentos dos Estados Unidos (FDA) aprovou a primeira versão genérica do lenacapavir injetável, antiviral de ação prolong",
+    "link": "https://www.instagram.com/p/DffZ1LpCqjg/"
    },
-   "triagem": "candidato"
+   "triagem": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "DF recebe 100 doses da vacina contra mpox",
+   "manchete": "Bancos cortam previsão de crescimento do PIB do Brasil em 2027, com mais juros e inflação",
    "secoes": [
-    "A",
-    "B"
+    "A"
    ],
-   "veiculos": 6,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-08T18:07:59Z",
-   "link": "https://www.metropoles.com/saude/ministerio-da-saude-adquire-mais-5-mil-doses-da-vacina-contra-a-mpox",
-   "editoria": "saude",
-   "nota": 6,
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-07T23:43:45Z",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNbkk0OWN0azFBRkljR1FUQ29NbEdjd1MwdFFmR3J3NmFreEEtTV9XaHRrUnVLdnBZSHUwdXVPYjJHX0JXV2h0a1Z3Q19RNThFX3B6bGxuOXBWWFk0M0Voc3pwUnVFSE9mRjZGc0N6NWxnRTJYZ2F0OEdlMjczRTFYMDhQeFdzaWM5RUVGbnZfcFlyV0xxT0V5WGdCY1ZJcXVuWjhNZTlIQmNGaGpRZTVJLTVzemx4aUZfdXZz?oc=5",
+   "editoria": null,
+   "nota": null,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-08T14:00:32Z",
-    "legenda": "O Ministério da Saúde autorizou a aquisição de até 20 mil doses da vacina contra a mpox por intermédio do Fundo Rotatório da Organização Pan-Americana da Saúde ",
-    "link": "https://www.instagram.com/p/Dfe6-6vgARO/"
+    "quando": "2026-11-08T17:30:04Z",
+    "legenda": "O Ministério do Turismo e a Embratur apresentaram, durante a World Travel Market (WTM) em Londres, o plano de promoção do Brasil para a Copa do Mundo Feminina d",
+    "link": "https://www.instagram.com/p/DffS9eijp-Y/"
    },
-   "triagem": "candidato"
+   "triagem": "fora: esporte (copa do mundo)"
   },
   {
    "manchete": null,
@@ -931,21 +1076,22 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Maioria dos parlamentares do PT ‘é contra’ a redução da maioridade penal, diz Jilmar Tatto",
+   "manchete": "Vacina contra mpox: Ministério da Saúde amplia compra para 25 mil doses; veja quem pode se imunizar",
    "secoes": [
-    "A"
+    "A",
+    "B"
    ],
-   "veiculos": 3,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-08T14:07:57Z",
-   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQWFNkTXJjVmZ3SDA2WFlwbE15N052VmRNcDNSemRvc2RnOE9sY2g2MlU2MTBKTkNtSzE2SVlxYm5PYXE5VmRROU92Q19ielU3U2RncUJZMzI5NUFLQ0h2bDk0RFlSOGJHWjB0TWh0bFNWM0lESnJwRXZfdkwwcWJldEo2RWlsYzBXb243NVNaWERPNjZpVjlBVzVhczJSN1ROWkU5bjgyM0pITWE0RWZDSl9XVFY1LURlQ0FzTHljcVE?oc=5",
-   "editoria": "gerais",
-   "nota": 2,
+   "veiculos": 7,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-08T18:07:59Z",
+   "link": "https://www.metropoles.com/saude/ministerio-da-saude-adquire-mais-5-mil-doses-da-vacina-contra-a-mpox",
+   "editoria": "saude",
+   "nota": 6,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-08T15:02:50Z",
-    "legenda": "#BFCNASRUAS e a redução da maioridade penal.",
-    "link": "https://www.instagram.com/reel/DffB34DjOjl/"
+    "quando": "2026-11-08T14:00:32Z",
+    "legenda": "O Ministério da Saúde autorizou a aquisição de até 20 mil doses da vacina contra a mpox por intermédio do Fundo Rotatório da Organização Pan-Americana da Saúde ",
+    "link": "https://www.instagram.com/p/Dfe6-6vgARO/"
    },
    "triagem": "candidato"
   },
@@ -978,31 +1124,12 @@
    "na_pauta_desde": null,
    "link": null,
    "editoria": "gerais",
-   "nota": 2,
+   "nota": 1,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-08T11:44:17Z",
-    "legenda": "Aos poucos, o mundo vai acordando do sono profundo que permitiu o fortalecimento global da extrema-direita. 📸: officialevercarradine",
-    "link": "https://www.instagram.com/p/DferY_Olnfr/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Brasil cria 121,3 mil postos de trabalho formal em setembro, aponta Caged",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 2,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-08T18:07:59Z",
-   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQU25odGxMSlU0SlZaeVoyOXVqckttMWprUVdZRWtjM1VDSDdjNTJJZlJxMGM3NFRrOEo4by1UclRqTzFrZU8wWVVGbEVMaUpxS1hqRHhDcWEyT1RPZDZmVnNRRllDenVaMVVsS1VBdlhWM0w5Q1lUZGIxWXlScDlFbjA3cnVQZDVrM00zNHJYa0JRbWFyV3F5alBNNmtrZzcwOE8xaG1ibVdkcGNtSVc3cWk4bWRkcGc?oc=5",
-   "editoria": "gerais",
-   "nota": 2,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-08T10:00:08Z",
-    "legenda": "O mercado de trabalho formal brasileiro registrou a criação de 121.305 novos postos com carteira assinada em setembro de 2026. Com o resultado, o saldo acumulad",
-    "link": "https://www.instagram.com/p/Dfefd_lAu6a/"
+    "quando": "2026-11-08T21:00:25Z",
+    "legenda": "Após quase uma década de proibição governamental imposta em 2017, as exportações de areia do Camboja para Singapura foram retomadas, reacendendo tensões socioam",
+    "link": "https://www.instagram.com/p/DffrCETCPJF/"
    },
    "triagem": "candidato"
   },
@@ -1015,13 +1142,51 @@
    "veiculos_3h": 0,
    "na_pauta_desde": null,
    "link": null,
-   "editoria": "educacao",
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-08T19:00:39Z",
+    "legenda": "A Grande Mancha de Lixo do Pacífico, imensa zona de convergência de correntes marítimas localizada entre o Havaí e a Califórnia, concentra uma quantidade tão de",
+    "link": "https://www.instagram.com/p/DffdU8zm2ha/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
    "nota": 2,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-08T15:30:04Z",
-    "legenda": "O Ministério da Ciência, Tecnologia e Inovação (MCTI) avança no planejamento do Plastic Reboot Brasil para 2027, com a meta de implementar até dez soluções-pilo",
-    "link": "https://www.instagram.com/p/DffFOpvjK43/"
+    "quando": "2026-11-08T11:44:17Z",
+    "legenda": "Aos poucos, o mundo vai acordando do sono profundo que permitiu o fortalecimento global da extrema-direita. 📸: officialevercarradine",
+    "link": "https://www.instagram.com/p/DferY_Olnfr/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Maioria dos parlamentares do PT ‘é contra’ a redução da maioridade penal, diz Jilmar Tatto",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-08T14:07:57Z",
+   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQWFNkTXJjVmZ3SDA2WFlwbE15N052VmRNcDNSemRvc2RnOE9sY2g2MlU2MTBKTkNtSzE2SVlxYm5PYXE5VmRROU92Q19ielU3U2RncUJZMzI5NUFLQ0h2bDk0RFlSOGJHWjB0TWh0bFNWM0lESnJwRXZfdkwwcWJldEo2RWlsYzBXb243NVNaWERPNjZpVjlBVzVhczJSN1ROWkU5bjgyM0pITWE0RWZDSl9XVFY1LURlQ0FzTHljcVE?oc=5",
+   "editoria": "gerais",
+   "nota": 2,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-08T15:02:50Z",
+    "legenda": "#BFCNASRUAS e a redução da maioridade penal.",
+    "link": "https://www.instagram.com/reel/DffB34DjOjl/"
    },
    "triagem": "candidato"
   },
@@ -1053,13 +1218,32 @@
    "veiculos_3h": 0,
    "na_pauta_desde": null,
    "link": null,
-   "editoria": "gerais",
-   "nota": 1,
+   "editoria": null,
+   "nota": null,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-08T14:30:03Z",
-    "legenda": "O Brasil formalizou sua adesão à Carta Zero Debris, pacto global capitaneado pela Agência Espacial Europeia (ESA) que estabelece diretrizes e metas para neutral",
-    "link": "https://www.instagram.com/p/Dfe-XGKlwsx/"
+    "quando": "2026-11-08T18:00:28Z",
+    "legenda": "O rapper TOKIODK lançou, pela Warner Music, o álbum ‘Estilhaços de Um Anjo Rebelde: 3º Ato’, projeto que conclui a trilogia iniciada com Infração: 1º Ato e cont",
+    "link": "https://www.instagram.com/p/DffWcHWD1j3/"
+   },
+   "triagem": "fora: entretenimento (album)"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "eleicoes",
+   "nota": 2,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-08T16:30:06Z",
+    "legenda": "O Ministério da Cultura (MinC) lançou oficialmente a edição 2026 da campanha Cultura Negra Vive, estratégia permanente de comunicação afirmativa que valoriza a ",
+    "link": "https://www.instagram.com/p/DffMGKwiMJk/"
    },
    "triagem": "candidato"
   },
@@ -1072,32 +1256,13 @@
    "veiculos_3h": 0,
    "na_pauta_desde": null,
    "link": null,
-   "editoria": "gerais",
-   "nota": 1,
+   "editoria": "educacao",
+   "nota": 2,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-08T12:00:12Z",
-    "legenda": "O Ministério do Turismo (MTur), em cooperação com a Associação Brasileira de Afroturismo (Abrafro), realizou o encontro virtual “Rotas Negras em Ação: oportunid",
-    "link": "https://www.instagram.com/p/DfetNZoChg4/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-08T13:00:45Z",
-    "legenda": "O Ministério do Turismo (MTur) atualizou o Mapa do Turismo Brasileiro com a incorporação de quatro novos municípios em outubro de 2026: Demerval Lobão (PI) e Oc",
-    "link": "https://www.instagram.com/p/Dfe0I9kDHMG/"
+    "quando": "2026-11-08T15:30:04Z",
+    "legenda": "O Ministério da Ciência, Tecnologia e Inovação (MCTI) avança no planejamento do Plastic Reboot Brasil para 2027, com a meta de implementar até dez soluções-pilo",
+    "link": "https://www.instagram.com/p/DffFOpvjK43/"
    },
    "triagem": "candidato"
   },
@@ -1133,9 +1298,47 @@
    "nota": 1,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-08T03:00:52Z",
-    "legenda": "#BFCNASRUAS e o fim das bets no Brasil.",
-    "link": "https://www.instagram.com/reel/DfdvcHhGOAO/"
+    "quando": "2026-11-08T12:00:12Z",
+    "legenda": "O Ministério do Turismo (MTur), em cooperação com a Associação Brasileira de Afroturismo (Abrafro), realizou o encontro virtual “Rotas Negras em Ação: oportunid",
+    "link": "https://www.instagram.com/p/DfetNZoChg4/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-08T14:30:03Z",
+    "legenda": "O Brasil formalizou sua adesão à Carta Zero Debris, pacto global capitaneado pela Agência Espacial Europeia (ESA) que estabelece diretrizes e metas para neutral",
+    "link": "https://www.instagram.com/p/Dfe-XGKlwsx/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-08T13:00:45Z",
+    "legenda": "O Ministério do Turismo (MTur) atualizou o Mapa do Turismo Brasileiro com a incorporação de quatro novos municípios em outubro de 2026: Demerval Lobão (PI) e Oc",
+    "link": "https://www.instagram.com/p/Dfe0I9kDHMG/"
    },
    "triagem": "candidato"
   },
@@ -1157,87 +1360,68 @@
     "link": "https://www.instagram.com/p/Dfe3gWJD20e/"
    },
    "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-08T10:25:13Z",
-    "legenda": "BFC na Área 🔥 A partir de amanhã (09), em nosso canal no YouTube, com eduardobetinardi e thiagosuman! Análise diária dos acontecimento políticos e sociais que m",
-    "link": "https://www.instagram.com/p/Dfeh276hXOX/"
-   },
-   "triagem": "candidato"
   }
  ],
  "descartados_mais_quentes": [
   {
-   "manchete": "Presidente de Israel escolhe rival de Netanyahu para tentar formar novo governo",
-   "veiculos": 69,
-   "veiculos_3h": 21,
+   "manchete": "El presidente de Israel elige a Gadi Eisenkot, rival de Netanyahu, para formar gobierno",
+   "veiculos": 62,
+   "veiculos_3h": 15,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Trump oferece cargo de secretário de imprensa da Casa Branca a presidente do UFC; Dana White indica que aceita",
-   "veiculos": 67,
-   "veiculos_3h": 6,
+   "manchete": "Trump pide a Dana White, presidente de la UFC, ser secretario de Prensa de la Casa Blanca",
+   "veiculos": 57,
+   "veiculos_3h": 3,
    "motivo": "fora: esporte (ufc)"
   },
   {
-   "manchete": "Norris faz pole do GP do Brasil de F1 após atraso pela chuva",
-   "veiculos": 32,
-   "veiculos_3h": 24,
-   "motivo": "fora: esporte (f1)"
-  },
-  {
-   "manchete": "Grêmio mostra porque é ‘copeiro’, segura pressão do Atlético e avança à final da Copa do Brasil",
-   "veiculos": 26,
-   "veiculos_3h": 7,
-   "motivo": "fora: esporte (gremio)"
-  },
-  {
    "manchete": "Lula acompanha em sala de monitoramento a entrega das provas",
-   "veiculos": 24,
-   "veiculos_3h": 4,
+   "veiculos": 44,
+   "veiculos_3h": 7,
    "motivo": "sem editoria"
   },
   {
+   "manchete": "Rafael Câmara faz balanço positivo de 1ª vez na chuva, e Gabriel Bortoleto projeta corrida de recuperação no GP de São Paulo de F1",
+   "veiculos": 38,
+   "veiculos_3h": 30,
+   "motivo": "fora: esporte (f1)"
+  },
+  {
+   "manchete": "Flávio Bolsonaro descarta su regreso a Brasil",
+   "veiculos": 34,
+   "veiculos_3h": 3,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Grêmio mostra por que é ‘copeiro’, segura pressão do Atlético e avança à final da Copa do Brasil",
+   "veiculos": 18,
+   "veiculos_3h": 3,
+   "motivo": "fora: esporte (gremio)"
+  },
+  {
+   "manchete": "Aposta única de Goiânia leva R$ 59,5 milhões do concurso 3083 da Mega-Sena",
+   "veiculos": 17,
+   "veiculos_3h": 3,
+   "motivo": "fora: entretenimento (mega sena)"
+  },
+  {
+   "manchete": "Insano! Johnny Walker vence Waldo Cortes-Acosta por nocaute e se aproxima do topo dos pesados do UFC",
+   "veiculos": 16,
+   "veiculos_3h": 3,
+   "motivo": "fora: esporte (ufc)"
+  },
+  {
    "manchete": "2026 F1 Sao Paulo Grand Prix - Brazil start time today",
-   "veiculos": 13,
+   "veiculos": 14,
    "veiculos_3h": 5,
    "motivo": "fora: esporte (f1)"
   },
   {
-   "manchete": "Flávio Bolsonaro diz que Nunes Marques 'não sabe do que está falando' sobre a eleição",
-   "veiculos": 11,
-   "veiculos_3h": 0,
-   "motivo": "repetido (20261108-1015-flavio-nunes-marques)"
-  },
-  {
-   "manchete": "A qué hora juega Alcaraz contra Shelton y dónde ver la final del Masters de París",
-   "veiculos": 10,
-   "veiculos_3h": 4,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "F1 Standings | Mercedes secure ninth Constructors' title at Sao Paulo GP",
-   "veiculos": 9,
-   "veiculos_3h": 9,
-   "motivo": "fora: esporte (f1)"
-  },
-  {
-   "manchete": "Colisão entre trens deixa ao menos 7 mortos e mais de 100 feridos no Egito",
-   "veiculos": 9,
-   "veiculos_3h": 4,
-   "motivo": "fora: crime ou tragedia (mortos)"
+   "manchete": "Boca Juniors se consagró campeón de la Tabla Anual con un gol agónico de Enner Valencia",
+   "veiculos": 14,
+   "veiculos_3h": 3,
+   "motivo": "fora: esporte (gol)"
   }
  ]
 }
