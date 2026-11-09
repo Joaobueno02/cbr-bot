@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-09T00:05:23Z",
- "pauta_quando": "2026-11-09T00:05:21Z",
+ "quando": "2026-11-09T01:00:37Z",
+ "pauta_quando": "2026-11-09T01:00:35Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,22 +9,48 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 14,
-  "falhas_antes": null,
-  "pedidos_hoje": 1
+  "avaliados_agora": 15,
+  "falhas_antes": "gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in",
+  "pedidos_hoje": 3
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 172,
- "novos_3h": 4,
- "esquentaram": 6,
+ "total_assuntos": 164,
+ "novos_3h": 5,
+ "esquentaram": 5,
  "candidatos": [
+  {
+   "manchete": "Justiça do Paraguai decreta prisão preventiva de Santiago Peña após impeachment",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 54,
+   "veiculos_3h": 11,
+   "na_pauta_desde": "2026-11-08T06:44:04Z",
+   "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/justica-do-paraguai-decreta-prisao-preventiva-de-santiago-pena-apos-impeachment.shtml",
+   "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 3,
+    "V": 3,
+    "P": 3,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Prisão preventiva de Santiago Peña após impeachment.",
+    "soma": 6
+   }
+  },
   {
    "manchete": "Após eleição, 48% aprovam e 44% desaprovam governo Lula; economia é principal preocupação",
    "secoes": [
     "A"
    ],
-   "veiculos": 13,
-   "veiculos_3h": 1,
+   "veiculos": 14,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-08T06:44:04Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/08/quaest-48percent-aprovam-e-44percent-desaprovam-governo-lula-na-primeira-pesquisa-apos-a-eleicao.ghtml",
    "editoria": "eleicoes",
@@ -48,12 +74,12 @@
    "secoes": [
     "D-terra"
    ],
-   "veiculos": 14,
+   "veiculos": 15,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-08T12:07:57Z",
    "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/quaest-fim-da-6x1-e-isencao-da-cesta-basica-lideram-prioridades-de-eleitores-para-lula-4.shtml",
    "editoria": "economia",
-   "nota": 7,
+   "nota": 8,
    "esquentou": false,
    "lente": [
     "6x1",
@@ -80,8 +106,8 @@
     "A",
     "B"
    ],
-   "veiculos": 91,
-   "veiculos_3h": 29,
+   "veiculos": 86,
+   "veiculos_3h": 16,
    "na_pauta_desde": "2026-11-08T16:05:42Z",
    "link": "https://g1.globo.com/educacao/enem/2026/noticia/2026/11/08/tema-da-redacao-do-enem-2026-e-a-valorizacao-do-sistema-unico-de-saude-sus-como-direito-universal.ghtml",
    "editoria": "educacao",
@@ -91,6 +117,7 @@
     "direito",
     "indigena"
    ],
+   "outras_manchetes": 1,
    "ia": {
     "editoria": "educacao",
     "I": 3,
@@ -104,28 +131,31 @@
    }
   },
   {
-   "manchete": "Candidatos têm impressões distintas sobre o primeiro dia do Enem 2026",
+   "manchete": "Papa visita abrigo atingido por cortes de Milei na Argentina",
    "secoes": [
-    "A",
-    "B"
+    "B",
+    "D-america_latina"
    ],
-   "veiculos": 41,
-   "veiculos_3h": 28,
-   "na_pauta_desde": "2026-11-08T10:07:45Z",
-   "link": "https://www1.folha.uol.com.br/educacao/2026/11/candidatos-tem-impressoes-distintas-sobre-o-primeiro-dia-do-enem-2026.shtml",
-   "editoria": "eleicoes",
-   "nota": 5,
+   "veiculos": 14,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-08T06:44:04Z",
+   "link": "https://g1.globo.com/mundo/noticia/2026/11/08/papa-leao-xiv-chega-a-argentina.ghtml",
+   "editoria": "america_latina",
+   "nota": 7,
    "esquentou": false,
-   "lente": [],
+   "lente": [
+    "corte",
+    "milei"
+   ],
    "ia": {
-    "editoria": "educacao",
+    "editoria": "america_latina",
     "I": 3,
     "V": 3,
     "P": 2,
-    "formato": "carrossel",
+    "formato": "reels",
     "repetido": false,
     "risco": "",
-    "motivo": "Enem atinge milhões de estudantes com grande repercussão nacional.",
+    "motivo": "Visita do Papa a abrigo afetado por cortes de Milei.",
     "soma": 6
    }
   },
@@ -134,10 +164,10 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 90,
-   "veiculos_3h": 10,
+   "veiculos": 41,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-08T06:44:04Z",
-   "link": "https://jornalggn.com.br/politica/quaest-94-torcem-pelo-sucesso-de-lula-enquanto-62-reprovam-ida-de-flavio-bolsonaro-aos-eua/",
+   "link": "https://www.bbc.com/portuguese/articles/cjzxl9zr6e36o?at_medium=RSS&at_campaign=rss",
    "editoria": "eleicoes",
    "nota": 6,
    "esquentou": true,
@@ -158,70 +188,15 @@
    }
   },
   {
-   "manchete": "São Paulo terá transporte público gratuito nos dois dias de prova do Enem",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 35,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-08T02:07:18Z",
-   "link": "https://tvtnews.com.br/enem-2026-locais-prova-disponiveis-para-consulta/",
-   "editoria": "educacao",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "transporte publico"
-   ],
-   "ia": {
-    "editoria": "educacao",
-    "I": 3,
-    "V": 3,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Gratuidade no transporte público em SP durante o Enem.",
-    "soma": 6
-   }
-  },
-  {
-   "manchete": "Agentes da PF, Ibama e Funai são alvos de tiros durante ação em terra indígena",
-   "secoes": [
-    "B",
-    "D-terra"
-   ],
-   "veiculos": 29,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-07T23:43:45Z",
-   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/agentes-da-pf-ibama-e-funai-sao-alvos-de-tiros-durante-acao-em-terra-indigena.shtml",
-   "editoria": "roca",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "indigena"
-   ],
-   "ia": {
-    "editoria": "roca",
-    "I": 3,
-    "V": 3,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Ataque a agentes estatais em terra indígena mobiliza ampla repercussão.",
-    "soma": 6
-   }
-  },
-  {
-   "manchete": "Lula diz que se preocupa com dívida pública e juros e reafirma responsabilidade fiscal",
+   "manchete": "Sem detalhar medidas, Lula se diz 'preocupado' com dívida pública e juros",
    "secoes": [
     "B",
     "C-nacional"
    ],
-   "veiculos": 11,
-   "veiculos_3h": 11,
+   "veiculos": 10,
+   "veiculos_3h": 9,
    "na_pauta_desde": "2026-11-09T00:05:21Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/08/lula-fala-em-pronunciamento-em-rede-nacional-de-radio-e-tv.ghtml",
+   "link": "https://noticias.uol.com.br/politica/ultimas-noticias/2026/11/08/lual-pronunciamento-economia-novembro-2026.ghtm",
    "editoria": "economia",
    "nota": 6,
    "esquentou": false,
@@ -230,13 +205,98 @@
    ],
    "ia": {
     "editoria": "economia",
-    "I": 2,
+    "I": 3,
     "V": 2,
     "P": 2,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Debate sobre juros e dívida pública afeta contas públicas.",
+    "motivo": "Preocupação com dívida pública e juros afeta o bolso da classe trabalhadora.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Na TV, Lula promete responsabilidade fiscal, manda recado a Flávio e cobra Judiciário ético e isento",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 7,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-08T10:07:45Z",
+   "link": "https://www1.folha.uol.com.br/poder/2026/11/na-tv-lula-promete-responsabilidade-fiscal-manda-recado-a-flavio-e-cobra-judiciario-etico-e-isento.shtml",
+   "editoria": "economia",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "flavio"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 3,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Pronunciamento de Lula cobrando ética do Judiciário e responsabilidade fiscal.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Fiscais são alvo de tiros em operação da PF, do Ibama e da Funai contra desmatamento ilegal",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 24,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-07T23:43:45Z",
+   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPS1ZoMkQ2c3QzYkJfMXpVRHhWM2lqbnRnX1V3dVJiQjJSMTJoR3ZHeVJXWGdYdG90Y3BkQ01WaWluajktZzRhdmZ3SmJ5SkNtTy1iS2Nqd2xnLVIzakFkQ0NIaDZjLUZRMUl0Y19vMFk1X2lkOFNzcUJBa2RWb01SZ3JMeW84ekJua1Nqa0c2UmdGZkh5bVh5UlM4aWt0cFlvQUc5YlVhVzBRejktaV9HTzZvVEtyOHdsZHR3VGFBOA?oc=5",
+   "editoria": "politica",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "desmatamento"
+   ],
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 3,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Ataque a fiscais em operação contra desmatamento ilegal.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Notícia Reforma do Judiciário, isenção da cesta básica e dívida pública: leia a íntegra do pronunciamento de Lula",
+   "secoes": [
+    "B",
+    "C-nacional",
+    "D-terra"
+   ],
+   "veiculos": 8,
+   "veiculos_3h": 7,
+   "na_pauta_desde": "2026-11-09T00:05:21Z",
+   "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQeWs4SzVvdU4zVjdKdXJyUWM5TTVNenh4UzFTSW5BaGxGQWxCc2hoRFY0M0N6T3ZPY0Q3bkQ2dHdSSmIxNW92dUdBTUFfSlpzaGpRbHZ4RnJzWVA3cklSQjNkX3NiS1g3QnVTbFphQzhEUUNVZ0lKWGR0LVE0dGgzRElreURZNmtaay14M0lDUExOcnJuZDZobnBzNVlrYjBhMTNGUks4S3pCbjFteUtsazJobkNfXy1OYWlIT1VzZVNaaHF1aE5MWnphbzY?oc=5",
+   "editoria": "economia",
+   "nota": 8,
+   "esquentou": false,
+   "lente": [
+    "cesta basica",
+    "isencao",
+    "isencao"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 3,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Pronunciamento presidencial aborda temas cruciais como cesta básica e dívida.",
     "soma": 4
    }
   },
@@ -246,8 +306,8 @@
     "B",
     "D-america_latina"
    ],
-   "veiculos": 25,
-   "veiculos_3h": 7,
+   "veiculos": 43,
+   "veiculos_3h": 15,
    "na_pauta_desde": "2026-11-08T06:44:04Z",
    "link": "https://www.telesurtv.net/papa-leon-xiv-historica-visita-argentina/",
    "editoria": "america_latina",
@@ -267,56 +327,88 @@
    }
   },
   {
-   "manchete": "Proposta da redação do Enem rompe com formato recente sobre minorias sociais, dizem professores",
+   "manchete": "Pope’s visit to Argentina sets up showdown with ‘hyper-capitalist’ Milei",
    "secoes": [
     "B",
-    "C-nacional"
+    "D-america_latina"
    ],
-   "veiculos": 5,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-09T00:05:21Z",
-   "link": "https://www1.folha.uol.com.br/educacao/2026/11/proposta-da-redacao-do-enem-rompe-com-formato-recente-sobre-minorias-sociais-dizem-professores.shtml",
-   "editoria": "educacao",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [],
+   "veiculos": 22,
+   "veiculos_3h": 9,
+   "na_pauta_desde": "2026-11-08T20:07:33Z",
+   "link": "https://www.theguardian.com/world/2026/nov/08/popes-visit-to-argentina-sets-up-showdown-with-hyper-capitalist-milei",
+   "editoria": "america_latina",
+   "nota": 6,
+   "esquentou": true,
+   "lente": [
+    "milei"
+   ],
+   "outras_manchetes": 1,
    "ia": {
-    "editoria": "educacao",
+    "editoria": "america_latina",
     "I": 2,
     "V": 2,
     "P": 2,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Análise pedagógica sobre o tema da redação do Enem.",
+    "motivo": "Choque entre Papa e Milei atrai interesse internacional e regional.",
     "soma": 4
    }
   },
   {
-   "manchete": "Caiu no Enem 2026: exame citou Lei Rouanet, MST e a importância do voto",
+   "manchete": "Pope Leo tells Argentina's Trump-ally Milei that leaders must know limits of power",
    "secoes": [
     "B",
-    "D-terra"
+    "D-america_latina"
    ],
-   "veiculos": 33,
-   "veiculos_3h": 21,
-   "na_pauta_desde": "2026-11-08T20:07:33Z",
-   "link": "https://g1.globo.com/educacao/enem/2026/noticia/2026/11/08/caiu-no-enem-2026.ghtml",
-   "editoria": "roca",
-   "nota": 6,
-   "esquentou": true,
+   "veiculos": 9,
+   "veiculos_3h": 9,
+   "na_pauta_desde": "2026-11-09T00:05:21Z",
+   "link": "https://www.nytimes.com/2026/11/08/world/americas/pope-leo-argentina-milei.html",
+   "editoria": "america_latina",
+   "nota": 7,
+   "esquentou": false,
    "lente": [
-    "mst"
+    "trump",
+    "milei"
    ],
    "ia": {
-    "editoria": "educacao",
+    "editoria": "america_latina",
     "I": 2,
     "V": 2,
-    "P": 1,
+    "P": 2,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Temas do Enem geram debate cultural e político.",
+    "motivo": "Crítica do Papa a Milei atinge diretamente a extrema-direita.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Sucesión de impactos para Javier Milei: ni la llegada del Papa León XIV frenan las críticas y el ruido en el Gobierno",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 7,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-08T06:44:04Z",
+   "link": "https://www.bbc.com/mundo/articles/cqkg5r5x5l7mo?at_medium=RSS&at_campaign=rss",
+   "editoria": "america_latina",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "milei"
+   ],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Crises acumuladas e críticas ao governo de Javier Milei.",
     "soma": 4
    }
   },
@@ -326,8 +418,8 @@
     "B",
     "D-america_latina"
    ],
-   "veiculos": 25,
-   "veiculos_3h": 11,
+   "veiculos": 21,
+   "veiculos_3h": 8,
    "na_pauta_desde": "2026-11-08T06:44:04Z",
    "link": "https://www.rfi.fr/br/am%C3%A9ricas/20261108-visita-do-papa-le%C3%A3o-xiv-%C3%A0-argentina-deve-expor-profundas-diverg%C3%AAncias-com-javier-milei",
    "editoria": "america_latina",
@@ -347,55 +439,59 @@
    }
   },
   {
-   "manchete": "PF vai afastar os 2 principais delegados que investigam fraudes no Master",
+   "manchete": "BRB pede indenização de R$ 2,2 bilhões por fraudes do Banco Master",
    "secoes": [
-    "B",
-    "C-nacional"
+    "B"
    ],
-   "veiculos": 6,
-   "veiculos_3h": 5,
+   "veiculos": 10,
+   "veiculos_3h": 7,
    "na_pauta_desde": "2026-11-08T22:08:05Z",
-   "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQWDVsSlhOMDBBWjRianhiWGJTYTdfTFdjTEpjYzJsR2hOSHRXd1ltYzlHZElYLWxHd3hla1Z5QWUtRTJyTXVRaV9pdzFocGpZa0VUTjZaSEpadVhKbWgyQnpwdklvZlZZeUlCTHBWdUE2NWg1ZFhTQWNIcm53ZkRKb2pnNWZQdWltVnFqS1B4dmNKaFNncG1zWmExQUM2U1FOQ2d3SThkdGw2bnlpZnI3WmpfTk1FSl9UNjdLbEhVaHlXMkxoNUdYNFRMbklJNFNFaW1SVWFzNG1fQVE?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNUTJLb0J6cl9Eb2VzeGRabElvSm1BOGpzckdsdmZuUmM2U0dMZWl1RzF4QnZHZkVWV2I2UXZZaUhnTVg2LWZ6RTMxSkFYWFRuNFZzTUQxYUo2N3dZanh5aFZiZ245cWxMQjdkbW5abFlGeG1hQXM2NHpnWGtndzVWdl9vUVdJd3dURUlMdmc0M1JxeUJOVmJPVDk5Q3drVkdod0d4cG9PX2FYU1JPYkk4VG9nTHVkYy1mcV9vNTJjaTFVYWU0RmZxZ0N2cw?oc=5",
    "editoria": "politica",
    "nota": 6,
-   "esquentou": true,
+   "esquentou": false,
    "lente": [
-    "master"
+    "master",
+    "banco"
    ],
    "ia": {
-    "editoria": "politica",
+    "editoria": "gerais",
     "I": 2,
     "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Afastamento de delegados gera suspeitas sobre investigação de fraudes.",
+    "motivo": "Indenização bilionária por fraude bancária envolve recursos públicos/estatais.",
     "soma": 4
    }
   },
   {
-   "manchete": "Enem: estudantes afetados por questões climáticas terão nova data de prova",
+   "manchete": "Pope arrives in Argentina and tells Milei that people, not the economy, should come first",
    "secoes": [
-    "B"
+    "B",
+    "C-internacional",
+    "D-america_latina"
    ],
-   "veiculos": 13,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-08T16:05:42Z",
-   "link": "https://g1.globo.com/educacao/noticia/2026/11/08/ministro-da-educacao-garante-nova-oportunidade-em-dezembro-para-estudantes-que-perderam-enem-por-questoes-climaticas.ghtml",
-   "editoria": "educacao",
-   "nota": 5,
-   "esquentou": true,
-   "lente": [],
+   "veiculos": 5,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-09T00:05:21Z",
+   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOdzFjOXRNZkVIOUZ0X0YxZFBydWlSSnpicmpnZVNWb3A3Qm5Hc3otSjRhVFQ1QW1HMG9zSXA1dFJnaWozeExzTjd1U21PTy0ycnpaY3pkMHRONGN3YWpCcks0UHhQQzA0X05aWHQyRjNWbzJvNERvcjZkclhNMWlvVjNUT2Nrd3VBbXc0RnUtUVNZbWFNbXNDeVJmTGdMcHM?oc=5",
+   "editoria": "america_latina",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "milei"
+   ],
    "ia": {
-    "editoria": "educacao",
+    "editoria": "america_latina",
     "I": 2,
     "V": 2,
     "P": 1,
-    "formato": "carrossel",
+    "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Nova data do Enem para afetados por clima.",
+    "motivo": "Papa cobra prioridade ao povo frente à economia na Argentina.",
     "soma": 4
    }
   },
@@ -428,11 +524,38 @@
    }
   },
   {
+   "manchete": "Caiu no Enem 2026: exame citou Lei Rouanet, MST e a importância do voto",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 10,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-08T20:07:33Z",
+   "link": "https://g1.globo.com/educacao/enem/2026/noticia/2026/11/08/caiu-no-enem-2026.ghtml",
+   "editoria": "roca",
+   "nota": 5,
+   "esquentou": true,
+   "lente": [
+    "mst"
+   ],
+   "ia": {
+    "editoria": "educacao",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Temas do Enem geram debate cultural e político.",
+    "soma": 4
+   }
+  },
+  {
    "manchete": "MST denuncia ataque criminoso ao Acampamento Marilene Dantas, na Paraíba",
    "secoes": [
     "D-terra"
    ],
-   "veiculos": 6,
+   "veiculos": 7,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-08T20:07:33Z",
    "link": "https://mst.org.br/2026/11/08/mst-denuncia-ataque-criminoso-ao-acampamento-marilene-dantas-na-paraiba/",
@@ -453,71 +576,13 @@
     "motivo": "MST denuncia ataque criminoso a acampamento na Paraíba.",
     "soma": 4
    }
-  },
-  {
-   "manchete": "Enem 2026: mais de 5 milhões fazem hoje 1º dia de exame, com 90 questões e redação",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 9,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-08T16:05:42Z",
-   "link": "https://redir.folha.com.br/redir/online/educacao/rss091/*https://www1.folha.uol.com.br/educacao/2026/11/professores-comentam-redacao-e-questoes-do-1o-dia-do-enem-2026-assista.shtml",
-   "editoria": "educacao",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Enem 2026 muda estilo de tema da redação depois de focar em minorias sociais em dez das últimas 11 edições",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 9,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-08T20:47:07Z",
-   "link": "https://g1.globo.com/pi/piaui/ingresso-universitario/noticia/2026/11/08/medicina-jovem-tema-redacao-enem.ghtml",
-   "editoria": "educacao",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Gleisi acusa Folha de 'terrorismo fiscal' e de querer recessão ao criticar reportagem",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 6,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-08T20:37:16Z",
-   "link": "https://www1.folha.uol.com.br/mercado/2026/11/gleisi-acusa-folha-de-terrorismo-fiscal-e-de-querer-recessao-ao-criticar-reportagem.shtml",
-   "editoria": "economia",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "El papa León XIV rindió homenaje a San Martín en el monumento de Retiro",
-   "secoes": [
-    "B",
-    "C-internacional",
-    "D-america_latina"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-09T00:05:21Z",
-   "link": "https://www.telesurtv.net/papa-argentina-ofrenda-sanmartin-cita-milei/",
-   "editoria": "america_latina",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
   }
  ],
  "rebaixados": [
   {
    "manchete": "Lula vai pregar união e responsabilidade fiscal em pronunciamento na TV, mas sem anunciar medidas",
-   "veiculos": 21,
-   "veiculos_3h": 10,
+   "veiculos": 35,
+   "veiculos_3h": 27,
    "na_pauta_desde": "2026-11-08T10:07:45Z",
    "esquentou": true,
    "ia": {
@@ -533,9 +598,45 @@
    }
   },
   {
-   "manchete": "Vacina contra mpox: Ministério da Saúde amplia compra para 25 mil doses; veja quem pode se imunizar",
-   "veiculos": 12,
+   "manchete": "Enem 2026 volta a ter 'textão' e traz questões como IA, terras raras e ECA Digital",
+   "veiculos": 27,
    "veiculos_3h": 7,
+   "na_pauta_desde": "2026-11-08T20:07:33Z",
+   "esquentou": true,
+   "ia": {
+    "editoria": "educacao",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Novidades nas questões do Enem 2026.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Enem 2026: quase 70% dos inscritos têm isenção da taxa de inscrição; Amazonas tem maior porcentagem",
+   "veiculos": 8,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-11-08T18:07:59Z",
+   "esquentou": true,
+   "ia": {
+    "editoria": "educacao",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Isenção de taxa no Enem garante acesso à educação pública.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Ministério da Saúde informa aquisição de 25 mil doses de vacina contra mpox",
+   "veiculos": 12,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-08T18:07:59Z",
    "esquentou": false,
    "ia": {
@@ -546,50 +647,14 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Compra de vacinas reforça o SUS.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Mãe de Oruam deixa presídio e passa para prisão domiciliar por decisão do STF",
-   "veiculos": 12,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-08T18:07:59Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "gerais",
-    "I": 1,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "STF concede prisão domiciliar para mãe de Oruam.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Enem 2026: tema sobre valorização do SUS exige que aluno identifique problema implícito no enunciado, avaliam professores",
-   "veiculos": 10,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-08T20:07:33Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "educacao",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Análise de tema do Enem sobre o SUS.",
+    "motivo": "Aquisição de vacinas pelo SUS reforça combate a doenças.",
     "soma": 3
    }
   },
   {
    "manchete": "Pope Leo heads to Milei’s Argentina as tensions loom over austerity, Iran",
-   "veiculos": 6,
-   "veiculos_3h": 2,
+   "veiculos": 5,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-09T00:05:21Z",
    "esquentou": false,
    "ia": {
@@ -605,45 +670,9 @@
    }
   },
   {
-   "manchete": "Papa Leão XIV celebra missa histórica no Uruguai em viagem pela América do Sul",
-   "veiculos": 24,
-   "veiculos_3h": 15,
-   "na_pauta_desde": "2026-11-08T06:44:04Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Visita papal ao Uruguai tem impacto regional limitado.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "In Argentina, Pope Leo Tells President Milei Economy Must Serve the Needy",
-   "veiculos": 17,
-   "veiculos_3h": 15,
-   "na_pauta_desde": "2026-11-09T00:05:21Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Visita do Papa à Argentina em tensão com Milei.",
-    "soma": 2
-   }
-  },
-  {
    "manchete": "Ex-presidente Petro é investigado na Colômbia por escândalo sexual",
    "veiculos": 5,
-   "veiculos_3h": 4,
+   "veiculos_3h": 5,
    "na_pauta_desde": "2026-11-09T00:05:21Z",
    "esquentou": false,
    "ia": {
@@ -653,45 +682,45 @@
     "P": 1,
     "formato": "feed",
     "repetido": false,
-    "risco": "Acusação de crime sem fonte oficial",
-    "motivo": "Investigação contra ex-presidente na Colômbia.",
+    "risco": "",
+    "motivo": "Investigação contra ex-presidente Petro na Colômbia.",
     "soma": 2
    }
   },
   {
-   "manchete": "Justiça do Paraguai decreta prisão preventiva de ex-presidente Santiago Peña",
-   "veiculos": 60,
-   "veiculos_3h": 8,
+   "manchete": "Decretan prisión preventiva para el expresidente de Paraguay Santiago Peña por crisis de Ueno Bank",
+   "veiculos": 13,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-08T06:44:04Z",
    "esquentou": false,
    "ia": {
     "editoria": "america_latina",
     "I": 3,
-    "V": 3,
+    "V": 2,
     "P": 2,
     "formato": "carrossel",
     "repetido": true,
     "risco": "",
-    "motivo": "Prisão preventiva de ex-presidente do Paraguai já foi abordada.",
-    "soma": 6
+    "motivo": "Prisão preventiva do ex-presidente paraguaio (mesmo fato do id 11).",
+    "soma": 5
    }
   },
   {
-   "manchete": "Pope Leo XIV’s visit to Latin America, in photos",
-   "veiculos": 14,
+   "manchete": "Brown wins Mexico playoff, becomes youngest winner on PGA Tour since 1931",
+   "veiculos": 8,
    "veiculos_3h": 8,
-   "na_pauta_desde": "2026-11-08T20:07:33Z",
-   "esquentou": true,
+   "na_pauta_desde": "2026-11-09T01:00:35Z",
+   "esquentou": false,
    "ia": {
     "editoria": "fora",
     "I": 0,
-    "V": 1,
+    "V": 0,
     "P": 0,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Assunto internacional sem impacto direto na vida dos trabalhadores brasileiros.",
-    "soma": 1
+    "motivo": "Esporte (golfe).",
+    "soma": 0
    }
   }
  ],
@@ -722,8 +751,8 @@
     "A",
     "B"
    ],
-   "veiculos": 91,
-   "veiculos_3h": 29,
+   "veiculos": 86,
+   "veiculos_3h": 16,
    "na_pauta_desde": "2026-11-08T16:05:42Z",
    "link": "https://g1.globo.com/educacao/enem/2026/noticia/2026/11/08/tema-da-redacao-do-enem-2026-e-a-valorizacao-do-sistema-unico-de-saude-sus-como-direito-universal.ghtml",
    "editoria": "educacao",
@@ -838,7 +867,7 @@
     "A"
    ],
    "veiculos": 4,
-   "veiculos_3h": 1,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-08T06:19:39Z",
    "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5ENmoyaUFOM3hnYS16RkJsbWRzazU5MmdPVENMUVdWN1otZ2c1TjFWbjk1S2ViX1VVM05jNjd2ZjNxb0ZjQlcxeEFEMlp0cGxBRG5z?oc=5",
    "editoria": "economia",
@@ -871,17 +900,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Candidatos têm impressões distintas sobre o primeiro dia do Enem 2026",
+   "manchete": null,
    "secoes": [
-    "A",
-    "B"
+    "A"
    ],
-   "veiculos": 41,
-   "veiculos_3h": 28,
-   "na_pauta_desde": "2026-11-08T10:07:45Z",
-   "link": "https://www1.folha.uol.com.br/educacao/2026/11/candidatos-tem-impressoes-distintas-sobre-o-primeiro-dia-do-enem-2026.shtml",
-   "editoria": "eleicoes",
-   "nota": 5,
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "educacao",
+   "nota": 2,
    "parceiro": {
     "perfil": "luzmanifesto",
     "quando": "2026-11-08T12:52:17Z",
@@ -1005,14 +1033,14 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Nuevo escenario tras las elecciones en Brasil y en Estados Unidos",
+   "manchete": "Elecciones Estados Unidos 2026",
    "secoes": [
     "A"
    ],
-   "veiculos": 3,
+   "veiculos": 2,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-09T00:05:21Z",
-   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOVTIxOC1OTno3a2g2d2Jlc2pJUWN5b3pkdTk3TGd2Mm1jSEZONkZ0aXlYOU9HVWJKdkVKSGtQZ1VraGZOYnJIRV9CakdZTEUtQS1Lb2FqTXg5UGlFWUY0ZzJhMVVPMFhOTGVwVExic0F4bnFjY3JuOUJSVUtFbUptVTJ0WnZoWW81Sm5kSk5FUUFGZHNQc1QzLWFYOA?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1YckE2OHA0SkdTSU45SWlIa2JGS1pndFpiS1pKR2Q0SmJfMmlRZk05WlZoOUdQWW80QmhaWW1uTnIxbWFFYjZjcFB3eGZBUTdRb1E0U0ttb3o?oc=5",
    "editoria": "educacao",
    "nota": 3,
    "parceiro": {
@@ -1028,8 +1056,8 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 13,
-   "veiculos_3h": 1,
+   "veiculos": 14,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-08T06:44:04Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/08/quaest-48percent-aprovam-e-44percent-desaprovam-governo-lula-na-primeira-pesquisa-apos-a-eleicao.ghtml",
    "editoria": "eleicoes",
@@ -1043,14 +1071,14 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Casa da Igualdade Racial será espaço de formação sobre saúde da população negra",
+   "manchete": null,
    "secoes": [
     "A"
    ],
-   "veiculos": 1,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-09T00:05:21Z",
-   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPdXdMdm14MFJhS0h4cWxhQkFVUC1oRy1MR3RqUHR1dXBIcGpzVnZFR2IzNXpvOTIxcnU1aWg1TnBJSEZYaEpfOHo1VXBTTDNVRndLeWcwdVozNzdEZ1ZkdVctancxMkc0bG9nWE5ZNTJDalp1bXVSZHU4aVdsc0plUDZQV254empVb3BLNFFVUnpWVlRwOS1EYTcwT0RMQjRuTGpWdWpoVWktQlZfXzVSNzNwR3BlUQ?oc=5",
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
    "editoria": "saude",
    "nota": 4,
    "parceiro": {
@@ -1081,14 +1109,14 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Brasil entra em 2027 sob a ameaça de juros altos e crescimento quase estagnado",
+   "manchete": "El Niño acende alerta para dengue em 2027; projeção aponta chance de 866 mil casos",
    "secoes": [
     "A"
    ],
-   "veiculos": 2,
+   "veiculos": 13,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-07T23:43:45Z",
-   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOVGxVRmVXZS1sU0ROazVYeTFaY05wMGxDanhld3didXZBaFNlMTVkM0JpRFhEamNZdmYtQXNYdDdRWnA1VVlBY2xyRUZNaXhscXNLSXo0UUZyNGFKWnU5LXNQemNiVVpCckRYUGkwZjFUbFZIallsa1BpMjZ2bGNPRmd2VER5M3ppLTdrUjBHNU1iekRHNjNxRUxaUUlhUklVZDh2Z3VHNDQ0S2w5SU44dklSUUhxcThFMUt6T2RGYUc?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPWVZ1UlBPdGw2N1hFR2l3NmZqMGdidlpkaU5kcDVUaUVNRjM1RXZnTTRpUHB2aTB3dGl2NjNJUzU0RTlNc295QVZ2RTdJUEhWWEtMNzh1Z2tpUDJYaDFzbzNrVVdudVc5MkZqU3NrY19hNlBuTnV3X2dkcFN1UDNyeWtZMWc2Y3NNY05LZmcyX3JqR0ZZLTlOR9IBpwFBVV95cUxOcENRS1hwaUdRQ3VPQ1VER3RGNUE5akxYdGZoVmdhZy1UOTd2dGc0RkpMRjNGZWFQdGliTGtubTR1UmJtLUc3UUdqQThzb241am5vMHFlUmxQNFRCQ0ZOMUppdlNwVUgtTi13ZmZVdWRYYlJYNmtfTmxseG5MbW5oUE9QenJ1QnloWDZjSTNwZGpfMHN0Sm85aWxnaDVkNHdtMVVQMVQ4Zw?oc=5",
    "editoria": null,
    "nota": null,
    "parceiro": {
@@ -1119,15 +1147,15 @@
    "triagem": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Vacina contra mpox: Ministério da Saúde amplia compra para 25 mil doses; veja quem pode se imunizar",
+   "manchete": "Ministério da Saúde informa aquisição de 25 mil doses de vacina contra mpox",
    "secoes": [
     "A",
     "B"
    ],
    "veiculos": 12,
-   "veiculos_3h": 7,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-08T18:07:59Z",
-   "link": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/ministerio-informa-ter-adquirido-25-mil-doses-de-vacina-contra-mpox",
+   "link": "https://tnonline.uol.com.br/noticias/cotidiano/ministerio-da-saude-informa-aquisicao-de-25-mil-doses-de-vacina-contra-mpox-1172126",
    "editoria": "saude",
    "nota": 6,
    "parceiro": {
@@ -1143,10 +1171,10 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 3,
-   "veiculos_3h": 0,
+   "veiculos": 4,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-08T14:07:57Z",
-   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQWFNkTXJjVmZ3SDA2WFlwbE15N052VmRNcDNSemRvc2RnOE9sY2g2MlU2MTBKTkNtSzE2SVlxYm5PYXE5VmRROU92Q19ielU3U2RncUJZMzI5NUFLQ0h2bDk0RFlSOGJHWjB0TWh0bFNWM0lESnJwRXZfdkwwcWJldEo2RWlsYzBXb243NVNaWERPNjZpVjlBVzVhczJSN1ROWkU5bjgyM0pITWE0RWZDSl9XVFY1LURlQ0FzTHljcVE?oc=5",
+   "link": "https://www.gazetadopovo.com.br/vozes/alexandre-garcia/apoio-a-reducao-da-maioridade-penal-foi-so-mais-uma-mentira-de-lula/",
    "editoria": "gerais",
    "nota": 2,
    "parceiro": {
@@ -1350,63 +1378,63 @@
  ],
  "descartados_mais_quentes": [
   {
-   "manchete": "El presidente Herzog encargó formar gobierno al rival de Netanyahu",
-   "veiculos": 55,
-   "veiculos_3h": 8,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Trump ofrece el puesto de portavoz de la Casa Blanca a Dana White, director de la UFC",
-   "veiculos": 50,
+   "manchete": "Dana White recusa convite de Donald Trump para assumir comunicação da Casa Branca",
+   "veiculos": 43,
    "veiculos_3h": 3,
-   "motivo": "fora: esporte (ufc)"
-  },
-  {
-   "manchete": "Norris earns pole for Sao Paulo GP as grid shaken up by penalties for engine changes",
-   "veiculos": 47,
-   "veiculos_3h": 20,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Lula acompanha em sala de monitoramento a entrega das provas",
+   "manchete": "Flávio Bolsonaro descarta su regreso a Brasil",
    "veiculos": 35,
-   "veiculos_3h": 6,
+   "veiculos_3h": 3,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Jogos hoje (08/11/26) ao vivo de futebol: onde assistir e horário",
-   "veiculos": 22,
-   "veiculos_3h": 8,
-   "motivo": "fora: esporte (futebol)"
+   "manchete": "Renato elogia a si próprio após conquista da vaga na final da Copa do Brasil: ‘Eu sou o cara’",
+   "veiculos": 19,
+   "veiculos_3h": 16,
+   "motivo": "sem editoria"
   },
   {
-   "manchete": "PT repudia ameaças de estupro e morte contra Ana Elisa e cobra segurança",
-   "veiculos": 21,
-   "veiculos_3h": 11,
+   "manchete": "Ana Elisa expõe ameaças de estupro e morte após críticas por usar escolta",
+   "veiculos": 17,
+   "veiculos_3h": 9,
    "motivo": "fora: crime ou tragedia (morte)"
   },
   {
-   "manchete": "Vasco luta contra retrospecto ruim diante do Palmeiras na Copa do Brasil",
+   "manchete": "Jogos hoje (08/11/26) ao vivo de futebol: onde assistir e horário",
    "veiculos": 16,
-   "veiculos_3h": 13,
-   "motivo": "fora: esporte (palmeiras)"
+   "veiculos_3h": 4,
+   "motivo": "fora: esporte (futebol)"
   },
   {
-   "manchete": "Atirador deixa 6 mortos e mais de 10 feridos em praça no centro da Cracóvia",
-   "veiculos": 14,
-   "veiculos_3h": 2,
-   "motivo": "fora: crime ou tragedia (mortos)"
-  },
-  {
-   "manchete": "Defesa Civil recomenda kit de emergência para desastres: \"não criemos pânico\"",
+   "manchete": "El Niño acende alerta para dengue em 2027; projeção aponta chance de 866 mil casos",
    "veiculos": 13,
-   "veiculos_3h": 2,
+   "veiculos_3h": 0,
+   "motivo": "fora: esporte (copa do mundo)"
+  },
+  {
+   "manchete": "São Paulo Grand Prix 2026: Race in Brazil start time, how to watch, full schedule, predictions",
+   "veiculos": 11,
+   "veiculos_3h": 5,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Papa Leão XIV pede aos homens que tratem 'com respeito' as suas esposas",
-   "veiculos": 11,
-   "veiculos_3h": 3,
+   "manchete": "Grêmio se classifica para a Libertadores, mas pode ficar fora; entenda",
+   "veiculos": 9,
+   "veiculos_3h": 5,
+   "motivo": "fora: esporte (gremio)"
+  },
+  {
+   "manchete": "Lula acusa big techs de interferência nas eleições e diz que vai governar para todos",
+   "veiculos": 8,
+   "veiculos_3h": 7,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Lula faz primeiro pronunciamento após reeleição neste domingo; veja horário e assuntos previstos",
+   "veiculos": 8,
+   "veiculos_3h": 5,
    "motivo": "sem editoria"
   }
  ]
