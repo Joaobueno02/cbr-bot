@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-10T14:12:39Z",
- "pauta_quando": "2026-11-10T14:12:38Z",
+ "quando": "2026-11-10T16:12:41Z",
+ "pauta_quando": "2026-11-10T16:12:40Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -8,71 +8,94 @@
   "ia": "gemini",
   "ok": true,
   "erro": null,
-  "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 21,
-  "falhas_antes": null,
-  "pedidos_hoje": 7
+  "modelo": "gemini-3.5-flash",
+  "avaliados_agora": 18,
+  "falhas_antes": "gemini-3.8-flash: ReadTimeout | gemini-3.5-flash: HTTP 503 This model is currently experiencing high demand. Spikes in",
+  "pedidos_hoje": 12
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 149,
+ "total_assuntos": 151,
  "novos_3h": 7,
- "esquentaram": 4,
+ "esquentaram": 7,
  "candidatos": [
   {
-   "manchete": "Fim da escala 6x1: audiência reúne hoje no STF representantes de empregadores e trabalhadores. Veja o que está em jogo",
+   "manchete": "BC aponta em ata do Copom necessidade de juros altos por mais tempo e cita 4 choques: 6x1, petróleo, El Niño e dólar",
    "secoes": [
     "B"
    ],
-   "veiculos": 13,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-09T22:08:05Z",
-   "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxOaXdKYUg2bXVhdVNJMU82SXBRblJqeTlVLTdzcGRzM2ljZGRGOUpYX0RQSHBPdUFTVGZFaTBZY2xfWGNkMzFWZ1prY2lNVl9aTmlmZ0xIREk5eDlnd2ZjUmpvdVBHRzhNdXZlTHRVTWhsZ19ZcHJwZEJla3VVcXVwaXRCdlotZ2hEQ0hHUjNOV0dYV1VQT241Vl92djRERlhXcUItUmw3aHM4MU9NOWFBZU5UeFhPZWZENndzM1dLNVNtOEJNWTFnVWFqREdYbFdXQmZsOFJEMFRneUpiTEhDa2ZCaVJGa2hhRExqZDNQTEFwN3FMVGc5WmxxMHFnMldSX1Y3OE530gGUAkFVX3lxTE9zREFJTHdCMDJiOEpZSUlDVzRWNk1oY1oxb0pxalU0Q2tMQ0YxX3VWdVVhRzM2bTR1UGpMbjR1NDN5SThyb0VRMEJZS1h3QV9QX1hvY3NfUXo5cUNGSXExM09MdTR4S3NIcXFPOXF2TWxiZ0JpS2pieVlXZ3h4bGdCTDMtcTlKOUJsa1lQbFEzY1BTbGk0WVdIaHRtQnZlZHctT09jSDlueVlkTmk1Q1NDVlZBS1VKQ1lmUUo3a0NpMTJPZFVIbzR6dE5qSjc2bm9yUlNWMFpod2pHUUo0cXV1S0NWWEp3Y1ZqdnRmQjR6WmZxSFkzbHg4VTNNWWItRUw5MTYwOFViWUVJdmdPQnVPa0R4dg?oc=5",
+   "veiculos": 21,
+   "veiculos_3h": 14,
+   "na_pauta_desde": "2026-11-10T12:10:48Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/ata-do-copom-mostra-expectativa-de-inflacao-mais-alta-com-guerra-el-nino-fim-da-6x1-e-disparada-do-dolar.shtml",
    "editoria": "economia",
    "nota": 7,
    "esquentou": false,
    "lente": [
-    "trabalhador",
-    "6x1"
+    "6x1",
+    "juros"
    ],
    "ia": {
-    "editoria": "politica",
+    "editoria": "economia",
     "I": 3,
     "V": 3,
     "P": 3,
     "formato": "reels",
     "repetido": false,
     "risco": "",
-    "motivo": "Audiência decisiva no STF sobre o fim da escala 6x1.",
+    "motivo": "Ata do BC usa fim da 6x1 para justificar manutenção de juros altos aos trabalhadores.",
     "soma": 6
    }
   },
   {
-   "manchete": "Ata do Copom: Banco Central diz que piora nas expectativas de inflação exige juros mais altos por tempo maior",
+   "manchete": "Escola Sem Partido pede à Justiça do DF anulação da redação do Enem 2026",
    "secoes": [
-    "B",
-    "C-nacional"
+    "B"
    ],
-   "veiculos": 9,
-   "veiculos_3h": 8,
+   "veiculos": 11,
+   "veiculos_3h": 9,
+   "na_pauta_desde": "2026-11-10T14:12:38Z",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPX2JRZm9xZV9Jbm9WMkN4ZW5NcHFnWUk5MWhfazU3Qy1pdExrcHg4a1hCRmFPNXltQlhlZ281dHppVTJCbEl0U1N1YkJhd2V5RnlEampISDNhWGp2QVdlRmc2akkzQi1zZnM0WGlKb3pRbDBmNzRKbDltMzhmaUdGaEY0OU80RWR0ODV5RjNiME9Kc1NQRHZ0ZWxfMU9hd2tFbXpqREN4VnEySHlfaUpZd3JrY3g4UTg?oc=5",
+   "editoria": "educacao",
+   "nota": 5,
+   "esquentou": true,
+   "lente": [],
+   "ia": {
+    "editoria": "educacao",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Ofensiva reacionária tenta anular a prova que defendeu a valorização do SUS.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "TST quer fim imediato da escala 6x1; comércio pede até 2028",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 11,
+   "veiculos_3h": 6,
    "na_pauta_desde": "2026-11-10T12:10:48Z",
-   "link": "https://g1.globo.com/economia/noticia/2026/11/10/ata-do-copom-banco-central-diz-que-piora-nas-expectativas-de-inflacao-exige-juros-mais-altos-e-por-tempo-maior.ghtml",
+   "link": "https://www.gazetadopovo.com.br/economia/presidente-tst-vieira-de-mello-filho-fim-imediato-escala-6x1/",
    "editoria": "economia",
-   "nota": 7,
+   "nota": 5,
    "esquentou": true,
    "lente": [
-    "banco",
-    "juros"
+    "6x1"
    ],
    "ia": {
     "editoria": "economia",
     "I": 3,
-    "V": 2,
-    "P": 3,
-    "formato": "carrossel",
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
     "repetido": false,
     "risco": "",
-    "motivo": "Juros altos punem trabalhadores e beneficiam o rentismo.",
-    "soma": 5
+    "motivo": "Conflito direto entre o TST e patronato pelo fim imediato da escala 6x1.",
+    "soma": 6
    }
   },
   {
@@ -80,8 +103,8 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 37,
-   "veiculos_3h": 14,
+   "veiculos": 33,
+   "veiculos_3h": 8,
    "na_pauta_desde": "2026-11-09T19:55:28Z",
    "link": "https://www.gazetadopovo.com.br/republica/decreto-sobre-fim-da-escala-6x1-fica-para-depois-de-viagem-de-lula/",
    "editoria": "politica",
@@ -103,47 +126,76 @@
    }
   },
   {
-   "manchete": "13° salário: veja quando cai, como calcular e quem tem direito",
+   "manchete": "Secretário da Defesa dos EUA defende operações no Irão e Venezuela",
    "secoes": [
-    "B"
+    "B",
+    "D-america_latina"
    ],
-   "veiculos": 22,
-   "veiculos_3h": 13,
-   "na_pauta_desde": "2026-11-09T12:11:31Z",
-   "link": "https://revistaforum.com.br/brasil/pe-de-meia-bonus-enem/",
-   "editoria": "economia",
-   "nota": 6,
+   "veiculos": 9,
+   "veiculos_3h": 7,
+   "na_pauta_desde": "2026-11-10T16:12:40Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/alvo-de-impeachment-secretario-de-defesa-de-trump-chama-processo-de-espetaculo-politico.shtml",
+   "editoria": "america_latina",
+   "nota": 5,
    "esquentou": false,
-   "lente": [
-    "salario",
-    "direito"
-   ],
+   "lente": [],
    "ia": {
-    "editoria": "economia",
+    "editoria": "america_latina",
     "I": 3,
     "V": 2,
     "P": 2,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "13º salário afeta diretamente a renda de quem trabalha.",
+    "motivo": "Ameaça militar e ingerência imperialista dos EUA contra a soberania na América Latina.",
     "soma": 5
    }
   },
   {
-   "manchete": "Fim da 6x1, El Niño e petróleo: Copom alerta para pressões inflacionárias",
+   "manchete": "Cesta básica sobe em outubro e registra variações de preço de mais de 200% na RMR, aponta Procon-PE",
    "secoes": [
-    "B"
+    "B",
+    "D-terra"
    ],
-   "veiculos": 5,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-10T12:10:48Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/ata-do-copom-mostra-expectativa-de-inflacao-mais-alta-com-guerra-el-nino-fim-da-6x1-e-disparada-do-dolar.shtml",
+   "veiculos": 10,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-09T19:55:28Z",
+   "link": "https://www.poder360.com.br/poder-economia/preco-da-cesta-basica-sobe-nas-27-capitais-pelo-2o-mes-seguido/",
+   "editoria": "roca",
+   "nota": 6,
+   "esquentou": true,
+   "lente": [
+    "cesta basica"
+   ],
+   "outras_manchetes": 1,
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Disparada do preço da alimentação básica atinge diretamente o orçamento das famílias trabalhadoras.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Trabalhador com salário mínimo precisa de 106 horas para comprar a cesta básica em Ouro Preto",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-10T16:12:40Z",
+   "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5kcFVocVNfWnZpa256UFdJbUZOOVFROVRLckhMbmdlbkpqbnlUTVdtdVZSSEVsOVlMWU9tWG5hT1lGUmZGWTkwa0l5cGVUQ1A2RUtxYWJaVEF3eWpqbHFIcVoxOW5nZ3B1WG5BN1ZZbG9mVjMzM3FRSUVVbU4?oc=5",
    "editoria": "economia",
-   "nota": 5,
+   "nota": 6,
    "esquentou": false,
    "lente": [
-    "6x1"
+    "trabalhador",
+    "salario",
+    "cesta basica"
    ],
    "ia": {
     "editoria": "economia",
@@ -153,18 +205,44 @@
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Copom usa fim da 6x1 como desculpa para inflação.",
+    "motivo": "Dado concreto expõe o arrocho salarial e o alto custo da alimentação no Brasil.",
     "soma": 5
+   }
+  },
+  {
+   "manchete": "Defesa de Vorcaro reforça ação contra Fachin na CIDH e pede Gilmar no caso",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 38,
+   "veiculos_3h": 21,
+   "na_pauta_desde": "2026-11-10T02:48:25Z",
+   "link": "https://www.gazetadopovo.com.br/republica/defesa-de-vorcaro-pede-que-fachin-mande-a-gilmar-pedido-de-soltura/",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "vorcaro"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Disputa de bastidores e recursos jurídicos de banqueiro investigado no STF.",
+    "soma": 4
    }
   },
   {
    "manchete": "Operação da PF investiga desvio de recursos de emendas Pix na Bahia",
    "secoes": [
-    "B",
-    "C-nacional"
+    "B"
    ],
-   "veiculos": 20,
-   "veiculos_3h": 20,
+   "veiculos": 25,
+   "veiculos_3h": 15,
    "na_pauta_desde": "2026-11-10T12:10:48Z",
    "link": "https://www.congressoemfoco.com.br/noticia/131445/operacao-da-pf-investiga-desvio-de-recursos-de-emendas-pix-na-bahia",
    "editoria": "politica",
@@ -184,177 +262,13 @@
    }
   },
   {
-   "manchete": "Paraguai escolhe novo chefe do Banco Central após colapso de banco digital e crise política",
-   "secoes": [
-    "B",
-    "D-america_latina"
-   ],
-   "veiculos": 34,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-09T08:07:40Z",
-   "link": "https://g1.globo.com/economia/noticia/2026/11/09/paraguai-escolhe-novo-chefe-do-banco-central-apos-colapso-de-banco-digital-e-crise-politica.ghtml",
-   "editoria": "america_latina",
-   "nota": 6,
-   "esquentou": true,
-   "lente": [
-    "banco"
-   ],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Escândalo financeiro no Paraguai envolve Itaipu e banco local.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "PF afasta delegados que assinaram relatório sobre mensagens de Vorcaro a Alexandre de Moraes",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 8,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-09T10:08:30Z",
-   "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNbENrYzdFc3oxS3BsRjMyZ3VzaGlubzBObzZKTV83aXlVdExNOHpPajY3Ymt0S0lIWlV0SUFRMWxPYXZZTTlpVnlPeTIyV3J1MEJYUkM2Sk9VNHNtc3lTdFpvM21hazRBVnozckpKeWZ4OHgtQ3JIbkVoTU9VT0FMd2RvTDFSU2k3YXBYZU1PQnR4a2M2RGVRT2NQZy00dGdqR0dDaXpGc29RcjhRdjJJaXpKX08tSWFVbTBWWGZaaEhHTURENjZVeGw0dGprcmJYWWxBam53?oc=5",
-   "editoria": "politica",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "vorcaro"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Crise na PF e investigações envolvendo o STF.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Defesa de Vorcaro acusa Fachin de criar juízo de exceção e aciona CIDH",
-   "secoes": [
-    "B",
-    "C-nacional"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-10T14:12:38Z",
-   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPT3ZkTHZSc1BfanVOSzR6Tk5NaVB1SThBbGhZRWdxRzVaTl8tcWlHZDJob0lYMWtMRy1PRlRqOEljYnlIMk1sSld6ZXdnYW53cWdjYmtoWTV4ZWItUkQ2eS1yR1NicnNRT1lGd0hzWGM4M2RpVE5TQm0zZkJiQS1TZlN1S0pWZ1l3N25CZVNYRVBEQVZVMXYwaEdyZkVHb1lFa3U5OFNtZF9ydHZVYXlNQ0dVYw?oc=5",
-   "editoria": "politica",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "vorcaro"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Defesa de investigado ataca Fachin.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Direção da PF manda refazer relatórios sobre ministros do STF e Vorcaro",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 12,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-09T10:08:30Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/11/cupula-da-pf-determina-que-relatorios-sobre-relacao-de-ministros-do-stf-com-vorcaro-sejam-refeitos.shtml",
-   "editoria": "politica",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "vorcaro"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Pressão sobre a PF para refazer relatórios.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Júri de acusados por ataque a assentamento do MST em Tremembé começa nesta segunda-feira",
-   "secoes": [
-    "B",
-    "D-terra"
-   ],
-   "veiculos": 8,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-09T16:09:56Z",
-   "link": "https://g1.globo.com/sp/vale-do-paraiba-regiao/noticia/2026/11/10/juri-de-acusados-por-ataque-a-assentamento-do-mst-em-tremembe-entra-no-2o-dia.ghtml",
-   "editoria": "roca",
-   "nota": 6,
-   "esquentou": true,
-   "lente": [
-    "mst"
-   ],
-   "ia": {
-    "editoria": "roca",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Julgamento de ataque a assentamento do MST.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "PF deve afastar delegados do caso Master que coordenavam relatórios sobre ministros do STF",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 14,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-09T10:08:30Z",
-   "link": "https://www.gazetadopovo.com.br/republica/pf-deve-afastar-delegados-do-caso-master-que-coordenavam-relatorios-sobre-ministros-do-stf/",
-   "editoria": "politica",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "master"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Afastamento de delegados no caso Master.",
-    "soma": 4
-   }
-  },
-  {
    "manchete": "Governo Trump anuncia nova Suprema Corte e novo Conselho Eleitoral na Venezuela",
    "secoes": [
+    "B",
     "D-america_latina"
    ],
-   "veiculos": 10,
-   "veiculos_3h": 3,
+   "veiculos": 13,
+   "veiculos_3h": 5,
    "na_pauta_desde": "2026-11-10T00:08:30Z",
    "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/governo-trump-anuncia-nova-suprema-corte-e-novo-conselho-eleitoral-na-venezuela.shtml",
    "editoria": "america_latina",
@@ -377,14 +291,41 @@
    }
   },
   {
+   "manchete": "Defesa de Vorcaro acusa Fachin de criar juízo de exceção e aciona CIDH",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 8,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-10T14:12:38Z",
+   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPT3ZkTHZSc1BfanVOSzR6Tk5NaVB1SThBbGhZRWdxRzVaTl8tcWlHZDJob0lYMWtMRy1PRlRqOEljYnlIMk1sSld6ZXdnYW53cWdjYmtoWTV4ZWItUkQ2eS1yR1NicnNRT1lGd0hzWGM4M2RpVE5TQm0zZkJiQS1TZlN1S0pWZ1l3N25CZVNYRVBEQVZVMXYwaEdyZkVHb1lFa3U5OFNtZF9ydHZVYXlNQ0dVYw?oc=5",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "vorcaro"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Defesa de investigado ataca Fachin.",
+    "soma": 4
+   }
+  },
+  {
    "manchete": "Meta diz ao TSE que posts de Lula alcançaram 1,5x mais pessoas do que os de Flávio",
    "secoes": [
     "B"
    ],
-   "veiculos": 14,
-   "veiculos_3h": 8,
+   "veiculos": 18,
+   "veiculos_3h": 7,
    "na_pauta_desde": "2026-11-10T10:11:10Z",
-   "link": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxQMDk3V2xVOFpselp2cU40bTdZMHZoWk5SeDQ4WTJaV29NaGdaNVFmbG10a3N1VktucEZONkpJOGhKalRhVTZnRnhwNmxldWZUUDZuQ2t3ZlVqVUIwOTR5ODZZeVpxWG9Qc0tvWjhRc1RxWXVnOTRmWE9ZZVpGQTVsRVh0QmQtOUFidmJpRVVDOHVrUjJVOU1EWFNQcGllMnRaeTk1bnJiWFVqdTYyMnkxMmdxZVl3XzhSVGs0UlBmVVdpUnhsa2VSeVdNOGFkQ0txVkt2N2J4dkpFbEc0dmxHTHNWS2VtZjBJSnUxS2c1ZkJQeXd6N3VjQ09hSjcxUVd1azB5VlB2bXc?oc=5",
+   "link": "https://www.congressoemfoco.com.br/noticia/131451/tre-mg-suspende-investigacao-contra-ana-elisa-por-acao-de-flavio",
    "editoria": "eleicoes",
    "nota": 5,
    "esquentou": false,
@@ -404,133 +345,204 @@
    }
   },
   {
-   "manchete": "Noruega anuncia doação de R$ 350 milhões para o Fundo Amazônia após redução de desmatamento",
+   "manchete": "Lula embarca para a COP31 na Turquia acompanhado de ministros e André Janones; presidentes da Câmara e do Senado ficam fora da comitiva",
    "secoes": [
-    "A"
+    "B"
    ],
-   "veiculos": 28,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-09T12:11:31Z",
-   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/ambiente/2026/11/noruega-anuncia-doacao-de-r-350-milhoes-para-o-fundo-amazonia.shtml",
-   "editoria": "gerais",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "desmatamento"
-   ],
-   "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Aporte milionário para o Fundo Amazônia.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Operação da PF cumpre seis mandados de prisão em investigação sobre ataques a fazendas",
-   "secoes": [
-    "B",
-    "C-nacional"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-10T14:12:38Z",
-   "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPQld3bUVJcGZ1bmJpbHZEY2F4NmlLVnVSdkU1MzZhZ0lfZjVrRVpmcjVpZzVqbzlGOG5ZSjh5dWpQb0w1V09LdUFPSkFQcVdEcm1MM3Bva1k1d2JEM0ZpRE5SN3BpWGpqYTNoVE00R3R6aElLNGtrangwOFVYbEtJVTRhRm1MZ3h2MFNXY1J2cGQwb1hNMEUwMExkcWpveEw3RkppaV9BMHVJdVBnSXBFNW1od01ueHYyRmplZzY3R2N3bnhERzZIbmhfbWVsOTd2?oc=5",
+   "veiculos": 16,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-10T16:12:40Z",
+   "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxONlBmQkxuelRNdC1oRS1YdUYwR1ZmcVhhR2tiTldMS3VSNU83YVJwNWpWWkpNVTBuZ2U4clY4X0ozWXlGbWpYc19qN0ZjNGlTQjB3SzRRbWN0RnlHUXdkVVlFMWtQMjJubUNodHZYTG8zODhHOF9BZ2lVa29vVVV1ZXJrUXBGSGphRWctVHYxSVhDR3FjbW43TWdDRXJJSzRnTTdLOW53ZkZUSmh4aHZhaXVtblYyVlBzd3B4cFNlTjgtdXpWLXowUDhqODVkSHdRcVM5WmhGOXRnbDlSTW1kMFhudmllM2pya1B3OUJIY3ZEY2daSE1r?oc=5",
    "editoria": "politica",
    "nota": 5,
    "esquentou": false,
    "lente": []
   },
   {
-   "manchete": "PF mira esquema milionário de lavagem de dinheiro e Justiça bloqueia R$ 93 milhões em operação em SC",
+   "manchete": "900 agências do INSS oferecem perícia médica por telemedicina",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 9,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-09T18:09:04Z",
+   "link": "https://tvtnews.com.br/900-agencias-inss-pericia-medica-telemedicina/",
+   "editoria": "economia",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "inss"
+   ]
+  },
+  {
+   "manchete": "Primeiro dia do Enem reúne milhares de candidatos em Sorocaba com tema sobre o SUS",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 8,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-09T19:55:28Z",
+   "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPN0kzaXo4STRjRnJ1UWhjZGFqVVoxbzVvTEdiTlEyQklNNndhaXdwelZZWHFtWmdlRXFUYk9YMHVXRmtNUnFBMlhhb0ZBRmpEWU05QVIzSWd2TXFtelptMVJ2d3NOeW1hMm9UMFVxWG9YUGcyOXFVRGRSNWszWTZyYTRVZjVBaGNfM1lFVFlZVWRBSVMtSUhKSDQ0eEJBTmp4QUVuOVAycXBPQmlaenQ1OEFtWlFlR2QweG1oem9JVUVHczVlVmsxU0R2NTJBMF9DUlljZ3FTOURCd29Ba3liZC1teUpxenVuVUxabk83LXM3RHpMUERvVm93M3lTZm14ZUsw0gGSAkFVX3lxTE1uaEkxcld6Zm1zeDNxWHBWRXZIMGdTSmJPZkItY3BLRmI0VnE2QlVtRkJtekdtTVlEYjRMc3VucG43WDBiZVhlbWFudVIxNlBBQlpUUFU2a3g5UC14N3NMdFBEVWZVNjI0aXNYdEk4ODlTLU1uTjBXUU5RVVVwRUpXdk1KeEZzTDcwVEhTR0RHX19iZnp2d3NrX0lBcEtEbFVFWjBDNWZLTDEwNG5yVzJNNG55Slc2ZHgxZGFUbWNiaHFnYWdOczAxeWhoRC0zNDRfTHIxdnd6UWxES09JQmYtYWQzeEJ4bGZVMDJieEdPNk1DSkNvTF9jUGJjbVF3WDY0TnpxYjlVRHhmTjJDV1l3b3c?oc=5",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "sus"
+   ]
+  },
+  {
+   "manchete": "TSE deixa candidatura de Dallagnol parada a 38 dias da diplomação",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 7,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-10T10:11:10Z",
+   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNZWhUc0psTkw4eXdIclFkZkotWm55Y3VqVVZMNjRtaHFxNGN2SU1qWEF0ZXdiX3h6OXpya3c5SEZjWG5lVTdRb25vS2xNT0c3bnJ1YnVONTZuWWxqMVFxT1M0UTRlYmNOMzNnZmRTQXk5MTh3aE9hcEhFSlJoa3J2TFJhZEExVXZkX1hFRXg2bDBUcnM3UllBMjA1Znd3dUtiXzBuLWFyUGIzX1dKbkFtWC1EYS1CUTI5VjA2NksxYVJTYnRac0E?oc=5",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "esquentou": true,
+   "lente": []
+  },
+  {
+   "manchete": "Maquinistas fazem greve na Espanha após dois acidentes fatais em um ano",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-10T14:12:38Z",
+   "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQek51MktVN1NGclE1MzlNRGZlQ2xSWGpLaWg2RjZtTG5Cd05kY3Y0UW9MME8zakQ1LUt3dDNfa21sRzI3a1c3OEd3Z0xKY0tNV1BYanRRSmtOQk5SNWItWkJEU1NRQmgxYzhkNmdtbEtUcHkwbkE3dmV0M0FjU0JRUkZubGdaS1M4blZPcERIbEFGZjZOempYRVc5UjVIR0tzLU9NamdlTGJTQlFoNjdXZ2lR?oc=5",
+   "editoria": "economia",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "greve"
+   ]
+  },
+  {
+   "manchete": "Prefeitura denuncia suspeitas de venda de vagas na fila do SUS em Campos",
    "secoes": [
     "C-nacional"
    ],
    "veiculos": 3,
    "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-10T14:12:38Z",
-   "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxONHJEaGR5WjhvZXZCOHVhN0Q0cXhaNkx2bUVIOXA0V3l0RWFfWTN6M2dYREZuUWxuajd1Y1lMTGNBdjBRaVJyRnM1bzJUQ2hDaTVyem9BTjYzdEU2cXJmcFNxU29naXBfdFlmYU5zdVBZZmh5Nl9xNGtoOU1CNG85d2huSi14Zm84X0oxMlhpV3c2dGUtZEVrbm5aLXVTbFFzWVVSTkp1SklCMVpNZVRkb3dSVDhPd0RLS0xGUjFEcTAybjhTYjlaQkNpWXpHUHdBNkdLeFE4YlY?oc=5",
-   "editoria": "politica",
+   "na_pauta_desde": "2026-11-10T16:12:40Z",
+   "link": "https://g1.globo.com/rj/norte-fluminense/noticia/2026/11/10/policia-civil-investiga-venda-de-vagas-para-consultas-e-exames-do-sus-em-campos.ghtml",
+   "editoria": "saude",
    "nota": 5,
    "esquentou": false,
    "lente": [
-    "lavagem"
+    "sus",
+    "vagas"
    ]
   },
   {
-   "manchete": "Cesta básica dispara em Dourados",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 2,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-10T14:12:38Z",
-   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1vX2NHaEpRXzgwTXgzb1Byb2ZkWE94bFVaWHpXZ2NkOVdvU29vb1RWM0VaTVJXZTNyV1NEOU1LS0NlV1hXZlV5QjVaNVEtb1JDb1hCTW1iaGtDeHhjb2gwZzlXYUhES285enAtdGlNazY?oc=5",
-   "editoria": "roca",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "cesta basica",
-    "dispara"
-   ],
-   "outras_manchetes": 2
-  },
-  {
-   "manchete": "Polarização recua após eleições, mas ainda divide brasileiros, aponta Quaest",
+   "manchete": "Janones usou verba da Câmara para ir a cidade de MG onde Lula fez campanha",
    "secoes": [
     "B"
    ],
-   "veiculos": 20,
-   "veiculos_3h": 13,
-   "na_pauta_desde": "2026-11-09T16:09:56Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/11/quaest-satisfacao-com-a-democracia-bate-recorde-mas-preferencia-pelo-regime-cai-entre-jovens.shtml",
+   "veiculos": 13,
+   "veiculos_3h": 7,
+   "na_pauta_desde": "2026-11-10T12:10:48Z",
+   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQVm5xajYtTzloYVhmVXJYSUY5M1JoYmI2RUtyU0JuazFEaEJ2X3NOa3ZNbEx0SVhmbWwxLXplT1lwamZPY2xjZTVRdERNS0NtdXAtOG1SV0I3QU0tOVMzd2VTUDlFVi16S0o2MGFRUTRhSXRwUnowUUg3SFBRSVJDSFcta2lIaEdVV0V3X3Q2cWpKXzA5V2U5Sk5pVVhCM3dlaDdjc3NSSUNfcWRtaHdJSGVNLXVUak5DQ1QzM1BCYw?oc=5",
    "editoria": "eleicoes",
    "nota": 4,
-   "esquentou": false,
+   "esquentou": true,
    "lente": []
   },
   {
-   "manchete": "Primeiro dia do Enem: quem faltou pode fazer o segundo?",
+   "manchete": "Quaest: satisfação com democracia avança e fica à frente de rejeição pela primeira vez desde 2014",
    "secoes": [
     "B"
    ],
-   "veiculos": 26,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-09T18:09:04Z",
-   "link": "https://g1.globo.com/educacao/enem/2026/noticia/2026/11/10/10-questoes-mais-faceis-do-1o-dia-de-enem-2026.ghtml",
-   "editoria": "educacao",
+   "veiculos": 14,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-09T16:09:56Z",
+   "link": "https://www.diariodocentrodomundo.com.br/quaest-satisfacaodemocracia-supera-insatisfacao/",
+   "editoria": "eleicoes",
    "nota": 4,
-   "esquentou": false,
+   "esquentou": true,
    "lente": []
   }
  ],
  "rebaixados": [
   {
-   "manchete": "900 agências do INSS já oferecem perícia médica por telemedicina",
-   "veiculos": 10,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-09T18:09:04Z",
+   "manchete": "O próximo passo de Fachin após receber os relatórios da relação de Vorcaro com ministros do STF",
+   "veiculos": 11,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-09T10:08:30Z",
    "esquentou": false,
    "ia": {
-    "editoria": "saude",
+    "editoria": "politica",
     "I": 2,
     "V": 1,
     "P": 2,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Expansão da telemedicina no INSS.",
+    "motivo": "Desdobramento sobre apurações que envolvem a relação do banqueiro Vorcaro com o STF.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Quem tem direito à reaplicação do Enem 2026? Veja as regras",
+   "veiculos": 39,
+   "veiculos_3h": 20,
+   "na_pauta_desde": "2026-11-09T12:11:31Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "educacao",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Informação de utilidade pública para estudantes inscritos que fizeram o Enem.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "El Papa preside en Buenos Aires una misa ante más de dos millones de personas",
+   "veiculos": 18,
+   "veiculos_3h": 9,
+   "na_pauta_desde": "2026-11-09T12:11:31Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Evento de grande aglomeração com o Papa na Argentina sem grande impacto político.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Greve dos rodoviários em Manaus é suspensa e 100% dos ônibus devem voltar a circular na terça-feira",
+   "veiculos": 5,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-10T16:12:40Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Suspensão de greve e retorno dos serviços de transporte público para a população.",
     "soma": 3
    }
   },
   {
    "manchete": "Defesa de Daniel Vorcaro aciona Comissão Interamericana de Direitos Humanos contra decisão do STF",
-   "veiculos": 22,
-   "veiculos_3h": 15,
+   "veiculos": 7,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-10T02:48:25Z",
    "esquentou": true,
    "ia": {
@@ -546,45 +558,45 @@
    }
   },
   {
-   "manchete": "Operação da Polícia Federal combate esquema de fraude eletrônica em MG",
-   "veiculos": 11,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-09T19:55:28Z",
-   "esquentou": true,
+   "manchete": "Início do Júri dos Acusados pelo Ataque ao MST em Tremembé",
+   "veiculos": 5,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-09T16:09:56Z",
+   "esquentou": false,
    "ia": {
-    "editoria": "gerais",
+    "editoria": "roca",
     "I": 2,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Operação policial contra fraude eletrônica em MG.",
+    "motivo": "Início de julgamento sobre violência e ataques sofridos por trabalhadores do MST.",
     "soma": 3
    }
   },
   {
-   "manchete": "Comissão aprova projeto com diretrizes para atendimento a pessoas com gagueira no SUS",
-   "veiculos": 9,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-09T14:10:57Z",
+   "manchete": "Tomate dispara e cesta básica fica R$ 42 mais cara em Campo Grande",
+   "veiculos": 4,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-10T14:12:38Z",
    "esquentou": false,
    "ia": {
-    "editoria": "saude",
+    "editoria": "economia",
     "I": 2,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Comissão aprova diretrizes para atendimento a gagueira no SUS.",
+    "motivo": "Aumento no preço de itens essenciais compromete a renda dos trabalhadores.",
     "soma": 3
    }
   },
   {
    "manchete": "PF prende ex-servidor do STJ suspeito de vazar informações a Willer Tomaz",
-   "veiculos": 48,
-   "veiculos_3h": 29,
+   "veiculos": 55,
+   "veiculos_3h": 22,
    "na_pauta_desde": "2026-11-10T12:10:48Z",
    "esquentou": true,
    "ia": {
@@ -600,11 +612,11 @@
    }
   },
   {
-   "manchete": "PF faz operação contra comércio ilegal de livros raros e imagens sacras em SP e no RJ",
-   "veiculos": 6,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-10T12:10:48Z",
-   "esquentou": false,
+   "manchete": "Brasil ganha prêmio Raio do Dia no início da COP31 por mapas climáticos",
+   "veiculos": 14,
+   "veiculos_3h": 8,
+   "na_pauta_desde": "2026-11-09T22:08:05Z",
+   "esquentou": true,
    "ia": {
     "editoria": "gerais",
     "I": 1,
@@ -613,32 +625,14 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Apreensão de livros raros e imagens sacras.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "UNIFESP realiza seleção para Professor Substituto na Baixada Santista",
-   "veiculos": 6,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-09T18:09:04Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "educacao",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Seleção para professor substituto na Unifesp.",
+    "motivo": "Reconhecimento institucional internacional sem centralidade na pauta trabalhadora.",
     "soma": 2
    }
   },
   {
    "manchete": "Deputado eleito vai ao MPF contra Enem: \"Quer saber se aluno é militante\"",
    "veiculos": 11,
-   "veiculos_3h": 2,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-10T00:08:30Z",
    "esquentou": true,
    "ia": {
@@ -651,42 +645,6 @@
     "risco": "",
     "motivo": "Deputado vai ao MPF contra tema do Enem.",
     "soma": 2
-   }
-  },
-  {
-   "manchete": "Exxon signs preliminary agreement with Venezuela to assess oil opportunities",
-   "veiculos": 8,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-10T02:08:01Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Acordo petroleiro preliminar com a Venezuela.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Câmara Municipal de Boa Vista do Incra RS abre concurso com 2 vagas para níveis médio e superior",
-   "veiculos": 5,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-10T00:08:30Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "gerais",
-    "I": 0,
-    "V": 0,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Concurso municipal pequeno sem relevância política ou impacto nacional.",
-    "soma": 0
    }
   }
  ],
@@ -711,14 +669,14 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Veja o teaser do documentário de Suzane von Richthofen, da Netflix",
+   "manchete": "Suzane von Richthofen diz que não é “monstro” em entrevista à Netflix",
    "secoes": [
     "A"
    ],
-   "veiculos": 4,
+   "veiculos": 3,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-09T18:09:04Z",
-   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQRFdBUmpIWW85X1hjVjExc2xudU1zSldMblNsUFdTVEFGUTkyN1lIdjFCX0lPUVBYX3JPcW1HSkc1MlhiUjg2a19fX0RFZTQ2TXJ5eERURU8tbVFDd3hOUlJWZ01fNjExd2pxZEk4WnVnNGFUYU0xN1lwQ25yODR4TDJXRTNYeTE2c08xWGpLSF9JUENRRFM1R2dReHpwNnJuS094c3FnMFF3dFlLSUtmdDFSSEc5QQ?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOeGFMZDdxeS1QOElEUUktTThZdlBDVWR1dTF6SUNjUjJtUHNNcVM2YThVaGdSeVJ1U0dQblZuMUNtakNaYm9ZRGRHVmNPckRQbUg1THRrNnFwWlJyYk5VRHJ0TklEbHpFaENVOUJHUTZXb2dZNk5OaFJHX0xyM0tfaWJMNFk0QVczVDlMcUpZQjdweVdEbTlDbGJHUEZQYXRDOUFmSjRPdDE?oc=5",
    "editoria": null,
    "nota": null,
    "parceiro": {
@@ -749,16 +707,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Noruega anuncia doação de R$ 350 milhões para o Fundo Amazônia após redução de desmatamento",
+   "manchete": "Noruega anuncia R$ 350 milhões para o Fundo Amazônia",
    "secoes": [
     "A"
    ],
-   "veiculos": 28,
+   "veiculos": 24,
    "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-09T12:11:31Z",
    "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/ambiente/2026/11/noruega-anuncia-doacao-de-r-350-milhoes-para-o-fundo-amazonia.shtml",
    "editoria": "gerais",
-   "nota": 6,
+   "nota": 4,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-10T03:00:05Z",
@@ -770,64 +728,64 @@
  ],
  "descartados_mais_quentes": [
   {
-   "manchete": "COP31: Lula embarca com Janones e ministros para Turquia; Motta e Alcolumbre não integram comitiva",
-   "veiculos": 45,
-   "veiculos_3h": 11,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Negociações de paz na Ucrânia estão sendo retomadas após 9 meses; veja o que esperar",
+   "manchete": "Sob mediação dos EUA, Ucrânia e Rússia tem primeira rodada diplomática desde fevereiro em Abu Dhabi",
    "veiculos": 40,
-   "veiculos_3h": 15,
+   "veiculos_3h": 16,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Entenda o esquema de espionagem contra o CEO da Nvidia",
-   "veiculos": 37,
-   "veiculos_3h": 12,
-   "motivo": "sem editoria"
+   "manchete": "Anvisa proíbe venda de famoso emagrecedor, remédio com espinheira-santa e outros 6 medicamentos por irregularidades no Brasil; lista mostra quais produtos",
+   "veiculos": 33,
+   "veiculos_3h": 11,
+   "motivo": "fora: entretenimento (famoso)"
   },
   {
    "manchete": "Rubio diz que EUA mantêm diálogo com Brasil e cobra aprovação de embaixador",
-   "veiculos": 30,
-   "veiculos_3h": 9,
+   "veiculos": 33,
+   "veiculos_3h": 7,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Lula prorroga Auxílio Gás até 2031 por medida provisória",
-   "veiculos": 29,
+   "manchete": "Condenan al actor y comediante británico Russell Brand a más de 10 años de prisión por delitos sexuales",
+   "veiculos": 18,
    "veiculos_3h": 4,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Deputado dos EUA apresenta pedido de impeachment contra secretário de Guerra de Trump",
-   "veiculos": 26,
-   "veiculos_3h": 4,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Homem mostra FHC com Alzheimer e bebe cerveja em vídeo no apartamento do ex-presidente",
-   "veiculos": 19,
-   "veiculos_3h": 4,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Justiça federal desiste de pedir R$ 208 milhões extras ao governo para pagar penduricalhos de juízes",
-   "veiculos": 15,
+   "manchete": "PGR e Judiciário pedem crédito extraordinário de R$ 533 milhões para pagar penduricalhos",
+   "veiculos": 16,
    "veiculos_3h": 12,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "EUA retiram aviões de base no Reino Unido após ameaça do Irã, diz jornal",
-   "veiculos": 15,
-   "veiculos_3h": 9,
+   "manchete": "França acusa Irã por ataque cibernético contra refrigeradores e promete impor sanções ao país",
+   "veiculos": 16,
+   "veiculos_3h": 4,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Trump diz que convite a chefe do UFC para ser seu porta-voz foi ‘brincadeira’",
-   "veiculos": 14,
-   "veiculos_3h": 4,
+   "manchete": "Petróleo cai mais de 5% após Trump dizer que novos ataques ao Irã são improváveis",
+   "veiculos": 15,
+   "veiculos_3h": 5,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Trump diz que era \"brincadeira\" convite para chefe do UFC",
+   "veiculos": 12,
+   "veiculos_3h": 5,
    "motivo": "fora: esporte (ufc)"
+  },
+  {
+   "manchete": "Com Janja na coordenação, governo prevê público recorde na posse de Lula e quer show de Roger Waters",
+   "veiculos": 10,
+   "veiculos_3h": 3,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Explosão em siderúrgica deixa 16 mortos e 13 feridos na Turquia",
+   "veiculos": 10,
+   "veiculos_3h": 3,
+   "motivo": "fora: crime ou tragedia (mortos)"
   }
  ]
 }
