@@ -1,47 +1,47 @@
 {
- "quando": "2026-11-10T22:26:37Z",
- "pauta_quando": "2026-11-10T22:26:33Z",
+ "quando": "2026-11-10T22:33:22Z",
+ "pauta_quando": "2026-11-10T22:33:18Z",
  "ok": true,
  "erro": null,
- "metodo": "regras",
+ "metodo": "regras + gemini",
  "ia": {
   "ia": "gemini",
-  "ok": false,
-  "erro": "Gemini: gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in | gemi",
-  "modelo": null,
-  "avaliados_agora": 0,
-  "pedidos_hoje": 18
+  "ok": true,
+  "erro": null,
+  "modelo": "gemini-3.5-flash-lite",
+  "avaliados_agora": 16,
+  "falhas_antes": "gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in",
+  "pedidos_hoje": 20
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
  "total_assuntos": 166,
- "novos_3h": 5,
+ "novos_3h": 0,
  "esquentaram": 0,
  "candidatos": [
   {
-   "manchete": "BC aponta em ata do Copom necessidade de juros altos por mais tempo e cita 4 choques: 6x1, petróleo, El Niño e dólar",
+   "manchete": "Decreto que regulamenta fim da 6x1 tem publicação adiada e só deve sair após retorno de Lula",
    "secoes": [
     "B"
    ],
-   "veiculos": 19,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-10T12:10:48Z",
-   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/ata-do-copom-mostra-expectativa-de-inflacao-mais-alta-com-guerra-el-nino-fim-da-6x1-e-disparada-do-dolar.shtml",
-   "editoria": "economia",
-   "nota": 7,
+   "veiculos": 27,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-09T19:55:28Z",
+   "link": "https://www.poder360.com.br/poder-justica/dino-diz-que-enviara-6-x-1-ao-plenario-do-stf-na-proxima-semana/",
+   "editoria": "politica",
+   "nota": 5,
    "esquentou": false,
    "lente": [
-    "6x1",
-    "juros"
+    "6x1"
    ],
    "ia": {
-    "editoria": "economia",
+    "editoria": "roca",
     "I": 3,
     "V": 3,
-    "P": 3,
-    "formato": "reels",
+    "P": 2,
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Ata do BC usa fim da 6x1 para justificar manutenção de juros altos aos trabalhadores.",
+    "motivo": "Adiamento do decreto sobre o fim da escala 6x1 gera frustração.",
     "soma": 6
    }
   },
@@ -103,40 +103,31 @@
    }
   },
   {
-   "manchete": "Brasil recebe prêmio “Raio do Dia” na COP31 por iniciativas para combater desmatamento e combustíveis fósseis",
+   "manchete": "Banco Central aumenta projeção de inflação para 2027",
    "secoes": [
-    "A",
-    "B",
-    "D-terra"
+    "B"
    ],
-   "veiculos": 30,
-   "veiculos_3h": 10,
-   "na_pauta_desde": "2026-11-09T22:08:05Z",
-   "link": "https://midianinja.org/brasil-recebe-premio-positivo-da-sociedade-civil/",
-   "editoria": "roca",
-   "nota": 7,
+   "veiculos": 21,
+   "veiculos_3h": 7,
+   "na_pauta_desde": "2026-11-10T12:10:48Z",
+   "link": "https://g1.globo.com/economia/noticia/2026/11/10/ata-do-copom-banco-central-diz-que-piora-nas-expectativas-de-inflacao-exige-juros-mais-altos-e-por-tempo-maior.ghtml",
+   "editoria": "economia",
+   "nota": 6,
    "esquentou": false,
    "lente": [
-    "desmatamento"
-   ]
-  },
-  {
-   "manchete": "Valorização do SUS: tema da redação do Enem surpreende candidatos no primeiro dia de exame",
-   "secoes": [
-    "A"
+    "banco"
    ],
-   "veiculos": 3,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-09T18:09:04Z",
-   "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPcTlmaWRRWVdmeF9ubm84Y2lGd0FNcGlsc09vZ2pzU19MbENTOXotS0R0emk4dWpYaUhPZnFTMWlwQ184Nk1LUk4wUjBwOG5UVE9KSUZyRkMxM2JNQjFwXzhPNS0zUnhuTGpSeG9lR3RzT016eGhUZjZTdGVIdHpWenlyaGxlNzJVLVdQb3VHRnFjaWVVY1BJWVZPTzY5VUNQV2FSRVU1ZHZvaGREdUx0R1IyMFIyaHl3YVBiLUNjeGFsNWRMXzV5eTM2cDdaSEJKendBRUVQV1c2QXZabXFvU3pNQ2NSa1JPazIyQVoyOGxiSXlocGZz0gGGAkFVX3lxTE1ZWURvdV9zRW5Mc19EWGgwSzE3dElSR25rWkpZc24tUkJJV2k2WkZlVXVhejBrc3BuR29Ic1J5RzcxeTcydjY2bVNBUTc0ZmVMVlNGM2tBOXdnbzd5S3lWdk15Y09JX0kxYTVDS0ZHSzYzQkx5MFRETS03dnR1dElLcl85U1BTOFVkdlZLSjktbmlGWE5LRGZUUEFMcWdxQUI4WGx4QWdXRTU1bVB4dGgwaWNIRXZqYUxCVS1CUkRDUWVGYndXcTVmdW9GeTRXZk1sd0otLWNpVWszaVo1RDBuT3NPaEtjNFBjdnY0UmR5dTIwcG4yT21GbVY2T21iRmxBc1ZNdkE?oc=5",
-   "editoria": "saude",
-   "nota": 7,
-   "esquentou": false,
-   "lente": [
-    "direito",
-    "sus",
-    "bolsonar"
-   ]
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Alta na inflação afeta diretamente o custo de vida dos trabalhadores.",
+    "soma": 5
+   }
   },
   {
    "manchete": "Cúpula da PF determina que relatórios sobre relação de ministros do STF com Vorcaro sejam refeitos",
@@ -168,8 +159,7 @@
   {
    "manchete": "Reforma tributária: desoneração da cesta básica pode aliviar orçamento familiar em R$ 1,1 mil",
    "secoes": [
-    "A",
-    "D-terra"
+    "A"
    ],
    "veiculos": 6,
    "veiculos_3h": 1,
@@ -195,56 +185,31 @@
    }
   },
   {
-   "manchete": "PF abre inquérito para apurar uso de verba dos EUA na campanha de Flávio",
+   "manchete": "Futura: Flávio tem 45,4% contra 45% de Lula no 2º turno",
    "secoes": [
-    "B",
-    "C-nacional"
+    "B"
    ],
-   "veiculos": 7,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-10T22:26:33Z",
-   "link": "https://noticias.uol.com.br/politica/ultimas-noticias/2026/11/10/pf-apura-suspeita-de-verba-dos-eua-na-campanha-de-flavio.ghtm",
+   "veiculos": 8,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-10T19:11:48Z",
+   "link": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/11/10/campanha-lula-flavio-bolsonaro-doacoes-apos-segundo-turno.ghtml",
    "editoria": "eleicoes",
-   "nota": 6,
+   "nota": 5,
    "esquentou": false,
    "lente": [
-    "flavio",
-    "inquerito"
-   ]
-  },
-  {
-   "manchete": "Banco Central do Paraguai afirma que devolveu o dinheiro de 93% dos clientes do Ueno Bank",
-   "secoes": [
-    "B",
-    "D-america_latina"
+    "flavio"
    ],
-   "veiculos": 13,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-09T22:08:05Z",
-   "link": "https://g1.globo.com/economia/noticia/2026/11/10/banco-central-do-paraguai-diz-que-ja-ressarciu-93percent-dos-clientes-do-ueno-bank.ghtml",
-   "editoria": "america_latina",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "banco"
-   ]
-  },
-  {
-   "manchete": "Câmara de Boa Vista do Incra: 2 vagas; salário até R$2.072,69",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 7,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-09T18:09:04Z",
-   "link": "https://g1.globo.com/go/goias/noticia/2026/11/10/concurso-da-educacao-de-aparecida-de-goiania-abre-inscricoes-para-quase-3-mil-vagas-salarios-chegam-a-r-45-mil.ghtml",
-   "editoria": "roca",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "salario",
-    "vagas"
-   ]
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 3,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Nova pesquisa eleitoral para 2026 mostrando disputa acirrada.",
+    "soma": 5
+   }
   },
   {
    "manchete": null,
@@ -262,185 +227,341 @@
     "vorcaro",
     "master",
     "banco"
-   ]
-  },
-  {
-   "manchete": "Governo Trump anuncia nova Suprema Corte e novo Conselho Eleitoral na Venezuela",
-   "secoes": [
-    "D-america_latina"
-   ],
-   "veiculos": 14,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-10T00:08:30Z",
-   "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/governo-trump-anuncia-nova-suprema-corte-e-novo-conselho-eleitoral-na-venezuela.shtml",
-   "editoria": "america_latina",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "corte",
-    "trump"
    ],
    "ia": {
-    "editoria": "america_latina",
+    "editoria": "roca",
     "I": 2,
     "V": 2,
     "P": 2,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Intervenção dos EUA e manobras na Venezuela.",
+    "motivo": "Mineradora ligada a banqueiro afeta terras indígenas e meio ambiente.",
     "soma": 4
    }
   },
   {
-   "manchete": "Fachin arquiva pedido de Dino para incluir Deltan no inquérito das fake news",
+   "manchete": null,
    "secoes": [
-    "B"
+    "A"
    ],
-   "veiculos": 102,
-   "veiculos_3h": 58,
-   "na_pauta_desde": "2026-11-09T19:55:28Z",
-   "link": "https://www.gazetadopovo.com.br/republica/fachin-arquiva-pedido-de-dino-para-incluir-deltan-no-inquerito-das-fake-news/",
-   "editoria": "politica",
-   "nota": 5,
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "economia",
+   "nota": 3,
    "esquentou": false,
    "lente": [
-    "inquerito"
+    "trabalhador"
    ],
    "ia": {
-    "editoria": "politica",
+    "editoria": "roca",
     "I": 2,
     "V": 2,
-    "P": 1,
+    "P": 2,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Decisão de Fachin sobre inquérito movimenta bastidores jurídicos.",
+    "motivo": "Mineradora ligada a banqueiro afeta terras indígenas e meio ambiente.",
     "soma": 4
    }
   },
   {
-   "manchete": "PF apreende 1,25 tonelada de drogas em terra indígena em Guajará-Mirim",
+   "manchete": null,
    "secoes": [
-    "B",
-    "C-nacional",
-    "D-terra"
+    "A"
    ],
-   "veiculos": 14,
-   "veiculos_3h": 12,
-   "na_pauta_desde": "2026-11-10T21:08:15Z",
-   "link": "https://g1.globo.com/ro/rondonia/noticia/2026/11/10/droga-e-apreendida-com-ajuda-de-helicoptero-em-terra-indigena-de-ro.ghtml",
-   "editoria": "roca",
-   "nota": 6,
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "america_latina",
+   "nota": 2,
    "esquentou": false,
-   "lente": [
-    "indigena"
-   ],
+   "lente": [],
    "ia": {
-    "editoria": "gerais",
+    "editoria": "roca",
     "I": 2,
     "V": 2,
-    "P": 1,
+    "P": 2,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Apreensão de drogas em terra indígena envolve segurança e povos originários.",
+    "motivo": "Mineradora ligada a banqueiro afeta terras indígenas e meio ambiente.",
     "soma": 4
    }
   },
   {
-   "manchete": "El papa León XIV reúne a más de 2 millones de personas en Argentina en la misa más multitudinaria de su pontificado",
+   "manchete": null,
    "secoes": [
-    "B",
-    "D-america_latina"
+    "A"
    ],
-   "veiculos": 29,
-   "veiculos_3h": 15,
-   "na_pauta_desde": "2026-11-10T21:08:15Z",
-   "link": "https://www.gazetadopovo.com.br/mundo/papa-leao-xiv-prega-unidade-religiosa-e-social-na-argentina/",
-   "editoria": "america_latina",
-   "nota": 5,
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "eleicoes",
+   "nota": 2,
    "esquentou": false,
-   "lente": []
+   "lente": [],
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Mineradora ligada a banqueiro afeta terras indígenas e meio ambiente.",
+    "soma": 4
+   }
   },
   {
-   "manchete": "Decreto que regulamenta fim da 6x1 tem publicação adiada e só deve sair após retorno de Lula",
+   "manchete": null,
    "secoes": [
-    "B"
+    "A"
    ],
-   "veiculos": 36,
-   "veiculos_3h": 13,
-   "na_pauta_desde": "2026-11-09T19:55:28Z",
-   "link": "https://www.congressoemfoco.com.br/noticia/131465/stf-reune-sindicatos-e-empresarios-para-discutir-fim-da-escala-6x1",
-   "editoria": "politica",
-   "nota": 5,
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
    "esquentou": false,
-   "lente": [
-    "6x1"
-   ]
+   "lente": [],
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Mineradora ligada a banqueiro afeta terras indígenas e meio ambiente.",
+    "soma": 4
+   }
   },
   {
-   "manchete": "Polícia cogita detonar sala-cofre em mansão de ex-presidente do Paraguai",
+   "manchete": null,
    "secoes": [
-    "B",
-    "D-america_latina"
+    "A"
    ],
-   "veiculos": 19,
-   "veiculos_3h": 12,
-   "na_pauta_desde": "2026-11-10T21:08:15Z",
-   "link": "https://g1.globo.com/mundo/noticia/2026/11/10/paraguai-justica-cofre-pena.ghtml",
-   "editoria": "america_latina",
-   "nota": 5,
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
    "esquentou": false,
-   "lente": []
+   "lente": [],
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Mineradora ligada a banqueiro afeta terras indígenas e meio ambiente.",
+    "soma": 4
+   }
   },
   {
-   "manchete": "Após acordo com ruralistas, comissão aprova renegociação de dívidas do campo",
+   "manchete": null,
    "secoes": [
-    "B",
-    "D-terra"
+    "A"
    ],
-   "veiculos": 14,
-   "veiculos_3h": 10,
-   "na_pauta_desde": "2026-11-10T21:08:15Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://c-level.folha.uol.com.br/agro/2026/11/relator-faz-novas-concessoes-e-renegociacao-de-dividas-rurais-avanca-no-congresso.shtml",
-   "editoria": "roca",
-   "nota": 5,
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
    "esquentou": false,
-   "lente": []
+   "lente": [],
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Mineradora ligada a banqueiro afeta terras indígenas e meio ambiente.",
+    "soma": 4
+   }
   },
   {
-   "manchete": "Peru inaugura estátua de 14 metros do papa Leão 14 antes de visita",
+   "manchete": null,
    "secoes": [
-    "B",
-    "D-america_latina"
+    "A"
    ],
-   "veiculos": 15,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-09T22:08:05Z",
-   "link": "https://g1.globo.com/mundo/noticia/2026/11/10/peru-inaugura-estatua-gigante-em-homenagem-ao-papa-leao-xiv-antes-da-visita-do-pontifice.ghtml",
-   "editoria": "america_latina",
-   "nota": 5,
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
    "esquentou": false,
-   "lente": []
+   "lente": [],
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Mineradora ligada a banqueiro afeta terras indígenas e meio ambiente.",
+    "soma": 4
+   }
   },
   {
-   "manchete": "Deputado eleito aciona MPF contra Enem: “Quer saber se aluno é militante”",
+   "manchete": null,
    "secoes": [
-    "B",
-    "D-terra"
+    "A"
    ],
-   "veiculos": 14,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-10T00:08:30Z",
-   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNNng4bnpfQnBTZlI3MzdIZHpxUW1RWXJqN2JDX2VxaVF2QXlOODE4RWFiU2hsMlo5V2xxdWpsY0NkSEpIdlJqZHhVWmJFWXFUVDREMDhhazRoYVhMcDBTOXNNaDNPaGxZTFNYaVFZZHZobk5hSHZaOUx5UDh6ZHliNjdVOVFiSTU0WWV6OVdIVzNnQ3VQS2gyOG5nSEQ?oc=5",
-   "editoria": "roca",
-   "nota": 5,
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
    "esquentou": false,
-   "lente": []
+   "lente": [],
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Mineradora ligada a banqueiro afeta terras indígenas e meio ambiente.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Mineradora ligada a banqueiro afeta terras indígenas e meio ambiente.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Mineradora ligada a banqueiro afeta terras indígenas e meio ambiente.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Mineradora ligada a banqueiro afeta terras indígenas e meio ambiente.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Mineradora ligada a banqueiro afeta terras indígenas e meio ambiente.",
+    "soma": 4
+   }
   }
  ],
  "rebaixados": [
+  {
+   "manchete": "Após acordo com ruralistas, comissão aprova renegociação de dívidas do campo",
+   "veiculos": 15,
+   "veiculos_3h": 11,
+   "na_pauta_desde": "2026-11-10T21:08:15Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
+    "V": 1,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Renegociação de dívidas do campo após acordo com ruralistas.",
+    "soma": 3
+   }
+  },
   {
    "manchete": "MEC cria regras para uso de IA da educação infantil ao ensino superior",
    "veiculos": 14,
@@ -457,6 +578,114 @@
     "risco": "",
     "motivo": "Novas regras do MEC sobre inteligência artificial afetam escolas e universidades.",
     "soma": 3
+   }
+  },
+  {
+   "manchete": "Pais de deputado da Bahia são alvos da PF em investigação sobre emendas Pix",
+   "veiculos": 9,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-10T12:10:48Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Investigação da PF sobre desvios em emendas Pix.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Brasil recebe prêmio “Raio do Dia” na COP31 por iniciativas para combater desmatamento e combustíveis fósseis",
+   "veiculos": 31,
+   "veiculos_3h": 10,
+   "na_pauta_desde": "2026-11-09T22:08:05Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "gerais",
+    "I": 1,
+    "V": 1,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Início da COP31 e premiação do Brasil por políticas ambientais.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "MP do Paraguai volta a fazer buscas em endereços do presidente deposto Santiago Peña",
+   "veiculos": 18,
+   "veiculos_3h": 9,
+   "na_pauta_desde": "2026-11-10T21:08:15Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Novas buscas contra o presidente deposto do Paraguai.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Deputado acusa Enem de doutrinação ideológica e pede anulação",
+   "veiculos": 8,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-11-10T00:08:30Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "educacao",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Ataque da oposição ao tema do SUS no Enem.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Banco Central do Paraguai afirma que devolveu o dinheiro de 93% dos clientes do Ueno Bank",
+   "veiculos": 12,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-09T22:08:05Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Desdobramentos da crise no banco do Paraguai.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Autoridades do Paraguai abrem sala secreta em mansão de Santiago Peña, mas não encontram nada, diz imprensa",
+   "veiculos": 5,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-10T21:08:15Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Desdobramentos de caso de corrupção no Paraguai sem grande novidade prática.",
+    "soma": 2
    }
   },
   {
@@ -478,57 +707,21 @@
    }
   },
   {
-   "manchete": "Fim da 6×1, isenção da cesta básica e valorização do salário mínimo lideram as prioridades da população",
-   "veiculos": 5,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-10T16:12:40Z",
+   "manchete": "Dívida pública em reais não garante juros menores para o Brasil, diz Galípolo",
+   "veiculos": 4,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-10T21:08:15Z",
    "esquentou": false,
    "ia": {
     "editoria": "economia",
-    "I": 3,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": true,
-    "risco": "",
-    "motivo": "Assunto já abordado em posts anteriores sobre a 6x1.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "PF prende ex-servidor do STJ suspeito de vazar informações a Willer Tomaz",
-   "veiculos": 40,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-10T12:10:48Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": true,
-    "risco": "",
-    "motivo": "Prisão de ex-servidor do STJ por vazar informações.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Agente da PF diz em livro que Lula pediu foto de cantora nua para advogado",
-   "veiculos": 9,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-10T02:08:01Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "politica",
     "I": 1,
-    "V": 1,
-    "P": 0,
+    "V": 0,
+    "P": 2,
     "formato": "feed",
-    "repetido": true,
-    "risco": "Acusação sem comprovação oficial",
-    "motivo": "Livro de agente da PF traz alegação sem provas.",
-    "soma": 2
+    "repetido": false,
+    "risco": "",
+    "motivo": "Declaração técnica de Galípolo sobre dívida pública e juros.",
+    "soma": 1
    }
   }
  ],
@@ -553,17 +746,18 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Senado vai dar 95 iPhones 18 Pro e 330 de outras marcas para parlamentares e servidores",
+   "manchete": "Enquanto povo passa fome, Senado gasta R$ 6 milhões em telefonia com direito a iPhones de última geração e mais de 400 celulares para seus parlamentares e funcionarios.",
    "secoes": [
     "A",
-    "B"
+    "B",
+    "D-terra"
    ],
-   "veiculos": 8,
+   "veiculos": 10,
    "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-10T12:10:48Z",
    "link": "https://www.gazetadopovo.com.br/republica/senado-vai-gastar-r-6-milhoes-com-95-iphones-e-outros-celulares-para-parlamentares-e-servidores/",
-   "editoria": "politica",
-   "nota": 5,
+   "editoria": "roca",
+   "nota": 8,
    "parceiro": {
     "perfil": "luzmanifesto",
     "quando": "2026-11-10T14:02:38Z",
@@ -592,12 +786,12 @@
    "triagem": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Justiça suspende parte do decreto governo Lula sobre regras para vale-refeição",
+   "manchete": "Juiz suspende decreto de Lula que regula vale-refeição e alimentação",
    "secoes": [
     "A",
     "B"
    ],
-   "veiculos": 16,
+   "veiculos": 9,
    "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-10T02:08:01Z",
    "link": "https://www.gazetadopovo.com.br/republica/juiz-suspende-decreto-de-lula-que-regula-vale-refeicao-e-alimentacao/",
@@ -709,8 +903,7 @@
   {
    "manchete": "Reforma tributária: desoneração da cesta básica pode aliviar orçamento familiar em R$ 1,1 mil",
    "secoes": [
-    "A",
-    "D-terra"
+    "A"
    ],
    "veiculos": 6,
    "veiculos_3h": 1,
@@ -785,14 +978,14 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Justiça Federal desiste de pedir crédito extra para pagar penduricalho a magistrados",
+   "manchete": "Justiça Federal desiste de pedido para obter R$ 208,9 milhões para bancar penduricalhos",
    "secoes": [
     "A"
    ],
-   "veiculos": 10,
+   "veiculos": 12,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-10T00:08:30Z",
-   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/presidente-do-conselho-da-justica-federal-desiste-de-pedido-ao-stf-por-verba-extra-para-bonus-de-magistrados.shtml",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/10/justica-federal-desiste-de-pedido-para-obter-r-2089-milhoes-para-bancar-penduricalhos.ghtml",
    "editoria": "politica",
    "nota": 4,
    "parceiro": {
@@ -886,7 +1079,7 @@
     "A"
    ],
    "veiculos": 11,
-   "veiculos_3h": 1,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-10T02:08:01Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/09/ministerio-pede-derrubada-de-348-perfis-de-influenciadores-que-divulgam-bets-ilegais.ghtml",
    "editoria": "gerais",
@@ -904,8 +1097,8 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 31,
-   "veiculos_3h": 1,
+   "veiculos": 36,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-10T00:08:30Z",
    "link": "https://g1.globo.com/mundo/noticia/2026/11/09/apos-vitoria-de-lula-rubio-diz-que-eua-vao-manter-dialogo-com-o-brasil-e-cobra-liberacao-de-embaixador.ghtml",
    "editoria": "gerais",
@@ -1020,7 +1213,7 @@
     "B",
     "D-terra"
    ],
-   "veiculos": 30,
+   "veiculos": 31,
    "veiculos_3h": 10,
    "na_pauta_desde": "2026-11-09T22:08:05Z",
    "link": "https://midianinja.org/brasil-recebe-premio-positivo-da-sociedade-civil/",
@@ -1178,43 +1371,43 @@
   },
   {
    "manchete": "Rússia e Ucrânia retomam negociações de paz; entenda cenário",
-   "veiculos": 37,
-   "veiculos_3h": 5,
+   "veiculos": 35,
+   "veiculos_3h": 3,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
    "manchete": "Republicano apresenta pedido de impeachment contra secretário de Guerra de Trump nos EUA",
-   "veiculos": 26,
-   "veiculos_3h": 4,
+   "veiculos": 30,
+   "veiculos_3h": 8,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
    "manchete": "Estudante morre após passar mal no primeiro dia do Enem 2026 na Bahia",
    "veiculos": 22,
-   "veiculos_3h": 9,
+   "veiculos_3h": 10,
    "motivo": "fora: crime ou tragedia (morre)"
   },
   {
    "manchete": "Dólar fecha a R$ 5,58, maior valor em mais de um ano, após dados de inflação nos EUA; Ibovespa cai",
-   "veiculos": 19,
-   "veiculos_3h": 10,
+   "veiculos": 18,
+   "veiculos_3h": 9,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Lewis Hamilton conhece posto de ajuda humanitária a Gaza",
+   "veiculos": 16,
+   "veiculos_3h": 3,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
    "manchete": "EUA retiram aviões de base no Reino Unido após ameaça do Irã, diz jornal",
    "veiculos": 14,
-   "veiculos_3h": 9,
+   "veiculos_3h": 7,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Porto de Santos confirma ataque hacker e diz não saber se dados foram acessados indevidamente",
-   "veiculos": 13,
-   "veiculos_3h": 11,
-   "motivo": "sem editoria"
-  },
-  {
    "manchete": "Nvidia’s Stock Price Drops After Investigation Into CEO Jensen Huang",
-   "veiculos": 13,
+   "veiculos": 12,
    "veiculos_3h": 4,
    "motivo": "sem editoria"
   },
@@ -1225,9 +1418,9 @@
    "motivo": "fora: esporte (selecao brasileira)"
   },
   {
-   "manchete": "Lewis Hamilton visita fronteira de Gaza em meio a ataques de Israel",
-   "veiculos": 10,
-   "veiculos_3h": 3,
+   "manchete": "Câmara aprova ampliação de até R$ 13,5 bi em crédito para empresas afetadas por tarifas dos EUA",
+   "veiculos": 8,
+   "veiculos_3h": 7,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   }
  ]
