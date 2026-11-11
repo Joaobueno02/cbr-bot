@@ -1,5 +1,5 @@
 {
-  "status": "renderizar",
+  "status": "erro_render",
   "formato": "unico",
   "reels": true,
   "editoria": "politica",
@@ -72,5 +72,12 @@
   "musica_busca": null,
   "corrige": null,
   "comentario": "No seu trabalho, quem paga o aparelho que você usa: você ou a empresa?",
-  "nota": "I2 V3 P1 → Reels comum (Luz postou; Metrópoles, EM; ângulo 'não é caso isolado' com o Senado)"
+  "nota": "I2 V3 P1 → Reels comum (Luz postou; Metrópoles, EM; ângulo 'não é caso isolado' com o Senado)",
+  "render": {
+    "quando": "2026-11-11T20:18:05Z",
+    "artes": [],
+    "avisos": [],
+    "erro": "ReadTimeout: HTTPSConnectionPool(host='midias.em.com.br', port=443): Read timed out. (read timeout=40)",
+    "trace": "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 540, in _make_request\n    response = conn.getresponse()\n               ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connection.py\", line 638, in getresponse\n    httplib_response = super().getresponse()\n                       ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/http/client.py\", line 1478, in getresponse\n    response.begin()\nTimeoutError: The read operation timed out\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/adapters.py\", line 644, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 847, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/util/retry.py\", line 510, in increment\n    raise reraise(type(error), error, _stacktrace)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='midias.em.com.br', port=443): Read timed out. (read timeout=40)\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/cbr-bot/cbr-bot/bot/render.py\", line 239, in processar\n    meta = baixar_foto(post[\"foto_url\"], pasta / \"foto.jpg\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/cbr-bot/cbr-bot/bot/render.py\", line 45, in baixar_foto\n    r = requests.get(url, headers={\"User-Agent\": UA, \"Referer\": url}, timeout=40)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/api.py\", line 73, in get\n    return request(\"get\", url, params=params, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrequests.exceptions.ReadTimeout: HTTPSConnectionPool(host='midias.em.com.br', port=443): Read timed out. (read timeout=40)\n"
+  }
 }
