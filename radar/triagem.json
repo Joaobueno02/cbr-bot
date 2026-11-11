@@ -1,38 +1,131 @@
 {
- "quando": "2026-11-11T17:07:51Z",
- "pauta_quando": "2026-11-11T17:07:47Z",
+ "quando": "2026-11-11T17:16:50Z",
+ "pauta_quando": "2026-11-11T17:16:46Z",
  "ok": true,
  "erro": null,
- "metodo": "regras",
+ "metodo": "regras + gemini",
  "ia": {
   "ia": "gemini",
-  "ok": false,
-  "erro": "Gemini: gemini-flash-latest: ReadTimeout | gemini-flash-latest: HTTP 503 This model is currently experiencing high demand. Spikes in",
-  "modelo": null,
-  "avaliados_agora": 0,
-  "pedidos_hoje": 19
+  "ok": true,
+  "erro": null,
+  "modelo": "gemini-3.5-flash",
+  "avaliados_agora": 19,
+  "falhas_antes": "gemini-3.8-flash: ReadTimeout",
+  "pedidos_hoje": 23
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 177,
+ "total_assuntos": 175,
  "novos_3h": 5,
- "esquentaram": 2,
+ "esquentaram": 5,
  "candidatos": [
   {
-   "manchete": "PF abre inquérito sobre suspeita de recursos estrangeiros na campanha de Flávio",
+   "manchete": "'Vou publicar decisão sobre fim da 6x1 até sexta e submeter ao referendo do plenário', diz Dino",
    "secoes": [
     "B"
    ],
-   "veiculos": 24,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-10T10:11:10Z",
-   "link": "https://www.gazetadopovo.com.br/republica/pf-abre-inquerito-sobre-suposto-financiamento-estrangeiro-a-campanha-de-flavio/",
-   "editoria": "eleicoes",
-   "nota": 6,
+   "veiculos": 12,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-11T02:17:15Z",
+   "link": "https://www.gazetadopovo.com.br/republica/dino-deve-analisar-em-liminar-compensacao-de-folgas-no-fim-da-escala-6-1/",
+   "editoria": "economia",
+   "nota": 5,
    "esquentou": false,
    "lente": [
-    "flavio",
-    "inquerito"
-   ]
+    "6x1"
+   ],
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Dino estabelece prazo até sexta para decisão no STF sobre o fim da 6x1.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Dino fala em ‘eliminar amarras’ para fim da escala 6x1 e facilitar negociação coletiva",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 6,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-11T17:07:47Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/gilmar-mendes-defende-negociacao-coletiva-para-viabilizar-fim-da-escala-6x1.shtml",
+   "editoria": "economia",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "6x1"
+   ],
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Dino defende negociação coletiva para facilitar implementação da redução da jornada de trabalho.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Cesta básica fica mais cara nas 27 capitais brasileiras pelo segundo mês consecutivo",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 12,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-10T14:12:38Z",
+   "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNMkdocTdPSE5RMm8xVWV0V0QzVW41YWtPNVVfblRjYjhPREM5WUcxVXlnTlNkSmFxU2xfZDRyWVZuSUg4YmNYT2gwWTRfbHNpRjhteUhVWXNKcWxfZjZlSlg0bnoxSmhPTEJhbHFSem5Oem91dERIeUNaUWxzWlM0M2VBRUtVX240UmVDMUdYNHR0N2x6SFVMVkw5Z1hmQkJTcHlOWnM0ck1kVmozWnJQeWVaTzZkRmFCUXVOMW5LYUxGaHJQVEViMHl2cw?oc=5",
+   "editoria": "roca",
+   "nota": 6,
+   "esquentou": true,
+   "lente": [
+    "cesta basica",
+    "mais cara"
+   ],
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Alta generalizada da cesta básica nas 27 capitais encarece custo de vida do trabalhador.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Lula critica países ricos por substituir clima por armas, e manda recado para Trump",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 28,
+   "veiculos_3h": 7,
+   "na_pauta_desde": "2026-11-11T11:14:55Z",
+   "link": "https://tvtnews.com.br/lula-discursa-na-cop31/",
+   "editoria": "gerais",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "trump"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Crítica de Lula ao militarismo de países ricos em detrimento do combate à crise climática.",
+    "soma": 4
+   }
   },
   {
    "manchete": "Governo mantém sigilo de 100 anos sobre visitas a Daniel Vorcaro na Polícia Federal",
@@ -48,32 +141,26 @@
    "esquentou": false,
    "lente": [
     "vorcaro"
-   ]
-  },
-  {
-   "manchete": "Cesta básica sobe 5,2% em Campo Grande e chega a R$ 848,50",
-   "secoes": [
-    "B",
-    "D-terra"
    ],
-   "veiculos": 22,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-10T14:12:38Z",
-   "link": "https://jornalggn.com.br/economia/cesta-basica-sobe-27-capitais-salario-necessario/",
-   "editoria": "roca",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "cesta basica"
-   ]
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Manutenção de sigilo sobre visitas a investigado gera debate sobre transparência do governo.",
+    "soma": 4
+   }
   },
   {
    "manchete": "Crise na PF: associação acusa interferência no caso Master",
    "secoes": [
     "B"
    ],
-   "veiculos": 12,
-   "veiculos_3h": 4,
+   "veiculos": 9,
+   "veiculos_3h": 5,
    "na_pauta_desde": "2026-11-10T19:11:48Z",
    "link": "https://www.gazetadopovo.com.br/republica/policia-federal-enfrenta-crise-interna-apos-citar-ministros-do-stf-em-relatorios/",
    "editoria": "politica",
@@ -81,7 +168,72 @@
    "esquentou": false,
    "lente": [
     "master"
-   ]
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Associação de delegados denuncia interferência política em investigação de grande repercussão na PF.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Relatório da PF deve identificar indício de crime e não fazer juízo sobre relação de ministros com Vorcaro, indica Fachin a auxiliares",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-11T17:07:47Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/11/relatorio-da-pf-deve-identificar-indicio-de-crime-e-nao-fazer-juizo-sobre-relacao-de-ministros-com-vorcaro-indica-fachin-a-auxiliares.ghtml",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "vorcaro"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "STF orienta PF a limitar relatório a indícios de crimes sem juízo político.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Justicia brasileña multa a Meta por incumplir trato igualitario en elecciones presidenciales",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 18,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-11T15:09:01Z",
+   "link": "https://www.nodal.am/2026/11/brasil-el-tribunal-electoral-multa-a-meta-por-irregularidades-en-la-distribucion-de-contenidos-durante-las-elecciones/",
+   "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Punição à Meta expõe ingerência de big techs nas eleições brasileiras.",
+    "soma": 4
+   }
   },
   {
    "manchete": "Fundect investe R$ 3,2 milhões em projetos para agricultura familiar e comunidades tradicionais - O sul-mato-grossense",
@@ -97,36 +249,31 @@
    "editoria": "roca",
    "nota": 6,
    "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Promotoria denuncia Milton Leite e outros 13 sob acusação de promover o PCC no transporte público",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-11T17:07:47Z",
-   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/promotoria-denuncia-milton-leite-e-outros-13-sob-acusacao-de-promover-o-pcc-no-transporte-publico.shtml",
-   "editoria": "politica",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "transporte publico"
-   ]
+   "lente": [],
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Impactos climáticos e desafios de financiamento enfrentados pela agricultura familiar e comunidades.",
+    "soma": 4
+   }
   },
   {
    "manchete": "FAEP repudia questões do Enem sobre MST e agronegócio; entenda",
    "secoes": [
     "D-terra"
    ],
-   "veiculos": 8,
+   "veiculos": 10,
    "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-10T21:08:15Z",
    "link": "https://revistaforum.com.br/politica/bancada-agro-enem/",
    "editoria": "roca",
    "nota": 5,
-   "esquentou": false,
+   "esquentou": true,
    "lente": [
     "mst"
    ],
@@ -143,13 +290,65 @@
    }
   },
   {
+   "manchete": "Promotoria denuncia Milton Leite e outros 13 sob acusação de promover o PCC no transporte público",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-11T17:07:47Z",
+   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/promotoria-denuncia-milton-leite-e-outros-13-sob-acusacao-de-promover-o-pcc-no-transporte-publico.shtml",
+   "editoria": "politica",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "transporte publico"
+   ],
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "Acusação de crime em denúncia do Ministério Público",
+    "motivo": "Denúncia contra ex-vereador do União Brasil aponta ligação da direita com crime organizado.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Senado vota nesta quarta (11) requerimentos para ouvir ministro e diretor da PF",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 20,
+   "veiculos_3h": 19,
+   "na_pauta_desde": "2026-11-11T17:07:47Z",
+   "link": "https://www.congressoemfoco.com.br/noticia/131503/master-ccj-aprova-requerimentos-para-ouvir-ministro-da-justica-e-pf",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Senado reage a trocas na PF e busca ouvir ministro e diretor do órgão.",
+    "soma": 4
+   }
+  },
+  {
    "manchete": "Irã declara Marinha e Força Aérea da Argentina como organizações terroristas",
    "secoes": [
     "B",
     "D-america_latina"
    ],
    "veiculos": 17,
-   "veiculos_3h": 9,
+   "veiculos_3h": 8,
    "na_pauta_desde": "2026-11-11T09:52:29Z",
    "link": "https://g1.globo.com/mundo/noticia/2026/11/11/ira-argentina-terrorista.ghtml",
    "editoria": "america_latina",
@@ -169,30 +368,83 @@
    }
   },
   {
-   "manchete": "TSE julga ação de Lula contra a Meta por favorecimento a Flávio Bolsonaro",
+   "manchete": "Ministro da Justiça pede explicações a chefe da PF sobre troca de delegados",
    "secoes": [
     "B"
    ],
-   "veiculos": 21,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-10T10:11:10Z",
-   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/relator-no-tse-vota-para-condenar-meta-a-multa-de-r-75-mi-por-tratamento-desigual-entre-lula-e-flavio-nas-eleicoes.shtml",
-   "editoria": "eleicoes",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ],
+   "veiculos": 10,
+   "veiculos_3h": 8,
+   "na_pauta_desde": "2026-11-10T19:11:48Z",
+   "link": "https://www.cartacapital.com.br/politica/ministerio-da-justica-cobra-explicacoes-da-pf-sobre-afastamento-de-delegados/",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": true,
+   "lente": [],
    "ia": {
-    "editoria": "eleicoes",
+    "editoria": "politica",
     "I": 2,
     "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Ação de Lula contra Meta envolvendo Flávio Bolsonaro no TSE.",
+    "motivo": "Ministro da Justiça cobra explicações da PF após substituição de delegados em caso sensível.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Cesta básica sobe 5,2% em Campo Grande e chega a R$ 848,50",
+   "secoes": [
+    "B",
+    "D-terra"
+   ],
+   "veiculos": 26,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-10T14:12:38Z",
+   "link": "https://jornalggn.com.br/economia/cesta-basica-sobe-27-capitais-salario-necessario/",
+   "editoria": "roca",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "cesta basica"
+   ],
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Aumento da cesta básica reduz poder de compra dos trabalhadores em Campo Grande.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Banco Central do Paraguai diz que já ressarciu 93% dos clientes do Ueno Bank",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 28,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-10T19:11:48Z",
+   "link": "https://g1.globo.com/economia/noticia/2026/11/10/banco-central-do-paraguai-diz-que-ja-ressarciu-93percent-dos-clientes-do-ueno-bank.ghtml",
+   "editoria": "america_latina",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "banco"
+   ],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Desdobramento do escândalo bancário ligado ao ex-presidente do Paraguai Peña.",
     "soma": 4
    }
   },
@@ -251,184 +503,132 @@
    }
   },
   {
-   "manchete": "Pope Leo draws 650,000 for outdoor Mass in Argentina's second city",
-   "secoes": [
-    "B",
-    "D-america_latina"
-   ],
-   "veiculos": 16,
-   "veiculos_3h": 10,
-   "na_pauta_desde": "2026-11-11T09:52:29Z",
-   "link": "https://www.france24.com/en/americas/20261111-pope-leo-to-end-argentina-tour-with-large-outdoor-mass-before-emotional-peru-homecoming",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Senado vota nesta quarta (11) requerimentos para ouvir ministro e diretor da PF",
+   "manchete": "AGERSA homologa reajuste de 3,96% nas tarifas de água e esgoto da Embasa para implantar a Tarifa Social",
    "secoes": [
     "B"
    ],
-   "veiculos": 11,
-   "veiculos_3h": 10,
-   "na_pauta_desde": "2026-11-11T17:07:47Z",
-   "link": "https://www.congressoemfoco.com.br/noticia/131503/master-ccj-aprova-requerimentos-para-ouvir-ministro-da-justica-e-pf",
-   "editoria": "politica",
-   "nota": 5,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Dino descarta adiar fim da escala 6x1 e diz que manterá 42 horas a partir de 16 de dezembro",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 31,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-11T02:17:15Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/10/escala-6x1-dino-sinaliza-que-decisao-em-acao-que-questiona-transicao-da-nova-jornada-de-trabalho-sai-ate-sexta.ghtml",
+   "veiculos": 12,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-11T11:14:55Z",
+   "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOLWpBZG9sZ1JwaGJSbmNCWG53amF1NVBuUzc1VXpiYWZpNzdrQkJJcFhFeHYteHFuaUxaY3I2dkdVOFJXVUl1d0U5MTFaaThLXzlkcWk0TGxSUUY0VkRwWFpUYy1HQk5UaVJpVlFJdExrX2tlRFh6ZmRrX1l2SF9vZzNnd2JVeFdxY3F0SXBpdTZicWQxWW9nejhidm5LdWZWeWpBZFM5UTdKeDN1aHIyd0NR?oc=5",
    "editoria": "economia",
    "nota": 5,
    "esquentou": false,
    "lente": [
-    "6x1"
+    "reajuste"
    ]
   },
   {
-   "manchete": "Operação Dragon Ball: Polícia Federal cumpre mandados noParaná para desarticular quadrilha",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 22,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-10T12:10:48Z",
-   "link": "https://www.congressoemfoco.com.br/noticia/131497/pf-faz-buscas-em-operacao-contra-compra-de-votos-na-paraiba",
-   "editoria": "politica",
-   "nota": 5,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Vigilia con el papa León XIV: Teleticket habilita hoy entradas gratuitas para jóvenes de 16 a 35 años, ¿desde qué hora?",
+   "manchete": "Diputados avalan PEF 2027 con recorte de 6 mil mdp al INE",
    "secoes": [
     "B",
     "D-america_latina"
    ],
-   "veiculos": 14,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-10T21:08:15Z",
-   "link": "https://www.telesurtv.net/papa-leon-xiv-despide-argentina-llamados-reconciliacion/",
+   "veiculos": 12,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-10T16:12:40Z",
+   "link": "https://www.jornada.com.mx/2026/11/11/politica/005n1pol?partner=rss",
    "editoria": "america_latina",
    "nota": 5,
    "esquentou": false,
    "lente": []
-  },
-  {
-   "manchete": "Jorge Macri, sobre la carpa vip en la misa del Papa: \"Las medialunas y los budines estuvieron de más\"",
-   "secoes": [
-    "B",
-    "D-america_latina"
-   ],
-   "veiculos": 11,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-10T21:08:15Z",
-   "link": "https://www.telesurtv.net/miles-fieles-aguardan-lujan-llegada-leon-xiv-ultima-misa-argentina/",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Papa Leão XIV celebra missa para 650 mil pessoas na Argentina",
-   "secoes": [
-    "B",
-    "C-nacional",
-    "D-america_latina"
-   ],
-   "veiculos": 7,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-11T17:07:47Z",
-   "link": "https://www.gazetadopovo.com.br/mundo/papa-leao-xiv-celebra-missa-para-650-mil-pessoas-na-argentina/",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Dino fala em ‘eliminar amarras’ para fim da escala 6x1 e facilitar negociação coletiva",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 6,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-11T17:07:47Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/gilmar-mendes-defende-negociacao-coletiva-para-viabilizar-fim-da-escala-6x1.shtml",
-   "editoria": "economia",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "6x1"
-   ]
-  },
-  {
-   "manchete": "Coaf e USP firmam parceria para fortalecer inteligência financeira e combater lavagem de dinheiro",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 6,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-11T17:07:47Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/11/coaf-assina-parceria-com-grupo-da-usp-para-pesquisa-sobre-lavagem-de-dinheiro.shtml",
-   "editoria": "politica",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "lavagem"
-   ]
   }
  ],
  "rebaixados": [
   {
-   "manchete": "Alcolumbre diz que vai promulgar PEC da Segurança Pública daqui a 15 dias",
-   "veiculos": 4,
-   "veiculos_3h": 0,
+   "manchete": "Cleitinho busca se aproximar de Lula e do PT em Minas após apoio a Flávio Bolsonaro na campanha",
+   "veiculos": 7,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-10T21:08:15Z",
-   "esquentou": false,
+   "esquentou": true,
    "ia": {
-    "editoria": "roca",
-    "I": 2,
-    "V": 1,
+    "editoria": "eleicoes",
+    "I": 1,
+    "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Envio da Força Nacional para Terra Indígena no Pará.",
+    "motivo": "Mudança de alinhamento político de parlamentar após derrota nas eleições.",
     "soma": 3
    }
   },
   {
-   "manchete": "Papa faz 1ª visita ao Peru, sua 'segunda pátria', após assumir o cargo; entenda a relação do pontífice com o país",
-   "veiculos": 16,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-11T09:52:29Z",
-   "esquentou": true,
+   "manchete": "Coaf e USP firmam parceria para fortalecer inteligência financeira e combater lavagem de dinheiro",
+   "veiculos": 6,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-11T17:07:47Z",
+   "esquentou": false,
    "ia": {
-    "editoria": "america_latina",
+    "editoria": "educacao",
     "I": 1,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Visita do Papa ao Peru tem impacto limitado para o foco da página.",
+    "motivo": "Parceria entre universidade pública e órgão de inteligência com baixo impacto direto para trabalhadores.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "PF abre inquérito sobre suspeita de recursos estrangeiros na campanha de Flávio",
+   "veiculos": 33,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-11-10T22:26:33Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": true,
+    "risco": "Inquérito em andamento sem condenação definitiva",
+    "motivo": "Abertura de inquérito sobre campanha de Flávio já foi noticiada anteriormente pela página.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Dino descarta adiar fim da escala 6x1 e diz que manterá 42 horas a partir de 16 de dezembro",
+   "veiculos": 27,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-11-11T02:17:15Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": true,
+    "risco": "",
+    "motivo": "Manutenção do início do fim da escala 6x1 em dezembro já foi publicada.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Operação Dragon Ball: Polícia Federal cumpre mandados noParaná para desarticular quadrilha",
+   "veiculos": 22,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-10T12:10:48Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "fora",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Operação policial comum sem ligação com disputa política ou direitos dos trabalhadores.",
     "soma": 2
    }
   },
   {
    "manchete": "Espanha inicia greve geral por moradia às vésperas das eleições",
    "veiculos": 35,
-   "veiculos_3h": 13,
+   "veiculos_3h": 11,
    "na_pauta_desde": "2026-11-11T11:14:55Z",
    "esquentou": false,
    "ia": {
@@ -440,6 +640,42 @@
     "repetido": false,
     "risco": "",
     "motivo": "Notícia do continente europeu sem efeito direto na classe trabalhadora brasileira.",
+    "soma": 1
+   }
+  },
+  {
+   "manchete": "Al menos un millón de personas acompañaron al papa León XIV en Córdoba",
+   "veiculos": 35,
+   "veiculos_3h": 23,
+   "na_pauta_desde": "2026-11-10T21:08:15Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "fora",
+    "I": 0,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Evento religioso internacional sem relação com direitos da classe trabalhadora ou política nacional.",
+    "soma": 1
+   }
+  },
+  {
+   "manchete": "Pope Leo draws 650,000 for outdoor Mass in Argentina's second city",
+   "veiculos": 15,
+   "veiculos_3h": 9,
+   "na_pauta_desde": "2026-11-11T09:52:29Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "fora",
+    "I": 0,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Missa papal no exterior sem relevância para a pauta trabalhadora ou política brasileira.",
     "soma": 1
    }
   }
@@ -461,6 +697,25 @@
     "quando": "2026-11-11T13:31:33Z",
     "legenda": "🔥💭",
     "link": "https://www.instagram.com/p/DfmmCg0h2P9/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-11T16:00:03Z",
+    "legenda": "A governadora reeleita de Pernambuco, Raquel Lyra (PSD), promoveu uma reorganização política em seu governo após as eleições. Na última sexta-feira (7), foram e",
+    "link": "https://www.instagram.com/p/Dfm3C4cnbQN/"
    },
    "triagem": "candidato"
   },
@@ -560,60 +815,21 @@
    "triagem": "candidato"
   },
   {
-   "manchete": null,
+   "manchete": "Cleitinho busca se aproximar de Lula e do PT em Minas após apoio a Flávio Bolsonaro na campanha",
    "secoes": [
     "A"
    ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
+   "veiculos": 7,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-10T21:08:15Z",
+   "link": "https://www.gazetadopovo.com.br/republica/pf-abre-inquerito-sobre-suposto-financiamento-estrangeiro-a-campanha-de-flavio/",
+   "editoria": "eleicoes",
+   "nota": 8,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-11T16:00:03Z",
-    "legenda": "A governadora reeleita de Pernambuco, Raquel Lyra (PSD), promoveu uma reorganização política em seu governo após as eleições. Na última sexta-feira (7), foram e",
-    "link": "https://www.instagram.com/p/Dfm3C4cnbQN/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Justiça manda entregar ao grupo OAS R$ 2,4 mi do leilão de tríplex atribuído a Lula pela Lava Jato",
-   "secoes": [
-    "A",
-    "B"
-   ],
-   "veiculos": 19,
-   "veiculos_3h": 10,
-   "na_pauta_desde": "2026-11-10T22:26:33Z",
-   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/justica-manda-devolver-a-oas-r-24-mi-do-leilao-de-triplex-atribuido-a-lula-pela-lava-jato.shtml",
-   "editoria": "gerais",
-   "nota": 4,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-11T15:15:04Z",
-    "legenda": "A Justiça Federal de Brasília determinou que o grupo OAS receba R$ 2,42 milhões arrecadados com o leilão do tríplex do Guarujá (SP), em 2018. O imóvel foi atrib",
-    "link": "https://www.instagram.com/p/Dfmx5ZrgBal/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Governador eleito defende mudanças no licenciamento ambiental e concessões rodoviárias",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 6,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-10T22:26:33Z",
-   "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOVTZpM3I0WmhONHZWV292bTA5WC0yUUlJNUZEaVFKSmZpZlRlYWk1VFRGNDZzSE1WQ0xTX1BwNUV4S2dVcVJYN294RnJmSkt5bEVsVnMtd0tYbzFsWkowWjBTdnFtRG9qRXR4dUJwVjVseW44WjJXQTFTXzh2alprVXpTcEc2RUUyWG1qQmduRzhlYXdOVnllMk1GNWk2cThTMW03TTYydUs5N1h1OEU2MWlrRmxjOXpGVERMNEVwRmp2QkROS3Y4am5HclRvV2haQjZoVGFFeU0ya1RUd2JNVQ?oc=5",
-   "editoria": "politica",
-   "nota": 5,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-11T15:30:05Z",
-    "legenda": "O governador eleito do Rio de Janeiro, Douglas Ruas (PL), declarou que o Instituto Estadual do Ambiente (Inea) \"vai ter que desapegar do licenciamento ambiental",
-    "link": "https://www.instagram.com/p/DfmznWnDl95/"
+    "quando": "2026-11-11T16:30:03Z",
+    "legenda": "A Polícia Federal (PF) abriu, nesta terça-feira (10), um inquérito para investigar suspeitas de financiamento estrangeiro à campanha presidencial do senador Flá",
+    "link": "https://www.instagram.com/p/Dfm6eo-jyFP/"
    },
    "triagem": "candidato"
   },
@@ -656,23 +872,43 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "“O Nordeste de Nikolas Ferreira”: as críticas mais pesadas sobre a nova novela da Globo",
+   "manchete": "Governador eleito defende mudanças no licenciamento ambiental e concessões rodoviárias",
    "secoes": [
     "A"
    ],
-   "veiculos": 2,
+   "veiculos": 6,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-11T11:14:55Z",
-   "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQT1FKZ2FYejB2d2xuTFd5QmdpSjBfLTlIUnhHUzhtLTVnVHIzd2ZlZDlqRTYyTDVfbXV0WGotRWNDcEprTld4bG1wQlpnNTR2bXdyNkJDYlc1YWZSaVRQYWo4Y2dRZ3dWdDhOdG1ISTZPYzIyVGJmd3JFV3lCY1pJeWFDQmQ0S2VydndnemJ6aXRWVlpRRXJGUl9OQUNSd1BBNkpUNkJBNnRLdmZCclRhSldGd3MyTnBoSFRsTmJJNmNBUWc0NC0xdmZjZnJHbFFEal9Td1FNd29KOGJTbFE?oc=5",
-   "editoria": null,
-   "nota": null,
+   "na_pauta_desde": "2026-11-10T22:26:33Z",
+   "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOVTZpM3I0WmhONHZWV292bTA5WC0yUUlJNUZEaVFKSmZpZlRlYWk1VFRGNDZzSE1WQ0xTX1BwNUV4S2dVcVJYN294RnJmSkt5bEVsVnMtd0tYbzFsWkowWjBTdnFtRG9qRXR4dUJwVjVseW44WjJXQTFTXzh2alprVXpTcEc2RUUyWG1qQmduRzhlYXdOVnllMk1GNWk2cThTMW03TTYydUs5N1h1OEU2MWlrRmxjOXpGVERMNEVwRmp2QkROS3Y4am5HclRvV2haQjZoVGFFeU0ya1RUd2JNVQ?oc=5",
+   "editoria": "politica",
+   "nota": 5,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-11T03:00:10Z",
-    "legenda": "A estreia de \"Lá na Minha Terra\", nova novela das seis da TV Globo, provocou uma reação negativa nas redes sociais e abriu uma discussão sobre a forma como a te",
-    "link": "https://www.instagram.com/p/Dfldy3ijZLs/"
+    "quando": "2026-11-11T15:30:05Z",
+    "legenda": "O governador eleito do Rio de Janeiro, Douglas Ruas (PL), declarou que o Instituto Estadual do Ambiente (Inea) \"vai ter que desapegar do licenciamento ambiental",
+    "link": "https://www.instagram.com/p/DfmznWnDl95/"
    },
-   "triagem": "fora: entretenimento (novela)"
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Justiça manda entregar ao grupo OAS R$ 2,4 mi do leilão de tríplex atribuído a Lula pela Lava Jato",
+   "secoes": [
+    "A",
+    "B"
+   ],
+   "veiculos": 20,
+   "veiculos_3h": 10,
+   "na_pauta_desde": "2026-11-10T22:26:33Z",
+   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/justica-manda-devolver-a-oas-r-24-mi-do-leilao-de-triplex-atribuido-a-lula-pela-lava-jato.shtml",
+   "editoria": "gerais",
+   "nota": 4,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-11T15:15:04Z",
+    "legenda": "A Justiça Federal de Brasília determinou que o grupo OAS receba R$ 2,42 milhões arrecadados com o leilão do tríplex do Guarujá (SP), em 2018. O imóvel foi atrib",
+    "link": "https://www.instagram.com/p/Dfmx5ZrgBal/"
+   },
+   "triagem": "candidato"
   },
   {
    "manchete": "Agenda de Presidente da República para 11/11/2026 — Planalto",
@@ -690,25 +926,6 @@
     "quando": "2026-11-11T12:59:06Z",
     "legenda": "Em seu primeiro discurso internacional após a reeleição, em 25 de outubro, o presidente Luiz Inácio Lula da Silva (PT) destacou a mobilização popular que garant",
     "link": "https://www.instagram.com/reel/DfmiIgchL7Y/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-11T10:48:11Z",
-    "legenda": "Você não poderá mais ver notícias com vídeos do presidente Lula aqui no BFC. Em breve, você não poderá ver mais nada aqui no BFC. Nos últimos dias, a Meta coloc",
-    "link": "https://www.instagram.com/p/DfmTWynJUVI/"
    },
    "triagem": "candidato"
   },
@@ -732,13 +949,51 @@
    "triagem": "candidato"
   },
   {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-11T10:48:11Z",
+    "legenda": "Você não poderá mais ver notícias com vídeos do presidente Lula aqui no BFC. Em breve, você não poderá ver mais nada aqui no BFC. Nos últimos dias, a Meta coloc",
+    "link": "https://www.instagram.com/p/DfmTWynJUVI/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Operação Refit: MPRJ mira pai, avô e tio de Ricardo Magro, suspeito de ser maior fraudador fiscal do país",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 8,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-11T13:09:17Z",
+   "link": "https://www.cartacapital.com.br/sociedade/operacao-mira-familiares-de-ricardo-magro-dono-da-refit-em-investigacao-sobre-fraude-bilionaria/",
+   "editoria": "politica",
+   "nota": 5,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-11T16:15:04Z",
+    "legenda": "Familiares de Ricardo Magro, proprietário da Refit, antiga Refinaria de Manguinhos, foram alvo de uma operação do Ministério Público do Rio de Janeiro (MPRJ) ne",
+    "link": "https://www.instagram.com/p/Dfm4w0qj-7u/"
+   },
+   "triagem": "candidato"
+  },
+  {
    "manchete": "Suspeito de matar frentista após discussão de trânsito tem prisão decretada pela Justiça",
    "secoes": [
     "A",
     "B"
    ],
-   "veiculos": 9,
-   "veiculos_3h": 5,
+   "veiculos": 8,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-11T17:07:47Z",
    "link": "https://www.metropoles.com/brasil/policia-procura-suspeito-de-matar-uma-pessoa-a-tiros-em-show-de-natanzinho",
    "editoria": null,
@@ -761,12 +1016,12 @@
    "na_pauta_desde": null,
    "link": null,
    "editoria": "gerais",
-   "nota": 2,
+   "nota": 1,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-11T12:45:05Z",
-    "legenda": "O Banco Nacional de Desenvolvimento Econômico e Social (BNDES) ampliou de 30 para até 40 anos o prazo de financiamento para novas ferrovias e dobrou o limite de",
-    "link": "https://www.instagram.com/p/Dfmgu2FlCLm/"
+    "quando": "2026-11-11T16:45:03Z",
+    "legenda": "Os Procuradores-Gerais de Justiça dos nove estados do Nordeste assinaram nesta terça-feira (10), na sede da Procuradoria-Geral de Justiça do Rio Grande do Norte",
+    "link": "https://www.instagram.com/p/Dfm8MfgCYPr/"
    },
    "triagem": "candidato"
   },
@@ -780,69 +1035,12 @@
    "na_pauta_desde": null,
    "link": null,
    "editoria": "gerais",
-   "nota": 1,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-11T10:30:04Z",
-    "legenda": "Uma pesquisa internacional publicada na revista Communications Biology revelou a descoberta de duas novas espécies de macacos-uivadores na Amazônia. Uma delas, ",
-    "link": "https://www.instagram.com/p/DfmRSAZDHr3/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Alcolumbre diz que vai promulgar PEC da Segurança Pública daqui a 15 dias",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-10T21:08:15Z",
-   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/alcolumbre-diz-que-vai-promulgar-pec-da-seguranca-publica-daqui-a-15-dias.shtml",
-   "editoria": "politica",
-   "nota": 4,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-11T09:30:05Z",
-    "legenda": "O Ministério da Justiça e Segurança Pública (MJSP) autorizou o envio da Força Nacional de Segurança Pública para a Terra Indígena Ituna/Itatá, no Pará, por um p",
-    "link": "https://www.instagram.com/p/DfmKaogDdsa/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": null,
-   "nota": null,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-11T15:45:04Z",
-    "legenda": "A atriz Julia Miranda vive um novo momento na televisão. Protagonista de \"A Caverna de Petra\", ela chega à programação da TV Cultura com a série infantil exibid",
-    "link": "https://www.instagram.com/p/Dfm1VD7HBi8/"
-   },
-   "triagem": "fora: entretenimento (serie)"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "educacao",
    "nota": 2,
    "parceiro": {
-    "perfil": "luzmanifesto",
-    "quando": "2026-11-11T12:20:03Z",
-    "legenda": "LUZ NO ASSUNTO | EP. 03 Alana Cabral Educação, inclusão e democracia • acesso à universidade, diversidade e enfrentamento da intolerância. Informação também é u",
-    "link": "https://www.instagram.com/reel/Dfmdo8CREFg/"
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-11T12:45:05Z",
+    "legenda": "O Banco Nacional de Desenvolvimento Econômico e Social (BNDES) ampliou de 30 para até 40 anos o prazo de financiamento para novas ferrovias e dobrou o limite de",
+    "link": "https://www.instagram.com/p/Dfmgu2FlCLm/"
    },
    "triagem": "candidato"
   },
@@ -874,34 +1072,15 @@
    "veiculos_3h": 0,
    "na_pauta_desde": null,
    "link": null,
-   "editoria": "gerais",
-   "nota": 2,
+   "editoria": null,
+   "nota": null,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-11T09:00:10Z",
-    "legenda": "Em 26 de outubro de 2025, o rompimento do dique de uma usina de etanol da Universal Robina Corporation (URC) despejou cerca de 255 milhões de litros de efluente",
-    "link": "https://www.instagram.com/p/DfmG_dMEyCi/"
+    "quando": "2026-11-11T15:45:04Z",
+    "legenda": "A atriz Julia Miranda vive um novo momento na televisão. Protagonista de \"A Caverna de Petra\", ela chega à programação da TV Cultura com a série infantil exibid",
+    "link": "https://www.instagram.com/p/Dfm1VD7HBi8/"
    },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Promotoria denuncia Milton Leite e outros 13 sob acusação de promover o PCC no transporte público",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-11T17:07:47Z",
-   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/promotoria-denuncia-milton-leite-e-outros-13-sob-acusacao-de-promover-o-pcc-no-transporte-publico.shtml",
-   "editoria": "politica",
-   "nota": 6,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-11T13:16:33Z",
-    "legenda": "O Ministério Público de São Paulo (MP-SP) denunciou o ex-vereador e ex-presidente da Câmara Municipal de São Paulo Milton Leite (União Brasil) por organização c",
-    "link": "https://www.instagram.com/p/DfmkVScEVbK/"
-   },
-   "triagem": "candidato"
+   "triagem": "fora: entretenimento (serie)"
   },
   {
    "manchete": "Festival Rimando contra a Maré chega à 16ª edição com oficinas de hip hop e shows gratuitos em Paulista",
@@ -940,6 +1119,25 @@
     "quando": "2026-11-11T13:30:04Z",
     "legenda": "A agricultura familiar enfrenta dificuldades para se recuperar dos impactos da crise climática e ainda esbarra na desigualdade de acesso ao financiamento rural.",
     "link": "https://www.instagram.com/p/Dfml4T4nLNf/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Promotoria denuncia Milton Leite e outros 13 sob acusação de promover o PCC no transporte público",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-11T17:07:47Z",
+   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/promotoria-denuncia-milton-leite-e-outros-13-sob-acusacao-de-promover-o-pcc-no-transporte-publico.shtml",
+   "editoria": "politica",
+   "nota": 6,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-11T13:16:33Z",
+    "legenda": "O Ministério Público de São Paulo (MP-SP) denunciou o ex-vereador e ex-presidente da Câmara Municipal de São Paulo Milton Leite (União Brasil) por organização c",
+    "link": "https://www.instagram.com/p/DfmkVScEVbK/"
    },
    "triagem": "candidato"
   },
@@ -999,6 +1197,25 @@
     "link": "https://www.instagram.com/p/DfmswGjglLE/"
    },
    "triagem": "fora: entretenimento (album)"
+  },
+  {
+   "manchete": "Brasil propõe fim de subsídios a combustíveis fósseis durante COP31 na Turquia",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-11T17:16:46Z",
+   "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE8yejU4c1NLaXFwaUczWFhxR09ZcGF6bVFmZTZUUzZUWURsR1JGQ3dCYmZfQ2xkMzBsLWdIeGVGbmNuVmI0eGYtM19PN3AyWmVDa3A1VGd6Q3JURnh1b3cxNDNuZHBWaWtfazA5WE5vRkROWGd3M1RxVGQ3c0Y?oc=5",
+   "editoria": "gerais",
+   "nota": 2,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-11T17:00:11Z",
+    "legenda": "O Brasil apresentou nesta terça-feira (10), durante a COP31, em Antália, na Turquia, um plano internacional para orientar a substituição gradual dos combustívei",
+    "link": "https://www.instagram.com/p/Dfm97SIAbOL/"
+   },
+   "triagem": "candidato"
   },
   {
    "manchete": null,
@@ -1066,6 +1283,25 @@
    "veiculos_3h": 0,
    "na_pauta_desde": null,
    "link": null,
+   "editoria": "educacao",
+   "nota": 2,
+   "parceiro": {
+    "perfil": "luzmanifesto",
+    "quando": "2026-11-11T12:20:03Z",
+    "legenda": "LUZ NO ASSUNTO | EP. 03 Alana Cabral Educação, inclusão e democracia • acesso à universidade, diversidade e enfrentamento da intolerância. Informação também é u",
+    "link": "https://www.instagram.com/reel/Dfmdo8CREFg/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
    "editoria": "gerais",
    "nota": 1,
    "parceiro": {
@@ -1086,76 +1322,76 @@
    "na_pauta_desde": null,
    "link": null,
    "editoria": "gerais",
-   "nota": 1,
+   "nota": 2,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-11T10:00:06Z",
-    "legenda": "Vinte e sete moradores de Kolwezi, um dos maiores polos mundiais de extração de cobre e cobalto na República Democrática do Congo (RDC), ingressaram com uma açã",
-    "link": "https://www.instagram.com/p/DfmN2fVkSwQ/"
+    "quando": "2026-11-11T17:06:39Z",
+    "legenda": "O BFC vinha alertando há dias sobre as fake news, distribuídas por influenciadores de esquerda em busca de poder e cargos, sobre o edinhosilvapt. Ontem, no BFC ",
+    "link": "https://www.instagram.com/p/Dfm-VsVBOb4/"
    },
    "triagem": "candidato"
   }
  ],
  "descartados_mais_quentes": [
   {
-   "manchete": "Lula cobra países ricos na COP31: ‘Se desenvolveram às custas do planeta e devem cumprir seus compromissos’",
-   "veiculos": 40,
-   "veiculos_3h": 15,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Alcolumbre prorroga MP do fim das bets por mais 60 dias",
-   "veiculos": 21,
-   "veiculos_3h": 14,
+   "manchete": "Lula está na Turquia e se prepara para discurso na COP31",
+   "veiculos": 29,
+   "veiculos_3h": 8,
    "motivo": "sem editoria"
   },
   {
    "manchete": "Rússia, EUA e Ucrânia encerram primeiro dia de negociações de paz em Abu Dhabi; veja o que se sabe",
-   "veiculos": 19,
-   "veiculos_3h": 9,
+   "veiculos": 26,
+   "veiculos_3h": 13,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Justicia brasileña multa a Meta por incumplir trato igualitario en elecciones presidenciales",
-   "veiculos": 19,
-   "veiculos_3h": 3,
+   "manchete": "Alcolumbre prorroga MP do fim das bets por mais 60 dias",
+   "veiculos": 17,
+   "veiculos_3h": 10,
    "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Centenas de escolas são evacuadas na Itália após nova onda de falsas ameaças na Europa",
-   "veiculos": 16,
-   "veiculos_3h": 9,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
    "manchete": "Brazil fines Meta $1.3 million for failing to comply with judicial orders",
-   "veiculos": 15,
-   "veiculos_3h": 5,
+   "veiculos": 16,
+   "veiculos_3h": 6,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Embaixador da Rússia nos EUA morre aos 66 anos",
-   "veiculos": 12,
-   "veiculos_3h": 6,
-   "motivo": "fora: crime ou tragedia (morre)"
-  },
-  {
-   "manchete": "Zelenski afirma que negocia ‘grande troca’ de prisioneiros com a Rússia",
+   "manchete": "Lula critica perda de espaço da agenda climática e cobra metas mais ambiciosas",
    "veiculos": 10,
-   "veiculos_3h": 4,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Suspeito de matar frentista após discussão de trânsito tem prisão decretada pela Justiça",
-   "veiculos": 9,
    "veiculos_3h": 5,
-   "motivo": "fora: crime ou tragedia (matar)"
+   "motivo": "sem editoria"
   },
   {
    "manchete": "Secretário dos EUA se muda para base militar após sofrer ameaças do Irã",
    "veiculos": 9,
    "veiculos_3h": 3,
    "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Chefe de segurança do Irã diz que país não está negociando com os EUA",
+   "veiculos": 9,
+   "veiculos_3h": 3,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Suspeito de matar frentista após discussão de trânsito tem prisão decretada pela Justiça",
+   "veiculos": 8,
+   "veiculos_3h": 4,
+   "motivo": "fora: crime ou tragedia (matar)"
+  },
+  {
+   "manchete": "Fifa define regras do sorteio da Copa do Mundo Feminina de 2027; Brasil será cabeça de chave do Grupo A",
+   "veiculos": 8,
+   "veiculos_3h": 4,
+   "motivo": "fora: esporte (copa do mundo)"
+  },
+  {
+   "manchete": "Mais da metade das empresas ainda não tem retorno mensurável com IA, aponta pesquisa",
+   "veiculos": 8,
+   "veiculos_3h": 3,
+   "motivo": "sem editoria"
   }
  ]
 }
