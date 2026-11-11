@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-11T20:07:31Z",
- "pauta_quando": "2026-11-11T20:07:29Z",
+ "quando": "2026-11-11T22:07:43Z",
+ "pauta_quando": "2026-11-11T22:07:39Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,52 +9,134 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 18,
-  "falhas_antes": "gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in",
-  "pedidos_hoje": 26
+  "avaliados_agora": 20,
+  "falhas_antes": "gemini-3.5-flash-lite: HTTP 503 The service is currently unavailable.",
+  "pedidos_hoje": 28
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 160,
- "novos_3h": 7,
+ "total_assuntos": 164,
+ "novos_3h": 4,
  "esquentaram": 6,
  "candidatos": [
   {
-   "manchete": "Governo sinaliza ao Congresso economia de até R$ 80 bi em 2027 e foco em corte de incentivos",
+   "manchete": "Lula se reúne com Delcy Rodríguez e discute tarifas, petróleo e relação diplomática com Venezuela",
    "secoes": [
-    "B"
+    "B",
+    "D-america_latina"
    ],
-   "veiculos": 17,
-   "veiculos_3h": 8,
-   "na_pauta_desde": "2026-11-11T00:07:34Z",
-   "link": "https://www.brasil247.com/brasil/governo-lula-prepara-ajuste-fiscal-com-impacto-de-ate-r-60-bilhoes-em-2027/",
-   "editoria": "politica",
+   "veiculos": 41,
+   "veiculos_3h": 35,
+   "na_pauta_desde": "2026-11-10T16:12:40Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/11/lula-se-reune-com-presidente-interina-da-venezuela-na-turquia.ghtml",
+   "editoria": "america_latina",
    "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "corte"
-   ],
+   "esquentou": true,
+   "lente": [],
    "ia": {
-    "editoria": "economia",
+    "editoria": "america_latina",
     "I": 3,
-    "V": 2,
+    "V": 3,
     "P": 2,
-    "formato": "carrossel",
+    "formato": "reels",
     "repetido": false,
     "risco": "",
-    "motivo": "Proposta fiscal projeta corte de incentivos e impacta debate sobre orçamento público.",
-    "soma": 5
+    "motivo": "Reunião de Lula com Delcy Rodríguez aborda petróleo e relações diplomáticas.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Cesta básica sobe em todas as capitais em outubro, diz Dieese",
+   "secoes": [
+    "B",
+    "D-terra"
+   ],
+   "veiculos": 35,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-10T14:12:38Z",
+   "link": "https://jornalggn.com.br/economia/cesta-basica-sobe-27-capitais-salario-necessario/",
+   "editoria": "roca",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "cesta basica"
+   ],
+   "ia": {
+    "editoria": "roca",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Alta generalizada da cesta básica afeta diretamente a sobrevivência do povo.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Lula se reúne com Delcy Rodríguez pela primeira vez após sequestro de Maduro",
+   "secoes": [
+    "B",
+    "C-internacional",
+    "D-america_latina"
+   ],
+   "veiculos": 6,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-10T16:12:40Z",
+   "link": "https://iclnoticias.com.br/lula-e-delcy-se-reunem-pela-1a-vez-desde-maduro/",
+   "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Encontro de Lula com Delcy Rodríguez após tensões na Venezuela.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Cesta básica em Dourados toma mais da metade do salário mínimo",
+   "secoes": [
+    "B",
+    "D-terra"
+   ],
+   "veiculos": 15,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-10T14:12:38Z",
+   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOb2x5TkVWYkdMVVdnSG5DMXoxWHdTdDVyUTI5UkVSM0ZQYnhTZTdzeWdhczlsRk53cGp5VVBUWXJ6Ulo4UmFpcGtWSDBsa3NhUkVnN0NIcENHc3haWGFZRDB5LVJ1Y2oyRU9lRkJ0THB6WHV1MTFJcnZQSjd0VVhKUjdjR0dYXzBJTlo0UEdGaFlhQ1Y1SUE0M3ZRME9uT3hSMXlr0gGoAUFVX3lxTE4yRHh2S2gtSUtqa3FLV1NsRzdDLW53TnZUeUJvTnJtdXppdzY1QmZjRU9TVl93Q3RvMDZITDhfd0NZeU84X1hoTzR6cmxGZGVpQUZCeXdoV3VTN3JMS3B0ODh6dy1CM3hxSGNGWU84M2xQaDlnUHlybVJrakYtS05wWTZjdHZLVnU1N1BQcE9zZXZOeVRsYmd1SGJmS3Q1TXN4b2RTY0FERA?oc=5",
+   "editoria": "economia",
+   "nota": 7,
+   "esquentou": false,
+   "lente": [
+    "salario",
+    "cesta basica"
+   ],
+   "ia": {
+    "editoria": "roca",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Cesta básica consome metade do salário mínimo, impacto direto no bolso.",
+    "soma": 6
    }
   },
   {
    "manchete": "Gilmar Mendes suspende processos sobre substituição da tabela SUS",
    "secoes": [
-    "B",
-    "C-nacional"
+    "B"
    ],
-   "veiculos": 7,
-   "veiculos_3h": 6,
+   "veiculos": 18,
+   "veiculos_3h": 12,
    "na_pauta_desde": "2026-11-11T18:05:05Z",
-   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNelA0RzFXemF0SnAzRXpuVC04cmZVZDRpTjd0Ymx0LXRtZEhkY0cwblBNNGEyakJfUmI3NUotZUhiUEtiVkpSQkxISlY5TWgwVzhsYmR5d1BGNEpMQVdaVXkzU0haWVhTYWlXRHlMUFJhcFdtWlBhMjU5SlFhLW5YZkY3TGxDZFBEemhwSVgwRkRvN0VOSV82MA?oc=5",
+   "link": "https://www.gazetadopovo.com.br/republica/gilmar-suspende-em-todo-o-pais-acoes-sobre-revisao-de-valores-pagos-pelo-sus/",
    "editoria": "saude",
    "nota": 5,
    "esquentou": true,
@@ -66,129 +148,21 @@
     "I": 3,
     "V": 2,
     "P": 2,
-    "formato": "carrossel",
+    "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Suspensão de processos sobre tabela do SUS afeta saúde pública.",
+    "motivo": "Gilmar suspende processos sobre tabela do SUS, afetando serviços públicos.",
     "soma": 5
-   }
-  },
-  {
-   "manchete": "Governo Lula nega recurso para derrubar sigilo de 100 anos sobre visitas de Vorcaro na PF",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 17,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-11T09:52:29Z",
-   "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQRVdVdVdYcW1CVTNpc2ozSHFCTktvRlgyMEszX0ZIc3pDOU5KMGphQ0xNZGc3UDRKYmpxQ013VUtpUjY5ckYzNEVNMHdVVzBlQjNnVzA5X1piby1NMzl2czZpR0JTMWV6VklYNXBRNGtBNHBNZTctM3dmMzQ1MU1SanVEQjJwMGhKcE4wUEFoR1NFNGE2b2lpSzVlS08zX3dPblkxU1FTbjN3SkhqNy10cWp3U0NkY1BIbFhqZVNfbGFDZVJQQlR0MmdoUHM4TUFRMnhRc1A0azEzVENvWlF30gHuAUFVX3lxTE1BZjk1bFBxenNnU2Uxd2l0aDBVZUQxN1pfd2FydFNnUHMxRTZkLU94SV9wbDZBM3pDQ3JkT0Fxa1M0bVYxOGdYN01Eb0JxR1M2ZnllZ3NrbDNxandNYWVLdzlEOFY4N2xqWF90Y0ZzTDRJSUtXa0JoY1Rac3A2MWxrcF9rTl9Jc1J3dVNmZjlQZXNRRndLeXRsVHQ2ZzZNV1FCTFpCTWJ5Q050RFVkdWdoeDBxZVpuM2dlUUthMGtNTjQzd2pQS3Q1Y3poNnJxU1RVMHVlUzF3U2FpbzN5NFVXNm9QSW5HMWRuX1B0MVE?oc=5",
-   "editoria": "politica",
-   "nota": 6,
-   "esquentou": true,
-   "lente": [
-    "vorcaro"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 3,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Manutenção de sigilo de 100 anos pelo governo gera forte contradição e desgaste.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Dino fala em ‘eliminar amarras’ para fim da escala 6x1 e facilitar negociação coletiva",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 8,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-11T17:07:47Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/gilmar-mendes-defende-negociacao-coletiva-para-viabilizar-fim-da-escala-6x1.shtml",
-   "editoria": "economia",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "6x1"
-   ],
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Dino defende negociação coletiva para facilitar implementação da redução da jornada de trabalho.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "MP denuncia Milton Leite, o ex-presidente da SPTrans na gestão Nunes e mais 12 por ligação com PCC no transporte público",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-11T17:07:47Z",
-   "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPSzBVaS1RTGpoamVUU09XZmdGRFh6WDRqVkhOQk5vTWtqRXg0ck1XUGUxSGFjeDQ2Q0VpUkxQLWVNRmpUeGd2MTUweEd2N3VJUmxwWEVyb0NvWjhReDlJNDhOcFJ5U2lMWWd4dzdTcW5laWhHYUh4N3h0dldlanpUc19oaHJKMG5SY0lNN0VsT1djQkhzVWdOR3B4WVpmZjVsZXdHWndlLTFMS0V3R1VjRGhGcV9SWXhaNHNnNFd6NXBYbERlSFl6U1N1VHBIS0tjaklUdlp0cE1raFVkQUVoVWRXYVRDU25jeGZWbUVuZzhIODg?oc=5",
-   "editoria": "politica",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "transporte publico"
-   ],
-   "ia": {
-    "editoria": "gerais",
-    "I": 3,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Denúncia contra Milton Leite e ligação com PCC.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Lula se reúne com Delcy Rodríguez e discute tarifas, petróleo e relação diplomática com Venezuela",
-   "secoes": [
-    "B",
-    "C-nacional",
-    "D-america_latina"
-   ],
-   "veiculos": 15,
-   "veiculos_3h": 15,
-   "na_pauta_desde": "2026-11-10T16:12:40Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/11/lula-se-reune-com-presidente-interina-da-venezuela-na-turquia.ghtml",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Lula discute petróleo e relações com a Venezuela.",
-    "soma": 4
    }
   },
   {
    "manchete": "Quaest: 62% dos eleitores não se sentem representados por partidos; PT e PL são os mais rejeitados",
    "secoes": [
     "B",
-    "C-nacional"
+    "C-pesquisa"
    ],
-   "veiculos": 9,
-   "veiculos_3h": 9,
+   "veiculos": 19,
+   "veiculos_3h": 15,
    "na_pauta_desde": "2026-11-11T20:07:29Z",
    "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/11/quaest-62-nao-se-sentem-representados-por-partidos-pt-e-pl-concentram-identificacao-e-rejeicao.shtml",
    "editoria": "eleicoes",
@@ -197,57 +171,110 @@
    "lente": [
     "pl"
    ],
+   "outras_manchetes": 1,
    "ia": {
     "editoria": "eleicoes",
     "I": 2,
     "V": 2,
     "P": 2,
-    "formato": "carrossel",
+    "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Pesquisa mostra alta rejeição a partidos tradicionais.",
+    "motivo": "Pesquisa Quaest mostra rejeição aos partidos e descontentamento popular geral.",
     "soma": 4
    }
   },
   {
-   "manchete": "3 pontos para entender a primeira greve geral na Espanha em 14 anos",
+   "manchete": "Em passagem na Argentina, papa Leão XIV distribui 'recados' a Milei; governo reage",
    "secoes": [
-    "B"
+    "B",
+    "D-america_latina"
    ],
-   "veiculos": 19,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-11T11:14:55Z",
-   "link": "https://www.bbc.com/portuguese/articles/c58j4le1w32ro?at_medium=RSS&at_campaign=rss",
-   "editoria": "economia",
-   "nota": 5,
-   "esquentou": true,
+   "veiculos": 20,
+   "veiculos_3h": 13,
+   "na_pauta_desde": "2026-11-11T22:07:39Z",
+   "link": "https://g1.globo.com/mundo/noticia/2026/11/11/javier-milei-chora-em-despedida-de-papa-leao-xiv-que-deixa-a-argentina-rumo-ao-peru.ghtml",
+   "editoria": "america_latina",
+   "nota": 6,
+   "esquentou": false,
    "lente": [
-    "greve"
+    "milei"
    ],
    "ia": {
     "editoria": "america_latina",
     "I": 2,
     "V": 2,
     "P": 2,
-    "formato": "carrossel",
+    "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Greve geral histórica na Espanha.",
+    "motivo": "Papa envia recados a Milei na Argentina, gerando atrito político.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Polícia Federal: Associação dos Delegados critica cúpula após troca de chefias no Caso Master e saída de Andrei Rodrigues",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 20,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-11-10T19:11:48Z",
+   "link": "https://www.gazetadopovo.com.br/republica/sinais-de-acordao-diz-jurista-sobre-caso-banco-master/",
+   "editoria": "politica",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "master"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Associação de delegados expõe crise interna e atritos na cúpula da PF.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Associação critica afastamento de delegados que elaboraram relatórios sobre ministros do STF e cobra autonomia da PF",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 7,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-10T19:11:48Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/10/associacao-critica-afastamento-de-delegados-que-elaboraram-relatorios-sobre-ministros-do-stf-e-cobra-autonomia-da-pf.ghtml",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Associação cobra autonomia da PF após afastamento de delegados.",
     "soma": 4
    }
   },
   {
    "manchete": "MPRJ tenta prender Ricardo Magro e parentes; ex-presidente da Refit e piloto da Copa Truck são presos",
    "secoes": [
-    "A",
-    "B"
+    "A"
    ],
-   "veiculos": 15,
-   "veiculos_3h": 5,
+   "veiculos": 14,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-11T13:09:17Z",
    "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://c-level.folha.uol.com.br/negocios/2026/11/quem-e-ricardo-magro-alvo-de-mandado-de-prisao-por-suspeita-de-fraude-fiscal.shtml",
    "editoria": "politica",
-   "nota": 6,
+   "nota": 5,
    "esquentou": false,
    "lente": [],
    "ia": {
@@ -267,12 +294,12 @@
    "secoes": [
     "C-nacional"
    ],
-   "veiculos": 3,
-   "veiculos_3h": 3,
+   "veiculos": 4,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-11T20:07:29Z",
    "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/stj-julga-acao-que-pode-limitar-prazo-de-revisao-da-aposentadoria-do-inss-acompanhe.shtml",
    "editoria": "economia",
-   "nota": 6,
+   "nota": 5,
    "esquentou": false,
    "lente": [
     "aposentad",
@@ -291,16 +318,43 @@
    }
   },
   {
-   "manchete": "Relatório da PF deve identificar indício de crime e não fazer juízo sobre relação de ministros com Vorcaro, indica Fachin a auxiliares",
+   "manchete": "Dos millones y medio de fieles en misa del papa León XIV en Buenos Aires",
    "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 23,
+   "veiculos_3h": 7,
+   "na_pauta_desde": "2026-11-10T21:08:15Z",
+   "link": "https://elpais.com/america/2026-11-11/el-papa-regresa-a-peru-el-pais-que-fue-su-casa-y-donde-forjo-su-mision.html",
+   "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Missa do Papa em Buenos Aires reúne multidão em meio a tensões com governo.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "PGR defende manter prisão de Vorcaro e cita risco às investigações",
+   "secoes": [
+    "B",
     "C-nacional"
    ],
-   "veiculos": 4,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-11T17:07:47Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/11/relatorio-da-pf-deve-identificar-indicio-de-crime-e-nao-fazer-juizo-sobre-relacao-de-ministros-com-vorcaro-indica-fachin-a-auxiliares.ghtml",
+   "veiculos": 7,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-11-11T22:07:39Z",
+   "link": "https://noticias.uol.com.br/politica/ultimas-noticias/2026/11/11/gonet-defende-prisao-de-vorcaro-e-cita-risco-as-investigacoes.ghtm",
    "editoria": "politica",
-   "nota": 4,
+   "nota": 5,
    "esquentou": false,
    "lente": [
     "vorcaro"
@@ -309,11 +363,11 @@
     "editoria": "politica",
     "I": 2,
     "V": 2,
-    "P": 2,
+    "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "STF orienta PF a limitar relatório a indícios de crimes sem juízo político.",
+    "motivo": "PGR defende manter prisão e aponta riscos a investigações de corrupção.",
     "soma": 4
    }
   },
@@ -322,10 +376,10 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 25,
-   "veiculos_3h": 12,
+   "veiculos": 24,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-10T19:11:48Z",
-   "link": "https://www.congressoemfoco.com.br/noticia/131503/master-ccj-aprova-requerimentos-para-ouvir-ministro-da-justica-e-pf",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/11/senado-aprova-convites-para-ouvir-diretor-da-pf-e-ministro-da-justica-sobre-troca-de-delegados.ghtml",
    "editoria": "politica",
    "nota": 5,
    "esquentou": true,
@@ -343,43 +397,15 @@
    }
   },
   {
-   "manchete": "Preço da cesta básica vendida em Maceió sobe 4,82% em outubro",
-   "secoes": [
-    "B",
-    "D-terra"
-   ],
-   "veiculos": 30,
-   "veiculos_3h": 10,
-   "na_pauta_desde": "2026-11-10T14:12:38Z",
-   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOWWJJTUpWX3k2Z3FVamZzaG9qSlJBYzVLd0JTUWRvYWE3Q0J2bC10TEVWRVVXbkJOWEVVeHRJbnFpanZIMmFjM3B2YVBnUkVQNFhMSFdBeFJKekJ5eXBHelZuN1Q1cU5iLTk1TmJEb29oM2phbDNFcHVKWjVnMmJUMW9FZklWc3pNUk1KdEl1TGo4a3dXek5YeU9MUEk0ZjRQVnBDZlJPTFZkUU9WTnY00gG3AUFVX3lxTE1jcWk2LTdIZ21tZVJmYkw1ZnpmYXpYQ2I0UGZpemwxT0FfUkxCVHB2TWszZm9NbjFCc2xGVGJKSUZEd1pCdnM4ano4TkxxOXJ5TjFzWHhZUTVHc3RzQW9mczVCYUc5MzhLbHdzZHZpRjc5Ql9aY0RJWTVieXVEVlZKZU1aZnN0VjZQUGUzLWVISW5SOXNndmhKNERWRnBCVkF5RFpyZ01CNm9udXdGV3dtRWdJRVpzTQ?oc=5",
-   "editoria": "roca",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "cesta basica"
-   ],
-   "ia": {
-    "editoria": "economia",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Alta no preço da cesta básica afeta o bolso.",
-    "soma": 4
-   }
-  },
-  {
    "manchete": "SALVADOR TEM MAIOR ALTA NA CESTA BÁSICA NO PAÍS COM 6,79% DE ACRÉSCIMO",
    "secoes": [
     "B",
     "D-terra"
    ],
-   "veiculos": 17,
-   "veiculos_3h": 3,
+   "veiculos": 19,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-10T14:12:38Z",
-   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOZ0tEWWdIQjIxUWd6WTFNZ1RQc20wQ0RRcHBHXzVUYVVhYmo3OTAxdmZVOWdRMjl1RWdIYnRwcVEwdHl1eXR0MXhaOGpURnB4LTNaNjNTbnh0S3l5cG5jMVNsRzBJMlJqeHRqWDlVeFJSYWwtcWNUR2ZhaWtvSGRqMkYwVmxWMkpqajdweklFQi1RUjVvMm9iVFR5dm1DWTJ2Mm50b2IwMGFXRkptdC1ZSDBVaU5XbmRIUEFLMnp4QnlKQ0k?oc=5",
+   "link": "https://g1.globo.com/am/amazonas/especial-publicitario/db-supermercados-momento-grupo-db/noticia/2026/11/11/grupo-db-lidera-novamente-pesquisa-de-cesta-basica-mais-barata-em-manaus-em-2026.ghtml",
    "editoria": "roca",
    "nota": 6,
    "esquentou": true,
@@ -399,30 +425,30 @@
    }
   },
   {
-   "manchete": "Nikolas rejeita apoio a Motta e defende nome do PL à presidência da Câmara",
+   "manchete": "Lula dispara e já é o 5º presidente mais popular da América Latina; veja o ranking",
    "secoes": [
     "B",
-    "C-nacional"
+    "D-america_latina"
    ],
-   "veiculos": 9,
-   "veiculos_3h": 3,
+   "veiculos": 8,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-11T15:09:01Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/11/pl-mantem-indefinicao-sobre-presidencia-da-camara-em-meio-a-racha-sobre-apoio-a-motta.shtml",
-   "editoria": "politica",
-   "nota": 5,
-   "esquentou": false,
+   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPZjYtUU9ZNTB4NWZqSVVvLWoyZ2VVeWtnMGhtbU92LVNDbFdXSzRNbDhTV1JKQ210WW5EMG9lRDBSZ1BlYmczUXFvdEpmQ01TbWxMUGVBeEdQZ3U0TGJlbGpSalQwdnpLa2JjUGFEVUs2T1Z0YngxNVJITHNTbFhvSUxOQVpBTHRmQlBka2xWUG9GM2NRclhLSThRYmRIY0tybENrbjZzM0hPaktjNWtmM0VtNkpXUkVJMHFYOGktQ1g?oc=5",
+   "editoria": "america_latina",
+   "nota": 6,
+   "esquentou": true,
    "lente": [
-    "pl"
+    "dispara"
    ],
    "ia": {
-    "editoria": "politica",
+    "editoria": "america_latina",
     "I": 2,
     "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Nikolas rejeita Hugo Motta e defende candidatura própria do PL.",
+    "motivo": "Popularidade de Lula na América Latina, tema de interesse geopolítico regional.",
     "soma": 4
    }
   },
@@ -431,7 +457,7 @@
    "secoes": [
     "D-america_latina"
    ],
-   "veiculos": 18,
+   "veiculos": 16,
    "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-11T09:52:29Z",
    "link": "https://g1.globo.com/mundo/noticia/2026/11/11/ira-argentina-terrorista.ghtml",
@@ -452,121 +478,112 @@
    }
   },
   {
-   "manchete": "Professores da Bolívia entram em confronto com a polícia em protesto",
+   "manchete": "Defesa de Vorcaro pede a Fachin que Gilmar Mendes decida sobre revogação de prisão de banqueiro",
    "secoes": [
-    "D-america_latina"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-11T15:09:01Z",
-   "link": "https://g1.globo.com/mundo/noticia/2026/11/11/greve-geral-espanha-manifestantes-confronto-policia-video.ghtml",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "protesto"
-   ],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Professores bolivianos enfrentam repressão policial em protesto por direitos.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Lula discute parceria em defesa com presidente turco, às margens da COP31 na Turquia",
-   "secoes": [
-    "A",
     "B"
    ],
-   "veiculos": 9,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-10T16:12:40Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/10/lula-discute-parceria-em-defesa-com-presidente-turco-as-margens-da-cop31-na-turquia.ghtml",
-   "editoria": "gerais",
-   "nota": 5,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "La Llegada del Papa León XIV a Lima: así será su recorrido el 11 de noviembre",
-   "secoes": [
-    "B",
-    "D-america_latina"
-   ],
    "veiculos": 8,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-11T02:06:52Z",
-   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNRkVOa3lZR3Fud3NGNHVoZGVMbVZYSktXZ1U3Z0p4WkMyWGhNUjNmMGtJcjBhTVc3Z01rcGdCcXZtQnRqYnIxZUtyamxyYnc2TURhOWMzcEhYS19NNXVzYlZBRHZUX2ZQSzBOakg3SVEzb1JWSFRjbE40M2txaC1iZng5VGdKalZqSDZlbXFMTUw1Z1libnFYNkswRngyc1pwQW1Ud0RRWlFVdlB0MVh6V20tVnVIUmdRdGxmdHYyYkZWMmhLNGc?oc=5",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Crise com delegados do Master amplia desgaste de Andrei na PF, e governo vê futuro incerto",
-   "secoes": [
-    "C-nacional"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-11T20:07:29Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/11/governo-avalia-que-crise-amplia-desgaste-de-andrei-rodrigues-na-pf-e-ve-futuro-incerto-para-diretor-geral.shtml",
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-11T15:09:01Z",
+   "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQYzRLcFFKSGFnM1BSenRodTlJdDhaVkJvMV9QZXJJVUM1WkFxOV9ELUk4bkNZUHVkanhLZXdidU50TG1zX2FnNUs1RDN6WEdnclpFdzM3RkYzQ3FjOThtTVBjLXJ6RjMyZTZJbXp1V0ZrMnUtaEFxR3ZYbk5NcGliUjdNejBrRlJhNXRWems1S3lpNTNfX3NRc0hOZlEtenVKR1pZYkRZd3BpRUZQTXZNMzIxZUROTTBlOTlMTVFlV2FnUTlCZGdKRFV2d2RFQlg5ZzF4OURXcWQtTUhlYldKYWxSZw?oc=5",
    "editoria": "politica",
    "nota": 5,
    "esquentou": false,
    "lente": [
-    "master"
+    "vorcaro"
    ]
+  },
+  {
+   "manchete": "Ex-presidente do Paraguai, Santiago Peña, é expulso do Partido Colorado",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 15,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-10T21:08:15Z",
+   "link": "https://www.gazetadopovo.com.br/mundo/santiago-pena-pode-ser-condenado-a-ate-15-anos-de-prisao/",
+   "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Beller salió del país esta madrugada tras recibir salvoconducto",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 13,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-11T15:09:01Z",
+   "link": "https://elpais.com/mexico/2026-11-11/nadia-beller-expareja-de-cerimedo-viaja-a-mexico-para-recibir-asilo-tras-salir-de-bolivia-con-un-salvoconducto.html",
+   "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": false,
+   "lente": []
   }
  ],
  "rebaixados": [
   {
-   "manchete": "Récord histórico y devoción masiva: la impactante cifra de fieles que movilizó la visita del papa León XIV a la Argentina",
-   "veiculos": 54,
-   "veiculos_3h": 32,
+   "manchete": "Senado retira 'jabuti' que poderia liberar venda de vapes de PLV de dívidas rurais",
+   "veiculos": 18,
+   "veiculos_3h": 10,
    "na_pauta_desde": "2026-11-10T21:08:15Z",
    "esquentou": false,
    "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 2,
-    "P": 1,
+    "editoria": "roca",
+    "I": 2,
+    "V": 1,
+    "P": 2,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Visita do papa mobiliza fiéis na Argentina.",
+    "motivo": "Dificuldades da agricultura familiar e retirada de jabuti em projeto de dívidas.",
     "soma": 3
    }
   },
   {
-   "manchete": "Vorcaro pede Gilmar",
-   "veiculos": 11,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-11T15:09:01Z",
+   "manchete": "Galípolo defende que Banco Central não antecipe decisão sobre juros em meio a incertezas",
+   "veiculos": 5,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-11T22:07:39Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 1,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Fala técnica do BC sobre juros afeta a economia mas tem baixa viralização.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "O fim do inquérito das fake news muda os rumos do STF?",
+   "veiculos": 7,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-11T02:06:52Z",
    "esquentou": false,
    "ia": {
     "editoria": "politica",
     "I": 2,
     "V": 1,
-    "P": 1,
+    "P": 2,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Movimentações jurídicas envolvendo Vorcaro e Gilmar.",
+    "motivo": "Discussão sobre os rumos do STF após o fim do inquérito das fake news.",
     "soma": 3
    }
   },
   {
    "manchete": "Lula se encontra com presidente interina da Venezuela durante conferência na Turquia",
-   "veiculos": 7,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-11T20:07:29Z",
+   "veiculos": 8,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-10T16:12:40Z",
    "esquentou": false,
    "ia": {
     "editoria": "america_latina",
@@ -581,63 +598,27 @@
    }
   },
   {
-   "manchete": "STF deve levar 3 semanas para expor inquérito das fake news",
-   "veiculos": 12,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-11T02:06:52Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Prazo para desfecho de inquérito de fake news.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Sheinbaum garantiza elecciones de 2027 pese a recorte del presupuesto en entidad electoral",
-   "veiculos": 9,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-10T16:12:40Z",
+   "manchete": "León XIV y la geopolítica de la fe en América Latina",
+   "veiculos": 28,
+   "veiculos_3h": 10,
+   "na_pauta_desde": "2026-11-11T09:52:29Z",
    "esquentou": false,
    "ia": {
     "editoria": "america_latina",
     "I": 1,
     "V": 1,
-    "P": 1,
+    "P": 2,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Garantia eleitoral no México apesar de cortes.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Nadia Beller salió de Bolivia tras recibir salvoconducto para asilo en México",
-   "veiculos": 12,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-11T15:09:01Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Nadia Beller sai da Bolívia após asilo no México.",
+    "motivo": "Análise geopolítica da atuação do Papa na América Latina.",
     "soma": 2
    }
   },
   {
    "manchete": "Vice-prefeito Mello Araújo aponta irregularidades na Virada Esportiva e pede investigação do MP",
-   "veiculos": 7,
-   "veiculos_3h": 4,
+   "veiculos": 9,
+   "veiculos_3h": 5,
    "na_pauta_desde": "2026-11-11T20:07:29Z",
    "esquentou": false,
    "ia": {
@@ -653,10 +634,10 @@
    }
   },
   {
-   "manchete": "Com divisão entre bolsonaristas e ala ligada a Valdemar, PL adia decisão sobre apoio a Hugo Motta para comandar Câmara",
-   "veiculos": 6,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-11T18:05:05Z",
+   "manchete": "Nikolas Ferreira critica Hugo Motta, pede candidatura própria do PL e dispara: 'Gestão fraca'",
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-11T20:07:29Z",
    "esquentou": false,
    "ia": {
     "editoria": "politica",
@@ -666,60 +647,78 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Naufrágio do voto distrital misto na Câmara.",
+    "motivo": "Briga interna na direita e naufrágio do voto distrital misto.",
     "soma": 2
    }
   },
   {
-   "manchete": "Autoridades do Paraguai abrem sala secreta em mansão de Santiago Peña, mas não encontram nada, diz imprensa",
-   "veiculos": 27,
+   "manchete": "TSE condena Meta a multa de R$ 7,5 mi em ação sobre tratamento desigual entre Lula e Flávio",
+   "veiculos": 55,
+   "veiculos_3h": 10,
+   "na_pauta_desde": "2026-11-11T09:52:29Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": true,
+    "risco": "",
+    "motivo": "Multa à Meta por tratamento desigual já foi publicada anteriormente pela CBR.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "PF abre inquérito sobre suspeita de recursos estrangeiros na campanha de Flávio",
+   "veiculos": 42,
    "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-10T21:08:15Z",
-   "esquentou": true,
+   "esquentou": false,
    "ia": {
-    "editoria": "america_latina",
-    "I": 1,
+    "editoria": "eleicoes",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": true,
+    "risco": "",
+    "motivo": "Investigação sobre financiamento estrangeiro já está na lista anterior da CBR.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Espanha inicia greve geral por moradia às vésperas das eleições",
+   "veiculos": 50,
+   "veiculos_3h": 19,
+   "na_pauta_desde": "2026-11-11T11:14:55Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "fora",
+    "I": 0,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Desdobramentos de caso de corrupção no Paraguai sem grande novidade prática.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Pope Leo urges Argentines to follow model of saints in Cordoba mass",
-   "veiculos": 13,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-10T16:12:40Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 0,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Discurso do papa na Argentina.",
+    "motivo": "Notícia do continente europeu sem efeito direto na classe trabalhadora brasileira.",
     "soma": 1
    }
   }
  ],
  "obrigatorios": [
   {
-   "manchete": "Lula faz discurso rouco na Cúpula do Clima da ONU",
+   "manchete": "Agenda de Presidente da República para 11/11/2026 — Planalto",
    "secoes": [
     "A",
     "A"
    ],
-   "veiculos": 3,
-   "veiculos_3h": 2,
+   "veiculos": 5,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-10T16:12:40Z",
-   "link": "https://www.brasil247.com/blog/carta-aberta-ao-presidente-luiz-inacio-lula-da-silva/",
-   "editoria": "gerais",
-   "nota": 3,
+   "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNVm5ueDJ2eFZhbEtPZEtnbXVmdWFLMTByTE9Rb0MzRVBzdWh0YnhhZ2RaOUJVTG1ZQ3B5QWZqeVU2RjQ3aDZxYmFYTE9mVXkweXY5S1NvWm9nZWRFWW9BZmd0enNUZnV6cGtXVkQwcFdNa1JETFR0X0hlMkwxTTZXaXRUc3hhOGxuUmhKU19kQTRBb0JZNGpMNkx3Rjd3blNSdFhKR2MySnVDLW5POXBZRzdYY1RSNmZGYVpvUTlMSVVqS0NvTEVzOUY0Rk50cHRyaXFhMA?oc=5",
+   "editoria": "politica",
+   "nota": 4,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-11T18:30:06Z",
@@ -786,23 +785,23 @@
    "triagem": "candidato"
   },
   {
-   "manchete": null,
+   "manchete": "Nikolas Ferreira critica Hugo Motta, pede candidatura própria do PL e dispara: 'Gestão fraca'",
    "secoes": [
     "A"
    ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": null,
-   "nota": null,
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-11T20:07:29Z",
+   "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNVG1GSHl0RjJCMVVISXJEdGpscVVMZ2hCYkFsV3dHOTkxa2dSaW80U2pLblFpbWZkZXFNTnpUOU9ieDhQRkJZUlQzOXoxUmZFeHdkbjFaRUZjNy15eGlQa3BES1R2S2dTbVQ3cDlrd2FkR3lMQldrbXJ6MDhxWEtKdmNxNkd3V093TjNUeXN6Y3pmMkdJSHBScnRKZ0lnYjBhUWg5UnQ4SjUyODg1dzVSRnZSRnRQeXVxSVZqdlkwLVhTOHV0bm5ra3Y4M3dsTzNhVk1tSzlLMGFlWm5xTzJPTi1OWmE4OTdtMEd2N0gyY2hDMFlkNWFOdlNjYWl3aldtcjh4WmVn?oc=5",
+   "editoria": "eleicoes",
+   "nota": 6,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-11T14:00:11Z",
     "legenda": "A articulação do presidente da Câmara, Hugo Motta (Republicanos-PB), para implementar o voto distrital misto a partir de 2034 naufragou. Presidentes de partido ",
     "link": "https://www.instagram.com/p/DfmpU5_CULz/"
    },
-   "triagem": "fora: crime ou tragedia (naufrag)"
+   "triagem": "candidato"
   },
   {
    "manchete": "Câmara abre pregão de R$ 5,7 milhões para adquirir iPads para deputados",
@@ -862,13 +861,13 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "PF instaura inquérito sobre uso de verba estrangeira na campanha de Flávio",
+   "manchete": "PF abre inquérito sobre suspeita de recursos estrangeiros na campanha de Flávio",
    "secoes": [
     "A",
     "B"
    ],
    "veiculos": 42,
-   "veiculos_3h": 6,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-10T21:08:15Z",
    "link": "https://www.gazetadopovo.com.br/republica/pf-abre-inquerito-sobre-suposto-financiamento-estrangeiro-a-campanha-de-flavio/",
    "editoria": "eleicoes",
@@ -887,8 +886,8 @@
     "A",
     "B"
    ],
-   "veiculos": 7,
-   "veiculos_3h": 4,
+   "veiculos": 9,
+   "veiculos_3h": 5,
    "na_pauta_desde": "2026-11-11T20:07:29Z",
    "link": "https://www.congressoemfoco.com.br/noticia/131517/vice-prefeito-de-sp-pede-investigacao-de-acordo-da-propria-prefeitura",
    "editoria": "politica",
@@ -906,10 +905,10 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 4,
+   "veiculos": 3,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-10T21:08:15Z",
-   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/divida-publica-em-reais-nao-garante-juros-menores-para-o-brasil-diz-galipolo.shtml",
+   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQbUJ2SHUySV93YVZwUU91RU5nVzMtSjVnOFBoYWxSV1pGTWJTRy1Sd19Pd0JIU1hmZlRJcGwwTlktOFNOVjNEU0dPd0J3cVk1ckpLdnM5UVA1SHZXUWM0SkNpdUhJOUlvZXpSNEJBLXk1V2lfRmpHNWcyYXdjLVNEMg?oc=5",
    "editoria": "economia",
    "nota": 5,
    "parceiro": {
@@ -921,12 +920,12 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "STF deve levar 3 semanas para expor inquérito das fake news",
+   "manchete": "O fim do inquérito das fake news muda os rumos do STF?",
    "secoes": [
     "A"
    ],
-   "veiculos": 12,
-   "veiculos_3h": 2,
+   "veiculos": 7,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-11T02:06:52Z",
    "link": "https://www.nexojornal.com.br/expresso/2026/11/10/fim-do-inquerito-das-fake-news-edson-fachin-pgr",
    "editoria": "politica",
@@ -940,15 +939,15 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Douglas Ruas propõe descentralização do licenciamento ambiental e crítica severa à segurança pública no Rio de Janeiro após ser eleito governador.",
+   "manchete": "Governador eleito Douglas Ruas debate futuro da economia do Rio com empresários",
    "secoes": [
     "A"
    ],
    "veiculos": 2,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-10T22:26:33Z",
-   "link": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNU05TbllZcVA4aGtoOG94Z3g2QXVoUFRkcVV4eHVvWWVJYUhFbDZJREtxMjRUcUR3bkhwOTRzdC13TDhIaURqU1pPQ1kteTNmZXVPLTdaVXQ0UTBkNUg1dGNjZVBKTWFkR0I3X1RETVZ4ZzhCdHBzY0NINnlBVUZkTGxfSmY4UGI1eWZRN08walR2RVlhbllMYXpha1NKRU1uaFEzdTZsNWNLOXFIQV84RnNhSklFTklxN2xhdE5peUxNY3c3SzFDbHFwbnA0REo4anluMksya3VsY2lJelRXby02c2J3ckdOVE9JOG5qeEtKNzdnSkZTWEdkVV9WUlRjZDhacVlvb1JjNHVfcnRtU2F3?oc=5",
-   "editoria": "politica",
+   "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPUllVdHpqdE5QMmRMV0E2TnBTTkJ6UVo0VzJEZWduMjUzS1A0NzB2RjVGd2VWM3ptejRYR3N1ZDU3b25FVkJjNF9EdVl3ZEs4XzdTa1gyRjJGMHVlTVpjVi0ydzJvbEw1cFNyZ201aUdSNVc5SG0xSHctakJoZThwMG1qTW5EUks4eVVTd3BISTVRdFVOdXFlSkxRLUVkNWhMYmIxUzVpbUJBakphc0JzeXQwenBONlkydFdYN293aWFnQkNJRXl2MzRESlhhUE0?oc=5",
+   "editoria": "eleicoes",
    "nota": 4,
    "parceiro": {
     "perfil": "brasilforadacaverna",
@@ -964,8 +963,8 @@
     "A",
     "B"
    ],
-   "veiculos": 19,
-   "veiculos_3h": 4,
+   "veiculos": 25,
+   "veiculos_3h": 6,
    "na_pauta_desde": "2026-11-10T22:26:33Z",
    "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/justica-manda-devolver-a-oas-r-24-mi-do-leilao-de-triplex-atribuido-a-lula-pela-lava-jato.shtml",
    "editoria": "gerais",
@@ -998,17 +997,17 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Lula discute parceria em defesa com presidente turco, às margens da COP31 na Turquia",
+   "manchete": "11.11.2026 (Antália - Turquia) Presidente Lula chega à sede da COP31",
    "secoes": [
     "A",
-    "B"
+    "A"
    ],
-   "veiculos": 9,
-   "veiculos_3h": 4,
+   "veiculos": 7,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-10T16:12:40Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/10/lula-discute-parceria-em-defesa-com-presidente-turco-as-margens-da-cop31-na-turquia.ghtml",
+   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQc0hxZHRCbGU1SzJNQTlxQmtPWUhGMnV1bkhrNWJIb0hHWlBjUmNoU2p4V0F2SlFHWGY2aWt3eGhwZXI5akgxQTFmSWpWWHdGcE83SVh3TUpwOUxOaG1wT21GVFhBOTZVTGFlUERXUmxBZlBJM2pWR3pvZHNmWE92UHN2aFVzSTRqekZkemhqQUMyZFo2Wl9NUUpWMFlULWxnTGx2T1RNXzRBakN6azNz?oc=5",
    "editoria": "gerais",
-   "nota": 5,
+   "nota": 4,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-11T18:45:06Z",
@@ -1096,15 +1095,14 @@
   {
    "manchete": "MPRJ tenta prender Ricardo Magro e parentes; ex-presidente da Refit e piloto da Copa Truck são presos",
    "secoes": [
-    "A",
-    "B"
+    "A"
    ],
-   "veiculos": 15,
-   "veiculos_3h": 5,
+   "veiculos": 14,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-11T13:09:17Z",
    "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://c-level.folha.uol.com.br/negocios/2026/11/quem-e-ricardo-magro-alvo-de-mandado-de-prisao-por-suspeita-de-fraude-fiscal.shtml",
    "editoria": "politica",
-   "nota": 6,
+   "nota": 5,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-11T16:15:04Z",
@@ -1137,10 +1135,10 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 6,
-   "veiculos_3h": 0,
+   "veiculos": 7,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-11T15:09:01Z",
-   "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPR1MxZEE0c3IxdHZsZnZkVDVlWGlyTWgtdXlQaUhscUppcDMyR1dKRVRxb09uTjQ4YU5waHVrNmo5cXVzcnktNzFYMkhYOFEyNVMxLTVWTHdIQlJIYVI1eXRScmxWLU5pLTlGVEp1Z3NhWG96d0p1NjhMSGNUWkZobFdaVlQ2SjF6QUNJZUlwWjEybzZQbF9PNndTbWRKY2ItZi0wSUNnSnJmZkMyb3VVYW91SDZiOU8xVGpSdExxVlVZdktsZjk3RW0xWdIB2gFBVV95cUxQdllXbURQU1ZOb2V5MlJPX2RUMjVVc1BjYXBON3ZZMmcxR2w2Nko3ZFctalFqbmYyNVBnT2hHV0gxOW1uaW9BSWNDLTkyZV9YZGo5ZU5HLXpWMUFzczBhT2s3YlhWVWpNRXNoQzZEVElXelNISDRqak1oM0hYOTdBVmhuQW5DVk9jZ19fZGFVU19LVEJvSkZaMFNmNFUtX01XdDBkeDNhWXk4N0swcEZSX0tXdmlrenQtMWhpY2Y5Mk93d29pMWRJV0l6RXFSdllid2tIVkNQUmcwQQ?oc=5",
+   "link": "https://g1.globo.com/ac/acre/noticia/2026/11/11/maioria-dos-municipios-enfrentou-seca-e-alagamento-no-acre-revela-ibge.ghtml",
    "editoria": "gerais",
    "nota": 4,
    "parceiro": {
@@ -1152,15 +1150,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Câmara aprova renegociação de dívidas rurais após concessões do relator para atender agro",
+   "manchete": "Senado retira 'jabuti' que poderia liberar venda de vapes de PLV de dívidas rurais",
    "secoes": [
-    "A"
+    "A",
+    "B"
    ],
-   "veiculos": 8,
-   "veiculos_3h": 0,
+   "veiculos": 18,
+   "veiculos_3h": 10,
    "na_pauta_desde": "2026-11-10T21:08:15Z",
-   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://c-level.folha.uol.com.br/agro/2026/11/relator-faz-novas-concessoes-e-renegociacao-de-dividas-rurais-avanca-no-congresso.shtml",
-   "editoria": "roca",
+   "link": "https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2026/11/11/senado-retira-jabuti-que-poderia-liberar-venda-de-vapes-de-plv-de-dividas-rurais.htm",
+   "editoria": "politica",
    "nota": 5,
    "parceiro": {
     "perfil": "brasilforadacaverna",
@@ -1171,16 +1170,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "MP denuncia Milton Leite, o ex-presidente da SPTrans na gestão Nunes e mais 12 por ligação com PCC no transporte público",
+   "manchete": "Com Milton Leite preso, União Brasil encolhe em SP e constrange Tarcísio",
    "secoes": [
     "A"
    ],
-   "veiculos": 5,
-   "veiculos_3h": 1,
+   "veiculos": 3,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-11T17:07:47Z",
-   "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPSzBVaS1RTGpoamVUU09XZmdGRFh6WDRqVkhOQk5vTWtqRXg0ck1XUGUxSGFjeDQ2Q0VpUkxQLWVNRmpUeGd2MTUweEd2N3VJUmxwWEVyb0NvWjhReDlJNDhOcFJ5U2lMWWd4dzdTcW5laWhHYUh4N3h0dldlanpUc19oaHJKMG5SY0lNN0VsT1djQkhzVWdOR3B4WVpmZjVsZXdHWndlLTFMS0V3R1VjRGhGcV9SWXhaNHNnNFd6NXBYbERlSFl6U1N1VHBIS0tjaklUdlp0cE1raFVkQUVoVWRXYVRDU25jeGZWbUVuZzhIODg?oc=5",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/11/com-milton-leite-preso-uniao-brasil-encolhe-em-sp-e-constrange-tarcisio.shtml",
    "editoria": "politica",
-   "nota": 6,
+   "nota": 5,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-11T13:16:33Z",
@@ -1228,33 +1227,14 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Brasil propõe fim dos combustíveis fósseis e combate ao desmatamento na COP31 | #PoderExpresso",
+   "manchete": "Advogados de Paes se reúnem com Zanin e reforçam pedido por 2º turno no RJ",
    "secoes": [
     "A"
    ],
    "veiculos": 6,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-11T17:16:46Z",
-   "link": "https://midianinja.org/mapas-do-caminho-apresentado-pelo-brasil-focam-em-combater-o-desmatamento-e-transicao-energetica/",
-   "editoria": "gerais",
-   "nota": 5,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-11T17:00:11Z",
-    "legenda": "O Brasil apresentou nesta terça-feira (10), durante a COP31, em Antália, na Turquia, um plano internacional para orientar a substituição gradual dos combustívei",
-    "link": "https://www.instagram.com/p/Dfm97SIAbOL/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-10T19:11:48Z",
+   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/advogados-de-paes-se-reunem-com-zanin-e-reforcam-pedido-por-2o-turno-no-rj.shtml",
    "editoria": null,
    "nota": null,
    "parceiro": {
@@ -1285,16 +1265,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": null,
+   "manchete": "Exposição “A Foz do Contato” no Centro Cultural UFMG – até 06/12",
    "secoes": [
     "A"
    ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-11T22:07:39Z",
+   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQOXowbS1KdHlYczM3RmZKZkQxSHJFVUtNeXpTeTBiZnpWMXpqUTZfUEVWRkk4T25VbjRoTXFpUFRYaFRqRG1mU1lqLTZLQ3FXX3dqS0Q5dDNLbHJTY0ZhY2ZycXZwaTlULWRKOENjSjZhUkxxbVZBamlPVjQ0Z1BJNUw1Q1JiWDgtbUFlS0dhZ2U3OHhJa1RDdXlDbw?oc=5",
+   "editoria": "educacao",
+   "nota": 2,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-11T13:45:04Z",
@@ -1309,7 +1289,7 @@
     "A"
    ],
    "veiculos": 3,
-   "veiculos_3h": 0,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-11T20:07:29Z",
    "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE04bzJXMko4anlwLXMzVnY4cHFiaTd3c3BMSlc2dU5nTllyaGZvQUlKQ0dfd2JOU2t1NWVqSjQxMUdiXzgweHNBaXZKNDRybkw3MGlNLTZ2T0s?oc=5",
    "editoria": "gerais",
@@ -1344,64 +1324,64 @@
  ],
  "descartados_mais_quentes": [
   {
-   "manchete": "Rusia y Ucrania inician negociaciones de paz en Abu Dabi con mediación de Estados Unidos",
-   "veiculos": 34,
-   "veiculos_3h": 8,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Lula cobra países ricos na COP31: ‘Se desenvolveram às custas do planeta e devem cumprir seus compromissos’",
-   "veiculos": 32,
-   "veiculos_3h": 5,
+   "manchete": "Tarcísio anuncia Ricardo Salles e outros cinco secretários de novo governo",
+   "veiculos": 44,
+   "veiculos_3h": 39,
    "motivo": "sem editoria"
   },
   {
    "manchete": "Brazil fines Meta $1.3 million for failing to comply with judicial orders",
-   "veiculos": 28,
-   "veiculos_3h": 8,
+   "veiculos": 27,
+   "veiculos_3h": 3,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Tarcísio oficializa Ricardo Salles como secretário de Justiça",
-   "veiculos": 27,
-   "veiculos_3h": 27,
+   "manchete": "Guerra da Ucrânia: europeus defendem cessar-fogo como pré-requisito para negociações de paz concretas; Rússia descarta",
+   "veiculos": 26,
+   "veiculos_3h": 7,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Na COP31, Lula critica recuo de potências na agenda climática e defende transição energética",
+   "veiculos": 25,
+   "veiculos_3h": 8,
    "motivo": "sem editoria"
   },
   {
    "manchete": "Alcolumbre prorroga MP do fim das bets por mais 60 dias",
-   "veiculos": 27,
-   "veiculos_3h": 8,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Justicia brasileña multa a Meta por incumplir trato igualitario en elecciones presidenciales",
    "veiculos": 24,
-   "veiculos_3h": 9,
+   "veiculos_3h": 3,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Na COP31, Lula critica recuo de potências na agenda climática e defende transição energética",
-   "veiculos": 19,
-   "veiculos_3h": 7,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Embaixador russo nos EUA morre 'repentinamente', aos 66 anos",
-   "veiculos": 18,
-   "veiculos_3h": 14,
-   "motivo": "fora: crime ou tragedia (morre)"
+   "manchete": "El secretario de Defensa de EE.UU. se enfrenta a un posible \"impeachment\" por la guerra en Irán, pero es Trump quien definirá su destino",
+   "veiculos": 22,
+   "veiculos_3h": 3,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
    "manchete": "Irã ameaça atacar bases dos EUA na Europa se forem usadas para realizar ofensivas",
-   "veiculos": 15,
-   "veiculos_3h": 12,
+   "veiculos": 16,
+   "veiculos_3h": 7,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
    "manchete": "Fifa define regras do sorteio da Copa do Mundo Feminina de 2027; Brasil será cabeça de chave do Grupo A",
-   "veiculos": 11,
-   "veiculos_3h": 3,
+   "veiculos": 13,
+   "veiculos_3h": 5,
    "motivo": "fora: esporte (copa do mundo)"
+  },
+  {
+   "manchete": "Spain’s unions call the first general strike in 14 years",
+   "veiculos": 8,
+   "veiculos_3h": 3,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "TikTok suspende conta de influencer que filmou casa de FHC",
+   "veiculos": 8,
+   "veiculos_3h": 3,
+   "motivo": "sem editoria"
   }
  ]
 }
