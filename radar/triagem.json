@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-12T07:26:16Z",
- "pauta_quando": "2026-11-12T07:26:15Z",
+ "quando": "2026-11-12T08:51:57Z",
+ "pauta_quando": "2026-11-12T08:51:55Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,37 +9,37 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 16,
-  "falhas_antes": null,
-  "pedidos_hoje": 2
+  "avaliados_agora": 8,
+  "falhas_antes": "gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in",
+  "pedidos_hoje": 4
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 132,
+ "total_assuntos": 129,
  "novos_3h": 5,
  "esquentaram": 2,
  "candidatos": [
   {
-   "manchete": "Governo Lula prepara pacote fiscal de até R$ 60 bi para acalmar mercado, dizem fontes",
+   "manchete": "Lula se reúne com Delcy Rodríguez e discute tarifas, petróleo e relação diplomática com Venezuela",
    "secoes": [
-    "B"
+    "D-america_latina"
    ],
-   "veiculos": 52,
-   "veiculos_3h": 9,
-   "na_pauta_desde": "2026-11-11T00:07:34Z",
-   "link": "https://www.gazetadopovo.com.br/republica/ministro-do-planejamento-preve-ajuste-fiscal-com-impacto-de-ate-r-60-bilhoes-em-2027/",
-   "editoria": "economia",
-   "nota": 4,
+   "veiculos": 44,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-12T01:01:24Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/11/lula-se-reune-com-presidente-interina-da-venezuela-na-turquia.ghtml",
+   "editoria": "america_latina",
+   "nota": 5,
    "esquentou": true,
    "lente": [],
    "ia": {
-    "editoria": "economia",
+    "editoria": "america_latina",
     "I": 3,
     "V": 3,
-    "P": 3,
+    "P": 2,
     "formato": "reels",
     "repetido": false,
     "risco": "",
-    "motivo": "Pacote fiscal milionário afeta contas públicas e trabalhadores.",
+    "motivo": "Reunião de Lula com Delcy Rodríguez aborda petróleo e relações diplomáticas.",
     "soma": 6
    }
   },
@@ -76,8 +76,8 @@
     "B",
     "D-america_latina"
    ],
-   "veiculos": 48,
-   "veiculos_3h": 4,
+   "veiculos": 31,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-12T01:01:24Z",
    "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/lula-e-delcy-rodriguez-se-reunem-pela-1a-vez-desde-captura-de-maduro.shtml",
    "editoria": "america_latina",
@@ -97,27 +97,52 @@
    }
   },
   {
-   "manchete": "Covid em alta no Brasil: quem pode tomar a vacina, quando fazer o teste e os sintomas; um guia completo sobre a infecção",
+   "manchete": "Senado aprova convites para ouvir diretor da PF e ministro da Justiça sobre troca de delegados",
    "secoes": [
     "B"
    ],
-   "veiculos": 7,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-12T07:26:15Z",
-   "link": "https://www.metropoles.com/distrito-federal/nao-sabe-quem-pode-tomar-a-vacina-preparamos-um-servicao-sobre-a-covid",
-   "editoria": "saude",
+   "veiculos": 23,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-12T08:51:55Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/11/senado-aprova-convites-para-ouvir-diretor-da-pf-e-ministro-da-justica-sobre-troca-de-delegados.ghtml",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Senado convoca autoridades para esclarecer troca de delegados da PF.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Deputado do PT diz a ministro que ajuste fiscal não pode ser aprovado 'goela abaixo'",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 6,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-11T22:07:39Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/deputado-do-pt-diz-a-ministro-que-ajuste-fiscal-nao-pode-ser-goela-abaixo.shtml",
+   "editoria": "politica",
    "nota": 4,
    "esquentou": false,
    "lente": [],
    "ia": {
-    "editoria": "saude",
+    "editoria": "politica",
     "I": 2,
     "V": 2,
     "P": 2,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Alta de Covid no SUS mobiliza serviço público.",
+    "motivo": "Crítica de deputado do PT ao ajuste fiscal do governo.",
     "soma": 4
    }
   },
@@ -179,6 +204,33 @@
    }
   },
   {
+   "manchete": "Em passagem na Argentina, papa Leão XIV distribui 'recados' a Milei; governo reage",
+   "secoes": [
+    "D-america_latina"
+   ],
+   "veiculos": 22,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-11T22:07:39Z",
+   "link": "https://g1.globo.com/mundo/noticia/2026/11/11/javier-milei-chora-em-despedida-de-papa-leao-xiv-que-deixa-a-argentina-rumo-ao-peru.ghtml",
+   "editoria": "america_latina",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "milei"
+   ],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Papa envia recados a Milei na Argentina, gerando atrito político.",
+    "soma": 4
+   }
+  },
+  {
    "manchete": "Bolsonaristas e aliados de Lula criticam gasto com Iphones pelo Senado e põem Alcolumbre sob pressão",
    "secoes": [
     "C-nacional"
@@ -208,60 +260,6 @@
  ],
  "rebaixados": [
   {
-   "manchete": "Trump in Latin America: How Will U.S. Policy to the Region Shift?",
-   "veiculos": 3,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-11T11:14:55Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 1,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Política externa dos EUA afeta a América Latina.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "O SUS também é seu: a importância da saúde pública no acesso a medicamentos de alto custo",
-   "veiculos": 2,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-12T07:26:15Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "saude",
-    "I": 2,
-    "V": 1,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Acesso a remédios caros no SUS.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Delegação feminina da Conaq leva à COP31 protagonismo quilombola e justiça de gênero",
-   "veiculos": 2,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-12T07:26:15Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "roca",
-    "I": 2,
-    "V": 1,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Protagonismo quilombola e justiça climática.",
-    "soma": 3
-   }
-  },
-  {
    "manchete": "Fome, depressão e conflitos familiares: o que revela o novo censo da população de rua de João Pessoa",
    "veiculos": 1,
    "veiculos_3h": 0,
@@ -280,25 +278,25 @@
    }
   },
   {
-   "manchete": "Lula y Delcy Rodríguez acuerdan restablecer relaciones al más alto nivel",
-   "veiculos": 25,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-11T20:07:29Z",
-   "esquentou": true,
+   "manchete": "Los rosarios de la cárcel, una bandera en helicóptero y la autopista en modo pandemia, las perlitas del último día del papa León XIV en Argentina",
+   "veiculos": 47,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-11-11T02:06:52Z",
+   "esquentou": false,
    "ia": {
     "editoria": "america_latina",
-    "I": 2,
-    "V": 1,
+    "I": 1,
+    "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Retomada de relações diplomáticas na América Latina.",
+    "motivo": "Visita do Papa à Argentina gera repercussão, mas foco em curiosidades.",
     "soma": 3
    }
   },
   {
-   "manchete": "Dia D do Natal Sem Fome recebe doações em drive-thru no sábado, dia 14, ao lado do Paço Municipal",
+   "manchete": "Campanha Natal Sem Fome promove drive-thru de doações no dia 14",
    "veiculos": 2,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-12T07:26:15Z",
@@ -311,43 +309,61 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Campanha contra a fome e doações locais.",
+    "motivo": "Campanha de combate à fome é importante, mas sem grande conflito.",
     "soma": 3
    }
   },
   {
-   "manchete": "Trabalhador morre afogado após retroescavadeira em que estava cair em represa em MG",
-   "veiculos": 2,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-12T07:26:15Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "roca",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Acidente fatal de trabalho em MG.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "León XIV y la geopolítica de la fe en América Latina",
-   "veiculos": 54,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-10T21:08:15Z",
+   "manchete": "Peruvian homecoming: Pope Leo welcomed by record crowd on return to the country that shaped his path to the papacy",
+   "veiculos": 12,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-12T01:01:24Z",
    "esquentou": false,
    "ia": {
     "editoria": "america_latina",
     "I": 1,
     "V": 1,
-    "P": 2,
+    "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Análise geopolítica da atuação do Papa na América Latina.",
+    "motivo": "Notícia internacional de interesse restrito para o público brasileiro.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Qué pasó con la cárcel de Devoto, lugar que el papa León XIV visita en su viaje por la Argentina",
+   "veiculos": 17,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-12T08:51:55Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Visita papal a presídio na Argentina tem interesse limitado para o Brasil.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "China reafirma apoio a Cuba contra sanções e interferências",
+   "veiculos": 6,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-11T11:14:55Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Apoio da China a Cuba contra sanções tem impacto indireto.",
     "soma": 2
    }
   },
@@ -370,85 +386,121 @@
    }
   },
   {
-   "manchete": "Em dia de greve geral na Espanha, manifestantes entram em confronto com a polícia; VÍDEO",
-   "veiculos": 12,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-11T11:14:55Z",
+   "manchete": "Nova Feira da Agricultura Familiar começa a ganhar forma em Morro da Fumaça",
+   "veiculos": 5,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-11T22:07:39Z",
    "esquentou": false,
    "ia": {
-    "editoria": "fora",
+    "editoria": "roca",
     "I": 1,
-    "V": 2,
+    "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Greve e conflito na Espanha ocorrem fora do país.",
-    "soma": 3
+    "motivo": "Iniciativa local de agricultura familiar com impacto restrito.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Ex-member of radical Marxist group scales balcony, escapes house arrest in Argentina",
+   "veiculos": 6,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-11T22:07:39Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 0,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Fato policial internacional sem repercussão direta no Brasil.",
+    "soma": 1
+   }
+  },
+  {
+   "manchete": "TSE condena Meta a pagar multa de R$ 7,5 milhões por descumprir ordens judiciais durante eleições",
+   "veiculos": 56,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-11T09:52:29Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 3,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": true,
+    "risco": "",
+    "motivo": "Multa à Meta por descumprir ordens na eleição já foi publicada.",
+    "soma": 5
    }
   }
  ],
  "obrigatorios": [],
  "descartados_mais_quentes": [
   {
-   "manchete": "Tarcísio anuncia Ricardo Salles e outros cinco secretários de novo governo",
+   "manchete": "Governo Lula prepara ajuste de até R$ 80 bilhões; entenda o que pode mudar",
    "veiculos": 54,
+   "veiculos_3h": 12,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Tarcísio anuncia Ricardo Salles e outros cinco secretários de novo governo",
+   "veiculos": 51,
    "veiculos_3h": 3,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Jensen Huang probe puts Nvidia board's independence to test",
-   "veiculos": 15,
-   "veiculos_3h": 4,
+   "manchete": "Lula cobra países ricos na COP31: ‘Se desenvolveram às custas do planeta e devem cumprir seus compromissos’",
+   "veiculos": 49,
+   "veiculos_3h": 3,
    "motivo": "sem editoria"
   },
   {
    "manchete": "Rússia, Ucrânia e EUA retomam negociações de paz em Abu Dhabi",
-   "veiculos": 15,
-   "veiculos_3h": 2,
+   "veiculos": 20,
+   "veiculos_3h": 4,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Ucrânia e Rússia preparam grande troca de prisioneiros",
-   "veiculos": 14,
-   "veiculos_3h": 1,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
+   "manchete": "Ataque israelense mata seis pessoas em hospital no sul de Gaza, diz Defesa Civil",
+   "veiculos": 16,
+   "veiculos_3h": 10,
+   "motivo": "fora: crime ou tragedia (mata)"
   },
   {
-   "manchete": "Rusia y Ucrania inician negociaciones de paz en Abu Dabi con mediación de Estados Unidos",
-   "veiculos": 10,
-   "veiculos_3h": 2,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
+   "manchete": "Spain’s unions call the first general strike in 14 years",
+   "veiculos": 11,
+   "veiculos_3h": 3,
+   "motivo": "sem editoria"
   },
   {
-   "manchete": "Carro invade calçada em Los Angeles, deixa 3 mortos e feridos",
-   "veiculos": 10,
-   "veiculos_3h": 2,
-   "motivo": "fora: crime ou tragedia (mortos)"
-  },
-  {
-   "manchete": "Ataque israelense a hospital em Gaza deixa 5 mortos",
-   "veiculos": 8,
-   "veiculos_3h": 6,
-   "motivo": "fora: crime ou tragedia (mortos)"
+   "manchete": "FirstFT: Nvidia board weighs Huang’s future as scandal deepens",
+   "veiculos": 9,
+   "veiculos_3h": 4,
+   "motivo": "sem editoria"
   },
   {
    "manchete": "Democrat Colom wins Mississippi Senate seat, becomes state's first Black senator since 1874",
-   "veiculos": 8,
-   "veiculos_3h": 2,
+   "veiculos": 9,
+   "veiculos_3h": 3,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Enem 2026: Escola Sem Partido aciona Justiça para anular redação do exame",
-   "veiculos": 8,
-   "veiculos_3h": 1,
-   "motivo": "repetido (20261110-1315-esp-anular-redacao)"
+   "manchete": "Israeli strike on southern Gaza hospital kills six, Gaza civil defence says",
+   "veiculos": 4,
+   "veiculos_3h": 3,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Casa Branca ameaça investigação criminal contra democratas que realizarem supervisão contra governo Trump",
-   "veiculos": 7,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
+   "manchete": "Internacional vence Flamengo e fica perto do título da Copa do Brasil Feminina",
+   "veiculos": 4,
+   "veiculos_3h": 0,
+   "motivo": "fora: esporte (flamengo)"
   }
  ]
 }
