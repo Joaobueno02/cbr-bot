@@ -1,109 +1,84 @@
 {
- "quando": "2026-11-12T16:07:50Z",
- "pauta_quando": "2026-11-12T16:07:47Z",
+ "quando": "2026-11-12T17:39:37Z",
+ "pauta_quando": "2026-11-12T17:39:35Z",
  "ok": true,
  "erro": null,
- "metodo": "regras",
+ "metodo": "regras + gemini",
  "ia": {
   "ia": "gemini",
-  "ok": false,
-  "erro": "Gemini: gemini-3.5-flash: ReadTimeout | gemini-3.5-flash: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-flash-latest: HTTP 503 This model is currently experiencing high",
-  "modelo": null,
-  "avaliados_agora": 0,
-  "pedidos_hoje": 11
+  "ok": true,
+  "erro": null,
+  "modelo": "gemini-3.5-flash",
+  "avaliados_agora": 24,
+  "falhas_antes": "gemini-3.8-flash: ReadTimeout",
+  "pedidos_hoje": 14
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 163,
+ "total_assuntos": 161,
  "novos_3h": 9,
  "esquentaram": 3,
  "candidatos": [
   {
-   "manchete": "PGR defende manter Daniel Vorcaro preso e cita risco às investigações",
-   "secoes": [
-    "A",
-    "B"
-   ],
-   "veiculos": 50,
-   "veiculos_3h": 12,
-   "na_pauta_desde": "2026-11-11T22:07:39Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/11/pgr-defende-manter-prisao-de-daniel-vorcaro.ghtml",
-   "editoria": "politica",
-   "nota": 8,
-   "esquentou": false,
-   "lente": [
-    "preso",
-    "vorcaro",
-    "banco"
-   ]
-  },
-  {
-   "manchete": "A queda de um banco arrastou o Presidente do Paraguai, aliado de Trump: “As consequências totais do escândalo Ueno ainda estão por vir”",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-12T16:07:47Z",
-   "link": "https://news.google.com/rss/articles/CBMilAJBVV95cUxONFdPdC1XYnF1UW1QY3ZzQjAwMEdmMy1qWjVycnZ3R1VTc21tNGF0UnVQOVpnRzZoeWNIZlA3YU1NdjJrYlFxSjJ6Ym01ZGpLWFJYRGpFTGptckJoMHIzekJqWUlKenhxWlZWQ01XUHQ0bGM3SDhwVDIzZnhtVlhVMXJQLUJNWUJjXzZGZE5ZOU5DLURtSWhnNGREck14WnU0dndTVEpzRWs3NzFfU3hCUDQ1MzJzNFBzSGJVVFRGR084UWtqcUpJQlJEVGVDNWx3ZF8tVUp3ek1yR0VsRlRzNWl3MTlCRVBCYXpCOVlPby14U1U1MjBxRnRJdldPUVRkY2E0dGlCR19hYlNldUJhajYyUHM?oc=5",
-   "editoria": "america_latina",
-   "nota": 8,
-   "esquentou": false,
-   "lente": [
-    "trabalhador",
-    "trump",
-    "banco"
-   ]
-  },
-  {
-   "manchete": "Lula se reúne com Delcy Rodríguez e discute tarifas, petróleo e relação diplomática com Venezuela",
+   "manchete": "Dino mantém período de transição para o fim da escala 6x1 e permite flexibilizar folgas",
    "secoes": [
     "B",
-    "D-america_latina"
+    "C-nacional"
    ],
-   "veiculos": 97,
-   "veiculos_3h": 41,
-   "na_pauta_desde": "2026-11-12T01:01:24Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/11/lula-se-reune-com-presidente-interina-da-venezuela-na-turquia.ghtml",
-   "editoria": "america_latina",
+   "veiculos": 16,
+   "veiculos_3h": 16,
+   "na_pauta_desde": "2026-11-12T17:39:35Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/dino-mantem-periodo-de-transicao-para-o-fim-da-escala-6x1-e-permite-flexibilizar-folgas.shtml",
+   "editoria": "economia",
    "nota": 5,
-   "esquentou": true,
-   "lente": [],
+   "esquentou": false,
+   "lente": [
+    "6x1"
+   ],
    "ia": {
-    "editoria": "america_latina",
+    "editoria": "economia",
     "I": 3,
     "V": 3,
     "P": 2,
     "formato": "reels",
     "repetido": false,
     "risco": "",
-    "motivo": "Reunião de Lula com Delcy Rodríguez aborda petróleo e relações diplomáticas.",
+    "motivo": "Regulamentação sobre a transição do fim da escala 6x1 impacta trabalhadores.",
     "soma": 6
    }
   },
   {
-   "manchete": "TSE multa Meta em R$ 7,5 milhões por não respeitar tratamenteo igualitário entre Lula e Flávio Bolsonaro",
+   "manchete": "Santiago Peña pode ser condenado a até 15 anos de prisão",
    "secoes": [
-    "A"
+    "B",
+    "D-america_latina"
    ],
-   "veiculos": 14,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-11T09:52:29Z",
-   "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOQnk0dWxrMno2VEg2UHdYVmItbXZKaFBxZ0R5dm9KQlBlbHJrZXJDZzJ1MWVLa3Q0SmZMeHRlbDkwY1h1N2ZLd1gzcXlVWkcwRlFHbUZ1V053Ym51SWFxUVYwQU82UkJfWEh1ckEwMkIzWllGRGZKdjh4ZHRFME8wbHRDZlRLMFlWX3pfZzR1eS0xeGVVZGx5MHJTYTJQUG9yTTFEUmgwZWkyVFh1WnpNbHdLYXpzaFRzWVJPWDNRV3VKTnlpazZjd21YZXN3S3hEb1FUY0t5WC1sUTIzckhYbjh3aw?oc=5",
-   "editoria": "eleicoes",
-   "nota": 7,
+   "veiculos": 19,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-11-12T17:39:35Z",
+   "link": "https://www.gazetadopovo.com.br/mundo/santiago-pena-pode-ser-condenado-a-ate-15-anos-de-prisao/",
+   "editoria": "america_latina",
+   "nota": 5,
    "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ]
+   "lente": [],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 3,
+    "V": 3,
+    "P": 1,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Possível condenação de ex-presidente do Paraguai a 15 anos de prisão.",
+    "soma": 6
+   }
   },
   {
    "manchete": "Governo enviará projeto com medidas de ajuste fiscal que deve ter impacto de R$ 60 bi",
    "secoes": [
     "B"
    ],
-   "veiculos": 92,
-   "veiculos_3h": 53,
+   "veiculos": 104,
+   "veiculos_3h": 48,
    "na_pauta_desde": "2026-11-11T23:31:16Z",
    "link": "https://www.gazetadopovo.com.br/republica/ministro-do-planejamento-preve-ajuste-fiscal-com-impacto-de-ate-r-60-bilhoes-em-2027/",
    "editoria": "economia",
@@ -123,131 +98,58 @@
    }
   },
   {
-   "manchete": "Trump threatens to double tariffs on Mexico if migrant caravans not stopped",
-   "secoes": [
-    "B",
-    "C-internacional",
-    "D-america_latina"
-   ],
-   "veiculos": 24,
-   "veiculos_3h": 17,
-   "na_pauta_desde": "2026-11-12T14:08:30Z",
-   "link": "https://www.aljazeera.com/news/2026/11/12/migrant-caravan-sets-out-from-southern-mexico-bound-for-us-after-midterms?traffic_source=rss",
-   "editoria": "america_latina",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "trump"
-   ]
-  },
-  {
-   "manchete": "Cunhado de Vorcaro recorre ao STF e pede revogação de prisão",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 14,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-11T15:09:01Z",
-   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://c-level.folha.uol.com.br/financas/2026/11/pgr-pede-ao-stf-manutencao-da-prisao-de-daniel-vorcaro.shtml",
-   "editoria": "politica",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "vorcaro"
-   ]
-  },
-  {
-   "manchete": "Inflação desacelera para 0,14% em outubro, com bandeira verde na conta de luz",
+   "manchete": "Congresso aprova crédito suplementar de R$ 149 bilhões para Bolsa Família, BPC e Previdência",
    "secoes": [
     "B",
     "C-nacional"
    ],
-   "veiculos": 6,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-12T16:07:47Z",
-   "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/inflacao-perde-forca-e-fica-em-014-em-outubro-conta-de-luz-cai",
+   "veiculos": 18,
+   "veiculos_3h": 18,
+   "na_pauta_desde": "2026-11-12T17:39:35Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/12/congresso-aprova-projeto-que-autoriza-governo-a-usar-r-26-bilhoes-em-emprestimos-para-pagar-bolsa-familia.ghtml",
    "editoria": "economia",
    "nota": 6,
    "esquentou": false,
    "lente": [
-    "conta de luz"
+    "bolsa familia"
    ],
-   "outras_manchetes": 1
-  },
-  {
-   "manchete": "Trump amenaza a México con doblar aranceles si no detiene a migrantes",
-   "secoes": [
-    "B",
-    "C-internacional",
-    "D-america_latina"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-12T16:07:47Z",
-   "link": "https://elpais.com/us/2026-11-12/trump-amenaza-con-duplicar-los-aranceles-a-mexico-si-no-endurece-la-frontera.html",
-   "editoria": "america_latina",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "trump"
-   ]
-  },
-  {
-   "manchete": "Senado convida ministro da Justiça e Andrei para falar sobre afastamento de delegados do caso Master",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 19,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-11T17:07:47Z",
-   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/senado-aprova-oitiva-de-chefe-da-pf-e-ministro-da-justica-sobre-delegados-afastados-do-master.shtml",
-   "editoria": "politica",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "master"
-   ]
-  },
-  {
-   "manchete": "Cesta básica fica mais cara em todas as capitais brasileiras em outubro e acumula alta ao longo de 2026",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 11,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-11T22:07:39Z",
-   "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNM1R2MDUtNE9tTldGOEpTc0VRanNwdWJEWFZhYmtjMzQtMVZNUVRfOTJNVWVZZ04tTWVJSjBGeS1lY1RSRkEycGFfRS1ZQTRSWDJwUXBmenVzVXQtaURacnpPcDZRN21wMl9NRk9SdXdPczNsQ1p5LUdlSm5MN29nXzZnZjFFam1HNGNUS0N2M2lrclZ4U1RJRW9IN09oTEdhWW9CQ0FWZFZwMEJ0V0p1VDA1N3pmaURmZjVYTmU5TU8ydnFEcmhfWHNCbDl4eURCMmp2cHhVSkVWWkx1a1VNd2JyRFFUMlRxeVJNUk5kbw?oc=5",
-   "editoria": "roca",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "cesta basica",
-    "mais cara"
-   ]
-  },
-  {
-   "manchete": "Justiça condena quatro réus a até 50 anos de prisão por ataque ao assentamento Olga Benário, em Tremembé",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 7,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-12T12:10:56Z",
-   "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPdElDOGc2aDA3SkxhSU5FZUtRZC12RW9Od2FrNEo0YWVBU2lNWkpybGRRQlNFT0k3VFNybm03ZGUwbnBJc0RYNHlLZEFJSjFtY0V5VTNVM3hRS3BrckdRQkNXLWpvbEgzMXZFSVRKY2JhY2pFOGFsQlQxRHE1THhsMllKbVc1WjhHREt5OXhLcTljWHl2ZTU4ZW9BUkFVLUwzYUtDbzBIcVlWSGNQOF9QMllZTTk1dFF1RDBWcmYwNEljSTdvc3ZKeG1DdVQwQQ?oc=5",
-   "editoria": "roca",
-   "nota": 5,
-   "esquentou": true,
-   "lente": [],
    "ia": {
-    "editoria": "roca",
-    "I": 2,
+    "editoria": "economia",
+    "I": 3,
     "V": 2,
     "P": 2,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Condenação de réus por ataque a assentamento do MST em Tremembé.",
-    "soma": 4
+    "motivo": "Aprovação de crédito suplementar garante pagamento de benefícios sociais essenciais.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Ante más de 3 millones de fieles, el papa León expuso el costo del modelo de Milei: \"Pobreza y falta de trabajo\"",
+   "secoes": [
+    "D-america_latina"
+   ],
+   "veiculos": 28,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-11T22:07:39Z",
+   "link": "https://g1.globo.com/mundo/noticia/2026/11/11/javier-milei-chora-em-despedida-de-papa-leao-xiv-que-deixa-a-argentina-rumo-ao-peru.ghtml",
+   "editoria": "america_latina",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "milei"
+   ],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 3,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Papa critica publicamente a pobreza gerada pelo modelo ultraliberal de Milei.",
+    "soma": 5
    }
   },
   {
@@ -255,7 +157,7 @@
    "secoes": [
     "D-terra"
    ],
-   "veiculos": 5,
+   "veiculos": 7,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-12T12:10:56Z",
    "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQc0dLS2xOMVk1NXFtdGxTSmhrTHdRRExLWDRUQ2U1UzBnWHdNeUFvM3hOeFlLVHhzVU1sTFp1MUZ0VjFkRkVBa1NzQnF2UGNNdjFYM3VoWllfNFlxaEtwY0txMXBKdzFiODluanAyRVZaRWhyREcyYVZiX2VKVkR1VXBDWDFPY0JiWGxoTlphem1QaGRfcUNlXzhkYU11WElDQjVVMWxyb1VMb3Ftc3lVUDM1bmhXZFp0eDZXeUJlcnpqVDg4ZGM0aQ?oc=5",
@@ -279,42 +181,178 @@
    }
   },
   {
-   "manchete": "POLÍCIA FEDERAL DEFLAGRA SEGUNDA FASE DA OPERAÇÃO LASTRO PARA APURAR COMPRA DE VOTOS NO SERTÃO PARAIBANO",
+   "manchete": "Trump threatens to double tariffs on Mexico if migrant caravans not stopped",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 28,
+   "veiculos_3h": 19,
+   "na_pauta_desde": "2026-11-12T14:08:30Z",
+   "link": "https://www.aljazeera.com/news/2026/11/12/migrant-caravan-sets-out-from-southern-mexico-bound-for-us-after-midterms?traffic_source=rss",
+   "editoria": "america_latina",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "trump"
+   ],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Ameaça imperialista dos EUA contra o México e imigrantes latinos.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "PGR defende manter Daniel Vorcaro preso e cita risco às investigações",
+   "secoes": [
+    "A",
+    "B"
+   ],
+   "veiculos": 56,
+   "veiculos_3h": 11,
+   "na_pauta_desde": "2026-11-11T22:07:39Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/11/pgr-defende-manter-prisao-de-daniel-vorcaro.ghtml",
+   "editoria": "politica",
+   "nota": 8,
+   "esquentou": false,
+   "lente": [
+    "preso",
+    "vorcaro",
+    "banco"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Cobrança judicial contra ex-gestores do BRB e desdobramentos do Banco Master.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "PF faz operação para investigar compra de votos na Paraíba",
    "secoes": [
     "B"
    ],
-   "veiculos": 14,
-   "veiculos_3h": 9,
+   "veiculos": 15,
+   "veiculos_3h": 10,
    "na_pauta_desde": "2026-11-11T13:09:17Z",
-   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPR01PYWM1MWNRNlE1STdGV3NBc1l5VjM1UmJOamNzMWt3T3ZPb0RBLU9oQ0JVQzhLUjRleXRJVG81aTJBTW9ydlVidUVnOXd6TmlKODVDMHVzRXVCVmNGb3Y2S2I3bVFhVjRzbm93NTJZdmtRTUxaSl9QZ3F6WTZncXJEakl2RmVCQ1F0NkExdEFRU3N3UEhGb2ZTV2hRQklibE5NTEQyd2dNeWdXcGQ4dWFaenJMMnJjQWVsSXpQVnV5TU5h?oc=5",
+   "link": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-11/operacao-mira-suspeitos-de-fraudar-concurso-de-2025-da-policia-federal",
    "editoria": "politica",
    "nota": 5,
    "esquentou": false,
-   "lente": []
+   "lente": [],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "Acusação de crime eleitoral sob investigação",
+    "motivo": "PF investiga esquemas de compra de votos no estado da Paraíba.",
+    "soma": 4
+   }
   },
   {
-   "manchete": "PF deflagra operação para investigar investimentos de R$ 6 milhões da previdência municipal de São Gabriel do Oeste",
+   "manchete": "Alcolumbre é questionado sobre CPMI do Master e reafirma que decisão cabe a ele",
    "secoes": [
     "B",
     "C-nacional"
    ],
-   "veiculos": 12,
+   "veiculos": 11,
    "veiculos_3h": 9,
+   "na_pauta_desde": "2026-11-12T16:07:47Z",
+   "link": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/alcolumbre-reafirma-que-decisao-sobre-cpmi-do-banco-master-cabe-ele",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": true,
+   "lente": [
+    "master"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Alcolumbre centraliza decisão sobre abertura de CPMI do Banco Master.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Trump ameaça dobrar tarifas se México não barrar imigrantes na fronteira",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 15,
+   "veiculos_3h": 7,
+   "na_pauta_desde": "2026-11-12T14:08:30Z",
+   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPdVV2TDFsMmdMa1o3WnFPRzNsYk8wY2U0NTRpRkt4SzkyNkZra3JsbjlIX3RCMDltU1F6QzIyQlZDZWxhTHp1NWd4eHB5Zm44bTZuaEVFcnVKX3lLRjFfV0w4LS1FSzhXRllMWEFKWUFvTGVDZnJmR2lHX3ZibUJTS0MzQm93LVNsMmdfOHo1aFI3WmllaGIwa0t5X1Fnamd6Vkczc1lrUjIwaWNRVGJaazJzcDBmbXNBMXVCR2FPcXBlUdIB0AFBVV95cUxOazV2QWRjOG1DYzdUQUFUMk1WQk85c3pxN2RIUk1adnpyN0NyU2EwTFNaOUZ3Q0hjSHJJbGFHX1JpcmlGNjE1YzVkOUlCR1dKU1AzMTNhN1VVMzZoR0psbG5uS05NMEpaZmdZNmdHbWVXTktyUC13b0laWFFPbHQzcFRjclZVUXZRaGJXNV9KSk9IWDgzT19FODMydEVybEM5OUVBdDhZeHFTZ0liN0dCaGhPNG1tQmZrNXB3QWM1bEtmUThkTzJ5QkFPRzdDbmI5?oc=5",
+   "editoria": "america_latina",
+   "nota": 6,
+   "esquentou": true,
+   "lente": [
+    "trump"
+   ],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Pressão tarifária dos EUA sobre o México por controle migratório.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "PF investiga R$ 6 milhões da previdência de município de MS aplicados no Master",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 12,
+   "veiculos_3h": 7,
    "na_pauta_desde": "2026-11-12T14:08:30Z",
    "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://c-level.folha.uol.com.br/financas/2026/11/pf-investiga-aplicacao-de-r-6-milhoes-de-previdencia-municipal-no-master-e-no-daycoval.shtml",
    "editoria": "politica",
-   "nota": 5,
+   "nota": 6,
    "esquentou": false,
-   "lente": []
+   "lente": [
+    "master"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Investigação da PF sobre uso de verba de previdência municipal no Master.",
+    "soma": 4
+   }
   },
   {
    "manchete": "Caso Master: Fachin prorroga investigação de Ciro Nogueira",
    "secoes": [
-    "B",
-    "C-nacional"
+    "B"
    ],
-   "veiculos": 9,
-   "veiculos_3h": 9,
+   "veiculos": 13,
+   "veiculos_3h": 6,
    "na_pauta_desde": "2026-11-12T16:07:47Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/12/caso-master-a-pedido-da-pf-fachin-prorroga-por-60-dias-inquerito-que-investiga-ciro-nogueira.ghtml",
    "editoria": "politica",
@@ -322,22 +360,47 @@
    "esquentou": false,
    "lente": [
     "master"
-   ]
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "STF prorroga inquérito que apura ligação de Ciro Nogueira com o Master.",
+    "soma": 4
+   }
   },
   {
-   "manchete": "Hoy llega el papa León XIV al Perú: ¿qué calles del Centro Histórico se cerraron y hasta cuándo?",
+   "manchete": "Banco do Brasil tem queda de 66,5% no lucro com perdas no agronegócio",
    "secoes": [
     "B",
-    "D-america_latina"
+    "D-terra"
    ],
-   "veiculos": 33,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-11T22:07:39Z",
-   "link": "https://elpais.com/america/2026-11-11/el-papa-regresa-a-peru-el-pais-que-fue-su-casa-y-donde-forjo-su-mision.html",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": true,
-   "lente": []
+   "veiculos": 16,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-11T23:31:16Z",
+   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://c-level.folha.uol.com.br/financas/2026/11/banco-do-brasil-tem-queda-de-65-no-lucro-com-inadimplencia-do-agronegocio.shtml",
+   "editoria": "roca",
+   "nota": 7,
+   "esquentou": false,
+   "lente": [
+    "lucro",
+    "banco"
+   ],
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Queda expressiva no lucro do Banco do Brasil ligada a calotes no agronegócio.",
+    "soma": 4
+   }
   },
   {
    "manchete": "El Gobierno apura la suspensión de las PASO: Martín Menem espera que el Senado vote antes de fin de mes",
@@ -345,55 +408,169 @@
     "B",
     "D-america_latina"
    ],
-   "veiculos": 9,
-   "veiculos_3h": 7,
+   "veiculos": 12,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-12T16:07:47Z",
    "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPVWZaVGFqSmZaRUhQWWxsUkNhRk5ZWF9URVN0UFRBX0dNZzBEcThjWjUyVWNaUzhBR3JjWkpSb19JTU52S20wWHlnN1lVVXcwZW5nMWlhYTZfTUd0c00yUnF4eDBQMGI0UFdOd0ZRUDl5dHNmUXl1eC1UTkg1ZVZGQktoQTJEanpRdlBURzFMTTVVYm5mZnRXTmcwemtsRDZxZ0Nlb3U1YVdBd2ZwYmNhWWhnM1NSNGw4TUF5QWxrN1pjQVpvM19pNF91UW43UQ?oc=5",
    "editoria": "america_latina",
    "nota": 5,
    "esquentou": false,
-   "lente": []
+   "lente": [],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Governo Milei articula suspensão das eleições primárias no Senado argentino.",
+    "soma": 4
+   }
   },
   {
-   "manchete": "Registran la residencia presidencial en Paraguay tras escándalo por la intervención de Ueno bank",
+   "manchete": "Trump denuncia \"invasión\" a EEUU y amenaza a México con doblar aranceles si no frena migrantes",
    "secoes": [
     "B",
-    "C-nacional",
-    "D-america_latina"
-   ],
-   "veiculos": 8,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-12T16:07:47Z",
-   "link": "https://www.cartacapital.com.br/mundo/escandalo-do-ueno-bank-mp-do-paraguai-faz-buscas-na-residencia-presidencial/",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Paraguai: autoridades fazem buscas em residência oficial de ex-presidente Santiago Peña",
-   "secoes": [
-    "B",
-    "C-internacional",
     "D-america_latina"
    ],
    "veiculos": 7,
-   "veiculos_3h": 7,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-12T16:07:47Z",
-   "link": "https://g1.globo.com/mundo/noticia/2026/11/12/paraguai-residencia-oficial-santiago-pena.ghtml",
+   "link": "https://elpais.com/us/2026-11-12/trump-amenaza-con-duplicar-los-aranceles-a-mexico-si-no-endurece-la-frontera.html",
    "editoria": "america_latina",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "trump"
+   ],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Declarações de Trump contra imigrantes e ameaça de tarifas ao México.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Cesta básica sobe 13% em um ano e compromete 54% do salário mínimo em Belo Horizonte",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 9,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-11T22:07:39Z",
+   "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPdUpGRjlxaTdPcWtnRDVJTlc1anIyR3ZiS1V2U0tDVUxyNzhHcGFHMlZiMEZldUROb1JLS05YRmt1YXNQTnJZY0dXTElQN3lpOWtKQnpMYkpQbnJtZ2oxaTdlaG1QaFVmOTlnMWlRMjlUektrczNITmp6MnE3UlNQeHdVSEg?oc=5",
+   "editoria": "economia",
+   "nota": 6,
+   "esquentou": true,
+   "lente": [
+    "salario",
+    "cesta basica"
+   ],
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Aumento da cesta básica compromete mais da metade do salário mínimo em BH.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Na COP31, Lula alerta sobre risco de colapso climático e destaca queda histórica no desmatamento no Brasil",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 6,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-11T11:14:55Z",
+   "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNMkxIandVVEZoZjUwMmZ0VnlXbTNNZDJSWjVsSWN4V1VrRHJudm5XUFRnUnZ1VzNOa3VYN21EMU5MU3lhVk1leTlYWERyaU01VTZIQ2JUY3ZXYnlEVEdSWlVhc0NZbVRxa2tuSXRTeFJNSkNROTExX3VoUFlqdDhURkVLTzJKSTU3Y1JGUEx0NVo5cFZwWFA3MU5fb29PQm82NjdXaWxERzBWa2R0T19ScVdSWkRhallnVnhkUW8yMWgyd05PTl9XQUUyZDFrdw?oc=5",
+   "editoria": "gerais",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "indigena",
+    "desmatamento"
+   ],
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Homologação de terras indígenas e alertas sobre crise climática na COP31.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Servidores da Receita, Ibama e INSS conquistam reestruturação de carreiras no Congresso",
+   "secoes": [
+    "B",
+    "C-pesquisa"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-12T17:39:35Z",
+   "link": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/congresso-aprova-reestruturacao-de-carreiras-na-receita-ibama-e-inss",
+   "editoria": "politica",
    "nota": 5,
    "esquentou": false,
-   "lente": []
+   "lente": [
+    "inss"
+   ]
+  },
+  {
+   "manchete": "Vacina contra herpes-zóster pode entrar no calendário do SUS",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-12T17:39:35Z",
+   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOZWJ2NzIydmxLZGh0OHlndkpnbllLZWR6TV9GV2UwWk1ObXdFb1JXcXk2NzU3V1NtbHVoMHpJS3ZaX3Y1aVZlaG9IMUlKMF9jTjE0TUZfanBhMWZaS2dhamFWOEtwUDdoR3h2czBPVEwydG5Fdnc4RnJVNlVnOW05RGN1eVRhN0RWQVk0a2tKWVdZOTRoQnRLcl84aUQyd9IBpgFBVV95cUxPVGpWSVZjT1pNcVVZTWI3dEpQeEJPQnJybUNTbUpYR2otLUUtOW1SQVNwTzZRWmpXYVcxNFhMWlhwNDJlSk1IY0Vrckp3Y3Y0Mng2VXJyUHRyRS1wR0l1ekhBMkEzVkd1LWJDOUVsNjZydGNLTkZRYkNjSkd3a3NXbUVOMGpqa0pFUktoTVV4MS04ZFVGcnlRSmhKQ2tFVTJLSFVpN1JR?oc=5",
+   "editoria": "saude",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "sus"
+   ]
   }
  ],
  "rebaixados": [
   {
-   "manchete": "Cesta básica sobe 13% em um ano e compromete 54% do salário mínimo em Belo Horizonte",
-   "veiculos": 6,
+   "manchete": "Deputados cobram clareza em apurações envolvendo o Banco Master",
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-12T17:39:35Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Pressão parlamentar por transparência em investigações sobre o Banco Master.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "A queda de um banco arrastou o Presidente do Paraguai, aliado de Trump: “As consequências totais do escândalo Ueno ainda estão por vir”",
+   "veiculos": 5,
    "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-11T22:07:39Z",
-   "esquentou": true,
+   "na_pauta_desde": "2026-11-12T16:07:47Z",
+   "esquentou": false,
    "ia": {
     "editoria": "economia",
     "I": 2,
@@ -402,69 +579,51 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Cesta básica sobe em Belo Horizonte e compromete salário.",
+    "motivo": "CUT critica manutenção dos juros altos pelo Banco Central.",
     "soma": 3
    }
   },
   {
-   "manchete": "Banco do Brasil anuncia corte de dividendos para preservar capital após nova queda do lucro",
-   "veiculos": 10,
+   "manchete": "Nadia Beller, expareja de Cerimedo, viaja a México para recibir asilo tras salir de Bolivia con un salvoconducto",
+   "veiculos": 9,
    "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-11T23:31:16Z",
-   "esquentou": true,
+   "na_pauta_desde": "2026-11-11T15:09:01Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Movimentação de asilo político de figura ligada à extrema-direita latino-americana.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Cesta básica fica mais cara em todas as capitais brasileiras em outubro e acumula alta ao longo de 2026",
+   "veiculos": 18,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-11T22:07:39Z",
+   "esquentou": false,
    "ia": {
     "editoria": "economia",
-    "I": 1,
-    "V": 1,
+    "I": 3,
+    "V": 2,
     "P": 1,
     "formato": "feed",
-    "repetido": false,
+    "repetido": true,
     "risco": "",
-    "motivo": "Queda no lucro do Banco do Brasil afeta mercado, mas impacto direto é limitado.",
-    "soma": 2
+    "motivo": "Alta da cesta básica nas capitais já foi informada em post anterior.",
+    "soma": 5
    }
   },
   {
-   "manchete": "Leão XIV se despede da Argentina e segue para o Peru, última etapa de sua Viagem Apostólica",
-   "veiculos": 27,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-11T09:52:29Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Viagem do Papa na América Latina segue para o Peru.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Pope Leo XIV returns to second homeland Peru and a nationwide welcome",
-   "veiculos": 7,
-   "veiculos_3h": 2,
+   "manchete": "Lula se reúne com Delcy Rodríguez e discute tarifas, petróleo e relação diplomática com Venezuela",
+   "veiculos": 97,
+   "veiculos_3h": 30,
    "na_pauta_desde": "2026-11-12T01:01:24Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Visita cerimonial de Leão XIV ao Peru sem grande impacto social direto.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Trump ameaça dobrar tarifas se México não barrar imigrantes na fronteira",
-   "veiculos": 13,
-   "veiculos_3h": 11,
-   "na_pauta_desde": "2026-11-12T14:08:30Z",
    "esquentou": true,
    "ia": {
     "editoria": "america_latina",
@@ -474,23 +633,77 @@
     "formato": "feed",
     "repetido": true,
     "risco": "",
-    "motivo": "Mesmo fato da ameaça de tarifas de Trump ao México.",
+    "motivo": "Reaproximação diplomática entre Lula e Delcy já abordada em post anterior.",
     "soma": 4
+   }
+  },
+  {
+   "manchete": "Registran la residencia presidencial en Paraguay tras escándalo por la intervención de Ueno bank",
+   "veiculos": 8,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-12T16:07:47Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": true,
+    "risco": "",
+    "motivo": "Ação policial na casa de Peña é desdobramento de fato já publicado.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Espanha inicia greve geral por moradia às vésperas das eleições",
+   "veiculos": 12,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-11T11:14:55Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "fora",
+    "I": 1,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Greve geral por moradia na Espanha, fora do foco editorial prioritário.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Hoy llega el papa León XIV al Perú: ¿qué calles del Centro Histórico se cerraron y hasta cuándo?",
+   "veiculos": 34,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-11-11T22:07:39Z",
+   "esquentou": true,
+   "ia": {
+    "editoria": "fora",
+    "I": 0,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Informações locais de trânsito durante visita do Papa no Peru.",
+    "soma": 1
    }
   }
  ],
  "obrigatorios": [
   {
-   "manchete": "TSE multa Meta em R$ 7,5 milhões por não respeitar tratamenteo igualitário entre Lula e Flávio Bolsonaro",
+   "manchete": "Facebook é multado em 7,5 milhões por descumprir decisão judicial nas eleições",
    "secoes": [
     "A"
    ],
-   "veiculos": 14,
+   "veiculos": 5,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-11T09:52:29Z",
-   "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOQnk0dWxrMno2VEg2UHdYVmItbXZKaFBxZ0R5dm9KQlBlbHJrZXJDZzJ1MWVLa3Q0SmZMeHRlbDkwY1h1N2ZLd1gzcXlVWkcwRlFHbUZ1V053Ym51SWFxUVYwQU82UkJfWEh1ckEwMkIzWllGRGZKdjh4ZHRFME8wbHRDZlRLMFlWX3pfZzR1eS0xeGVVZGx5MHJTYTJQUG9yTTFEUmgwZWkyVFh1WnpNbHdLYXpzaFRzWVJPWDNRV3VKTnlpazZjd21YZXN3S3hEb1FUY0t5WC1sUTIzckhYbjh3aw?oc=5",
+   "na_pauta_desde": "2026-11-12T17:39:35Z",
+   "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5kXzVvZ0VJZmJFWjM5aGR1WXZyN21JcXhGRjZ0WnVhZ1BNaXdZVURSejBnc2NHU0VGblg5aldJSmRoVVJhcWotSXhKbGRJUHJ3eGowT3FxdXdXNnRLUnN1Y2VIeEhYX2o1a1N0NFdNQUlXVlVrUWt3V2tB?oc=5",
    "editoria": "eleicoes",
-   "nota": 7,
+   "nota": 5,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-12T14:30:08Z",
@@ -519,23 +732,23 @@
    "triagem": "candidato"
   },
   {
-   "manchete": null,
+   "manchete": "Érika Hilton detona licitação de R$ 6 milhões para iPhones no Senado e critica silêncio de bilionários",
    "secoes": [
     "A"
    ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-12T17:39:35Z",
+   "link": "https://www.cartacapital.com.br/politica/iphones-no-senado-o-que-esta-por-tras-da-licitacao-de-r-6-milhoes/",
    "editoria": "politica",
-   "nota": 2,
+   "nota": 4,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-12T11:45:05Z",
     "legenda": "A União Nacional dos Estudantes divulgou nota criticando a intenção do Senado de gastar até R$ 6 milhões na compra de 95 iPhones 18 Pro e centenas de outros apa",
     "link": "https://www.instagram.com/p/Dfo-qRrmfH9/"
    },
-   "triagem": "repetido (20261110-1630-senado-iphones)"
+   "triagem": "candidato"
   },
   {
    "manchete": "Moradores de Itacaré fazem ato em apoio a turistas israelenses",
@@ -634,16 +847,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Janones exalta Lula na COP31: 'Patrimônio do Brasil'",
+   "manchete": "Na COP31, Lula alerta sobre risco de colapso climático e destaca queda histórica no desmatamento no Brasil",
    "secoes": [
     "A"
    ],
-   "veiculos": 3,
-   "veiculos_3h": 0,
+   "veiculos": 6,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-11T11:14:55Z",
-   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNMTFZZlJIdkNnR1FIdEpaTDU3UmJqYUVFYTZsVXlSRnQ4N3pNMnNsSmlUVFFmak1CVTR2SGNXaDlsajEyX3F4REZCLW9LdEs3dkpOcVU2Y1FYX1d6R2paV1BJVHNKRk9IMHhMR1RJYkhRTlVtUFVna18ySHZGdW83RGx1VjUzZV9JR28tdHZJR0UtZG9qMkpVZEE5ZXRGdE9vX0Zv0gGoAUFVX3lxTE16cEJTb3VXd0FuME1MeWNoTHlkT2VOUDJ2bGdzSTk3S1V5ZkoyYXZMaGVqbDVuMWlpdUV1SVZKejNhbGdkbFc0bmRNdXZQb2l3RXp3ZUtJb3FLOXUxTVRqZkxlM3Zqczd3R3hubVE4NXJlZnRvcXJzTDRkQ2Y2dFJUUEVILTFoNWoxUWliZEF4V1Blbk1rdVBIRFJyZzUwOTlhLTZTWHZnbQ?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNMkxIandVVEZoZjUwMmZ0VnlXbTNNZDJSWjVsSWN4V1VrRHJudm5XUFRnUnZ1VzNOa3VYN21EMU5MU3lhVk1leTlYWERyaU01VTZIQ2JUY3ZXYnlEVEdSWlVhc0NZbVRxa2tuSXRTeFJNSkNROTExX3VoUFlqdDhURkVLTzJKSTU3Y1JGUEx0NVo5cFZwWFA3MU5fb29PQm82NjdXaWxERzBWa2R0T19ScVdSWkRhallnVnhkUW8yMWgyd05PTl9XQUUyZDFrdw?oc=5",
    "editoria": "gerais",
-   "nota": 3,
+   "nota": 6,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-12T11:30:06Z",
@@ -714,12 +927,12 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 1,
-   "veiculos_3h": 1,
+   "veiculos": 2,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-12T16:07:47Z",
-   "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNZEJGUzNDRkljUzVnbUtieUJFTEtsMVp5R3M4aHZVM25panUxUWZEa1ZqeEdGNWF5X1JJeXBHMEg0S2xLa2t0NVVuTUo3WngyTy1BOWRwamhaelRpbUlVaTY4MWtzNGFpMVBmV2ZPMlhVZU9hZ3hCU0MwSFROY3pNTWRfanpsRGJleldJMVpvYnBpZmxVNUtsTlZDc0RtOWM3QUpjY00yMHg3S1VkSlBLQklR?oc=5",
+   "link": "https://www.diariodocentrodomundo.com.br/os-14-estrangeiros-procurados-pela-policia-por-falsificar-documentos-no-brasil/",
    "editoria": "gerais",
-   "nota": 4,
+   "nota": 5,
    "parceiro": {
     "perfil": "luzmanifesto",
     "quando": "2026-11-12T14:31:00Z",
@@ -753,8 +966,8 @@
     "A",
     "B"
    ],
-   "veiculos": 50,
-   "veiculos_3h": 12,
+   "veiculos": 56,
+   "veiculos_3h": 11,
    "na_pauta_desde": "2026-11-11T22:07:39Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/11/pgr-defende-manter-prisao-de-daniel-vorcaro.ghtml",
    "editoria": "politica",
@@ -768,14 +981,14 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "UNIVERSIDADE FEDERAL DO RIO DE JANEIRO CENTRO DE FILOSOFIA E CIÊNCIAS HUMANAS INSTITUTO DE PSICOLOGIA - Instituto de Psicologia",
+   "manchete": "- Universidade Federal do Rio de Janeiro",
    "secoes": [
     "A"
    ],
    "veiculos": 2,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-12T12:10:56Z",
-   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1ua3Bma3lDbHI2R2tiOHZIWVpoU0MtS3lTd2RfcHdkYnRPYTJJdnRadWdoZnNxTnloOUlQbXJBZmc3b3JZNzF4Yi1YYVMzMlh5X2xNaVFXbUhTRDhNeUpETUkxelVOdFo4WVpMcGtLbzI2RnVz?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMiOEFVX3lxTE9YX20tRHZjSWJBUUhwemxHa3hfYmx3b3lzNmhGV0pHdm9HUlNfUnlSOUhHUlc3Z0NT?oc=5",
    "editoria": "educacao",
    "nota": 4,
    "parceiro": {
@@ -922,14 +1135,15 @@
   {
    "manchete": "Feira da Agricultura Familiar reúne 104 expositores no Centro de Porto Alegre",
    "secoes": [
-    "A"
+    "A",
+    "D-terra"
    ],
-   "veiculos": 1,
+   "veiculos": 2,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-12T16:07:47Z",
    "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOV3FLQnpNRTdPU1laUDUwanh2WGxsb0NnSHpxcmxfVUZCS3dvUTRWVzVaeFFpZ1Ixa1RpOEYzTVhyZ1NkR3FyVTU1VlNwVi1nREJFUEUwOUR3T196UTVuOFVRUUFrMXVXb2tOWGFNdnVKRzRTa2JPa1I0MG9SaUZnU2ZrRDBySmdsd3hGdndHeTFDTm5oR3BUZTh3aC1ucDI2Mm11Z3ZET0gyNUVQV0JPNjQtdDJueWFOaVZDUTFUT09OUHB2RnlCcHU2ampPekRoeW1GVFdUVFlFZw?oc=5",
    "editoria": "roca",
-   "nota": 3,
+   "nota": 4,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-12T12:30:04Z",
@@ -939,16 +1153,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Agroecol 2026: Sistemas agroflorestais são estratégicos para mitigação dos impactos das mudanças climáticas",
+   "manchete": "Simpósio MycoClima debate emergência de doenças fúngicas em cenário de mudanças climáticas",
    "secoes": [
     "A"
    ],
    "veiculos": 2,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-11T18:05:05Z",
-   "link": "https://news.google.com/rss/articles/CBMi0wJBVV95cUxNdkRhazBrUHl6eG9ZbjFtX2xCbE9qN082S1RlNjlSN1A4amJWRUlyOFpWU0JQd0VmNlNOM0tNTFE1UllSc1BPblVZR0NyRHJjcXMwMU5RREQ3bWNqZXlUblBMZHZLV0FScWZZRmpOSmlvdGlwMnd2MHMyR1JXdDBZWFdIRllVTVZTd0h6dmZYdlIxanRXZ0Z0MTVZdW5zSlBhUjVHRUh3M1l2bGJnYkVmUlYxcE9DTnU4YjdrUk5CdFcySThnbWN4XzA0VFltRTd1cHVVZWFsOWJYcEJCRDRiOC1NVVVVazVkUzFyQW1HbWtRUmdNRTNQNlhNemszbjlhcXhSeU1yazB6ZFM2MWYyaTk3a3RpcWJKMUpTRDV2dWlWTldyWnk4WXhFMy1xY2FtTTY2eUdTU1ozUmo0ZkpTRDdDbzZVQmtUUVF2eEZySFRzNlU?oc=5",
-   "editoria": "gerais",
-   "nota": 2,
+   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPejJEdkJ1TFlRbGJGSm1mY2xpQjdoOUY5eDZ5azZmcmxQQXZFN0p5VmFIX21OZGNNMUU3SlpkUnZRUWJ4SDg0dzdReEQ1STdOQnJ0WVJxZmlsRVdpUVN3ZmFPSzItUEg3c2NZSWp6SWRZcE1NcUZzYXpGeU1jU3lzVkhDaGo3SGE0d1VTa0hZTW1rWG1qend0MXAtWjFOOGdkcXpTRlY5YkxOUlZDajNoR2NOMm8?oc=5",
+   "editoria": "eleicoes",
+   "nota": 3,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-12T09:30:07Z",
@@ -958,23 +1172,23 @@
    "triagem": "candidato"
   },
   {
-   "manchete": null,
+   "manchete": "Série de imagens mostra interações possíveis entre arte e IA",
    "secoes": [
     "A"
    ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-12T17:39:35Z",
+   "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQTENSSVBhRElkWmtBTGFXNEV6V1BVdXhNckoxYzBzLTJodHRJY1JzVW5uZWFabmtHMEpEcTZBSmJIT1FCYkpMbEFqNF9RVTdyX2QxOEp2a1oyVnRuQXItMlU1U09oUkdCNTludVpTbzZ3V1pMci1mSmZVRWI5bmtaVExSa2d4OTU1bmhXQVdaZ05TUmJ6U2c?oc=5",
+   "editoria": null,
+   "nota": null,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-12T12:45:05Z",
     "legenda": "Como a arte pode nos ajudar a compreender as crises do nosso tempo e imaginar novos futuros possíveis? Essa é a reflexão que inspira a Mostra “Territórios, Vida",
     "link": "https://www.instagram.com/p/DfpFhv9D6eL/"
    },
-   "triagem": "candidato"
+   "triagem": "fora: entretenimento (serie)"
   },
   {
    "manchete": null,
@@ -1000,7 +1214,7 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 5,
+   "veiculos": 7,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-11T20:07:29Z",
    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdGM1MzdaRW4ya3VDT2N6WmVESEVoUWxpdVctTDZiMDMtNEdpVE94N1FCUjkzMnQybHFSeGVDdGNFMEJlOUgxdjItdjBETXhQUnZpOUtNZnExdTgydXZzZUQzTWwtc3dfaHFwS1dPdkZ3UnpRdDVJeHM4UlJIbDlYcWJ3UGltZDZjaExObmljOXQyYUdzMXo4X3VkckE3UDZyM2pfd3RJaVFld9IBrgFBVV95cUxOc1lyakRRZmY1NTF2dDdzVlI1eUdrVGxwZFhLbURMN2hHUGJsLXhOMkNMVzQ2ci1WU3JjSFF4WnMyWkN4S2VNb3BTNWUzTVFaekFmUXZrRjNzblR4NVVJcWF0WW90TTVhQzBudDZHbTM4Q1JDMUtULU5WdXBfWGRzclZyUURodm5oMlNlemk5Z0p1eFE0NmhFeXk2cTZvd0JMNVNiaU5ERklZN281Vnc?oc=5",
@@ -1017,63 +1231,63 @@
  ],
  "descartados_mais_quentes": [
   {
-   "manchete": "Tarcísio anuncia Ricardo Salles e outros cinco secretários de novo governo",
-   "veiculos": 60,
-   "veiculos_3h": 5,
+   "manchete": "Tarcísio oficializa Ricardo Salles como secretário de Justiça",
+   "veiculos": 48,
+   "veiculos_3h": 4,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "The Economist pede saída de CEO da Nvidia após caso extraconjugal com suposta espiã chinesa",
+   "veiculos": 35,
+   "veiculos_3h": 26,
    "motivo": "sem editoria"
   },
   {
    "manchete": "How Nvidia CEO Jensen Huang's extramarital affair could cause collateral damage in Washington",
-   "veiculos": 26,
-   "veiculos_3h": 18,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Após reunião com Putin, enviados de Trump vão encontrar Zelensky",
-   "veiculos": 25,
-   "veiculos_3h": 12,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Ataque israelense contra hospital em Gaza deixa seis mortos",
-   "veiculos": 25,
-   "veiculos_3h": 7,
-   "motivo": "fora: crime ou tragedia (mortos)"
-  },
-  {
-   "manchete": "Morre Regina Torné, atriz mexicana de 'Chaves', aos 82 anos",
-   "veiculos": 17,
-   "veiculos_3h": 4,
-   "motivo": "fora: crime ou tragedia (morre)"
-  },
-  {
-   "manchete": "Megaspeed: la empresa en el centro del caso Jensen Huang y la \"espía china\"",
-   "veiculos": 16,
-   "veiculos_3h": 13,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Lindbergh diz que ‘triplex nunca foi de Lula’, critica ‘Farsa Jato’ e lembra dos 51 imóveis da família Bolsonaro",
-   "veiculos": 16,
+   "veiculos": 23,
    "veiculos_3h": 9,
    "motivo": "sem editoria"
   },
   {
+   "manchete": "Ataque israelense a hospital em Gaza deixa seis mortos, diz Defesa Civil",
+   "veiculos": 23,
+   "veiculos_3h": 4,
+   "motivo": "fora: crime ou tragedia (mortos)"
+  },
+  {
+   "manchete": "Enviados americanos chegam a Moscou para reunião com Putin",
+   "veiculos": 21,
+   "veiculos_3h": 5,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Lula arropará a Sánchez en la campaña electoral el próximo lunes en Madrid para alentar su \"remontada\"",
+   "veiculos": 16,
+   "veiculos_3h": 16,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Lindbergh diz que ‘triplex nunca foi de Lula’, critica ‘Farsa Jato’ e lembra dos 51 imóveis da família Bolsonaro",
+   "veiculos": 13,
+   "veiculos_3h": 5,
+   "motivo": "sem editoria"
+  },
+  {
    "manchete": "Nvidia board weighs CEO Huang's future as leadership crisis deepens",
-   "veiculos": 14,
-   "veiculos_3h": 11,
+   "veiculos": 12,
+   "veiculos_3h": 7,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Quem é Colette Kress, que assume como CEO da Nvidia no lugar de Jensen Huang",
-   "veiculos": 12,
-   "veiculos_3h": 12,
+   "manchete": "‘Decisão sobre triplex e COP31 demonstram que Lula não é refém da imprensa tradicional’, avalia Janones",
+   "veiculos": 11,
+   "veiculos_3h": 8,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Caos na Linha 8-Diamante: passageiros descem nos trilhos após falha em trem",
-   "veiculos": 12,
-   "veiculos_3h": 6,
+   "manchete": "Lula viajará a España la próxima semana y protagonizará un acto de campaña junto a Pedro Sánchez",
+   "veiculos": 9,
+   "veiculos_3h": 9,
    "motivo": "sem editoria"
   }
  ]
