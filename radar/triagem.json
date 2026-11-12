@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-12T12:10:57Z",
- "pauta_quando": "2026-11-12T12:10:56Z",
+ "quando": "2026-11-12T14:08:31Z",
+ "pauta_quando": "2026-11-12T14:08:30Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,22 +9,77 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 18,
+  "avaliados_agora": 19,
   "falhas_antes": null,
-  "pedidos_hoje": 8
+  "pedidos_hoje": 9
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 142,
- "novos_3h": 9,
- "esquentaram": 5,
+ "total_assuntos": 139,
+ "novos_3h": 6,
+ "esquentaram": 6,
  "candidatos": [
   {
-   "manchete": "Governo Lula articula pacote fiscal de até R$ 80 bilhões para 2027",
+   "manchete": "Espanha tem primeira greve geral em 14 anos com apoio dos principais sindicatos do país",
    "secoes": [
     "B"
    ],
-   "veiculos": 64,
-   "veiculos_3h": 30,
+   "veiculos": 34,
+   "veiculos_3h": 9,
+   "na_pauta_desde": "2026-11-11T11:14:55Z",
+   "link": "https://www.gazetadopovo.com.br/mundo/greve-geral-na-espanha-provoca-confrontos-e-deixa-mais-de-50-pessoas-presas/",
+   "editoria": "economia",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "greve"
+   ],
+   "ia": {
+    "editoria": "gerais",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Espanha tem primeira greve geral em 14 anos com apoio sindical.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Cesta básica sobe nas 27 capitais em outubro e leva 52,01% da renda líquida de quem ganha o mínimo",
+   "secoes": [
+    "B",
+    "D-terra"
+   ],
+   "veiculos": 20,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-11T22:07:39Z",
+   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNUGhyRWxQMkhseDBnZ2U1TzVIZHRVRmhuXzItWC1JR2FEQlRnNHo1d2dGT0FGZEJvYmJPQ1ctQ0NaZFNZNGRUQl9ObjRUTGJ6dGRxeUg3SjBvUURCVWtldUpQWjNRVnZ3LVMtZTQ3NVJucmFhM3JWdFJ5Wk43a0ZUVkI2WmVISVNxczd1MmtSdjVHLUhGWEJOYUhOWjlRRm9lMmExZ1FSSThYQVJxV1BEUFNGSkw4Qy05QWVoa1FnU0xOcjdI?oc=5",
+   "editoria": "roca",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "cesta basica"
+   ],
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Cesta básica consome mais da metade da renda de quem ganha o mínimo.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Governo enviará projeto com medidas de ajuste fiscal que deve ter impacto de R$ 60 bi",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 57,
+   "veiculos_3h": 24,
    "na_pauta_desde": "2026-11-11T23:31:16Z",
    "link": "https://www.gazetadopovo.com.br/republica/ministro-do-planejamento-preve-ajuste-fiscal-com-impacto-de-ate-r-60-bilhoes-em-2027/",
    "editoria": "economia",
@@ -34,206 +89,13 @@
    "ia": {
     "editoria": "economia",
     "I": 3,
-    "V": 3,
-    "P": 3,
-    "formato": "reels",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Pacote fiscal do governo afeta contas públicas e investimentos.",
-    "soma": 6
-   }
-  },
-  {
-   "manchete": "Cesta básica sobe nas 27 capitais e pesa no salário do trabalhador",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 18,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-11T22:07:39Z",
-   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxONWhxSGZYb0doNVFnWllYeG5zaTAtYTBwOTBpQUlSWGItZUR0bk1TUDR6TGw4ZUhoYVZFUTNuSHFiWDlkWGRINDI2YjcxekxNSURhUFZMU1AxOVdOVHlQWmUzekVSZ1VPbmxEMllkMHFBQ3Qzb3E3SHFuWkhxZ2lmRUIxelpvQ3dkVnBBeGJVSUVuOUVoTEFBZ3FtaVpETk0?oc=5",
-   "editoria": "economia",
-   "nota": 8,
-   "esquentou": false,
-   "lente": [
-    "trabalhador",
-    "salario",
-    "cesta basica"
-   ],
-   "outras_manchetes": 1,
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 3,
-    "P": 3,
-    "formato": "reels",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Atinge diretamente o bolso e o custo de vida dos trabalhadores.",
-    "soma": 6
-   }
-  },
-  {
-   "manchete": "Espanha: primeira greve geral em 14 anos pressiona governo por moradia e habitação",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 58,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-11T11:14:55Z",
-   "link": "https://g1.globo.com/mundo/noticia/2026/11/11/espanha-greve-geral.ghtml",
-   "editoria": "economia",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "greve",
-    "moradia"
-   ],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 3,
-    "V": 3,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Greve geral histórica na Espanha por direito à moradia.",
-    "soma": 6
-   }
-  },
-  {
-   "manchete": "Lula se reúne com Delcy Rodríguez e discute tarifas, petróleo e relação diplomática com Venezuela",
-   "secoes": [
-    "D-america_latina"
-   ],
-   "veiculos": 44,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-12T01:01:24Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/11/lula-se-reune-com-presidente-interina-da-venezuela-na-turquia.ghtml",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": true,
-   "lente": [],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 3,
-    "V": 3,
-    "P": 2,
-    "formato": "reels",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Reunião de Lula com Delcy Rodríguez aborda petróleo e relações diplomáticas.",
-    "soma": 6
-   }
-  },
-  {
-   "manchete": "Crise climática encarece alimentos, fragiliza agricultores e favorece setores da agroindústria, diz Oxfam",
-   "secoes": [
-    "B",
-    "C-internacional",
-    "D-terra"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-12T12:10:56Z",
-   "link": "https://www.rfi.fr/br/europa/20261112-crise-clim%C3%A1tica-encarece-alimentos-fragiliza-agricultores-e-favorece-setores-da-agroind%C3%BAstria-diz-oxfam",
-   "editoria": "roca",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "encarece"
-   ],
-   "ia": {
-    "editoria": "roca",
-    "I": 3,
     "V": 2,
     "P": 3,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Relatório da Oxfam sobre crise climática, fome e agronegócio.",
+    "motivo": "Governo enviará projeto de ajuste fiscal de R$ 60 bi.",
     "soma": 5
-   }
-  },
-  {
-   "manchete": "Gilmar Mendes suspende processos sobre substituição da tabela SUS",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 33,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-11T18:05:05Z",
-   "link": "https://www.gazetadopovo.com.br/republica/gilmar-suspende-em-todo-o-pais-acoes-sobre-revisao-de-valores-pagos-pelo-sus/",
-   "editoria": "saude",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "sus"
-   ],
-   "ia": {
-    "editoria": "saude",
-    "I": 3,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Decisão do STF sobre tabela SUS afeta o financiamento da saúde pública.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Caso Master: Gonet se opõe à soltura de Vorcaro e cita risco à investigação",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 23,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-11T22:07:39Z",
-   "link": "https://www.gazetadopovo.com.br/republica/pgr-defende-manter-prisao-de-vorcaro-por-risco-a-investigacao/",
-   "editoria": "politica",
-   "nota": 7,
-   "esquentou": true,
-   "lente": [
-    "vorcaro",
-    "master"
-   ],
-   "ia": {
-    "editoria": "gerais",
-    "I": 3,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Desdobramentos do Caso Master envolvem altas figuras e corrupção.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Polícia Federal realiza operação na residência do deputado Caio Roberto",
-   "secoes": [
-    "B",
-    "C-nacional"
-   ],
-   "veiculos": 13,
-   "veiculos_3h": 12,
-   "na_pauta_desde": "2026-11-12T10:07:30Z",
-   "link": "https://g1.globo.com/pb/paraiba/noticia/2026/11/12/deputado-caio-roberto-alvo-de-operacao-da-pf-na-paraiba-vai-usar-tornozeleira-eletronica.ghtml",
-   "editoria": "politica",
-   "nota": 5,
-   "esquentou": true,
-   "lente": [],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Operação da PF contra parlamentar.",
-    "soma": 4
    }
   },
   {
@@ -242,10 +104,10 @@
     "B",
     "D-america_latina"
    ],
-   "veiculos": 23,
-   "veiculos_3h": 11,
+   "veiculos": 60,
+   "veiculos_3h": 39,
    "na_pauta_desde": "2026-11-12T01:01:24Z",
-   "link": "https://revistaforum.com.br/global/lula-se-reune-com-do-ira/",
+   "link": "https://www.cartacapital.com.br/sustentabilidade/cop31-delcy-rodriguez-defende-direito-soberano-da-venezuela-de-desenvolver-industria-do-petroleo/",
    "editoria": "america_latina",
    "nota": 5,
    "esquentou": true,
@@ -255,10 +117,66 @@
     "I": 2,
     "V": 2,
     "P": 2,
-    "formato": "feed",
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Encontro diplomático de Lula com presidente interina da Venezuela.",
+    "motivo": "Lula se encontra com presidente interina da Venezuela na Turquia.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "PGR pede que STF mantenha Vorcaro preso e aponta risco de interferência nas investigações",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 55,
+   "veiculos_3h": 20,
+   "na_pauta_desde": "2026-11-11T22:07:39Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/11/pgr-defende-manter-prisao-de-daniel-vorcaro.ghtml",
+   "editoria": "politica",
+   "nota": 7,
+   "esquentou": true,
+   "lente": [
+    "preso",
+    "vorcaro"
+   ],
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "PGR pede manutenção de prisão de Vorcaro por risco de interferência.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Salió la primera encuesta en medio de la visita del Papa León XIV a Argentina con un duro dato para Milei",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 59,
+   "veiculos_3h": 15,
+   "na_pauta_desde": "2026-11-11T22:07:39Z",
+   "link": "https://g1.globo.com/mundo/noticia/2026/11/11/javier-milei-chora-em-despedida-de-papa-leao-xiv-que-deixa-a-argentina-rumo-ao-peru.ghtml",
+   "editoria": "america_latina",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "milei"
+   ],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Primeira pesquisa na Argentina com Papa traz dados duros contra Milei.",
     "soma": 4
    }
   },
@@ -267,8 +185,8 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 25,
-   "veiculos_3h": 6,
+   "veiculos": 35,
+   "veiculos_3h": 8,
    "na_pauta_desde": "2026-11-11T17:07:47Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/11/senado-aprova-convites-para-ouvir-diretor-da-pf-e-ministro-da-justica-sobre-troca-de-delegados.ghtml",
    "editoria": "politica",
@@ -288,17 +206,44 @@
    }
   },
   {
-   "manchete": "PF apreende celular de Fábio Tyrone em nova etapa da Operação Lastro, que investiga suspeita de compra de votos na Paraíba",
+   "manchete": "Justiça condena quatro réus a até 50 anos de prisão por ataque ao assentamento Olga Benário, em Tremembé",
+   "secoes": [
+    "B",
+    "C-nacional",
+    "D-terra"
+   ],
+   "veiculos": 7,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-11-12T12:10:56Z",
+   "link": "https://g1.globo.com/sp/vale-do-paraiba-regiao/noticia/2026/11/12/quatro-homens-sao-condenados-a-ate-50-anos-de-prisao-por-ataque-com-mortes-no-assentamento-do-mst-em-tremembe-sp.ghtml",
+   "editoria": "roca",
+   "nota": 5,
+   "esquentou": true,
+   "lente": [],
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Condenação de réus por ataque a assentamento do MST em Tremembé.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Polícia Federal realiza operação na residência do deputado Caio Roberto",
    "secoes": [
     "B"
    ],
-   "veiculos": 13,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-11T13:09:17Z",
-   "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNeFZFc1g4Y3hLYmozVV9adnB4VWxOZnJ5WWJ6VEhmZjZxaUxBOC1POWxIeloxdkQyUkxDNldKdWZaWWxSWERWajNBMGlyWXNXU2F2NDFrWU1zSndCNy1sOWtGV2RnUHI4VlhPVnJrOE1HdmZsWjRvU19DU2hVTWcyaFF1ak9YOTJ6ZE1lUFl4S3pSNnBUelNaWG1KaHlBdWpKRnkwX2pvbi1hYlJkWGhtSHBIMHBQbGdmMFBoY2lNWHZnclhsRU9YbGxSLUp4YzlVdHZ5TmZUa25PVlg1UTI4QUpsbw?oc=5",
+   "veiculos": 16,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-12T10:07:30Z",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOMkNHOEJOOEs0dEN5TEc5V3pOUURXUW5oRmZRcFRvTXZOY1FFN2tXc1hzX09NMWlyUnZLbnAzbkVCTXc1TU1LVDI1cG0wZnZIRW1LbXdxRU9mQjc0WUU1VGJnVF9vUkZyazNVS0VONnZwQlZMbzB1QXZpakw0R0FRVmN2UnF2d2I0WXBoeWNrSlFScXVRcjduZTFKSjlLY2pkekJOQmYxTQ?oc=5",
    "editoria": "politica",
    "nota": 5,
-   "esquentou": false,
+   "esquentou": true,
    "lente": [],
    "ia": {
     "editoria": "politica",
@@ -308,113 +253,7 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "PF investiga compra de votos na Paraíba.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Após petróleo e mineração, Venezuela abre setor elétrico a investimentos privados",
-   "secoes": [
-    "D-america_latina"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-12T10:07:30Z",
-   "link": "https://www.rfi.fr/br/am%C3%A9ricas/20261111-ap%C3%B3s-petr%C3%B3leo-e-minera%C3%A7%C3%A3o-venezuela-abre-setor-el%C3%A9trico-a-investimentos-privados",
-   "editoria": "america_latina",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Privatização do setor elétrico venezuelano atrai debate sobre soberania e capital privado.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Inflação medida pelo IPCA fica em 0,14% em outubro, abaixo das expectativas",
-   "secoes": [
-    "B",
-    "C-nacional"
-   ],
-   "veiculos": 8,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-12T12:10:56Z",
-   "link": "https://www1.folha.uol.com.br/mercado/2026/11/inflacao-medida-pelo-ipca-fica-em-014-em-outubro-abaixo-das-expectativas.shtml",
-   "editoria": "economia",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "economia",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Dado oficial de inflação abaixo das expectativas.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "PGR pede que STF mantenha Vorcaro preso e aponta risco de interferência nas investigações",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 22,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-11T22:07:39Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/11/pgr-defende-manter-prisao-de-daniel-vorcaro.ghtml",
-   "editoria": "politica",
-   "nota": 7,
-   "esquentou": false,
-   "lente": [
-    "preso",
-    "vorcaro"
-   ],
-   "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "PGR pede manutenção de prisão de figura investigada.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Lula dispara e já é o 5º presidente mais popular da América Latina; veja o ranking",
-   "secoes": [
-    "D-america_latina"
-   ],
-   "veiculos": 6,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-11T15:09:01Z",
-   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPZjYtUU9ZNTB4NWZqSVVvLWoyZ2VVeWtnMGhtbU92LVNDbFdXSzRNbDhTV1JKQ210WW5EMG9lRDBSZ1BlYmczUXFvdEpmQ01TbWxMUGVBeEdQZ3U0TGJlbGpSalQwdnpLa2JjUGFEVUs2T1Z0YngxNVJITHNTbFhvSUxOQVpBTHRmQlBka2xWUG9GM2NRclhLSThRYmRIY0tybENrbjZzM0hPaktjNWtmM0VtNkpXUkVJMHFYOGktQ1g?oc=5",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": true,
-   "lente": [
-    "dispara"
-   ],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Popularidade de Lula na América Latina, tema de interesse geopolítico regional.",
+    "motivo": "Operação da PF contra parlamentar.",
     "soma": 4
    }
   },
@@ -423,140 +262,241 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 4,
-   "veiculos_3h": 3,
+   "veiculos": 5,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-12T10:07:30Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/12/fachin-e-gilmar-mendes-pressionam-fux-e-nunes-marques-para-destravar-proposta-que-veta-policiais-em-gabinetes-do-stf.ghtml",
    "editoria": "politica",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
+   "nota": 5,
+   "esquentou": true,
+   "lente": [],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Fachin pressiona ministros do STF sobre delegados da PF.",
+    "soma": 4
+   }
   },
   {
-   "manchete": "Justiça condena quatro réus a até 50 anos de prisão por ataque ao assentamento Olga Benário, em Tremembé",
+   "manchete": "Polícia Civil investiga desmatamento químico em Mato Grosso com uso de agrotóxico proibido",
    "secoes": [
     "B",
     "C-nacional",
     "D-terra"
    ],
-   "veiculos": 3,
-   "veiculos_3h": 3,
+   "veiculos": 4,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-12T12:10:56Z",
-   "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPdElDOGc2aDA3SkxhSU5FZUtRZC12RW9Od2FrNEo0YWVBU2lNWkpybGRRQlNFT0k3VFNybm03ZGUwbnBJc0RYNHlLZEFJSjFtY0V5VTNVM3hRS3BrckdRQkNXLWpvbEgzMXZFSVRKY2JhY2pFOGFsQlQxRHE1THhsMllKbVc1WjhHREt5OXhLcTljWHl2ZTU4ZW9BUkFVLUwzYUtDbzBIcVlWSGNQOF9QMllZTTk1dFF1RDBWcmYwNEljSTdvc3ZKeG1DdVQwQQ?oc=5",
+   "link": "https://g1.globo.com/mt/mato-grosso/noticia/2026/11/12/herbicida-proibido-e-alvo-de-investigacao-por-desmatamento-quimico-em-propriedade-rural-de-mt.ghtml",
    "editoria": "roca",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Homem é preso na Zona Sul do Rio em operação da PF contra abuso sexual infantil",
-   "secoes": [
-    "C-nacional"
-   ],
-   "veiculos": 2,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-12T12:10:56Z",
-   "link": "https://g1.globo.com/rj/rio-de-janeiro/noticia/2026/11/12/pf-deflagra-operacao-fides-rupta.ghtml",
-   "editoria": "politica",
-   "nota": 4,
+   "nota": 6,
    "esquentou": false,
    "lente": [
-    "preso"
-   ]
-  },
-  {
-   "manchete": "Polícia Civil investiga uso de agrotóxico proibido em propriedade rural em Cuiabá - HiperNotícias",
-   "secoes": [
-    "C-nacional",
-    "D-terra"
-   ],
-   "veiculos": 2,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-12T12:10:56Z",
-   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOLWdocjNmRi1LSWxoT1NSOFdPWWswdEhRZFowbllxNUlLRU1ueXlQR0lLTFJyVnhDWnB1VnZObDdVVXlrWk1tMUJhUDgyMzBiTmZ1YWJMcERLLXEyTnZqU1JmY2RCcWllRUx2ell0SGtib0FBS3I2aWhvc3lNNlNwMXdYV1ZGV0MtSzRmMWJ5LThaclBlc3ljdWZ3QzZZeDZQcG5GbnJIRV9PVTAwME95V01FekVmQUxLMVFj?oc=5",
-   "editoria": "roca",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
+    "desmatamento",
     "agrotoxic"
-   ]
-  },
-  {
-   "manchete": "Un exterrorista italiano se fuga en Buenos Aires descolgándose de un quinto piso para evitar ser extraditado",
-   "secoes": [
-    "D-america_latina"
    ],
-   "veiculos": 2,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-12T12:10:56Z",
-   "link": "https://elpais.com/internacional/2026-11-12/un-exterrorista-italiano-se-fuga-en-buenos-aires-descolgandose-de-un-quinto-piso-para-evitar-ser-extraditado.html",
-   "editoria": "america_latina",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "piso"
-   ]
-  }
- ],
- "rebaixados": [
-  {
-   "manchete": "Venezuela diz na COP31 ter direito soberano de ampliar produção de petróleo",
-   "veiculos": 7,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-12T12:10:56Z",
-   "esquentou": false,
    "ia": {
-    "editoria": "america_latina",
+    "editoria": "roca",
     "I": 2,
-    "V": 1,
+    "V": 2,
     "P": 2,
-    "formato": "feed",
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Posicionamento da Venezuela na COP31 gera debate energético e geopolítico.",
-    "soma": 3
+    "motivo": "Investigação sobre desmatamento químico com agrotóxico proibido em Mato Grosso.",
+    "soma": 4
    }
   },
   {
-   "manchete": "Los rosarios de la cárcel, una bandera en helicóptero y la autopista en modo pandemia, las perlitas del último día del papa León XIV en Argentina",
-   "veiculos": 72,
-   "veiculos_3h": 18,
-   "na_pauta_desde": "2026-11-11T22:07:39Z",
+   "manchete": "Trump threatens to double tariffs on Mexico if it does not halt migrants",
+   "secoes": [
+    "B",
+    "C-internacional",
+    "D-america_latina"
+   ],
+   "veiculos": 14,
+   "veiculos_3h": 14,
+   "na_pauta_desde": "2026-11-12T14:08:30Z",
+   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQVDI3MXhNZVRZV0tINUlTaGxLTUNRN2l5S1NUcTQ3QldKUUlIc0N5bUxXdWZSZW1TNzA3c2w0cEdhYXVHOVZsRFY1NC1PeEtOTzJIaEE4eG1saFkyMnM2UVRTWGF6QW55ZTVMNGNrQVY2WW1xVm84dEVxTS0zbm9hTUJISWVlSHcwTkNnaTAwUmQ1anY0RGp1WVV5MThvNGpQeUVKRVRDUTdXQm9vbUx5MkFaS2k3RXlKOHVGMWtzNGUtWTQ?oc=5",
+   "editoria": "america_latina",
+   "nota": 6,
    "esquentou": false,
+   "lente": [
+    "trump"
+   ],
    "ia": {
     "editoria": "america_latina",
-    "I": 1,
+    "I": 2,
     "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Visita do Papa à Argentina gera repercussão, mas foco em curiosidades.",
-    "soma": 3
+    "motivo": "Ameaça de Trump sobre tarifas ao México por causa de imigrantes.",
+    "soma": 4
    }
   },
   {
-   "manchete": "Defesa de Vorcaro critica PGR e diz que decisão de manter sua prisão é 'política'",
-   "veiculos": 12,
+   "manchete": "Governo prepara pacote fiscal com impacto de cerca de R$ 60 bi em 2027, diz ministro do Planejamento; votação será amanhã",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 25,
+   "veiculos_3h": 7,
+   "na_pauta_desde": "2026-11-11T22:07:39Z",
+   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/medidas-fiscais-terao-impacto-de-cerca-de-r-60-bi-e-podem-ser-votadas-hoje-diz-ministro-do-planejamento.shtml",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Anvisa suspende lote de muçarela Italy contaminado por bactéria",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 8,
+   "veiculos_3h": 7,
+   "na_pauta_desde": "2026-11-12T12:10:56Z",
+   "link": "https://noticias.uol.com.br/saude/ultimas-noticias/redacao/2026/11/12/anvisa-suspende-lote-de-mucarela-italy-contaminado-por-bacteria.ghtm",
+   "editoria": "saude",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Operação interestadual mira esquema de R$ 185 milhões em fraudes tributárias e chega à região",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 7,
+   "veiculos_3h": 7,
+   "na_pauta_desde": "2026-11-12T14:08:30Z",
+   "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNNFBQZnhvOU1Ba0VxaVVPLUVPdTBKNTM2eFpHVUdrM05odTdGNTQtSlQtWXB2WFlKT3VZMUFSc0tyXzMtS1ZYWThCSHZORjlHYWxySWNTNVVIQUc4MlhPZzdMTEdIRVo4bE9jX05pOEZlc1lsYlBLS25US3lDVVJPOXYweUFMdFdtMHRmR3FmWGQ5a2N6akNXMnZld0Z5aFBRNldNVFB5ZzJCZGRRX0pEM2VKS212bDJlSnRjQm9WUV83MERFUG5DdjNnQUVpa3ZU?oc=5",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Alcolumbre recorre a ‘anel da ansiedade’ para acalmar ânimos no Senado",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 6,
    "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-12T14:08:30Z",
+   "link": "https://www.infomoney.com.br/politica/alcolumbre-recorre-a-anel-da-ansiedade-para-acalmar-animos-no-senado/",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Fiocruz alerta para aumento de vírus respiratórios e crescimento de casos de Covid-19 em estados brasileiros",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 16,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-11T11:14:55Z",
+   "link": "https://agencia.fiocruz.br/infogripe-aponta-aumento-do-numero-de-casos-de-covid-19",
+   "editoria": "saude",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Em reviravolta, democrata vence no Mississippi e será o 1º senador negro do estado em 150 anos",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 24,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-11T23:31:16Z",
+   "link": "https://g1.globo.com/mundo/noticia/2026/11/11/em-reviravolta-democrata-vence-no-mississippi-e-sera-primeiro-senador-negro-do-estado-em-150-anos.ghtml",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": true,
+   "lente": []
+  },
+  {
+   "manchete": "STF: Toffoli vota por punir violência patrimonial contra mulheres",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 9,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-11T23:31:16Z",
+   "link": "https://www.cartacapital.com.br/justica/toffoli-vota-no-stf-por-fim-imunidade-para-crime-patrimonial-contra-mulher/",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "MEC aprova diretrizes para uso da inteligência artificial",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 7,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-12T10:07:30Z",
+   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOMkkzclpXWTZhelpKUUhMOTl3c0ttZGM4M2Rsek9uYzhoeE1oZTlhejhtYmt2MjJmQmlYRTlxc1FjRG05S0F3TlJ4MEwzWWdfanlHM2xheVlNSWZ6WUNZNmZVbUd1TGpESG9PVWxZcGhsLWtpZ2FfLWU0NXFmRmt0US00UmIybmY2Y0dnOFFFYzhHRE81dldDZWZCZllKRGl6ZFJUVGZsRXQwN2FvT051NDMwTjFWMzduZU0tUlhYeldpb21vWHQ3SQ?oc=5",
+   "editoria": "educacao",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  }
+ ],
+ "rebaixados": [
+  {
+   "manchete": "IPCA fica em 0,14%em outubro - Agência de Notícias",
+   "veiculos": 15,
+   "veiculos_3h": 15,
    "na_pauta_desde": "2026-11-12T12:10:56Z",
    "esquentou": false,
    "ia": {
-    "editoria": "gerais",
+    "editoria": "economia",
     "I": 2,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Críticas da defesa de Vorcaro contra a PGR.",
+    "motivo": "Divulgação do IPCA de outubro.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Lula y Delcy Rodríguez acuerdan restablecer relaciones al más alto nivel",
+   "veiculos": 36,
+   "veiculos_3h": 8,
+   "na_pauta_desde": "2026-11-11T20:07:29Z",
+   "esquentou": true,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Retomada de relações diplomáticas na América Latina.",
     "soma": 3
    }
   },
   {
    "manchete": "Cunhado de Vorcaro troca de advogado e pede ao STF revogação de prisão",
    "veiculos": 11,
-   "veiculos_3h": 3,
+   "veiculos_3h": 7,
    "na_pauta_desde": "2026-11-11T15:09:01Z",
    "esquentou": false,
    "ia": {
@@ -573,8 +513,8 @@
   },
   {
    "manchete": "PGR apresentará primeira denúncia contra Vorcaro e ex-banqueiro deve se tornar réu no STF",
-   "veiculos": 3,
-   "veiculos_3h": 3,
+   "veiculos": 4,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-12T12:10:56Z",
    "esquentou": false,
    "ia": {
@@ -590,93 +530,111 @@
    }
   },
   {
-   "manchete": "Campanha Natal Sem Fome promove drive-thru de doações no dia 14",
-   "veiculos": 2,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-12T07:26:15Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "roca",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Campanha de combate à fome é importante, mas sem grande conflito.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Campanha Natal Sem Fome abre arrecadação de alimentos e livros para 80 entidades em Sorocaba",
-   "veiculos": 5,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-11T15:09:01Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "gerais",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Iniciativa de combate à fome importante, porém restrita ao município de Sorocaba.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Que horas é a prova da Unesp 2027?",
-   "veiculos": 12,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-11T17:07:47Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "educacao",
-    "I": 1,
-    "V": 0,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Serviço de utilidade pública (horário de vestibular).",
-    "soma": 1
-   }
-  },
-  {
-   "manchete": "TSE multa Meta em R$ 7,5 milhões por descumprir ordens sobre campanhas de Lula e Flávio",
-   "veiculos": 44,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-11T09:52:29Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 3,
-    "V": 3,
-    "P": 2,
-    "formato": "reels",
-    "repetido": true,
-    "risco": "",
-    "motivo": "Multa à Meta por descumprimento na eleição já foi publicada.",
-    "soma": 6
-   }
-  },
-  {
-   "manchete": "Natal tem segunda maior alta no preço da cesta básica entre capitais",
-   "veiculos": 12,
+   "manchete": "Natal registra 2ª maior alta da cesta básica no país em outubro",
+   "veiculos": 10,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-11T23:31:16Z",
    "esquentou": false,
    "ia": {
     "editoria": "economia",
     "I": 2,
-    "V": 2,
+    "V": 1,
     "P": 1,
     "formato": "feed",
-    "repetido": true,
+    "repetido": false,
     "risco": "",
-    "motivo": "Complementar ao item 0 sobre alta da cesta básica.",
-    "soma": 4
+    "motivo": "Alta da cesta básica em Natal, RN.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Cesta básica em Florianópolis é a terceira mais cara do Brasil e consome mais da metade do salário dos trabalhadores",
+   "veiculos": 3,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-11T22:07:39Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Cesta básica cara em Florianópolis compromete a renda dos trabalhadores.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Cesta básica sobe 13% em um ano e compromete 54% do salário mínimo em Belo Horizonte",
+   "veiculos": 3,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-11T22:07:39Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Cesta básica sobe em Belo Horizonte e compromete salário.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Leão XIV se despede da Argentina e segue para o Peru, última etapa de sua Viagem Apostólica",
+   "veiculos": 19,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-11T09:52:29Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Viagem do Papa na América Latina segue para o Peru.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Banco do Brasil anuncia corte de dividendos para preservar capital após nova queda do lucro",
+   "veiculos": 5,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-11T23:31:16Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "economia",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Queda no lucro do Banco do Brasil afeta mercado, mas impacto direto é limitado.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Chapecó discute plano de segurança alimentar",
+   "veiculos": 6,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-11T18:05:05Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "roca",
+    "I": 1,
+    "V": 0,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Chapecó discute plano de segurança alimentar local.",
+    "soma": 1
    }
   }
  ],
@@ -705,7 +663,7 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 3,
+   "veiculos": 2,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-12T12:10:56Z",
    "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPOHNxeW1icGdCd1FfaUxxOXFjQ1NEcXBIUWxOZXZCdkNETmY2QVc4aGJwa0pHZVQ4aHNpYm45OEE5MkZwdkVRRXl2RHhaZWJyQzNyYnNuN2Y4SXR0S09Wa3JNMHZzWEVRc2k4elpTMUk2QzVCZjBJbTJpeFZzRExGLWJiV1V2ZEZGTHJMWWVNbkZESTZNeThLU181T3k1UDZCdzNRRld4bHBibFlY?oc=5",
@@ -739,16 +697,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Simpósio MycoClima debate emergência de doenças fúngicas em cenário de mudanças climáticas",
+   "manchete": "Agroecol 2026: Sistemas agroflorestais são estratégicos para mitigação dos impactos das mudanças climáticas",
    "secoes": [
     "A"
    ],
    "veiculos": 2,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-12T12:10:56Z",
-   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPejJEdkJ1TFlRbGJGSm1mY2xpQjdoOUY5eDZ5azZmcmxQQXZFN0p5VmFIX21OZGNNMUU3SlpkUnZRUWJ4SDg0dzdReEQ1STdOQnJ0WVJxZmlsRVdpUVN3ZmFPSzItUEg3c2NZSWp6SWRZcE1NcUZzYXpGeU1jU3lzVkhDaGo3SGE0d1VTa0hZTW1rWG1qend0MXAtWjFOOGdkcXpTRlY5YkxOUlZDajNoR2NOMm8?oc=5",
-   "editoria": "eleicoes",
-   "nota": 3,
+   "na_pauta_desde": "2026-11-11T18:05:05Z",
+   "link": "https://news.google.com/rss/articles/CBMi0wJBVV95cUxNdkRhazBrUHl6eG9ZbjFtX2xCbE9qN082S1RlNjlSN1A4amJWRUlyOFpWU0JQd0VmNlNOM0tNTFE1UllSc1BPblVZR0NyRHJjcXMwMU5RREQ3bWNqZXlUblBMZHZLV0FScWZZRmpOSmlvdGlwMnd2MHMyR1JXdDBZWFdIRllVTVZTd0h6dmZYdlIxanRXZ0Z0MTVZdW5zSlBhUjVHRUh3M1l2bGJnYkVmUlYxcE9DTnU4YjdrUk5CdFcySThnbWN4XzA0VFltRTd1cHVVZWFsOWJYcEJCRDRiOC1NVVVVazVkUzFyQW1HbWtRUmdNRTNQNlhNemszbjlhcXhSeU1yazB6ZFM2MWYyaTk3a3RpcWJKMUpTRDV2dWlWTldyWnk4WXhFMy1xY2FtTTY2eUdTU1ozUmo0ZkpTRDdDbzZVQmtUUVF2eEZySFRzNlU?oc=5",
+   "editoria": "gerais",
+   "nota": 2,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-12T09:30:07Z",
@@ -762,12 +720,12 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 4,
-   "veiculos_3h": 0,
+   "veiculos": 5,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-11T20:07:29Z",
    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdGM1MzdaRW4ya3VDT2N6WmVESEVoUWxpdVctTDZiMDMtNEdpVE94N1FCUjkzMnQybHFSeGVDdGNFMEJlOUgxdjItdjBETXhQUnZpOUtNZnExdTgydXZzZUQzTWwtc3dfaHFwS1dPdkZ3UnpRdDVJeHM4UlJIbDlYcWJ3UGltZDZjaExObmljOXQyYUdzMXo4X3VkckE3UDZyM2pfd3RJaVFldw?oc=5",
    "editoria": "gerais",
-   "nota": 2,
+   "nota": 3,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-12T10:05:21Z",
@@ -780,62 +738,62 @@
  "descartados_mais_quentes": [
   {
    "manchete": "Tarcísio anuncia Ricardo Salles e outros cinco secretários de novo governo",
-   "veiculos": 51,
-   "veiculos_3h": 5,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Lula y Delcy Rodríguez acuerdan restablecer relaciones al más alto nivel",
-   "veiculos": 22,
-   "veiculos_3h": 3,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Ataque israelense a hospital em Gaza deixa 5 mortos",
-   "veiculos": 21,
-   "veiculos_3h": 7,
-   "motivo": "fora: crime ou tragedia (mortos)"
-  },
-  {
-   "manchete": "Lula cobra países ricos na COP31: ‘Se desenvolveram às custas do planeta e devem cumprir seus compromissos’",
-   "veiculos": 21,
-   "veiculos_3h": 3,
+   "veiculos": 53,
+   "veiculos_3h": 6,
    "motivo": "sem editoria"
   },
   {
    "manchete": "Rússia, Ucrânia e EUA concluem negociações em Abu Dhabi sem avanços concretos",
-   "veiculos": 19,
-   "veiculos_3h": 10,
+   "veiculos": 34,
+   "veiculos_3h": 22,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Câmara aprova morte de cães e gatos como crime hediondo",
-   "veiculos": 17,
-   "veiculos_3h": 4,
-   "motivo": "fora: crime ou tragedia (morte)"
-  },
-  {
-   "manchete": "Rússia e Ucrânia acertam troca de prisioneiros em larga escala após negociações",
-   "veiculos": 13,
-   "veiculos_3h": 4,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
+   "manchete": "Ataque israelense contra hospital de Gaza deixa seis mortos",
+   "veiculos": 24,
+   "veiculos_3h": 12,
+   "motivo": "fora: crime ou tragedia (mortos)"
   },
   {
    "manchete": "Morre Regina Torné, atriz mexicana de 'Chaves', aos 82 anos",
-   "veiculos": 11,
-   "veiculos_3h": 7,
+   "veiculos": 19,
+   "veiculos_3h": 12,
    "motivo": "fora: crime ou tragedia (morre)"
   },
   {
+   "manchete": "CEO da Nvidia renuncia ao cargo após escândalo",
+   "veiculos": 16,
+   "veiculos_3h": 7,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Embaixador russo nos EUA morre 'repentinamente', aos 66 anos",
+   "veiculos": 15,
+   "veiculos_3h": 3,
+   "motivo": "fora: crime ou tragedia (morre)"
+  },
+  {
+   "manchete": "The Economist pede saída de CEO da Nvidia após caso extraconjugal com suposta espiã chinesa",
+   "veiculos": 14,
+   "veiculos_3h": 10,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Caos na Linha 8-Diamante: passageiros descem nos trilhos após falha em trem",
+   "veiculos": 13,
+   "veiculos_3h": 11,
+   "motivo": "sem editoria"
+  },
+  {
    "manchete": "Casa Branca ameaça investigação criminal contra democratas que realizarem supervisão contra governo Trump",
-   "veiculos": 9,
+   "veiculos": 12,
    "veiculos_3h": 3,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Suposta espiã chinesa que teve caso com CEO da Nvidia entrou em Taiwan com passaporte de Hong Kong",
-   "veiculos": 9,
-   "veiculos_3h": 3,
+   "manchete": "UFPA abre inscrições para reoferta de vagas do Processo Seletivo 2026",
+   "veiculos": 10,
+   "veiculos_3h": 4,
    "motivo": "sem editoria"
   }
  ]
