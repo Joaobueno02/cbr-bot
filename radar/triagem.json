@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-14T03:24:00Z",
- "pauta_quando": "2026-11-14T03:23:59Z",
+ "quando": "2026-11-14T03:37:01Z",
+ "pauta_quando": "2026-11-14T03:37:00Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,22 +9,47 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 12,
+  "avaliados_agora": 5,
   "falhas_antes": null,
-  "pedidos_hoje": 3
+  "pedidos_hoje": 4
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 142,
- "novos_3h": 10,
- "esquentaram": 1,
+ "total_assuntos": 136,
+ "novos_3h": 11,
+ "esquentaram": 0,
  "candidatos": [
+  {
+   "manchete": "Na edição de hoje: Por 45 a 31, Senado aprova texto-base do PLP de ajuste fiscal",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 100,
+   "veiculos_3h": 21,
+   "na_pauta_desde": "2026-11-12T22:52:46Z",
+   "link": "https://www.gazetadopovo.com.br/opiniao/bom-dia/senado-ajuste-fiscal-pgr-revisao-bolsonaro/",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 3,
+    "P": 3,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Ajuste fiscal afeta contas públicas, serviços e gastos do governo, gerando grande impacto.",
+    "soma": 6
+   }
+  },
   {
    "manchete": "Fim da escala 6x1: STF vota regras flexibilizadas por Dino nesta sexta",
    "secoes": [
     "B"
    ],
-   "veiculos": 57,
-   "veiculos_3h": 14,
+   "veiculos": 59,
+   "veiculos_3h": 13,
    "na_pauta_desde": "2026-11-14T02:07:29Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/13/plenario-virtual-do-stf-comeca-a-analisar-regras-da-escala-5x2-placar-esta-em-2-a-0.ghtml",
    "editoria": "politica",
@@ -46,61 +71,11 @@
    }
   },
   {
-   "manchete": "Senado aprova pacote de ajuste fiscal do governo Lula",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 54,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-12T22:52:46Z",
-   "link": "https://www.gazetadopovo.com.br/cafe-com-a-gazeta/senado-aprova-pacote-de-ajuste-fiscal-do-governo-lula-2/",
-   "editoria": "politica",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 3,
-    "P": 3,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Ajuste fiscal no Senado afeta serviços públicos e economia.",
-    "soma": 6
-   }
-  },
-  {
-   "manchete": "Gilmar diz que Moro manipulou Justiça para tirar Lula da eleição de 2018",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 6,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-14T02:07:29Z",
-   "link": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-11/gilmar-diz-que-moro-agiu-para-impedir-candidatura-de-lula-em-2018",
-   "editoria": "eleicoes",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "politica",
-    "I": 3,
-    "V": 3,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Declaração de Gilmar Mendes sobre manipulação na Lava Jato rende debate forte.",
-    "soma": 6
-   }
-  },
-  {
    "manchete": "Mutirão de atendimentos do INSS oferece quase oito mil vagas no fim de semana em oito estados",
    "secoes": [
     "B"
    ],
-   "veiculos": 23,
+   "veiculos": 22,
    "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-13T03:37:56Z",
    "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOWlVTSlZnYXdFZVZmOHVzYncxTWhEM2hXUTkyWXVZWGZ2RjNuWEg4QlhfdGZTRWl5bHlkX1NNbURaRUNlcWFMakE2b0x6X19fTzJVTmdkbEpYUFJPUzR1bVVKeXBBSlhTMmg4YXFueElXUHdhQVlMS0RtQ19vOWFMQmRSbDNoWV8wMm9tejdJY1ZiTGFaVEZ2VlFuRDliQ0x4N053WEhJaUd0NXMwTEJHbFRzeEZ5T0JDcGwyTjB5WHhsOXlFUERSWW1NYlBTa3h3OGRqcU54dXVOTkNYSHc0ZktVa283TEF1VGfSAfgBQVVfeXFMT1lMQi1UU3RydkJRMnFSRjBrUmg4bFRiMHhYSXpzUEczYUFMd3pSMFlTZ0pCQ3RNYmlmczdEdEc1blF2MzdfM0hQU216cDNHZG9ZcEVMYU1GblF2Rm05d044UnVuN0pHaWNJbFRvSnlNS3I5LTdiZ3k5VmlJb1I1OUdtUTIyWjV3LUFTTk1aS3VDcXR1TTUtczJKdXI2VXdEdC1RWlBUSlRGdE94ZjBiUExiU0MtVlJTR2h0ZXlUMjNUQ3NmR3M0Qll4aVYxbTNmWVQ5UXpKLUp6c2Y4WmFVNmdrVnJNbFphbC1xN01ad3R0SGpGR09Ib2Q?oc=5",
@@ -128,10 +103,10 @@
    "secoes": [
     "D-terra"
    ],
-   "veiculos": 13,
-   "veiculos_3h": 1,
+   "veiculos": 9,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-14T02:07:29Z",
-   "link": "https://g1.globo.com/jornal-nacional/noticia/2026/11/13/incendio-em-fabrica-de-produtos-quimicos-deixa-6-pessoas-em-estado-grave-em-salto-no-interior-de-sao-paulo.ghtml",
+   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPd3lpZ0FNb0M5dGhoN0NUS09aVW1LYjdCZnk2Um1yUlI3RXJWaEx2cEdUcE1ySUp1ZEY5eWpSSjR2QWROU1BEMVhPTExyS25GckItREQ1VXZVVG03NjRkQTdFZWFhWkxtUVNmWVh5WW43M2t1ckMwd0N5Zzl3SjJVcWV3c3dnOWNZMjhkNHZzRGsyQQ?oc=5",
    "editoria": "roca",
    "nota": 5,
    "esquentou": false,
@@ -148,6 +123,31 @@
     "risco": "",
     "motivo": "Incêndio em quilombo atinge direitos e comunidades tradicionais.",
     "soma": 5
+   }
+  },
+  {
+   "manchete": "PF combate fraudes em contratações emergenciais após enchentes no RS — Polícia Federal",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 21,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-14T02:07:29Z",
+   "link": "https://www.metropoles.com/sao-paulo/suspeito-de-fraude-de-r-480-milhoes-em-sp-e-preso-apos-1-ano-de-buscas",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "PF combate corrupção em recursos de calamidade no RS.",
+    "soma": 4
    }
   },
   {
@@ -179,29 +179,80 @@
    }
   },
   {
-   "manchete": "Natália Portinari: Relatório rejeitado na PF cita suspeita de Moraes antecipar voto a Vorcaro",
+   "manchete": "Fiscalía acusa a expresidente paraguayo Santiago Peña de liderar una asociación criminal",
    "secoes": [
-    "B"
+    "B",
+    "D-america_latina"
    ],
-   "veiculos": 32,
+   "veiculos": 5,
    "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-13T12:08:41Z",
-   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/relatorio-rejeitado-na-pf-cita-suspeita-de-moraes-antecipar-voto-a-vorcaro.shtml",
-   "editoria": "politica",
-   "nota": 6,
-   "esquentou": true,
-   "lente": [
-    "vorcaro"
-   ],
+   "na_pauta_desde": "2026-11-13T21:07:36Z",
+   "link": "https://ladiaria.com.uy/mundo/articulo/2026/11/el-expresidente-paraguayo-santiago-pena-suma-cargos-en-su-contra-y-ahora-se-lo-acusa-de-asociacion-criminal/",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
    "ia": {
-    "editoria": "gerais",
+    "editoria": "america_latina",
     "I": 2,
     "V": 2,
     "P": 2,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Deputado da extrema-direita compartilha relatório falso da PF.",
+    "motivo": "Ex-presidente paraguai acusado formalmente por associação criminosa interessa à geopolítica regional.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Gratuidade no transporte público para estudantes no Enem em SP",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 33,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-13T03:37:56Z",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPMmxzTXVzWWpMTTJTSTVicUpMXzdseWotNW90ZUttMS0wM3Z0cDRTMlpweEdKek1nOXBhc0VhczhBRlFrSmRpbG5jamE4TGNVWUwzWGtoVmc0Wjd6Ty1pMnNMWG53MkNxYkdtT1VOU0k5WU1KV0l2eGFBeGlVLWJkOXNSc0VUd3dzb29IV1ZzX3N5TmFWcGRHdTFMSkhNTndpRDBrQU9KUGo5RkdC?oc=5",
+   "editoria": "educacao",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "transporte publico"
+   ],
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Gratuidade no transporte para o Enem beneficia estudantes, mas fato pontual.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "TSE dá 3 dias para campanha de Lula explicar inconsistências em contas apontadas pelo órgão",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 33,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-13T19:07:57Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/13/toffoli-da-3-dias-para-campanha-de-lula-esclarecer-inconsistencias-nas-contas-apontadas-pelo-tse.ghtml",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Cobrança do TSE sobre contas de campanha eleitoral.",
     "soma": 4
    }
   },
@@ -233,7 +284,7 @@
    }
   },
   {
-   "manchete": "Equador denuncia plano de atentado contra presidente orquestrado na Colômbia",
+   "manchete": "Equador relata plano de atentado contra presidente organizado na Colômbia",
    "secoes": [
     "B",
     "C-nacional",
@@ -286,145 +337,6 @@
    }
   },
   {
-   "manchete": "TSE dá 3 dias para campanha de Lula explicar inconsistências em contas apontadas pelo órgão",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 33,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-13T19:07:57Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/13/toffoli-da-3-dias-para-campanha-de-lula-esclarecer-inconsistencias-nas-contas-apontadas-pelo-tse.ghtml",
-   "editoria": "eleicoes",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Cobrança do TSE sobre contas de campanha eleitoral.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Gratuidade no transporte público para estudantes no Enem em SP",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 32,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-13T03:37:56Z",
-   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPMmxzTXVzWWpMTTJTSTVicUpMXzdseWotNW90ZUttMS0wM3Z0cDRTMlpweEdKek1nOXBhc0VhczhBRlFrSmRpbG5jamE4TGNVWUwzWGtoVmc0Wjd6Ty1pMnNMWG53MkNxYkdtT1VOU0k5WU1KV0l2eGFBeGlVLWJkOXNSc0VUd3dzb29IV1ZzX3N5TmFWcGRHdTFMSkhNTndpRDBrQU9KUGo5RkdC?oc=5",
-   "editoria": "educacao",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "transporte publico"
-   ],
-   "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Gratuidade no transporte para o Enem beneficia estudantes, mas fato pontual.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "PF deflagra 2ª fase da Operação Make Up — Polícia Federal",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 12,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-14T02:07:29Z",
-   "link": "https://www.metropoles.com/sao-paulo/suspeito-de-fraude-de-r-480-milhoes-em-sp-e-preso-apos-1-ano-de-buscas",
-   "editoria": "politica",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Operação da PF contra desvio de recursos públicos, boa repercussão.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Fiscalía acusa a expresidente paraguayo Santiago Peña de liderar una asociación criminal",
-   "secoes": [
-    "B",
-    "D-america_latina"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-13T21:07:36Z",
-   "link": "https://ladiaria.com.uy/mundo/articulo/2026/11/el-expresidente-paraguayo-santiago-pena-suma-cargos-en-su-contra-y-ahora-se-lo-acusa-de-asociacion-criminal/",
-   "editoria": "america_latina",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Integrantes da PF veem disputa política em crise com delegados do Master e divergem sobre Andrei",
-   "secoes": [
-    "B",
-    "C-nacional"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-14T02:07:29Z",
-   "link": "https://www1.folha.uol.com.br/poder/2026/11/integrantes-da-pf-veem-disputa-politica-em-crise-com-delegados-do-master-e-divergem-sobre-andrei.shtml",
-   "editoria": "politica",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "master"
-   ]
-  },
-  {
-   "manchete": "El Gobierno de Chile acordó con los transportistas poner fin al paro por el aumento del precio de los combustibles",
-   "secoes": [
-    "D-america_latina"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-13T01:07:14Z",
-   "link": "https://www.telesurtv.net/chile-sectores-camioneros-mantienen-paro/",
-   "editoria": "america_latina",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Semear resistência: o MST leva a Cuba novas experiências para o aproveitamento da mandioca",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-13T22:43:24Z",
-   "link": "https://mst.org.br/2026/11/13/semear-resistencia-o-mst-leva-a-cuba-novas-experiencias-para-o-aproveitamento-da-mandioca/",
-   "editoria": "roca",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "mst"
-   ]
-  },
-  {
    "manchete": "Merenda escolar: Prefeitura de Parauapebas destina mais de R$ 16,7 milhões para compras da agricultura familiar",
    "secoes": [
     "D-terra"
@@ -471,9 +383,76 @@
    "lente": [
     "desmatamento"
    ]
+  },
+  {
+   "manchete": "400 mil pessoas tomam as ruas de Barcelona em greve geral",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-14T03:23:59Z",
+   "link": "https://midianinja.org/400-mil-pessoas-tomam-as-ruas-de-barcelona-em-greve-geral/",
+   "editoria": "economia",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "greve"
+   ]
+  },
+  {
+   "manchete": "Fome depois do jantar? Ciência explica por que a vontade de comer aumenta à noite",
+   "secoes": [
+    "C-nacional",
+    "D-terra"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-14T03:37:00Z",
+   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNZGloTXFIcjJaVXZ6Q1B6NGRKOWVrdkVkZmdUM2ExeHJ3TVlFWFRhOVUzenpuTjJxcDdrV0Z2MDFWY1hDUi1jZjdZRmJwMVY5WWJFdXZsZkMySHdoVVlpTDcxVUpNNVpBRFJaaWlhVUY0VFVGM1NEQ2JJZ2N6aWN0c0tXZDFCdHpQYzZkVjJTcERGZlJ1aTl5THFJSkItbEpCS0JESFEwTVAwclBKWGhNYUtVLU4zMU05ZmJRcGs0M0JVVUY5Vmc?oc=5",
+   "editoria": "roca",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "fome"
+   ]
+  },
+  {
+   "manchete": "Voltar para Tecnologias da Embrapa contribuem para a segurança alimentar de povos da Terra Indígena Yanomami",
+   "secoes": [
+    "C-pesquisa"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-14T03:23:59Z",
+   "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQLVBIWDNWazZpajdwUVZZZEg0NFc2YWRWWmQ1NEE5dDJic3I4U2YxOFVoTXNTQUx4ZEFJMVBkblVzTnpMdWFqUzZrZ3E1d3B6cUxPYjhhYUlERTB3Uldjd2lKVHlYcVphazlNOVIxdzZTdmU2RGliSjFNTnUyTHBnREdMOHBuTEhnQ2VWVjNPclIyQkk?oc=5",
+   "editoria": "roca",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "indigena"
+   ]
   }
  ],
  "rebaixados": [
+  {
+   "manchete": "Integrantes da PF veem disputa política em crise com delegados do Master e divergem sobre Andrei",
+   "veiculos": 3,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-14T02:07:29Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 1,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Crise na PF e disputa política interna afetam o comando de investigações sensíveis.",
+    "soma": 3
+   }
+  },
   {
    "manchete": "Conab projeta safra de mais de 366 milhões de toneladas",
    "veiculos": 31,
@@ -547,9 +526,45 @@
    }
   },
   {
+   "manchete": "Semear resistência: o MST leva a Cuba novas experiências para o aproveitamento da mandioca",
+   "veiculos": 3,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-13T22:43:24Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "roca",
+    "I": 1,
+    "V": 1,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Intercâmbio agrícola do MST com Cuba foca em cooperação e resistência popular.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Rússia assegura a Cuba \"firme solidariedade e apoio\" em \"tempos difíceis\"",
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-14T03:37:00Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Apoio a Cuba em crise tem baixa repercussão imediata no cotidiano brasileiro.",
+    "soma": 2
+   }
+  },
+  {
    "manchete": "Papa Leão XIV volta ao Peru e se emociona ao reencontrar país onde foi bispo",
    "veiculos": 22,
-   "veiculos_3h": 4,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-14T02:07:29Z",
    "esquentou": false,
    "ia": {
@@ -565,62 +580,8 @@
    }
   },
   {
-   "manchete": "'Testlets' no Enem: modelo de 'textão' com bloco de 5 perguntas pode aparecer em matemática e ciências da natureza? Veja se você acertaria",
-   "veiculos": 21,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-13T03:37:56Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "educacao",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Mudança em formato de prova do Enem interessa estudantes.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Supreme Court will weigh Trump's asylum restrictions at US-Mexico border",
-   "veiculos": 5,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-13T19:07:57Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Parada sobre restrições de asilo nos EUA sem efeito direto no Brasil.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Senado de Brasil aprueba texto base de ajuste fiscal",
-   "veiculos": 28,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-12T22:52:46Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": true,
-    "risco": "",
-    "motivo": "Mesmo fato da questão anterior, noticiado em espanhol.",
-    "soma": 5
-   }
-  },
-  {
    "manchete": "Operação cumpre 15 mandados em investigação sobre ataque a acampamento do MST na Paraíba",
-   "veiculos": 15,
+   "veiculos": 13,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-13T10:08:48Z",
    "esquentou": false,
@@ -637,8 +598,8 @@
    }
   },
   {
-   "manchete": "\"¡Qué alegría volver a Chiclayo!\": así fue la masiva misa de León XIV en la ciudad de Perú que lanzó su carrera hacia el papado",
-   "veiculos": 16,
+   "manchete": "Após evitar viagens na campanha, Michelle Bolsonaro embarca para Israel",
+   "veiculos": 5,
    "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-14T02:07:29Z",
    "esquentou": false,
@@ -650,7 +611,7 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Agenda religiosa internacional sem impacto direto no Brasil.",
+    "motivo": "Viagem internacional de figura política sem impacto direto relevante.",
     "soma": 1
    }
   }
@@ -659,26 +620,14 @@
  "descartados_mais_quentes": [
   {
    "manchete": "EUA suspendem decolagens em todos os aeroportos após falha em sistema de comunicação",
-   "veiculos": 48,
-   "veiculos_3h": 37,
+   "veiculos": 46,
+   "veiculos_3h": 28,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Brazil’s Lula arrives in Manila for state visit, ASEAN Summit",
-   "veiculos": 20,
-   "veiculos_3h": 3,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Un ejecutivo de Microsoft descarta ataque cibernético detrás de caída global de servicios",
+   "manchete": "?Não tem nada a ver com a Microsoft?: Secretário de Segurança dos EUA descarta ataque cibernético",
    "veiculos": 18,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Costa confirma que cinco países e instituições europeias vão representar a Europa nas negociações sobre a Ucrânia",
-   "veiculos": 15,
-   "veiculos_3h": 2,
+   "veiculos_3h": 8,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
@@ -689,30 +638,42 @@
   },
   {
    "manchete": "Argentina vs Uruguay LIVE: First Río de la Plata Derby Without Messi | International Friendly",
-   "veiculos": 12,
-   "veiculos_3h": 11,
+   "veiculos": 11,
+   "veiculos_3h": 9,
    "motivo": "fora: esporte (messi)"
   },
   {
-   "manchete": "Anac diz que monitora voos entre Brasil e EUA e recomenda passageiros que busquem as companhias aéreas",
-   "veiculos": 9,
-   "veiculos_3h": 5,
-   "motivo": "sem editoria"
-  },
-  {
    "manchete": "EEUU suspende todos los vuelos a nivel nacional por grave falla en comunicaciones del control aéreo",
-   "veiculos": 7,
-   "veiculos_3h": 2,
+   "veiculos": 11,
+   "veiculos_3h": 5,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
+   "manchete": "Anac diz que monitora voos entre Brasil e EUA e recomenda passageiros que busquem as companhias aéreas",
+   "veiculos": 10,
+   "veiculos_3h": 3,
+   "motivo": "sem editoria"
+  },
+  {
    "manchete": "Confira o resultado da Dupla-Sena 3032 de hoje, sexta-feira, 13/11; prêmio é de R$ 13,0 milhões",
+   "veiculos": 7,
+   "veiculos_3h": 3,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Así es la \"segunda frontera\" de Estados Unidos",
+   "veiculos": 6,
+   "veiculos_3h": 3,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Trump diz que suspensão de voos não parece ter relação com ataque cibernético ou uso de IA",
    "veiculos": 6,
    "veiculos_3h": 3,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "US flights resume after FAA lifts hours-long nationwide ground stop",
+   "manchete": "Lula quer maior relacionamento com o Sudeste Asiático na expectativa de ter status elevado em bloco",
    "veiculos": 5,
    "veiculos_3h": 4,
    "motivo": "sem editoria"
