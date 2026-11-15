@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-15T08:28:02Z",
- "pauta_quando": "2026-11-15T08:28:01Z",
+ "quando": "2026-11-15T10:07:11Z",
+ "pauta_quando": "2026-11-15T10:07:10Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -8,16 +8,44 @@
   "ia": "gemini",
   "ok": true,
   "erro": null,
-  "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 9,
-  "falhas_antes": null,
-  "pedidos_hoje": 5
+  "modelo": "gemini-3.8-flash",
+  "avaliados_agora": 11,
+  "falhas_antes": "gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in",
+  "pedidos_hoje": 8
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 117,
- "novos_3h": 4,
- "esquentaram": 0,
+ "total_assuntos": 133,
+ "novos_3h": 10,
+ "esquentaram": 1,
  "candidatos": [
+  {
+   "manchete": "Comer está cada vez mais caro: preço dos alimentos dispara e diferença entre mercados chega a 162,7%",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-15T10:07:10Z",
+   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOTTE0dkJULXFYZExOdy1zMjBGdVhoc0YwaVNGQXJBZ1Y4OS10cXNJQk5DQkFlWjdWMThrVTlMN3dQOXFPNnNGb0FUZHkxM2R5R052bU9KVENianQwbnNRNDBCcHU1ZFFjZ0dGU2RVVUl3NG9RTjlyMUkwUDVlQlFtRTUxc0JDanNmMHdET2l1dGNMT2tYWktjMU9JUXZnTWZsRVBiVkQ0VWsyaFllV1pLbEFnUno0b1Btb2FDWUo1YUJsY2xPdEkwYg?oc=5",
+   "editoria": "roca",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "dispara",
+    "mais caro"
+   ],
+   "ia": {
+    "editoria": "roca",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Preço da comida pesa diretamente no prato do trabalhador e gera revolta popular.",
+    "soma": 6
+   }
+  },
   {
    "manchete": "Agrotóxicos proibidos aparecem na água de um em cada sete municípios do país",
    "secoes": [
@@ -78,10 +106,10 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 31,
-   "veiculos_3h": 9,
+   "veiculos": 24,
+   "veiculos_3h": 15,
    "na_pauta_desde": "2026-11-14T12:08:10Z",
-   "link": "https://www.poder360.com.br/poder-brasil/brasil-tem-alerta-de-tempestades-em-todas-as-regioes-nos-proximos-dias/",
+   "link": "https://g1.globo.com/educacao/enem/2026/noticia/2026/11/15/enem-2026-segundo-dia-de-provas-acontece-neste-domingo-veja-o-que-esperar.ghtml",
    "editoria": "educacao",
    "nota": 5,
    "esquentou": false,
@@ -98,6 +126,87 @@
     "risco": "",
     "motivo": "Transporte público gratuito no Enem facilita o acesso à educação para trabalhadores.",
     "soma": 5
+   }
+  },
+  {
+   "manchete": "Flávio Bolsonaro jura à Reuters que larga os EUA se Brasil tiver nova eleição",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-15T10:07:10Z",
+   "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOQXd6eGZORFdKWkNCQXFHN2ZMb1lILXJQdF9XQVZDUWoyaXhyeWdacHR6YnN0cEpuVmZXaTBrNDhUeWRBX2dFanNzT01qQmZrUXpyWDdaanhtTDhHTFk2aFJHbTlJbmQ0RjRyRlpkT2dmN3pFYkZQRlZoTFlZMWI3MXNPMmVCQjU0X3MxSl9qZTJTNTBLRkttMjc4N3p2WC10dVotNjgyOGxDcFFzV3F3WVRZS3V4MlFjWlRfTVdXZVJZWFZrbDBvVm1Nek54U1BsTWozYg?oc=5",
+   "editoria": "eleicoes",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio"
+   ],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 3,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Contradição clara de Flávio Bolsonaro após derrota, gerando alto engajamento político.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Lula diz que buscou novos parceiros em vez de 'ficar chorando' após tarifaço dos EUA",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 7,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-15T07:56:42Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/15/lula-diz-que-buscou-novos-parceiros-em-vez-de-ficar-chorando-apos-tarifaco-dos-eua.ghtml",
+   "editoria": "economia",
+   "nota": 4,
+   "esquentou": true,
+   "lente": [],
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Defesa de soberania comercial e busca de novos mercados frente ao protecionismo dos EUA.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Salário mínimo 2027: previsão atualizada do valor e como funciona o cálculo",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-15T10:07:10Z",
+   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOR0lxSUdDZEt5Rkk0cE5uXzdVUXBHaDB0OC1CMWtwRmVwYXdVeFlqUEFlV1VGZnQyOU1WamJMbGFCc2JMTndVRzFOemxCcjg1clBmdTFQVTRZX2M4V29YUjFoeHpjZWtvdFNlQXNVMU9UUy1JM2RqaDN4dS10a2hTTHBxVHFtUmJEWmliZER4MnZ4dS02SG10Yk5oNno2YkI5UU9uZ05HWEROQnd2SGEwNVZoY0U4RkVIdTRFREJmR2VpUQ?oc=5",
+   "editoria": "economia",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "salario"
+   ],
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Pauta central para quem vive de salário, explicando a regra de valorização real.",
+    "soma": 4
    }
   },
   {
@@ -129,6 +238,33 @@
    }
   },
   {
+   "manchete": "Governo tem a chance de isolar o PL no Congresso",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-15T10:07:10Z",
+   "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNeGIxNUpGdEx1N3ZrdnozUmNPYVAxYTk0MUl1cEtiWGZ2T0JuZjhpc2tTN1c0YWgtNTNoNUhTNUV0X05fRHNlaC01cl9wZG5famFDZExyLWs3Wjl0U1FVMGs4d004T0VZTE55MTJKSk9oR1JzQ2FDbDl1SWt6ZTdTdjBjT2NkeFZrb3V4REJyZkNQSHhZQ3JEOU1Zdm5fY0tRTEVpcUtYUTJ0dW43YzkyRm5wNzdRMERoOWlyTzh3enNvZERJTHpvb3RMNS1hTFhNckE?oc=5",
+   "editoria": "politica",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "pl"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Articulação governista contra a bancada bolsonarista repercute no avanço de pautas sociais.",
+    "soma": 4
+   }
+  },
+  {
    "manchete": "Parte do STF avacalhou-se ao blindar ministros que iam além das togas em relações com Vorcaro",
    "secoes": [
     "C-nacional"
@@ -154,50 +290,41 @@
     "motivo": "Crítica institucional e conflito político envolvendo o STF.",
     "soma": 4
    }
+  },
+  {
+   "manchete": "Sem acordo nem regulamentação, mudança na jornada deixa futuro da frota de ônibus indefinido",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-15T07:56:42Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/sem-acordo-nem-regulamentacao-mudanca-na-jornada-deixa-futuro-da-frota-de-onibus-indefinido.shtml",
+   "editoria": "economia",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "jornada"
+   ],
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Afeta transporte público e trabalhadores do setor, gera muitas dúvidas.",
+    "soma": 4
+   }
   }
  ],
  "rebaixados": [
   {
-   "manchete": "Sem acordo nem regulamentação, mudança na jornada deixa futuro da frota de ônibus indefinido",
-   "veiculos": 4,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-15T07:56:42Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 1,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Mudanças na jornada afetam transporte público e rotina de trabalhadores da área.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Beatriz Rey: Conta de senadores pró-impeachment contra STF quase não fecha",
-   "veiculos": 3,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-15T07:56:42Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 1,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Movimentações no Congresso sobre atrito institucional com o STF.",
-    "soma": 3
-   }
-  },
-  {
    "manchete": "Incêndios florestais atingem território quilombola em Salvaterra",
    "veiculos": 2,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-14T02:07:29Z",
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-15T10:07:10Z",
    "esquentou": false,
    "ia": {
     "editoria": "gerais",
@@ -212,63 +339,27 @@
    }
   },
   {
-   "manchete": "Lula é o primeiro presidente brasileiro a visitar as Filipinas; leia sua declaração",
-   "veiculos": 10,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-14T10:08:05Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "politica",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Visita presidencial internacional, pouco apelo direto para a classe trabalhadora.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Peru: Visita do Papa Leão XIV homenageia os mártires Inti e Bryan - Pressenza",
-   "veiculos": 10,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-14T02:07:29Z",
+   "manchete": "Cuba al final de Trump",
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-15T10:07:10Z",
    "esquentou": false,
    "ia": {
     "editoria": "america_latina",
     "I": 1,
     "V": 1,
-    "P": 1,
+    "P": 2,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Homenagem papal no Peru sem impacto direto na conjuntura brasileira.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Professores comentarão questões do 2º dia do Enem 2026 em live; saiba mais",
-   "veiculos": 10,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-14T12:08:10Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "educacao",
-    "I": 1,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Serviço útil sobre o Enem, mas com baixo potencial de engajamento político.",
+    "motivo": "Análise relevante sobre a resistência cubana contra o bloqueio econômico imperialista dos EUA.",
     "soma": 2
    }
   },
   {
    "manchete": "Perdeu o primeiro dia do Enem? Saiba se pode fazer a prova neste domingo e pedir reaplicação",
-   "veiculos": 14,
-   "veiculos_3h": 4,
+   "veiculos": 20,
+   "veiculos_3h": 12,
    "na_pauta_desde": "2026-11-14T12:08:10Z",
    "esquentou": false,
    "ia": {
@@ -284,8 +375,8 @@
    }
   },
   {
-   "manchete": "O POVO divulga gabarito extraoficial do segundo dia de prova do Enem 2026",
-   "veiculos": 19,
+   "manchete": "Enem: confira os horários e o que levar no segundo dia de prova",
+   "veiculos": 14,
    "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-14T12:08:10Z",
    "esquentou": false,
@@ -297,32 +388,32 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Divulgação de gabarito extraoficial de prova, foco estritamente utilitário.",
+    "motivo": "Serviço básico de horários e regras que já satura os veículos comerciais.",
     "soma": 2
    }
   },
   {
-   "manchete": "Papa reúne 500 mil fiéis na cidade peruana que moldou sua trajetória pastoral durante quase 10 anos",
-   "veiculos": 24,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-14T02:07:29Z",
+   "manchete": "Gobierno declara al Perú “Tierra del Papa León XIV” y reconoce a Chiclayo como “Pueblo Fiel”",
+   "veiculos": 15,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-15T10:07:10Z",
    "esquentou": true,
    "ia": {
-    "editoria": "gerais",
+    "editoria": "america_latina",
     "I": 0,
-    "V": 1,
+    "V": 0,
     "P": 0,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Reunião de fiéis com o papa não impacta diretamente a pauta trabalhista nacional.",
-    "soma": 1
+    "motivo": "Homenagem religiosa e protocolar sem impacto nas lutas sociais da classe trabalhadora peruana.",
+    "soma": 0
    }
   },
   {
    "manchete": "Guia federal orienta combate à fome e integra setores",
-   "veiculos": 1,
-   "veiculos_3h": 0,
+   "veiculos": 2,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-15T07:56:42Z",
    "esquentou": false,
    "ia": {
@@ -336,69 +427,141 @@
     "motivo": "Assunto repetido sobre guia federal de combate à fome.",
     "soma": 4
    }
+  },
+  {
+   "manchete": "Cesta básica do Recife tem a terceira maior alta do País e chega a R$ 705,98",
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-15T10:07:10Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": true,
+    "risco": "",
+    "motivo": "Recorte de pesquisa nacional do Dieese que a página já cobriu recentemente.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Sargento surpreende idoso com cesta básica durante abordagem policial",
+   "veiculos": 3,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-15T01:07:35Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "fora",
+    "I": 1,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Caso isolado com viés de assistencialismo policial.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "‘Unacceptable’ - Raphinha apologizes for red card but blasts referee after Brazil lose to Japan",
+   "veiculos": 7,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-14T14:07:48Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "fora",
+    "I": 0,
+    "V": 0,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Esporte e declarações pós-jogo não entram na linha editorial da página.",
+    "soma": 0
+   }
+  },
+  {
+   "manchete": "Prefeitura de Taubaté reforça transporte público e flexibiliza Passe Escolar para segunda fase do Enem neste domingo (15)",
+   "veiculos": 5,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-14T12:08:10Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "fora",
+    "I": 0,
+    "V": 0,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Serviço municipal específico de Taubaté, sem relevância política ou alcance para a página.",
+    "soma": 0
+   }
   }
  ],
  "obrigatorios": [],
  "descartados_mais_quentes": [
   {
    "manchete": "Fux suspende julgamento virtual sobre fim da escala 6x1 e caso irá ao plenário físico",
-   "veiculos": 68,
+   "veiculos": 69,
    "veiculos_3h": 2,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "EUA retomam voos após falha no controle de tráfego aéreo; mais de 2,5 mil são cancelados neste sábado",
+   "veiculos": 52,
+   "veiculos_3h": 7,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
    "manchete": "Portugal x Dinamarca: horário e onde assistir ao jogo da Nations League",
-   "veiculos": 16,
+   "veiculos": 17,
    "veiculos_3h": 2,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
+   "manchete": "Em encontro com Lula, Carney promete US$ 400 mi para proteção de florestas",
+   "veiculos": 11,
+   "veiculos_3h": 6,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Nas Filipinas, Lula exalta aproximação com Ásia e cancela discursos por afonia",
+   "veiculos": 11,
+   "veiculos_3h": 1,
+   "motivo": "sem editoria"
+  },
+  {
    "manchete": "UFC 334: Amanda Nunes e Kayla Harrison fazem encarada tensa",
-   "veiculos": 14,
-   "veiculos_3h": 11,
+   "veiculos": 8,
+   "veiculos_3h": 2,
    "motivo": "fora: esporte (ufc)"
   },
   {
-   "manchete": "Em encontro com Lula, Carney promete US$ 400 mi para proteção de florestas",
-   "veiculos": 10,
-   "veiculos_3h": 9,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "PH, Brazil ink deals on agriculture, enforcement of competition laws",
-   "veiculos": 9,
-   "veiculos_3h": 3,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Brazil beaten by Japan despite Vinicius: the Japanese win 3-2. Furious, Ancelotti enters the pitch and is sent off for protesting alongside Rapinha",
+   "manchete": "Japan avenge World Cup loss with 3-2 win over Brazil amid late red-card drama in Singapore",
    "veiculos": 8,
-   "veiculos_3h": 2,
+   "veiculos_3h": 1,
    "motivo": "sem editoria"
   },
   {
    "manchete": "Pedrinho é reeleito presidente do Vasco",
    "veiculos": 8,
-   "veiculos_3h": 1,
+   "veiculos_3h": 0,
    "motivo": "fora: esporte (vasco)"
   },
   {
-   "manchete": "Advogado brasileiro de “El Pollo” é encontrado morto em Madri",
-   "veiculos": 7,
-   "veiculos_3h": 0,
-   "motivo": "fora: crime ou tragedia (morto)"
-  },
-  {
    "manchete": "Carney Pledges C$560 Million for Brazil-Led Forest Project",
-   "veiculos": 5,
+   "veiculos": 7,
    "veiculos_3h": 5,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Exército de Israel diz ter matado em Gaza um dos comandantes do Hamas por trás de ataque de 7 de outubro",
-   "veiculos": 5,
+   "manchete": "Lula abre una \"nueva era\" de cooperación con Filipinas en su primera visita al país",
+   "veiculos": 7,
    "veiculos_3h": 2,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
+   "motivo": "sem editoria"
   }
  ]
 }
