@@ -89,6 +89,19 @@ Teste do radar: `python bot/radar.py` (precisa de internet) e confira `radar/sau
 
 ## 8. Fila de tarefas (em ordem de prioridade)
 
+0. **Destravar a arte e as rodadas (pedido do João, 15/11/2026; prioridade máxima).** Três PRs separados:
+   - **Marca adaptativa** (`bot/arte.py`, `bot/conferir_design.py`; mexe na trava visual): quando o contraste da marca do
+     topo com a foto ficar abaixo do limite, o gerador usa sozinho a versão da marca que contrasta (branca em foto escura,
+     escura em foto clara) ou uma sombra suave só atrás do logo, sem faixa sólida e sem mudar o layout. A conferência
+     automática passa a reprovar só se nem essa versão ficar legível. Antes e depois de 3 artes que caíram por marca
+     (Covid/InfoGripe 13/11, garimpo em Seabra 13/11, Mura 14/11). O João recusou a faixa fixa: nada de faixa.
+   - **Título sem órfã no Story** (`bot/arte.py`): no `encaixar()`, se o título ficar com palavra solta na última linha ou
+     com preposição separada do número ("das | 42 horas"), diminui até 56 px procurando uma quebra boa; se não achar,
+     volta ao tamanho original. Caso de teste: `fila/20261114-1815-fux-trava-42h`.
+   - **Rodada curta de verdade** (`bot/rodada_curta.py`, `bot/registrar_rodada.py`; não mexe no visual): o registro de
+     rodadas passa a gravar as manchetes descartadas (campo `descartes`), e a rodada curta não conta como novo o candidato
+     já descartado no mesmo dia, salvo se ele ganhou veículo novo desde o descarte.
+
 1. **Story automático**: publicar o `story.jpg` (Story nativo 9:16, já gerado pelo render) como Story pela API, logo depois do post. Não mexe na trava visual (é `bot/publicar.py`), mas precisa de aprovação do João.
 2. **Slide de fechamento padrão do carrossel**: tipo `fechamento` (logo grande, @comunabrasileira_, "salve e compartilhe").
 3. **Arquivar as fontes**: ao publicar, enviar cada link de `fontes`/`apuracao` ao Save Page Now do Internet Archive e gravar o link arquivado no `post.json` (sem travar a publicação se o arquivo falhar).

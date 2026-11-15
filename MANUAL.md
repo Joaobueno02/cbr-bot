@@ -231,6 +231,27 @@ faz a pessoa mandar o NOSSO post, e não o da Folha. Ângulos da CBR, em ordem d
 5. **o explicador**: a notícia é complicada e a cobertura está confusa (carrossel "Entenda").
 Sem ângulo próprio e sem fato novo, o assunto que todo mundo já deu há mais de 24 h fica de fora.
 
+**Crescimento (regra do João, 15/11/2026; vale acima do resto da seção onde conflitar).** Os seguidores vieram de Reels
+com rosto e conflito publicados cedo (Janones 9.015 e jato do Flávio 14.780 de alcance, os dois às 7h30) e pararam
+quando o volume caiu para 2 ou 3 posts por dia e a pauta virou economia sem rosto (alcance médio de 23, contra 371 em
+política, semana de 2 a 9/11). Três regras:
+1. **Rosto e conflito em toda pauta de bolso.** Economia, educação, saúde e roça saem com quem decide, segura ou lucra
+   (nome no título ou no chapéu e, de preferência, a foto do rosto na arte) ou com quem perde, identificado. Foto
+   genérica (prédio, dinheiro, prato, fachada) só quando não houver rosto ligado ao fato; nesse caso, o subtítulo
+   diz quem decidiu. A seção 3 continua valendo: o rosto entra pelo que a pessoa fez ou disse, com fonte, nunca por
+   associação solta.
+2. **Cedo.** As rodadas das 7h e das 8h existem para publicar: a melhor pauta da madrugada sai na rodada das 7h, sem
+   esperar a seguinte, e o `agendado` vencido é resolvido antes de qualquer pesquisa. Pauta aprovada nunca fica para
+   a rodada seguinte por escolha. Assunto que as páginas grandes já deram há mais de 3 h só entra com ângulo próprio
+   (lista acima).
+3. **Volume: meta de 5 posts por dia** (é meta, não teto; o teto continua no `config.json`). Para chegar lá:
+   - pauta aprovada no conteúdo que cair **só pela arte** (marca, foto, quebra do título) não é descartada: grave
+     `status: "descartado"` com o motivo "arte" e reabra na rodada seguinte com outra foto ou outro título (o limite
+     de 3 renders vale por rodada);
+   - até as 14h, se tiverem saído menos de 2 posts, os candidatos com soma 4 e ângulo próprio passam na frente
+     de procurar pauta nova;
+   - serviço com prazo (Enem, 13º, IR, inscrições) e itens do calendário contam como pauta do dia.
+
 Descarte o que já está em `registro/posts.jsonl` (mesmo fato, mesmo que com outra manchete),
 a menos que haja fato novo relevante. Prefira notícia das últimas horas.
 
