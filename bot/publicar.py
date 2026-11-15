@@ -376,9 +376,34 @@ def salvar_post(arq: Path, post: dict) -> None:
     temporario.replace(arq)
 
 
+def avisar_story_manual(arq: Path, post: dict) -> None:
+    """Story feito à mão pelo João (pedido de 15/11/2026): a API não tem o "Compartilhar no Story"
+    (figurinha que abre o post), então, com story_automatico desligado, o celular dele recebe o link
+    do post logo depois da publicação. Avisa uma vez só por post."""
+    publicacao = post.get("publicacao") or {}
+    link = publicacao.get("permalink")
+    if not link or publicacao.get("story_manual", {}).get("avisado"):
+        return
+    titulo = re.sub(r"[*|=]", "", post.get("titulo") or (post.get("slides") or [{}])[0].get("titulo") or "")
+    topico = os.environ.get("NTFY_TOPIC", "").strip()
+    if topico:
+        try:
+            requests.post("https://ntfy.sh/", json={
+                "topic": topico, "title": "CBR: compartilhe no Story",
+                "message": f"{titulo.strip()}\nToque para abrir o post > compartilhar > Adicionar ao story.",
+                "click": link, "tags": ["iphone"], "priority": 4}, timeout=20)
+        except Exception:
+            pass
+    publicacao["story_manual"] = {"avisado": agora(), "ntfy": bool(topico)}
+    salvar_post(arq, post)
+
+
 def publicar_story(arq: Path, post: dict) -> None:
     """Etapa independente do feed; nunca recria um envio com resultado incerto."""
-    if not CONFIG.get("publicacao_ativa") or not CONFIG.get("story_automatico", True):
+    if not CONFIG.get("publicacao_ativa"):
+        return
+    if not CONFIG.get("story_automatico", True):
+        avisar_story_manual(arq, post)
         return
     arquivo = post.get("render", {}).get("story")
     if not arquivo:
