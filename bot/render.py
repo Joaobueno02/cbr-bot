@@ -99,6 +99,29 @@ def quadro_vertical(arte_jpg: Path, saida: Path) -> None:
     quadro.save(saida, "JPEG", quality=95)
 
 
+def brilho_quadrado(foto: Path) -> float:
+    """Feed quadrado: foto clara leva mais escurecimento, senão vira cinza e o texto branco some (15/11/2026)."""
+    from PIL import ImageStat
+    im = Image.open(foto).convert("L")
+    im.thumbnail((400, 400))
+    media = ImageStat.Stat(im).mean[0] / 255
+    return 0.46 if media > 0.55 else (0.54 if media > 0.45 else 0.62)
+
+
+def story_quadrado(arte_jpg: Path, foto: Path, saida: Path) -> None:
+    """Story 9:16 do feed quadrado: a arte no meio, sobre a própria foto desfocada e escurecida."""
+    from PIL import ImageEnhance, ImageFilter
+    arte_im = Image.open(arte_jpg).convert("RGB")
+    fundo = Image.open(foto).convert("RGB")
+    escala = max(1080 / fundo.width, 1920 / fundo.height)
+    fundo = fundo.resize((round(fundo.width * escala), round(fundo.height * escala)), Image.LANCZOS)
+    x, y = (fundo.width - 1080) // 2, (fundo.height - 1920) // 2
+    fundo = fundo.crop((x, y, x + 1080, y + 1920)).filter(ImageFilter.GaussianBlur(40))
+    fundo = ImageEnhance.Brightness(fundo).enhance(0.35)
+    fundo.paste(arte_im, (0, 420))
+    fundo.save(saida, "JPEG", quality=95)
+
+
 # Qualidade do vídeo (ajuste do João, 28/10/2026): o Reels saía mais mole que o post do feed. Causas: zoom de
 # 3,5% reamostrando a arte quadro a quadro, cor em faixa cheia (yuvj/pc, bt470bg) que o Instagram converte mal
 # e ~1,5 Mbps de origem. Agora: zoom de 1,5%, faixa de TV bt709 marcada no arquivo e CRF 18.
@@ -201,11 +224,11 @@ def gerar_reels_slides(quadros: list[Path], saida: Path, por_slide: float = 4.0,
     subprocess.run(cmd, check=True)
 
 
-def capturar(pagina, html_path: Path, saida: Path) -> dict:
+def capturar(pagina, html_path: Path, saida: Path, altura: int = 1350) -> dict:
     pagina.goto(html_path.as_uri())
     pagina.wait_for_function("window.__fit !== undefined", timeout=30000)
     fit = pagina.evaluate("window.__fit")
-    png = pagina.screenshot(clip={"x": 0, "y": 0, "width": 1080, "height": 1350}, type="png")
+    png = pagina.screenshot(clip={"x": 0, "y": 0, "width": 1080, "height": altura}, type="png")
     Image.open(io.BytesIO(png)).convert("RGB").save(saida, "JPEG", quality=95, subsampling=0)
     return fit
 
@@ -235,7 +258,25 @@ def processar(pasta: Path, pagina) -> None:
         rod = post.get("rodape") or ""
         if len(rod) > 95:
             raise ValueError(f"rodapé com {len(rod)} caracteres; o máximo é 95 (uma linha)")
-        if post.get("formato", "unico") == "unico":
+        if post.get("formato") == "quadrado":  # feed quadrado (15/11/2026): sem Reels, Story com a arte no meio
+            meta = baixar_foto(post["foto_url"], pasta / "foto.jpg")
+            rel["foto"] = meta
+            if meta["aviso"]:
+                rel["avisos"].append(meta["aviso"])
+            brilho = brilho_quadrado(pasta / "foto.jpg")
+            html_path = pasta / "arte-1.html"
+            html_path.write_text(arte.post_quadrado(post, (pasta / "foto.jpg").as_uri(), brilho), encoding="utf-8")
+            pagina.set_viewport_size({"width": 1080, "height": 1080})
+            try:
+                fit = capturar(pagina, html_path, pasta / "arte-1.jpg", altura=1080)
+            finally:
+                pagina.set_viewport_size({"width": 1080, "height": 1350})
+            rel["artes"].append({"arquivo": "arte-1.jpg", "brilho": brilho, **fit})
+            story_quadrado(pasta / "arte-1.jpg", pasta / "foto.jpg", pasta / "story.jpg")
+            rel["story"] = "story.jpg"
+            if post.get("reels") or post.get("bombastica"):
+                rel["avisos"].append("feed quadrado não sai como Reels: \"reels\"/\"bombastica\" ignorados")
+        elif post.get("formato", "unico") == "unico":
             meta = baixar_foto(post["foto_url"], pasta / "foto.jpg")
             rel["foto"] = meta
             if meta["aviso"]:

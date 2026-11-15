@@ -442,6 +442,126 @@ def post_unico(post: dict, foto_uri: str, recorte: bool = False, altura: int = H
     return _pagina(corpo, c["bg"])
 
 
+# ---------------------------------------------------------------- feed quadrado (aprovado pelo João em 15/11/2026)
+# Notícia de menor alcance (termômetro abaixo de 5 ou foto genérica) sai no feed como 1080 x 1080: foto no quadrado
+# inteiro, escurecida e fosca; marca no canto; chapéu em tarja na cor da editoria; título branco; sem subtítulo
+# (vai para a legenda). Modelos em prototipos/feed-quadrado/.
+
+QUADRADO = 1080
+# cor da tarja, cor da letra da tarja e cor da foice e martelo, por editoria
+Q_CORES = {
+    "politica": ("#E0302A", "#FFFFFF", "#E0302A"),
+    "eleicoes": ("#FED700", "#101010", "#FED700"),
+    "economia": ("#1646E0", "#FFFFFF", "#E3AD16"),
+    "educacao": ("#56622C", "#FFFFFF", "#E3AD16"),
+    "saude": ("#0BB39B", "#FFFFFF", "#E3AD16"),       # mais vivo que o #087A6D (pedido do João)
+    "gerais": ("#E0302A", "#FFFFFF", "#E3AD16"),
+    "america_latina": ("#FF5A1F", "#FFFFFF", "#FF5A1F"),
+    "roca": ("#4F7A1C", "#FFFFFF", "#E3AD16"),
+}
+
+# "E" de três barras com a altura exata das maiúsculas de Archivo 600 em 20 px (cap height 13,5 px)
+def _e_barras(cor: str, depois: bool = False) -> str:
+    margem = "margin:0 0 0 -3px" if depois else "margin:0 1px 0 0"
+    barra = f'<i style="display:block;width:12.3px;height:3.3px;border-radius:1.65px;background:{cor}"></i>'
+    return f'<span style="display:flex;flex-direction:column;gap:1.8px;{margem}">{barra * 3}</span>'
+
+
+def _nome_quadrado(ed: str, cor: str) -> str:
+    """Linha do nome da editoria embaixo do CBR: branca e menor, só a letra estilizada na cor da editoria."""
+    if ed == "economia":
+        return f"{_e_barras(cor)}CONOMIA"
+    if ed == "eleicoes":
+        return f'EL{_e_barras(cor)}IÇÕES<span style="margin-left:6px">2026</span>'
+    if ed == "saude":
+        return f"SAÚD{_e_barras(cor, depois=True)}"
+    if ed == "educacao":
+        return f'<span style="font-family:Unbounded,Archivo,sans-serif;font-weight:900;color:{cor}">E</span>DUCAÇÃO'
+    if ed == "roca":
+        return ('<span style="font-family:PermanentMarker,cursive;font-size:30px;letter-spacing:0;display:inline-block;'
+                'transform:rotate(-5deg);border-bottom:3px solid #7DB43A;padding-bottom:1px;margin-top:2px">da roça</span>')
+    if ed == "america_latina":
+        return "AMÉRICA LATINA"
+    if ed == "politica":
+        return "POLÍTICA"
+    return ""
+
+
+GRAO = ("url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E"
+        "%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix "
+        "values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 1.2 -.1'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' "
+        "filter='url(%23n)'/%3E%3C/svg%3E\")")
+
+
+def post_quadrado(post: dict, foto_uri: str, brilho: float = 0.62) -> str:
+    """Arte do feed quadrado (1080 x 1080). `brilho` vem do render: foto clara leva mais escurecimento."""
+    ed = post["editoria"]
+    tarja, letra_tarja, icone = Q_CORES.get(ed, Q_CORES["gerais"])
+    d = tarja
+    opac_mk = 0.65 if ed == "eleicoes" else 0.75
+    posicao = post.get("foto_posicao", "50% 45%")
+    alt = html.escape(post.get("alt", ""))
+    roca = ""
+    if ed == "roca":
+        fonte = (FONTS_DIR / "permanent-marker-latin-400-normal.woff2").as_uri()
+        roca = f"<style>@font-face{{font-family:'PermanentMarker';src:url('{fonte}') format('woff2')}}</style>"
+    nome = _nome_quadrado(ed, d)
+    marca = (f'<div style="position:absolute;z-index:6;left:64px;top:52px;line-height:1">'
+             f'<div style="display:flex;align-items:center;gap:12px">'
+             f'<svg width="46" height="46" viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="{icone}" stroke-linecap="round">'
+             f'<path d="M43 16 A32 32 0 1 1 24 57" stroke-width="10"/><path d="M25 63 L11 80" stroke-width="12"/>'
+             f'<path d="M38 38 L82 82" stroke-width="10"/></g><path d="M14 40 L40 14 L52 26 L26 52 Z" fill="{icone}"/></svg>'
+             f'<span style="font-family:Unbounded,Archivo,sans-serif;font-weight:900;font-size:60px;letter-spacing:-3px;color:#FFFFFF">CBR</span></div>'
+             + (f'<div style="margin:6px 0 0 60px;display:flex;align-items:center;gap:5px;font-family:Archivo,sans-serif;'
+                f'font-weight:600;font-size:20px;letter-spacing:1px;color:#FFFFFF">{nome}</div>' if nome else "")
+             + '</div>')
+    partes = []
+    if ed == "america_latina" and post.get("pais"):
+        partes.append(f'<div style="display:inline-flex;align-items:center;gap:9px;padding:6px 14px 6px 10px;border:2px solid {d};'
+                      f'border-radius:40px;font-family:Archivo,sans-serif;font-weight:700;font-size:17px;letter-spacing:3px;'
+                      f'text-transform:uppercase;color:#FFFFFF;margin-bottom:16px"><span style="width:11px;height:11px;border-radius:50%;'
+                      f'background:{d};display:inline-block"></span>{html.escape(post["pais"])}</div>')
+    if post.get("chapeu"):
+        partes.append(f'<p style="display:table;margin:0;padding:10px 16px 6px;background:{tarja};color:{letra_tarja};'
+                      f'font-family:Fraunces,Georgia,serif;font-weight:740;font-size:56px;line-height:1;letter-spacing:-1px;'
+                      f'text-transform:uppercase;white-space:nowrap">{html.escape(post["chapeu"])}</p>')
+    titulo = marcar(post["titulo"].replace("|", " "), d, "#FFFFFF", titulo=True, peso_destaque=740,
+                    estilo="marca_inclinada", faixa=(60, 98), opacidade=opac_mk)
+    partes.append(f'<p id="titulo" data-max="52" data-min="42" style="margin:18px 0 0;font-family:Fraunces,Georgia,serif;'
+                  f'font-weight:640;font-size:52px;line-height:1.08;letter-spacing:-1px;color:#FFFFFF;text-wrap:balance">{titulo}</p>')
+    bloco = (f'<div id="bloco" data-limite="430" style="position:absolute;z-index:3;left:64px;right:110px;bottom:132px">'
+             f'{"".join(partes)}</div>')
+    if ed == "america_latina":
+        blocos, x, i = [], 0, 0
+        padrao = [26, 10, 26, 10, 54, 10]
+        while x < 952:
+            w = min(padrao[i % 6], 952 - x)
+            blocos.append(f'<div style="position:absolute;left:{x}px;top:0;width:{w}px;height:6px;background:{CORES_CONTINENTE[i % 6]}"></div>')
+            x += w + 4
+            i += 1
+        barra = f'<div style="position:absolute;z-index:3;left:64px;top:987px;width:952px;height:6px">{"".join(blocos)}</div>'
+    else:
+        barra = (f'<div style="position:absolute;z-index:3;left:64px;right:64px;top:990px;height:3px;'
+                 f'background:linear-gradient(90deg,{d} 0 86%,rgba(255,255,255,.3) 86%)"></div>')
+    credito = "" if post.get("sem_rodape") else (post.get("rodape") or rodape_auto(post, limite=80))
+    rodape = (f'<p style="position:absolute;z-index:3;left:64px;right:64px;top:1006px;margin:0;font-family:Archivo,sans-serif;'
+              f'font-weight:700;font-size:15px;letter-spacing:1.6px;text-transform:uppercase;white-space:nowrap;overflow:hidden;'
+              f'text-overflow:ellipsis;color:rgba(255,255,255,.62)">{html.escape(credito)}</p>') if credito else ""
+    corpo = (f'{roca}<div style="width:{QUADRADO}px;height:{QUADRADO}px;position:relative;overflow:hidden;background:#101010;'
+             f'color:#FFFFFF;font-family:Archivo,sans-serif">'
+             f'<div style="position:absolute;inset:0"><img src="{foto_uri}" alt="{alt}" style="display:block;width:100%;height:100%;'
+             f'object-fit:cover;object-position:{posicao};filter:brightness({brilho}) contrast(.9) saturate(.88)"></div>'
+             '<div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,12,.55) 0%,rgba(10,10,12,0) 20%,'
+             'rgba(10,10,12,0) 45%,rgba(10,10,12,.8) 75%,rgba(10,10,12,.92) 100%),radial-gradient(ellipse at 50% 45%,'
+             'rgba(0,0,0,0) 55%,rgba(0,0,0,.35) 100%)"></div>'
+             f'<img src="{PAPEL.as_uri()}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;'
+             'mix-blend-mode:overlay;opacity:.32">'
+             f'<div style="position:absolute;inset:0;mix-blend-mode:overlay;opacity:.2;background-image:{GRAO}"></div>'
+             '<div style="position:absolute;inset:0;background:rgba(235,232,225,.05)"></div>'
+             f'{marca}{bloco}{barra}{rodape}</div>')
+    return _pagina(corpo, "#101010")
+
+
 # ---------------------------------------------------------------- carrossel crítico
 # Modelo: carrossel "33 milhões ficaram em casa". Tipos de slide:
 #   capa   -> foto no topo, chamada vermelha, título grande, apoio, fonte
