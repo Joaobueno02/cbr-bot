@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-15T07:56:43Z",
- "pauta_quando": "2026-11-15T07:56:42Z",
+ "quando": "2026-11-15T08:28:02Z",
+ "pauta_quando": "2026-11-15T08:28:01Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,24 +9,50 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 12,
+  "avaliados_agora": 9,
   "falhas_antes": null,
-  "pedidos_hoje": 4
+  "pedidos_hoje": 5
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
  "total_assuntos": 117,
  "novos_3h": 4,
- "esquentaram": 1,
+ "esquentaram": 0,
  "candidatos": [
+  {
+   "manchete": "Agrotóxicos proibidos aparecem na água de um em cada sete municípios do país",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-15T08:28:01Z",
+   "link": "https://iclnoticias.com.br/agrotoxicos-proibidos-agua-um-sete-municipios/",
+   "editoria": "roca",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "agrotoxic"
+   ],
+   "ia": {
+    "editoria": "roca",
+    "I": 3,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Agrotóxicos proibidos na água afetam diretamente a saúde pública e os trabalhadores.",
+    "soma": 5
+   }
+  },
   {
    "manchete": "Governo lança guia para identificação e direcionamento de famílias em risco de fome para programas sociais",
    "secoes": [
-    "B",
     "C-nacional",
     "D-terra"
    ],
    "veiculos": 4,
-   "veiculos_3h": 2,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-15T07:56:42Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/15/governo-lanca-guia-para-identificacao-e-direcionamento-de-familias-em-risco-de-fome-para-programas-sociais.ghtml",
    "editoria": "roca",
@@ -48,29 +74,29 @@
    }
   },
   {
-   "manchete": "Perdeu o primeiro dia de Enem 2026? Saiba se deve fazer a prova no segundo domingo ou se tem direito à reaplicação",
+   "manchete": "Transporte público será gratuito em Camaçari no segundo domingo de provas do Enem 2026",
    "secoes": [
     "B"
    ],
-   "veiculos": 75,
-   "veiculos_3h": 14,
+   "veiculos": 31,
+   "veiculos_3h": 9,
    "na_pauta_desde": "2026-11-14T12:08:10Z",
-   "link": "https://g1.globo.com/educacao/enem/2026/noticia/2026/11/14/perdeu-o-primeiro-dia-de-enem-2026-saiba-se-deve-fazer-a-prova-no-segundo-domingo-ou-se-tem-direito-a-reaplicacao.ghtml",
+   "link": "https://www.poder360.com.br/poder-brasil/brasil-tem-alerta-de-tempestades-em-todas-as-regioes-nos-proximos-dias/",
    "editoria": "educacao",
    "nota": 5,
-   "esquentou": true,
+   "esquentou": false,
    "lente": [
-    "direito"
+    "transporte publico"
    ],
    "ia": {
     "editoria": "educacao",
-    "I": 2,
-    "V": 3,
+    "I": 3,
+    "V": 2,
     "P": 1,
-    "formato": "feed",
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Atinge milhões de estudantes, mas sem novidade estrutural para a pauta.",
+    "motivo": "Transporte público gratuito no Enem facilita o acesso à educação para trabalhadores.",
     "soma": 5
    }
   },
@@ -99,34 +125,6 @@
     "repetido": false,
     "risco": "",
     "motivo": "Escândalo político com impacto institucional e envolvimento do STF.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Sem acordo nem regulamentação, mudança na jornada deixa futuro da frota de ônibus indefinido",
-   "secoes": [
-    "B",
-    "C-nacional"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-15T07:56:42Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/sem-acordo-nem-regulamentacao-mudanca-na-jornada-deixa-futuro-da-frota-de-onibus-indefinido.shtml",
-   "editoria": "economia",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "jornada"
-   ],
-   "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Afeta transporte público e trabalhadores do setor, gera muitas dúvidas.",
     "soma": 4
    }
   },
@@ -160,6 +158,42 @@
  ],
  "rebaixados": [
   {
+   "manchete": "Sem acordo nem regulamentação, mudança na jornada deixa futuro da frota de ônibus indefinido",
+   "veiculos": 4,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-15T07:56:42Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 1,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Mudanças na jornada afetam transporte público e rotina de trabalhadores da área.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Beatriz Rey: Conta de senadores pró-impeachment contra STF quase não fecha",
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-15T07:56:42Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 1,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Movimentações no Congresso sobre atrito institucional com o STF.",
+    "soma": 3
+   }
+  },
+  {
    "manchete": "Incêndios florestais atingem território quilombola em Salvaterra",
    "veiculos": 2,
    "veiculos_3h": 1,
@@ -178,29 +212,11 @@
    }
   },
   {
-   "manchete": "Caso Master leva Banco Central ao maior número de liquidações desde 2002",
-   "veiculos": 2,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-15T07:56:42Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "economia",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Crise financeira e impacto econômico amplo por liquidações bancárias.",
-    "soma": 3
-   }
-  },
-  {
    "manchete": "Lula é o primeiro presidente brasileiro a visitar as Filipinas; leia sua declaração",
-   "veiculos": 9,
-   "veiculos_3h": 2,
+   "veiculos": 10,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-14T10:08:05Z",
-   "esquentou": false,
+   "esquentou": true,
    "ia": {
     "editoria": "politica",
     "I": 1,
@@ -214,26 +230,80 @@
    }
   },
   {
-   "manchete": "Nas Filipinas, Lula diz que “colonialismo ficou no passado”",
-   "veiculos": 5,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-14T10:08:05Z",
+   "manchete": "Peru: Visita do Papa Leão XIV homenageia os mártires Inti e Bryan - Pressenza",
+   "veiculos": 10,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-14T02:07:29Z",
    "esquentou": false,
    "ia": {
-    "editoria": "politica",
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Homenagem papal no Peru sem impacto direto na conjuntura brasileira.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Professores comentarão questões do 2º dia do Enem 2026 em live; saiba mais",
+   "veiculos": 10,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-14T12:08:10Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "educacao",
     "I": 1,
     "V": 1,
     "P": 0,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Declaração diplomática de Lula nas Filipinas, pouca profundidade imediata.",
+    "motivo": "Serviço útil sobre o Enem, mas com baixo potencial de engajamento político.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Perdeu o primeiro dia do Enem? Saiba se pode fazer a prova neste domingo e pedir reaplicação",
+   "veiculos": 14,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-14T12:08:10Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "educacao",
+    "I": 1,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Dúvidas práticas sobre reaplicação do Enem sem grande repercussão política.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "O POVO divulga gabarito extraoficial do segundo dia de prova do Enem 2026",
+   "veiculos": 19,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-14T12:08:10Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "educacao",
+    "I": 1,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Divulgação de gabarito extraoficial de prova, foco estritamente utilitário.",
     "soma": 2
    }
   },
   {
    "manchete": "Papa reúne 500 mil fiéis na cidade peruana que moldou sua trajetória pastoral durante quase 10 anos",
-   "veiculos": 25,
+   "veiculos": 24,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-14T02:07:29Z",
    "esquentou": true,
@@ -266,141 +336,69 @@
     "motivo": "Assunto repetido sobre guia federal de combate à fome.",
     "soma": 4
    }
-  },
-  {
-   "manchete": "Sargento surpreende idoso com cesta básica durante abordagem policial",
-   "veiculos": 3,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-15T01:07:35Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "fora",
-    "I": 1,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Caso isolado com viés de assistencialismo policial.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Por que a fome aperta antes de dormir e como conter o belisco noturno",
-   "veiculos": 1,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-15T07:56:42Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "fora",
-    "I": 0,
-    "V": 0,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Matéria de comportamento/saúde individual, fora da linha editorial.",
-    "soma": 0
-   }
-  },
-  {
-   "manchete": "Videoanálisis | León XIV vuelve a casa y se reencuentra con los fieles en Chiclayo",
-   "veiculos": 9,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-14T02:07:29Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "fora",
-    "I": 0,
-    "V": 0,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Assunto internacional sem impacto direto no Brasil.",
-    "soma": 0
-   }
-  },
-  {
-   "manchete": "El hijo pródigo: así fue el regreso del papa León XIV a Perú y otras seis noticias internacionales de la semana",
-   "veiculos": 7,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-14T02:07:29Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "fora",
-    "I": 0,
-    "V": 0,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Giro de notícias internacionais focado em outra região.",
-    "soma": 0
-   }
   }
  ],
  "obrigatorios": [],
  "descartados_mais_quentes": [
   {
-   "manchete": "EUA propõem adesão da Ucrânia à OTAN em troca do Donbas, diz Zelensky - Investing.com Brasil",
-   "veiculos": 43,
-   "veiculos_3h": 0,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Mais de 8.500 voos sofreram atrasos nos EUA em meio ao caos nos aeroportos; paralisação do tráfego aéreo é suspensa no país",
-   "veiculos": 32,
+   "manchete": "Fux suspende julgamento virtual sobre fim da escala 6x1 e caso irá ao plenário físico",
+   "veiculos": 68,
    "veiculos_3h": 2,
    "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Este vídeo de Lula da Silva con Pedro Sánchez no es actual: el líder brasileño aún no ha llegado a España",
-   "veiculos": 25,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
   },
   {
    "manchete": "Portugal x Dinamarca: horário e onde assistir ao jogo da Nations League",
-   "veiculos": 18,
-   "veiculos_3h": 3,
+   "veiculos": 16,
+   "veiculos_3h": 2,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Raphinha dispara contra arbitragem após derrota da seleção brasileira: ‘Vou acreditar que ele errou’",
-   "veiculos": 17,
-   "veiculos_3h": 0,
-   "motivo": "fora: esporte (selecao brasileira)"
-  },
-  {
-   "manchete": "CRB x Ceará pela Série B: confira horário, onde assistir e prováveis escalações",
-   "veiculos": 17,
-   "veiculos_3h": 0,
-   "motivo": "fora: entretenimento (serie)"
-  },
-  {
-   "manchete": "Governo Trump diz não acreditar em ataque hacker e aponta troca de cabos como causa de apagão aéreo nos EUA",
-   "veiculos": 12,
-   "veiculos_3h": 0,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Desgaste com voz faz Lula cancelar declarações nas Filipinas",
-   "veiculos": 11,
-   "veiculos_3h": 0,
-   "motivo": "sem editoria"
+   "manchete": "UFC 334: Amanda Nunes e Kayla Harrison fazem encarada tensa",
+   "veiculos": 14,
+   "veiculos_3h": 11,
+   "motivo": "fora: esporte (ufc)"
   },
   {
    "manchete": "Em encontro com Lula, Carney promete US$ 400 mi para proteção de florestas",
-   "veiculos": 9,
-   "veiculos_3h": 8,
+   "veiculos": 10,
+   "veiculos_3h": 9,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "‘Unacceptable’ - Raphinha apologizes for red card but blasts referee after Brazil lose to Japan",
+   "manchete": "PH, Brazil ink deals on agriculture, enforcement of competition laws",
    "veiculos": 9,
-   "veiculos_3h": 1,
+   "veiculos_3h": 3,
    "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Brazil beaten by Japan despite Vinicius: the Japanese win 3-2. Furious, Ancelotti enters the pitch and is sent off for protesting alongside Rapinha",
+   "veiculos": 8,
+   "veiculos_3h": 2,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Pedrinho é reeleito presidente do Vasco",
+   "veiculos": 8,
+   "veiculos_3h": 1,
+   "motivo": "fora: esporte (vasco)"
+  },
+  {
+   "manchete": "Advogado brasileiro de “El Pollo” é encontrado morto em Madri",
+   "veiculos": 7,
+   "veiculos_3h": 0,
+   "motivo": "fora: crime ou tragedia (morto)"
+  },
+  {
+   "manchete": "Carney Pledges C$560 Million for Brazil-Led Forest Project",
+   "veiculos": 5,
+   "veiculos_3h": 5,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Exército de Israel diz ter matado em Gaza um dos comandantes do Hamas por trás de ataque de 7 de outubro",
+   "veiculos": 5,
+   "veiculos_3h": 2,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
   }
  ]
 }
