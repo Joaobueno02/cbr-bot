@@ -113,7 +113,8 @@ def conferir_arte(pagina, pasta: Path, n: int, post: dict, slide: dict | None) -
             avisos.append("título sem destaque *...* (o padrão pede o número ou a palavra-chave destacada)")
         elif len(com_dest) > 2:
             avisos.append("destaque espalhado por mais de 2 linhas: encurte o trecho entre *")
-    if fit.get("tamanho", 99) <= 46:
+    quad = post.get("formato") == "quadrado" and slide is None
+    if fit.get("tamanho", 99) <= (42 if quad else 46):
         graves.append(f"título no tamanho mínimo ({fit.get('tamanho')} px): texto longo demais para o padrão, encurte")
     ch = (m.get("chapeu") or {}).get("linhas") or []
     if len(ch) > 1:
@@ -134,6 +135,8 @@ def conferir_arte(pagina, pasta: Path, n: int, post: dict, slide: dict | None) -
         if "PermanentMarker" not in carregadas:
             graves.append("a letra manuscrita do \"da roça\" não carregou: renderize de novo")
 
+    if quad and len(lin) > 3:
+        graves.append(f"título com {len(lin)} linhas no feed quadrado (máximo 3): encurte")
     if slide is None and len(sl) > 2:  # 04/11/2026: subtítulo em 30 px, até 2 linhas; o resto vai para a legenda
         avisos.append(f"subtítulo com {len(sl)} linhas (padrão de 04/11: até 2); corte e leve o resto para a legenda")
 
@@ -143,14 +146,16 @@ def conferir_arte(pagina, pasta: Path, n: int, post: dict, slide: dict | None) -
     ed = post.get("editoria", "")
     if slide is None:
         pagina.evaluate(SEM_MARCA_JS)
-        png = pagina.screenshot(clip={"x": 80, "y": 46, "width": 480, "height": 100}, type="png")
+        clip = {"x": 64, "y": 52, "width": 260, "height": 100} if quad else {"x": 80, "y": 46, "width": 480, "height": 100}
+        png = pagina.screenshot(clip=clip, type="png")
         lum, desvio = luminancia(Image.open(io.BytesIO(png)))
         medidas["fundo_marca"] = {"luminancia": round(lum, 2), "variacao": round(desvio, 2)}
-        if ed in ESCURAS and lum > 0.55:
+        escura = ed in ESCURAS or quad  # no feed quadrado a marca é sempre branca sobre a foto escurecida
+        if escura and lum > 0.55:
             graves.append(f"marca do topo sobre fundo claro demais (luminância {lum:.2f}): a marca branca some; ajuste foto_posicao ou troque a foto")
-        elif ed in ESCURAS and lum > 0.42:
+        elif escura and lum > 0.42:
             avisos.append(f"fundo da marca do topo meio claro (luminância {lum:.2f}): confira a leitura da marca")
-        elif ed not in ESCURAS and lum < 0.35:
+        elif not escura and lum < 0.35:
             graves.append(f"marca do topo sobre fundo escuro demais (luminância {lum:.2f})")
         if desvio > 0.25:
             avisos.append(f"fundo da marca muito movimentado (variação {desvio:.2f}): confira a leitura")
@@ -159,7 +164,7 @@ def conferir_arte(pagina, pasta: Path, n: int, post: dict, slide: dict | None) -
     foto = pasta / ("foto.jpg" if slide is None else f"foto-{n}.jpg")
     if foto.exists():
         im = Image.open(foto)
-        alt_exib = (fit.get("topo_bloco") or 800) + 40
+        alt_exib = 1080 if quad else (fit.get("topo_bloco") or 800) + 40
         escala = max(1080 / im.width, alt_exib / im.height)
         medidas["foto"] = {"largura": im.width, "altura": im.height, "ampliacao": round(escala, 2), "nitidez": nitidez(foto)}
         if escala > 1.15:
@@ -180,8 +185,15 @@ def conferir(pasta: Path, pagina) -> None:
     if (post.get("design_auto") or {}).get("render_quando") == rel.get("quando"):
         return
     artes, avisos = [], []
-    if post.get("formato", "unico") == "unico":
-        artes.append(conferir_arte(pagina, pasta, 1, post, None))
+    if post.get("formato", "unico") in ("unico", "quadrado"):
+        quad = post.get("formato") == "quadrado"
+        if quad:
+            pagina.set_viewport_size({"width": 1080, "height": 1080})
+        try:
+            artes.append(conferir_arte(pagina, pasta, 1, post, None))
+        finally:
+            if quad:
+                pagina.set_viewport_size({"width": 1080, "height": 1350})
     else:
         for i, s in enumerate(post.get("slides", []), start=1):
             artes.append(conferir_arte(pagina, pasta, i, post, s))

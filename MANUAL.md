@@ -252,9 +252,9 @@ política, semana de 2 a 9/11). Três regras:
      de procurar pauta nova;
    - serviço com prazo (Enem, 13º, IR, inscrições) e itens do calendário contam como pauta do dia.
 
-**Termômetro de alcance: Reels ou feed quadrado (regra do João, 15/11/2026).** Vale assim que o gerador tiver o formato
-`quadrado` e o Reels "cartão com margem" (AGENTS.md, item 0b); até lá, segue a regra do Reels comum abaixo. Some os pontos
-de cada pauta aprovada:
+**Termômetro de alcance: Reels ou feed quadrado (regra do João, 15/11/2026; vale acima do "Reels comum" abaixo).**
+Ordem de cada pauta, de cima para baixo: **achou a notícia → apurou → escolheu a foto (nota de especificidade, seção 5)
+→ fez a conta do termômetro → um dos dois caminhos → render → as duas revisões → publicar.** Some os pontos:
 - +3 nome conhecido no título (figura nacional: presidente, ministro, governador, senador ou deputado conhecido, ministro do
   STF, candidato, empresário ou artista famoso);
 - +2 fala entre aspas ou contradição de político (discurso x prática);
@@ -262,12 +262,16 @@ de cada pauta aprovada:
 - +2 assunto quente: 5 ou mais veículos nas últimas 3 h no radar, marcado como "esquentou" ou estourando nas páginas de
   referência (`radar/estouraram.json`);
 - +1 se vai sair entre 7h e 13h; -1 se vai sair entre 20h e 23h.
-Com **5 pontos ou mais**, sai como **Reels** (cartão com margem, com trilha). Com **menos de 5**, sai no **feed quadrado**
-(`"formato": "quadrado"`, sem `reels`): só chapéu e título na arte, e o subtítulo vai inteiro para a legenda. Errata
-continua no feed. Grave a conta no resumo da rodada (ex.: "nome +3, política +2, 9h +1 = 6 → Reels"). No teste com 94
-posts de 26/10 a 9/11 (sem os pontos de assunto quente), os de 5 ou mais tiveram mediana de 324 de alcance e reuniram 13
-dos 15 posts acima de 500; os outros ficaram com mediana de 17. O dossiê das 23h acompanha se a divisão continua
-separando bem e propõe ajuste nos pesos com os números.
+Os dois caminhos:
+- **Reels** (`"reels": true`, layout de hoje, com trilha): **5 pontos ou mais e foto específica** (nota 5 ou mais).
+- **Feed quadrado** (`"formato": "quadrado"`, 1080 × 1080, sem `reels`): **menos de 5 pontos, ou foto genérica**. Na arte
+  vão só o chapéu (vira tarja) e o título; **não escreva `subtitulo`**: o que seria subtítulo vai inteiro para a legenda.
+  Título de até ~90 caracteres (3 linhas no máximo; a conferência reprova a 4ª). O Story sai sozinho com a arte no meio.
+Carrossel continua pela regra dele (abaixo) e errata continua no feed de 4:5. Grave a conta no resumo da rodada (ex.:
+"nome +3, política +2, 9h +1 = 6, foto 7 → Reels"). No teste com 94 posts de 26/10 a 9/11 (sem os pontos de assunto
+quente), os de 5 ou mais tiveram mediana de 324 de alcance e reuniram 13 dos 15 posts acima de 500; os outros ficaram com
+mediana de 17. O dossiê das 23h compara o alcance do Reels e do feed quadrado no dia e propõe ajuste nos pesos com os
+números.
 
 Descarte o que já está em `registro/posts.jsonl` (mesmo fato, mesmo que com outra manchete),
 a menos que haja fato novo relevante. Prefira notícia das últimas horas.
@@ -400,6 +404,20 @@ mesma notícia nas outras fontes, compare as versões e escreva a **nossa** a pa
 ## 4. O post (`fila/<id>/post.json`)
 
 `<id>` = `AAAAMMDD-HHMM-slug-curto` (ex.: `20261015-0930-piso-sus`).
+
+### Feed quadrado (`"formato": "quadrado"`, desde 15/11/2026)
+```json
+{
+  "status": "renderizar", "formato": "quadrado", "editoria": "economia",
+  "chapeu": "Contas públicas",
+  "titulo": "Benefícios fiscais encolhem até *20%* com ajuste aprovado pelo Senado",
+  "credito_foto": "Foto: Ton Molina/Agência Senado", "foto_url": "https://...jpg", "foto_posicao": "58% 50%",
+  "foto_especificidade": {"nota": 6, "motivos": ["plenário do dia da votação"], "onda": 1},
+  "alt": "...", "legenda": "...", "hashtags": ["...5..."], "fontes": [...], "apuracao": {...}, "comentario": "..."
+}
+```
+Sem `subtitulo`, sem `reels`. Em `america_latina`, `pais` vira o selo acima da tarja. A arte escurece sozinha a foto
+clara; mesmo assim, prefira foto com rosto ou ação no centro e fundo sem texto.
 
 ### Post único (padrão; prefira sempre)
 ```json

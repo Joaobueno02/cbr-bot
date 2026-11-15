@@ -103,7 +103,7 @@ Teste do radar: `python bot/radar.py` (precisa de internet) e confira `radar/sau
      já descartado no mesmo dia, salvo se ele ganhou veículo novo desde o descarte.
 
 0b. **Dois formatos novos aprovados pelo João em 15/11/2026** (mexem na trava visual: antes e depois no PR e "muda o visual — precisa da aprovação do João"):
-   - **Feed quadrado** (`formato: "quadrado"`, 1080 × 1080, publicado como imagem de feed): modelo em
+   - **Feed quadrado** — **feito pelo Claude no PR da branch `claude/feed-quadrado` (15/11/2026)**; o que segue fica como referência. (`formato: "quadrado"`, 1080 × 1080, publicado como imagem de feed): modelo em
      `prototipos/feed-quadrado/modelo.html` e `modelo.png`. Foto ocupando o quadrado inteiro, com brilho reduzido
      (`brightness(.62) contrast(.9) saturate(.88)`), degradê escuro no topo e no pé e cantos escurecidos; acabamento fosco
      (textura `assets/papel.jpg` em overlay a 0,32, grão fino a 0,2 e véu claro a 0,05). Marca no canto superior esquerdo
@@ -113,7 +113,7 @@ Teste do radar: `python bot/radar.py` (precisa de internet) e confira `radar/sau
      (Fraunces 640, 52 px, `text-wrap:balance`, destaque `*...*` com marca-texto na cor da editoria); **sem subtítulo na
      arte** (vai para a legenda). Barra na cor da editoria a 990 px e crédito de 15 px logo abaixo. Margem única de 64 px.
      Sem grade.
-   - **Reels "cartão com margem"** (o João escolheu a opção 2 do simulador): quadro 1080 × 1920 com a grade de fundo da
+   - **Reels "cartão com margem" — EM ESPERA: em 15/11/2026 o João decidiu manter o Reels como está; não fazer sem novo pedido.** (era a opção 2 do simulador): quadro 1080 × 1920 com a grade de fundo da
      editoria na tela toda, foto num cartão com 90 px de margem e cantos de 28 px, de 330 a 1070 px; marca a 180 px com 90%
      do tamanho; texto de 1070 a 1640 px (chapéu 48, título 58, apoio 28, margem 90). Imagens em `prototipos/reels-cartao/`.
      Mantém o zoom lento e as 3 camadas do Reels de hoje.
