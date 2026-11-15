@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-15T10:07:11Z",
- "pauta_quando": "2026-11-15T10:07:10Z",
+ "quando": "2026-11-15T12:07:07Z",
+ "pauta_quando": "2026-11-15T12:07:06Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,13 +9,13 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.8-flash",
-  "avaliados_agora": 11,
-  "falhas_antes": "gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in",
-  "pedidos_hoje": 8
+  "avaliados_agora": 13,
+  "falhas_antes": "gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-3.8-flash: HTTP 503 This model is currently experiencing high demand. Spikes in",
+  "pedidos_hoje": 12
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 133,
- "novos_3h": 10,
+ "total_assuntos": 128,
+ "novos_3h": 7,
  "esquentaram": 1,
  "candidatos": [
   {
@@ -47,12 +47,37 @@
    }
   },
   {
+   "manchete": "Janones rebate críticas da esquerda ao ajuste fiscal de Lula e fala em “busca por like”",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 29,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-15T12:07:06Z",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNSjBZRi00LW1udWlTZTJ4WTJ1MFBtOTYtMC1LS0VTaHluOFlNMlV2NHExYUJDa3VQTHJlQjZSaU54ZnBkZlgyWEI2Sl96aFN3c0ZCNTRWOUxyRDV4NUFqRThaMWZVUlBJZTNpalN1NGtCMTFXM3h3S0dxc2FiR2FNZFlNWWkyazlmNFI4RjR3clUyM1NoWU9JMk1SYXBISVhKQW9xSVpyc0Q1WDhyUy1NdjJFUTVSS2pxeWR3?oc=5",
+   "editoria": "economia",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 3,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Debate central na esquerda sobre ajuste fiscal versus defesa de direitos sociais.",
+    "soma": 5
+   }
+  },
+  {
    "manchete": "Agrotóxicos proibidos aparecem na água de um em cada sete municípios do país",
    "secoes": [
     "D-terra"
    ],
    "veiculos": 1,
-   "veiculos_3h": 1,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-15T08:28:01Z",
    "link": "https://iclnoticias.com.br/agrotoxicos-proibidos-agua-um-sete-municipios/",
    "editoria": "roca",
@@ -74,96 +99,12 @@
    }
   },
   {
-   "manchete": "Governo lança guia para identificação e direcionamento de famílias em risco de fome para programas sociais",
-   "secoes": [
-    "C-nacional",
-    "D-terra"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-15T07:56:42Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/15/governo-lanca-guia-para-identificacao-e-direcionamento-de-familias-em-risco-de-fome-para-programas-sociais.ghtml",
-   "editoria": "roca",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "fome"
-   ],
-   "ia": {
-    "editoria": "roca",
-    "I": 3,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Direto ao combate à fome, políticas públicas essenciais para vulneráveis.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Transporte público será gratuito em Camaçari no segundo domingo de provas do Enem 2026",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 24,
-   "veiculos_3h": 15,
-   "na_pauta_desde": "2026-11-14T12:08:10Z",
-   "link": "https://g1.globo.com/educacao/enem/2026/noticia/2026/11/15/enem-2026-segundo-dia-de-provas-acontece-neste-domingo-veja-o-que-esperar.ghtml",
-   "editoria": "educacao",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "transporte publico"
-   ],
-   "ia": {
-    "editoria": "educacao",
-    "I": 3,
-    "V": 2,
-    "P": 1,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Transporte público gratuito no Enem facilita o acesso à educação para trabalhadores.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Flávio Bolsonaro jura à Reuters que larga os EUA se Brasil tiver nova eleição",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-15T10:07:10Z",
-   "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOQXd6eGZORFdKWkNCQXFHN2ZMb1lILXJQdF9XQVZDUWoyaXhyeWdacHR6YnN0cEpuVmZXaTBrNDhUeWRBX2dFanNzT01qQmZrUXpyWDdaanhtTDhHTFk2aFJHbTlJbmQ0RjRyRlpkT2dmN3pFYkZQRlZoTFlZMWI3MXNPMmVCQjU0X3MxSl9qZTJTNTBLRkttMjc4N3p2WC10dVotNjgyOGxDcFFzV3F3WVRZS3V4MlFjWlRfTVdXZVJZWFZrbDBvVm1Nek54U1BsTWozYg?oc=5",
-   "editoria": "eleicoes",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ],
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 3,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Contradição clara de Flávio Bolsonaro após derrota, gerando alto engajamento político.",
-    "soma": 5
-   }
-  },
-  {
    "manchete": "Lula diz que buscou novos parceiros em vez de 'ficar chorando' após tarifaço dos EUA",
    "secoes": [
-    "B",
-    "C-nacional"
+    "B"
    ],
-   "veiculos": 7,
-   "veiculos_3h": 4,
+   "veiculos": 14,
+   "veiculos_3h": 9,
    "na_pauta_desde": "2026-11-15T07:56:42Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/15/lula-diz-que-buscou-novos-parceiros-em-vez-de-ficar-chorando-apos-tarifaco-dos-eua.ghtml",
    "editoria": "economia",
@@ -178,143 +119,173 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Defesa de soberania comercial e busca de novos mercados frente ao protecionismo dos EUA.",
+    "motivo": "Comércio exterior, soberania nacional e resposta contra pressões imperialistas dos EUA.",
     "soma": 4
    }
   },
   {
-   "manchete": "Salário mínimo 2027: previsão atualizada do valor e como funciona o cálculo",
+   "manchete": "PGR prepara primeiras denúncias no caso Master um ano após operação",
    "secoes": [
     "B"
    ],
    "veiculos": 4,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-15T10:07:10Z",
-   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOR0lxSUdDZEt5Rkk0cE5uXzdVUXBHaDB0OC1CMWtwRmVwYXdVeFlqUEFlV1VGZnQyOU1WamJMbGFCc2JMTndVRzFOemxCcjg1clBmdTFQVTRZX2M4V29YUjFoeHpjZWtvdFNlQXNVMU9UUy1JM2RqaDN4dS10a2hTTHBxVHFtUmJEWmliZER4MnZ4dS02SG10Yk5oNno2YkI5UU9uZ05HWEROQnd2SGEwNVZoY0U4RkVIdTRFREJmR2VpUQ?oc=5",
-   "editoria": "economia",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "salario"
-   ],
-   "ia": {
-    "editoria": "economia",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Pauta central para quem vive de salário, explicando a regra de valorização real.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Um ano após prisão de Vorcaro, escândalo do Master extrapola política e põe STF sob suspeita inédita",
-   "secoes": [
-    "C-nacional"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-15T07:56:42Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/11/um-ano-apos-prisao-de-vorcaro-escandalo-do-master-extrapola-politica-e-poe-stf-sob-suspeita-inedita.shtml",
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-15T12:07:06Z",
+   "link": "https://www.diariodocentrodomundo.com.br/pgr-denuncias-caso-master-daniel-vorcaro/",
    "editoria": "politica",
    "nota": 5,
    "esquentou": false,
    "lente": [
-    "vorcaro",
     "master"
-   ],
-   "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Escândalo político com impacto institucional e envolvimento do STF.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Governo tem a chance de isolar o PL no Congresso",
-   "secoes": [
-    "C-nacional"
-   ],
-   "veiculos": 2,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-15T10:07:10Z",
-   "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNeGIxNUpGdEx1N3ZrdnozUmNPYVAxYTk0MUl1cEtiWGZ2T0JuZjhpc2tTN1c0YWgtNTNoNUhTNUV0X05fRHNlaC01cl9wZG5famFDZExyLWs3Wjl0U1FVMGs4d004T0VZTE55MTJKSk9oR1JzQ2FDbDl1SWt6ZTdTdjBjT2NkeFZrb3V4REJyZkNQSHhZQ3JEOU1Zdm5fY0tRTEVpcUtYUTJ0dW43YzkyRm5wNzdRMERoOWlyTzh3enNvZERJTHpvb3RMNS1hTFhNckE?oc=5",
-   "editoria": "politica",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [
-    "pl"
    ],
    "ia": {
     "editoria": "politica",
     "I": 2,
     "V": 2,
-    "P": 1,
+    "P": 2,
     "formato": "feed",
     "repetido": false,
-    "risco": "",
-    "motivo": "Articulação governista contra a bancada bolsonarista repercute no avanço de pautas sociais.",
+    "risco": "Acusação criminal em fase de denúncia formal.",
+    "motivo": "Investigação que atinge figuras de poder e esquemas financeiros no Judiciário.",
     "soma": 4
    }
   },
   {
-   "manchete": "Parte do STF avacalhou-se ao blindar ministros que iam além das togas em relações com Vorcaro",
+   "manchete": "Mesmo com fim do inquérito das fake news, Moraes concentra 97% das ações penais e 30% dos inquéritos",
    "secoes": [
+    "B",
     "C-nacional"
    ],
    "veiculos": 3,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-15T07:56:42Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/colunas/eliogaspari/2026/11/parte-do-stf-avacalhou-se-ao-blindar-ministros-que-iam-alem-das-togas-em-relacoes-com-vorcaro.shtml",
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-15T12:07:06Z",
+   "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNMDRSdjZrTkJ4bzBoQXRRWHhtelhrUm9zN3Uwa3NJUVdJMmlRWEJ2MzllWGE0cjNiUjBIQWFJRTNjeGdBUk5kRGlSSmM5Qm9VWE9HWmxNUU5CNkJHRTY5eTNEdjRmMVhmWC03R01qd2kxc2lPSzgybF8taU8wbkFVNXZZbVd6dW1RWkpwU01oT0NFeDFNSkhkYVYzemV2dTZzQkhWOWhvSEhfYVV1aUFjRVp2TGd2SmdaRVJwMFFFdF9DSnhDZzBnVW1mRl9WeUHSAdQBQVVfeXFMTk9ITlhoT1dOV0pibHd0cGdReGRfdy0ycEk1UlFXdlRXdm9oMGRwaXMzY2ZQSmVYWE5PWVFQWGh6TDF5WmdOOXNzZWVucHA3UGlPNENMWWVMc2E2UUEyeENGenFRdUFRTEtfOVV0d1FvMjVQX3d4VWpDb0liWXJvZ2NFbHlTWmdnWmxua1IzVXludGx6VDIwdzRVQ2E1X2hDTjBpTF9uT0w5WTZjS21QY3JpOFFkcjdHSDdyS05RMk1SdkdVb1d1T19sN00tVzRXY3YyeGU?oc=5",
+   "editoria": "politica",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "inquerito"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Concentração de poder no STF gera contradições no processo institucional.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Milei confirma que buscará a reeleição na Argentina nas eleições de 2027",
+   "secoes": [
+    "B",
+    "C-internacional",
+    "D-america_latina"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-15T12:07:06Z",
+   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNbS1PRXU2a3JZNlhBdS1WdDBsZHJNbVVRNmttVnl0eWw0RnpqY1A2ZW1DZmpHeGdnWVowUm80blJFTUxoSjlub2FnZkpiS2xLYWZYeklnb2V2YjNJNHFDM1dhTHZlczJHaFRhX0hGNEhVZXBxOGp5elVjTFZKTE5xc1lrd1BnUklyTXdUS0dzbGl5b05Da052SFNDdV9BWW8wdWZCalBfUlRLWjlzaXlDdklpc0pNZ9IBuwFBVV95cUxOeElDbW1objVySVh5YTdWN2RYZmxUSnF2WnFHcEE2Zm9qaHBVRnlsM0I3N2R1aGp4ZG5ad2FRWk4ydDV4QzFlOUxPSzdkY1VsQzZ5ZTg2VndXV3RNbFZEMjBZTUpFc2R2amRSSWF0eGFBVVRWSnBRNjBOaXppVmFVMHNoR0ZwR21JX0ZhU0sxV1RDay10TlFyTXVPWFo2MEloMWNvYjNUWTFybUpDa05sZVZQZVJWWlp1Mmpz?oc=5",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "milei"
+   ],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Continuidade do projeto ultraliberal que destrói salários e direitos na Argentina.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Caso Master amplia crise no STF e expõe políticos de diferentes partidos",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-15T12:07:06Z",
+   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOQUtsVm5BY0pUM0xpVzVGcHEzSHBOSUVFa1BnNHduc3dKZmxja0xsMXZ4T2xQMlpYYkpINlpqcnhYTnIzNkJfSUhGc1EweTAzU0NRUjNiZ2gtN1FwV1BjbmRhbTFKUmR2OW1YblktVTE2aDJLUFkySkl2VFJ6Rm5jMUtBMGw0UkpKZU1ZWUpaZGtINDlLbTBGdTkxUkJLMXcwYnJXY3FydThORGc?oc=5",
    "editoria": "politica",
    "nota": 4,
    "esquentou": false,
    "lente": [
-    "vorcaro"
+    "master"
    ],
    "ia": {
-    "editoria": "gerais",
+    "editoria": "politica",
     "I": 2,
     "V": 2,
-    "P": 1,
+    "P": 2,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Crítica institucional e conflito político envolvendo o STF.",
+    "motivo": "Crise no Judiciário expondo conchavos entre cúpula política e tribunais.",
     "soma": 4
    }
   },
   {
-   "manchete": "Sem acordo nem regulamentação, mudança na jornada deixa futuro da frota de ônibus indefinido",
+   "manchete": "Transporte público gratuito em Camaçari é garantido no segundo domingo de prova do Enem 2026",
    "secoes": [
-    "C-nacional"
+    "B"
    ],
-   "veiculos": 3,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-15T07:56:42Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/sem-acordo-nem-regulamentacao-mudanca-na-jornada-deixa-futuro-da-frota-de-onibus-indefinido.shtml",
-   "editoria": "economia",
-   "nota": 3,
+   "veiculos": 68,
+   "veiculos_3h": 39,
+   "na_pauta_desde": "2026-11-14T12:08:10Z",
+   "link": "https://g1.globo.com/educacao/enem/2026/noticia/2026/11/15/enem-2026-segundo-dia-de-provas-acontece-neste-domingo-veja-o-que-esperar.ghtml",
+   "editoria": "educacao",
+   "nota": 5,
    "esquentou": false,
    "lente": [
-    "jornada"
+    "transporte publico"
    ],
    "ia": {
-    "editoria": "gerais",
+    "editoria": "educacao",
     "I": 2,
     "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Afeta transporte público e trabalhadores do setor, gera muitas dúvidas.",
+    "motivo": "Vitória para estudantes da classe trabalhadora no acesso ao Enem.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Comissão aprova diretrizes para ampliar cirurgias bariátricas no SUS",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-15T12:07:06Z",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxObzU4YVozQkg4M1p2SHU1SkxUU3ktSlBHNk1nMWg0WHQ4Z0MzanlZbmVmU1BGLXRxeHN5dm5CSW9DMkFjYUJfM2lpV3U2SlVjaWV4SkRpbHFXZ2paNlJIeDZYVGZRYTA0cTZVWHlweFcwdTAyZFZ1cWVNOU1yNU53cURQOFlodTdETEM4Zk1WZ1NpaGFxOTBpR1Y2M05BQl9qQnpvZm1jWQ?oc=5",
+   "editoria": "saude",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "sus"
+   ],
+   "ia": {
+    "editoria": "saude",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Fortalecimento do SUS no atendimento à saúde da população trabalhadora.",
     "soma": 4
    }
   }
@@ -357,44 +328,62 @@
    }
   },
   {
-   "manchete": "Perdeu o primeiro dia do Enem? Saiba se pode fazer a prova neste domingo e pedir reaplicação",
-   "veiculos": 20,
-   "veiculos_3h": 12,
-   "na_pauta_desde": "2026-11-14T12:08:10Z",
+   "manchete": "Gobierno de Guatemala decreta estado de Sitio en Zacapa e Izabal por 30 días tras hechos violentos",
+   "veiculos": 5,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-15T07:56:42Z",
    "esquentou": false,
    "ia": {
-    "editoria": "educacao",
+    "editoria": "america_latina",
     "I": 1,
     "V": 1,
-    "P": 0,
+    "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Dúvidas práticas sobre reaplicação do Enem sem grande repercussão política.",
+    "motivo": "Exceção constitucional e repressão violenta em regiões periféricas da Guatemala.",
     "soma": 2
    }
   },
   {
-   "manchete": "Enem: confira os horários e o que levar no segundo dia de prova",
-   "veiculos": 14,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-14T12:08:10Z",
+   "manchete": "Senac oferece 150 vagas com salário de até R$ 10,5 mil em Goiás",
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-15T12:07:06Z",
    "esquentou": false,
    "ia": {
-    "editoria": "educacao",
+    "editoria": "economia",
     "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Concurso local de impacto restrito e utilidade restrita regionalmente.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Papa reúne 500 mil fiéis na cidade peruana que moldou sua trajetória pastoral durante quase 10 anos",
+   "veiculos": 28,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-15T12:07:06Z",
+   "esquentou": true,
+   "ia": {
+    "editoria": "gerais",
+    "I": 0,
     "V": 1,
     "P": 0,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Serviço básico de horários e regras que já satura os veículos comerciais.",
-    "soma": 2
+    "motivo": "Reunião de fiéis com o papa não impacta diretamente a pauta trabalhista nacional.",
+    "soma": 1
    }
   },
   {
    "manchete": "Gobierno declara al Perú “Tierra del Papa León XIV” y reconoce a Chiclayo como “Pueblo Fiel”",
-   "veiculos": 15,
+   "veiculos": 17,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-15T10:07:10Z",
    "esquentou": true,
@@ -411,9 +400,27 @@
    }
   },
   {
-   "manchete": "Guia federal orienta combate à fome e integra setores",
+   "manchete": "Cesta básica do Recife sobe 6,41% e tem terceira maior alta do país",
    "veiculos": 2,
    "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-15T10:07:10Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": true,
+    "risco": "",
+    "motivo": "Inflação de alimentos e cesta básica já foi amplamente coberta pela página.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Guia federal orienta combate à fome e integra setores",
+   "veiculos": 2,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-15T07:56:42Z",
    "esquentou": false,
    "ia": {
@@ -429,46 +436,28 @@
    }
   },
   {
-   "manchete": "Cesta básica do Recife tem a terceira maior alta do País e chega a R$ 705,98",
-   "veiculos": 2,
+   "manchete": "Fome aguda deverá atingir número recorde de 30,3 milhões de pessoas na República Democrática do Congo - E-Global",
+   "veiculos": 1,
    "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-15T10:07:10Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "economia",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": true,
-    "risco": "",
-    "motivo": "Recorte de pesquisa nacional do Dieese que a página já cobriu recentemente.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Sargento surpreende idoso com cesta básica durante abordagem policial",
-   "veiculos": 3,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-15T01:07:35Z",
+   "na_pauta_desde": "2026-11-15T12:07:06Z",
    "esquentou": false,
    "ia": {
     "editoria": "fora",
     "I": 1,
     "V": 1,
-    "P": 0,
+    "P": 1,
     "formato": "feed",
     "repetido": false,
-    "risco": "",
-    "motivo": "Caso isolado com viés de assistencialismo policial.",
+    "risco": "Tragédia humanitária com vítimas.",
+    "motivo": "Crise na África sem efeito direto ou mobilização política no Brasil.",
     "soma": 2
    }
   },
   {
-   "manchete": "‘Unacceptable’ - Raphinha apologizes for red card but blasts referee after Brazil lose to Japan",
-   "veiculos": 7,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-14T14:07:48Z",
+   "manchete": "Jalibert returns to France squad for Argentina test",
+   "veiculos": 4,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-15T12:07:06Z",
    "esquentou": false,
    "ia": {
     "editoria": "fora",
@@ -478,25 +467,7 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Esporte e declarações pós-jogo não entram na linha editorial da página.",
-    "soma": 0
-   }
-  },
-  {
-   "manchete": "Prefeitura de Taubaté reforça transporte público e flexibiliza Passe Escolar para segunda fase do Enem neste domingo (15)",
-   "veiculos": 5,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-14T12:08:10Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "fora",
-    "I": 0,
-    "V": 0,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Serviço municipal específico de Taubaté, sem relevância política ou alcance para a página.",
+    "motivo": "Notícia esportiva internacional sem qualquer relevância para quem trabalha.",
     "soma": 0
    }
   }
@@ -505,62 +476,62 @@
  "descartados_mais_quentes": [
   {
    "manchete": "Fux suspende julgamento virtual sobre fim da escala 6x1 e caso irá ao plenário físico",
-   "veiculos": 69,
-   "veiculos_3h": 2,
+   "veiculos": 71,
+   "veiculos_3h": 3,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
    "manchete": "EUA retomam voos após falha no controle de tráfego aéreo; mais de 2,5 mil são cancelados neste sábado",
-   "veiculos": 52,
-   "veiculos_3h": 7,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Portugal x Dinamarca: horário e onde assistir ao jogo da Nations League",
-   "veiculos": 17,
-   "veiculos_3h": 2,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Em encontro com Lula, Carney promete US$ 400 mi para proteção de florestas",
-   "veiculos": 11,
+   "veiculos": 51,
    "veiculos_3h": 6,
-   "motivo": "sem editoria"
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "China: Trump reúne-se com Xi e Putin em Shenzhen na próxima semana",
+   "veiculos": 31,
+   "veiculos_3h": 6,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "RJ confirma primeira morte por mpox no Brasil em 2026",
+   "veiculos": 19,
+   "veiculos_3h": 4,
+   "motivo": "fora: crime ou tragedia (morte)"
+  },
+  {
+   "manchete": "Kosovo x Israel: onde assistir ao vivo e horário | UEFA Nations League 2026/27",
+   "veiculos": 17,
+   "veiculos_3h": 3,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
    "manchete": "Nas Filipinas, Lula exalta aproximação com Ásia e cancela discursos por afonia",
-   "veiculos": 11,
-   "veiculos_3h": 1,
+   "veiculos": 17,
+   "veiculos_3h": 2,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "UFC 334: Amanda Nunes e Kayla Harrison fazem encarada tensa",
-   "veiculos": 8,
-   "veiculos_3h": 2,
+   "manchete": "UFC 334: onde assistir, horário e card completo com Amanda Nunes em busca do cinturão dos peso-galo",
+   "veiculos": 16,
+   "veiculos_3h": 5,
    "motivo": "fora: esporte (ufc)"
   },
   {
-   "manchete": "Japan avenge World Cup loss with 3-2 win over Brazil amid late red-card drama in Singapore",
-   "veiculos": 8,
-   "veiculos_3h": 1,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Pedrinho é reeleito presidente do Vasco",
-   "veiculos": 8,
-   "veiculos_3h": 0,
-   "motivo": "fora: esporte (vasco)"
-  },
-  {
-   "manchete": "Carney Pledges C$560 Million for Brazil-Led Forest Project",
-   "veiculos": 7,
+   "manchete": "Em encontro com Lula, Carney promete US$ 400 mi para proteção de florestas",
+   "veiculos": 15,
    "veiculos_3h": 5,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Lula abre una \"nueva era\" de cooperación con Filipinas en su primera visita al país",
-   "veiculos": 7,
-   "veiculos_3h": 2,
+   "manchete": "Advogado brasileiro de “El Pollo” é encontrado morto em Madri",
+   "veiculos": 9,
+   "veiculos_3h": 3,
+   "motivo": "fora: crime ou tragedia (morto)"
+  },
+  {
+   "manchete": "Pais esquecem filho de 7 anos a bordo de avião após o desembarque, e piloto avisa torre de controle",
+   "veiculos": 9,
+   "veiculos_3h": 3,
    "motivo": "sem editoria"
   }
  ]
