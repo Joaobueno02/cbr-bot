@@ -1,0 +1,35 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><style>
+@font-face{font-family:'Fraunces';src:url('../../assets/fonts/fraunces-latin-full-normal.woff2') format('woff2');font-weight:100 900}
+@font-face{font-family:'Archivo';src:url('../../assets/fonts/archivo-latin-wght-normal.woff2') format('woff2');font-weight:100 900}
+@font-face{font-family:'Unbounded';src:url('../../assets/fonts/unbounded-latin-900-normal.woff2') format('woff2');font-weight:900}
+html,body{margin:0;padding:0}*{box-sizing:border-box}
+#q{width:1080px;height:1080px;position:relative;overflow:hidden;background:#101010;font-family:Archivo,sans-serif;color:#fff}
+#q p{margin:0}
+.foto{position:absolute;inset:0}
+.foto img{width:100%;height:100%;object-fit:cover;object-position:58% 50%;display:block;filter:brightness(.62) contrast(.9) saturate(.88)}
+.escuro{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,12,.55) 0%,rgba(10,10,12,0) 20%,rgba(10,10,12,0) 45%,rgba(10,10,12,.8) 75%,rgba(10,10,12,.92) 100%),radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 55%,rgba(0,0,0,.35) 100%)}
+/* acabamento fosco: grão fino + papel, como película */
+.grao{position:absolute;inset:0;mix-blend-mode:overlay;opacity:.2;
+ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 1.2 -.1'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.papel{position:absolute;inset:0;background:url('../../assets/papel.jpg') center/cover;mix-blend-mode:overlay;opacity:.32}
+.fosco{position:absolute;inset:0;background:rgba(235,232,225,.05)}
+.marca{position:absolute;left:64px;top:52px;line-height:1}
+.topo{display:flex;align-items:center;gap:12px}.cbr{font-family:Unbounded;font-weight:900;font-size:60px;letter-spacing:-3px;color:#fff}
+.ed{margin:6px 0 0 60px;display:flex;align-items:center;gap:5px;font-family:Archivo;font-weight:600;font-size:20px;letter-spacing:1px;color:#fff}
+.ed .e{display:flex;flex-direction:column;gap:3px}.ed .e{gap:2.5px}.ed .e i{display:block;width:13px;height:3.5px;border-radius:2px;background:#1646E0}
+.bloco{position:absolute;left:64px;right:110px;bottom:132px}
+.chapeu{display:inline-block;background:#1646E0;padding:10px 16px 6px;font-family:Fraunces,serif;font-weight:740;font-size:56px;line-height:1;letter-spacing:-1px;text-transform:uppercase;color:#fff;font-variation-settings:'SOFT' 0,'WONK' 0}
+.titulo{margin-top:18px!important;text-wrap:balance;font-family:Fraunces,serif;font-weight:640;font-size:52px;line-height:1.08;letter-spacing:-1px;font-variation-settings:'SOFT' 0,'WONK' 0;text-wrap:pretty}
+.mk{position:relative;z-index:0;font-weight:740;white-space:nowrap}
+.mk::before{content:'';position:absolute;z-index:-1;left:-.04em;right:-.1em;top:60%;bottom:2%;background:rgba(22,70,224,.75);transform:skewX(-16deg)}
+.barra{position:absolute;left:64px;right:64px;top:990px;height:3px;background:linear-gradient(90deg,#1646E0 0 86%,rgba(255,255,255,.3) 86%)}
+.cred{position:absolute;left:64px;right:64px;top:1006px;font-weight:700;font-size:15px;letter-spacing:1.6px;text-transform:uppercase;color:rgba(255,255,255,.62);white-space:nowrap}
+</style></head><body><div id="q">
+<div class="foto"><img src="../../fila/20261113-0715-senado-ajuste-isencoes/candidatas/02-grande.jpg"></div>
+<div class="escuro"></div><div class="papel"></div><div class="grao"></div><div class="fosco"></div>
+<div class="marca"><div class="topo"><svg width="46" height="46" viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="#E3AD16" stroke-linecap="round"><path d="M43 16 A32 32 0 1 1 24 57" stroke-width="10"/><path d="M25 63 L11 80" stroke-width="12"/><path d="M38 38 L82 82" stroke-width="10"/></g><path d="M14 40 L40 14 L52 26 L26 52 Z" fill="#E3AD16"/></svg><div class="cbr">CBR</div></div><div class="ed"><span class="e"><i></i><i></i><i></i></span>CONOMIA</div></div>
+<div class="bloco"><p class="chapeu">Contas públicas</p>
+<p class="titulo">Benefícios fiscais encolhem até <span class="mk">20%</span> com ajuste aprovado pelo Senado</p></div>
+<div class="barra"></div>
+<p class="cred">Foto: Ton Molina/Agência Senado · Fontes: Metrópoles, Brasil de Fato · 13/11/2026</p>
+</div></body></html>

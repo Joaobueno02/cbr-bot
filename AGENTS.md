@@ -102,6 +102,24 @@ Teste do radar: `python bot/radar.py` (precisa de internet) e confira `radar/sau
      rodadas passa a gravar as manchetes descartadas (campo `descartes`), e a rodada curta não conta como novo o candidato
      já descartado no mesmo dia, salvo se ele ganhou veículo novo desde o descarte.
 
+0b. **Dois formatos novos aprovados pelo João em 15/11/2026** (mexem na trava visual: antes e depois no PR e "muda o visual — precisa da aprovação do João"):
+   - **Feed quadrado** (`formato: "quadrado"`, 1080 × 1080, publicado como imagem de feed): modelo em
+     `prototipos/feed-quadrado/modelo.html` e `modelo.png`. Foto ocupando o quadrado inteiro, com brilho reduzido
+     (`brightness(.62) contrast(.9) saturate(.88)`), degradê escuro no topo e no pé e cantos escurecidos; acabamento fosco
+     (textura `assets/papel.jpg` em overlay a 0,32, grão fino a 0,2 e véu claro a 0,05). Marca no canto superior esquerdo
+     (64 px): foice e martelo na cor do ícone da editoria + "CBR" branco em Unbounded 60 px; embaixo, o nome da editoria
+     menor (20 px), branco, com só a letra estilizada na cor da editoria. Texto encostado embaixo (132 px do pé):
+     chapéu numa **tarja** sólida na cor da editoria com letra branca (Fraunces 740, 56 px, caixa alta); título branco
+     (Fraunces 640, 52 px, `text-wrap:balance`, destaque `*...*` com marca-texto na cor da editoria); **sem subtítulo na
+     arte** (vai para a legenda). Barra na cor da editoria a 990 px e crédito de 15 px logo abaixo. Margem única de 64 px.
+     Sem grade.
+   - **Reels "cartão com margem"** (o João escolheu a opção 2 do simulador): quadro 1080 × 1920 com a grade de fundo da
+     editoria na tela toda, foto num cartão com 90 px de margem e cantos de 28 px, de 330 a 1070 px; marca a 180 px com 90%
+     do tamanho; texto de 1070 a 1640 px (chapéu 48, título 58, apoio 28, margem 90). Imagens em `prototipos/reels-cartao/`.
+     Mantém o zoom lento e as 3 camadas do Reels de hoje.
+   - O `render.py` gera `arte-1.jpg` no tamanho do formato; `conferir_design.py` aplica as mesmas checagens (contraste da
+     marca, órfã, número quebrado) no quadrado. O Claude passa a escolher o formato pelo termômetro da seção 2 do MANUAL.
+
 1. **Story automático**: publicar o `story.jpg` (Story nativo 9:16, já gerado pelo render) como Story pela API, logo depois do post. Não mexe na trava visual (é `bot/publicar.py`), mas precisa de aprovação do João.
 2. **Slide de fechamento padrão do carrossel**: tipo `fechamento` (logo grande, @comunabrasileira_, "salve e compartilhe").
 3. **Arquivar as fontes**: ao publicar, enviar cada link de `fontes`/`apuracao` ao Save Page Now do Internet Archive e gravar o link arquivado no `post.json` (sem travar a publicação se o arquivo falhar).

@@ -252,6 +252,23 @@ política, semana de 2 a 9/11). Três regras:
      de procurar pauta nova;
    - serviço com prazo (Enem, 13º, IR, inscrições) e itens do calendário contam como pauta do dia.
 
+**Termômetro de alcance: Reels ou feed quadrado (regra do João, 15/11/2026).** Vale assim que o gerador tiver o formato
+`quadrado` e o Reels "cartão com margem" (AGENTS.md, item 0b); até lá, segue a regra do Reels comum abaixo. Some os pontos
+de cada pauta aprovada:
+- +3 nome conhecido no título (figura nacional: presidente, ministro, governador, senador ou deputado conhecido, ministro do
+  STF, candidato, empresário ou artista famoso);
+- +2 fala entre aspas ou contradição de político (discurso x prática);
+- +2 editoria `politica`, `eleicoes`, `gerais` ou `america_latina`;
+- +2 assunto quente: 5 ou mais veículos nas últimas 3 h no radar, marcado como "esquentou" ou estourando nas páginas de
+  referência (`radar/estouraram.json`);
+- +1 se vai sair entre 7h e 13h; -1 se vai sair entre 20h e 23h.
+Com **5 pontos ou mais**, sai como **Reels** (cartão com margem, com trilha). Com **menos de 5**, sai no **feed quadrado**
+(`"formato": "quadrado"`, sem `reels`): só chapéu e título na arte, e o subtítulo vai inteiro para a legenda. Errata
+continua no feed. Grave a conta no resumo da rodada (ex.: "nome +3, política +2, 9h +1 = 6 → Reels"). No teste com 94
+posts de 26/10 a 9/11 (sem os pontos de assunto quente), os de 5 ou mais tiveram mediana de 324 de alcance e reuniram 13
+dos 15 posts acima de 500; os outros ficaram com mediana de 17. O dossiê das 23h acompanha se a divisão continua
+separando bem e propõe ajuste nos pesos com os números.
+
 Descarte o que já está em `registro/posts.jsonl` (mesmo fato, mesmo que com outra manchete),
 a menos que haja fato novo relevante. Prefira notícia das últimas horas.
 
