@@ -494,6 +494,25 @@ com até 10 palavras, e rode `python bot/conferir_titulo.py fila/<id>/post.json`
 - Educação recorta a pessoa automaticamente; prefira foto com pessoas bem destacadas do fundo.
   Se o recorte falhar, a foto vai dentro do círculo verde.
 
+**Foto específica, não genérica (regra do João, 15/11/2026; vale acima dos itens anteriores onde conflitar).** Dos 139
+posts publicados até 14/11, 31% usaram foto do Wikimedia (em geral retrato de arquivo), 17 de 126 tiveram a foto
+esticada e 23 saíram com pouca nitidez. A foto escolhida é a de maior **nota de especificidade** entre as que passam no
+filtro de qualidade:
+- **Nota** (0 a 10): +4 é do próprio fato (mesma data e mesmo evento: a votação, a operação, o ato); +3 aparece a pessoa
+  citada no título; +2 mostra o lugar específico da notícia; +1 é dos últimos 6 meses; −2 retrato de arquivo com mais de
+  1 ano; −3 banco de imagem, ilustração ou montagem. **5 ou mais = específica.**
+- **Qualidade (corte, não pontua):** 1600 px de largura ou mais, sem aviso de ampliação nem de pouca nitidez no
+  `fotos.json`, sem marca d'água, logo ou texto de outro veículo.
+- **Busca em ondas**, parando quando houver foto específica e boa: (1) as fotos de **todos** os veículos que deram o fato
+  (`bot/cruzar.py` e `radar/atual.json`), não só as duas versões da apuração; (2) acervos oficiais pelo nome e pelo evento
+  (Agência Brasil, Agência Senado, Agência Câmara, Flickr do STF, do Planalto, de ministérios e governos); (3) busca na web
+  com nome, lugar e data, e Wikimedia só com foto recente. Quando o `fotos.json` trouxer `especificidade` (nota, motivos e
+  o que o Gemini viu), confirme abrindo as 3 melhores com Read; a decisão é sua.
+- **Sem foto específica depois das três ondas:** a pauta sai no feed quadrado (nunca no Reels) com a melhor foto genérica
+  de boa qualidade, e o resumo da rodada registra "foto genérica". Grave em `post.json` o campo `foto_especificidade`
+  (`{"nota": N, "motivos": [...], "onda": 1|2|3}`). O dossiê das 23h conta quantas fotos do dia foram específicas e quantas
+  genéricas, e em que onda cada uma foi achada.
+
 ## 6. Revisão de design (obrigatória, toda arte, tão rigorosa quanto a da notícia)
 
 Regra do João (16/10/2026): a estética é o que faz a página ser reconhecida. A revisão do design

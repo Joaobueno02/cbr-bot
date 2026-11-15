@@ -117,8 +117,35 @@ Teste do radar: `python bot/radar.py` (precisa de internet) e confira `radar/sau
      editoria na tela toda, foto num cartão com 90 px de margem e cantos de 28 px, de 330 a 1070 px; marca a 180 px com 90%
      do tamanho; texto de 1070 a 1640 px (chapéu 48, título 58, apoio 28, margem 90). Imagens em `prototipos/reels-cartao/`.
      Mantém o zoom lento e as 3 camadas do Reels de hoje.
+   - **Cores do quadrado por editoria** (modelos em `prototipos/feed-quadrado/editorias/`): tarja e barra na cor de destaque
+     (política #E0302A, eleições #FED700 com letra preta, economia #1646E0, América Latina #FF5A1F com o selo do país e a
+     barra tecida colorida, roça #4F7A1C com "da roça" escrito à mão embaixo do CBR, saúde #0BB39B, mais vivo que o
+     #087A6D de hoje); foice e martelo na cor do ícone da editoria. O "E" de barras (economia, eleições, saúde no fim da
+     palavra) tem exatamente a altura das maiúsculas: 3 barras de 3,3 px com 1,8 px entre elas para letra de 20 px (cap
+     height 13,5 px), largura 12,3 px, centrado na linha. Foto clara demais leva mais escurecimento.
+   - **Termômetro automático na triagem** (`bot/triagem.py`): para cada candidato, gravar em `radar/triagem.json` o campo
+     `termometro` com os pontos da regra do MANUAL (nome conhecido +3, aspas ou contradição +2, editoria quente +2, assunto
+     quente +2, horário +1/-1), a soma e o formato sugerido (`reels` com 5 ou mais, `quadrado` abaixo). Lista de nomes
+     conhecidos em `bot/nomes_conhecidos.json`, editável. O Claude confere e decide; o campo só adianta a conta.
    - O `render.py` gera `arte-1.jpg` no tamanho do formato; `conferir_design.py` aplica as mesmas checagens (contraste da
      marca, órfã, número quebrado) no quadrado. O Claude passa a escolher o formato pelo termômetro da seção 2 do MANUAL.
+
+0c. **Foto específica (pedido do João, 15/11/2026; não mexe na trava visual)** — `bot/sondar.py` e a regra da seção 5 do MANUAL:
+   - **Nota de especificidade** por candidata, gravada em `fotos.json` como `especificidade: {nota, motivos, gemini}`:
+     +4 do próprio fato (data da foto ou do caminho da URL igual à do fato e legenda que cita o evento), +3 aparece a pessoa
+     citada, +2 lugar específico, +1 últimos 6 meses, −2 arquivo com mais de 1 ano, −3 banco de imagem/ilustração/montagem.
+     O `sondar.json` passa a trazer `entidades` (pessoas, lugares, evento) e `data_fato`; o sondar lê legenda (`figcaption`),
+     `alt`, `title`, crédito e data perto de cada imagem e compara com as entidades. Depois manda as 6 melhores miniaturas
+     ao Gemini (visão, mesma chave da triagem; falha não trava) com a pergunta: quem aparece, que lugar é, parece foto do dia
+     ou de arquivo, é banco de imagem/ilustração. Ordena por nota, desempate por qualidade.
+   - **Filtro de qualidade mais duro:** corte em 1600 px de largura (hoje 1000), sem aviso de ampliação, nitidez mínima,
+     e detecção simples de marca d'água/logo/texto nas bordas (descarta ou marca `aviso`). Até 40 candidatas por pauta (hoje 15).
+   - **Ondas:** `sondar.json` aceita `onda: 1|2|3`. Onda 1: páginas de todos os veículos que deram o fato. Onda 2: buscas nos
+     acervos oficiais (Agência Brasil, Agência Senado, Agência Câmara, Flickr do STF, do Planalto, de ministérios e governos)
+     pelas entidades. Onda 3: Wikimedia Commons só com fotos de até 1 ano, mais URLs que o Claude achar na web. O resumo
+     do `fotos.json` diz a melhor nota da onda, para o Claude decidir se pede a próxima.
+   - Teste: rodar nas pastas `fila/20261114-1815-fux-trava-42h` (deve preferir Fux no STF do dia) e
+     `fila/20261113-0715-senado-ajuste-isencoes` (plenário do dia x arquivo) e anexar a ordem antes e depois no PR.
 
 1. **Story automático**: publicar o `story.jpg` (Story nativo 9:16, já gerado pelo render) como Story pela API, logo depois do post. Não mexe na trava visual (é `bot/publicar.py`), mas precisa de aprovação do João.
 2. **Slide de fechamento padrão do carrossel**: tipo `fechamento` (logo grande, @comunabrasileira_, "salve e compartilhe").
