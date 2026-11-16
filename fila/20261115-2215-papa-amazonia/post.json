@@ -1,5 +1,5 @@
 {
-  "status": "renderizado",
+  "status": "publicar",
   "formato": "quadrado",
   "editoria": "america_latina",
   "pais": "Peru",
@@ -88,7 +88,7 @@
   },
   "termometro": {
     "pontos": 6,
-    "conta": "nome +3, aspas +2, america_latina +2, 22h -1 = 6; foto 10 -> Reels"
+    "conta": "nome +3, aspas +2, america_latina +2, 23h -1 = 6; foto 10 -> Reels | formato final: quadrado (exceção: Reels reprovado só pela arte do story às 22h)"
   },
   "historico_revisao": [
     {
@@ -102,7 +102,7 @@
     },
     {
       "quando": "2026-11-16T02:10:00Z",
-      "nota": "rodada 23h: reaberto (descartado só pela arte às 22h). Termômetro: nome +3, américa latina +2, 23h -1 = 4 → feed quadrado; subtítulo já está na legenda.",
+      "nota": "rodada 23h: reaberto (descartado só pela arte às 22h). Termômetro honesto: nome +3, fala entre aspas +2, américa latina +2, 23h -1 = 6, foto nota 10 → pela regra seria Reels. EXCEÇÃO registrada: o Reels caiu 4 vezes às 22h pela marca do story (cabeça do bispo e pena atrás do 'BR'); o feed quadrado é a única arte aprovada do fato. Sai no quadrado para não perder a pauta; o dossiê leva a lacuna da regra ao João.",
       "revisao_design_anterior": {
         "aprovado": false,
         "problemas": [
@@ -111,14 +111,23 @@
         "quando": "2026-11-16T01:33:52Z"
       },
       "motivo_anterior": "arte: aprovado no conteúdo pelo revisor da notícia (2ª passada), mas no story/Reels a marca do topo encosta na cabeça do bispo à esquerda e a pena laranja cruza o \"BR\"; 4 renders na rodada (limite 3). Pela regra de 15/11, reabrir na rodada das 23h com outra foto de Pucallpa ou outro recorte."
+    },
+    {
+      "quando": "2026-11-16T02:20:00Z",
+      "revisor_noticia_1a_passada": {
+        "aprovado": false,
+        "problemas": [
+          "conta do termômetro omitia aspas (+2): soma 6 → Reels; registrar exceção"
+        ]
+      }
     }
   ],
   "revisao": {
     "aprovado": true,
     "problemas": [
-      "2ª passada: aprovado; sugeriu tirar 'na missa que celebrou na cidade' (feito) e confirmar o crédito EFE da foto"
+      "2ª passada 23h: aprovado; ressalva: quadrado é exceção registrada à seção 2 (termômetro 6), depende do OK do João"
     ],
-    "quando": "2026-11-16T01:33:52Z"
+    "quando": "2026-11-16T02:30:00Z"
   },
   "render": {
     "quando": "2026-11-16T02:08:17Z",
@@ -180,5 +189,10 @@
         }
       }
     ]
+  },
+  "revisao_design": {
+    "aprovado": true,
+    "problemas": [],
+    "quando": "2026-11-16T02:18:00Z"
   }
 }
