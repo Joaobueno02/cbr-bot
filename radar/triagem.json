@@ -1,30 +1,29 @@
 {
- "quando": "2026-11-16T15:09:07Z",
- "pauta_quando": "2026-11-16T15:09:06Z",
+ "quando": "2026-11-16T17:08:25Z",
+ "pauta_quando": "2026-11-16T17:08:23Z",
  "ok": true,
  "erro": null,
- "metodo": "regras + gemini",
+ "metodo": "regras",
  "ia": {
   "ia": "gemini",
-  "ok": true,
-  "erro": null,
-  "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 19,
-  "falhas_antes": "gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in",
-  "pedidos_hoje": 9
+  "ok": false,
+  "erro": "Gemini: gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in | gemi",
+  "modelo": null,
+  "avaliados_agora": 0,
+  "pedidos_hoje": 11
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 150,
- "novos_3h": 7,
- "esquentaram": 2,
+ "total_assuntos": 152,
+ "novos_3h": 6,
+ "esquentaram": 6,
  "candidatos": [
   {
    "manchete": "Aposentadoria pelo INSS terá novas exigências a partir de 2027",
    "secoes": [
     "B"
    ],
-   "veiculos": 28,
-   "veiculos_3h": 12,
+   "veiculos": 21,
+   "veiculos_3h": 5,
    "na_pauta_desde": "2026-11-15T21:19:38Z",
    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQTE9WcnVWM2h2b3ZQRlFmQjRyWGhCeFY0eUUxS3VjUG9fem9sY3UybEM0YmhySlQzZmp0dGJ4aWR4bXEteXFLZFg3ZU5oOEhURlBienZ3aHFkYmctbVVDMVIwR1hkVVQ0QzlyWUZFdzZMbmsycDVPejN1NG00N3MzNTEwdlh0b0NCczZldDlzMjB0b3dHUUtEVk9zZUJRUQ?oc=5",
    "editoria": "economia",
@@ -49,14 +48,15 @@
   {
    "manchete": "Maioridade penal aos 16 anos e câmeras em policiais têm apoio de 92% dos brasileiros, diz Quaest",
    "secoes": [
+    "A",
     "B"
    ],
-   "veiculos": 30,
-   "veiculos_3h": 28,
+   "veiculos": 41,
+   "veiculos_3h": 23,
    "na_pauta_desde": "2026-11-16T09:55:01Z",
-   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPeG1YaVN5QmE0VUlPSjg2cUFxUkJ3VDRuMzhya1lFYXBPRXpCY2hlS29BVzBwNGFfU2pxWXliSl9KSmdoSEFBRkdVd2VGMlhIRDJRTTdtOUhaQ3U5T0l2am1Id3hxNy1yVnBxVGp5MWpjdENJODJDOWQ1T1Q0YmZTelNSVVpnWkJjWklOOUVnZ2lfc2VhcjFXODB4a2dtbDNablA1dTRHcVplbEF1ZnQzZjlpd0FQQk1vOVJERHJCaVZETnc3X1F3?oc=5",
+   "link": "https://www.diariodocentrodomundo.com.br/quaest-9-em-cada-10-brasileiros-apoiam-reducao-da-maioridade-penal/",
    "editoria": "eleicoes",
-   "nota": 4,
+   "nota": 5,
    "esquentou": false,
    "lente": [],
    "ia": {
@@ -76,10 +76,10 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 20,
-   "veiculos_3h": 11,
+   "veiculos": 19,
+   "veiculos_3h": 6,
    "na_pauta_desde": "2026-11-16T08:37:09Z",
-   "link": "https://iclnoticias.com.br/dino-nega-brechas-no-fim-da-escala-6x1-apos-questionamentos-da-camara/",
+   "link": "https://www.gazetadopovo.com.br/republica/apos-criticas-dino-justifica-flexibilizacao-das-regras-para-o-fim-da-escala-6x1/",
    "editoria": "eleicoes",
    "nota": 5,
    "esquentou": false,
@@ -99,13 +99,37 @@
    }
   },
   {
+   "manchete": "Enem 2026: ministro da Educação cita tentativas de ataques hacker à página do Inep e diz que governo está 'controlando' situação",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 60,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-15T14:06:54Z",
+   "link": "https://g1.globo.com/educacao/enem/2026/noticia/2026/11/15/enem-2026-ministro-da-educacao-cita-tentativas-de-ataques-hacker-a-pagina-do-inep-e-diz-que-governo-esta-controlando-situacao.ghtml",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": true,
+   "lente": [],
+   "ia": {
+    "editoria": "educacao",
+    "I": 3,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Enem afeta milhões de estudantes; ataques hackers mobilizam o MEC.",
+    "soma": 5
+   }
+  },
+  {
    "manchete": "Mercado eleva previsão de inflação para 5% em 2027 e vê juros maiores, mostra Focus",
    "secoes": [
-    "B",
-    "C-nacional"
+    "A"
    ],
-   "veiculos": 10,
-   "veiculos_3h": 8,
+   "veiculos": 8,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-16T13:10:05Z",
    "link": "https://g1.globo.com/economia/noticia/2026/11/16/mercado-eleva-estimativa-de-inflacao-para-5percent-em-2027-e-preve-corte-menor-nos-juros.ghtml",
    "editoria": "economia",
@@ -127,52 +151,95 @@
    }
   },
   {
-   "manchete": "Gabarito oficial do 2º dia do Enem 2026: quando sai e como consultar no Inep",
+   "manchete": "Ministro Alexandre de Moraes nega pedido de Jair Bolsonaro para receber senadores em residência",
    "secoes": [
     "B"
    ],
-   "veiculos": 56,
-   "veiculos_3h": 19,
-   "na_pauta_desde": "2026-11-15T14:06:54Z",
-   "link": "https://g1.globo.com/educacao/noticia/2026/11/15/gabarito-oficial-do-enem-2026-sai-na-quarta-feira-diz-ministro-da-educacao.ghtml",
-   "editoria": "educacao",
-   "nota": 4,
+   "veiculos": 8,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-16T13:10:05Z",
+   "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOc0JQX2Zva0V4c0Z5NHNQTERfZG00LTA5aXlILUhkTDZVZ1k1VDhYYUY0NjRnb2tBOEg2Rlh6N1JkNjN5bWlUZl9SakVjYW0zODFSRExiZ3JBc2htUGwzSzFuWkh1NGNOTjJfbWtSR2Rfd1Q1eERCdkcwVzNheDU5ckh0SFVUc3pCQVNrZDN6M09rMGpXYVdZLVkyUGNKSXlaZWlqMXllM2tMM1pJenpEeUc0X3dPcDFlR3EzeWtablhRZ3RoSFlqamtiMFg5aWc?oc=5",
+   "editoria": "politica",
+   "nota": 6,
    "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "educacao",
-    "I": 3,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Milhares de estudantes aguardam o gabarito do Enem.",
-    "soma": 5
-   }
+   "lente": [
+    "bolsonar"
+   ]
   },
   {
-   "manchete": "Quatro em cada dez lulistas se dizem conservadores, aponta pesquisa Quaest",
+   "manchete": "El papa León XIV condena la explotación de la Amazonía y exige justicia para los pueblos indígenas",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 22,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-15T21:54:49Z",
+   "link": "https://www.jornada.com.mx/2026/11/16/mundo/030n1mun?partner=rss",
+   "editoria": "america_latina",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "indigena"
+   ]
+  },
+  {
+   "manchete": "Juiz condena candidata por vídeo que liga Flávio Bolsonaro a rachadinha, milicianos e Master",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-16T17:08:23Z",
+   "link": "https://www.cartacapital.com.br/cartaexpressa/juiz-condena-candidata-por-video-que-liga-flavio-bolsonaro-a-rachadinha-milicianos-e-master/",
+   "editoria": "eleicoes",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio",
+    "master"
+   ]
+  },
+  {
+   "manchete": "Esquerdistas que pediram voto para Lula agora convocam protesto contra o governo em Florianópolis",
+   "secoes": [
+    "A",
+    "D-famosos"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-15T12:07:06Z",
+   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxObWQyclNNR2xYZlN1eWo3amtxVndrS0s0NnZSYmJXRURnb2hvcXBWY2xyTmdWVDBXcVNZRWE0SGlNZGE3ZFhuRjJjUWRDWU9LTkR6aURkUVhHaFBjZjJqRVZ6ZWdwNGh0WllzREZ0eWJyeVNhYUZlZFpkTkxuaW1YMmhYM3dXVmZBelhsSmdrV0VidzlvNDFxU0dDdmxiTV9wM2NDUTBn?oc=5",
+   "editoria": "eleicoes",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "protesto"
+   ]
+  },
+  {
+   "manchete": "Brasileiro se define mais como de centro, e quatro em cada dez lulistas são conservadores, aponta Quaest",
    "secoes": [
     "B"
    ],
-   "veiculos": 23,
-   "veiculos_3h": 17,
+   "veiculos": 28,
+   "veiculos_3h": 13,
    "na_pauta_desde": "2026-11-16T08:37:09Z",
-   "link": "https://noticias.uol.com.br/politica/ultimas-noticias/2026/11/16/quatro-em-cada-dez-lulistas-se-dizem-conservadores-aponta-pesquisa.ghtm",
+   "link": "https://jornalggn.com.br/noticia/41-dos-eleitores-de-lula-sao-conservadores-mostra-quaest/",
    "editoria": "eleicoes",
    "nota": 4,
-   "esquentou": false,
+   "esquentou": true,
    "lente": [],
    "ia": {
     "editoria": "eleicoes",
     "I": 2,
     "V": 2,
     "P": 2,
-    "formato": "carrossel",
+    "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Perfil do eleitorado gera bons debates sobre o campo progressista.",
+    "motivo": "Pesquisa Quaest sobre perfil político e eleitoral.",
     "soma": 4
    }
   },
@@ -181,13 +248,13 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 13,
-   "veiculos_3h": 5,
+   "veiculos": 20,
+   "veiculos_3h": 8,
    "na_pauta_desde": "2026-11-16T08:37:09Z",
    "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPVWhFbXhPVDIzdHhnVE9lZnF0bnBIWHBOVktpY0w0Sy1XVDZrTDJCelUwQ3AyU3I5VTFnX2R4bXBKUkRuOFZwWkZvYWNDTV9VV0tCQUQzYWdmN0lBU2pwVllSd0hXZDUwYXM3OElZbzdjdm5wV1ZBc29XZnRIRWNTcGY5Q011S1Y1ajgyVTZvTW55NUQyLU5RMlNscWdfQmRCY2FYS2RJX2hIRndOM1NWck5kS0V5VjlrS3dDd3lka1FqV2lCd01YTXhybWFRYnM?oc=5",
    "editoria": "politica",
    "nota": 5,
-   "esquentou": false,
+   "esquentou": true,
    "lente": [
     "vorcaro"
    ],
@@ -208,12 +275,12 @@
    "secoes": [
     "D-terra"
    ],
-   "veiculos": 8,
-   "veiculos_3h": 3,
+   "veiculos": 9,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-16T08:37:09Z",
    "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxPdGZYT3pFLXVkY3A2TnkwNENsSmJmbnU4TkQ3dWZmSHAwR21pTWNIc3RNVXRTbU1iNjFvSXZ5WlM0Wml4cUxhbHNYWlpaX0FqRTZNdkczMU1SVXpKMjd5ZXhQSmcxczFRdjYwbldVWC1ZdF9LMFBESDhYY1hVUFFIMGpveThKMUdBX1ZrQkdJUFRXSFdBMWwyMFNjTnpDY1hOQ1J3cnZCTjRzSWo2SmdMcklKMVE3MExnaG9YWG1PY01aNXZSVjl4NDBOLTBNSy1MLU1LUi1jb2VlX3VUZ0VmSkhmdklLNldiWHVzazhDeW5WZ3FaS3JNVExJcDdKQ3N60gGPAkFVX3lxTE9TakJpXzNaVjVtakJNdExWOC1VNV9IOThDcm9tSk85SU1YeXNCanJleExGYXJIWUM3Skx6c3BkMDNKNmZSU29PczR6TS1oV1prNEROUDJ4a2NPcWFnVnJWV2RuZzhhUUtwbFRsQ3BkbFA2Q0w4bUxNaVRBUmljYmhMOXVrb2w5enVHTzcteGczTEhMV0J4T2FXMnV3aFJBM2FlcDduSkp2S2VDNE9Ld0N1OEZhM05EOWY3R1BPUzJuM3ZpaXNVTVhIa0NkSW5DeENHdHVwUTNhS2dzM0x6WkhtWlNVcnlScU1qYkZGX0pyakJjRTJhTmstVVVMM181QW81VHpqU1EtZWZXZThpZG8?oc=5",
    "editoria": "roca",
-   "nota": 7,
+   "nota": 6,
    "esquentou": true,
    "lente": [
     "lucro",
@@ -236,13 +303,13 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 20,
-   "veiculos_3h": 10,
+   "veiculos": 24,
+   "veiculos_3h": 12,
    "na_pauta_desde": "2026-11-16T08:37:09Z",
    "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/ministerio-da-saude-abre-processo-seletivo-com-salarios-de-ate-r-103-mil.shtml",
    "editoria": "economia",
    "nota": 5,
-   "esquentou": false,
+   "esquentou": true,
    "lente": [
     "salario"
    ],
@@ -259,225 +326,121 @@
    }
   },
   {
-   "manchete": "Dólar dispara e supera R$ 5,73 com política fiscal de Lula no foco",
+   "manchete": "Romelu Lukaku, maior artilheiro da história da Bélgica, anuncia aposentadoria da seleção",
    "secoes": [
-    "B",
-    "C-nacional"
+    "B"
    ],
-   "veiculos": 6,
-   "veiculos_3h": 6,
+   "veiculos": 14,
+   "veiculos_3h": 7,
    "na_pauta_desde": "2026-11-16T13:10:05Z",
-   "link": "https://g1.globo.com/economia/noticia/2026/11/16/dolar-ibovespa.ghtml",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/esporte/2026/11/atacante-romelu-lukaku-se-aposenta-da-selecao-belga.shtml",
    "editoria": "economia",
    "nota": 5,
    "esquentou": false,
    "lente": [
-    "dispara"
-   ],
-   "ia": {
-    "editoria": "economia",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Alta do dólar pesa no bolso e gera debate fiscal.",
-    "soma": 4
-   }
+    "aposentad"
+   ]
   },
   {
-   "manchete": "Gobierno anuncia fecha clave para definir el aumento del salario mínimo en Colombia para 2027: esto deben saber los trabajadores",
+   "manchete": "Papa Leão encerra viagem à América do Sul após reunir 12 milhões de fiéis",
    "secoes": [
+    "B",
     "D-america_latina"
    ],
-   "veiculos": 4,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-16T13:10:05Z",
-   "link": "https://elpais.com/economia/2026-11-16/el-gobierno-aprobara-este-martes-la-subida-del-salario-minimo-de-2027-a-1286-euros.html",
+   "veiculos": 8,
+   "veiculos_3h": 7,
+   "na_pauta_desde": "2026-11-16T17:08:23Z",
+   "link": "https://g1.globo.com/mundo/noticia/2026/11/16/papa-leao-xiv-se-despede-do-peru-e-encerra-viagem-de-12-dias-pela-america-do-sul.ghtml",
    "editoria": "america_latina",
    "nota": 5,
    "esquentou": false,
-   "lente": [
-    "salario"
-   ],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Salário mínimo na Colômbia afeta trabalhadores da região.",
-    "soma": 4
-   }
+   "lente": []
   },
   {
-   "manchete": "Milei confirma que tentará a reeleição à presidência da Argentina em 2027",
+   "manchete": "Justiça do Paraguai ordena transferir ex-presidente para prisão militar após denúncias de privilégios em presídio",
    "secoes": [
+    "B",
+    "C-nacional",
     "D-america_latina"
    ],
-   "veiculos": 30,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-15T12:07:06Z",
-   "link": "https://www.gazetadopovo.com.br/mundo/milei-reeleicao-argentina-2027/",
+   "veiculos": 5,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-16T17:08:23Z",
+   "link": "https://g1.globo.com/mundo/noticia/2026/11/16/ex-presidente-do-paraguai-santiago-pena-e-transferido-para-prisao-militar.ghtml",
    "editoria": "america_latina",
-   "nota": 6,
+   "nota": 5,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Morgan Stanley rebaixa ações brasileiras para venda, mas mantém aposta na América Latina",
+   "secoes": [
+    "B",
+    "C-internacional",
+    "D-america_latina"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-16T17:08:23Z",
+   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPWkthY09icG5TVnl3U09BcFNnZmtPQU5UQ2hVaXZDWVNTTFRUZ2hrYm9McV9jcG5BeU1zTmU0U25kZ0xkNm1lSEFJdGdnU3JzSGhuNS01cHdXczVVMGhaSmRWX0U3NjR1aDFUSXJqVjdiN1VyZkFndjh3TkFvaE1nbU5VajRGeE9yR29xMS1zaXJoaVlXUFlmbTRzRDNyQVNJaThlTmZlT3ROQk9FSXI3a3R3MGNBYmZRQ1VjZWo1eGM?oc=5",
+   "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Comissão aprova proposta que amplia Política de Agricultura Urbana para fortalecer segurança alimentar",
+   "secoes": [
+    "B",
+    "C-nacional",
+    "D-terra"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-16T17:08:23Z",
+   "link": "https://www.camara.leg.br/noticias/1319667-comissao-aprova-proposta-que-amplia-politica-de-agricultura-urbana-para-fortalecer-seguranca-alimentar",
+   "editoria": "roca",
+   "nota": 5,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Suplente de deputado é condenada a indenizar Flávio Bolsonaro",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-16T17:08:23Z",
+   "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQVk1ucURsRGcxZUtoc0RsR0xvVUNlM0k0YUt3b0o1ajRsdlhUa3hRQlE3em85X25MQm9BN0pJQjQ2bE9PTGNpUUJnZGVXU1lESkh4NUQ3Rmo0b29lcDNzUzYtNzZRWThfTVhkaTB5OXpzMVpTNFgzOFdMdUw3QUh1UHVoaGdiSUFOSkEwZ002bHZtV00?oc=5",
+   "editoria": "politica",
+   "nota": 5,
    "esquentou": false,
    "lente": [
-    "milei"
-   ],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Milei buscando reeleição interessa à geopolítica regional e esquerda.",
-    "soma": 4
-   }
+    "bolsonar",
+    "flavio"
+   ]
   },
   {
    "manchete": "Ajuste fiscal: Alckmin afirma que projeto do governo 'vai na direção correta' e diz esperar votação na Câmara nesta semana",
    "secoes": [
     "B"
    ],
-   "veiculos": 35,
-   "veiculos_3h": 14,
+   "veiculos": 47,
+   "veiculos_3h": 20,
    "na_pauta_desde": "2026-11-15T16:07:07Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/15/ajuste-fiscal-alckmin-afirma-que-projeto-do-governo-vai-na-direcao-correta-e-diz-esperar-votacao-na-camara-nesta-semana.ghtml",
    "editoria": "politica",
    "nota": 4,
    "esquentou": true,
    "lente": []
-  },
-  {
-   "manchete": "Anvisa apreende e proíbe tira-manchas de percarbonato sódio; veja marcas",
-   "secoes": [
-    "B",
-    "C-nacional"
-   ],
-   "veiculos": 13,
-   "veiculos_3h": 12,
-   "na_pauta_desde": "2026-11-16T13:10:05Z",
-   "link": "https://www1.folha.uol.com.br/equilibrioesaude/2026/11/anvisa-apreende-e-proibe-tira-manchas-de-percarbonato-sodio-veja-marcas.shtml",
-   "editoria": "saude",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "André Janones critica setores da esquerda por oposição ao ajuste fiscal do governo Lula",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 20,
-   "veiculos_3h": 10,
-   "na_pauta_desde": "2026-11-15T12:07:06Z",
-   "link": "https://www.gazetadopovo.com.br/vozes/alexandre-garcia/arcaboucinho-fiscal-lula-conta-recai-nacao/",
-   "editoria": "economia",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Enem 2026: ministro da Educação relata tentativas de ataques hacker ao site do Inep",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 61,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-15T14:06:54Z",
-   "link": "https://g1.globo.com/educacao/enem/2026/noticia/2026/11/15/enem-2026-ministro-da-educacao-cita-tentativas-de-ataques-hacker-a-pagina-do-inep-e-diz-que-governo-esta-controlando-situacao.ghtml",
-   "editoria": "politica",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Que horas acaba o segundo dia do Enem?",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 25,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-15T14:06:54Z",
-   "link": "https://g1.globo.com/educacao/enem/2026/noticia/2026/11/15/que-horas-acaba-o-segundo-dia-do-enem.ghtml",
-   "editoria": "educacao",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [],
-   "outras_manchetes": 1
-  },
-  {
-   "manchete": "Casos de covid grave aumentam em cinco estados e no DF, diz Fiocruz",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 16,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-16T15:09:06Z",
-   "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNU1o4X0RMaTAzM2d5NWZTT1cwS1h3TUg4LWZLZ2Z2MFI0bm4xWDNlN1EzMElFbEllcHk5dFZKSTdXZF9XZkh3THN1Yy1ldDBzYkc0RU0zck56NjZFUjd6UmtmRTlQUjV0SEp6WkhpYXZ3TnptbWhoQkhidnAtTV9VVTFxdGZvdm04N2ZjaVcxaE42cnFnYTd6TExmX054TWpfUlhhNG5vdFVIbU5rNjYtU2tZYmZxdTRHa2NRNmJIWVZ0X1pUX1NHbHlqRmRuS2VnUm9TeVFyS3ZTWjJfM2FxOQ?oc=5",
-   "editoria": "saude",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Mauro Cid solicita ao STF autorização para cumprir restante da pena no Rio de Janeiro",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 7,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-16T13:10:05Z",
-   "link": "https://www.cartacapital.com.br/justica/defesa-de-mauro-cid-pede-autorizacao-moraes-para-cumprir-pena-no-rio-de-janeiro/",
-   "editoria": "politica",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Anvisa manda suspender o uso de dois produtos de limpeza famosos nas redes sociais",
-   "secoes": [
-    "B",
-    "C-pesquisa"
-   ],
-   "veiculos": 7,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-16T13:10:05Z",
-   "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPaVNwOHFXVW5lMmxid0Fjd1NJWExCTEN1YXhBQjViM2JnUHdYWTFFajVHM0t3Q2JhQ01fcmVRb3Z3cjRIaVZkQjJES0NXTHBYUTNfbElKN3NwcUFuRTVSVDlVSl9uS1pkbG5DSHpSMGM2WGZ2T1hvMUJLMkJKek5jWEtyV19IZnFLbzBnMGdQWkJRTFpXdENWZEhxdzRhbnlDaU1lZklKQnBWSHFkaEtvRmxzZFg1UjNRc2hxcmE4YzNDTWI2NzJKTktrSlljVXFSQm5ValpRRXdsX3BkbkHSAd4BQVVfeXFMT2lTcDhxV1VuZTJsYndBY3dTSVhMQkxDdWF4QUI1YjNiZ1B3WFkxRWo1RzNLd0NiYUNNX3JlUW92d3I0SGlWZEIyREtDV0xwWFEzX2xJSjdzcHFBbkU1UlQ5VUpfbktaZGxuQ0h6UjBjNlhmdk9YbzFCSzJCSnpOY1hLcldfSGZxS28wZzBnUFpCUUxaV3RDVmRIcXc0YW55Q2lNZWZJSkJwVkhxZGhLb0Zsc2RYNVIzUXNocXJhOGMzQ01iNjcySk5La0pZY1VxUkJuVWpaUUV3bF9wZG5B?oc=5",
-   "editoria": "saude",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
   }
  ],
  "rebaixados": [
   {
-   "manchete": "Mercado reduz previsão de inflação para 2026, mas vê Selic e dólar mais altos em 2027",
-   "veiculos": 17,
-   "veiculos_3h": 12,
-   "na_pauta_desde": "2026-11-16T13:10:05Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "economia",
-    "I": 2,
-    "V": 1,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Previsões econômicas afetam juros e poder de compra.",
-    "soma": 3
-   }
-  },
-  {
    "manchete": "Perdeu um dos dias de Enem 2026? Saiba se tem direito à reaplicação",
-   "veiculos": 10,
+   "veiculos": 14,
    "veiculos_3h": 5,
    "na_pauta_desde": "2026-11-15T14:06:54Z",
    "esquentou": false,
@@ -494,99 +457,27 @@
    }
   },
   {
-   "manchete": "63,7% dos trabalhadores veem baixo risco de perder o emprego, diz FGV",
-   "veiculos": 5,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-16T13:10:05Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "economia",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Dado da FGV sobre emprego, mas sem grande conflito viral.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "ANS amplia cobertura obrigatória para tratamento de câncer de pulmão",
-   "veiculos": 5,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-16T13:10:05Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "saude",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Ampliação de cobertura da ANS afeta tratamento de saúde.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Agências do Trabalhador oferecem 27.173 vagas com carteira assinada no Paraná",
-   "veiculos": 4,
+   "manchete": "Reconhecida emergência em 61 cidades paraenses afetadas por incêndios florestais",
+   "veiculos": 7,
    "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-16T15:09:06Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "economia",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Vagas de emprego regionais com impacto moderado.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Bolsonarista Léo Santana é vaiado e ouve coro de “Lula” em show de Ivete Sangalo",
-   "veiculos": 5,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-15T14:06:54Z",
+   "na_pauta_desde": "2026-11-16T01:07:27Z",
    "esquentou": false,
    "ia": {
     "editoria": "gerais",
-    "I": 1,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Famoso e política geram engajamento leve.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Peru: Papa Leão XIV centra visita na defesa dos povos indígenas e da Amazónia",
-   "veiculos": 31,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-15T21:54:49Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
+    "I": 2,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Visita papal na América Latina tem menor apelo direto no Brasil.",
-    "soma": 2
+    "motivo": "Emergência no Pará por incêndios florestais afeta população.",
+    "soma": 3
    }
   },
   {
    "manchete": "Caso ueno bank: Fiscalía ordena detención del director jurídico del BCP por presunta alteración de informes",
-   "veiculos": 18,
-   "veiculos_3h": 5,
+   "veiculos": 20,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-15T10:07:10Z",
    "esquentou": false,
    "ia": {
@@ -603,8 +494,8 @@
   },
   {
    "manchete": "Enem 2026 repete circuito que caiu em 2013 na prova de Física, com números diferentes",
-   "veiculos": 10,
-   "veiculos_3h": 0,
+   "veiculos": 9,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-16T01:07:27Z",
    "esquentou": true,
    "ia": {
@@ -620,85 +511,390 @@
    }
   },
   {
-   "manchete": "Coopanest Tocantins suspende serviços de anestesiologia em cirurgias eletivas e mutirões do SUS a partir desta segunda-feira, 16",
-   "veiculos": 7,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-16T13:10:05Z",
+   "manchete": "Duda Salabert cobra reajuste de bolsas de pesquisa do governo Lula",
+   "veiculos": 3,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-16T15:09:06Z",
    "esquentou": false,
    "ia": {
-    "editoria": "saude",
+    "editoria": "educacao",
     "I": 2,
     "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": true,
     "risco": "",
-    "motivo": "Paralisação no SUS já foi publicada anteriormente.",
+    "motivo": "Reajuste de bolsas de pesquisa já abordado em pauta similar.",
     "soma": 4
+   }
+  },
+  {
+   "manchete": "Muere Miguel Ángel Félix Gallardo, el capo de capos del narcotráfico mexicano",
+   "veiculos": 32,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-15T16:28:02Z",
+   "esquentou": true,
+   "ia": {
+    "editoria": "fora",
+    "I": 0,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Morte de narcotraficante histórico no México não afeta o Brasil diretamente.",
+    "soma": 1
+   }
+  },
+  {
+   "manchete": "\"Soy el papa León\": En helicóptero viaja a Cusco el pontífice en el quinto día de su visita a Perú",
+   "veiculos": 9,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-16T09:55:01Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 0,
+    "V": 0,
+    "P": 0,
+    "formato": "feed",
+    "repetido": true,
+    "risco": "",
+    "motivo": "Assunto repetido sobre a viagem do Papa ao Peru.",
+    "soma": 0
    }
   }
  ],
- "obrigatorios": [],
+ "obrigatorios": [
+  {
+   "manchete": "Pedro Sánchez se reúne con al presidente de Brasil, Lula da Silva, en la Moncloa",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 7,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-16T01:25:15Z",
+   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxObWpJdDU4MTVNTEthUDVMMlJhWEVrWXNaR1N6LTNhTThmWWhyajU3azFGektoaVpXUVhYeHJBUlV1LTJ5STQ0Q0JySFplZG5ISEtiRGZQZGxhaXE2RXZwajhJc2pPamQ0NkNzRVVuYTRRZ0p3QVVhbnZZWGt6S1dyZ2tpMTBWNVdnYi1qdEFmSkczYkR0LUQ1Z0EwTmdXdXBHZUdmVl9qd0N4RXdNa0tVSGZvUQ?oc=5",
+   "editoria": "gerais",
+   "nota": 3,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-16T13:46:34Z",
+    "legenda": "O apresentador Rodrigão, do Podcast 3 Irmãos, afirmou que os danos causados ao presidente Luiz Inácio Lula da Silva e à sua falecida esposa, Marisa Letícia, dur",
+    "link": "https://www.instagram.com/reel/DfzfohyD3g1/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": null,
+   "nota": null,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-16T11:37:25Z",
+    "legenda": "Da série: vídeos que envelheceram maravilhosamente bem! 🔥",
+    "link": "https://www.instagram.com/reel/DfzQvM8B0dn/"
+   },
+   "triagem": "fora: entretenimento (serie)"
+  },
+  {
+   "manchete": "Esquerdistas que pediram voto para Lula agora convocam protesto contra o governo em Florianópolis",
+   "secoes": [
+    "A",
+    "D-famosos"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-15T12:07:06Z",
+   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxObWQyclNNR2xYZlN1eWo3amtxVndrS0s0NnZSYmJXRURnb2hvcXBWY2xyTmdWVDBXcVNZRWE0SGlNZGE3ZFhuRjJjUWRDWU9LTkR6aURkUVhHaFBjZjJqRVZ6ZWdwNGh0WllzREZ0eWJyeVNhYUZlZFpkTkxuaW1YMmhYM3dXVmZBelhsSmdrV0VidzlvNDFxU0dDdmxiTV9wM2NDUTBn?oc=5",
+   "editoria": "eleicoes",
+   "nota": 6,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-16T14:45:04Z",
+    "legenda": "O governo Lula intensificou a articulação política para levar à votação, ainda nesta semana, o projeto que estabelece novas regras de concorrência para as grand",
+    "link": "https://www.instagram.com/p/DfzmcFBFIIB/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Canadá anuncia US$ 400 milhões para fundo de proteção florestal após reunião com Lula",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 9,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-16T17:08:23Z",
+   "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOcjhWWktXaF9iWXNCMGRVZU1NY3NGZURUS1d5REFYdG1JdVVSMnZ5cDd0NDRrNnlic29wejkzeVhJeExUUVZfWE05NlRJNVc5VXZvSmYyT01JR3cxYkl5Q2ZGZ0ROVFFLWE5GM3RsTU4xWGpQNnNKYXlnMnNBWkwyQzdn?oc=5",
+   "editoria": "politica",
+   "nota": 4,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-16T11:30:16Z",
+    "legenda": "O primeiro-ministro do Canadá, Mark Carney, anunciou um aporte de aproximadamente US$ 400 milhões (R$ 2,26 bilhões) ao Fundo Florestas Tropicais para Sempre (TF",
+    "link": "https://www.instagram.com/p/DfzQFTpBscq/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Mercado eleva previsão de inflação para 5% em 2027 e vê juros maiores, mostra Focus",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 8,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-16T13:10:05Z",
+   "link": "https://g1.globo.com/economia/noticia/2026/11/16/mercado-eleva-estimativa-de-inflacao-para-5percent-em-2027-e-preve-corte-menor-nos-juros.ghtml",
+   "editoria": "economia",
+   "nota": 6,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-16T14:16:05Z",
+    "legenda": "Os analistas do mercado financeiro elevaram as projeções da inflação para 2027 pela quinta semana consecutiva, enquanto reduziram as expectativas para este ano.",
+    "link": "https://www.instagram.com/p/DfzjHt-lHFy/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Violência doméstica e familiar atinge mais mulheres negras, aponta DataSenado",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-16T17:08:23Z",
+   "link": "https://www12.senado.leg.br/noticias/materias/2026/11/16/violencia-domestica-e-familiar-atinge-mais-mulheres-negras-aponta-datasenado",
+   "editoria": "gerais",
+   "nota": 2,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-16T14:30:07Z",
+    "legenda": "Uma em cada três mulheres negras brasileiras já sofreu algum tipo de violência doméstica ou familiar praticada por um homem. O percentual é de 29%, segundo leva",
+    "link": "https://www.instagram.com/p/DfzkukajUE7/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-16T13:30:06Z",
+    "legenda": "A poluição por plástico já ultrapassa rios da Amazônia e alcança diferentes espécies, inclusive em áreas de conservação distantes dos centros urbanos. Pesquisas",
+    "link": "https://www.instagram.com/p/Dfzd286jP-1/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "China faz primeiro voo tripulado de avião comercial elétrico de passageiros do mundo; assista",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 8,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-15T21:54:49Z",
+   "link": "https://g1.globo.com/economia/noticia/2026/11/16/aviao-comercial-eletrico-china-primeiro-voo-tripulado.ghtml",
+   "editoria": null,
+   "nota": null,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-16T12:45:41Z",
+    "legenda": "A China realizou no sábado (14) o primeiro voo tripulado de seu avião comercial 100% elétrico, o CE-25A, desenvolvido pela Commercial Aircraft Corporation of Ch",
+    "link": "https://www.instagram.com/reel/DfzYu0Sjlkn/"
+   },
+   "triagem": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Maioridade penal aos 16 anos e câmeras em policiais têm apoio de 92% dos brasileiros, diz Quaest",
+   "secoes": [
+    "A",
+    "B"
+   ],
+   "veiculos": 41,
+   "veiculos_3h": 23,
+   "na_pauta_desde": "2026-11-16T09:55:01Z",
+   "link": "https://www.diariodocentrodomundo.com.br/quaest-9-em-cada-10-brasileiros-apoiam-reducao-da-maioridade-penal/",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-16T14:03:05Z",
+    "legenda": "Pesquisa Quaest divulgada nesta segunda-feira (16) revela que 92% dos brasileiros são favoráveis à redução da maioridade penal de 18 para 16 anos. O mesmo perce",
+    "link": "https://www.instagram.com/p/Dfzhocwjlb8/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Reconhecida emergência em 61 cidades paraenses afetadas por incêndios florestais",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 7,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-16T01:07:27Z",
+   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNRDhOc2dtd3Iwa3NPeS04UTNZQU5EY25GTDhKbEtwM2VvX1FFWlVFNi1xMU9icUgwMU1nMG5CLUdEUGotd0hYU25uaExmSmk2ZkV3Y2NFMm5pckl1cDNWMjNKYVpqbUlrdUtxYnFFdjZCdjVWUXBUU0hucWxVaEFTQ3o2aFU5VXYzSVRwelc5aWhRUmVSTndYUFdZTVIwQXhKU0JFTnhIQUk5MkhldDl2S2hmaFpWY3VSelE?oc=5",
+   "editoria": "gerais",
+   "nota": 7,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-16T12:15:28Z",
+    "legenda": "O governo do Pará decretou situação de emergência de nível II diante do avanço dos incêndios florestais que ameaçam comunidades indígenas e áreas de preservação",
+    "link": "https://www.instagram.com/p/DfzVUQ9IVL7/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "O gabarito oficial do Exame Nacional do Ensino Médio (Enem) de 2026 será publicado na próxima quarta-feira (18). Já o resultado do exame está previsto para ser divulgado pelo Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep)",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-16T17:08:23Z",
+   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBKRDl1QXRUUFFzZUZ0Tk5BcmROb1JCMmg4MzNES1RtTWhkeHoxZzhRQjA5UDZaUWlXanBDWkItSFFQUFB5NUdIY0ZDai1vbnNHTGc?oc=5",
+   "editoria": "educacao",
+   "nota": 3,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-16T11:14:49Z",
+    "legenda": "O gabarito oficial do Exame Nacional do Ensino Médio (Enem) 2026 será divulgado na próxima quarta-feira (18), enquanto o resultado final está previsto para 18 d",
+    "link": "https://www.instagram.com/p/DfzOLvEhp9M/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Brasil avança em políticas de alimentação e clima, diz estudo",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-16T13:10:05Z",
+   "link": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-11/brasil-avanca-em-politicas-de-alimentacao-e-clima-diz-estudo",
+   "editoria": "gerais",
+   "nota": 3,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-16T12:02:48Z",
+    "legenda": "O Brasil registrou avanços importantes na integração das políticas de alimentação e combate às mudanças climáticas. Segundo um estudo internacional divulgado ne",
+    "link": "https://www.instagram.com/p/DfzT3hSoTIq/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "politica",
+   "nota": 3,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-16T13:05:00Z",
+    "legenda": "BFC OPINIÃO 🔥 Quem manda no seu celular? por João Paulo Mehl - jpmehl Nesta terça-feira (17), o Congresso Nacional vota o PL 4675, projeto que muda a forma como",
+    "link": "https://www.instagram.com/reel/Dfza2KjFRVe/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 4,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-16T15:00:09Z",
+    "legenda": "O Ministério da Igualdade Racial (MIR) está na COP31, em Antália, na Turquia, com uma agenda voltada ao enfrentamento do racismo ambiental e ao fortalecimento d",
+    "link": "https://www.instagram.com/p/DfzoKjYEqU7/"
+   },
+   "triagem": "candidato"
+  }
+ ],
  "descartados_mais_quentes": [
   {
    "manchete": "Lula encerra pela Espanha primeiro giro internacional após reeleição",
-   "veiculos": 57,
-   "veiculos_3h": 37,
+   "veiculos": 58,
+   "veiculos_3h": 19,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Lula confirmó que mañana se reunirá con Pedro Sánchez en Madrid, en la cuenta regresiva para las elecciones en España",
+   "manchete": "Lula confirmó que se reunirá en Madrid con Pedro Sanchez: el respaldo político antes de las elecciones en España",
    "veiculos": 47,
-   "veiculos_3h": 33,
+   "veiculos_3h": 19,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Lula vai decidir formação de ministério do próximo governo a partir desta semana, diz Alckmin",
-   "veiculos": 43,
-   "veiculos_3h": 12,
+   "manchete": "Moraes nega visita de Valdemar, Marinho e Tereza Cristina a Bolsonaro",
+   "veiculos": 37,
+   "veiculos_3h": 9,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Rússia confirma encontro de Putin, Trump e Xi em meio a impasse sobre a Ucrânia",
-   "veiculos": 39,
-   "veiculos_3h": 14,
+   "manchete": "Xi, Putin e Trump se reunirão pela primeira vez na China, confirma porta-voz do Kremlin",
+   "veiculos": 36,
+   "veiculos_3h": 10,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Moraes nega visita de Rogério Marinho e Tereza Cristina a Bolsonaro",
-   "veiculos": 33,
-   "veiculos_3h": 33,
+   "manchete": "Novo James Bond: cinco atores disputam o papel, e anúncio pode sair até o fim de 2026",
+   "veiculos": 25,
+   "veiculos_3h": 25,
    "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Ucrânia lança mais de 1.300 drones contra a Rússia e atinge ponte estratégica na Crimeia",
+   "veiculos": 25,
+   "veiculos_3h": 6,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
    "manchete": "Mãe é presa após jogar filha de 4 anos de viaduto no Centro de SP; criança morreu",
-   "veiculos": 21,
-   "veiculos_3h": 7,
+   "veiculos": 24,
+   "veiculos_3h": 6,
    "motivo": "fora: crime ou tragedia (morreu)"
   },
   {
-   "manchete": "Michelle diz que tirou dez dias de descanso e que filha cuida de Bolsonaro",
-   "veiculos": 20,
-   "veiculos_3h": 5,
+   "manchete": "EUA criam regra para restringir acesso remoto do Brasil e outros países a chips avançados de IA",
+   "veiculos": 15,
+   "veiculos_3h": 15,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Israel mata comandante do Hamas em ataque em Gaza",
-   "veiculos": 17,
+   "manchete": "Trump culpa governo Biden por paralisação nacional de voos nos EUA",
+   "veiculos": 15,
    "veiculos_3h": 4,
-   "motivo": "fora: crime ou tragedia (mata)"
+   "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Inter x Flamengo hoje: onde assistir ao vivo, horário e escalações pela final da Copa do Brasil Feminina",
-   "veiculos": 16,
-   "veiculos_3h": 5,
-   "motivo": "fora: esporte (flamengo)"
-  },
-  {
-   "manchete": "Relembre a carreira de Dino Sani, campeão mundial em 1958, morto aos 94",
+   "manchete": "Cid diz que viver em Brasília ficou caro e pede a Moraes para voltar ao RJ",
    "veiculos": 14,
-   "veiculos_3h": 5,
-   "motivo": "fora: crime ou tragedia (morto)"
+   "veiculos_3h": 8,
+   "motivo": "sem editoria"
   }
  ]
 }
