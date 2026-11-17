@@ -1,30 +1,48 @@
 {
- "quando": "2026-11-17T20:08:03Z",
- "pauta_quando": "2026-11-17T20:07:59Z",
+ "quando": "2026-11-17T22:07:40Z",
+ "pauta_quando": "2026-11-17T22:07:38Z",
  "ok": true,
  "erro": null,
- "metodo": "regras + gemini",
+ "metodo": "regras",
  "ia": {
   "ia": "gemini",
-  "ok": true,
-  "erro": null,
-  "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 16,
-  "falhas_antes": null,
-  "pedidos_hoje": 20
+  "ok": false,
+  "erro": "Gemini: gemini-flash-latest: ReadTimeout | gemini-flash-latest: HTTP 503 This model is currently experiencing high demand. Spikes in",
+  "modelo": null,
+  "avaliados_agora": 0,
+  "pedidos_hoje": 22
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
  "total_assuntos": 164,
- "novos_3h": 8,
- "esquentaram": 2,
+ "novos_3h": 3,
+ "esquentaram": 5,
  "candidatos": [
+  {
+   "manchete": "Saiba qual a previsão de reajuste das aposentadorias e pensões do INSS acima do piso em 2027",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 11,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-17T12:08:39Z",
+   "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOWmc0T1NUbEFPMmJLZzMxUmpQWVN2WExlZEZLcHRTcTZjQUdCYlNNLVlySXNvZzBsYzV6ajRia2RZQWhxbS1CanFxcFVpbVNnelBlLUp3WHNjUVJsWW5OcDdlcUxHeUtjLU9GMzdwazFtNHpqWkt2dWtIMVpYYUNsMFpNWTFiQzdjZkFvRjgta2lPYUJmUnFjeFU3eTFheUlEZDQzTzhWR1VTY1loMHo5VTF6X2d5dkRRY2ZqOVE4N2xiVGQ0dXlqdXhYNWRMQWFoNlNiYjlPUndDRHF6Zk1J?oc=5",
+   "editoria": "economia",
+   "nota": 8,
+   "esquentou": true,
+   "lente": [
+    "aposentad",
+    "inss",
+    "piso",
+    "reajuste"
+   ]
+  },
   {
    "manchete": "Caso Master completa um ano com Vorcaro preso, expectativa de denúncia e crise no STF",
    "secoes": [
     "B"
    ],
-   "veiculos": 29,
-   "veiculos_3h": 10,
+   "veiculos": 43,
+   "veiculos_3h": 16,
    "na_pauta_desde": "2026-11-17T18:08:26Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/17/caso-master-completa-um-ano-com-vorcaro-preso-expectativa-de-denuncia-e-crise-no-stf.ghtml",
    "editoria": "politica",
@@ -52,8 +70,8 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 12,
-   "veiculos_3h": 1,
+   "veiculos": 13,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-17T16:08:50Z",
    "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQN21idzZYZUFwd1pULWxVcUFPeHJwNlM4dDJPLTRFc08wdC10Nm1sS2ZJTHQtQXdLUV8wZTYyNmRsQVVkdnhPTG9sMDRoQlVyZl9iZmJTNHVTd0hITEdtZ3JhTTNfVmMwdFdxTGlJbzF4X25KNU9wR2lZaDNSTmNJTWUzNzJHRnNNRlBKVUdpdUw3YmhkUTQtZ1BZSVJJbjY5YVdER2VHS0NsSk9uR0JHZG9vRjFUOG5mRV9XS1JrV0hmV3pyS1pFWEkxQWNXN2RDM2FSeEtJUnlUb0ttcVZkWmlMYWJnQ3VDT3ZmN0FNTmkyQQ?oc=5",
    "editoria": "politica",
@@ -76,93 +94,42 @@
    }
   },
   {
-   "manchete": "Pesquisa Quaest: 92% dos eleitores apoiam reduzir a maioridade penal de 18 para 16 anos",
+   "manchete": "Emboscada: Funai e Força Nacional são atacadas a tiros em fiscalização de terra indígena invadida no Pará",
    "secoes": [
     "A",
-    "B"
+    "A",
+    "B",
+    "D-terra"
    ],
-   "veiculos": 21,
+   "veiculos": 8,
    "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-17T16:08:50Z",
-   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQQ0t2czNURnpUUF8xNDlySmhZTW1BZ3VlR3ZEX01zc25rU19hUjZQaWhzRzZ3TFM1cWNCUVBTSDQzcG5XdTNIMFVDS1hVOXo5aHVFdUxEc1JDYzdWbE95dWo3a0JBdExnRUF5dENGcXU4LUt2eGNObTh0SS1ZckhZemUxMHJyeWduTG9sS1BEZ3JXSkZvdWpOT050b2pPaGJ2VGZhcUNrb0k0Zw?oc=5",
-   "editoria": "eleicoes",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [],
-   "outras_manchetes": 1,
-   "ia": {
-    "editoria": "gerais",
-    "I": 3,
-    "V": 3,
-    "P": 2,
-    "formato": "reels",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Pesquisa sobre apoio à redução da maioridade penal e câmeras.",
-    "soma": 6
-   }
-  },
-  {
-   "manchete": "Durigan diz que pacote fiscal é só o 'primeiro passo' e defende ajuste gradual e 'sem negacionismo' para baixar juros",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 6,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-17T16:08:50Z",
-   "link": "https://g1.globo.com/economia/noticia/2026/11/17/ministro-da-fazenda-que-pacote-e-so-o-primeiro-passo-e-prega-ajuste-gradual-sem-negacionismo-para-baixar-juro.ghtml",
-   "editoria": "economia",
-   "nota": 6,
-   "esquentou": false,
+   "na_pauta_desde": "2026-11-17T14:10:50Z",
+   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/ambiente/2026/11/equipes-da-funai-e-forca-nacional-sofrem-emboscada-em-terra-indigena-no-pa.shtml",
+   "editoria": "roca",
+   "nota": 7,
+   "esquentou": true,
    "lente": [
-    "juros"
+    "indigena"
    ],
    "ia": {
-    "editoria": "economia",
+    "editoria": "roca",
     "I": 3,
     "V": 2,
     "P": 2,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Governo defende pacote fiscal e ajuste para baixar juros.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Regulação concorrencial das big techs pode reduzir custos em até R$ 50 bi ao ano, projeta Fazenda",
-   "secoes": [
-    "A",
-    "B"
-   ],
-   "veiculos": 11,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-17T00:07:40Z",
-   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://c-level.folha.uol.com.br/negocios/2026/11/regulacao-concorrencial-das-big-techs-pode-reduzir-custos-em-ate-r-50-bi-ao-ano-projeta-fazenda.shtml",
-   "editoria": "politica",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Votação de regras para big techs pode reduzir custos.",
+    "motivo": "Violência contra fiscalização ambiental e indígena na Amazônia.",
     "soma": 5
    }
   },
   {
    "manchete": "Deputado do PT e Prerrogativas pedem ao STF bloqueio de salário de Flávio e verbas como senador",
    "secoes": [
-    "A",
-    "B"
+    "A"
    ],
-   "veiculos": 23,
-   "veiculos_3h": 3,
+   "veiculos": 18,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-16T22:12:03Z",
    "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/colunas/painel/2026/11/deputado-do-pt-e-prerrogativas-pedem-ao-stf-bloqueio-de-salario-de-flavio-e-verbas-como-senador.shtml",
    "editoria": "politica",
@@ -185,60 +152,97 @@
    }
   },
   {
-   "manchete": "Emboscada: Funai e Força Nacional são atacadas a tiros em fiscalização de terra indígena invadida no Pará",
+   "manchete": "Regulação concorrencial das big techs pode reduzir custos em até R$ 50 bi ao ano, projeta Fazenda",
    "secoes": [
-    "A",
-    "A",
-    "D-terra"
+    "A"
    ],
-   "veiculos": 7,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-17T14:10:50Z",
-   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/ambiente/2026/11/equipes-da-funai-e-forca-nacional-sofrem-emboscada-em-terra-indigena-no-pa.shtml",
-   "editoria": "roca",
-   "nota": 6,
+   "veiculos": 11,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-17T00:07:40Z",
+   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://c-level.folha.uol.com.br/negocios/2026/11/regulacao-concorrencial-das-big-techs-pode-reduzir-custos-em-ate-r-50-bi-ao-ano-projeta-fazenda.shtml",
+   "editoria": "politica",
+   "nota": 5,
    "esquentou": false,
-   "lente": [
-    "indigena"
-   ],
+   "lente": [],
    "ia": {
-    "editoria": "roca",
+    "editoria": "economia",
     "I": 3,
     "V": 2,
     "P": 2,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Violência contra fiscalização ambiental e indígena na Amazônia.",
+    "motivo": "Votação de regras para big techs pode reduzir custos.",
     "soma": 5
    }
   },
   {
-   "manchete": "PF deve entregar a Fachin na quarta relatórios sobre menções a ministros do STF no caso Master",
+   "manchete": "VEJA VÍDEO: indígenas isolados fazem contato com aldeia após décadas na Terra Indígena Arariboia, no Maranhão",
    "secoes": [
-    "B"
+    "B",
+    "D-terra"
    ],
-   "veiculos": 21,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-17T20:07:59Z",
-   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/pf-ira-entregar-na-quarta-novos-relatorios-sobre-ministros-do-stf-no-celular-de-vorcaro.shtml",
+   "veiculos": 11,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-17T18:08:26Z",
+   "link": "https://www.diariodocentrodomundo.com.br/indigenas-que-vivem-isolados-fazem-contato-apos-decadas-e-pedem-comida/",
+   "editoria": "roca",
+   "nota": 6,
+   "esquentou": true,
+   "lente": [
+    "indigena"
+   ]
+  },
+  {
+   "manchete": "PF pede ao STF para prorrogar por 60 dias inquérito que apura ação de influenciadores a favor do Master",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-17T22:07:38Z",
+   "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNNHFic2VhZVFMSEN1bFhHa1YyZmFCNjVrNmxLRWljM1RDcEVtMlZPeGUyNEZ3TVRoUGhJMVJtT3Z0eFlQRFBZX1FrV3NOQUpYZGlXYVB2RGFlR0ZWc2MxdzlhYTcwVUZsanR6eHQwd1Z4a3VRZlp4OV8tS2xOQ3BKeS1RRlNLeVpBNmhSTGw5eUJWSzRwMVBGUm82QXdURDhnZU9HdEtPdm9GRHlqRE9rMFNsWXZZYXJ0MmFJOEQ3dU5sOG5ZOVo5VmFsRnlxa01pS2hkZEZxOUtfVjhXaE1tYVh0UnZYOHBQeXNKaEtOWFUtUVA50gGDAkFVX3lxTE9PWjNRdWRLY0FSc3VyRTRSYkZUWGtoQVRSOS1jbzlUQ2JPMS1DTHhvaTlGUmxFXzdTU1lvempyWkRURVpsSlg2ZXNrS1dld0VQaWZvVEVWcUtWZ0R3YWplMjVUOV9wMzFjM2I4dkJyZmpBanRYS0FkRTlfNUxWdmtYX0hHd0M2NDRwYnhsTVRKbUwta3pzRURSOXljdDVoS0stVF9FclF6UldfRnh2T0hmcHRDWlVDVmJ0eHhkWDR3LUtsQ09xNDcyTHBUdjZaMnNqTmRJLVlncHhMc3ZQNVBzSXlfNXR2cHp5dVRjZXBFZkotREFKLWlqcjBuQUJxQW9WdDA?oc=5",
    "editoria": "politica",
    "nota": 6,
    "esquentou": false,
    "lente": [
+    "inquerito",
     "master"
+   ]
+  },
+  {
+   "manchete": "\"Lei Suzane von Richthofen\": projeto barra lucro com crimes",
+   "secoes": [
+    "A"
    ],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "PF entrega a Fachin relatórios sobre caso Master envolvendo ministros.",
-    "soma": 4
-   }
+   "veiculos": 7,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-17T02:08:04Z",
+   "link": "https://www.gazetadopovo.com.br/republica/deputado-propoe-lei-suzane-von-richthofen-para-proibir-lucro-com-exploracao-de-crimes/",
+   "editoria": "politica",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "lucro"
+   ]
+  },
+  {
+   "manchete": "Pesquisa revela que 92% dos brasileiros apoiam redução da maioridade penal para 16 anos",
+   "secoes": [
+    "A",
+    "A"
+   ],
+   "veiculos": 18,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-17T16:08:50Z",
+   "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQMTNqMDdLNGZXbFJ6MmZkUnhfUGR6dHF2TG83WXdLMkdWcC1EVDhBUWxiZVhZLW9xLUYwZTdxbnlxZWRGU1FQbW9XMWNyS1NuLTBmQ09GY2hCUFlFZUh2NXptengzaklJck5VSHAyWS1zT0h0cFpsLWFvMWpld1FIWFROak1tNUFIQlNXOFZmdjB1bHl0REhfSUhXNFdOb2R4UmpCX25SYjRleERXYmJkVGhJa1NFeXZiUHJlZHB0cHpod19SaGlQOHA5NmZGMG1WTG15UWVRRXByenc5?oc=5",
+   "editoria": "saude",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "sus"
+   ]
   },
   {
    "manchete": "Reaplicação do Enem 2026: veja quem tem direito e como solicitar nova prova",
@@ -246,7 +250,7 @@
     "B"
    ],
    "veiculos": 24,
-   "veiculos_3h": 8,
+   "veiculos_3h": 5,
    "na_pauta_desde": "2026-11-16T22:12:03Z",
    "link": "https://www.cartacapital.com.br/educacao/enem-2026-prazo-para-pedir-reaplicacao-da-prova-vai-ate-sexta-feira/",
    "editoria": "educacao",
@@ -268,41 +272,14 @@
    }
   },
   {
-   "manchete": "Falso laudo divulgado por Nikolas Ferreira nas eleições é investigado pela PF",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 10,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-17T20:07:59Z",
-   "link": "https://www.diariodocentrodomundo.com.br/pf-investiga-laudo-falso-divulgado-por-nikolas/",
-   "editoria": "politica",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "investigad"
-   ],
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "PF investiga falso laudo divulgado por Nikolas Ferreira na eleição.",
-    "soma": 4
-   }
-  },
-  {
    "manchete": "Direito e Justiça: Xangô chega ao STF",
    "secoes": [
     "A"
    ],
    "veiculos": 6,
-   "veiculos_3h": 0,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-17T16:08:50Z",
-   "link": "https://tvtnews.com.br/oxe-de-xango-sera-inaugurado-no-stf/",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNMzc3N25qYmh5c0g1MEFwcXlCUE5LMUlKeDhsV282eE1wVGhUQTMtSlhoMThVOHVzMlowVWJVZ1RiZDByckRiOEYzai1pQVMzcFpEWks3VWhwRmFIWm5rTzBuVzRWRWltNWJhWm9NSWdFODhlaU54cFpfYkRlU2xNQW9zZk9vMWd0RXB4TDBEdFg2Rmh0V01WZdIBoAFBVV95cUxQYnBiRjdOazl0WUVBUndZOUhNM1Fzb1FvSmxIZ2loQWtrZnhBZERMR1ZiM29wVThGMTEzdFQyTTk1eS0xWDhLYk1FNXk4QkdWQmNVbHEyRU0zcmNzU1k3c3lDXzF6VzUybTRud0NtVkFEMkhETVVTV3BFLWhQQ0R1M3JUWi1ZeVI4YUdrRkNxUWdTYXlZQ3JhV3JnU1ktV01C?oc=5",
    "editoria": "politica",
    "nota": 7,
    "esquentou": false,
@@ -323,260 +300,132 @@
    }
   },
   {
-   "manchete": "Xi Jinping e Claudia Sheinbaum se reúnem na China para discutir relações bilaterais",
+   "manchete": "Oito em cada dez brasileiros reconhecem racismo nas cidades onde vivem, aponta pesquisa",
    "secoes": [
-    "B",
-    "D-america_latina"
+    "B"
    ],
-   "veiculos": 10,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-17T14:10:50Z",
-   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOc1BmbFlIdHV2QTFvenZCV0NsdlpUczZWYUV4dXdPNk5XNVo0R1FBNlJyVXRfZjdQa2pBd0hLdkRwVDNIZnlHS0VvRmhTcFpjb29XaWw4dGtOZTRoVFNGUmxkaEVtUzdkc0tHUWE2bTBWcFJVa0s2RElObFpiUGtIVWh5cVJLYVVkc3FuUi10VzF2Y1MyZXpVbnNhbWQyazRiNTl0LVVWOGZkSURvRzVGUUFCMWdyYVU?oc=5",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": true,
-   "lente": []
-  },
-  {
-   "manchete": "Ala do STF defende que impedimento de Kassio no caso Master seja permanente",
-   "secoes": [
-    "C-nacional"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-17T20:07:59Z",
-   "link": "https://www.brasil247.com/brasil/ala-do-stf-quer-afastamento-definitivo-de-nunes-marques-do-caso-master/",
-   "editoria": "politica",
+   "veiculos": 11,
+   "veiculos_3h": 8,
+   "na_pauta_desde": "2026-11-17T22:07:38Z",
+   "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQd1ZHa1dkWG9xVnF0b0ZuYURDaFFJM3VXWnpZcGlkTkhvQTF0Sl9XcVQxUlRiV1JFSGttS2loMFdKSVZxbDdvcjNJeDc5R2RBTGNSVUpxU0o0OWlkRTZuaENxNXdPSlFvY09EZUNrYjN4QkRUSVY5R2RCMUIyUzhNMWRWSERPdGNVX0ZEUWxSajZnVHJSbmVxeExIeG5qZ2prUGNneWtOU1RwbnR4aDcxOXBGbXNhWlQ5cVpNZTZEOEpMVE5qeWhqUVpmYVp1M0VO?oc=5",
+   "editoria": "gerais",
    "nota": 5,
    "esquentou": false,
    "lente": [
-    "master"
+    "racismo"
    ]
   },
   {
-   "manchete": "Trump afirma que Kim Jong Un 'gostaria' de se encontrar com ele, Xi Jinping e Putin na China",
+   "manchete": "Governo Lula avalia contestar restrições dos EUA à venda de chips para data centers no Brasil",
    "secoes": [
-    "D-america_latina"
+    "A",
+    "B"
    ],
-   "veiculos": 8,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-17T20:07:59Z",
-   "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNVnBmUEt1X0phZm5EQ25ldUFvMGZFVFY5Z1c5ZDlmUTZrT3lDSVpodl9PYThmNk9TeG1vVHJ3RnJ1TWU5Z214VHlfWEx1OV9VTEp4blN1MFMxZ2phSDJqN3hsVmtScjcxTURTWW9VV0QyREVTWmNYN0lsWlppN0xxZTR5Zi0wSDBfQ3l0NHEwamhYWjA4TmlFaXNXS2UxYTR0bDVFc25YVFMydlYtdUNZQWxhOVVkVkpzWXVSVjZnaGEwT2dUMmo3Q2ZMWkZQQjhZcUJ2bjhfekpyV0YtdUl4VlJfdlUyUFZO0gHoAUFVX3lxTE1WcGZQS3VfSmFmbkRDbmV1QW8wZkVUVjlnVzlkOWZRNmtPeUNJWmh2X09hOGY2T1N4bW9UcndGcnVNZTlnbXhUeV9YTHU5X1VMSnhuU3UwUzFnamFIMmo3eGxWa1JyNzFNRFNZb1VXRDJERVNaY1g3SWxaWmk3THFlNHlmLTBIMF9DeXQ0cTBqaFhaMDhOaUVpc1dLZTFhNHRsNUVzblhUUzJ2Vi11Q1lBbGE5VWRWSnNZdVJWNmdoYTBPZ1QyajdDZkxaRlBCOFlxQnZuOF96SnJXRi11SXhWUl92VTJQVk4?oc=5",
-   "editoria": "america_latina",
+   "veiculos": 20,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-11-16T15:09:06Z",
+   "link": "https://g1.globo.com/tecnologia/noticia/2026/11/17/eua-confirmam-investigacao-sobre-a-megaspeed-por-suposto-desvio-de-chips-para-a-china.ghtml",
+   "editoria": "gerais",
    "nota": 5,
-   "esquentou": false,
+   "esquentou": true,
    "lente": [
     "trump"
    ]
   },
   {
-   "manchete": "Douglas Ruas anuncia secretário que promete gestão mais próxima das escolas",
-   "secoes": [
-    "A",
-    "A"
-   ],
-   "veiculos": 6,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-17T20:07:59Z",
-   "link": "https://revistaforum.com.br/politica/douglas-ruas-200-escolas-civico-militares-rj/",
-   "editoria": "politica",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "pl"
-   ]
-  },
-  {
-   "manchete": "Projeto de lei na Assembleia Legislativa propõe monitoramento periódico dos preços da cesta básica em Mato Grosso",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 6,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-16T20:34:23Z",
-   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQOFR5MFh0UkwzUkJ4WXliU2pxSVc2dGtoWTJ1N0JxWW9tYjVQdEw5MW5USXdCRGRINmh1RUNzNzRhb2VXUmYwbnkzNUJzYzJxUzlzUXVXQ2U1X3dIWG1zX0x6aE9jcWU2Rjk0WDVFdFAwemRPUF81dnVqczVXR2hDOVZhc3ViX0J4cHVMS0FkUQ?oc=5",
-   "editoria": "roca",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "cesta basica"
-   ]
-  },
-  {
-   "manchete": "VEJA VÍDEO: indígenas isolados fazem contato com aldeia após décadas na Terra Indígena Arariboia, no Maranhão",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-17T18:08:26Z",
-   "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOUkxIMkpMWUVZR2R0bjRYTFFzY3A3U2owOFRuSFk1NWw0RUtTYUVraHh4QTl2WHEzWXpVQk1ycFJvQVJmUGk3ZGNWLXoydzRmeFZ3enpVZDEzdWFDeWR5OWQ2RmlsM3p6ZWZuUEJuNkFSSm1GYzZubHRuOVpESDFzUFBVNjV2amdEOVdEb04ySWRCbjlCaVR0VS0xV0ZsOHRPM3V0N0Z4ZzFRclJhVVlmYXJKZE1pQ3Y0cTJtMWJjY3N4ZGdmMWhTZGhRRVk2V3Z6aTlibV9KZ3pYQVJ1Vk1pWkNnMG8?oc=5",
-   "editoria": "roca",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "indigena"
-   ]
-  },
-  {
-   "manchete": "Ação da Cidadania lança campanha Natal Sem Fome 2026; veja como apoiar",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-16T20:34:23Z",
-   "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQNV90UEJ5bklFVGlIeWJFcnBYUnlUR3FjMFBWQXcyMFIwajRyeFN0TVBWakNSbHNtaTNmR1o4TkMxRFhMd01RcFpqeUw4OG9NRWN4dzJxRGxPY1dZWUZQNWdfclhXMEluWEpKWUI5MzN3ODZGUFBsN013NE9wM0lHU0pwZHpUeE1BaDRHTlBRSDJtVzYyaWlRN2liV0Q0NFJjNjdrYWkzak9WeXM5X2RLYVBxWTI2U1Nnay10UFlocWl1eXpMdjF0bGlBLTdOZ9IB3AFBVV95cUxPenQ5dFhfaEZYMTA4a2h5bUZnQ1BOYVkyQ1FPajJmbGNqbURIRE9fdkc1MVFIcjBlMnNRM1VjLVhBSTNaQUlTcUQwWGNJUVZjVS04VHE1dk1UM3lQM29UWUs2RXhHSFZ6Z2NveERMOXROUWNkUnNkcS1mVjZzWDZoRUlhRzZmVk9UVlVIM1BUaS0xOFdPSUs1azczM2ZRc0FqRTAxOHdXUlduc19pMFNGcGpWNmNNdGpXSjY1RXg4SURuakdtczFaTUNfQ3V2elNYUUlaMGRPdk50R0dj?oc=5",
-   "editoria": "roca",
-   "nota": 5,
-   "esquentou": true,
-   "lente": [
-    "fome"
-   ]
-  },
-  {
-   "manchete": "Alckmin diz não acreditar em esvaziamento do PLP do ajuste fiscal no Senado",
+   "manchete": "Ipsos/Ipec: 22% se preocupam com resultado da eleição; 18% têm esperança",
    "secoes": [
     "B"
    ],
-   "veiculos": 100,
-   "veiculos_3h": 63,
-   "na_pauta_desde": "2026-11-16T19:53:22Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/17/ajuste-fiscal-senado-vota-destaques-ao-projeto-do-governo-nesta-terca-veja-o-que-pode-mudar-no-texto.ghtml",
-   "editoria": "politica",
-   "nota": 4,
+   "veiculos": 8,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-11-17T22:07:38Z",
+   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOVXoyZ3NpNEFIQW84SFNkXzVHN2psdVlJN3JkcVhPcDhucE9NMENGMS1ldUQwR0MxaWxvWnpBQlBBTjNPanFMYjdyeERiVVhSaTA1VTNzSE1LQThid19kRU9STlM2UWlkNEJuSkUzMXZMOWlpakVUaXJqd2dtdGs1cWtTTlFDb0VfNjFETnVpbGVBbVY5RE0xT1M4bGJLNlJZUzlQdVNEM25NQmM?oc=5",
+   "editoria": "eleicoes",
+   "nota": 5,
    "esquentou": false,
    "lente": []
   },
   {
-   "manchete": "Motta e Alcolumbre pedem a Moraes que plenário do STF analise dosimetria até o final deste ano",
+   "manchete": "Ministério da Saúde vai enviar doses extras de vacina contra Covid-19 a 10 estados",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 21,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-16T19:53:22Z",
+   "link": "https://jornalggn.com.br/saude/ministerio-da-saude-vai-enviar-doses-extras-de-vacina-contra-covid-19-a-10-estados/",
+   "editoria": "saude",
+   "nota": 5,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Lideranças da esquerda devem apresentar alternativas a ajuste fiscal de Lula: 'Se podem negociar com o mercado, podem negociar com a gente', diz Lindbergh",
+   "secoes": [
+    "A",
+    "B"
+   ],
+   "veiculos": 12,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-16T20:34:23Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/16/partidos-alternativas-criticas-ajuste-fiscal.ghtml",
+   "editoria": "economia",
+   "nota": 5,
+   "esquentou": true,
+   "lente": []
+  },
+  {
+   "manchete": "EUA perdem status de país livre de sarampo após 26 anos",
    "secoes": [
     "B",
-    "C-nacional"
+    "D-america_latina"
    ],
-   "veiculos": 29,
-   "veiculos_3h": 28,
-   "na_pauta_desde": "2026-11-17T18:08:26Z",
-   "link": "https://www.congressoemfoco.com.br/noticia/131655/motta-e-alcolumbre-pedem-a-moraes-que-destrave-lei-da-dosimetria",
+   "veiculos": 18,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-16T19:09:13Z",
+   "link": "https://redir.folha.com.br/redir/online/equilibrioesaude/rss091/*https://www1.folha.uol.com.br/equilibrioesaude/2026/11/eua-perdem-status-de-pais-livre-de-sarampo-apos-26-anos.shtml",
+   "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Lula respaldó a Sánchez en las elecciones del domingo: \"Es muy importante que ganes\"",
+   "secoes": [
+    "A",
+    "B"
+   ],
+   "veiculos": 38,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-16T20:34:23Z",
+   "link": "https://ladiaria.com.uy/mundo/articulo/2026/11/es-muy-importante-pedro-que-tu-ganes-las-elecciones-en-espana-le-dijo-lula-a-sanchez-durante-su-encuentro-en-madrid/",
    "editoria": "politica",
-   "nota": 4,
+   "nota": 5,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Chile vs Colombia EN VIVO: dónde ver el partido amistoso por la fecha FIFA 2026",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 8,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-17T12:08:39Z",
+   "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPUjB1bUp1aGRBbjhPRHJmSE5LNEV0VDdaTHlLOEc2Wmx4eF9reXdWd2libmdQSDJEQ0xNaVNISi0zRlZBWlRjYU9sRTJNWUNFZnFpazcwdklpLXFuV2Z6eTZTbTdPZk5jeTNCU3ZlM0YyajhYU2N5Y3FZakZ4YldkaTJXRzZzN3JDOUptUDlmYjZiYk1pejVhRy14WUFqV2ZSRlg3NVlxMkVzakQ2X2lhSlYxV0pEa1hOY0c4b1F5U0FCbHUwV1RLd2hIR085QdIB0wFBVV95cUxQcXNkTUZsSzRGcHdhLWpYczV2RHNBdXRORmc2RnY3bWJtWlJ5UnVSSl8xcTd0ZlBldHNlWFg1OGloTG92RFNUWFN4YWUxeU53MDV0SVRpSHpqbjlNamVTWVAwYkhDb2xHUlNQZTN3WS1XSEJIWllFWHBUVHI0ekJISlJoVkRreWtmRzhWVDZDSlY0WFNuSmdKUVp6czNLWm1FTDlsckNhelNzT3libkNFRVFja2FycjUxSjdqUVdzUzJIeEIyeFNtWUZ1Q1ZNaVVHWVVv?oc=5",
+   "editoria": "america_latina",
+   "nota": 5,
    "esquentou": false,
    "lente": []
   }
  ],
  "rebaixados": [
   {
-   "manchete": "Paim relembra comissão que propôs política de valorização do salário mínimo",
-   "veiculos": 5,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-17T18:40:07Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "economia",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Paim relembra política de valorização do salário mínimo.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Ministério da Saúde enviará doses adicionais de vacinas contra a Covid-19 aos estados",
-   "veiculos": 22,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-16T19:53:22Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "saude",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Ministério da Saúde envia doses adicionais de vacina contra Covid.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Lula y su espaldarazo a Pedro Sánchez: \"Es la persona indicada para defender la democracia en Europa\"",
-   "veiculos": 23,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-16T20:34:23Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Primeiro-ministro espanhol elogia vitória de Lula.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Suzane von Richthofen e o fetiche da ruína burguesa",
-   "veiculos": 11,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-17T02:08:04Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "gerais",
-    "I": 1,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Projeto quer proibir lucro comercial de condenados por crimes.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Professor recorre à greve de fome em Palmas após esperar 15 meses por direito previsto em lei",
-   "veiculos": 5,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-16T19:53:22Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "gerais",
-    "I": 1,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Professor em greve de fome por direito em Palmas.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "EUA podem perder status de país livre do sarampo",
-   "veiculos": 16,
-   "veiculos_3h": 10,
-   "na_pauta_desde": "2026-11-16T19:09:13Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "saude",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Notícia internacional sobre saúde sem impacto direto no Brasil.",
-    "soma": 2
-   }
-  },
-  {
    "manchete": "POLÍCIA FEDERAL CUMPRE MANDADOS DE BUSCA E APREENSÃO EM APUCARANA EM OPERAÇÃO CONTRA ORGANIZAÇÃO CRIMINOSA SUSPEITA DE TRÁFICO INTERNACIONAL DE DROGAS E ARMAS",
-   "veiculos": 16,
-   "veiculos_3h": 7,
+   "veiculos": 20,
+   "veiculos_3h": 5,
    "na_pauta_desde": "2026-11-17T14:10:50Z",
    "esquentou": true,
    "ia": {
@@ -592,56 +441,20 @@
    }
   },
   {
-   "manchete": "Câmara aprova reajuste para servidores e vereadores de Curitiba",
+   "manchete": "Procurador do Paraguai renuncia ante iminente processo de impeachment por crise bancária (MP)",
    "veiculos": 8,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-17T00:07:40Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "politica",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Câmara aprova reajuste para servidores e vereadores de Curitiba.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Computadores quânticos de R$ 83 milhões chegam à Paraíba",
-   "veiculos": 7,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-16T22:12:03Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "educacao",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Chegada de computadores quânticos à Paraíba.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "La derrota de Trump, un desafío para sus aliados en América Latina",
-   "veiculos": 3,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-17T18:40:07Z",
-   "esquentou": false,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-17T18:08:26Z",
+   "esquentou": true,
    "ia": {
     "editoria": "america_latina",
     "I": 1,
     "V": 1,
-    "P": 1,
+    "P": 0,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Derrota de Trump afeta geopolítica regional, mas foco internacional é menor.",
+    "motivo": "Crise institucional no Paraguai com repercussão limitada no Brasil.",
     "soma": 2
    }
   }
@@ -652,14 +465,15 @@
    "secoes": [
     "A",
     "A",
+    "B",
     "D-terra"
    ],
-   "veiculos": 7,
-   "veiculos_3h": 1,
+   "veiculos": 8,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-17T14:10:50Z",
    "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/ambiente/2026/11/equipes-da-funai-e-forca-nacional-sofrem-emboscada-em-terra-indigena-no-pa.shtml",
    "editoria": "roca",
-   "nota": 6,
+   "nota": 7,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-17T17:30:09Z",
@@ -669,16 +483,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": null,
+   "manchete": "Moraes nega visitas de pré-candidatos à presidência do Senado a Jair Bolsonaro",
    "secoes": [
     "A"
    ],
-   "veiculos": 0,
+   "veiculos": 2,
    "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 2,
+   "na_pauta_desde": "2026-11-17T22:07:38Z",
+   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNcWE3R2JiWlMweE9keWNvQkx5OTBLNzJPenI3SnZvWHVrMVJ4ZjFIc0ZpcEN1RU0tRVFsX0gzSHpWZTAwWXZncURZd1RPWEcyWldHZ3duaHppeFhRSm96ZzlMRG8ycWszdmdCUTRnZlU0bUFqWVZHeG83ellhcktSSmh6UlZjZURkaF8zTER5TWc5YjN1a0R0eFV4THRfYlZzWHc?oc=5",
+   "editoria": "eleicoes",
+   "nota": 4,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-17T14:17:46Z",
@@ -693,10 +507,10 @@
     "A",
     "B"
    ],
-   "veiculos": 9,
-   "veiculos_3h": 5,
+   "veiculos": 19,
+   "veiculos_3h": 9,
    "na_pauta_desde": "2026-11-16T17:08:23Z",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1SMDFxdlBaajZxdjk2MkgxLXVjdVZRUG51Wk1RLW1ZWUF5WTFPd25HdXFrS2lwVWJTX2hGMWh5V3lrX2xObk10eW1pVGNEdWpUZ3c?oc=5",
+   "link": "https://g1.globo.com/mundo/noticia/2026/11/17/vladimir-putin-chega-a-china-para-reuniao-trilateral-com-xi-jiping-e-trump.ghtml",
    "editoria": null,
    "nota": null,
    "parceiro": {
@@ -710,14 +524,15 @@
   {
    "manchete": "Lideranças da esquerda devem apresentar alternativas a ajuste fiscal de Lula: 'Se podem negociar com o mercado, podem negociar com a gente', diz Lindbergh",
    "secoes": [
-    "A"
+    "A",
+    "B"
    ],
-   "veiculos": 5,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-17T00:07:40Z",
+   "veiculos": 12,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-16T20:34:23Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/16/partidos-alternativas-criticas-ajuste-fiscal.ghtml",
    "editoria": "economia",
-   "nota": 4,
+   "nota": 5,
    "parceiro": {
     "perfil": "luzmanifesto",
     "quando": "2026-11-17T16:57:46Z",
@@ -727,15 +542,14 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Suzane von Richthofen e o fetiche da ruína burguesa",
+   "manchete": "\"Lei Suzane von Richthofen\": projeto barra lucro com crimes",
    "secoes": [
-    "A",
-    "B"
+    "A"
    ],
-   "veiculos": 11,
-   "veiculos_3h": 3,
+   "veiculos": 7,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-17T02:08:04Z",
-   "link": "https://www1.folha.uol.com.br/colunas/marilizpereirajorge/2026/11/suzane-von-richthofen-e-o-fetiche-da-ruina-burguesa.shtml",
+   "link": "https://www.gazetadopovo.com.br/republica/deputado-propoe-lei-suzane-von-richthofen-para-proibir-lucro-com-exploracao-de-crimes/",
    "editoria": "politica",
    "nota": 6,
    "parceiro": {
@@ -747,14 +561,14 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Professor é espancado após tentar defender mulher de agressão no Centro do Rio; homem está em estado muito grave",
+   "manchete": "Professor é espancado após defender mulher de agressão e está em estado grave",
    "secoes": [
     "A"
    ],
-   "veiculos": 9,
+   "veiculos": 4,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-17T00:07:40Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/professor-e-espancado-no-centro-do-rio-apos-tentar-socorrer-mulher-agredida.shtml",
+   "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFB6WTBJNmNfTE9BaUxNLUhQTDU5Y1Zfdk9XcXlnOUN3Q3QzV1FpbGpXNjUyNDlnc1dpYXZNTGNSVWJLMmFkT2ZoakY1cHRSNFhoWXNOd2tFWUxadU1SUmNRZ3NNNWVUWENySVM2V3FXQ2FsNTY0VE4tdi1sUGI?oc=5",
    "editoria": null,
    "nota": null,
    "parceiro": {
@@ -771,9 +585,9 @@
     "A"
    ],
    "veiculos": 6,
-   "veiculos_3h": 0,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-17T16:08:50Z",
-   "link": "https://tvtnews.com.br/oxe-de-xango-sera-inaugurado-no-stf/",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNMzc3N25qYmh5c0g1MEFwcXlCUE5LMUlKeDhsV282eE1wVGhUQTMtSlhoMThVOHVzMlowVWJVZ1RiZDByckRiOEYzai1pQVMzcFpEWks3VWhwRmFIWm5rTzBuVzRWRWltNWJhWm9NSWdFODhlaU54cFpfYkRlU2xNQW9zZk9vMWd0RXB4TDBEdFg2Rmh0V01WZdIBoAFBVV95cUxQYnBiRjdOazl0WUVBUndZOUhNM1Fzb1FvSmxIZ2loQWtrZnhBZERMR1ZiM29wVThGMTEzdFQyTTk1eS0xWDhLYk1FNXk4QkdWQmNVbHEyRU0zcmNzU1k3c3lDXzF6VzUybTRud0NtVkFEMkhETVVTV3BFLWhQQ0R1M3JUWi1ZeVI4YUdrRkNxUWdTYXlZQ3JhV3JnU1ktV01C?oc=5",
    "editoria": "politica",
    "nota": 7,
    "parceiro": {
@@ -808,8 +622,8 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 12,
-   "veiculos_3h": 1,
+   "veiculos": 13,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-17T16:08:50Z",
    "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQN21idzZYZUFwd1pULWxVcUFPeHJwNlM4dDJPLTRFc08wdC10Nm1sS2ZJTHQtQXdLUV8wZTYyNmRsQVVkdnhPTG9sMDRoQlVyZl9iZmJTNHVTd0hITEdtZ3JhTTNfVmMwdFdxTGlJbzF4X25KNU9wR2lZaDNSTmNJTWUzNzJHRnNNRlBKVUdpdUw3YmhkUTQtZ1BZSVJJbjY5YVdER2VHS0NsSk9uR0JHZG9vRjFUOG5mRV9XS1JrV0hmV3pyS1pFWEkxQWNXN2RDM2FSeEtJUnlUb0ttcVZkWmlMYWJnQ3VDT3ZmN0FNTmkyQQ?oc=5",
    "editoria": "politica",
@@ -825,15 +639,14 @@
   {
    "manchete": "Regulação concorrencial das big techs pode reduzir custos em até R$ 50 bi ao ano, projeta Fazenda",
    "secoes": [
-    "A",
-    "B"
+    "A"
    ],
    "veiculos": 11,
-   "veiculos_3h": 4,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-17T00:07:40Z",
    "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://c-level.folha.uol.com.br/negocios/2026/11/regulacao-concorrencial-das-big-techs-pode-reduzir-custos-em-ate-r-50-bi-ao-ano-projeta-fazenda.shtml",
    "editoria": "politica",
-   "nota": 6,
+   "nota": 5,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-17T12:01:56Z",
@@ -883,11 +696,10 @@
   {
    "manchete": "Deputado do PT e Prerrogativas pedem ao STF bloqueio de salário de Flávio e verbas como senador",
    "secoes": [
-    "A",
-    "B"
+    "A"
    ],
-   "veiculos": 23,
-   "veiculos_3h": 3,
+   "veiculos": 18,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-16T22:12:03Z",
    "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/colunas/painel/2026/11/deputado-do-pt-e-prerrogativas-pedem-ao-stf-bloqueio-de-salario-de-flavio-e-verbas-como-senador.shtml",
    "editoria": "politica",
@@ -901,14 +713,14 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Segundo dia de Enem traz questões divididas entre matemática e ciências da natureza",
+   "manchete": "Enem 2026: no segundo dia, os alunos responderão às questões de Matemática e Ciências da Natureza.",
    "secoes": [
     "A"
    ],
-   "veiculos": 3,
+   "veiculos": 2,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-17T20:07:59Z",
-   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxONFhWOEtPQVNfbVI5NmFCTkhWYmxjRmNPQlNUTE9fWVBMcGw1SEM2N3BLNnA1c2trYXF6MjJWQlNUQ0JvQkJqWlk3RU5zMVpWckNVUFdGMXZGMjZtMnVFYmRxaTUxdmJhZkc2OWswZkF5UnVqcWxZdklPR09Gb3loUVZNN3dPaDNobWhJTmxsazhrNVVwUHY5RExVbzA3ZzFoaVJGSzR5aTZuNWdrZFFyUVAzZjhfT28?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQN243Sl9kdEdSMjVzYXpoTzljZXJCT1hfUi1CRXEzYWt1SWpLYmV1dXRrVjB0M19FeERRRGp5TVBVZTJZc01PQ05OaXVUMEdvaWIwNlpaU2VFRnBPdy1EODFUa0h2ajBVel9BUjJzeF9VYlgwODVnRTFSRWdMSVNuRFBLQ3lJeGwzeVZaWVQ0bzExdzF1QjF6dEY4Y0FDNjBkYzhFb3B0UlcxNThqRXVYSmtHMHpEb2o5bW9ZZUpJN1l4YlFiU1k3VHZoYzF3cmFmMHhR?oc=5",
    "editoria": "educacao",
    "nota": 4,
    "parceiro": {
@@ -944,7 +756,7 @@
     "A"
    ],
    "veiculos": 2,
-   "veiculos_3h": 1,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-17T20:07:59Z",
    "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNUlJWbTctU29RbWhiNml6Wl9BWHJWU0hMU0s2d2JHQjRCRkhsblJ1YzZJNl9sZ3dNeW83eTFVQ0xGdDdNQl9QdnY4WHgwWVJDbVlLUnFGc280S1N3UE12TExJb01SN0E0VjFJSWRfZnJXYWF6WUFBVkNzYXJjZURwdlpmUzlfdmJULVFPQzJUQ2g3VEtJUzJiWDZSVllOZ2xWVjNYaVZseS1qWk9fanBTZUowZzA3SDRtckxmQk5tRklMbnE4RGM4ak9qZWFSaDI1aE1ucS03T0dMZlNyN0pnSg?oc=5",
    "editoria": "politica",
@@ -960,14 +772,15 @@
   {
    "manchete": "Governo Lula avalia contestar restrições dos EUA à venda de chips para data centers no Brasil",
    "secoes": [
-    "A"
+    "A",
+    "B"
    ],
-   "veiculos": 3,
-   "veiculos_3h": 2,
+   "veiculos": 20,
+   "veiculos_3h": 6,
    "na_pauta_desde": "2026-11-16T15:09:06Z",
-   "link": "https://www.poder360.com.br/poder-governo/governo-lula-monitora-restricoes-dos-eua-a-venda-de-chips/",
+   "link": "https://g1.globo.com/tecnologia/noticia/2026/11/17/eua-confirmam-investigacao-sobre-a-megaspeed-por-suposto-desvio-de-chips-para-a-china.ghtml",
    "editoria": "gerais",
-   "nota": 3,
+   "nota": 5,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-17T18:45:06Z",
@@ -983,9 +796,9 @@
     "A"
    ],
    "veiculos": 6,
-   "veiculos_3h": 2,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-17T20:07:59Z",
-   "link": "https://revistaforum.com.br/politica/douglas-ruas-200-escolas-civico-militares-rj/",
+   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxON3U0SF9Pb2RFMVY4OTgwYk5wQ0RfSGEweVlQdkgtY2xPWG5aV25zT2pyN3lWX2VFcjd5MWhRbDF2YzRCbnY4TWtaVTNTZHhucjdELWhzVTU4dXVfeE9rV0tmSEVGNDAzd3d2ZmRyNnNqMlFxaUMzN012VGlvYW5GazJaUnI3bGhvVkd3RUFwZWRuakU5MUNfdThGaThteks5anhOMWs5SEFrT1ZEdWhCUFZHRQ?oc=5",
    "editoria": "politica",
    "nota": 5,
    "parceiro": {
@@ -997,18 +810,17 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Lula y su espaldarazo a Pedro Sánchez: \"Es la persona indicada para defender la democracia en Europa\"",
+   "manchete": "Lula respaldó a Sánchez en las elecciones del domingo: \"Es muy importante que ganes\"",
    "secoes": [
     "A",
-    "B",
-    "D-famosos"
+    "B"
    ],
-   "veiculos": 23,
+   "veiculos": 38,
    "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-16T20:34:23Z",
-   "link": "https://www.jornada.com.mx/2026/11/17/mundo/022n1mun?partner=rss",
-   "editoria": "eleicoes",
-   "nota": 6,
+   "link": "https://ladiaria.com.uy/mundo/articulo/2026/11/es-muy-importante-pedro-que-tu-ganes-las-elecciones-en-espana-le-dijo-lula-a-sanchez-durante-su-encuentro-en-madrid/",
+   "editoria": "politica",
+   "nota": 5,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-17T15:46:40Z",
@@ -1056,16 +868,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Várzea Grande mobiliza 98 municípios em defesa da agricultura familiar",
+   "manchete": null,
    "secoes": [
     "A"
    ],
-   "veiculos": 2,
+   "veiculos": 0,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-17T02:08:04Z",
-   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOQjJYWlpCQnhHSDc1b3I3SUo4Si1KR082RF9iZ3JoS1RjQTYxLUN1clBTU2JiZllqUXZwWDdDSEN0T1gyNnRBdkFDbkFLV0QtRldjamNiZHdwY25VWWJyZ2Itb1pseE9HRU9pQ3pmeTZuTnJPM0FaNnR6el9UT3NmWTljWVg1T3VwSlhLUUZBa2MxT0IyVWExYW1KaDk?oc=5",
-   "editoria": "roca",
-   "nota": 4,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "politica",
+   "nota": 2,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-17T16:30:05Z",
@@ -1098,10 +910,10 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 3,
+   "veiculos": 4,
    "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-16T17:08:23Z",
-   "link": "https://g1.globo.com/al/alagoas/edicao/2026/11/17/videos-ab1-de-terca-feira-17-de-novembro-de-2026.ghtml",
+   "link": "https://g1.globo.com/mg/minas-gerais/videos-mg2/playlist/videos-mg2-de-terca-feira-17-de-novembro-de-2026.ghtml",
    "editoria": "gerais",
    "nota": 2,
    "parceiro": {
@@ -1132,15 +944,15 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Quem é Benedita da Silva, cotada para ser ministra de Lula a partir de 2027",
+   "manchete": "Luiz Inácio Lula da Silva articula o futuro do governo em Brasília",
    "secoes": [
     "A"
    ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-17T20:07:59Z",
-   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNV2NGQkxJT3NZZFlMLWtvaTM5bURfNGZrYTdyeGVoWUVadHM1TUJYWWsySlVnWDdOMkVzYkNZWHNQQl9tbmN5Y1dfUjIyZ05NbkVuMmdya2V6T1Z1OVZTanlNbUtqS1NCRTVQWG1NS29Ca2J5LTBYQmV5cW81dWdnd01XUzZhUURCa2dOQXVLc0JrRjRBVmczYzFfUFpteU1UaG5IUV96Q3AyUQ?oc=5",
-   "editoria": "politica",
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-17T22:07:38Z",
+   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQcGN5Sy1WVmpmb0pkSVJwZmg4dEhzN3JITlVZSkw0dUVGSG9JWUpVYlhIWVM1bEE3MWtsRDF4N0NOTEhhelZ6ZG95MVFTdFRsSWhBZXFTZy1KTWhBckZrSWpXQmFmajV6enJEMmRpX2lXZ3JiLWxMeDhIMVozYWtVaVpXcUFOVllYbDJmMFdTblpfZjZsWUJqWmdTRmsyQWpI?oc=5",
+   "editoria": "gerais",
    "nota": 2,
    "parceiro": {
     "perfil": "brasilforadacaverna",
@@ -1151,17 +963,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Quaest: 70% dos brasileiros rejeitam facilitar acesso a armas",
+   "manchete": null,
    "secoes": [
-    "A",
     "A"
    ],
-   "veiculos": 1,
+   "veiculos": 0,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-17T20:07:59Z",
-   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOWWRJZFczdXdJRDU2UjdZRU9GM0lxQkxKcEUyem9qMmNXdmwwc0laS1V3YmFxS1hVSDJmQ1U2TUtKMFZKci1yWGhfWVZ4ZFp6QXhneVVGUklZYU1hY2ZNMDczZjFNenFyaWo1VkN0V0VRX044N1U3NXVuS2t3LW55a3pOem92SHRDbkE4LS0xdTI?oc=5",
-   "editoria": "eleicoes",
-   "nota": 2,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-17T17:01:27Z",
@@ -1171,16 +982,17 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Redução da maioridade penal e câmeras na PM têm apoio de 92%, diz Quaest",
+   "manchete": "Pesquisa revela que 92% dos brasileiros apoiam redução da maioridade penal para 16 anos",
    "secoes": [
+    "A",
     "A"
    ],
-   "veiculos": 4,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-17T20:07:59Z",
-   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPWEZLblFnOTk1b3VPMFJpQWZaUDBGYmdPdVM0MVU3VzAwdHlJVzR5dzNLQUxmUi01RFZpeDlBNEdxaTJ3cDlQZU1tbV9lZkF0ekpOTWdfOG54eURja05LanZvYVBkZlI4aWQtdFJPUDF5c0c1MC1XNmxqX09xWElaSEY5RDREWmRlYVk0RFNVV01ycUxVdm9ZektRUHQxU0ZSR3FKQk1oZWFWZWppb3FSQUF0OUdodw?oc=5",
-   "editoria": "eleicoes",
-   "nota": 4,
+   "veiculos": 18,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-17T16:08:50Z",
+   "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQMTNqMDdLNGZXbFJ6MmZkUnhfUGR6dHF2TG83WXdLMkdWcC1EVDhBUWxiZVhZLW9xLUYwZTdxbnlxZWRGU1FQbW9XMWNyS1NuLTBmQ09GY2hCUFlFZUh2NXptengzaklJck5VSHAyWS1zT0h0cFpsLWFvMWpld1FIWFROak1tNUFIQlNXOFZmdjB1bHl0REhfSUhXNFdOb2R4UmpCX25SYjRleERXYmJkVGhJa1NFeXZiUHJlZHB0cHpod19SaGlQOHA5NmZGMG1WTG15UWVRRXByenc5?oc=5",
+   "editoria": "saude",
+   "nota": 6,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-17T12:45:08Z",
@@ -1190,22 +1002,21 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Pesquisa Quaest: 92% dos eleitores apoiam reduzir a maioridade penal de 18 para 16 anos",
+   "manchete": null,
    "secoes": [
-    "A",
-    "B"
+    "A"
    ],
-   "veiculos": 21,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-17T16:08:50Z",
-   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQQ0t2czNURnpUUF8xNDlySmhZTW1BZ3VlR3ZEX01zc25rU19hUjZQaWhzRzZ3TFM1cWNCUVBTSDQzcG5XdTNIMFVDS1hVOXo5aHVFdUxEc1JDYzdWbE95dWo3a0JBdExnRUF5dENGcXU4LUt2eGNObTh0SS1ZckhZemUxMHJyeWduTG9sS1BEZ3JXSkZvdWpOT050b2pPaGJ2VGZhcUNrb0k0Zw?oc=5",
-   "editoria": "eleicoes",
-   "nota": 6,
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "saude",
+   "nota": 3,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-17T13:17:35Z",
-    "legenda": "92% apoiam a maioridade penal aos 16, e o mesmo índice quer câmera na farda da polícia A redução da maioridade penal de 18 para 16 anos é apoiada por 92% dos br",
-    "link": "https://www.instagram.com/reel/Df2BK_ng5Rd/"
+    "quando": "2026-11-17T14:30:59Z",
+    "legenda": "70% rejeitam facilitar armas e 64% rejeitam privatizar saúde e educação A maioria dos brasileiros é contra facilitar a compra e a posse de armas (70%) e contra ",
+    "link": "https://www.instagram.com/reel/Df2Jl2MNabK/"
    },
    "triagem": "candidato"
   }
@@ -1213,63 +1024,63 @@
  "descartados_mais_quentes": [
   {
    "manchete": "Premiê do Canadá diz que ideia de reunião Trump-Xi-Putin partiu de Lula",
-   "veiculos": 30,
-   "veiculos_3h": 13,
+   "veiculos": 32,
+   "veiculos_3h": 12,
    "motivo": "sem editoria"
-  },
-  {
-   "manchete": "É falso que Flávio Dino adiou fim da escala 6 por 1",
-   "veiculos": 30,
-   "veiculos_3h": 7,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Tereza Cristina critica Moraes por impedir visita a Bolsonaro",
-   "veiculos": 26,
-   "veiculos_3h": 4,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Robert Pattinson sustituye a Daniel Craig como el séptimo James Bond del cine",
-   "veiculos": 24,
-   "veiculos_3h": 7,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "STJ dá 90 dias para Marco Buzzi desocupar apartamento funcional em Brasília",
-   "veiculos": 20,
-   "veiculos_3h": 8,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Para barrar China, EUA incluem Brasil em lista de países com restrições para acesso a chips de IA",
-   "veiculos": 20,
-   "veiculos_3h": 4,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Abono salarial 2026: 276 mil ainda não sacaram benefício",
-   "veiculos": 19,
-   "veiculos_3h": 5,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Ucrânia ataca uma das maiores petroquímicas da Rússia",
-   "veiculos": 18,
-   "veiculos_3h": 3,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
    "manchete": "Nikolas Ferreira ameaça deixar PL se partido apoiar Hugo Motta: “Insustentável”",
-   "veiculos": 16,
-   "veiculos_3h": 8,
+   "veiculos": 27,
+   "veiculos_3h": 15,
    "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Lula faz reunião com Camilo, Rui Costa e Fonteles para retomar conversas sobre formação de governo",
+   "veiculos": 23,
+   "veiculos_3h": 4,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Quem foi o melhor James Bond? Veja o que dizem as avaliações dos filmes",
+   "veiculos": 21,
+   "veiculos_3h": 3,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Dino decide julgar mérito de ações que questionam escala 5x2, diz que liminar segue valendo e dá prazo para partes se manifestarem",
+   "veiculos": 20,
+   "veiculos_3h": 3,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Donald Trump embarcou ontem para uma série de reuniões na Ásia, que culminarão com uma cúpula com os dois maiores rivais dos EUA: os presidentes chinês, Xi Jinping, e russo, Vladimir Putin, na quinta-feira, 19, em Shenzhen, no sul da China.⁣ ⁣ Será",
+   "veiculos": 19,
+   "veiculos_3h": 9,
+   "motivo": "fora: entretenimento (serie)"
+  },
+  {
+   "manchete": "Rússia ataca infraestrutura da Ucrânia, e Kiev atinge ponte que liga Crimeia ao território russo; veja VÍDEO",
+   "veiculos": 16,
+   "veiculos_3h": 3,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
    "manchete": "Irã reivindica ataque com drones contra base militar dos EUA no Bahrein",
    "veiculos": 15,
    "veiculos_3h": 5,
    "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Lula diz que Irã não tem interesse em construir bomba nuclear",
+   "veiculos": 14,
+   "veiculos_3h": 3,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "'Dark Horse': PGR concorda com pedido para prorrogar inquérito sobre financiamento do filme",
+   "veiculos": 11,
+   "veiculos_3h": 11,
+   "motivo": "fora: entretenimento (filme)"
   }
  ]
 }
