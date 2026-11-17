@@ -1,5 +1,5 @@
 {
-  "status": "renderizar",
+  "status": "erro_render",
   "formato": "quadrado",
   "editoria": "economia",
   "chapeu": "Dinheiro de casa",
@@ -65,5 +65,12 @@
     ],
     "conta_nossa": "R$ 40,4 bi / 212 dias (jan a jul/2026) = R$ 190,6 mi por dia; arredondado para baixo como 'cerca de R$ 190 milhões', explicado na legenda",
     "fonte_primaria": null
+  },
+  "render": {
+    "quando": "2026-11-17T00:30:57Z",
+    "artes": [],
+    "avisos": [],
+    "erro": "UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x743e863793a0>",
+    "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/cbr-bot/cbr-bot/bot/render.py\", line 262, in processar\n    meta = baixar_foto(post[\"foto_url\"], pasta / \"foto.jpg\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/cbr-bot/cbr-bot/bot/render.py\", line 48, in baixar_foto\n    im = Image.open(io.BytesIO(dados))\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/PIL/Image.py\", line 3715, in open\n    raise UnidentifiedImageError(msg)\nPIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x743e863793a0>\n"
   }
 }
