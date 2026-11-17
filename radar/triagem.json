@@ -1,21 +1,22 @@
 {
- "quando": "2026-11-17T18:40:08Z",
- "pauta_quando": "2026-11-17T18:40:07Z",
+ "quando": "2026-11-17T18:46:13Z",
+ "pauta_quando": "2026-11-17T18:46:12Z",
  "ok": true,
  "erro": null,
- "metodo": "regras",
+ "metodo": "regras + gemini",
  "ia": {
   "ia": "gemini",
-  "ok": false,
-  "erro": "Gemini: gemini-3.8-flash: ReadTimeout | gemini-3.5-flash: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-3.5-flash: HTTP 503 This model is currently experiencing high de",
-  "modelo": null,
-  "avaliados_agora": 0,
-  "pedidos_hoje": 18
+  "ok": true,
+  "erro": null,
+  "modelo": "gemini-3.5-flash-lite",
+  "avaliados_agora": 11,
+  "falhas_antes": null,
+  "pedidos_hoje": 19
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 146,
- "novos_3h": 11,
- "esquentaram": 3,
+ "total_assuntos": 140,
+ "novos_3h": 8,
+ "esquentaram": 2,
  "candidatos": [
   {
    "manchete": "João Doria recebeu R$ 220 mil mensais do Banco Master e ofereceu interlocução com presidente do Banco Central Campos Neto, revela UOL",
@@ -23,7 +24,7 @@
     "B"
    ],
    "veiculos": 11,
-   "veiculos_3h": 5,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-17T16:08:50Z",
    "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQN21idzZYZUFwd1pULWxVcUFPeHJwNlM4dDJPLTRFc08wdC10Nm1sS2ZJTHQtQXdLUV8wZTYyNmRsQVVkdnhPTG9sMDRoQlVyZl9iZmJTNHVTd0hITEdtZ3JhTTNfVmMwdFdxTGlJbzF4X25KNU9wR2lZaDNSTmNJTWUzNzJHRnNNRlBKVUdpdUw3YmhkUTQtZ1BZSVJJbjY5YVdER2VHS0NsSk9uR0JHZG9vRjFUOG5mRV9XS1JrV0hmV3pyS1pFWEkxQWNXN2RDM2FSeEtJUnlUb0ttcVZkWmlMYWJnQ3VDT3ZmN0FNTmkyQQ?oc=5",
    "editoria": "politica",
@@ -46,39 +47,11 @@
    }
   },
   {
-   "manchete": "Aposentadoria do INSS terá novas exigências em 2027; veja o que muda para CLT, MEI e autônomos",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 14,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-17T12:08:39Z",
-   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/inss-tera-novas-regras-na-aposentadoria-a-partir-de-1o-de-janeiro-de-2027-veja-o-que-muda.shtml",
-   "editoria": "economia",
-   "nota": 7,
-   "esquentou": false,
-   "lente": [
-    "aposentad",
-    "inss"
-   ],
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 3,
-    "P": 3,
-    "formato": "reels",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Aposentadoria mexe diretamente com o bolso de milhões de trabalhadores.",
-    "soma": 6
-   }
-  },
-  {
    "manchete": "Caso Master completa um ano com Vorcaro preso, expectativa de denúncia e crise no STF",
    "secoes": [
     "B"
    ],
-   "veiculos": 23,
+   "veiculos": 25,
    "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-17T18:08:26Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/17/caso-master-completa-um-ano-com-vorcaro-preso-expectativa-de-denuncia-e-crise-no-stf.ghtml",
@@ -103,29 +76,56 @@
    }
   },
   {
-   "manchete": "13º salário 2026 vai injetar R$ 399,1 bilhões, diz Dieese; média por pessoa é de R$ 3.720",
+   "manchete": "STF pode julgar fim da 6x1 ainda nesta semana",
    "secoes": [
     "B"
    ],
-   "veiculos": 22,
+   "veiculos": 15,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-11-17T14:10:50Z",
+   "link": "https://www.gazetadopovo.com.br/republica/dino-fixa-prazos-para-manifestacoes-e-prepara-julgamento-definitivo-sobre-fim-da-escala-6x1/",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "6x1"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "STF pode julgar fim da escala 6x1; assunto de enorme interesse da classe trabalhadora.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Dino dá prazo para manifestações antes de liberar julgamento sobre fim da escala 6x1",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 11,
    "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-17T18:40:07Z",
-   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1JUmFSM1lLUEp4b3B1akdfSE9YTzdaZlhuRUxWM1dDdG1HeUtLMFlNRFJTTVFtaHBYbVVxSkQwZXNUM3FXMkM5cjZNRy00M3hDcERaazhjeVZVbjgzRUc0bjJFcFowZ2F3RkE3aVhURzBTVUpzdENiS2hTbzJvNzg?oc=5",
+   "na_pauta_desde": "2026-11-17T14:10:50Z",
+   "link": "https://news.google.com/rss/articles/CBMijAJBVV95cUxPLUFoRUlKRHVwUG84SnA3RmcyeFIwcWlJcXNQaUdyZmQ5QjRDN3pZdVJGUFUtMlllRGFoMnQyQmxVU3MxRFdCbVpaYnpVakNJbkZjYXlBXzB2MXowbmV5dFJ0aXJkT0t3RUVMYUJVZFFCcEpGZWtlazNGVGNidHo2cGtIX21qblhQMzNISnpzQU4xS1RYX2ZrWGlqYnBlS2lWcFRybjJSSGpHZDdkQXhfWTZYUmRWNjAwVFpSVUFlV3FCbVB6QkRTR25qaWwzUFgyQjZBdFFhcXpaRGlLRG5zNzBPTGJCYVhtMHpZVXYyUnVWV21rTTNOOWpHa1Q0OVg5Xzl0YnFKdDd3TF9l?oc=5",
    "editoria": "economia",
    "nota": 5,
    "esquentou": false,
    "lente": [
-    "salario"
+    "6x1"
    ],
    "ia": {
-    "editoria": "economia",
+    "editoria": "politica",
     "I": 3,
     "V": 3,
     "P": 2,
-    "formato": "carrossel",
+    "formato": "reels",
     "repetido": false,
     "risco": "",
-    "motivo": "13º salário injeta bilhões na economia; tema de forte interesse popular.",
+    "motivo": "Dino define prazos para julgamento da escala 6x1, assunto central para trabalhadores.",
     "soma": 6
    }
   },
@@ -134,8 +134,8 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 8,
-   "veiculos_3h": 6,
+   "veiculos": 10,
+   "veiculos_3h": 7,
    "na_pauta_desde": "2026-11-17T12:08:39Z",
    "link": "https://www.congressoemfoco.com.br/noticia/131646/no-senado-durigan-defende-cbs-de-11-3-e-diz-que-media-sera-de-8-5",
    "editoria": "politica",
@@ -182,57 +182,30 @@
    }
   },
   {
-   "manchete": "Justiça do DF condena candidata a indenizar Flávio Bolsonaro em R$ 7,5 mil",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 14,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-16T17:08:23Z",
-   "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQeXBzVWFHRUo4Nk1SMHg2WF9INnQycUJzTEljUW5jMDROOG5kTzRONW9wV0ZuS2RPbUhseWMtaUV5TG1KLVlFVVg0WVoycU5YU1hkd3NPa0ZoR2ZHQnFYbG9mbF9wQ1ZlNXpBYlQtSlo3RGJiNFc4Z2NXMnpkNTRyZHU5dkhxLXhGTGttNjVPR3ZyRHVrZEZCZlc1YWZDaGZjT0Yzakw0dVh6RTd3dm14OURCNU5RRFlzdlNNNDJYZzY4YTNVNnZ5cDRPcTl5TVd5QWpXZnEwUFJjQQ?oc=5",
-   "editoria": "eleicoes",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ]
-  },
-  {
-   "manchete": "Interação de indígenas Awá em isolamento na Terra Indígena Arariboia (MA)",
+   "manchete": "Alcolumbre e Motta se reúnem com Moraes e pedem que STF julgue Lei da Dosimetria ainda neste ano",
    "secoes": [
     "B",
-    "C-nacional",
-    "D-terra"
+    "C-nacional"
    ],
-   "veiculos": 6,
-   "veiculos_3h": 4,
+   "veiculos": 20,
+   "veiculos_3h": 20,
    "na_pauta_desde": "2026-11-17T18:08:26Z",
-   "link": "https://g1.globo.com/ma/maranhao/noticia/2026/11/17/indigenas-awa-guaja-isolados-se-aproximam-aldeia-maranhao-funai.ghtml",
-   "editoria": "roca",
-   "nota": 6,
+   "link": "https://www.congressoemfoco.com.br/noticia/131655/motta-e-alcolumbre-pedem-a-moraes-que-destrave-lei-da-dosimetria",
+   "editoria": "politica",
+   "nota": 5,
    "esquentou": false,
-   "lente": [
-    "indigena"
-   ]
-  },
-  {
-   "manchete": "Professor recorre à greve de fome em Palmas após 15 meses à espera de direito previsto em lei",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-17T18:40:07Z",
-   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNQXZuWlVNYzFkb0I0M191LVNkSGZIa1ZLYlpNcEswSHJVd3Z5M29hUFNkT20xNlhCcEt2bTl3WlE4d3d1SnZXekp2TGlMdFNOMll0eTF3STFVOVNXM2g1ZXJOQXY0UzhJenZYQkUwWnpjcnVtM2lNc2lNN2NkVmIyQllKSnFOeTBsUS1kd19oVUQtemd0N1VVTVVzcnpCZ0p6dWhveEtzRUVHSTZqN3QyNkpEQ0ZEY3M3NzRwd3BMdnRxQkI0UGc?oc=5",
-   "editoria": "roca",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "greve",
-    "direito",
-    "fome"
-   ]
+   "lente": [],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Alcolumbre e Motta pressionam STF por lei que reduz penas do 8 de janeiro.",
+    "soma": 4
+   }
   },
   {
    "manchete": "Ministério da Saúde abre processo seletivo com 759 vagas temporárias e salários de até R$ 10.300",
@@ -240,7 +213,7 @@
     "B"
    ],
    "veiculos": 17,
-   "veiculos_3h": 8,
+   "veiculos_3h": 7,
    "na_pauta_desde": "2026-11-17T18:08:26Z",
    "link": "https://www.metropoles.com/distrito-federal/senac-df-anuncia-mais-de-18-mil-vagas-em-41-cursos-profissionalizantes",
    "editoria": "economia",
@@ -268,7 +241,7 @@
     "B"
    ],
    "veiculos": 18,
-   "veiculos_3h": 7,
+   "veiculos_3h": 6,
    "na_pauta_desde": "2026-11-17T12:08:39Z",
    "link": "https://www.diariodocentrodomundo.com.br/fraude-no-divorcio-entenda-o-golpe-de-r-800-mil-contra-o-filho-de-lula/",
    "editoria": "politica",
@@ -286,6 +259,58 @@
     "repetido": false,
     "risco": "acusação de crime sem fonte oficial",
     "motivo": "Operação contra filho de Lula gera burburinho político.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Reaplicação do Enem 2026: veja quem tem direito e como solicitar nova prova",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 21,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-16T22:12:03Z",
+   "link": "https://www.cartacapital.com.br/educacao/enem-2026-prazo-para-pedir-reaplicacao-da-prova-vai-ate-sexta-feira/",
+   "editoria": "educacao",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "direito"
+   ],
+   "ia": {
+    "editoria": "educacao",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Reaplicação do Enem atinge milhares de estudantes e trabalhadores.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Deputado federal do PT ataca fala de ministro de Lula sobre preservar ajuste fiscal: \"Desonesta\"",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 15,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-16T20:34:23Z",
+   "link": "https://www.poder360.com.br/poder-congresso/randolfe-diz-que-faltou-dialogo-da-esquerda-sobre-ajuste-fiscal/",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Deputado do PT critica ajuste fiscal do governo, gerando atrito na base.",
     "soma": 4
    }
   },
@@ -317,126 +342,131 @@
    }
   },
   {
-   "manchete": "U.S. Loses Its Measles Elimination Status, a Historic Setback for American Health",
-   "secoes": [
-    "B",
-    "C-internacional",
-    "D-america_latina"
-   ],
-   "veiculos": 7,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-17T18:08:26Z",
-   "link": "https://www.aljazeera.com/news/2026/11/17/us-officially-loses-measles-free-status-after-26-years-amid-outbreak?traffic_source=rss",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Procurador do Paraguai renuncia ante iminente processo de impeachment por crise bancária (MP)",
-   "secoes": [
-    "B",
-    "C-nacional",
-    "D-america_latina"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-17T18:08:26Z",
-   "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxONW03b2RfbEI3VGVWUWJuRnU1dkhOaG9kX2NnNVY1bkk4TVd3Xzd3RzdlbEt2THZwMU03eHd3UklGU1lZT2liRWozc3VwSjNtc1JSb3dZMDRrZkpoZVozd3VWWEVGVmxodDZZTFN6RHVDRFlfOHNuQ1ZoanpOTldHN3NCTThTdnpSTzlCVGVtQnV1WGZYdzZ3QjVuLXN1Q2VpWmYyN0NUTTlwU3A4STVjUG9sNkJKNFM4SlpVaVpOMF84WmowUEtIaDhPVnA5R0tqdWFwNHNQaWNPZFJjUmdlTg?oc=5",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "STF pode julgar fim da 6x1 ainda nesta semana",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 11,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-17T14:10:50Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/17/lula-se-reune-com-ministro-do-trabalho-para-ajustes-no-decreto-que-regulamentara-fim-da-escala-6x1.ghtml",
-   "editoria": "politica",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "6x1"
-   ]
-  },
-  {
-   "manchete": "Japão x Paraguai: onde assistir, escalações e arbitragem",
-   "secoes": [
-    "B",
-    "D-america_latina"
-   ],
-   "veiculos": 8,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-17T03:13:04Z",
-   "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNY1l3eFhjU3Jza1YwZVZUdTJCX1BxVnNMWVBvek5IUVA2M2Y1ckFiYk9YMHdzMXh1MW5ydlZ3a21MbVpDdF9Sa003LTVDVHFpX3B2cEJaa05KaHlUTWo3LVQydHN4ZlFNR3lmanAzT015bFRGMzhqS2ktZFJHQ3Y0WmNtcFZSLTVqa2JURDBLZlVsWk9QZDh1b3UwMXp5WFlSQXpaelRsM3czTkRmUk5zT280Q2tYdXZSaUZxSGkxbEtaSTRoLUpEcGE3cmVhY0tsZmw1c1pJRUd5YUhPOW9ydUp3VmZNS2RYZVdXTw?oc=5",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": true,
-   "lente": []
-  },
-  {
-   "manchete": "Derrota de Trump representa desafio para seus aliados na América Latina",
-   "secoes": [
-    "B",
-    "C-internacional",
-    "D-america_latina"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-17T18:40:07Z",
-   "link": "https://noticias.uol.com.br/ultimas-noticias/afp/2026/11/17/derrota-de-trump-representa-desafio-para-seus-aliados-na-america-latina.htm",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "trump"
-   ]
-  },
-  {
-   "manchete": "Ex-presidente do Paraguai vai para prisão militar após denúncia",
-   "secoes": [
-    "D-america_latina"
-   ],
-   "veiculos": 31,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-16T17:08:23Z",
-   "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/presidente-deposto-do-paraguai-e-transferido-para-prisao-militar.shtml",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Tag: Aliança Global contra a Fome",
+   "manchete": "Professor recorre à greve de fome em Palmas após 15 meses à espera de direito previsto em lei",
    "secoes": [
     "D-terra"
    ],
-   "veiculos": 6,
+   "veiculos": 3,
    "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-17T02:08:04Z",
-   "link": "https://tvtnews.com.br/alianca-global-contra-a-fome-completa-dois-anos/",
+   "na_pauta_desde": "2026-11-16T19:53:22Z",
+   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNQXZuWlVNYzFkb0I0M191LVNkSGZIa1ZLYlpNcEswSHJVd3Z5M29hUFNkT20xNlhCcEt2bTl3WlE4d3d1SnZXekp2TGlMdFNOMll0eTF3STFVOVNXM2g1ZXJOQXY0UzhJenZYQkUwWnpjcnVtM2lNc2lNN2NkVmIyQllKSnFOeTBsUS1kd19oVUQtemd0N1VVTVVzcnpCZ0p6dWhveEtzRUVHSTZqN3QyNkpEQ0ZEY3M3NzRwd3BMdnRxQkI0UGc?oc=5",
    "editoria": "roca",
-   "nota": 5,
+   "nota": 6,
    "esquentou": false,
    "lente": [
+    "greve",
+    "direito",
     "fome"
-   ]
+   ],
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Greve de fome de professor por direito trabalhista gera forte apelo.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Alckmin diz não acreditar em esvaziamento do PLP do ajuste fiscal no Senado",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 87,
+   "veiculos_3h": 36,
+   "na_pauta_desde": "2026-11-16T19:53:22Z",
+   "link": "https://operamundi.uol.com.br/brasil/senado-vota-destaques-do-ajuste-fiscal-em-meio-a-pressao-do-mercado/",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
   },
   {
    "manchete": "Governo tem votos para barrar destaques ao projeto de ajuste fiscal, diz líder no Senado",
    "secoes": [
     "B"
    ],
-   "veiculos": 53,
-   "veiculos_3h": 28,
+   "veiculos": 36,
+   "veiculos_3h": 21,
    "na_pauta_desde": "2026-11-17T18:08:26Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/17/ajuste-fiscal-senado-vota-destaques-ao-projeto-do-governo-nesta-terca-veja-o-que-pode-mudar-no-texto.ghtml",
    "editoria": "eleicoes",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Anvisa proíbe dois tira-manchas à base de percarbonato de sódio",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 48,
+   "veiculos_3h": 13,
+   "na_pauta_desde": "2026-11-16T13:10:05Z",
+   "link": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/suplementos-alimentares-tem-fabricacao-e-venda-suspensas-no-brasil",
+   "editoria": "saude",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Anvisa aprova nova indicação do Botox para tratamento do aumento do músculo da mastigação",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 14,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-17T16:08:50Z",
+   "link": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/botox-podera-ser-usado-no-relaxamento-do-musculo-da-mastigacao",
+   "editoria": "saude",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Líder do governo na Câmara descarta envio de PEC para compor pacote fiscal",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-17T18:08:26Z",
+   "link": "https://www.infomoney.com.br/politica/centrao-se-posiciona-a-favor-de-pacote-fiscal-do-governo-na-camara-dos-deputados/",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Max Russi defende ampliação de políticas públicas de apoio aos pequenos produtores de MT",
+   "secoes": [
+    "B",
+    "C-nacional",
+    "D-terra"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-17T02:08:04Z",
+   "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOdUxoa09pSEpuN2FVTG5MeVVKZ193eVg5Mkd4YWpwMXU1WVJ1ZWoxMnhuNVZIMmxhb3BCRl9Ra1lwOWRrUkw0XzRsd2NmMVgyWXFMTmRkYjBjcTNJdW1mY1pMTzNmbkVGenNvYlRzQTFzY0IwempBVTlMYWNod2VIaE9KU3ctOXZmS3FQVk40YkNRdl9GZXBYSkFmU191anp2RzFFUFZPNk1sdWlBdUVWN2twLTdTT295TWN4MWtzV3FxU1ZJZHMxMkVycTdZZ1QwcHBRZVdJV2s?oc=5",
+   "editoria": "roca",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Xi Jinping e Claudia Sheinbaum se reúnem na China para discutir relações bilaterais",
+   "secoes": [
+    "D-america_latina"
+   ],
+   "veiculos": 7,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-17T14:10:50Z",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOc1BmbFlIdHV2QTFvenZCV0NsdlpUczZWYUV4dXdPNk5XNVo0R1FBNlJyVXRfZjdQa2pBd0hLdkRwVDNIZnlHS0VvRmhTcFpjb29XaWw4dGtOZTRoVFNGUmxkaEVtUzdkc0tHUWE2bTBWcFJVa0s2RElObFpiUGtIVWh5cVJLYVVkc3FuUi10VzF2Y1MyZXpVbnNhbWQyazRiNTl0LVVWOGZkSURvRzVGUUFCMWdyYVU?oc=5",
+   "editoria": "america_latina",
    "nota": 4,
    "esquentou": true,
    "lente": []
@@ -480,9 +510,27 @@
    }
   },
   {
+   "manchete": "Tag: Aliança Global contra a Fome",
+   "veiculos": 6,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-17T02:08:04Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Aliança Global contra a Fome dialoga com combate à desigualdade.",
+    "soma": 3
+   }
+  },
+  {
    "manchete": "EUA podem perder status de país livre do sarampo",
-   "veiculos": 13,
-   "veiculos_3h": 12,
+   "veiculos": 12,
+   "veiculos_3h": 11,
    "na_pauta_desde": "2026-11-16T19:09:13Z",
    "esquentou": false,
    "ia": {
@@ -499,8 +547,8 @@
   },
   {
    "manchete": "POLÍCIA FEDERAL CUMPRE MANDADOS DE BUSCA E APREENSÃO EM APUCARANA EM OPERAÇÃO CONTRA ORGANIZAÇÃO CRIMINOSA SUSPEITA DE TRÁFICO INTERNACIONAL DE DROGAS E ARMAS",
-   "veiculos": 17,
-   "veiculos_3h": 9,
+   "veiculos": 16,
+   "veiculos_3h": 8,
    "na_pauta_desde": "2026-11-17T14:10:50Z",
    "esquentou": true,
    "ia": {
@@ -512,6 +560,24 @@
     "repetido": false,
     "risco": "",
     "motivo": "Operação policial comum de tráfico, sem grande impacto nacional.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "La derrota de Trump, un desafío para sus aliados en América Latina",
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-17T18:40:07Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Derrota de Trump afeta geopolítica regional, mas foco internacional é menor.",
     "soma": 2
    }
   },
@@ -534,9 +600,45 @@
    }
   },
   {
+   "manchete": "Procurador do Paraguai renuncia ante iminente processo de impeachment por crise bancária (MP)",
+   "veiculos": 5,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-17T18:08:26Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Crise institucional no Paraguai com repercussão limitada no Brasil.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Justiça do DF condena candidata a indenizar Flávio Bolsonaro em R$ 7,5 mil",
+   "veiculos": 14,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-16T17:08:23Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 1,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Menção a Flávio Bolsonaro, mas assunto com pouco impacto para o trabalhador.",
+    "soma": 2
+   }
+  },
+  {
    "manchete": "Measles is no longer considered eliminated in the US and Mexico",
-   "veiculos": 7,
-   "veiculos_3h": 7,
+   "veiculos": 6,
+   "veiculos_3h": 6,
    "na_pauta_desde": "2026-11-17T18:08:26Z",
    "esquentou": false,
    "ia": {
@@ -549,60 +651,6 @@
     "risco": "",
     "motivo": "Assunto repetido e em inglês sobre sarampo nos EUA.",
     "soma": 1
-   }
-  },
-  {
-   "manchete": "Brasil x Singapura: onde assistir, horário e provável escalação do amistoso",
-   "veiculos": 13,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-17T02:08:04Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "fora",
-    "I": 0,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Esporte (futebol) fora do escopo da página.",
-    "soma": 1
-   }
-  },
-  {
-   "manchete": "FELIPE HOLGUIN APPOINTED CEO OF UNIVERSAL MUSIC LATIN AMERICA & IBERIAN PENINSULA",
-   "veiculos": 7,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-17T16:08:50Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "fora",
-    "I": 0,
-    "V": 0,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Corporativo internacional de entretenimento, sem interesse político direto.",
-    "soma": 0
-   }
-  },
-  {
-   "manchete": "Quer sentir menos fome? Veja 6 combinações de alimentos que podem ajudar",
-   "veiculos": 6,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-17T16:08:50Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "fora",
-    "I": 0,
-    "V": 0,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Dica de saúde e bem-estar/alimentação sem cunho político.",
-    "soma": 0
    }
   }
  ],
@@ -743,39 +791,39 @@
  ],
  "descartados_mais_quentes": [
   {
-   "manchete": "Pedro Sánchez recibió a Lula da Silva en vísperas de las elecciones presidenciales",
+   "manchete": "Lula y Pedro Sánchez se reunen en España: esto hablaron sobre las elecciones del 29N",
    "veiculos": 44,
    "veiculos_3h": 4,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "De Batman a James Bond: Robert Pattinson es confirmado como el nuevo agente 007",
-   "veiculos": 25,
+   "manchete": "Moraes barra visitas de Marinho, Tereza Cristina e Valdemar a Bolsonaro na prisão domiciliar",
+   "veiculos": 36,
    "veiculos_3h": 6,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Robert Pattinson es el nuevo James Bond",
+   "veiculos": 23,
+   "veiculos_3h": 7,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Lula faz reunião com Camilo, Rui Costa e Fonteles para retomar conversas sobre formação de governo",
+   "veiculos": 22,
+   "veiculos_3h": 14,
    "motivo": "sem editoria"
   },
   {
    "manchete": "Premiê do Canadá diz que ideia de reunião Trump-Xi-Putin partiu de Lula",
    "veiculos": 22,
-   "veiculos_3h": 10,
+   "veiculos_3h": 11,
    "motivo": "sem editoria"
   },
   {
    "manchete": "Defesa de Carla Zambelli pede retirada de nome da lista da Interpol",
    "veiculos": 22,
    "veiculos_3h": 3,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Lula faz reunião com Camilo, Rui Costa e Fonteles para retomar conversas sobre formação de governo",
-   "veiculos": 21,
-   "veiculos_3h": 14,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "20 de novembro é feriado nacional? Veja quem tem direito à folga",
-   "veiculos": 20,
-   "veiculos_3h": 4,
    "motivo": "sem editoria"
   },
   {
@@ -791,16 +839,16 @@
    "motivo": "sem editoria"
   },
   {
-   "manchete": "China anuncia encontro inédito entre Xi, Putin e Trump em Shenzhen",
+   "manchete": "Irã nega plano de ataque a Washington, mas Trump não descarta ameaça: 'Eles são loucos'",
    "veiculos": 17,
-   "veiculos_3h": 3,
+   "veiculos_3h": 4,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Lula diz que Irã não tem bomba nuclear e que EUA \"inventam história\"",
-   "veiculos": 17,
+   "manchete": "China anuncia encontro inédito entre Xi, Putin e Trump em Shenzhen",
+   "veiculos": 16,
    "veiculos_3h": 3,
-   "motivo": "sem editoria"
+   "motivo": "fora: internacional sem Brasil nem América Latina"
   }
  ]
 }
