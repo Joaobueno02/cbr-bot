@@ -1,5 +1,5 @@
 {
-  "status": "renderizar",
+  "status": "erro_render",
   "formato": "quadrado",
   "editoria": "america_latina",
   "pais": "Venezuela",
@@ -85,5 +85,12 @@
     ],
     "fonte_primaria": null
   },
-  "comentario": "Você acha que o Brasil deveria se posicionar sobre a presença militar dos EUA na Venezuela?"
+  "comentario": "Você acha que o Brasil deveria se posicionar sobre a presença militar dos EUA na Venezuela?",
+  "render": {
+    "quando": "2026-11-18T18:26:29Z",
+    "artes": [],
+    "avisos": [],
+    "erro": "ValueError: foto com 600x337; o mínimo é 1000 px de largura. Escolha outra foto (use a sonda).",
+    "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/cbr-bot/cbr-bot/bot/render.py\", line 262, in processar\n    meta = baixar_foto(post[\"foto_url\"], pasta / \"foto.jpg\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/cbr-bot/cbr-bot/bot/render.py\", line 62, in baixar_foto\n    raise ValueError(f\"foto com {w}x{h}; o mínimo é {LARGURA_MIN} px de largura. Escolha outra foto (use a sonda).\")\nValueError: foto com 600x337; o mínimo é 1000 px de largura. Escolha outra foto (use a sonda).\n"
+  }
 }
