@@ -1,90 +1,102 @@
 {
- "quando": "2026-11-18T19:27:10Z",
- "pauta_quando": "2026-11-18T19:27:07Z",
+ "quando": "2026-11-18T21:08:01Z",
+ "pauta_quando": "2026-11-18T21:07:58Z",
  "ok": true,
  "erro": null,
- "metodo": "regras",
+ "metodo": "regras + gemini",
  "ia": {
   "ia": "gemini",
-  "ok": false,
-  "erro": "Gemini: gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in | gemi",
-  "modelo": null,
-  "avaliados_agora": 0,
-  "pedidos_hoje": 26
+  "ok": true,
+  "erro": null,
+  "modelo": "gemini-3.5-flash-lite",
+  "avaliados_agora": 23,
+  "falhas_antes": null,
+  "pedidos_hoje": 27
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 165,
- "novos_3h": 6,
- "esquentaram": 5,
+ "total_assuntos": 157,
+ "novos_3h": 5,
+ "esquentaram": 3,
  "candidatos": [
   {
-   "manchete": "Lula se reúne com ministro do Trabalho, pede ajustes e deve assinar decreto que regulamentará fim da escala 6x1 nesta quinta",
+   "manchete": "Senado adia votação de destaques ao projeto de ajuste fiscal do governo para quarta-feira",
    "secoes": [
+    "A",
     "B"
    ],
-   "veiculos": 29,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-17T14:10:50Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/17/lula-se-reune-com-ministro-do-trabalho-para-ajustes-no-decreto-que-regulamentara-fim-da-escala-6x1.ghtml",
+   "veiculos": 67,
+   "veiculos_3h": 32,
+   "na_pauta_desde": "2026-11-18T00:07:28Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/17/senado-adia-votacao-de-destaques-ao-projeto-de-ajuste-fiscal-do-governo-para-quarta-feira.ghtml",
    "editoria": "politica",
-   "nota": 6,
+   "nota": 5,
    "esquentou": false,
-   "lente": [
-    "6x1"
-   ],
+   "lente": [],
    "ia": {
-    "editoria": "politica",
+    "editoria": "economia",
     "I": 3,
     "V": 3,
     "P": 3,
     "formato": "reels",
     "repetido": false,
     "risco": "",
-    "motivo": "Decreto sobre o fim da escala 6x1 atinge fortemente a classe trabalhadora.",
+    "motivo": "Pacote de ajuste fiscal atinge diretamente direitos e serviços públicos.",
     "soma": 6
    }
   },
   {
-   "manchete": "PF pede prorrogação de inquérito sobre influenciadores contratados para atacar BC e defender Master",
+   "manchete": "Chefe do Pentágono anuncia acordo de cooperação militar com Venezuela (televisão estatal)",
    "secoes": [
-    "B"
+    "B",
+    "C-internacional",
+    "D-america_latina"
    ],
-   "veiculos": 6,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-17T22:07:38Z",
-   "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxORzM0aWVCN2h0MWJUSjJJbzNzYUZiME40SFRMU1NTdVVRYkwyMGNFYUlqa2JOclhDeUZMOEVmeDZTV05vVnZCc3JjQ1Zhc3A2elhnQ2J4OVk5dHE5Yms3cTBCMjVEVHE1YWpzVWlrLW9vRFU4Y0g3Q3g1UXdpZFMyOU85SXZpV1NHS2hCcXNhQWVtUmJWYUs1WmpMcmw5NHJ2dE5BN0Zmb0RvblpOX3E1ZkN1S01pU0VMQ1lueGE5T01feWxDZ0YtU2VpSGlFY3FDcGc2aUp0cDZ2clFpRjBtOUJUcGRVMk50aEHSAfgBQVVfeXFMTlJLNjdqMXgxM19OT1hMV3c2X3lieDJHUFlyT0k5d1ZNQnZJMXBMa3ViU3NuTVVfTjFwX0VON2RaeWZ2TFZ6cWVuRlBISERkNlhUYzUxTFR0b210R05rUHZlNGZnU3lTd2o1ckRtU3JPM1g1c2I1RVpwNEthMjhCNmJWSEVxT3BaTnZGZEJqNmdWSU1JY05WNE9OZS1RNUR5ZThaRUQyaTFTMVhJU09hcE1sWXlxUUVWTGlTNWRaclREd0dLLW8wZzV1eHpOVFZaQzYtRjcyWnYzQ2kweEQxcHZMMUdiaWlyaHREbXk0WExCRzJfVVl1RnE?oc=5",
-   "editoria": "politica",
-   "nota": 7,
+   "veiculos": 42,
+   "veiculos_3h": 33,
+   "na_pauta_desde": "2026-11-18T18:09:27Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/hegseth-vai-a-caracas-e-eua-e-venezuela-anunciam-acordo-militar.shtml",
+   "editoria": "america_latina",
+   "nota": 5,
    "esquentou": false,
-   "lente": [
-    "inquerito",
-    "master"
-   ]
+   "lente": [],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Acordo militar dos EUA com a Venezuela tensiona a região e gera alto engajamento.",
+    "soma": 6
+   }
   },
   {
-   "manchete": "Professores questionam mais duas questões de matemática do Enem 2026",
+   "manchete": "PNAD Contínua Trimestral: desocupação cai em 8 das 27 UFs no 3° trimestre de 2026 - Agência de Notícias",
    "secoes": [
     "A",
     "B"
    ],
-   "veiculos": 63,
-   "veiculos_3h": 21,
-   "na_pauta_desde": "2026-11-18T01:20:41Z",
-   "link": "https://redir.folha.com.br/redir/online/educacao/rss091/*https://www1.folha.uol.com.br/educacao/2026/11/professores-questionam-mais-duas-questoes-de-matematica-do-enem-2026.shtml",
-   "editoria": "educacao",
+   "veiculos": 68,
+   "veiculos_3h": 20,
+   "na_pauta_desde": "2026-11-18T12:10:07Z",
+   "link": "https://g1.globo.com/economia/noticia/2026/11/18/desemprego-estados-pnad.ghtml",
+   "editoria": "economia",
    "nota": 6,
    "esquentou": true,
-   "lente": [],
+   "lente": [
+    "desemprego"
+   ],
    "ia": {
-    "editoria": "educacao",
-    "I": 2,
+    "editoria": "economia",
+    "I": 3,
     "V": 3,
     "P": 2,
-    "formato": "carrossel",
+    "formato": "reels",
     "repetido": false,
     "risco": "",
-    "motivo": "Polêmica com questões do Enem atinge milhões de estudantes e gera debate.",
-    "soma": 5
+    "motivo": "Queda no desemprego afeta diretamente a classe trabalhadora e gera grande engajamento.",
+    "soma": 6
    }
   },
   {
@@ -93,8 +105,8 @@
     "B",
     "D-terra"
    ],
-   "veiculos": 30,
-   "veiculos_3h": 6,
+   "veiculos": 39,
+   "veiculos_3h": 10,
    "na_pauta_desde": "2026-11-17T16:08:50Z",
    "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/18/tomate-arroz-e-carne-encarecem-cesta-basica-em-todas-as-capitais-veja-o-valor-e-quanto-subiu.ghtml",
    "editoria": "roca",
@@ -116,145 +128,43 @@
    }
   },
   {
-   "manchete": "Cesta Básica Sobe Para R$ 1.373 Em SP; Cebola Acumula Alta De 148% Em Um Ano",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-18T10:21:10Z",
-   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOUGc5dDhKTmdHWC10cHI1UFNLc0h0V2l2MmlrZ2xiclFKQkRPMnZjcVdZaWlMWFN1aXBPc0FSYkhTQWtlWUE1Qmg4eFVQMTg4MWN1U2lxMGtfUzdfVzhTSkZYZTB0bmdveTN6cFVOU2QxUzVjVEh2UHA2RndXUnlRLQ?oc=5",
-   "editoria": "roca",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "cesta basica"
-   ],
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Alta da cesta básica e inflação dos alimentos pesam no orçamento popular.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Desocupação cai em oito estados e fica estável em 18 no terceiro trimestre - Agência de Notícias",
-   "secoes": [
-    "A",
-    "B"
-   ],
-   "veiculos": 72,
-   "veiculos_3h": 31,
-   "na_pauta_desde": "2026-11-18T12:10:07Z",
-   "link": "https://g1.globo.com/economia/noticia/2026/11/18/desemprego-estados-pnad.ghtml",
-   "editoria": "economia",
-   "nota": 6,
-   "esquentou": true,
-   "lente": [
-    "desemprego"
-   ]
-  },
-  {
-   "manchete": "Wellington Dias lidera agenda internacional em Roma para fortalecer combate à fome e à pobreza",
-   "secoes": [
-    "B",
-    "D-terra"
-   ],
-   "veiculos": 10,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-18T18:25:26Z",
-   "link": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/na-fao-wellington-dias-celebra-avancos-no-combate-fome",
-   "editoria": "roca",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "fome"
-   ]
-  },
-  {
-   "manchete": "Ministério da Saúde abre concurso para 759 vagas com salários de até R$ 10 mil",
+   "manchete": "O que a PF incluirá nos novos relatórios sobre Vorcaro e ministros do STF?",
    "secoes": [
     "B"
    ],
-   "veiculos": 15,
-   "veiculos_3h": 6,
+   "veiculos": 41,
+   "veiculos_3h": 22,
    "na_pauta_desde": "2026-11-17T18:08:26Z",
-   "link": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-11/mais-de-40-mil-vagas-de-estagio-serao-abertas-ate-o-inicio-de-2027",
-   "editoria": "economia",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "salario",
-    "vagas"
-   ]
-  },
-  {
-   "manchete": "Diretor da PF leva a Fachin relatório sobre relações de ministros do STF com Vorcaro",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 14,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-17T18:08:26Z",
-   "link": "https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2026/11/18/diretor-da-pf-leva-a-fachin-relatorio-sobre-relacoes-de-ministros-do-stf-com-vorcaro.htm",
+   "link": "https://www.gazetadopovo.com.br/vozes/alexandre-garcia/pf-relatorios-vorcaro-ministros-stf/",
    "editoria": "politica",
    "nota": 6,
    "esquentou": false,
    "lente": [
     "vorcaro"
    ],
-   "outras_manchetes": 1
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Investigação envolve figuras públicas e STF, gera alto interesse.",
+    "soma": 4
+   }
   },
   {
-   "manchete": "Nikolas Ferreira ameaça sair do PL caso partido se alie a Hugo Motta",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 23,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-17T16:08:50Z",
-   "link": "https://www.gazetadopovo.com.br/republica/nikolas-ferreira-ameaca-sair-do-pl-caso-partido-se-aliie-a-hugo-motta/",
-   "editoria": "politica",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "pl"
-   ]
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "politica",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "vorcaro",
-    "master",
-    "banco"
-   ]
-  },
-  {
-   "manchete": "Não nos sentimos representadas: Marina Silva e advogadas cobram indicação de mulher negra ao STF",
+   "manchete": "Senado deve ouvir nesta quarta ministro da Justiça e diretor da PF sobre troca de delegados",
    "secoes": [
     "B"
    ],
-   "veiculos": 6,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-18T18:09:27Z",
-   "link": "https://www.gazetadopovo.com.br/republica/marina-silva-integra-video-cobrando-lula-por-mulher-negra-no-stf/",
+   "veiculos": 24,
+   "veiculos_3h": 14,
+   "na_pauta_desde": "2026-11-17T18:08:26Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/18/senado-deve-ouvir-nesta-quarta-ministro-da-justica-sobre-troca-de-delegados-diretor-da-pf-nao-confirma-presenca.ghtml",
    "editoria": "politica",
-   "nota": 4,
+   "nota": 5,
    "esquentou": false,
    "lente": [],
    "ia": {
@@ -265,22 +175,75 @@
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Cobrança por representatividade negra no STF destaca pauta antirracista.",
+    "motivo": "Conflitos institucionais na Polícia Federal e Ministério da Justiça rendem debate.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "PF apura apoio ilegal a Flávio de rede do vice-presidente dos EUA",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-17T18:08:26Z",
+   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQRzhDS1JEa1BrWlV4ODBRczVZdm1uTWZXMm03U2dnQ3lyLWE3dk5oVy1sWnJaakc0ekZWNXRjSDNrUkFONGNiSW9NY1MtSTF0MzUza1d4V1NwY3VCTE5LVXotSFYyeGpXZEFvdDJqS1Y0MkV4QWxTWTdsOWJoWURxQUdHekNzdEVBQ0dqY3Zna0FrQ2RZa0hoNW5TcU5OMURCRWFjODB30gGrAUFVX3lxTE9nQ3lzTzRjTWdlTGhuSDZtcGVZS1Z5ZGhyWlEyVlpwSXpsOGhYUjZSUm44UUFiT0xmWkNFZU12eXZZbDFFUmtWbTMxWUw0MndtUFYxLUw1dlNLd083cG52QUdPZy1RYm9iRXc3S0s4T1JOVnRzZ1BRU0M3NjJBQks0Q2pXM1RWZVlqeWhOa2JLX2FoLTh0NnlOelVEUnBEb1pCNjBjNENIYnZJVQ?oc=5",
+   "editoria": "politica",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "flavio"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "Acusação de crime sem fonte oficial",
+    "motivo": "Investigação sobre interferência externa de aliados de Trump no Brasil.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Enem 2026: o que fez a questão de matemática ser anulada? Veja explicação de professores",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 99,
+   "veiculos_3h": 25,
+   "na_pauta_desde": "2026-11-18T01:20:41Z",
+   "link": "https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2026/11/18/enem-2026-o-que-fez-a-questao-de-matematica-ser-anulada-veja-explicacao-de-professores.htm",
+   "editoria": "educacao",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "educacao",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Anulação de questão do Enem mobiliza estudantes e gera grande repercussão.",
     "soma": 4
    }
   },
   {
    "manchete": "Caso Master: Fachin deve definir próximos passos após receber relatórios da PF com menções a ministros",
    "secoes": [
-    "B"
+    "B",
+    "D-terra"
    ],
-   "veiculos": 34,
-   "veiculos_3h": 25,
+   "veiculos": 14,
+   "veiculos_3h": 8,
    "na_pauta_desde": "2026-11-17T18:08:26Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/18/fachin-recebe-nesta-quarta-relatorio-da-pf-sobre-ministros-no-caso-master-e-deve-avaliar-modelo-para-definir-proximos-passos.ghtml",
    "editoria": "politica",
    "nota": 6,
-   "esquentou": true,
+   "esquentou": false,
    "lente": [
     "master"
    ],
@@ -297,116 +260,307 @@
    }
   },
   {
-   "manchete": "Chefe do Pentágono anuncia acordo de cooperação militar com Venezuela (televisão estatal)",
-   "secoes": [
-    "B",
-    "C-internacional",
-    "D-america_latina"
-   ],
-   "veiculos": 23,
-   "veiculos_3h": 23,
-   "na_pauta_desde": "2026-11-18T18:09:27Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/hegseth-vai-a-caracas-e-eua-e-venezuela-anunciam-acordo-militar.shtml",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Senado adia conclusão da votação de pacote fiscal por falta de acordo e atrasa análise da Câmara. Motta evita previsão",
+   "manchete": "Receita, MPF e PF deflagram operação Cash Out, relacionada a bets; dono da Esportes da Sorte é alvo de buscas",
    "secoes": [
     "B"
    ],
-   "veiculos": 58,
-   "veiculos_3h": 18,
-   "na_pauta_desde": "2026-11-18T00:07:28Z",
-   "link": "https://www.gazetadopovo.com.br/republica/andrei-percorre-os-tres-poderes-em-meio-a-crise-na-pf/",
-   "editoria": "politica",
-   "nota": 5,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Polícia Federal faz operação contra tráfico internacional de cocaína em Guarujá",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 55,
-   "veiculos_3h": 14,
+   "veiculos": 29,
+   "veiculos_3h": 7,
    "na_pauta_desde": "2026-11-17T14:10:50Z",
-   "link": "https://g1.globo.com/pe/pernambuco/noticia/2026/11/18/policia-procura-ferrari-de-r-4-milhoes-em-operacao-contra-quadrilha.ghtml",
+   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNWFhNQWx2NkhuTTlWRllibDU1NDlfV2JIdkVhWXVCcXMwYmhCRkd5YkJyR3QyQWVmU2t4QnZzblEycEh1YVJzQ0Y4a0dWeWVEbHZ0NkNTcW1GU19semM4SnN2VnZ5NS1weDY3TmFvNmVqZkF1RXpPUm1FTHpCWjFCN2FRaTBPczAwLWE0S09NVEdVWjNRSlh3TUJncXpjU3JqZXZaUG1ubnEtMlUtdXBzUTdNLWhBLXB3RnRqNWExUTRtOXPSAdIBQVVfeXFMTjNWdnBkcFpFbGtXeG5qbXd1S3o5SGxZV243LXNEbU0zUVdVQkZYNjBZUUQ0bHBHOFMwRDlPMzNsc3dLY1h5NG44TDBVeVYwN2NpTW9adGFlTVdic2VwVVBRcktLRTNBX3ExNndVQUFyLXUtYUxsSThqLTBjZ1pNREJsSXpLWDRIYTFGd1lreXhJRHg2eE9nYTIwTWY0Y3dlWmhjV1hzeGxsWGo0Z213ZkxBemNnNUNqTGk1Sk5SekhBYlRadVlKSUIyV2lPSjZHQ3NB?oc=5",
    "editoria": "politica",
    "nota": 5,
    "esquentou": false,
-   "lente": []
+   "lente": [],
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Operação contra o mercado de apostas ilegais que afetam as famílias trabalhadoras.",
+    "soma": 4
+   }
   },
   {
-   "manchete": "Governo cede sobre projeto das bets para tentar aprovar ajuste fiscal",
-   "secoes": [
-    "A",
-    "B"
-   ],
-   "veiculos": 37,
-   "veiculos_3h": 13,
-   "na_pauta_desde": "2026-11-18T00:07:28Z",
-   "link": "https://www.gazetadopovo.com.br/republica/governo-cede-sobre-projeto-das-bets-para-tentar-aprovar-ajuste-fiscal/",
-   "editoria": "politica",
-   "nota": 5,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Hegseth visits Venezuela and says he looks forward to deepening a military partnership",
+   "manchete": "Após adiamento de pacote fiscal no Senado, Motta evita sinalizar data de votação de projeto na Câmara",
    "secoes": [
     "B",
-    "C-internacional",
     "D-america_latina"
    ],
-   "veiculos": 10,
-   "veiculos_3h": 10,
-   "na_pauta_desde": "2026-11-18T19:27:07Z",
-   "link": "https://news.google.com/rss/articles/CBMilAJBVV95cUxOWFdQSlVURlc0U1dLV3ZfNFBuU3MwdTNjZGpvdFUwRmFYc0lDS20xdE5EYTRiZGpsRGhLczJXZzNaTHFUbVpkWndVWnFGZDhwVElHN3pvamlBQ3F2NGxJb2NqV0pPSEtjN3dlNDdXQ0FyV2d4dVBSWTg4Vk9ZYzZmajVPMHhIbnk2UVh5akMxOTNfNkNHQ3MzZ29kaFkzRjJJZ2x2b0hma1BkSV93dTIwelByaFc5bDljWmdvc1JVN20tN2xsZURpcjhCRGxOU3N5djBNOEdDeUFIR3VKNzJNaUpOcGFEWWlGTnpaV0MyWkt6MTM2QlZjLVNuRUFSUloyLUtGbDdMVHJXT1dmOWVEWlA3azY?oc=5",
+   "veiculos": 18,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-18T00:07:28Z",
+   "link": "https://www.brasil247.com/brasilia/senado-derruba-1o-destaque-da-oposicao-que-endureceria-pacote-fiscal/",
    "editoria": "america_latina",
    "nota": 5,
    "esquentou": false,
-   "lente": []
+   "lente": [],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Impacto do pacote fiscal no Congresso e articulações da base governista.",
+    "soma": 4
+   }
   },
   {
-   "manchete": "Chefe do Pentágono, Pete Hegseth, é recebido na Venezuela por Delcy Rodríguez",
+   "manchete": "Racha no PL: ala bolsonarista pressiona por candidatura de Nikolas à Câmara e Valdemar reage",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 7,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-18T18:09:27Z",
+   "link": "https://www.diariodocentrodomundo.com.br/valdemar-detona-candidatura-de-nikolas-a-camara-loucura/",
+   "editoria": "eleicoes",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "pl"
+   ],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Conflitos internos na extrema-direita expõem rachas na base bolsonarista.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Nikolas Ferreira ameaça sair do PL caso partido se alie a Hugo Motta",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 17,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-17T16:08:50Z",
+   "link": "https://www.gazetadopovo.com.br/republica/nikolas-ferreira-ameaca-sair-do-pl-caso-partido-se-aliie-a-hugo-motta/",
+   "editoria": "politica",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "pl"
+   ],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Ameaça de racha partidário envolvendo figura pública conhecida.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Brasil mantém eliminação do sarampo após avanço da doença em países das Américas — Ministério da Saúde",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 15,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-18T10:21:10Z",
+   "link": "https://www.rfi.fr/br/podcasts/linha-direta/20261118-sarampo-avan%C3%A7a-nas-am%C3%A9ricas-e-eua-perdem-certifica%C3%A7%C3%A3o-de-elimina%C3%A7%C3%A3o-da-doen%C3%A7a-ap%C3%B3s-26-anos",
+   "editoria": "america_latina",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Perda de status livre de sarampo nos EUA contrasta com a situação do Brasil.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Venezuela y EEUU reanudan la cooperación técnico-militar",
    "secoes": [
     "B",
     "C-internacional",
     "D-america_latina"
    ],
-   "veiculos": 9,
-   "veiculos_3h": 8,
-   "na_pauta_desde": "2026-11-18T18:09:27Z",
-   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQa2EwanJNbkhCUDdPeWtaYUtad2JNM1VxdUR3azJBanM5eE5iQXRiR0cyYVA2TU80OXRpdFpfYW1aZE9RV09lTEthM0Joajc5SS1QUklkcktnZ1hMWXktMUVoRzFMeUg4V3p4cG1DeGxDdHNtbnQ2QmVrSTl4cVpJT25MSDR3cmhNSEQwUkt2LWJCdGdicHJEUUh2LVdEcm05QXNpbGdqUHZBRHVYMHA4QVBTMmdsSEJhRnFKLUxPVldQenhn0gHKAUFVX3lxTE0xZmFVTmk1YjZlRXI5Q0V6MndkbnlpckpIeGttdi1IcS1fWHRuNERON0ltUTVBdTRXd3RKdmZCbTd3TnFXZW9nYWlFZlR0WElpNUtxZ2dFVkhnWDctYUxnZ3RVZDl5WVREU2ZTMXdycnBmTDlxYXRvd09LUGowTFlaTTZoWkNoMVJJUVRlUW1EMzY5Njc3MXBzZk41cHRMeEdHTUhxQXpiYXc5TWg2WlVXWnVXYU15b2MyaXJSNnBrNG13UGQwRDQ5T0E?oc=5",
+   "veiculos": 8,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-18T18:25:26Z",
+   "link": "https://www.telesurtv.net/venezuela-reactiva-cooperacion-militar-eeuu/",
    "editoria": "america_latina",
    "nota": 5,
    "esquentou": true,
    "lente": []
   },
   {
-   "manchete": "Senado deve ouvir nesta quarta ministro da Justiça e diretor da PF sobre troca de delegados",
+   "manchete": "Tras 49 años de viaje, Voyager 1 llega a un día luz de la Tierra el miércoles 18: la hora exacta en Ecuador, EE. UU. y México",
    "secoes": [
-    "B"
+    "B",
+    "D-america_latina"
    ],
    "veiculos": 15,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-18T19:27:07Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/18/senado-deve-ouvir-nesta-quarta-ministro-da-justica-sobre-troca-de-delegados-diretor-da-pf-nao-confirma-presenca.ghtml",
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-18T10:21:10Z",
+   "link": "https://redir.folha.com.br/redir/online/ciencia/rss091/*https://www1.folha.uol.com.br/ciencia/2026/11/sonda-voyager-1-da-nasa-atinge-um-dia-luz-da-terra.shtml",
+   "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Justiça Federal aceita ação de Nikolas Ferreira e suspende licitação de iPhones no Senado",
+   "secoes": [
+    "A",
+    "B"
+   ],
+   "veiculos": 28,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-18T18:25:26Z",
+   "link": "https://www.gazetadopovo.com.br/republica/juiz-federal-atende-nikolas-ferreira-e-suspende-licitacao-de-iphones-do-senado/",
    "editoria": "politica",
    "nota": 5,
    "esquentou": false,
    "lente": []
+  },
+  {
+   "manchete": "PF faz operação contra organização atuante na exploração ilegal de apostas — Polícia Federal",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 21,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-17T14:10:50Z",
+   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOVEU3UzYtMlFpMGw2M0sxMmt4WnJHS1hRaEt3RTNaTkRWckRTSkI3ZTR1RERhWDFCOU1JU01YR0UyX1hzejFUZDVTMU9mTzA5SHhRQ3RHODhQbnRqMlV0YVFYc3VJbDAwTWlpT1RTRHFlSC1JYmV1cXBiZmFLSlRDZEwyMmFEbGUyS3FUTWxTTnh6MzhfQW1uUDR1X0lsRS1ncHFGVkRydnd5NjMtQXVBQmYtakR0dzNBdUJDOTc3cnFxRXJTd3F3?oc=5",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "PF apura se rede ligada a JD Vance apoiou Flávio, diz jornal",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 7,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-17T18:08:26Z",
+   "link": "https://www.brasil247.com/brasil/pf-investiga-suspeita-de-apoio-de-vance-a-campanha-de-flavio-bolsonaro/",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "flavio"
+   ]
+  },
+  {
+   "manchete": "Marau registra 58 casos de câncer de próstata em cinco anos pelo SUS",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-18T21:07:58Z",
+   "link": "https://g1.globo.com/mt/mato-grosso/especial-publicitario/unimed-cuiaba-unimed-cuiaba-ha-50-anos-cuidando-de-geracoes/noticia/2026/11/18/mt-registra-cerca-de-mil-casos-anuais-de-cancer-de-prostata-alerta-unimed.ghtml",
+   "editoria": "saude",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "sus"
+   ]
   }
  ],
  "rebaixados": [
   {
-   "manchete": "Ministério da Saúde autoriza envio de doses extras de vacina contra Covid-19 para estados",
+   "manchete": "Fed alerta para dívida ligada à IA e propõe novas altas de juros",
+   "veiculos": 6,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-11-18T21:07:58Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 1,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Alerta sobre dívida e juros afeta a economia popular e o custo de vida.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Saúde apresenta 4 projetos do Acelera SUS, com biossensor de câncer",
+   "veiculos": 5,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-18T19:27:07Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "saude",
+    "I": 2,
+    "V": 1,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Investimentos estratégicos e consultas públicas do SUS e inovação em saúde.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Ministério da Saúde abre concurso para 759 vagas com salários de até R$ 10 mil",
    "veiculos": 15,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-11-17T18:08:26Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "saude",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Concurso público no SUS oferece oportunidades relevantes para profissionais.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Wellington Dias alerta que guerras desviam recursos do combate à fome",
+   "veiculos": 7,
    "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-18T18:25:26Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Combate à fome e desvio de recursos para guerras tocam a pauta social.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Vacina contra Covid-19: Ministério da Saúde prevê envio de doses adicionais a dez estados",
+   "veiculos": 13,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-18T12:10:07Z",
    "esquentou": false,
    "ia": {
@@ -422,27 +576,45 @@
    }
   },
   {
-   "manchete": "STF inaugura símbolo de Xangô, orixá da Justiça, após pedido de líderes de religiões afro-brasileiras",
-   "veiculos": 17,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-17T16:08:50Z",
-   "esquentou": true,
+   "manchete": "Novo lançará deputado Paulo Martins, do Paraná, à presidência da Câmara",
+   "veiculos": 11,
+   "veiculos_3h": 7,
+   "na_pauta_desde": "2026-11-18T19:27:07Z",
+   "esquentou": false,
    "ia": {
-    "editoria": "gerais",
+    "editoria": "politica",
     "I": 1,
-    "V": 2,
+    "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Símbolo de matriz africana no STF combate intolerância religiosa.",
-    "soma": 3
+    "motivo": "Lançamento de candidatura menor na disputa pela presidência da Câmara.",
+    "soma": 2
    }
   },
   {
-   "manchete": "Área técnica do TCU vê indícios de irregularidades em pronunciamento de Lula na TV",
-   "veiculos": 8,
-   "veiculos_3h": 7,
+   "manchete": "STF discute efeitos do fim da isenção de pena por crimes patrimoniais na família",
+   "veiculos": 5,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-18T21:07:58Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "politica",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Discussão jurídica de impacto restrito no cotidiano da maioria.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Comissão aprova fiscalização do Banco Master proposta por Damares",
+   "veiculos": 7,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-18T18:09:27Z",
    "esquentou": false,
    "ia": {
@@ -453,13 +625,13 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Apuração técnica do TCU sobre pronunciamento tem impacto político limitado.",
+    "motivo": "Fiscalização parlamentar pontual sem grande apelo imediato.",
     "soma": 2
    }
   },
   {
    "manchete": "Bukele anuncia que militares salvadorenhos destruíram casa de chefe de gangue no Haiti",
-   "veiculos": 5,
+   "veiculos": 7,
    "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-18T16:08:36Z",
    "esquentou": true,
@@ -476,57 +648,21 @@
    }
   },
   {
-   "manchete": "Professor é espancado após tentar defender mulher no Rio",
-   "veiculos": 13,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-18T18:09:27Z",
+   "manchete": "Grupo de indígenas isolados Awá faz contato na Terra Indígena Arariboia no Maranhão",
+   "veiculos": 5,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-17T18:08:26Z",
    "esquentou": false,
    "ia": {
-    "editoria": "gerais",
+    "editoria": "roca",
     "I": 1,
     "V": 1,
-    "P": 0,
+    "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Crime comum sem ligação direta com a linha editorial prioritária.",
+    "motivo": "Contato de indígenas isolados é importante, mas de impacto localizado.",
     "soma": 2
-   }
-  },
-  {
-   "manchete": "Seplan divulga resultados da pesquisa da cesta básica de outubro em Rio Branco e Cruzeiro do Sul",
-   "veiculos": 2,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-18T16:08:36Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "economia",
-    "I": 1,
-    "V": 0,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Dados estritamente locais da cesta básica de baixa repercussão e interesse regionalizado.",
-    "soma": 1
-   }
-  },
-  {
-   "manchete": "Fabio Serapião: Bet Esportes da Sorte é alvo da PF, e Justiça bloqueia R$ 2,3 bilhões",
-   "veiculos": 3,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-17T14:10:50Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": true,
-    "risco": "",
-    "motivo": "Operação na Esportes da Sorte já listada acima.",
-    "soma": 4
    }
   }
  ],
@@ -537,8 +673,8 @@
     "A",
     "B"
    ],
-   "veiculos": 27,
-   "veiculos_3h": 5,
+   "veiculos": 28,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-18T18:25:26Z",
    "link": "https://www.gazetadopovo.com.br/republica/juiz-federal-atende-nikolas-ferreira-e-suspende-licitacao-de-iphones-do-senado/",
    "editoria": "politica",
@@ -557,12 +693,12 @@
     "A",
     "D-terra"
    ],
-   "veiculos": 4,
-   "veiculos_3h": 1,
+   "veiculos": 5,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-17T18:08:26Z",
-   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNVW1lUGFXRnpNTk1UR1lQT2hObWJnY2FOVGMtS19rdVdxMzB3ZTZZeVlGSnV4MG5IM2lTS3pURjRISkFmU1FIdHpfaWNydmZiOVBfMy1SYWR3UjJXVXd1TXpSVzA3NE5hT21kcHZzTmdydHBlN3BObjdNQU4zUXBFdWJOLTFOTHRlSnh4V3FGbWtaR3BZb1oxUU9jWmJjSnV6MlJHN2plSWVYUQ?oc=5",
+   "link": "https://www.diariodocentrodomundo.com.br/lider-indigena-conta-como-foi-contato-com-grupo-isolado-ha-decadas/",
    "editoria": "roca",
-   "nota": 5,
+   "nota": 6,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-18T16:15:04Z",
@@ -576,12 +712,12 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 3,
-   "veiculos_3h": 0,
+   "veiculos": 4,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-18T00:07:28Z",
    "link": "https://www.jornada.com.mx/2026/11/18/espectaculos/a08n2esp?partner=rss",
    "editoria": "america_latina",
-   "nota": 3,
+   "nota": 4,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-18T15:45:05Z",
@@ -595,8 +731,8 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 23,
-   "veiculos_3h": 1,
+   "veiculos": 17,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-17T16:08:50Z",
    "link": "https://www.gazetadopovo.com.br/republica/nikolas-ferreira-ameaca-sair-do-pl-caso-partido-se-aliie-a-hugo-motta/",
    "editoria": "politica",
@@ -671,7 +807,7 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 3,
+   "veiculos": 2,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-17T14:10:50Z",
    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQcG9rcG9XTmZuUnduOF9fVXcwRnIzT2JTaXlfSUdkLUxmSFBUQ25FV3hZZGVwUVRVaThNUlRoQ0ZBamVOZXBPa01QTC13ZC0wdm9QZk00Vmt0S056czVXTVBuSUNZRGJvOVd1NzA2dlYzdlo3M0s5anl0UkJQUUFjbXVKbVk2OGNGa3pKcF9qQXlMdXdFcnNDRVRjU2IwLUJNTEhJMTJCR0l0UQ?oc=5",
@@ -724,15 +860,15 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Vladimir Putin chega à China para reunião trilateral com Xi Jinping e Trump",
+   "manchete": "Estados Unidos — Ministro alemão exige transparência do Deutsche Bank após revelações sobre Trump e Epstein",
    "secoes": [
     "A",
-    "B"
+    "A"
    ],
-   "veiculos": 90,
-   "veiculos_3h": 35,
-   "na_pauta_desde": "2026-11-18T18:09:27Z",
-   "link": "https://g1.globo.com/mundo/noticia/2026/11/17/vladimir-putin-chega-a-china-para-reuniao-trilateral-com-xi-jiping-e-trump.ghtml",
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-18T21:07:58Z",
+   "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNWHVXSEVyVTlIUGZlVDdxTjNwMFJNUVZfS29fbkpCNzVzSUNrUzNfQ3d3OWEtUi1UNURRcGFwZDJUaENuM29ka3M2YlFLb2xQc1dBUXB5N1VfdWxVSFZMcmdjZUd4UGJMWjgzb1l1T0hPSVRyendDSHEwQ1pwTUlnZFU3VjliOWVjOGFGaFhzR1o3cU1BYW85NHBoZWpuYkZxcG14OXl2REt5T0k3V1A3ci0wYzBteGNOaTkzQndYQWRiRWJrRllLWlNwSlVMZ0RFODRCLTVfMk8xNlBl?oc=5",
    "editoria": null,
    "nota": null,
    "parceiro": {
@@ -768,7 +904,7 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 15,
+   "veiculos": 12,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-18T10:21:10Z",
    "link": "https://g1.globo.com/mundo/noticia/2026/11/18/democrata-vence-no-alasca-e-amplia-maioria-do-partido-no-senado-dos-eua.ghtml",
@@ -783,15 +919,15 @@
    "triagem": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Ministério da Saúde autoriza envio de doses extras de vacina contra Covid-19 para estados",
+   "manchete": "Vacina contra Covid-19: Ministério da Saúde prevê envio de doses adicionais a dez estados",
    "secoes": [
     "A",
     "B"
    ],
-   "veiculos": 15,
-   "veiculos_3h": 5,
+   "veiculos": 13,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-18T12:10:07Z",
-   "link": "https://g1.globo.com/rj/rio-de-janeiro/noticia/2026/11/18/ministerio-da-saude-anuncia-envio-de-mais-de-mil-frascos-de-vacina-contra-mpox-ao-municipio-do-rio.ghtml",
+   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPQ1VucHV3ZzZWYXNPbmtPSDlwZjhCRm9fdmR6am5veWI0VlFJZVUxVmxRc19jU3F3M0Q5YXdpMElVQmQ4akd0NUlvZWtHUlZINnE3b2lnQ1RwWXlXVDdheEZRb3JIMnRrY09oWEdvblNzV1lYUndlSXZVeEFtalBBeVpMa1dGSUxhUHdmMzRqUmNiQmo4LVJZSHZTT2hWOHhqOE1QendqUzBrdHN0dW1WWjNiY0pHYjJkSUFsZnVjRXrSAcYBQVVfeXFMT3ctaGF6LVdkR0syZWg4V3NkcmdSN0FyM1B5dDlaYUtUT3JYdk8tOERqbzZsZUc4MGdxYThHN0JVV205YUdxMWRYNEhLZnBoR0ZkMjljZExKTkQtSDZjM1RldnJTbnBtYUJJa0toQ04yckhaa0VPUkNyV203RWh1LWpYdmJNbDhNMU9MVG95ZzRUYzlnZl8taEFraXBWZGNOMk5OY1Y5TDZsU3lpVEFxaGRHVUJJaEJoa0Y5MXp3bkVjMEtsWGRR?oc=5",
    "editoria": "saude",
    "nota": 6,
    "parceiro": {
@@ -807,12 +943,12 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 4,
-   "veiculos_3h": 2,
+   "veiculos": 5,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-18T19:27:07Z",
    "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOWWhkYXdaSXlUd3hNUVdza3huVVNxVGF2cHZXWmZqZm9NZG9ucG9RaEV0TFhNcGhCWEpFRUNPR19QVjdKUGVKbnVRN0x1MkZnX3dKcUphTFFqZUd5elMwUEhyOHQxTHZfYXpHV3ExQTczTVp4eUpxODVJaWpTRkN4Nk8yUDFJaXRBSEdMOGlNcFloVUZvbC1rbzM3T1gxeXQyRG9mN3g5X2UxcUV0Q2lrbWMwbw?oc=5",
    "editoria": "saude",
-   "nota": 5,
+   "nota": 6,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-18T16:30:04Z",
@@ -841,15 +977,15 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Governo cede sobre projeto das bets para tentar aprovar ajuste fiscal",
+   "manchete": "Senado adia votação de destaques ao projeto de ajuste fiscal do governo para quarta-feira",
    "secoes": [
     "A",
     "B"
    ],
-   "veiculos": 37,
-   "veiculos_3h": 13,
+   "veiculos": 67,
+   "veiculos_3h": 32,
    "na_pauta_desde": "2026-11-18T00:07:28Z",
-   "link": "https://www.gazetadopovo.com.br/republica/governo-cede-sobre-projeto-das-bets-para-tentar-aprovar-ajuste-fiscal/",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/17/senado-adia-votacao-de-destaques-ao-projeto-de-ajuste-fiscal-do-governo-para-quarta-feira.ghtml",
    "editoria": "politica",
    "nota": 5,
    "parceiro": {
@@ -880,35 +1016,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Primeiro-ministro do Canadá: proposta de reunião entre Trump, Xi e Putin partiu de Lula",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 8,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-18T19:27:07Z",
-   "link": "https://www.bbc.com/portuguese/articles/cvp86k97y0g8o?at_medium=RSS&at_campaign=rss",
-   "editoria": "politica",
-   "nota": 5,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-18T12:16:24Z",
-    "legenda": "O primeiro-ministro do Canadá, Mark Carney, afirmou que a proposta de reunir os presidentes dos Estados Unidos, Donald Trump, da China, Xi Jinping, e da Rússia,",
-    "link": "https://www.instagram.com/reel/Df4e-WnKOKg/"
-   },
-   "triagem": "candidato"
-  },
-  {
    "manchete": "Brasil mantém eliminação do sarampo após avanço da doença em países das Américas — Ministério da Saúde",
    "secoes": [
     "A"
    ],
-   "veiculos": 9,
-   "veiculos_3h": 0,
+   "veiculos": 15,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-18T10:21:10Z",
-   "link": "https://tvtnews.com.br/brasil-mantem-certificado-de-pais-livre-do-sarampo/",
-   "editoria": "saude",
-   "nota": 4,
+   "link": "https://www.rfi.fr/br/podcasts/linha-direta/20261118-sarampo-avan%C3%A7a-nas-am%C3%A9ricas-e-eua-perdem-certifica%C3%A7%C3%A3o-de-elimina%C3%A7%C3%A3o-da-doen%C3%A7a-ap%C3%B3s-26-anos",
+   "editoria": "america_latina",
+   "nota": 6,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-18T16:00:15Z",
@@ -918,16 +1035,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Bope e PF apreendem máquina capaz de produzir 3 mil fuzis por ano no Complexo da Maré",
+   "manchete": "Fábrica de fuzis é encontrada na Maré, no Rio; polícia diz que capacidade era de 3.000 armas por ano",
    "secoes": [
     "A"
    ],
-   "veiculos": 10,
+   "veiculos": 4,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-17T18:46:12Z",
    "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/fabrica-de-fuzis-e-encontrada-na-mare-no-rio-policia-diz-que-capacidade-era-de-3000-armas-por-ano.shtml",
    "editoria": "politica",
-   "nota": 5,
+   "nota": 4,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-18T13:30:04Z",
@@ -937,16 +1054,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Jensen Huang diz que aceitaria voltar à Nvidia, mas conselho descarta reconduzi-lo",
+   "manchete": "Nvidia results beat expectations, as ousted CEO Jensen Huang told no way back",
    "secoes": [
     "A"
    ],
-   "veiculos": 4,
+   "veiculos": 5,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-18T19:27:07Z",
-   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://c-level.folha.uol.com.br/negocios/2026/11/huang-diz-que-se-arrepende-profundamente-de-erros-e-que-aceitaria-volta-a-nvidia.shtml",
+   "na_pauta_desde": "2026-11-17T18:08:26Z",
+   "link": "https://www.nytimes.com/2026/11/17/technology/jensen-huang-nvidia-statement.html",
    "editoria": "gerais",
-   "nota": 2,
+   "nota": 3,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-18T16:45:05Z",
@@ -956,17 +1073,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Professores questionam mais duas questões de matemática do Enem 2026",
+   "manchete": "Gabarito Enem 2026: Inep divulga respostas oficiais; confira",
    "secoes": [
-    "A",
-    "B"
+    "A"
    ],
-   "veiculos": 63,
-   "veiculos_3h": 21,
+   "veiculos": 7,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-18T01:20:41Z",
-   "link": "https://redir.folha.com.br/redir/online/educacao/rss091/*https://www1.folha.uol.com.br/educacao/2026/11/professores-questionam-mais-duas-questoes-de-matematica-do-enem-2026.shtml",
+   "link": "https://tvtnews.com.br/gabarito-do-enem-2026-e-divulgado-pelo-inep/",
    "editoria": "educacao",
-   "nota": 6,
+   "nota": 4,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-18T18:15:05Z",
@@ -976,16 +1092,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "PF investiga se Rockbridge Network ajudou campanha de Flávio",
+   "manchete": "PF apura apoio ilegal a Flávio de rede do vice-presidente dos EUA",
    "secoes": [
     "A"
    ],
-   "veiculos": 2,
-   "veiculos_3h": 0,
+   "veiculos": 5,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-17T18:08:26Z",
-   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNMG55ZnRMaGJrT2JBOXhERzBXYzZsSGFHWVJuYi12MEpaU2VOSklTWWpFVGNkakd5VE9OM2c0TUQ1MnZabnY5bHhwNEhJQlBISXlrSWNsVjNGVXBuOTJXb2d5cWpJeGo2RjZEcTZwTlBuY0tJeWlqRm92NkNEaUljZURkX1NZZkIwa21ndnBadjRIaXRWQ1dvOE1zOU5JWVBHN1RvNEQ1Wnh4RElGckNzU0lHZ0pyb2hzdlVr?oc=5",
-   "editoria": "eleicoes",
-   "nota": 4,
+   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQRzhDS1JEa1BrWlV4ODBRczVZdm1uTWZXMm03U2dnQ3lyLWE3dk5oVy1sWnJaakc0ekZWNXRjSDNrUkFONGNiSW9NY1MtSTF0MzUza1d4V1NwY3VCTE5LVXotSFYyeGpXZEFvdDJqS1Y0MkV4QWxTWTdsOWJoWURxQUdHekNzdEVBQ0dqY3Zna0FrQ2RZa0hoNW5TcU5OMURCRWFjODB30gGrAUFVX3lxTE9nQ3lzTzRjTWdlTGhuSDZtcGVZS1Z5ZGhyWlEyVlpwSXpsOGhYUjZSUm44UUFiT0xmWkNFZU12eXZZbDFFUmtWbTMxWUw0MndtUFYxLUw1dlNLd083cG52QUdPZy1RYm9iRXc3S0s4T1JOVnRzZ1BRU0M3NjJBQks0Q2pXM1RWZVlqeWhOa2JLX2FoLTh0NnlOelVEUnBEb1pCNjBjNENIYnZJVQ?oc=5",
+   "editoria": "politica",
+   "nota": 6,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-18T10:38:13Z",
@@ -995,13 +1111,13 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Desocupação cai em oito estados e fica estável em 18 no terceiro trimestre - Agência de Notícias",
+   "manchete": "PNAD Contínua Trimestral: desocupação cai em 8 das 27 UFs no 3° trimestre de 2026 - Agência de Notícias",
    "secoes": [
     "A",
     "B"
    ],
-   "veiculos": 72,
-   "veiculos_3h": 31,
+   "veiculos": 68,
+   "veiculos_3h": 20,
    "na_pauta_desde": "2026-11-18T12:10:07Z",
    "link": "https://g1.globo.com/economia/noticia/2026/11/18/desemprego-estados-pnad.ghtml",
    "editoria": "economia",
@@ -1039,7 +1155,7 @@
     "A"
    ],
    "veiculos": 1,
-   "veiculos_3h": 1,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-18T19:27:07Z",
    "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQSmxVX19QWEdRdG1WWnpjWXIyd0hUWnlxaTNpY3dTUHpBNTdUM2t4Zk5wWEVMTFdZd2hRRlNTcldCYUhKbFRBaW5PcFlfUVZwY1luNkVUUlNPajBzSW5EcjJkWTE2YS1xcmp0Q1RyUFpseEFvbno1Wl9rcmEzLVFkUTI2M3RYZ3FqZ0tsQ04xQlUyUdIBlwFBVV95cUxOQnMwR25LNmE2dUtwRDVNZlA1YTJYM2E3QWNNZ0dRR0JFY1hvdkdKdzVjel82LVpON2xRUzNNX3B5WXFMQWdEZUtCLUJTYWNwaFB4MXVwQUczX0hUZDlhaVFyclpYbDRPTjV0bGNYSDBkaU9YR3FIUDZZMlVobnNLNzdBMnlpU0dQdGNmRnVKRW1fRDh2bjdn?oc=5",
    "editoria": "america_latina",
@@ -1091,16 +1207,16 @@
    "triagem": "fora: entretenimento (album)"
   },
   {
-   "manchete": "Jornal da Unicamp online - Projeto leva orientação sobre eficiência energética a comunidades de Campinas",
+   "manchete": null,
    "secoes": [
     "A"
    ],
-   "veiculos": 2,
+   "veiculos": 0,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-18T16:08:36Z",
-   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWE84SUVFbXp4TW9GX05jckxGdElqMHlDaEhMUExrSTg4dGc1N0VIcmViZFpUa3NSalVib3dLelZlN2Y1NDgzUDIzaDRvV19jU0RtRUEzRGJhY2o3MDNsd1JnWkpWTlNlekVsV0cyYVAxdThQMmdLNTJEX0o0blp5WWdCeW56RHFHWS1HT0ZnQ0pESlBrNEh3QzJveXN4RU5QMDZzSHJhc1hwT29STnBVN1hTRWRIQ2NHWGpN?oc=5",
+   "na_pauta_desde": null,
+   "link": null,
    "editoria": "educacao",
-   "nota": 4,
+   "nota": 3,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-18T12:00:06Z",
@@ -1112,64 +1228,64 @@
  ],
  "descartados_mais_quentes": [
   {
-   "manchete": "Vladimir Putin chega à China para reunião trilateral com Xi Jinping e Trump",
-   "veiculos": 90,
-   "veiculos_3h": 35,
+   "manchete": "Putin llega a China para la APEC con una inédita cita trilateral con Trump y Xi agendada - EFE",
+   "veiculos": 82,
+   "veiculos_3h": 22,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Divisão do planeta? O que esperar da cúpula entre Trump, Putin e Xi na China",
+   "veiculos": 34,
+   "veiculos_3h": 6,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Tarcísio anuncia novo secretário e mantém outros três na gestão em SP",
+   "veiculos": 29,
+   "veiculos_3h": 14,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "DOSIMETRIA: Alcolumbre e Motta se reúnem com Moraes e pedem que STF julgue lei que pode diminuir pena de Jair Bolsonaro neste ano",
+   "veiculos": 21,
+   "veiculos_3h": 4,
+   "motivo": "repetido (20261117-1515-dosimetria-moraes)"
+  },
+  {
+   "manchete": "selecao alemã de futebol futemax ao vivo ao vivo go – Apps on Google Play",
+   "veiculos": 17,
+   "veiculos_3h": 6,
+   "motivo": "fora: esporte (futebol)"
+  },
+  {
+   "manchete": "Caças dos EUA atacam ilha do Irã",
+   "veiculos": 17,
+   "veiculos_3h": 5,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
    "manchete": "Dois em cada três desocupados são pretos ou pardos no Brasil, mostra IBGE",
-   "veiculos": 16,
-   "veiculos_3h": 3,
+   "veiculos": 17,
+   "veiculos_3h": 4,
    "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Democrata vence no Alasca e amplia maioria do partido no Senado dos EUA",
-   "veiculos": 15,
-   "veiculos_3h": 0,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
    "manchete": "Democratas indicam Hakeem Jeffries para presidir Câmara dos EUA",
    "veiculos": 15,
-   "veiculos_3h": 10,
+   "veiculos_3h": 5,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Tarcísio anuncia permanência de secretária de Comunicação e procuradora-geral do Estado",
-   "veiculos": 14,
-   "veiculos_3h": 3,
-   "motivo": "sem editoria"
+   "manchete": "Democrata vence no Alasca e amplia maioria do partido no Senado dos EUA",
+   "veiculos": 12,
+   "veiculos_3h": 0,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
    "manchete": "Ex-jogadora da Seleção, Gabi Morais é presa em Fortaleza por suspeita de lavar dinheiro para o CV",
-   "veiculos": 14,
+   "veiculos": 11,
    "veiculos_3h": 3,
    "motivo": "fora: esporte (jogadora)"
-  },
-  {
-   "manchete": "CCJ vota penas maiores para motoristas alcoolizados – 18/11/26",
-   "veiculos": 10,
-   "veiculos_3h": 3,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Fernanda Torres é listada pela Variety para ser vilã de novo filme de '007'",
-   "veiculos": 8,
-   "veiculos_3h": 5,
-   "motivo": "fora: entretenimento (filme)"
-  },
-  {
-   "manchete": "Sobrevivente da bomba atômica de Nagasaki morre aos 97 anos em SC",
-   "veiculos": 8,
-   "veiculos_3h": 3,
-   "motivo": "fora: crime ou tragedia (morre)"
-  },
-  {
-   "manchete": "Brasil cai para 7º lugar no ranking da FIFA após resultados da Data Fifa",
-   "veiculos": 6,
-   "veiculos_3h": 3,
-   "motivo": "sem editoria"
   }
  ]
 }
