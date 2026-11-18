@@ -1,5 +1,5 @@
 {
-  "status": "renderizar",
+  "status": "erro_render",
   "formato": "quadrado",
   "editoria": "america_latina",
   "pais": "Venezuela",
@@ -85,5 +85,12 @@
     ],
     "fonte_primaria": null
   },
-  "comentario": "Você acha que o Brasil deveria se posicionar sobre a presença militar dos EUA na Venezuela?"
+  "comentario": "Você acha que o Brasil deveria se posicionar sobre a presença militar dos EUA na Venezuela?",
+  "render": {
+    "quando": "2026-11-18T18:24:03Z",
+    "artes": [],
+    "avisos": [],
+    "erro": "HTTPError: 403 Client Error: Forbidden for url: https://cmg-cmg-rd-20015-prod.cdn.arcpublishing.com/resizer/v2/D6CBWVZQ5Y3L3N77HITFQVQ6K4.jpg?smart=true&auth=583890d9894fc75d3929c873076584385ad1d740",
+    "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/cbr-bot/cbr-bot/bot/render.py\", line 262, in processar\n    meta = baixar_foto(post[\"foto_url\"], pasta / \"foto.jpg\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/cbr-bot/cbr-bot/bot/render.py\", line 46, in baixar_foto\n    r.raise_for_status()\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/models.py\", line 1026, in raise_for_status\n    raise HTTPError(http_error_msg, response=self)\nrequests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://cmg-cmg-rd-20015-prod.cdn.arcpublishing.com/resizer/v2/D6CBWVZQ5Y3L3N77HITFQVQ6K4.jpg?smart=true&auth=583890d9894fc75d3929c873076584385ad1d740\n"
+  }
 }
