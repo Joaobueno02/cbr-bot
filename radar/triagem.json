@@ -1,108 +1,123 @@
 {
- "quando": "2026-11-20T14:09:50Z",
- "pauta_quando": "2026-11-20T14:09:49Z",
+ "quando": "2026-11-20T16:08:59Z",
+ "pauta_quando": "2026-11-20T16:08:56Z",
  "ok": true,
  "erro": null,
- "metodo": "regras + gemini",
+ "metodo": "regras",
  "ia": {
   "ia": "gemini",
-  "ok": true,
-  "erro": null,
-  "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 21,
-  "falhas_antes": null,
-  "pedidos_hoje": 7
+  "ok": false,
+  "erro": "Gemini: gemini-flash-latest: ReadTimeout",
+  "modelo": null,
+  "avaliados_agora": 0,
+  "pedidos_hoje": 9
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 142,
- "novos_3h": 11,
- "esquentaram": 0,
+ "total_assuntos": 156,
+ "novos_3h": 8,
+ "esquentaram": 2,
  "candidatos": [
   {
-   "manchete": "Motta agenda votação do ajuste fiscal de Lula na Câmara para segunda-feira (23)",
+   "manchete": "Um salário mínimo compra 23 kg de acém a menos do que em 2007; entenda o preço da carne",
    "secoes": [
     "B"
    ],
-   "veiculos": 149,
-   "veiculos_3h": 65,
-   "na_pauta_desde": "2026-11-19T10:09:33Z",
-   "link": "https://www.gazetadopovo.com.br/republica/motta-agenda-votacao-ajuste-fiscal-lula-camara-segunda-feira-23/",
-   "editoria": "politica",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [],
+   "veiculos": 7,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-20T09:12:26Z",
+   "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/20/um-salario-minimo-compra-23-kg-de-acem-a-menos-do-que-em-2007-entenda-o-preco-da-carne.ghtml",
+   "editoria": "economia",
+   "nota": 5,
+   "esquentou": true,
+   "lente": [
+    "salario"
+   ],
    "ia": {
     "editoria": "economia",
     "I": 3,
     "V": 3,
     "P": 2,
-    "formato": "reels",
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Câmara agenda votação do ajuste fiscal de Lula.",
+    "motivo": "Preço da carne e perda do poder de compra.",
     "soma": 6
    }
   },
   {
-   "manchete": "Lula assina hoje o decreto que regulamenta a escala de trabalho 5x2. Veja ao vivo - CUT",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 157,
-   "veiculos_3h": 29,
-   "na_pauta_desde": "2026-11-19T14:09:14Z",
-   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/lula-assina-decreto-que-regulamenta-o-fim-da-escala-6x1-acompanhe.shtml",
-   "editoria": "politica",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 3,
-    "P": 2,
-    "formato": "reels",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Lula assina decreto da escala de trabalho.",
-    "soma": 6
-   }
-  },
-  {
-   "manchete": "Lula oficializa demarcação de terra indígena Kapôt Nhĩnore em visita ao Cacique Raoni",
+   "manchete": "Relatório da PF aponta ausência de contato direto entre André Mendonça e ex-banqueiro Daniel Vorcaro",
    "secoes": [
     "B",
+    "C-nacional"
+   ],
+   "veiculos": 9,
+   "veiculos_3h": 7,
+   "na_pauta_desde": "2026-11-20T16:08:56Z",
+   "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOb3ozbTNZSGk0N0tIY3BVMU9hYzhmR3BvWG5VRXNVeXpDaHlkMGVMVnV2QXpGUnkyQjllbmtCeU1DZ3VXcUtTcGQxemF5Y3NEZjF0ZER3NkRPN0sxOUwydFBIMTJfaE5zY1VJcnZFb0padVA0cVpyaC1fZkVDeFVZTkprLWhnTlJTRkRYMG9iVVNsTnRvWkkxTnZHMmp0MVNRVVI0clBUanEtNXlHdHlrUXhHSUpRU0x2X2c1ZVFTSXV4a1FSVWRfemdJNUhESTVkbXU2NUpnLW1WRjJnYWFFNw?oc=5",
+   "editoria": "politica",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "vorcaro"
+   ]
+  },
+  {
+   "manchete": "Vorcaro e Faria planejaram instituto para Moraes com aval do ministro, indicam diálogos",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-20T14:09:49Z",
+   "link": "https://www.diariodocentrodomundo.com.br/vorcaro-e-ex-ministro-de-bolsonaro-queriam-criar-instituto-para-moraes-em-londres/",
+   "editoria": "politica",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "vorcaro"
+   ]
+  },
+  {
+   "manchete": "Lula anuncia transporte público gratuito aos fins de semana para complementar jornada 5×2",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 28,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-20T16:08:56Z",
+   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOZ1AxY0lLcGo3ZFZ3ZEU3Zk9laGMwSEtkVUtGSEpWXzYzdVR1Z2RYa3l3Z3F2X1VRSzROUWZtV2p6U0tmUWRCcF8za0libXZXdGRaV2VNdVNINGZNYTFzQW9QcHBSSU1SUTkwR1ZfdUdyQnZQNmZmOG1Qb1RVNHVSeFJmS1FGTm5tU3JNWDRzRVpsd051YXBhV3Zranc0eUZ3SEZuMXo5X2JlV09XLVA3Q2k2anBvM1hlQVlDaF8tN2hiMDhO?oc=5",
+   "editoria": "economia",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "jornada",
+    "transporte publico"
+   ]
+  },
+  {
+   "manchete": "Lula participa de assinatura de portaria declaratória da Terra Indígena Kapôt Nhĩnore",
+   "secoes": [
     "D-terra"
    ],
-   "veiculos": 70,
-   "veiculos_3h": 2,
+   "veiculos": 15,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-20T10:10:58Z",
-   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/lula-diz-que-vai-avancar-com-demarcacao-de-terra-indigena-de-cacique-raoni.shtml",
+   "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNakJRdlZaeW5FVmZjbl81SmN6NjhEOExQY21lRXNwZzZtLXpZSGpBdjBHRFZma3YxVl8yZm53YUZ0TlJ5OGdyUTg5ZUNtR19pYXFtQXUybkQ5bDZCQmw1LUpOd2lsOGZSZ3hJaDBCTHozb1dvcVBrQWR2Q3VFVWJ5M0tjUGxPWGpRbDg1VHZobVV3dmZmZkVWR2xkZjV5VjZPVWdueWdaaEVILWtOQjNYN0JMWkRkMFBJMll2RWNwVUNHQUhQS1c4dzM4X2tLMnhW?oc=5",
    "editoria": "roca",
    "nota": 6,
    "esquentou": false,
    "lente": [
     "indigena"
-   ],
-   "ia": {
-    "editoria": "roca",
-    "I": 3,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Demarcação oficial de terra indígena do Cacique Raoni.",
-    "soma": 5
-   }
+   ]
   },
   {
    "manchete": "Caso Master: equipe da PGR formada por Gonet e mais seis procuradores será responsável por analisar relatórios sobre ministros do STF",
    "secoes": [
     "B"
    ],
-   "veiculos": 52,
-   "veiculos_3h": 42,
+   "veiculos": 58,
+   "veiculos_3h": 30,
    "na_pauta_desde": "2026-11-20T09:12:26Z",
    "link": "https://vermelho.org.br/2026/11/19/fachin-envia-a-pgr-relatorio-da-pf-que-cita-ministros-do-stf-no-caso-master/?utm_source=rss&utm_medium=rss&utm_campaign=fachin-envia-a-pgr-relatorio-da-pf-que-cita-ministros-do-stf-no-caso-master",
    "editoria": "politica",
@@ -124,42 +139,14 @@
    }
   },
   {
-   "manchete": "Vorcaro e Faria planejaram criar instituto para Moraes em Londres",
-   "secoes": [
-    "B",
-    "C-nacional"
-   ],
-   "veiculos": 6,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-20T14:09:49Z",
-   "link": "https://noticias.uol.com.br/politica/ultimas-noticias/2026/11/20/vorcaro-e-faria-planejaram-criar-instituto-para-moraes-em-londres.ghtm",
-   "editoria": "politica",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "vorcaro"
-   ],
-   "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Esquema e planos envolvendo figuras públicas e Moraes.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "STF avalia projeto para reduzir pena de Jair Bolsonaro. Análise de Paulo Motoryn",
+   "manchete": "Bolsonarista Marcel van Hattem pode virar réu no STF por ataques a delegado que investigou trama golpista",
    "secoes": [
     "B"
    ],
-   "veiculos": 19,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-20T12:10:36Z",
-   "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/moraes-marca-julgamento-sobre-dosimetria-que-pode-beneficiar-bolsonaro-para-4-de-dezembro.shtml",
+   "veiculos": 8,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-19T19:31:58Z",
+   "link": "https://www.gazetadopovo.com.br/vida-e-cidadania/stf-decide-se-van-hattem-vira-reu-por-criticas-a-delegado-de-moraes/",
    "editoria": "politica",
    "nota": 5,
    "esquentou": false,
@@ -171,38 +158,10 @@
     "I": 2,
     "V": 2,
     "P": 2,
-    "formato": "carrossel",
+    "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "STF avalia projeto para reduzir pena de Bolsonaro, gerando forte polarização.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "STF recebe relatórios da PF sobre Daniel Vorcaro e menções a ministros da Corte",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 10,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-20T12:10:36Z",
-   "link": "https://www.gazetadopovo.com.br/republica/stf-recebe-relatorios-da-pf-sobre-daniel-vorcaro-e-mencoes-a-ministros-da-corte/",
-   "editoria": "politica",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "corte",
-    "vorcaro"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Relatórios da PF sobre Vorcaro e STF envolvem altos nomes da política.",
+    "motivo": "Deputado bolsonarista pode virar réu no STF.",
     "soma": 4
    }
   },
@@ -211,8 +170,8 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 27,
-   "veiculos_3h": 22,
+   "veiculos": 43,
+   "veiculos_3h": 27,
    "na_pauta_desde": "2026-11-19T16:10:29Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/19/compliance-zero-fachin-mantem-prisao-de-felipe-vorcaro-primo-do-ex-dono-do-master.ghtml",
    "editoria": "politica",
@@ -235,72 +194,17 @@
    }
   },
   {
-   "manchete": "Fachin nega pedido de Daniel Vorcaro e mantém banqueiro em prisão preventiva",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 18,
-   "veiculos_3h": 15,
-   "na_pauta_desde": "2026-11-19T16:10:29Z",
-   "link": "https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2026/11/20/fachin-nega-pedido-de-daniel-vorcaro-e-mantem-banqueiro-em-prisao-preventiva.htm",
-   "editoria": "politica",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "vorcaro"
-   ],
-   "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Banqueiro tem prisão mantida pelo STF.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Flávio Bolsonaro é denunciado por associar Lula ao tráfico",
-   "secoes": [
-    "B",
-    "D-america_latina"
-   ],
-   "veiculos": 34,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-19T16:10:29Z",
-   "link": "https://jornalggn.com.br/politica/pgr-denuncia-flavio-bolsonaro-ao-stf-por-calunia-contra-lula/",
-   "editoria": "america_latina",
-   "nota": 7,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Denúncia contra senador aliado de Bolsonaro.",
-    "soma": 4
-   }
-  },
-  {
    "manchete": "A comemoração de Vorcaro com ex-diretor do BC por vitória no STF: ‘Ganhamos’",
    "secoes": [
+    "B",
     "C-nacional"
    ],
-   "veiculos": 2,
-   "veiculos_3h": 2,
+   "veiculos": 3,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-20T14:09:49Z",
-   "link": "https://www.metropoles.com/colunas/manoela-alcantara/vorcaro-enviou-a-ex-diretor-do-bc-resultado-de-acao-no-stf-ganhamos",
+   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPRDdobXhmVVlvUlZfVWk4ZGpVajdpTjdNSTVFNnNpRzJ5WE9ld1FsMU4weFgtaTRGaGtXMWNvdzBob2FJbHhzWnFNVnVoVFBJenlJTHkxSktLRWk5QVZaQkJlTWVTOUFWQTU3ajROemhBa3JiUlB4QUp5YWFmWEVHT1Jncm91cFhublV5cUlsbFpnaUdpZU12MXMzUUZrYm1xdVB3Q3ZpV3hqbU0?oc=5",
    "editoria": "politica",
-   "nota": 4,
+   "nota": 5,
    "esquentou": false,
    "lente": [
     "vorcaro"
@@ -318,181 +222,187 @@
    }
   },
   {
-   "manchete": "Na Colômbia, protestos contra plano econômico geram confrontos e caos no trânsito",
+   "manchete": "Lula da Silva firma la reforma que reduce la jornada laboral: \"Estamos humanizando el mundo del trabajo\"",
    "secoes": [
-    "C-nacional",
-    "D-america_latina"
+    "B"
    ],
-   "veiculos": 2,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-20T14:09:49Z",
-   "link": "https://www.infomoney.com.br/mundo/na-colombia-protestos-contra-plano-economico-geram-confrontos-e-caos-no-transito/",
-   "editoria": "america_latina",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "protesto"
-   ],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Protestos contra política econômica na Colômbia.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Greve geral leva milhares às ruas da Itália por salários e mais recursos públicos",
-   "secoes": [
-    "C-nacional"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-20T14:09:49Z",
-   "link": "https://g1.globo.com/mundo/noticia/2026/11/20/greve-geral-italia.ghtml",
+   "veiculos": 36,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-19T16:10:29Z",
+   "link": "https://www.telesurtv.net/lula-firma-decreto-jornada-laboral-5x2-brasil/",
    "editoria": "economia",
    "nota": 5,
    "esquentou": false,
    "lente": [
-    "salario",
-    "greve"
-   ],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Greve geral na Itália por salários e serviços.",
-    "soma": 4
-   }
+    "jornada"
+   ]
   },
   {
-   "manchete": "Cesta básica chega a patamar histórico e passada de R$ 1 mil em Cuiabá",
+   "manchete": "Ciudadanos se concentran en el TSE ante inscripción del Presidente Bukele y Félix Ulloa para las elecciones de 2027",
    "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 28,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-19T12:31:50Z",
+   "link": "https://www.jornada.com.mx/2026/11/20/mundo/023n4mun?partner=rss",
+   "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Lula assina decreto com regras para o fim da escala 6x1; ASSISTA",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 40,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-19T14:09:14Z",
+   "link": "https://g1.globo.com/politica/ao-vivo/lula-decreto-regras-fim-da-escala-6x1.ghtml",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "6x1"
+   ]
+  },
+  {
+   "manchete": "Mulheres retomam defesa de indicação inédita de ministra negra ao STF",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 7,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-20T14:09:49Z",
+   "link": "https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-11/mulheres-retomam-defesa-de-indicacao-inedita-de-ministra-negra-ao-stf",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Um ano após liquidação do Master, FGC ainda tem R$ 600 milhões a pagar para credores dos bancos liquidados",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-20T16:08:56Z",
+   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPTlBYa0tJd2poOVZ5WUpjT2ZDdFg1V3JHV1NZS2kyYnhwVk9oVlZYVlgtS0lDaENQbFliT0RlMlV3Q1ZQLXRzU2RWbE8wWjFmbkxoMGk0SjQ3emkxNW1fbFRsQV94YTFSMmRyOHdNSmJCVUdJWkNpX2pSX0RHdzZMcWltRGwtNm8xZ0FrS3RoZF9HcHBRTUtYSDJncFJTZjlxMTJxQjM4NHFFd9IBuAFBVV95cUxPdFhSaWJDU1lia0p4Y0VXZUx2ODRMcExKT1o4OGVsdGIyN0cwQk9iaXlPNnFkRm9nVnVxMkpiMnFuMHVXMDhxRFNwWlBaa2VFSDNKT2RIV3JpZ1gtME9fZEJzOHJMMG1iRUh3LWpGaURacW4wSTNMb3c3WTNsbllIZDJmV3V1Y0hiRmpYZWdNVkZmaXViTU1ScDhZM250NEpTaXh4U2lCc01JYUc0eU1vY3lPVWpXUnN6?oc=5",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "master",
+    "banco"
+   ]
+  },
+  {
+   "manchete": "Após aproximação de indígenas isolados no MA, entenda como atuam as equipes de saúde",
+   "secoes": [
+    "B",
+    "C-nacional",
     "D-terra"
    ],
    "veiculos": 3,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-19T23:09:26Z",
-   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOLXNPTUZVV1l2TEhvT1Y1U2cwUnhYcUJaVEVGclB0R0hmNTRKemYwM0doSkJxa3N2MFV5SWNRd3ExVnRBanZydE9wNjZBM3ZLNG40Y0VXdmp1UE9pejkyVnlvSVZON2pJMWl5V2UwV1h4NVFPd3dlckVzbTFORHBtVVk5c0w0UVgtb1ltdWJBVmoydk1aVGVNdlM5WmVVTWFtcmt5MVRFNWtEbldNZmVBejBuVkpxZw?oc=5",
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-20T16:08:56Z",
+   "link": "https://g1.globo.com/ma/maranhao/noticia/2026/11/20/indigenas-isolados-equipes-saude-aproximacao-aldeia-maranhao.ghtml",
    "editoria": "roca",
-   "nota": 4,
+   "nota": 5,
    "esquentou": false,
    "lente": [
-    "cesta basica"
+    "indigena"
    ]
   },
   {
-   "manchete": null,
+   "manchete": "Gestão Trump sugeriu à Guiana ceder parte do Essequibo à Venezuela, diz agência",
    "secoes": [
-    "A"
+    "B",
+    "D-america_latina"
    ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
+   "veiculos": 12,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-19T14:09:14Z",
+   "link": "https://www.gazetadopovo.com.br/mundo/gestao-trump-sugeriu-guiana-ceder-parte-essequibo-venezuela-diz-agencia/",
+   "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "trump"
+   ]
+  },
+  {
+   "manchete": "Celso Amorim: “El énfasis de Trump en el Escudo de las Américas disminuirá un poco”",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-20T10:10:58Z",
+   "link": "https://elpais.com/america/2026-11-20/celso-amorim-el-enfasis-de-trump-en-el-escudo-de-las-americas-disminuira-un-poco.html",
+   "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": true,
+   "lente": [
+    "trump"
+   ]
+  },
+  {
+   "manchete": "Prazo para solicitar reaplicação do Enem 2026 termina nesta sexta-feira",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 51,
+   "veiculos_3h": 14,
+   "na_pauta_desde": "2026-11-19T12:31:50Z",
+   "link": "https://g1.globo.com/educacao/enem/2026/noticia/2026/11/20/prazo-para-solicitar-reaplicacao-do-enem-2026-termina.ghtml",
    "editoria": "educacao",
    "nota": 4,
    "esquentou": false,
-   "lente": [
-    "merenda"
-   ]
+   "lente": []
   },
   {
-   "manchete": "Três mateenses levam a voz quilombola à COP31, na Turquia",
+   "manchete": "Feriado da Consciência Negra: saiba o que abre e fecha em Sergipe",
    "secoes": [
-    "D-terra"
+    "A",
+    "B"
    ],
-   "veiculos": 1,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-20T14:09:49Z",
-   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNc3BKR3AwQjg4MTVxV3BWYmZXVzVCak5NNzNXMExKWjBocGZ0YjdET2hua2tnYklDM0xaTnVUVkNVQ0x6SWJWRG42dnpUQTdhUDZIdmJ5eW5HMktLQldfenhDWjhpWXlCbUdqbzFucmFrNHg3VzBOc3J2SkpEX1psQXh2eDNCbUhQ?oc=5",
-   "editoria": "roca",
-   "nota": 3,
+   "veiculos": 26,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-20T10:10:58Z",
+   "link": "https://midianinja.org/animage-2026-abre-nesta-sexta-20-com-mostra-africana-e-homenagem-ao-dia-da-consciencia-negra/",
+   "editoria": "gerais",
+   "nota": 4,
    "esquentou": false,
-   "lente": [
-    "quilombola"
-   ]
+   "lente": []
   },
   {
-   "manchete": "Escola quilombola de Colônia do Piauí desenvolve projeto voltado à identidade e ao respeito às diferenças",
+   "manchete": "Cleitinho diz que vai se reunir com Lula ‘quantas vezes precisar’ para discutir dívida de MG",
    "secoes": [
-    "D-terra"
+    "B"
    ],
-   "veiculos": 1,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-20T14:09:49Z",
-   "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNUEtPTC1rZVQyMk12X3pKdERZRkdjTHNBVjZqQWYtdVZ0UDJFU0p4ZG13NFNBRGpEOVVuT3JkYWtqUndhWkdKV2I3NEJVNUpXUXlmOXB5dzJ4UnJ3Sm5Rd250RTRIVGxkLVEzc0ZucjhiU2NIbm5FNGRLb0VFemEtX0trWEZfbktaQzNtVVY0UnFCZ1VHRTVXZlQ1TDlkV0dORWcxaXQwT18yeTcyUWVuM0tfRXotTUF5VWFLVXU1SXJNdjlycGRiSUFYRGlmdkRfU29CcW95QXc0NGwxUGc?oc=5",
-   "editoria": "roca",
-   "nota": 3,
+   "veiculos": 6,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-20T16:08:56Z",
+   "link": "https://www.brasil247.com/sudeste/cleitinho-diz-que-ira-se-reunir-com-lula-quantas-vezes-precisar-para-negociar-divida-de-mg/",
+   "editoria": "economia",
+   "nota": 4,
    "esquentou": false,
-   "lente": [
-    "quilombola"
-   ]
-  },
-  {
-   "manchete": "Projeto minerário ameaça alterar território quilombola e será debatido em MT",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-20T14:09:49Z",
-   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNNjBrMFpuTHRCZTBWMHNDYjhrZlVNa01qOTB0TmVldU5FSFp2Qi1majVIMWp5NF9FNUVBb2xQaWZ6Tk5uLUJ6enhBX3FTSTRlOFZvSmMxQjhUdVBUX19sckFuZDQ3NjBScG1pV1c0WXNwQ0ktNnRrY0pETnhFWWlvNnBCTWYyRDc4d2o5YTJWdXA1T0xfUTNOZjNqSmwyMG8xRXNvaXduZG1KR2w4RDNGTDlUREQ1dm5EU3Q2eDdzVGtaaEU?oc=5",
-   "editoria": "roca",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [
-    "quilombola"
-   ]
-  },
-  {
-   "manchete": "Dia da Consciência Negra: Cozinha Ancestral une combate à fome, agricultura familiar e valorização das raízes afro-brasileiras no Piauí",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-20T14:09:49Z",
-   "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQbVM1MTR2MHJwdENuLTA2aFdDT1lURDVxWkRXc085WGMzdUJ6WHlaX2pnVEFsN01CdFg0UHNZSTVQaFlTbTE1ajRZcnFDR011OF96VmktdnZRRUlKUXdtaUlxV3Bod19BYTdnWF9GdDVIaVN3UnhJYWZDUUpJNlFVUUlmdTFJRVhTbHFVaVRLVlk4MkhzbU9uMXUxcno2UGdjWktLck40REhhX25RdGFYQlJIcy13NWpQNmRpSm1zbjFQM3g5SHM0X1BHUTBjYTNLNFVsSUZrc1I4MGJxZlJRbDJTbXJlZ1F5MVJnTEMtamtHdFF4ZW1JUFl5SQ?oc=5",
-   "editoria": "roca",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [
-    "fome"
-   ]
-  },
-  {
-   "manchete": "Música quilombola: da Sussa ao Jongo, 6 expressões que moldam o som do Brasil",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-20T14:09:49Z",
-   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBIYUV2Q25CaU4xNUE4ZHR6Qkt4aWhSVXplbHowV25iYllfajVabk5lNGsxQ2tncHd4TTZGQkhZQmV2aUgxNFhMaU1nOWlHLXdVMFRzekRoTVdkVUFacDlYd21wN2dGaHA2dGsxWUFvR3R3b2Y5VWVnVw?oc=5",
-   "editoria": "roca",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [
-    "quilombola"
-   ]
+   "lente": []
   }
  ],
  "rebaixados": [
   {
    "manchete": "Indígenas isolados buscam contato na Terra Indígena Arariboia, no Maranhão",
-   "veiculos": 4,
-   "veiculos_3h": 1,
+   "veiculos": 10,
+   "veiculos_3h": 8,
    "na_pauta_desde": "2026-11-19T21:08:03Z",
-   "esquentou": false,
+   "esquentou": true,
    "ia": {
     "editoria": "roca",
     "I": 2,
@@ -506,44 +416,8 @@
    }
   },
   {
-   "manchete": "Termina nesta sexta-feira o prazo para pedir reaplicação do Enem 2026",
-   "veiculos": 48,
-   "veiculos_3h": 18,
-   "na_pauta_desde": "2026-11-19T12:31:50Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "educacao",
-    "I": 2,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Prazo final para reaplicação do Enem.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "PF diz em relatório a Fachin que Mendonça nunca trocou mensagem com Vorcaro e foi apenas citado em 11 diálogos",
-   "veiculos": 7,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-20T14:09:49Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "politica",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Relatório da PF cita ministro do STF.",
-    "soma": 2
-   }
-  },
-  {
    "manchete": "PSD recorre de decisão de Zanin e volta a defender segundo turno no Rio entre Paes e Ruas",
-   "veiculos": 17,
+   "veiculos": 19,
    "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-19T21:08:03Z",
    "esquentou": true,
@@ -560,63 +434,27 @@
    }
   },
   {
-   "manchete": "EU's Hansen says US trade uncertainty is drawing Mexico, Europe closer",
+   "manchete": "PF diz em relatório a Fachin que Mendonça nunca trocou mensagem com Vorcaro e foi apenas citado em 11 diálogos",
    "veiculos": 4,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-20T12:10:36Z",
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-20T14:09:49Z",
    "esquentou": false,
    "ia": {
-    "editoria": "america_latina",
+    "editoria": "politica",
     "I": 1,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Incerteza comercial dos EUA aproxima México e Europa.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "André Mendonça pede ao STF abertura de sigilo de relatório da PF sobre ele",
-   "veiculos": 6,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-20T12:10:36Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "politica",
-    "I": 1,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Ministro pede quebra de sigilo de relatório.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "'A cidade acabou, é cena de filme', diz prefeito de município do RS atingido por temporal",
-   "veiculos": 6,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-20T14:09:49Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "gerais",
-    "I": 1,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Temporal afeta município do RS.",
+    "motivo": "Relatório da PF cita ministro do STF.",
     "soma": 2
    }
   },
   {
    "manchete": "Passaporte italiano de irmãos Bolsonaro é alvo de pedido de inquérito na Justiça da Itália",
    "veiculos": 3,
-   "veiculos_3h": 3,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-20T14:09:49Z",
    "esquentou": false,
    "ia": {
@@ -628,24 +466,6 @@
     "repetido": false,
     "risco": "",
     "motivo": "Investigação sobre passaporte de família Bolsonaro.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Bolsonaro pede a Moraes para receber visita de ministro do TCU em casa",
-   "veiculos": 23,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-19T16:10:29Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "politica",
-    "I": 1,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Pedido burocrático de Bolsonaro a Moraes.",
     "soma": 2
    }
   },
@@ -670,40 +490,21 @@
  ],
  "obrigatorios": [
   {
-   "manchete": "Campus Cidade de Goiás/ UFG marca presença na Sessão Solene da Assembleia Legislativa de Goiás (ALEGO), em homenagem ao Dia Nacional da Consciência Negra",
+   "manchete": "VOZES DA RESISTÊNCIA: SINTAJ DEBATE JUSTIÇA ANTIRRACISTA EM EVENTO DA CONSCIÊNCIA NEGRA",
    "secoes": [
     "A"
    ],
-   "veiculos": 7,
+   "veiculos": 1,
    "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-19T16:10:29Z",
-   "link": "https://revistaforum.com.br/historia/dia-consciencia-negra-zumbi-carta-historia/",
-   "editoria": null,
-   "nota": null,
+   "na_pauta_desde": "2026-11-20T16:08:56Z",
+   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNYUlidUVYNDBla29XdjhpWmxtdDJ3aGV4VHc2RXRPaFVnQThOaVc4VG41dGpUOW1FaDVHM2J0elFHcjRhanotOUdrUEZBSE9UX0RGZmpNbnl1X0s2TmdKSmRYOHdKOGN3SXRoZUN3WFRXWWZzVkgxM2dZZlhfWF81VXpBNzR5SHRhX19OSEJFejJkZTBWNWphWnk1dkNVM0dIVERuQ1RQVGY?oc=5",
+   "editoria": "eleicoes",
+   "nota": 2,
    "parceiro": {
     "perfil": "luzmanifesto",
-    "quando": "2026-11-20T09:20:13Z",
-    "legenda": "20 de novembro. Dia da Consciência Negra. A história da população negra não começa na escravidão, e nossa luta não termina na conquista da liberdade. O colonial",
-    "link": "https://www.instagram.com/p/Df9UMO3BgO3/"
-   },
-   "triagem": "fora: esporte (luta)"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 3,
-   "parceiro": {
-    "perfil": "luzmanifesto",
-    "quando": "2026-11-20T09:35:00Z",
-    "legenda": "O racismo não se manifesta apenas em atitudes explícitas. Ele também está nas estruturas, nas oportunidades e na forma como a sociedade enxerga pessoas negras. ",
-    "link": "https://www.instagram.com/p/Df9WIjeFjSY/"
+    "quando": "2026-11-20T10:34:17Z",
+    "legenda": "Celebramos o samba, mas criminalizamos o território de onde ele veio. Aplaudimos a cultura negra, mas desconfiamos da intelectualidade negra. Exaltamos a resist",
+    "link": "https://www.instagram.com/p/Df9c62YFkS4/"
    },
    "triagem": "candidato"
   },
@@ -727,6 +528,46 @@
    "triagem": "candidato"
   },
   {
+   "manchete": "Dia da Consciência Negra: feriado nacional reforça luta histórica contra o racismo - CUT",
+   "secoes": [
+    "A",
+    "B",
+    "D-terra"
+   ],
+   "veiculos": 18,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-19T16:10:29Z",
+   "link": "https://tvtnews.com.br/20-novembro-e-feriado-nacional-consciencia-negra/",
+   "editoria": null,
+   "nota": null,
+   "parceiro": {
+    "perfil": "luzmanifesto",
+    "quando": "2026-11-20T09:20:13Z",
+    "legenda": "20 de novembro. Dia da Consciência Negra. A história da população negra não começa na escravidão, e nossa luta não termina na conquista da liberdade. O colonial",
+    "link": "https://www.instagram.com/p/Df9UMO3BgO3/"
+   },
+   "triagem": "fora: esporte (luta)"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "luzmanifesto",
+    "quando": "2026-11-20T11:20:13Z",
+    "legenda": "20/11 ✊🏿 Manifeste-se conosco. LUZMANIFESTO",
+    "link": "https://www.instagram.com/reel/Df9h-kcB5aC/"
+   },
+   "triagem": "candidato"
+  },
+  {
    "manchete": null,
    "secoes": [
     "A"
@@ -739,9 +580,28 @@
    "nota": 1,
    "parceiro": {
     "perfil": "brasilforadacaverna",
-    "quando": "2026-11-20T05:29:03Z",
-    "legenda": "🔥💭",
-    "link": "https://www.instagram.com/p/Df85wTtuZZ-/"
+    "quando": "2026-11-20T11:35:54Z",
+    "legenda": "Fogo Nos Racistas 🔥 Black Pantera - blackpanteraoficial charlespanterablack l chaenedagama l rodrigopanchobatera Eu sei, a nossa simples existência já é uma afr",
+    "link": "https://www.instagram.com/reel/Df9jnFyBiO_/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 3,
+   "parceiro": {
+    "perfil": "luzmanifesto",
+    "quando": "2026-11-20T09:35:00Z",
+    "legenda": "O racismo não se manifesta apenas em atitudes explícitas. Ele também está nas estruturas, nas oportunidades e na forma como a sociedade enxerga pessoas negras. ",
+    "link": "https://www.instagram.com/p/Df9WIjeFjSY/"
    },
    "triagem": "candidato"
   },
@@ -777,9 +637,219 @@
    "nota": 1,
    "parceiro": {
     "perfil": "brasilforadacaverna",
+    "quando": "2026-11-20T05:29:03Z",
+    "legenda": "🔥💭",
+    "link": "https://www.instagram.com/p/Df85wTtuZZ-/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-20T15:01:43Z",
+    "legenda": "Candeia 🔥 Black Pantera - blackpanteraoficial charlespanterablack l chaenedagama l rodrigopanchobatera Preta e retinta pele Luz que ofusca os ignorantes Parafin",
+    "link": "https://www.instagram.com/reel/Df97YWkhIv8/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-20T13:30:11Z",
+    "legenda": "Entrepostado como um dos principais centros comerciais da Ásia-Pacífico, Hong Kong consolidou-se como peça central no tráfico internacional de répteis nativos d",
+    "link": "https://www.instagram.com/p/Df9xC3LCo-E/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-20T12:00:12Z",
+    "legenda": "Um estudo publicado na revista científica Oryx revelou que 50% dos tubarões desembarcados no movimentado porto pesqueiro de Muncar, na província de Java Orienta",
+    "link": "https://www.instagram.com/p/Df9mv0kiN-h/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-20T10:30:05Z",
+    "legenda": "O algodão naturalmente colorido cultivado por agricultores familiares no Agreste da Paraíba está conquistando espaço na indústria da moda sustentável europeia. ",
+    "link": "https://www.instagram.com/p/Df9cb7omwLt/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-20T11:30:06Z",
+    "legenda": "Um estudo publicado no grupo Nature (Communications Earth & Environment) alerta que a região centro-norte da Amazônia — área que concentra grande densidade de u",
+    "link": "https://www.instagram.com/p/Df9jThBgf0I/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": null,
+   "nota": null,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-20T13:27:15Z",
+    "legenda": "O rapper e produtor Rincon Sapiência - rinconsapiencia anunciou os shows de lançamento de seu terceiro álbum de estúdio, “Um Corpo Preto”. As apresentações acon",
+    "link": "https://www.instagram.com/p/Df9wbcdhW7p/"
+   },
+   "triagem": "fora: entretenimento (album)"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
     "quando": "2026-11-20T03:00:06Z",
     "legenda": "O Brasil registrou queda de 27% nas emissões líquidas de gases de efeito estufa de 2022 a 2024, passando de 2,07 para 1,51 gigatoneladas de dióxido de carbono e",
     "link": "https://www.instagram.com/p/Df8o8MxD5pY/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "educacao",
+   "nota": 3,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-20T12:13:17Z",
+    "legenda": "O Ministério da Educação (MEC) destacou o avanço na adoção de protocolos institucionais para identificar e combater casos de discriminação racial nas escolas pú",
+    "link": "https://www.instagram.com/p/Df9oMbihfCK/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Feriado da Consciência Negra: saiba o que abre e fecha em Sergipe",
+   "secoes": [
+    "A",
+    "B"
+   ],
+   "veiculos": 26,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-20T10:10:58Z",
+   "link": "https://midianinja.org/animage-2026-abre-nesta-sexta-20-com-mostra-africana-e-homenagem-ao-dia-da-consciencia-negra/",
+   "editoria": "gerais",
+   "nota": 4,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-20T13:01:37Z",
+    "legenda": "Como o IBGE escancarou que o Brasil ainda precisa de uma consciência mais negra · Ep. 1/4 | Trabalho ✊🏿 O IBGE divulgou nesta quarta-feira (18) a terceira ediçã",
+    "link": "https://www.instagram.com/reel/Df9tto8hihU/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 2,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-20T11:00:09Z",
+    "legenda": "A Constituição Federal de 1988 conquistou o segundo lugar em um ranking internacional que avalia a abrangência e o detalhamento dos direitos sociais em 349 text",
+    "link": "https://www.instagram.com/p/Df9f4ElCP4w/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-20T12:30:01Z",
+    "legenda": "Há discos que marcam uma geração e há os que continuam crescendo com ela. Na noite de 19 de setembro de 2026, 50 mil vozes cantaram no Nubank Parque as letras q",
+    "link": "https://www.instagram.com/p/Df73QObzKLZ/"
    },
    "triagem": "candidato"
   },
@@ -799,25 +869,6 @@
     "quando": "2026-11-20T09:00:06Z",
     "legenda": "A Prefeitura de Porto Ferreira ampliou a oferta de alimentação saudável para os estudantes da rede pública municipal por meio de uma nova chamada pública do Pro",
     "link": "https://www.instagram.com/p/Df9SI8ZjP0W/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 3,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-20T09:30:07Z",
-    "legenda": "O Ministério do Meio Ambiente e Mudança do Clima (MMA) lançou, durante a COP31, realizada em Antalya, na Turquia, a Estratégia Nacional de Soluções Baseadas na ",
-    "link": "https://www.instagram.com/p/Df9Vkp3itfE/"
    },
    "triagem": "candidato"
   },
@@ -850,6 +901,25 @@
    "na_pauta_desde": null,
    "link": null,
    "editoria": "gerais",
+   "nota": 3,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-20T09:30:07Z",
+    "legenda": "O Ministério do Meio Ambiente e Mudança do Clima (MMA) lançou, durante a COP31, realizada em Antalya, na Turquia, a Estratégia Nacional de Soluções Baseadas na ",
+    "link": "https://www.instagram.com/p/Df9Vkp3itfE/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
    "nota": 1,
    "parceiro": {
     "perfil": "brasilforadacaverna",
@@ -858,68 +928,87 @@
     "link": "https://www.instagram.com/p/Df7ZZsehwaw/"
    },
    "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "roca",
+   "nota": 3,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-20T15:07:23Z",
+    "legenda": "Está rolando em Curitiba o AXÉ Festival de Cultura Negra - festivalaxeo, projeto idealizado pela artista Janine Mathias - janinemathias, com o propósito de fome",
+    "link": "https://www.instagram.com/p/Df98LAgpTeT/"
+   },
+   "triagem": "candidato"
   }
  ],
  "descartados_mais_quentes": [
   {
-   "manchete": "Veja principais declarações de Trump, Putin e Xi em reunião trilateral histórica",
+   "manchete": "PGR denuncia Flávio Bolsonaro ao STF por calúnia contra Lula",
+   "veiculos": 74,
+   "veiculos_3h": 33,
+   "motivo": "repetido (20261118-2015-pgr-denuncia-flavio)"
+  },
+  {
+   "manchete": "Lula assina portaria para demarcação de terra indígena de cacique Raoni",
+   "veiculos": 52,
+   "veiculos_3h": 1,
+   "motivo": "repetido (20261119-1630-raoni-kapot-nhinore)"
+  },
+  {
+   "manchete": "Lula anuncia ministério dedicado a idosos e diz não ter pressa para escolher ministros",
    "veiculos": 42,
-   "veiculos_3h": 9,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "\"Declaração de paz\": Putin, Xi e Trump divulgam comunicado após reunião histórica",
-   "veiculos": 20,
-   "veiculos_3h": 3,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "iFood sofre ataque hacker que expõe dados de clientes, entregadores e representantes de restaurantes",
-   "veiculos": 19,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Dia da Consciência Negra: veja o que abre e fecha no Amapá",
-   "veiculos": 12,
-   "veiculos_3h": 3,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Tarcísio confirma permanência de três secretários e reforça prioridade à área social na nova gestão",
-   "veiculos": 12,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Tribunal da ONU conclui que Mianmar cometeu genocídio contra minoria muçulmana; 10 mil foram assassinados",
-   "veiculos": 10,
-   "veiculos_3h": 3,
-   "motivo": "fora: crime ou tragedia (assassin)"
-  },
-  {
-   "manchete": "Diretor nacional de cibersegurança da Casa Branca deixa governo Trump",
-   "veiculos": 10,
    "veiculos_3h": 2,
    "motivo": "sem editoria"
   },
   {
    "manchete": "Dia da Consciência Negra: feriado nacional reforça luta histórica contra o racismo - CUT",
-   "veiculos": 10,
+   "veiculos": 18,
+   "veiculos_3h": 3,
+   "motivo": "fora: esporte (luta)"
+  },
+  {
+   "manchete": "Morre Gabriel Félix, noivo da influenciadora cearense Isabelle Abreu",
+   "veiculos": 15,
+   "veiculos_3h": 11,
+   "motivo": "fora: crime ou tragedia (morre)"
+  },
+  {
+   "manchete": "Diretor nacional de cibersegurança da Casa Branca deixa governo Trump",
+   "veiculos": 14,
+   "veiculos_3h": 4,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Após reunião histórica, Putin, Xi e Trump declaram que uma guerra nuclear não pode ser vencida",
+   "veiculos": 13,
    "veiculos_3h": 2,
-   "motivo": "fora: esporte (luta)"
-  },
-  {
-   "manchete": "Campus Cidade de Goiás/ UFG marca presença na Sessão Solene da Assembleia Legislativa de Goiás (ALEGO), em homenagem ao Dia Nacional da Consciência Negra",
-   "veiculos": 7,
-   "veiculos_3h": 1,
-   "motivo": "fora: esporte (luta)"
-  },
-  {
-   "manchete": "Putin diz que revidará com força após Ucrânia atingir novamente a ponte da Crimeia",
-   "veiculos": 7,
-   "veiculos_3h": 7,
    "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Tempestade deixa um morto e destrói milhares casas no Noroeste do RS",
+   "veiculos": 10,
+   "veiculos_3h": 10,
+   "motivo": "fora: crime ou tragedia (morto)"
+  },
+  {
+   "manchete": "Dez anos depois, Reino Unido pode reverter o Brexit? Entenda",
+   "veiculos": 10,
+   "veiculos_3h": 9,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Marina Silva, Fachin e Erika Hilton ampliam pressão sobre Lula por ministra negra no STF: 'Abismo social e estrutural'",
+   "veiculos": 9,
+   "veiculos_3h": 3,
+   "motivo": "repetido (20261118-1615-marina-ministra-negra)"
   }
  ]
 }
