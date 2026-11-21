@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-21T22:14:10Z",
- "pauta_quando": "2026-11-21T22:14:08Z",
+ "quando": "2026-11-21T22:25:40Z",
+ "pauta_quando": "2026-11-21T22:25:38Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -8,13 +8,13 @@
   "ia": "gemini",
   "ok": true,
   "erro": null,
-  "modelo": "gemini-3.5-flash",
-  "avaliados_agora": 23,
-  "falhas_antes": "gemini-3.8-flash: ReadTimeout",
-  "pedidos_hoje": 14
+  "modelo": "gemini-3.5-flash-lite",
+  "avaliados_agora": 9,
+  "falhas_antes": null,
+  "pedidos_hoje": 15
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 156,
+ "total_assuntos": 157,
  "novos_3h": 13,
  "esquentaram": 2,
  "candidatos": [
@@ -23,8 +23,8 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 55,
-   "veiculos_3h": 8,
+   "veiculos": 47,
+   "veiculos_3h": 5,
    "na_pauta_desde": "2026-11-21T16:51:33Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/21/lula-diz-que-projeto-aprovado-no-senado-nao-e-reforma-fiscal-mas-ajuste-para-orcamento-de-2027-e-critica-faria-lima.ghtml",
    "editoria": "politica",
@@ -46,38 +46,13 @@
    }
   },
   {
-   "manchete": "Lula defende pacote fiscal: sistema financeiro não me ensinará a dirigir o País",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 15,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-21T07:44:05Z",
-   "link": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/o-sistema-financeiro-nao-vai-me-ensinar-dirigir-o-brasil-diz-lula",
-   "editoria": "economia",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 3,
-    "P": 2,
-    "formato": "reels",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Declaração contundente de Lula sobre o pacote fiscal e o mercado financeiro.",
-    "soma": 6
-   }
-  },
-  {
    "manchete": "Lula nega aumento da idade mínima para aposentadoria em seu quarto mandato",
    "secoes": [
     "B"
    ],
-   "veiculos": 6,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "veiculos": 8,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-21T16:51:33Z",
    "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPbzJDTlAtdU5jSGc2VVBYOFZHNlJBY2FNbFQtZUVLdVhYd2FvNWhnSkptTXdXMUJmVUhQS3FRcWdQaHlmbl9Jdm10d3dqeExFd3Jza2x4eXUzdnJCc3BpQk5TMnNhMjlOQkRfTHJiMWFXRmVtRGVRdzdib1ZVUkxmUF9JMC1FTXZrNGRTQ2I3aEx0VF9JMWFQZnZkXzd5YnhTS0JHQ2Zwb3JGalB1?oc=5",
    "editoria": "economia",
    "nota": 5,
@@ -85,7 +60,6 @@
    "lente": [
     "aposentad"
    ],
-   "outras_manchetes": 1,
    "ia": {
     "editoria": "economia",
     "I": 3,
@@ -184,84 +158,29 @@
    }
   },
   {
-   "manchete": "Bolsonaro segue em UTI em estado estável, mas sem previsão de alta, informa hospital",
+   "manchete": "Uneb abre 120 vagas em cursos de Agroecologia e Engenharia de Aquicultura; saiba como inscrever",
    "secoes": [
-    "B"
-   ],
-   "veiculos": 38,
-   "veiculos_3h": 14,
-   "na_pauta_desde": "2026-11-21T22:14:08Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/21/bolsonaro-tem-obstrucao-intestinal-quadro-estavel-e-segue-sem-previsao-de-alta-diz-boletim-medico.ghtml",
-   "editoria": "saude",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "bolsonar"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Atualização sobre estado de saúde e internação de Bolsonaro na UTI.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Brazil’s former president Jair Bolsonaro has been hospitalized again, son says",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 22,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-20T22:09:16Z",
-   "link": "https://www.aljazeera.com/news/2026/11/21/brazils-jair-bolsonaro-in-intensive-care-with-bowel-obstruction?traffic_source=rss",
-   "editoria": "saude",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "bolsonar"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Repercussão internacional da nova internação de Jair Bolsonaro.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Sobe para 3 o número de mortos após temporal que devastou Tupanciretã (RS); acampamento do MST também foi atingido",
-   "secoes": [
-    "B",
     "D-terra"
    ],
-   "veiculos": 13,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-21T08:22:12Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/temporais-afetam-quase-20-mil-pessoas-em-36-cidades-do-rio-grande-do-sul.shtml",
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "link": "https://g1.globo.com/ba/feira-de-santana-regiao/noticia/2026/11/21/vagas-em-cursos-na-bahia.ghtml",
    "editoria": "roca",
-   "nota": 6,
-   "esquentou": true,
+   "nota": 4,
+   "esquentou": false,
    "lente": [
-    "mst"
+    "vagas"
    ],
    "ia": {
     "editoria": "roca",
     "I": 2,
     "V": 2,
-    "P": 1,
-    "formato": "feed",
+    "P": 2,
+    "formato": "carrossel",
     "repetido": false,
-    "risco": "tragédia com vítimas",
-    "motivo": "Temporal no RS com mortes atingiu acampamento do MST; exige cuidado por envolver vítimas.",
+    "risco": "",
+    "motivo": "Abertura de vagas em agroecologia fortalece a luta no campo.",
     "soma": 4
    }
   },
@@ -271,8 +190,8 @@
     "B",
     "C-nacional"
    ],
-   "veiculos": 5,
-   "veiculos_3h": 3,
+   "veiculos": 6,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-21T22:14:08Z",
    "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQQnk5amxiem42VXpKX0lxdzdnNU56TWQ1eXZLSzhhRUxoRDFXZEFteW9CZGZhNWhsaFYyQm5pSXBWYXJjTHpuZUJoT0w5NFJfeUJEU3FIMUZpZXhvcGxxY3ZsdjZIYW01aEdUWHNjbWUzcmFsZzJOcWhMdUJ1ay05U0l6RVZvVWpNWDhqcjRfVjMxZFdIR1psRDVMU2VYanlldGYyR19oNHZSVld1bEF1YlJuWlF3ckZ3NkxKc0hmdFdCbkpRWjBRTGxnbUFUY2JmY2NQRFFSZnJQTGFi?oc=5",
    "editoria": "saude",
@@ -294,81 +213,59 @@
    }
   },
   {
-   "manchete": "Conab envia 6,45 toneladas de alimentos para famílias atingidas em Tupanciretã",
-   "secoes": [
-    "B",
-    "C-nacional",
-    "D-terra"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-21T22:14:08Z",
-   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPU0plVkZOUl8xSEdVQ1VCb2FjSFVQNzZqMWdVT09xdEhYOTFxMHBmRTN2VVVGUGpfa3kwSlFHVGlmUGR2czhMbUFOVVJaMlBOOXZrLVRfSWJWampYLUlkaWt1SWpmT05HQVNpcnlOWkZ3cW50cHQ4eGdMUGxnTGFFTUdKRWQ3VEEzYkhPeGxPb1FxYnVRZXU4aHlrVVNLQ1RoYk9PWklodEp1RnpzbS13aWpQRlZuQTFvQldLdDhHUQ?oc=5",
-   "editoria": "roca",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Brazil U17s kick off World Cup campaign against Ireland",
-   "secoes": [
-    "B",
-    "D-america_latina"
-   ],
-   "veiculos": 8,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-21T22:14:08Z",
-   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQSFY1M0NBb1FxVzhTUmhGNl91QnhKMG1MR0ZfdEpETF9FZnpvanFvUFNzWmtLMmxDN3ZwanlBa0t1cG1lREU4dVBKbEhKTUZ2YWlCWmtBQjJJQnlMZlN5WFd3aEQ1Tk85VWROXzhyOWwwdzV3UndTYWNsRFBBTmJmUA?oc=5",
-   "editoria": "america_latina",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "STF aprova retomada do novo auxílio emergencial para pessoas atingidas por tragédia em Brumadinho",
+   "manchete": "Bolsonaro é encaminhado ao hospital após \"fortes dores abdominais\"",
    "secoes": [
     "B"
    ],
-   "veiculos": 8,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-21T22:14:08Z",
-   "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQZVR1NkJvUkh3OXVUNk5NQllrZ2NjN2tUeGQ4SnhESWZtaVhTYXNBOEJ0WkladEJieUlMeHBDNmcwMDZsODU0Tk1aaUpkYmx3dG1Sc1AyZlJ0SXNJajNiRGhyVkVVWmFKVFZxUXR1N0l2bFpPQXNZcEpzbGpLRUhDZjNBY05Fd1AtNW1BSV9PQmZZUWdYdVBWZHoxcU5NRVEtV2hLSVBZSzc1d2FFQzdBREVzLTFkOGM4eHhIVEx3TmVhYmpWT3ZGM2ZDYzZ4VWFhUXNKUExJVQ?oc=5",
-   "editoria": "politica",
-   "nota": 4,
+   "veiculos": 24,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-20T22:09:16Z",
+   "link": "https://www.congressoemfoco.com.br/noticia/131761/bolsonaro-e-encaminhado-ao-hospital-apos-fortes-dores-abdominais",
+   "editoria": "saude",
+   "nota": 5,
    "esquentou": false,
    "lente": [
-    "auxilio"
-   ]
-  },
-  {
-   "manchete": "Ponte sobre Rio Paraguai terá nova interdição na próxima semana",
-   "secoes": [
-    "D-america_latina"
+    "bolsonar"
    ],
-   "veiculos": 5,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-21T22:14:08Z",
-   "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxONkFnSFg2cWprT3pMaWM4NEc4Sm5Yd21ZVnoxMTM4UmFvNmV1bGNucnRxUGhmVXlqZDdKQnZVRVdqVlllUTYxcVVtcEhUUUwtZHFsVGd3ZG9sTVlqQWlVUWRrNFgxZlI1NG5JamN1TEFJLXRWRi1KdnRoSnN4RnlSU0FBdC1YUDNhZlFUalVLX3pwaGdRbUM3Ty10Z3p1dndiZFpCbHhBLW9YU0dKcXlmS0I5ODlPM2gtSjRNRmJCRnR5X1cxUmN3YUNSUTRmSnVSa0VjOVRaVXVaeEo0YUFBSw?oc=5",
-   "editoria": "america_latina",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
+   "ia": {
+    "editoria": "gerais",
+    "I": 1,
+    "V": 3,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "Atenção a estado de saúde de figura pública",
+    "motivo": "Internação de Bolsonaro gera grande repercussão na mídia.",
+    "soma": 4
+   }
   },
   {
-   "manchete": "Uneb abre 120 vagas em cursos de Agroecologia e Engenharia de Aquicultura; saiba como inscrever",
+   "manchete": "Sobe para 3 o número de mortos após temporal que devastou Tupanciretã (RS); acampamento do MST também foi atingido",
    "secoes": [
+    "B",
     "D-terra"
    ],
-   "veiculos": 2,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-21T22:14:08Z",
-   "link": "https://g1.globo.com/ba/feira-de-santana-regiao/noticia/2026/11/21/vagas-em-cursos-na-bahia.ghtml",
+   "veiculos": 10,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-21T08:22:12Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/temporais-afetam-quase-20-mil-pessoas-em-36-cidades-do-rio-grande-do-sul.shtml",
    "editoria": "roca",
-   "nota": 4,
-   "esquentou": false,
+   "nota": 6,
+   "esquentou": true,
    "lente": [
-    "vagas"
-   ]
+    "mst"
+   ],
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "tragédia com vítimas",
+    "motivo": "Temporal no RS com mortes atingiu acampamento do MST; exige cuidado por envolver vítimas.",
+    "soma": 4
+   }
   },
   {
    "manchete": "Saúde, agroecologia, favela: tecnologias sociais e histórias de vida das periferias urbanas do Rio de Janeiro",
@@ -418,6 +315,22 @@
    ]
   },
   {
+   "manchete": "Criança é socorrida após incêndio em apartamento em Cubatão; polícia apura a causa",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-21T22:25:38Z",
+   "link": "https://g1.globo.com/sp/santos-regiao/noticia/2026/11/21/crianca-e-socorrida-apos-incendio-em-apartamento-em-cubatao-policia-apura-a-causa.ghtml",
+   "editoria": "gerais",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "incendio"
+   ]
+  },
+  {
    "manchete": "Animais são transferidos após incêndio atingir área do Bioparque da Amazônia no AP",
    "secoes": [
     "C-pesquisa"
@@ -448,31 +361,110 @@
    "lente": [
     "queimada"
    ]
+  },
+  {
+   "manchete": "UFS abre concurso público para professor com salário de R$ 26,3 mil",
+   "secoes": [
+    "C-universidades"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "link": "https://g1.globo.com/se/sergipe/noticia/2026/11/21/ufs-abre-concurso-publico-para-professor-com-salario-de-r-263-mil.ghtml",
+   "editoria": "economia",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "salario"
+   ]
+  },
+  {
+   "manchete": "Cleitinho se emociona ao falar de Ana Elisa e presta apoio à deputada eleita do PT (vídeo)",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "link": "https://www.brasil247.com/sudeste/cleitinho-se-emociona-ao-falar-de-ana-elisa-e-presta-apoio-a-deputada-eleita-do-pt-video/",
+   "editoria": "politica",
+   "nota": 3,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "El Niño pode intensificar períodos de seca e risco de incêndios no Brasil; entenda os efeitos do fenômeno",
+   "secoes": [
+    "C-pesquisa"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQc1l3QS1QWk5USUJJcWViVEJOZS00Q0xUakx6N0tmaVlDSzB6bEMzVjIxYThBMDZfcXoxWEZLMU13ZXBiSDVMcEJuSTdhQ3FHb0thNElfenhUTFhodk13eUswMFJiUVpRUWJYd09WM0VpM3FEUzF0OWVwTzF5QkdUSXpUZW5GZFhBMlcybUVCZ1pFb3FqeTdSUFNaa0VVc2ptTGdRazV6aVpmd2RFbGhBS3V3VkNaeXhXbEptN1k5WXBiaFRBRWpzdVNpSzA0NUpWeDZEM3UycUZNYnk0dHlFU3pjVUJQWmRNb0E?oc=5",
+   "editoria": "gerais",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "incendio"
+   ]
+  },
+  {
+   "manchete": "Estudante da UFMT produz aplicativo para mapear o transporte público",
+   "secoes": [
+    "C-universidades"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPcE5QZEwwZGdHSzdIc3R3eDJiNFRMOFJOS1NwNmFuS213a3dGVnY1c1o0UW9hVTlWT092X0hxQWI4WnVxbGRCekZMMTdhUnFZd1dCWlhmY2ZwcjBQNEdrUENaZm5XTTdyRTdqMkZXd2ljYTdRZE1KbXY1TUJuMmNZZl9JOGRQWTNEYk1TSURraTg0eU0wejZvRg?oc=5",
+   "editoria": "educacao",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "aplicativo",
+    "transporte publico"
+   ]
+  },
+  {
+   "manchete": "Lula anuncia reconhecimento da Terra Indígena Kapôt Nhinore",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-21T22:25:38Z",
+   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQZ25xM1JHU196N3Fsbk1DYnVZQUNwdEI0b2hjWVFpZ1g3NmNoV0JOMmNwV3lpZ28zTENzWUpwZXYxeVVNaWxJV3BoaGVXWVN4ZEF6UlNNUlB0RUhtdXJuXzh1QjFDeE9ITG5QM29YM2xtb0dZYmlNaHB5Tm4wYkw5S3p3ZGg1czNqeUhWcmVyZGFCbkR6dGVNNVVPdw?oc=5",
+   "editoria": "roca",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "indigena"
+   ]
   }
  ],
  "rebaixados": [
   {
-   "manchete": "Cristiano Zanin interrompe julgamento de Marcel van Hattem no STF",
-   "veiculos": 6,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "manchete": "Unesp aplica neste domingo a prova da primeira fase do Vestibular 2027",
+   "veiculos": 27,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-21T00:17:58Z",
    "esquentou": false,
    "ia": {
-    "editoria": "politica",
+    "editoria": "educacao",
     "I": 1,
     "V": 2,
-    "P": 1,
+    "P": 0,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Interrupção de julgamento no STF de deputado bolsonarista.",
+    "motivo": "Vestibular da Unesp atrai milhares de estudantes.",
     "soma": 3
    }
   },
   {
    "manchete": "The Economist: Brasil lidera corrida da América Latina para virar polo global de data centers",
-   "veiculos": 8,
-   "veiculos_3h": 3,
+   "veiculos": 6,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-21T22:14:08Z",
    "esquentou": false,
    "ia": {
@@ -488,28 +480,28 @@
    }
   },
   {
-   "manchete": "Lula visitará estudantes que impulsionaram virada eleitoral",
-   "veiculos": 16,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-20T18:02:18Z",
+   "manchete": "Conmebol admite ter R$ 88 milhões aplicados no Ueno, banco paraguaio que quebrou após crise",
+   "veiculos": 8,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-21T00:09:27Z",
    "esquentou": false,
    "ia": {
-    "editoria": "politica",
+    "editoria": "economia",
     "I": 1,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Agenda de Lula com movimento estudantil.",
+    "motivo": "Conmebol envolvida em quebra de banco paraguaio.",
     "soma": 2
    }
   },
   {
    "manchete": "Comunidade Quilombola de Recurso celebra o Dia da Consciência Negra com desfile",
-   "veiculos": 2,
+   "veiculos": 3,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-21T16:51:33Z",
+   "na_pauta_desde": "2026-11-21T07:44:05Z",
    "esquentou": false,
    "ia": {
     "editoria": "gerais",
@@ -524,26 +516,62 @@
    }
   },
   {
-   "manchete": "Vestibular Unesp 2027: prova começa às 13h neste domingo",
-   "veiculos": 28,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-21T00:17:58Z",
+   "manchete": "Expresidente Jair Bolsonaro es hospitalizado en Brasilia por fuertes dolores abdominales",
+   "veiculos": 9,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-21T00:09:27Z",
    "esquentou": false,
    "ia": {
-    "editoria": "educacao",
+    "editoria": "gerais",
+    "I": 1,
+    "V": 2,
+    "P": 0,
+    "formato": "feed",
+    "repetido": true,
+    "risco": "Atenção a estado de saúde de figura pública",
+    "motivo": "Mesma notícia da internação de Bolsonaro em veículo estrangeiro.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Jair Bolsonaro, ancien président du Brésil, à nouveau hospitalisé en soins intensifs pour une occlusion intestinale",
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-21T22:25:38Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "gerais",
     "I": 1,
     "V": 1,
     "P": 0,
     "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Aviso de serviço sobre horário de vestibular estadual.",
+    "repetido": true,
+    "risco": "Atenção a estado de saúde de figura pública",
+    "motivo": "Mesma notícia da internação de Bolsonaro em francês.",
     "soma": 2
    }
   },
   {
+   "manchete": "Brazil ex-President Bolsonaro hospitalized with intestinal obstruction",
+   "veiculos": 21,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-11-20T22:09:16Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "fora",
+    "I": 0,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "Atenção a estado de saúde de figura pública",
+    "motivo": "Internação de ex-presidente no exterior, sem impacto direto no trabalho.",
+    "soma": 1
+   }
+  },
+  {
    "manchete": "Terremoto de magnitude 6,9 atinge o Peru, diz agência",
-   "veiculos": 46,
+   "veiculos": 48,
    "veiculos_3h": 5,
    "na_pauta_desde": "2026-11-21T00:51:58Z",
    "esquentou": false,
@@ -561,8 +589,8 @@
   },
   {
    "manchete": "Cartel kingpin on FBI’s most wanted list captured in dramatic Mexican military operation",
-   "veiculos": 50,
-   "veiculos_3h": 28,
+   "veiculos": 36,
+   "veiculos_3h": 14,
    "na_pauta_desde": "2026-11-21T16:51:33Z",
    "esquentou": false,
    "ia": {
@@ -579,8 +607,8 @@
   },
   {
    "manchete": "El ‘Chapo Isidro’, señor de la guerra en Sinaloa, uno de los objetivos más buscados por Estados Unidos",
-   "veiculos": 41,
-   "veiculos_3h": 8,
+   "veiculos": 39,
+   "veiculos_3h": 6,
    "na_pauta_desde": "2026-11-21T07:44:05Z",
    "esquentou": false,
    "ia": {
@@ -592,42 +620,6 @@
     "repetido": false,
     "risco": "",
     "motivo": "Notícia sobre narcotráfico no México sem relação com o Brasil.",
-    "soma": 0
-   }
-  },
-  {
-   "manchete": "How to watch France v Argentina: Free live stream online from anywhere",
-   "veiculos": 9,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-21T22:14:08Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "fora",
-    "I": 0,
-    "V": 0,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Transmissão esportiva sem relevância política.",
-    "soma": 0
-   }
-  },
-  {
-   "manchete": "Cuatro soldados y siete criminales murieron en el operativo para detener a “El Chapo Isidro”",
-   "veiculos": 5,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-21T22:14:08Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "fora",
-    "I": 0,
-    "V": 0,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Conflito policial no México fora da pauta editorial.",
     "soma": 0
    }
   }
@@ -657,9 +649,9 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 2,
+   "veiculos": 3,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-21T16:51:33Z",
+   "na_pauta_desde": "2026-11-21T07:44:05Z",
    "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNdXFwRUJxZmhZOGFQNFA1OFJKY2pESFhZbTA4bFd6R01lZ19Pd1lybTAxYWFCTVlVX3YtN2NLZWhEOFZ6VExETXl0OURTTkQxT1VvbDhhNkxpY3lfb3M4TF9hTE04WWtzX19ZT1pQUFRPQWlYOEhsVmNVeHhSbDgxcWw0ajk5OGF6MEl4emNmOVdGZ0dqMDQ3b2FhNm1jbWtiOG5haW55cVg0N3hCVFlObW5wMnZZeEJtRkJmT0pOWVIzamFXdDdSaWV4c0gwbXZIU0ZleTZ4bUJ5alF6ZjhrYXNJM0o4MHB2eW9wdFcxeUVhQkRubWVOSdIB-AFBVV95cUxNdXFwRUJxZmhZOGFQNFA1OFJKY2pESFhZbTA4bFd6R01lZ19Pd1lybTAxYWFCTVlVX3YtN2NLZWhEOFZ6VExETXl0OURTTkQxT1VvbDhhNkxpY3lfb3M4TF9hTE04WWtzX19ZT1pQUFRPQWlYOEhsVmNVeHhSbDgxcWw0ajk5OGF6MEl4emNmOVdGZ0dqMDQ3b2FhNm1jbWtiOG5haW55cVg0N3hCVFlObW5wMnZZeEJtRkJmT0pOWVIzamFXdDdSaWV4c0gwbXZIU0ZleTZ4bUJ5alF6ZjhrYXNJM0o4MHB2eW9wdFcxeUVhQkRubWVOSQ?oc=5",
    "editoria": "roca",
    "nota": 5,
@@ -1038,46 +1030,46 @@
  ],
  "descartados_mais_quentes": [
   {
-   "manchete": "Médico de Bolsonaro diz que exame mostrou obstrução 'quase total' do intestino e cirurgia será avaliada durante internação",
-   "veiculos": 50,
-   "veiculos_3h": 11,
-   "motivo": "sem editoria"
-  },
-  {
    "manchete": "Defesa de Bolsonaro pede a Moraes autorização para visitas diárias de filhos durante internação",
-   "veiculos": 41,
-   "veiculos_3h": 5,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Moraes vota para manter Flávio Bolsonaro proibido de deixar o Brasil",
-   "veiculos": 41,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Trump diz ter exigido que Filipinas comprem produtos agrícolas dos EUA e cancelem negócios com Brasil",
-   "veiculos": 31,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Bolsonaro é internado após sentir dores abdominais",
-   "veiculos": 25,
-   "veiculos_3h": 3,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Lula revela articulação com Trump, Xi Jinping e Putin para discutir a paz e buscar saída para a guerra na Ucrânia",
-   "veiculos": 20,
-   "veiculos_3h": 2,
+   "veiculos": 55,
+   "veiculos_3h": 6,
    "motivo": "sem editoria"
   },
   {
    "manchete": "Bolsonaro está internado na UTI com abdômen agudo obstrutivo",
-   "veiculos": 18,
+   "veiculos": 35,
+   "veiculos_3h": 11,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Trump diz ter exigido que Filipinas comprem produtos agrícolas dos EUA e cancelem negócios com Brasil",
+   "veiculos": 29,
+   "veiculos_3h": 2,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Médico de Bolsonaro diz que exame mostrou obstrução 'quase total' do intestino e cirurgia será avaliada durante internação",
+   "veiculos": 26,
+   "veiculos_3h": 3,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Tempestade deixa três mortos, 60 feridos e danifica 8 mil casas em cidade do RS",
+   "veiculos": 24,
+   "veiculos_3h": 5,
+   "motivo": "fora: crime ou tragedia (mortos)"
+  },
+  {
+   "manchete": "Lula revela articulação com Trump, Xi Jinping e Putin para discutir a paz e buscar saída para a guerra na Ucrânia",
+   "veiculos": 22,
    "veiculos_3h": 4,
    "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Palmeiras x Flamengo: onde assistir ao vivo ao jogo do Brasileirão",
+   "veiculos": 16,
+   "veiculos_3h": 4,
+   "motivo": "fora: esporte (flamengo)"
   },
   {
    "manchete": "Jovens europeus protestam contra custo de vida e aumento de gastos militares",
@@ -1086,16 +1078,16 @@
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Palmeiras x Flamengo: onde assistir ao vivo ao jogo do Brasileirão",
+   "manchete": "Cartel leader captured in northern Mexico in a bloody firefight that left 11 dead",
    "veiculos": 15,
-   "veiculos_3h": 3,
-   "motivo": "fora: esporte (flamengo)"
+   "veiculos_3h": 12,
+   "motivo": "fora: crime ou tragedia (dead)"
   },
   {
-   "manchete": "Duas turistas são resgatadas após ficarem ilhadas em cânion na Chapada Diamantina",
-   "veiculos": 14,
-   "veiculos_3h": 8,
-   "motivo": "sem editoria"
+   "manchete": "UFC Qatar: Procházka x Stirling — horário e onde assistir",
+   "veiculos": 15,
+   "veiculos_3h": 7,
+   "motivo": "fora: esporte (ufc)"
   }
  ]
 }
