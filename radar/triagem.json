@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-21T08:22:13Z",
- "pauta_quando": "2026-11-21T08:22:12Z",
+ "quando": "2026-11-21T16:51:34Z",
+ "pauta_quando": "2026-11-21T16:51:33Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,174 +9,123 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 11,
-  "falhas_antes": "gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in",
-  "pedidos_hoje": 6
+  "avaliados_agora": 23,
+  "falhas_antes": null,
+  "pedidos_hoje": 7
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 124,
- "novos_3h": 6,
- "esquentaram": 3,
+ "total_assuntos": 128,
+ "novos_3h": 12,
+ "esquentaram": 2,
  "candidatos": [
   {
-   "manchete": "Projeto de ajuste fiscal de Lula chega à Câmara em Brasília",
+   "manchete": "Lula diz que projeto aprovado no Senado não é 'reforma fiscal', mas ajuste para Orçamento de 2027, e critica Faria Lima",
    "secoes": [
-    "B"
-   ],
-   "veiculos": 10,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-21T07:44:05Z",
-   "link": "https://www.metropoles.com/brasil/papel-de-alcolumbre-na-votacao-do-ajuste-fiscal-amplia-dependencia-de-lula",
-   "editoria": "politica",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "politica",
-    "I": 3,
-    "V": 3,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Ajuste fiscal afeta diretamente o orçamento e gera forte debate.",
-    "soma": 6
-   }
-  },
-  {
-   "manchete": "Mendonça reage à inclusão de seu nome em relatório da PF e abre mão de sigilo imposto por Fachin",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 19,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-20T12:10:36Z",
-   "link": "https://www.congressoemfoco.com.br/noticia/131756/andre-mendonca-pede-publicidade-de-relatorio-da-pf-que-cita-seu-nome",
-   "editoria": "politica",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "politica",
-    "I": 3,
-    "V": 3,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Ministro do STF citado pela PF abre mão de sigilo.",
-    "soma": 6
-   }
-  },
-  {
-   "manchete": "Juros nos EUA e ajuste fiscal no Brasil: o que está por trás da disparada do dólar",
-   "secoes": [
+    "B",
     "C-nacional"
    ],
-   "veiculos": 3,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-21T07:44:05Z",
-   "link": "https://g1.globo.com/jornal-nacional/noticia/2026/11/20/juros-nos-eua-e-ajuste-fiscal-no-brasil-o-que-esta-por-tras-da-disparada-do-dolar.ghtml",
-   "editoria": "economia",
-   "nota": 4,
+   "veiculos": 23,
+   "veiculos_3h": 23,
+   "na_pauta_desde": "2026-11-21T16:51:33Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/21/lula-diz-que-projeto-aprovado-no-senado-nao-e-reforma-fiscal-mas-ajuste-para-orcamento-de-2027-e-critica-faria-lima.ghtml",
+   "editoria": "politica",
+   "nota": 6,
    "esquentou": false,
    "lente": [
-    "juros"
+    "orcamento"
    ],
+   "outras_manchetes": 1,
+   "ia": {
+    "editoria": "politica",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Ataque direto à Faria Lima e debate sobre ajuste fiscal.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "O pacote fiscal do governo Lula ajuda a estabilizar as contas públicas? NÃO",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 6,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-21T07:44:05Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/opiniao/2026/11/o-pacote-fiscal-do-governo-lula-ajuda-a-estabilizar-as-contas-publicas-nao.shtml",
+   "editoria": "economia",
+   "nota": 4,
+   "esquentou": true,
+   "lente": [],
    "ia": {
     "editoria": "economia",
     "I": 3,
     "V": 2,
-    "P": 3,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Alta do dólar liga política fiscal e juros dos EUA.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Brazil ex-President Bolsonaro hospitalized with intestinal obstruction",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 15,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-20T22:09:16Z",
-   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPY1FLYnpXNmhWNlF5WEREd0NZMy1jSFVOamlsVndLWU45RTlERlF6YldSQWNBOXRBU1k0b2laU3QxM2k1YU53dWVjRll1VktkRDhUWUZwRjY0RGdDLTEwZE5mN0tFM0dZVDU0Q0FPYnVSN0h5RU8xNDM3Q0s1VnVyMEtWSHVvcnZGU3VVNlljUVg1NUVrckJSVC1JTWtoOVcyYlVyQzNkX1NzQ1lIZnRPaQ?oc=5",
-   "editoria": "saude",
-   "nota": 5,
-   "esquentou": true,
-   "lente": [
-    "bolsonar"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 3,
-    "P": 1,
+    "P": 2,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Internamento de Bolsonaro gera grande repercussão e polarização imediata nas redes.",
+    "motivo": "Opinião sobre eficácia do pacote fiscal do governo.",
     "soma": 5
    }
   },
   {
-   "manchete": "Com desmatamento em baixa, metano expõe agronegócio do Brasil",
-   "secoes": [
-    "B",
-    "C-nacional",
-    "D-terra"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-21T07:44:05Z",
-   "link": "https://www1.folha.uol.com.br/ambiente/2026/11/com-desmatamento-em-baixa-metano-expoe-agronegocio-do-brasil.shtml",
-   "editoria": "roca",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "desmatamento"
-   ],
-   "ia": {
-    "editoria": "roca",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Emissões de metano apontam contradições e impactos do agronegócio.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Projeto oferta terapias gratuitas a jovens autistas que enfrentam vácuo no SUS",
+   "manchete": "Lula garante que idade da aposentadoria não aumentará no próximo mandato",
    "secoes": [
     "B",
     "C-nacional"
    ],
    "veiculos": 5,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-21T07:44:05Z",
-   "link": "https://www1.folha.uol.com.br/equilibrioesaude/2026/11/projeto-oferta-terapias-gratuitas-a-jovens-autistas-que-enfrentam-vacuo-no-sus.shtml",
-   "editoria": "saude",
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-21T16:51:33Z",
+   "link": "https://www.metropoles.com/brasil/lula-afirma-que-nao-havera-mudanca-nas-regras-de-aposentadoria-por-idade",
+   "editoria": "economia",
    "nota": 5,
    "esquentou": false,
    "lente": [
-    "sus"
+    "aposentad"
    ],
    "ia": {
-    "editoria": "saude",
-    "I": 2,
+    "editoria": "economia",
+    "I": 3,
     "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Atendimento a jovens autistas expõe falhas e soluções no SUS.",
-    "soma": 4
+    "motivo": "Garantia sobre idade da aposentadoria afeta diretamente trabalhador.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "13º salário 2026: veja quando serão pagos os valores aos trabalhadores",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-21T16:51:33Z",
+   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNM1UxdXNncHB1MjZza3F1VDR4dzlDZ3NyVkh0MTkyaVdsZXB3elZkODYwOHBISlF5UHFxd0dNaWlLdTJxTzl4NktUX2t1Q2FBZ0JNeVVCNVhIcHg3U1FEQVpvNTRKQV9abGJKZDZsV0VDNjBxYWRvU3JJNUJscEMzUXFpNThYclpycWwxRlhTZUJuWjdwRUF0c0o2N2FsajBYaUtoQ3QyTDU?oc=5",
+   "editoria": "economia",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "trabalhador",
+    "salario"
+   ],
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Calendário do 13º salário interessa diretamente aos trabalhadores.",
+    "soma": 5
    }
   },
   {
@@ -184,9 +133,9 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 17,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-20T20:09:30Z",
+   "veiculos": 41,
+   "veiculos_3h": 12,
+   "na_pauta_desde": "2026-11-20T14:09:49Z",
    "link": "https://tvtnews.com.br/tempestade-tupancireta-lula-forca-nacional-sus/",
    "editoria": "saude",
    "nota": 6,
@@ -202,117 +151,60 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Atuação do SUS em tragédia climática afeta população afetada.",
+    "motivo": "Atuação da Força Nacional do SUS em tragédia climática.",
     "soma": 4
    }
   },
   {
-   "manchete": "Como as construtoras estão se preparando para reduzir o impacto do fim da escala 6x1",
+   "manchete": "Gilmar não vê problema em abrir sigilo de relatório sobre STF e Master",
    "secoes": [
     "B"
    ],
-   "veiculos": 8,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-20T10:10:58Z",
-   "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQMUR3TU02WHh2TURneG1iRFpyZ2pZMlM1eWNLTlNYRTl2T3dkVDU3ZDJWTkRDMFNpSGlJbERjWTIyRXJ4N0x3bUhHNFladnlIeHB5RGRKTUZxY1hYTzIzaTFqZ0JidFhpVW9tSlk4MXhLYk1Ndks5dGxOcTVuS2diMDlCU2Y3SXFiZlI3dnNtcnRZWHpVam9CRlBLWGJ5MlhvalJhTFlSbXQ4dzVlRF9OLXdyalV4N3FHdFNvc0JR0gHDAUFVX3lxTE1WQlZpTy1PNDk4czdBMWxTRmp2b1Eyd0NSc2VxUklDOWgyQjVYT2JqREhmU2lHRkJCQklxYUc5eEpZeVhuaC1IczUtXzF5alFSTGhoWndUVHp0WGo4TF9MMDdsR1A5WUJMaFpRRGZ5SzZCVWVRek9YSjhtYkw4Tkl3MkZGLTdwcXZvTXpMdzdTUzNwR2k5WlpzeHZHWWhpU2haQThORjh4dHV6dmVxMkh0VVdvSTlwWl9KekprRFNkVlhQcw?oc=5",
-   "editoria": "economia",
-   "nota": 4,
+   "veiculos": 21,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-21T16:51:33Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/11/nao-vejo-problema-mas-nao-resolve-a-questao-diz-gilmar-sobre-abertura-de-sigilo-do-stf-no-caso-master.shtml",
+   "editoria": "politica",
+   "nota": 6,
    "esquentou": false,
    "lente": [
-    "6x1"
+    "master"
    ],
    "ia": {
-    "editoria": "gerais",
+    "editoria": "politica",
     "I": 2,
     "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Impacto empresarial frente ao avanço do debate da escala 6x1.",
+    "motivo": "Envolve STF e crise de sigilos, mas atrai interesse político.",
     "soma": 4
    }
   },
   {
-   "manchete": "13º salário dos Metalúrgicos do ABC deve movimentar R$525,8 milhões na economia regional",
+   "manchete": "El Salvador: Bukele formalizó su candidatura para competir por su tercer mandato",
    "secoes": [
-    "B"
+    "B",
+    "D-america_latina"
    ],
-   "veiculos": 7,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-20T14:09:49Z",
-   "link": "https://g1.globo.com/jornal-nacional/noticia/2026/11/20/quase-100-milhoes-de-brasileiros-comecam-a-receber-o-13o-salario-beneficio-deve-movimentar-r-400-bilhoes-na-economia.ghtml",
-   "editoria": "economia",
-   "nota": 4,
-   "esquentou": true,
-   "lente": [
-    "salario"
-   ],
-   "ia": {
-    "editoria": "roca",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Injeção de renda e direitos de trabalhadores metalúrgicos.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Financiamento estrangeiro na campanha de Flávio Bolsonaro",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-21T08:22:12Z",
-   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPM3JhXzhuT3VLMEJzekZ2OWJ6SFc0b05PX1hybjdjU3ExUXBSOHdvY0NyVVVjMjNRZmtyUV9mTXVici05SkFsdE9YTWlUNDVncWVORFAwRF92U0h4cjRQMHBTZWh2ZjR4N0M0UWxiaDVLZGZ0aWJmcTBtLUZBQnVhb3JNZS04TVdUUmlQUTVnUDRmQQ?oc=5",
-   "editoria": "eleicoes",
+   "veiculos": 17,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-20T09:12:26Z",
+   "link": "https://www.telesurtv.net/nayib-bukele-formaliza-su-candidatura-para-buscar-un-tercer-mandato-consecutivo/",
+   "editoria": "america_latina",
    "nota": 5,
    "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ],
+   "lente": [],
    "ia": {
-    "editoria": "eleicoes",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "Acusação sem confirmação oficial detalhada",
-    "motivo": "Envolve financiamento ilegal de figura da extrema-direita.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Ibama embarga quase 2 mil hectares na Paraíba e aplica R$ 3,64 milhões em multas após identificar desmatamento e queimadas ilegais",
-   "secoes": [
-    "C-pesquisa"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-21T07:44:05Z",
-   "link": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxQN0hIZWhDVmIxWXFIVERLWERlS3VtZDJjZWpQY1NmSzlRb09TMzh5N3VyamJhNWhjTVlGT2dMYnV0WFgtOHIwbzN6MlJIYzJuWHJjS1FUUFBQTUN3Q0l3MmYzYjhXYVJIdkxWRVVlU2swT2Vkd3JUaHdaV1dXMllyUWRPRGNQRmxaQXl4RG5PY2tzSGNFODJfYnQ5QVAxeHhWVDJ5S1ZTejZlZUdKRHJpTlFaTWRVTEhCNjJJbmF3Zm5SYW9WWERIdEtRZk9pc3dGZm40aFY2SWwwMFR2Smg4N25McVE2LVVsRHBYLVdhY1Z1RG5JSDVldlNSYlhiRFA3SHkxaFk0NHVUbVk?oc=5",
-   "editoria": "gerais",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "desmatamento",
-    "queimada"
-   ],
-   "ia": {
-    "editoria": "gerais",
+    "editoria": "america_latina",
     "I": 2,
     "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Ibama aplica multas pesadas por desmatamento e queimadas ilegais.",
+    "motivo": "Bukele formaliza candidatura para novo mandato em El Salvador.",
     "soma": 4
    }
   },
@@ -321,8 +213,8 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 78,
-   "veiculos_3h": 3,
+   "veiculos": 87,
+   "veiculos_3h": 12,
    "na_pauta_desde": "2026-11-20T22:09:16Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/20/bolsonaro-hospital-apos-sentir-dores-abdominais.ghtml",
    "editoria": "saude",
@@ -342,68 +234,357 @@
     "motivo": "Internação de Bolsonaro gera grande repercussão midiática.",
     "soma": 4
    }
+  },
+  {
+   "manchete": "Estelionato eleitoral? Lula responde críticas da esquerda radical sobre ajuste fiscal",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-21T16:51:33Z",
+   "link": "https://revistaforum.com.br/politica/estelionato-eleitoral-lula/",
+   "editoria": "eleicoes",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Lula vem a UFF no próximo dia 27 para agradecer apoio de estudantes",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 6,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-21T16:51:33Z",
+   "link": "https://www.poder360.com.br/poder-governo/lula-diz-que-vai-a-niteroi-agradecer-estudantes-da-uff-na-6a-feira/",
+   "editoria": "educacao",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Parlamento francês aprova projeto de lei para reforçar proteção de policiais que disparam armas",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-20T22:09:16Z",
+   "link": "https://www.rfi.fr/br/fran%C3%A7a/20261121-parlamento-da-fran%C3%A7a-aprova-pol%C3%AAmico-projeto-de-lei-sobre-leg%C3%ADtima-de-defesa-de-policiais",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "SATA reativa plano de contingência devido a greve no ‘handling’",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-21T16:51:33Z",
+   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOcXRZYzdLejVSMzUxV0V0UUdaS0h5TjBMVkR2TXE4R0s5c2NmVzIyd1VPUTV0SGpvVHNkUmNFVnU3M2lXZjhFdGlSc0VRcWxBMS1ucFo1NkRfY1lJUkVwTUsyY1N0NTlNVzJJd0lwOEE4QVd3RDZCQ0loTGJPcFZVdkdtM21jSTJxRXlaUTNFSk1OazVwbWlvbmxB?oc=5",
+   "editoria": "economia",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "greve"
+   ]
+  },
+  {
+   "manchete": "Fórum Internacional da América Latina anuncia programação no Panamá em janeiro",
+   "secoes": [
+    "B",
+    "C-internacional",
+    "D-america_latina"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-21T16:51:33Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/folha-social-mais/2026/11/forum-internacional-da-america-latina-anuncia-programacao-no-panama-em-janeiro.shtml",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Aluno de programa de inclusão de Volta Redonda vence prêmio do Mercosul",
+   "secoes": [
+    "B",
+    "C-pesquisa",
+    "D-america_latina"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-21T16:51:33Z",
+   "link": "https://g1.globo.com/rj/sul-do-rio-costa-verde/noticia/2026/11/21/aluno-de-programa-de-inclusao-de-volta-redonda-vence-premio-do-mercosul.ghtml",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Exército do México prende Chapo Isidro, um dos mais procurados pelo FBI",
+   "secoes": [
+    "C-nacional",
+    "D-america_latina"
+   ],
+   "veiculos": 9,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-21T16:51:33Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/exercito-do-mexico-captura-um-dos-principais-traficantes-do-pais-diz-governo.shtml",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Vikings against 49ers in Mexico City Week 11 Game Preview",
+   "secoes": [
+    "D-america_latina"
+   ],
+   "veiculos": 9,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-20T10:10:58Z",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNOTBEb283RFBLYlBHRDRuWnozRTE2SEtkWS1YUHVkQXdDLTlJTHRaSTZGcmZEVUQ3Qzl3cmxUYnhtTG5OdnRJTlpJMHNpWFR3WUFmOXNDRmRZZWltV09UbzRERW00eGc5U09UbDJnN2prNVp1UENKVnFBOTFzWmJvaERFZE9VVVo0LXNReWZR?oc=5",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Clima hoy en Búzios, Brasil: el pronóstico del tiempo para este sábado 21 noviembre de 2026",
+   "secoes": [
+    "D-america_latina"
+   ],
+   "veiculos": 6,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-21T08:22:12Z",
+   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQWGcyd3FQY0tUVUZ4RlRIR1Q3eG02bXJCODdTOFIyWU5maWtIaEMtYktvRW1IazVsTjFKX0Q5b09tVVRzZ0dEX3d6UXQzaU5Iazc1eUNOWmtNZVVMQ09hTjJ2ZkdBODlRUmhVNm9jX0xDMC0xOVFJa01mSi00QjEyZndRamg3QkZjY2xGdmJ6YldIMGsxY3Y2S1doRkhfbTh4ZmRWUUtEVjhqbkRBUVV6RFRlZ3NhOGV5Qldpbmg1SkZYWmpCeEHSAcsBQVVfeXFMTVRWajdhdlh4QXVPN04weHFRQUtBbnlJT05IV2I4ZXNXdXoxd0lleHVGSHhZS1BuLTllWnc5YVdNelN5QmNpa2QwQjdhWFdjNmpxQWlMb2NWS0pibndqTFZjdFhMQ3RINy05Ulg5UlN4N1dsLUZETkZqM3FQX3U4WWhoUTA3TVk3SmI3bW1PTy1xXzZ2M1pvWnB5TWVBeHNONHpaSFVJOWQ3RnlsN3RKM3BWcFlfcXdMMnlUREZkTHdlUnBzMTlMeFFIYjQ?oc=5",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Tremor de terra é sentido no Acre e assusta moradores de Rio Branco e Cruzeiro do Sul",
+   "secoes": [
+    "D-america_latina"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-21T07:44:05Z",
+   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNeklfWktjaW10eXhKbHo4WVFNdEZjY0JQLVFFMzhDbGUtTFJneExKN2dxcHJhclNSbGQ1aEc5bENFUVV2cjZFVUZpREFQZ3RIQk5UdVBGaVZpcDlpMEl1RXRDb3NYUUNZSjV2aEVBSTZVRThNVkZzV3BrRkRYMU55cl9CbFRXVTFMM2c5bEVaUkliRFZlTHFNdmRRRjZPTEdqYkdCRUlKbF9KeEnSAboBQVVfeXFMTUZ3UlBXLVFJalJGRHVWemVaYi1RUTJIb2YzSkZUTFAzTXp5b3lPcGhUREJjazUxaWM3aU4xVzVHOVlBOHI2cFloNmdTa0FrMmlRNks4VURmSi1MZXkxOHVvWFpkemVPakE3YWZVY21MWllCZmFfT0RTSEhRbmdrZEpKZGF4Mm9LTXFuMzdqUDZ3MVBVblk4QWZ3MU5aZ3VtTF8xWC1UYWdOaFJ2U29EZ00zQlZka1pma3ZR?oc=5",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Acampamento 8 de Março recebe curso de gestão administrativa e financeira camponesa e campanha “MST Contra as Violências”",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-21T16:51:33Z",
+   "link": "https://mst.org.br/2026/11/21/acampamento-8-de-marco-recebe-curso-de-gestao-administrativa-e-financeira-camponesa-e-campanha-mst-contra-as-violencias/",
+   "editoria": "roca",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "mst"
+   ]
+  },
+  {
+   "manchete": "Moraes e outros ministros do STF precisam ser investigados, diz O Globo",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-21T16:51:33Z",
+   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPQS1MQnpnQ1MzdjVTQlVTNWw3bGM5SFRSNVYxOWtxb211S0VBWC1pZFNya3JzOVh4ZHl5V016MnlPZG9kYy00b0ZYSFJqVE5oT1Q4Mi0xcFRpMDJHLW1CZjZXbFJnanY4UDlURkxkb3c5bk43bXlXUHRsY3VydW5QUG5ScVFQa014bm5HN1ZwM3dOLVJTUXFjNGVSV2JVU2txbFRYTHhuajE?oc=5",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "investigad"
+   ]
   }
  ],
  "rebaixados": [
   {
-   "manchete": "Projeto minerário ameaça alterar território quilombola e será debatido em Mato Grosso",
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-21T07:44:05Z",
+   "manchete": "Scientists report strong new evidence that specially bred mosquitoes can fend off dengue",
+   "veiculos": 5,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-21T16:51:33Z",
    "esquentou": false,
    "ia": {
-    "editoria": "roca",
-    "I": 2,
-    "V": 1,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Ataque a território tradicional e direitos de quilombolas.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "STF libera auxílio a atingidos por tragédia em Brumadinho",
-   "veiculos": 2,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-21T07:44:05Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "gerais",
+    "editoria": "saude",
     "I": 2,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Reparação financeira tardia para vítimas de tragédia corporativa.",
+    "motivo": "Avanço científico no combate à dengue.",
     "soma": 3
    }
   },
   {
-   "manchete": "Pará tem 66 cidades em emergência devido a incêndios e estiagem em meio ao El Niño",
+   "manchete": "União Europeia propõe taxar big techs para financiar orçamento até 2034",
+   "veiculos": 9,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-21T16:51:33Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Proposta de taxar big techs na União Europeia.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Santa Catarina fecha terceiro trimestre de 2026 com menor taxa de desemprego do país",
+   "veiculos": 8,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-20T20:09:30Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Dados de emprego em Santa Catarina.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Corte argentina barra decreto de Milei sobre aumento de planos de saúde privados",
+   "veiculos": 3,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-21T16:51:33Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Justiça argentina barra decreto de Milei sobre saúde privada.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Operação Cédula Paralela apura suspeitas de corrupção eleitoral e lavagem de dinheiro",
    "veiculos": 3,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-21T07:44:05Z",
+   "na_pauta_desde": "2026-11-21T16:51:33Z",
    "esquentou": false,
    "ia": {
-    "editoria": "gerais",
+    "editoria": "eleicoes",
     "I": 2,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Crise climática afeta municípios e populações vulneráveis.",
+    "motivo": "Operação sobre corrupção eleitoral.",
     "soma": 3
    }
   },
   {
-   "manchete": "Ex-procurador-geral do Paraguai denuncia perseguição política à ONU",
-   "veiculos": 9,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-21T07:44:05Z",
+   "manchete": "Moraes autoriza visitas diárias de filhos de Bolsonaro no hospital",
+   "veiculos": 32,
+   "veiculos_3h": 26,
+   "na_pauta_desde": "2026-11-21T16:51:33Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "gerais",
+    "I": 1,
+    "V": 2,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Bastidores da família Bolsonaro no hospital.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Vestibular Unesp 2027 aplica neste domingo (22) a prova da primeira fase",
+   "veiculos": 22,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-21T00:17:58Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "educacao",
+    "I": 2,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Vestibular de grande porte mobiliza estudantes.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Pedágio da Estrada do Feijão terá reajuste de 4,64%; tarifa para carros sobe para R$ 23,20",
+   "veiculos": 7,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-21T16:51:33Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Aumento de pedágio que afeta custo de vida.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Lula visitará UFF em reconhecimento aos estudantes que impulsionaram virada eleitoral",
+   "veiculos": 7,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-20T18:02:18Z",
+   "esquentou": true,
+   "ia": {
+    "editoria": "educacao",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Visita de Lula a universidade pública.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Brasil vota contra proposta apoiada pelos EUA na OEA para discutir combate ao narcotráfico",
+   "veiculos": 5,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-21T16:51:33Z",
    "esquentou": false,
    "ia": {
     "editoria": "america_latina",
@@ -413,125 +594,17 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Denúncia de perseguição política no Paraguai.",
+    "motivo": "Posicionamento do Brasil na OEA contra proposta dos EUA.",
     "soma": 2
-   }
-  },
-  {
-   "manchete": "'Qualquer um que tenha tido contato com Vorcaro deve ser preso?', pergunta leitor",
-   "veiculos": 2,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-21T07:44:05Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "politica",
-    "I": 1,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Seção de cartas ou opinião de leitores.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Fim da escala 6x1: veja o que muda nas folgas, horas extras e jornadas após decreto de Lula",
-   "veiculos": 2,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-20T10:10:58Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "gerais",
-    "I": 3,
-    "V": 3,
-    "P": 2,
-    "formato": "reels",
-    "repetido": true,
-    "risco": "",
-    "motivo": "Tema já coberto recentemente sobre desdobramentos da jornada de trabalho.",
-    "soma": 6
-   }
-  },
-  {
-   "manchete": "Unesp aplica 1ª fase do vestibular 2027 neste domingo; veja orientações",
-   "veiculos": 17,
-   "veiculos_3h": 8,
-   "na_pauta_desde": "2026-11-21T00:17:58Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "fora",
-    "I": 1,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Vestibular é serviço, mas sem apelo político direto.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Incêndio atinge prédio no Sacomã, em SP, e bombeiros resgatam vítimas pela sacada",
-   "veiculos": 2,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-21T07:44:05Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "fora",
-    "I": 1,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "Tragédia com vítimas",
-    "motivo": "Incêndio urbano local sem repercussão estrutural.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Terremoto de magnitude 6,7 no Peru é sentido em Cruzeiro do Sul e em outras cidades do Vale do Juruá",
-   "veiculos": 16,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-21T00:51:58Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "fora",
-    "I": 0,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Terremoto no exterior sem vítimas ou grande impacto direto no Brasil.",
-    "soma": 1
-   }
-  },
-  {
-   "manchete": "Mexico Corona Capital",
-   "veiculos": 3,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-21T07:44:05Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "fora",
-    "I": 0,
-    "V": 0,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Festival de música internacional sem relevância política para a classe trabalhadora.",
-    "soma": 0
    }
   }
  ],
  "obrigatorios": [],
  "descartados_mais_quentes": [
   {
-   "manchete": "Moraes vota para deixar Flávio Bolsonaro sem passaportes e proibido de contatar Willer Tomaz",
-   "veiculos": 64,
-   "veiculos_3h": 2,
+   "manchete": "Moraes vota para manter passaportes cancelados e restrições a Flávio Bolsonaro",
+   "veiculos": 69,
+   "veiculos_3h": 5,
    "motivo": "sem editoria"
   },
   {
@@ -541,52 +614,52 @@
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Vídeos mostram destruição após tempestade que deixou ao menos três mortos em cidade no RS",
-   "veiculos": 29,
-   "veiculos_3h": 3,
-   "motivo": "fora: crime ou tragedia (mortos)"
+   "manchete": "PF não encontra registros de conversas diretas entre Mendonça e Vorcaro",
+   "veiculos": 25,
+   "veiculos_3h": 2,
+   "motivo": "repetido (20261120-1315-pf-mendonca-sem-contato)"
   },
   {
-   "manchete": "Zanin interrompe julgamento de Van Hattem e leva caso à sessão presencial",
-   "veiculos": 22,
-   "veiculos_3h": 0,
+   "manchete": "F1: Antonelli e mais quatro pilotos perdem posições no grid do GP de Las Vegas por trocas de motor",
+   "veiculos": 14,
+   "veiculos_3h": 3,
+   "motivo": "fora: esporte (f1)"
+  },
+  {
+   "manchete": "Hackers invadem sistema do Departamento de Agricultura dos EUA, diz mídia",
+   "veiculos": 12,
+   "veiculos_3h": 4,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Lula revela articulação com Trump, Xi Jinping e Putin para discutir a paz e buscar saída para a guerra na Ucrânia",
+   "veiculos": 11,
+   "veiculos_3h": 11,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Morre Gabriel Félix, influenciador e noivo de Isabelle Abreu",
-   "veiculos": 22,
-   "veiculos_3h": 0,
-   "motivo": "fora: crime ou tragedia (morre)"
+   "manchete": "PGR tem de pedir investigação de ministros do STF",
+   "veiculos": 10,
+   "veiculos_3h": 4,
+   "motivo": "repetido (20261120-0715-fachin-pgr-quatro-ministros)"
   },
   {
-   "manchete": "Fachin, Marina Silva e Erika Hilton reforçam apelo a Lula pela primeira ministra negra do STF",
-   "veiculos": 22,
-   "veiculos_3h": 0,
-   "motivo": "repetido (20261118-1615-marina-ministra-negra)"
+   "manchete": "Janones reage à perda de seguidores do ‘Exército do Lula’ e promete recuperação",
+   "veiculos": 9,
+   "veiculos_3h": 3,
+   "motivo": "sem editoria"
   },
   {
-   "manchete": "Trump diz que não permitirá a empresas construir data centers fora dos EUA",
-   "veiculos": 19,
-   "veiculos_3h": 0,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
+   "manchete": "Lula presta solidariedade à cidade gaúcha devastada por tempestade",
+   "veiculos": 8,
+   "veiculos_3h": 5,
+   "motivo": "sem editoria"
   },
   {
-   "manchete": "União Europeia e Reino Unido buscam fechar acordos de comércio pós-Brexit",
-   "veiculos": 18,
-   "veiculos_3h": 0,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Morre Lance Broadway, ator de série da Marvel, aos 43 anos",
-   "veiculos": 12,
-   "veiculos_3h": 0,
-   "motivo": "fora: entretenimento (serie)"
-  },
-  {
-   "manchete": "Isabelle Abreu homenageia Gabriel Félix após morte: 'Eu quero você de volta'",
-   "veiculos": 7,
-   "veiculos_3h": 1,
-   "motivo": "fora: crime ou tragedia (morte)"
+   "manchete": "Flamengo visita o Palmeiras para ser decacampeão do Brasileirão. Saiba onde assistir o jogo deste sábado",
+   "veiculos": 8,
+   "veiculos_3h": 4,
+   "motivo": "fora: esporte (flamengo)"
   }
  ]
 }
