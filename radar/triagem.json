@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-21T16:57:53Z",
- "pauta_quando": "2026-11-21T16:57:53Z",
+ "quando": "2026-11-21T22:14:10Z",
+ "pauta_quando": "2026-11-21T22:14:08Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,137 +9,194 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash",
-  "avaliados_agora": 8,
-  "falhas_antes": "gemini-3.5-flash: ReadTimeout",
-  "pedidos_hoje": 11
+  "avaliados_agora": 23,
+  "falhas_antes": "gemini-3.8-flash: ReadTimeout",
+  "pedidos_hoje": 14
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 126,
- "novos_3h": 15,
+ "total_assuntos": 156,
+ "novos_3h": 13,
  "esquentaram": 2,
  "candidatos": [
   {
    "manchete": "Lula diz que projeto aprovado no Senado não é 'reforma fiscal', mas ajuste para Orçamento de 2027, e critica Faria Lima",
    "secoes": [
-    "B",
-    "C-nacional"
+    "B"
    ],
-   "veiculos": 25,
-   "veiculos_3h": 25,
+   "veiculos": 55,
+   "veiculos_3h": 8,
    "na_pauta_desde": "2026-11-21T16:51:33Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/21/lula-diz-que-projeto-aprovado-no-senado-nao-e-reforma-fiscal-mas-ajuste-para-orcamento-de-2027-e-critica-faria-lima.ghtml",
    "editoria": "politica",
    "nota": 6,
-   "esquentou": false,
+   "esquentou": true,
    "lente": [
     "orcamento"
    ],
    "ia": {
-    "editoria": "politica",
+    "editoria": "economia",
     "I": 3,
     "V": 3,
     "P": 2,
     "formato": "reels",
     "repetido": false,
     "risco": "",
-    "motivo": "Ataque direto à Faria Lima e debate sobre ajuste fiscal.",
+    "motivo": "Fala de Lula criticando a Faria Lima e o ajuste fiscal gera forte engajamento.",
     "soma": 6
    }
   },
   {
-   "manchete": "O pacote fiscal do governo Lula ajuda a estabilizar as contas públicas? NÃO",
+   "manchete": "Lula defende pacote fiscal: sistema financeiro não me ensinará a dirigir o País",
    "secoes": [
     "B"
    ],
-   "veiculos": 6,
-   "veiculos_3h": 5,
+   "veiculos": 15,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-21T07:44:05Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/opiniao/2026/11/o-pacote-fiscal-do-governo-lula-ajuda-a-estabilizar-as-contas-publicas-nao.shtml",
+   "link": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/o-sistema-financeiro-nao-vai-me-ensinar-dirigir-o-brasil-diz-lula",
    "editoria": "economia",
    "nota": 4,
-   "esquentou": true,
+   "esquentou": false,
    "lente": [],
    "ia": {
     "editoria": "economia",
     "I": 3,
-    "V": 2,
+    "V": 3,
     "P": 2,
-    "formato": "feed",
+    "formato": "reels",
     "repetido": false,
     "risco": "",
-    "motivo": "Opinião sobre eficácia do pacote fiscal do governo.",
-    "soma": 5
+    "motivo": "Declaração contundente de Lula sobre o pacote fiscal e o mercado financeiro.",
+    "soma": 6
    }
   },
   {
-   "manchete": "Lula garante que idade da aposentadoria não aumentará no próximo mandato",
+   "manchete": "Lula nega aumento da idade mínima para aposentadoria em seu quarto mandato",
    "secoes": [
-    "B",
-    "C-nacional"
+    "B"
    ],
-   "veiculos": 5,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-21T16:51:33Z",
-   "link": "https://www.metropoles.com/brasil/lula-afirma-que-nao-havera-mudanca-nas-regras-de-aposentadoria-por-idade",
+   "veiculos": 6,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPbzJDTlAtdU5jSGc2VVBYOFZHNlJBY2FNbFQtZUVLdVhYd2FvNWhnSkptTXdXMUJmVUhQS3FRcWdQaHlmbl9Jdm10d3dqeExFd3Jza2x4eXUzdnJCc3BpQk5TMnNhMjlOQkRfTHJiMWFXRmVtRGVRdzdib1ZVUkxmUF9JMC1FTXZrNGRTQ2I3aEx0VF9JMWFQZnZkXzd5YnhTS0JHQ2Zwb3JGalB1?oc=5",
    "editoria": "economia",
    "nota": 5,
    "esquentou": false,
    "lente": [
     "aposentad"
    ],
+   "outras_manchetes": 1,
    "ia": {
     "editoria": "economia",
     "I": 3,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
     "repetido": false,
     "risco": "",
-    "motivo": "Garantia sobre idade da aposentadoria afeta diretamente trabalhador.",
+    "motivo": "Declaração de Lula garantindo manter a idade mínima da aposentadoria impacta o trabalhador.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Equipe econômica vai levar a Lula nomes para substituir presidente do Banco do Brasil",
+   "secoes": [
+    "A",
+    "A"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-21T07:44:05Z",
+   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://c-level.folha.uol.com.br/financas/2026/11/equipe-economica-vai-levar-a-lula-nomes-para-substituir-presidente-do-banco-do-brasil.shtml",
+   "editoria": "politica",
+   "nota": 8,
+   "esquentou": false,
+   "lente": [
+    "direito",
+    "pl",
+    "banco"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 3,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Indicação polêmica de deputado da extrema-direita armamentista para comissão dos direitos da mulher.",
     "soma": 5
    }
   },
   {
-   "manchete": "A pedido de Mendonça, Fachin retira sigilo de relatório da PF sobre o ministro e Vorcaro",
+   "manchete": "José Antonio Kast tem início de governo pedregoso no Chile",
    "secoes": [
-    "B"
+    "B",
+    "C-internacional",
+    "D-america_latina"
    ],
-   "veiculos": 28,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-20T16:08:56Z",
-   "link": "https://www.gazetadopovo.com.br/republica/fachin-retira-sigilo-de-relatorio-da-pf-sobre-vorcaro-e-andre-mendonca/",
-   "editoria": "politica",
-   "nota": 6,
+   "veiculos": 4,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/colunas/sylvia-colombo/2026/11/jose-antonio-kast-tem-inicio-de-governo-pedregoso-no-chile.shtml",
+   "editoria": "america_latina",
+   "nota": 4,
    "esquentou": false,
-   "lente": [
-    "vorcaro"
-   ],
+   "lente": [],
    "ia": {
-    "editoria": "politica",
+    "editoria": "america_latina",
     "I": 2,
     "V": 2,
     "P": 2,
     "formato": "feed",
     "repetido": false,
-    "risco": "Acusação envolvendo ministro do STF",
-    "motivo": "Retirada de sigilo traz novo elemento ao escândalo do caso Vorcaro no STF",
+    "risco": "",
+    "motivo": "Crise e instabilidade no início do governo da extrema-direita no Chile.",
     "soma": 4
    }
   },
   {
-   "manchete": "Gilmar não vê problema em abrir sigilo de relatório sobre STF e Master",
+   "manchete": "Em Paris, Haddad defende taxação de bilionários e alerta para oligarquias",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "link": "https://www.metropoles.com/sao-paulo/em-paris-haddad-defende-taxacao-de-bilionarios-e-alerta-para-oligarquias",
+   "editoria": "economia",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "bilionari",
+    "taxacao"
+   ],
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Defesa de Haddad sobre taxação de super-ricos no exterior, com baixa repercussão local.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Bolsonaro segue em UTI em estado estável, mas sem previsão de alta, informa hospital",
    "secoes": [
     "B"
    ],
-   "veiculos": 19,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-21T16:51:33Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/11/nao-vejo-problema-mas-nao-resolve-a-questao-diz-gilmar-sobre-abertura-de-sigilo-do-stf-no-caso-master.shtml",
-   "editoria": "politica",
-   "nota": 6,
+   "veiculos": 38,
+   "veiculos_3h": 14,
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/21/bolsonaro-tem-obstrucao-intestinal-quadro-estavel-e-segue-sem-previsao-de-alta-diz-boletim-medico.ghtml",
+   "editoria": "saude",
+   "nota": 5,
    "esquentou": false,
    "lente": [
-    "master"
+    "bolsonar"
    ],
    "ia": {
     "editoria": "politica",
@@ -149,22 +206,78 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Envolve STF e crise de sigilos, mas atrai interesse político.",
+    "motivo": "Atualização sobre estado de saúde e internação de Bolsonaro na UTI.",
     "soma": 4
    }
   },
   {
-   "manchete": "Força Nacional do SUS é enviada a Tupanciretã após temporal devastador; equipes vão atender feridos e avaliar hospital",
+   "manchete": "Brazil’s former president Jair Bolsonaro has been hospitalized again, son says",
    "secoes": [
     "B"
    ],
-   "veiculos": 16,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-20T14:09:49Z",
-   "link": "https://tvtnews.com.br/tempestade-tupancireta-lula-forca-nacional-sus/",
+   "veiculos": 22,
+   "veiculos_3h": 7,
+   "na_pauta_desde": "2026-11-20T22:09:16Z",
+   "link": "https://www.aljazeera.com/news/2026/11/21/brazils-jair-bolsonaro-in-intensive-care-with-bowel-obstruction?traffic_source=rss",
    "editoria": "saude",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "bolsonar"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Repercussão internacional da nova internação de Jair Bolsonaro.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Sobe para 3 o número de mortos após temporal que devastou Tupanciretã (RS); acampamento do MST também foi atingido",
+   "secoes": [
+    "B",
+    "D-terra"
+   ],
+   "veiculos": 13,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-21T08:22:12Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/temporais-afetam-quase-20-mil-pessoas-em-36-cidades-do-rio-grande-do-sul.shtml",
+   "editoria": "roca",
    "nota": 6,
    "esquentou": true,
+   "lente": [
+    "mst"
+   ],
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "tragédia com vítimas",
+    "motivo": "Temporal no RS com mortes atingiu acampamento do MST; exige cuidado por envolver vítimas.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Goiás é pioneiro na oferta de canetas emagrecedoras pelo SUS para adolescentes e jovens com obesidade",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQQnk5amxiem42VXpKX0lxdzdnNU56TWQ1eXZLSzhhRUxoRDFXZEFteW9CZGZhNWhsaFYyQm5pSXBWYXJjTHpuZUJoT0w5NFJfeUJEU3FIMUZpZXhvcGxxY3ZsdjZIYW01aEdUWHNjbWUzcmFsZzJOcWhMdUJ1ay05U0l6RVZvVWpNWDhqcjRfVjMxZFdIR1psRDVMU2VYanlldGYyR19oNHZSVld1bEF1YlJuWlF3ckZ3NkxKc0hmdFdCbkpRWjBRTGxnbUFUY2JmY2NQRFFSZnJQTGFi?oc=5",
+   "editoria": "saude",
+   "nota": 5,
+   "esquentou": false,
    "lente": [
     "sus"
    ],
@@ -176,246 +289,117 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Atuação da Força Nacional do SUS em tragédia climática.",
+    "motivo": "Inovação na oferta de medicamentos pelo SUS para tratamento de jovens.",
     "soma": 4
    }
   },
   {
-   "manchete": "Sobe para 3 o número de mortos após temporal que devastou Tupanciretã (RS); acampamento do MST também foi atingido",
+   "manchete": "Conab envia 6,45 toneladas de alimentos para famílias atingidas em Tupanciretã",
    "secoes": [
     "B",
+    "C-nacional",
     "D-terra"
    ],
-   "veiculos": 4,
+   "veiculos": 3,
    "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-21T16:57:53Z",
-   "link": "https://g1.globo.com/rs/rio-grande-do-sul/noticia/2026/11/21/tempestade-em-tupancireta-mortes-no-rs.ghtml",
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPU0plVkZOUl8xSEdVQ1VCb2FjSFVQNzZqMWdVT09xdEhYOTFxMHBmRTN2VVVGUGpfa3kwSlFHVGlmUGR2czhMbUFOVVJaMlBOOXZrLVRfSWJWampYLUlkaWt1SWpmT05HQVNpcnlOWkZ3cW50cHQ4eGdMUGxnTGFFTUdKRWQ3VEEzYkhPeGxPb1FxYnVRZXU4aHlrVVNLQ1RoYk9PWklodEp1RnpzbS13aWpQRlZuQTFvQldLdDhHUQ?oc=5",
    "editoria": "roca",
-   "nota": 5,
+   "nota": 4,
    "esquentou": false,
-   "lente": [
-    "mst"
-   ],
-   "ia": {
-    "editoria": "roca",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "Tragédia com vítimas fatais",
-    "motivo": "Temporal no RS deixa mortos e afeta acampamento do MST no campo",
-    "soma": 4
-   }
+   "lente": []
   },
   {
-   "manchete": "El Salvador: Bukele formalizó su candidatura para competir por su tercer mandato",
+   "manchete": "Brazil U17s kick off World Cup campaign against Ireland",
    "secoes": [
+    "B",
     "D-america_latina"
    ],
-   "veiculos": 17,
+   "veiculos": 8,
    "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-21T16:57:53Z",
-   "link": "https://www.telesurtv.net/nayib-bukele-formaliza-su-candidatura-para-buscar-un-tercer-mandato-consecutivo/",
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQSFY1M0NBb1FxVzhTUmhGNl91QnhKMG1MR0ZfdEpETF9FZnpvanFvUFNzWmtLMmxDN3ZwanlBa0t1cG1lREU4dVBKbEhKTUZ2YWlCWmtBQjJJQnlMZlN5WFd3aEQ1Tk85VWROXzhyOWwwdzV3UndTYWNsRFBBTmJmUA?oc=5",
    "editoria": "america_latina",
-   "nota": 5,
+   "nota": 4,
    "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Bukele formaliza candidatura para novo mandato em El Salvador.",
-    "soma": 4
-   }
+   "lente": []
   },
   {
-   "manchete": "Bolsonaro é levado a hospital em Brasília após sentir dores abdominais",
+   "manchete": "STF aprova retomada do novo auxílio emergencial para pessoas atingidas por tragédia em Brumadinho",
    "secoes": [
     "B"
    ],
-   "veiculos": 73,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-20T22:09:16Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/20/bolsonaro-hospital-apos-sentir-dores-abdominais.ghtml",
-   "editoria": "saude",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "bolsonar"
-   ],
-   "ia": {
-    "editoria": "gerais",
-    "I": 1,
-    "V": 3,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "Acompanhar estado de saúde sem sensacionalismo",
-    "motivo": "Internação de Bolsonaro gera grande repercussão midiática.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Estelionato eleitoral? Lula responde críticas da esquerda radical sobre ajuste fiscal",
-   "secoes": [
-    "B",
-    "C-nacional"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-21T16:51:33Z",
-   "link": "https://revistaforum.com.br/politica/estelionato-eleitoral-lula/",
-   "editoria": "eleicoes",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "SATA reativa plano de contingência devido a greve no ‘handling’",
-   "secoes": [
-    "B",
-    "C-nacional"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-21T16:51:33Z",
-   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOcXRZYzdLejVSMzUxV0V0UUdaS0h5TjBMVkR2TXE4R0s5c2NmVzIyd1VPUTV0SGpvVHNkUmNFVnU3M2lXZjhFdGlSc0VRcWxBMS1ucFo1NkRfY1lJUkVwTUsyY1N0NTlNVzJJd0lwOEE4QVd3RDZCQ0loTGJPcFZVdkdtM21jSTJxRXlaUTNFSk1OazVwbWlvbmxB?oc=5",
-   "editoria": "economia",
+   "veiculos": 8,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQZVR1NkJvUkh3OXVUNk5NQllrZ2NjN2tUeGQ4SnhESWZtaVhTYXNBOEJ0WkladEJieUlMeHBDNmcwMDZsODU0Tk1aaUpkYmx3dG1Sc1AyZlJ0SXNJajNiRGhyVkVVWmFKVFZxUXR1N0l2bFpPQXNZcEpzbGpLRUhDZjNBY05Fd1AtNW1BSV9PQmZZUWdYdVBWZHoxcU5NRVEtV2hLSVBZSzc1d2FFQzdBREVzLTFkOGM4eHhIVEx3TmVhYmpWT3ZGM2ZDYzZ4VWFhUXNKUExJVQ?oc=5",
+   "editoria": "politica",
    "nota": 4,
    "esquentou": false,
    "lente": [
-    "greve"
+    "auxilio"
    ]
   },
   {
-   "manchete": "Fórum Internacional da América Latina anuncia programação no Panamá em janeiro",
-   "secoes": [
-    "B",
-    "C-internacional",
-    "D-america_latina"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-21T16:51:33Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/folha-social-mais/2026/11/forum-internacional-da-america-latina-anuncia-programacao-no-panama-em-janeiro.shtml",
-   "editoria": "america_latina",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Aluno de programa de inclusão de Volta Redonda vence prêmio do Mercosul",
-   "secoes": [
-    "B",
-    "C-pesquisa",
-    "D-america_latina"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-21T16:51:33Z",
-   "link": "https://g1.globo.com/rj/sul-do-rio-costa-verde/noticia/2026/11/21/aluno-de-programa-de-inclusao-de-volta-redonda-vence-premio-do-mercosul.ghtml",
-   "editoria": "america_latina",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Vikings against 49ers in Mexico City Week 11 Game Preview",
+   "manchete": "Ponte sobre Rio Paraguai terá nova interdição na próxima semana",
    "secoes": [
     "D-america_latina"
    ],
-   "veiculos": 9,
+   "veiculos": 5,
    "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-21T16:57:53Z",
-   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNOTBEb283RFBLYlBHRDRuWnozRTE2SEtkWS1YUHVkQXdDLTlJTHRaSTZGcmZEVUQ3Qzl3cmxUYnhtTG5OdnRJTlpJMHNpWFR3WUFmOXNDRmRZZWltV09UbzRERW00eGc5U09UbDJnN2prNVp1UENKVnFBOTFzWmJvaERFZE9VVVo0LXNReWZR?oc=5",
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxONkFnSFg2cWprT3pMaWM4NEc4Sm5Yd21ZVnoxMTM4UmFvNmV1bGNucnRxUGhmVXlqZDdKQnZVRVdqVlllUTYxcVVtcEhUUUwtZHFsVGd3ZG9sTVlqQWlVUWRrNFgxZlI1NG5JamN1TEFJLXRWRi1KdnRoSnN4RnlSU0FBdC1YUDNhZlFUalVLX3pwaGdRbUM3Ty10Z3p1dndiZFpCbHhBLW9YU0dKcXlmS0I5ODlPM2gtSjRNRmJCRnR5X1cxUmN3YUNSUTRmSnVSa0VjOVRaVXVaeEo0YUFBSw?oc=5",
    "editoria": "america_latina",
    "nota": 4,
    "esquentou": false,
    "lente": []
   },
   {
-   "manchete": "Clima hoy en Búzios, Brasil: el pronóstico del tiempo para este sábado 21 noviembre de 2026",
-   "secoes": [
-    "D-america_latina"
-   ],
-   "veiculos": 7,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-21T08:22:12Z",
-   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQWGcyd3FQY0tUVUZ4RlRIR1Q3eG02bXJCODdTOFIyWU5maWtIaEMtYktvRW1IazVsTjFKX0Q5b09tVVRzZ0dEX3d6UXQzaU5Iazc1eUNOWmtNZVVMQ09hTjJ2ZkdBODlRUmhVNm9jX0xDMC0xOVFJa01mSi00QjEyZndRamg3QkZjY2xGdmJ6YldIMGsxY3Y2S1doRkhfbTh4ZmRWUUtEVjhqbkRBUVV6RFRlZ3NhOGV5Qldpbmg1SkZYWmpCeEHSAcsBQVVfeXFMTVRWajdhdlh4QXVPN04weHFRQUtBbnlJT05IV2I4ZXNXdXoxd0lleHVGSHhZS1BuLTllWnc5YVdNelN5QmNpa2QwQjdhWFdjNmpxQWlMb2NWS0pibndqTFZjdFhMQ3RINy05Ulg5UlN4N1dsLUZETkZqM3FQX3U4WWhoUTA3TVk3SmI3bW1PTy1xXzZ2M1pvWnB5TWVBeHNONHpaSFVJOWQ3RnlsN3RKM3BWcFlfcXdMMnlUREZkTHdlUnBzMTlMeFFIYjQ?oc=5",
-   "editoria": "america_latina",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Javier Milei, EN VIVO: habló en la presentación de Tesla Argentina en La Boca donde lo recibieron con un Cybertruck a medida",
-   "secoes": [
-    "C-internacional",
-    "D-america_latina"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-21T16:57:53Z",
-   "link": "https://elpais.com/argentina/2026-11-21/tesla-desembarca-en-argentina-con-elogios-cruzados-entre-milei-y-musk.html",
-   "editoria": "america_latina",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "milei"
-   ]
-  },
-  {
-   "manchete": "Acampamento 8 de Março recebe curso de gestão administrativa e financeira camponesa e campanha “MST Contra as Violências”",
+   "manchete": "Uneb abre 120 vagas em cursos de Agroecologia e Engenharia de Aquicultura; saiba como inscrever",
    "secoes": [
     "D-terra"
    ],
    "veiculos": 2,
    "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-21T16:51:33Z",
-   "link": "https://mst.org.br/2026/11/21/acampamento-8-de-marco-recebe-curso-de-gestao-administrativa-e-financeira-camponesa-e-campanha-mst-contra-as-violencias/",
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "link": "https://g1.globo.com/ba/feira-de-santana-regiao/noticia/2026/11/21/vagas-em-cursos-na-bahia.ghtml",
    "editoria": "roca",
    "nota": 4,
    "esquentou": false,
    "lente": [
-    "mst"
+    "vagas"
    ]
   },
   {
-   "manchete": "Cesta básica em Cuiabá ultrapassa, pela primeira vez, marca dos R$ 1 mil",
+   "manchete": "Saúde, agroecologia, favela: tecnologias sociais e histórias de vida das periferias urbanas do Rio de Janeiro",
    "secoes": [
     "D-terra"
    ],
-   "veiculos": 3,
+   "veiculos": 1,
    "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-21T16:51:33Z",
-   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOTXVsVjF5Q2xXNGNZWDZ1NG40S25EZFVrVmRyTjRUcHRLblhYajc0LWVHeHBIaGZCMWREanhQaVNkMUR3cWk1U09JUUJWY29HdlJCUlZHUVd3cElQNGtNc2hiVmFKdmttMXpTV2c0SlFIM1JxYVZDbU5uOXlFUk8xeUtwVFpWX05DcjdjekZlRnU2LUFJYjZvV3cxUQ?oc=5",
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBLZVhyaEJYMU5RaTVySm1SZ3o5RmdNMkhKRkRJRVhtMUV0OHNZMDJEd2EtMUI1ZDBIWExnMDBkTkxoTEJBTzRobDA1TzJ0M2hOQnRNS1FWWGFmT0ZGM1luSHNjM3Z1LTVXc1MySUhsX2FGemRu?oc=5",
    "editoria": "roca",
    "nota": 4,
    "esquentou": false,
    "lente": [
-    "cesta basica"
+    "favela",
+    "periferia"
    ]
   },
   {
-   "manchete": "Festa da Consciência Negra celebra cultura quilombola na Ilha da Marambaia",
+   "manchete": "Lula convoca \"Exército\" para nova live com Janones neste sábado",
    "secoes": [
-    "D-terra"
+    "A"
    ],
-   "veiculos": 2,
-   "veiculos_3h": 1,
+   "veiculos": 6,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-21T16:51:33Z",
-   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOdk9CRi1jTW9PazFUZGU3dW1XY1RBTDhrdHB2V1RYNHh3QTliNGFXQ1UxQmh6azV2Q2ZydEkyU1l3U01qOUxZel9sb0tTQVE0RkFQRWYyVllzOWxfcnQtYVJTMnAtcmRCTm5nd1V5UWgxVlJScWtobXBhS0lrSVVpbGlIQm5jUm9Ib3FmY2ZBQ0pWSWVyXzdSbHQwRHpaZzJYRDAwbg?oc=5",
-   "editoria": "roca",
+   "link": "https://tvtnews.com.br/live-exercito-do-lula-sabado-21-11-10-h/",
+   "editoria": "politica",
    "nota": 4,
    "esquentou": false,
-   "lente": [
-    "quilombola"
-   ]
+   "lente": []
   },
   {
    "manchete": "Pivetta altera nomes de quatro escolas estaduais para incluir identificação quilombola",
@@ -423,7 +407,7 @@
     "D-terra"
    ],
    "veiculos": 2,
-   "veiculos_3h": 1,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-21T16:51:33Z",
    "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPRzc4WHNvbDA0a2M0SGRpeGs2ZXBydlhocmZqM28yeEtzVkQzS2p2OThiLUJuaVNRSE5rY0hvOTU2d0tBdjdaMHU2YUtzeHdlT1pjX3g4V0xYR2tKajk4LTdNTHA3TnBEdnp1WWlWSVJQZ1c2RGotczdySHRObEdSLTd3bG16LVNwVnhpVEhvZzRBMlpkYmlzWnFwa2J2TlYtelk3MjQxYUhoUnFaOU5ScGJyLUJ6cGJLZnlmd0tUZkVoXzFEUGR6N0VfbDM?oc=5",
    "editoria": "roca",
@@ -432,250 +416,685 @@
    "lente": [
     "quilombola"
    ]
+  },
+  {
+   "manchete": "Animais são transferidos após incêndio atingir área do Bioparque da Amazônia no AP",
+   "secoes": [
+    "C-pesquisa"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "link": "https://g1.globo.com/ap/amapa/noticia/2026/11/21/animais-sao-transferidos-apos-incendio-atingir-area-do-bioparque-da-amazonia-no-amapa.ghtml",
+   "editoria": "gerais",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "incendio"
+   ]
+  },
+  {
+   "manchete": "El Niño, queimadas e estiagem ampliam risco à saúde no Pará",
+   "secoes": [
+    "C-pesquisa"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPc0pVd1YtNXZ2aHlQUGhENWNRcGdMVmd0RnkxQUJIM0xnRktvOVBEcF9Lek50U3FjSm81aEJLcEs5UHdDVXpibHl4TDBrSFZsTnRvWmFSQjVMS3hCbGVsMlBQMW1MRUx0eUlwRWgwaGJNcUxwWFdyRmp2X2o2OFQtSVhSb0YwNTJ1WGJqZWhOYVVXY2lDQW5JNldabmI3Sms?oc=5",
+   "editoria": "saude",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "queimada"
+   ]
   }
  ],
  "rebaixados": [
   {
-   "manchete": "Sistema prisional do Rio Grande do Sul tem mais de 11 mil apenados inscritos no Enem PPL 2026",
-   "veiculos": 7,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-21T08:22:12Z",
+   "manchete": "Cristiano Zanin interrompe julgamento de Marcel van Hattem no STF",
+   "veiculos": 6,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
    "esquentou": false,
    "ia": {
-    "editoria": "educacao",
-    "I": 2,
-    "V": 1,
+    "editoria": "politica",
+    "I": 1,
+    "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Expressiva participação de apenados no Enem PPL destaca direito à educação no cárcere",
+    "motivo": "Interrupção de julgamento no STF de deputado bolsonarista.",
     "soma": 3
    }
   },
   {
-   "manchete": "Santa Catarina fecha terceiro trimestre de 2026 com menor taxa de desemprego do país",
+   "manchete": "The Economist: Brasil lidera corrida da América Latina para virar polo global de data centers",
    "veiculos": 8,
    "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-20T20:09:30Z",
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
    "esquentou": false,
    "ia": {
     "editoria": "economia",
-    "I": 2,
+    "I": 1,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Dados de emprego em Santa Catarina.",
-    "soma": 3
+    "motivo": "Pauta focada em investimentos do mercado de tecnologia.",
+    "soma": 2
    }
   },
   {
-   "manchete": "União Europeia propõe taxar big techs para financiar orçamento até 2034",
-   "veiculos": 10,
+   "manchete": "Lula visitará estudantes que impulsionaram virada eleitoral",
+   "veiculos": 16,
    "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-21T16:51:33Z",
+   "na_pauta_desde": "2026-11-20T18:02:18Z",
    "esquentou": false,
    "ia": {
-    "editoria": "economia",
-    "I": 2,
+    "editoria": "politica",
+    "I": 1,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Proposta de taxar big techs na União Europeia.",
-    "soma": 3
+    "motivo": "Agenda de Lula com movimento estudantil.",
+    "soma": 2
    }
   },
   {
-   "manchete": "Corte argentina barra decreto de Milei sobre aumento de planos de saúde privados",
-   "veiculos": 3,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-21T16:51:33Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Justiça argentina barra decreto de Milei sobre saúde privada.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Moraes autoriza visitas diárias de filhos de Bolsonaro no hospital",
-   "veiculos": 32,
-   "veiculos_3h": 26,
+   "manchete": "Comunidade Quilombola de Recurso celebra o Dia da Consciência Negra com desfile",
+   "veiculos": 2,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-21T16:51:33Z",
    "esquentou": false,
    "ia": {
     "editoria": "gerais",
     "I": 1,
-    "V": 2,
-    "P": 0,
+    "V": 1,
+    "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Bastidores da família Bolsonaro no hospital.",
-    "soma": 3
+    "motivo": "Ação solidária de artista no Dia da Consciência Negra.",
+    "soma": 2
    }
   },
   {
-   "manchete": "Vestibular Unesp 2027 aplica neste domingo (22) a prova da primeira fase",
-   "veiculos": 23,
-   "veiculos_3h": 4,
+   "manchete": "Vestibular Unesp 2027: prova começa às 13h neste domingo",
+   "veiculos": 28,
+   "veiculos_3h": 6,
    "na_pauta_desde": "2026-11-21T00:17:58Z",
    "esquentou": false,
    "ia": {
     "editoria": "educacao",
-    "I": 2,
+    "I": 1,
     "V": 1,
     "P": 0,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Vestibular de grande porte mobiliza estudantes.",
-    "soma": 3
+    "motivo": "Aviso de serviço sobre horário de vestibular estadual.",
+    "soma": 2
    }
   },
   {
-   "manchete": "Pedágio da Estrada do Feijão terá reajuste de 4,64%; tarifa para carros sobe para R$ 23,20",
-   "veiculos": 7,
-   "veiculos_3h": 3,
+   "manchete": "Terremoto de magnitude 6,9 atinge o Peru, diz agência",
+   "veiculos": 46,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-21T00:51:58Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "fora",
+    "I": 0,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Terremoto no exterior sem vítimas ou impacto nacional.",
+    "soma": 1
+   }
+  },
+  {
+   "manchete": "Cartel kingpin on FBI’s most wanted list captured in dramatic Mexican military operation",
+   "veiculos": 50,
+   "veiculos_3h": 28,
    "na_pauta_desde": "2026-11-21T16:51:33Z",
    "esquentou": false,
    "ia": {
-    "editoria": "economia",
-    "I": 2,
-    "V": 1,
+    "editoria": "fora",
+    "I": 0,
+    "V": 0,
     "P": 0,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Aumento de pedágio que afeta custo de vida.",
-    "soma": 3
+    "motivo": "Prisão de narcotraficante internacional sem efeito direto no Brasil.",
+    "soma": 0
    }
   },
   {
-   "manchete": "Lula vem a UFF no próximo dia 27 para agradecer apoio de estudantes",
-   "veiculos": 8,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-20T18:02:18Z",
+   "manchete": "El ‘Chapo Isidro’, señor de la guerra en Sinaloa, uno de los objetivos más buscados por Estados Unidos",
+   "veiculos": 41,
+   "veiculos_3h": 8,
+   "na_pauta_desde": "2026-11-21T07:44:05Z",
    "esquentou": false,
    "ia": {
-    "editoria": "educacao",
-    "I": 1,
-    "V": 1,
-    "P": 1,
+    "editoria": "fora",
+    "I": 0,
+    "V": 0,
+    "P": 0,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Agenda institucional de Lula na UFF tem alcance pontual para pauta de lutas",
-    "soma": 2
+    "motivo": "Notícia sobre narcotráfico no México sem relação com o Brasil.",
+    "soma": 0
    }
   },
   {
-   "manchete": "Exército do México prende Chapo Isidro, um dos mais procurados pelo FBI",
-   "veiculos": 20,
-   "veiculos_3h": 9,
-   "na_pauta_desde": "2026-11-21T07:44:05Z",
-   "esquentou": true,
+   "manchete": "How to watch France v Argentina: Free live stream online from anywhere",
+   "veiculos": 9,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "esquentou": false,
    "ia": {
     "editoria": "fora",
-    "I": 1,
-    "V": 1,
-    "P": 1,
+    "I": 0,
+    "V": 0,
+    "P": 0,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Prisão de narcotraficante no México não tem relação direta com pauta dos trabalhadores",
-    "soma": 2
+    "motivo": "Transmissão esportiva sem relevância política.",
+    "soma": 0
    }
   },
   {
-   "manchete": "Parlamento francês aprova projeto de lei para reforçar proteção de policiais que disparam armas",
+   "manchete": "Cuatro soldados y siete criminales murieron en el operativo para detener a “El Chapo Isidro”",
    "veiculos": 5,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-20T22:09:16Z",
-   "esquentou": true,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "esquentou": false,
    "ia": {
     "editoria": "fora",
-    "I": 1,
-    "V": 1,
-    "P": 1,
+    "I": 0,
+    "V": 0,
+    "P": 0,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Projeto de lei na França é pauta de outro continente sem efeito direto no Brasil",
-    "soma": 2
+    "motivo": "Conflito policial no México fora da pauta editorial.",
+    "soma": 0
    }
   }
  ],
- "obrigatorios": [],
+ "obrigatorios": [
+  {
+   "manchete": "Cleitinho se emociona ao falar de Ana Elisa e presta apoio à deputada eleita do PT (vídeo)",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "link": "https://www.brasil247.com/sudeste/cleitinho-se-emociona-ao-falar-de-ana-elisa-e-presta-apoio-a-deputada-eleita-do-pt-video/",
+   "editoria": "politica",
+   "nota": 3,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-21T20:34:15Z",
+    "legenda": "O governador eleito de Minas Gerais, Cleitinho Azevedo (Republicanos), se emocionou durante participação no programa Sala de Imprensa, do SBT News, neste sábado",
+    "link": "https://www.instagram.com/reel/DgBGOiIh8MU/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Comunidade Quilombola de Recurso celebra o Dia da Consciência Negra com desfile",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-21T16:51:33Z",
+   "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNdXFwRUJxZmhZOGFQNFA1OFJKY2pESFhZbTA4bFd6R01lZ19Pd1lybTAxYWFCTVlVX3YtN2NLZWhEOFZ6VExETXl0OURTTkQxT1VvbDhhNkxpY3lfb3M4TF9hTE04WWtzX19ZT1pQUFRPQWlYOEhsVmNVeHhSbDgxcWw0ajk5OGF6MEl4emNmOVdGZ0dqMDQ3b2FhNm1jbWtiOG5haW55cVg0N3hCVFlObW5wMnZZeEJtRkJmT0pOWVIzamFXdDdSaWV4c0gwbXZIU0ZleTZ4bUJ5alF6ZjhrYXNJM0o4MHB2eW9wdFcxeUVhQkRubWVOSdIB-AFBVV95cUxNdXFwRUJxZmhZOGFQNFA1OFJKY2pESFhZbTA4bFd6R01lZ19Pd1lybTAxYWFCTVlVX3YtN2NLZWhEOFZ6VExETXl0OURTTkQxT1VvbDhhNkxpY3lfb3M4TF9hTE04WWtzX19ZT1pQUFRPQWlYOEhsVmNVeHhSbDgxcWw0ajk5OGF6MEl4emNmOVdGZ0dqMDQ3b2FhNm1jbWtiOG5haW55cVg0N3hCVFlObW5wMnZZeEJtRkJmT0pOWVIzamFXdDdSaWV4c0gwbXZIU0ZleTZ4bUJ5alF6ZjhrYXNJM0o4MHB2eW9wdFcxeUVhQkRubWVOSQ?oc=5",
+   "editoria": "roca",
+   "nota": 5,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-21T12:54:41Z",
+    "legenda": "O rapper Emicida - emicida transformou o Dia da Consciência Negra, celebrado nesta sexta-feira (20), em um momento de solidariedade em Porto Alegre (RS). Após u",
+    "link": "https://www.instagram.com/reel/DgARgY5BNFi/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-21T04:36:00Z",
+    "legenda": "Boa noite, Brasil, menos para você que acredita nos clones do Lula. 🔥",
+    "link": "https://www.instagram.com/reel/Df_Yll-g36a/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-21T16:17:39Z",
+    "legenda": "🔥💭",
+    "link": "https://www.instagram.com/p/DgAo_uXhS1K/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": null,
+   "nota": null,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-21T21:11:34Z",
+    "legenda": "A queniana Naum Jepchirchir - naumjepchirchir2 protagonizou uma história de superação na primeira edição da Maratona Internacional de Maringá - maratonamaringa.",
+    "link": "https://www.instagram.com/reel/DgBKa8hBiFf/"
+   },
+   "triagem": "fora: esporte (maratona)"
+  },
+  {
+   "manchete": "Funcionárias pintam rosto de preto para 'homenagear' colega negra no trabalho",
+   "secoes": [
+    "A",
+    "A",
+    "A"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQMV9oVi1XanVXVC1Fc1VNYWRCdV9MamoxVG52M2JyR2tlaUo0dDU4QUx0dlRLSWhyc0hWakt6aktBTXMtQk5GaWx2MXdGQ0VTZDh4RFV4b2NmRlJ4TDRDZ0JoOWdwUV91dkxGUHhjVjIyX0MzNWxZVVduSDZid2Y5S3VySzNFcEloSHE2VTlPb1I2TXNlV3RhUXJNSHFQUdIBpgFBVV95cUxQelhtSjVsU0Rrd1VvdzVLU3pIaGNUenFWV3FNWDhFTDk1ME1FVHdQeE5kckhuaXRLOXVqd1lUZzhSTnRxSU0wSkl4SUp6N1FSdG9Wb0dpNnJxcm93ZGtsc2ZXcnl0N3FCMWVOZXpyVkpJR1VpbFU0OTRMMW9PTkpETF9WQklZMThLMGl4Zm9NZS1yc0VPY3h2WUpUdUZ5VUNuSDBNcnBn?oc=5",
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-21T19:46:14Z",
+    "legenda": "Funcionárias de uma clínica de bronzeamento artificial em Leme, no interior de São Paulo, provocaram indignação nas redes sociais após pintarem os rostos de pre",
+    "link": "https://www.instagram.com/p/DgBA4PMpZIZ/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Lula convoca \"Exército\" para nova live com Janones neste sábado",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 6,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-21T16:51:33Z",
+   "link": "https://tvtnews.com.br/live-exercito-do-lula-sabado-21-11-10-h/",
+   "editoria": "politica",
+   "nota": 4,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-21T16:07:22Z",
+    "legenda": "O presidente Luiz Inácio Lula da Silva convocou os integrantes do chamado “Exército do Lula” para uma transmissão ao vivo neste sábado (21). Ao lado do deputado",
+    "link": "https://www.instagram.com/reel/DgAnumWh5hL/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Nota de solidariedade à população de Tupanciretã - Universidade Federal do Rio Grande",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPT0xnM0ZtNkZ6Z1ItVm9LSzdsV3FKOHdhRWt4Rk52bzRkZmszMU43enY4X2h1YW1YUGNkVnpiNVNXQjVLZV9OUkNOVXdpTWZpdjJrRGhnaExRcDh5ZmNVQ3d6SC1xWnlSYnd4XzdQTUdIZHBWWllmbVZvTUFaREdFOTdZeHpvV094dVlqTkk1RG5wTFNBVXhHY0Rna2VIdEdtYnRZ?oc=5",
+   "editoria": "politica",
+   "nota": 3,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-21T15:24:36Z",
+    "legenda": "A Justiça do Rio de Janeiro negou o pedido de tutela de urgência feito por Jojo Todynho para retirar do ar publicações da deputada federal eleita Ana Elisa (PT-",
+    "link": "https://www.instagram.com/p/DgAi7i4sDW_/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "luzmanifesto",
+    "quando": "2026-11-21T13:20:43Z",
+    "legenda": "Em Humaitá, no Amazonas, um fazendeiro foi apenas multado após derrubar e incendiar 44,39 hectares de floresta nativa, o equivalente a cerca de 62 campos de fut",
+    "link": "https://www.instagram.com/p/DgATd1kRNJF/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Evento celebra raízes africanas no Museu de Arte de Brasília",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOQmQzazRRZENkT3dPbmVQTFkxZUxfa09xc0FZcm11eWNYM0o1YWEtU0pMc0NXWk00MnB5bk9BZHFaYXR3aVZqX1Nsb3lqQTFUbUxPTVRuOWE0VWd2YnNyU2FuQjdJQmp3OTNfckxJWTd5ZXRBak5ZTWRValVRYUV5MmItMS1LTExhZW51ZGVFcU4zMWlod1NGeFhPdWtaSHlKTi1BVERpTVdJcXlGQk43Um1JTGczdklDM3J4MUh1ZVlkeVBlcjNweDNR0gHPAUFVX3lxTE9zR1pUdFZCUU9QdHZTNlZ2QUJYeUd6S0hWcG51TUFYTTVjX2NuTVhaUExmck15RzVDZHhlMEtRZUJLOVJBOEMzcFFyTVRnd0c2QXJFbEVhSFRmTHRPeUZ2cVRWWkt0OFRyd0FDUmpjdFpFdGQ2UGIzQlprZTEzT3BpS1hUdDZDWVdoQzBSSzE3RFE2Mnc1aWV1QzZNWUxHNDh4NV9VdkVINjcxakZZeVRhNzAzLURkZVlpQWFYaDQyd3JLWE5GdjR0VVIwU1Frbw?oc=5",
+   "editoria": "america_latina",
+   "nota": 2,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-21T17:44:48Z",
+    "legenda": "O Museu de Arte de Brasília (MAB) - museudeartedebrasilia inaugurou, no dia 17 de novembro, a exposição “Mamáfrica: Ancestralidades Africanas no Brasil e Cuba”.",
+    "link": "https://www.instagram.com/p/DgAy1olhvLM/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "luzmanifesto",
+    "quando": "2026-11-21T13:32:18Z",
+    "legenda": "Até 20/11 do ano que vem. Se manifeste. Luz Manifesto | luzmanifesto",
+    "link": "https://www.instagram.com/p/DgAV4TQRLy1/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "gases do efeito estufa - ICL Notícias",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE8tcnN3ZlJUaXh5dzByNjQ0N3gtSDQ1MFZIOVVuSGVlVlRFd0xjR19ybmFPVFkwX05zZ2c0VjVJNk1oalNrRmpBOHdWQ0ctellFLXkzRTFwVG0xcmtEZHhaNTFuSXNvNUJB?oc=5",
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-21T21:46:35Z",
+    "legenda": "O Brasil registrou queda de 27% nas emissões líquidas de gases de efeito estufa de 2022 a 2024, passando de 2,07 para 1,51 gigatoneladas de dióxido de carbono e",
+    "link": "https://www.instagram.com/p/DgBOld7s3Ou/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Talíria Petrone denuncia nova ameaça de morte com ataques racistas e violência sexual",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "link": "https://revistaforum.com.br/politica/taliria-petrone-nova-ameaca/",
+   "editoria": "politica",
+   "nota": 2,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-21T19:09:20Z",
+    "legenda": "A deputada federal Talíria Petrone (PSOL-RJ) denunciou uma nova ameaça de morte, acompanhada de ataques racistas, misoginia e descrições explícitas de violência",
+    "link": "https://www.instagram.com/p/DgA8BW3hZ7_/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Julgamento sobre Lei da Dosimetria no STF pode ser transferido para plenário presencial",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-21T22:14:08Z",
+   "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNOGJvcTJhSmVPSkdXeVpFRnhrc2hqZ2RGZFYwLWFyZGlOeURzZ3hXbnlTWHRKVFRnajA3RTVfdFBxeGp2SmwwbF9DSjViOHE0Qk15NGItY3JCNk1tMkk1WngyTlhWeHZ5TjdVTG56Z3JGQjhqWFMyLUo0UGZsekozZXduUmtCSm00aG1nd2JFMVl6VWpxSzhqU2NleURROWhPQWNoTVluczAtZmgtR2k4SXk0ZWJaQThhaFpqOC1KdWVPUWNHTVlicDZXLURqZGQ5RE56a09rVlduZEHSAeoBQVVfeXFMT05jczlIMGRRLTNYRG8tMjJ1emhQaGNGeHFOejZ6SGF6VVJfNC02VTZWOHBVa2p2MG5IaU5RWlg2QlhaZkp5MWh6SHFyYktQakl1OEZ6SGxzR0hIdkx4M2NpMmZtdlBOOGRCMnotLWE1YUpYSU9XRVBkZDZoNWVkRFZDVkhGYTJySkZIWUpqQmp1V2pWX3dpbWptdHBIbmNGMl9VNFpwLUE2cy1kOGpuNFRpZEJKaVlZVS1ZamZGZTRTVzQtTWtrN0hqd3c3elJ3akFuZ2lSTUV5a0lZWnVkdENtRW5uSFFwc3Rn?oc=5",
+   "editoria": "politica",
+   "nota": 3,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-21T04:10:43Z",
+    "legenda": "O ministro Alexandre de Moraes, do Supremo Tribunal Federal (STF), marcou para o dia 4 de dezembro o julgamento da Lei da Dosimetria, que altera o cálculo das p",
+    "link": "https://www.instagram.com/p/Df_VzyDgpNt/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Equipe econômica vai levar a Lula nomes para substituir presidente do Banco do Brasil",
+   "secoes": [
+    "A",
+    "A"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-21T07:44:05Z",
+   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://c-level.folha.uol.com.br/financas/2026/11/equipe-economica-vai-levar-a-lula-nomes-para-substituir-presidente-do-banco-do-brasil.shtml",
+   "editoria": "politica",
+   "nota": 8,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-21T03:44:35Z",
+    "legenda": "O Partido Liberal (PL) indicou o deputado federal Paulo Bilynskyj (PL-SP) para integrar, como titular, a Comissão de Defesa dos Direitos da Mulher da Câmara dos",
+    "link": "https://www.instagram.com/p/Df_SzE-MEaF/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-21T04:02:27Z",
+    "legenda": "Um cara sensacional! reinaldo.rei9 ✊🏿 #diadaconciêncianegra",
+    "link": "https://www.instagram.com/p/Df_U34MgA9F/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-21T17:41:31Z",
+    "legenda": "A CAIXA Cultural Fortaleza inaugurou, no dia 17 de novembro, a exposição “Visões Cotidianas do Brasil Moderno”, que reúne 45 obras de grandes nomes da arte bras",
+    "link": "https://www.instagram.com/p/DgAyhsChvjm/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Rio pode ter calorão e temporal neste sábado; veja a previsão para o fim de semana",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-21T00:17:58Z",
+   "link": "https://g1.globo.com/rj/rio-de-janeiro/noticia/2026/11/21/rio-calor-sabado.ghtml",
+   "editoria": "gerais",
+   "nota": 2,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-21T15:08:14Z",
+    "legenda": "Curitiba recebe neste sábado (21) três grandes nomes da música brasileira: Mart’nália, Karol Conká e Luedji Luna. As artistas prometem movimentar a cena cultura",
+    "link": "https://www.instagram.com/p/DgAg96XsExl/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-21T17:47:51Z",
+    "legenda": "São Paulo recebe, desde o dia 18 de novembro, a exposição “Tomie Ohtake – O sol daqui”, uma grande retrospectiva dedicada a uma das artistas mais importantes da",
+    "link": "https://www.instagram.com/p/DgAzOrmh024/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-21T17:11:07Z",
+    "legenda": "Belém (PA) ganhou duas importantes iniciativas voltadas ao desenvolvimento sustentável da Amazônia: o Distrito de Inovação e Bioeconomia de Belém (Diib) e o Píe",
+    "link": "https://www.instagram.com/p/DgAvHfnhmmy/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-21T13:28:11Z",
+    "legenda": "#BFCPERFIL estreia com um conteúdo sobre a mãe, jornalista e comunicadora leticiiacosta. Ela abriu o jogo sobre as barreiras que enfrentou, a fundação do Kilomb",
+    "link": "https://www.instagram.com/p/DgAVnUJJfEB/"
+   },
+   "triagem": "candidato"
+  }
+ ],
  "descartados_mais_quentes": [
   {
-   "manchete": "Moraes vota para manter passaportes cancelados e restrições a Flávio Bolsonaro",
-   "veiculos": 109,
-   "veiculos_3h": 18,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Trump cita Brasil ao dizer que pressionou Filipinas a comprar produtos agrícolas dos EUA",
-   "veiculos": 51,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Hackers invadem sistema do Departamento de Agricultura dos EUA, diz mídia",
-   "veiculos": 13,
-   "veiculos_3h": 4,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Lula revela articulação com Trump, Xi Jinping e Putin para discutir a paz e buscar saída para a guerra na Ucrânia",
-   "veiculos": 11,
+   "manchete": "Médico de Bolsonaro diz que exame mostrou obstrução 'quase total' do intestino e cirurgia será avaliada durante internação",
+   "veiculos": 50,
    "veiculos_3h": 11,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Influenciador Gabriel Félix morreu após passar mal enquanto jogava futebol",
-   "veiculos": 9,
-   "veiculos_3h": 4,
-   "motivo": "fora: esporte (futebol)"
-  },
-  {
-   "manchete": "Lula presta solidariedade à cidade gaúcha devastada por tempestade",
-   "veiculos": 8,
+   "manchete": "Defesa de Bolsonaro pede a Moraes autorização para visitas diárias de filhos durante internação",
+   "veiculos": 41,
    "veiculos_3h": 5,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Flamengo visita o Palmeiras para ser decacampeão do Brasileirão. Saiba onde assistir o jogo deste sábado",
-   "veiculos": 8,
+   "manchete": "Moraes vota para manter Flávio Bolsonaro proibido de deixar o Brasil",
+   "veiculos": 41,
+   "veiculos_3h": 2,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Trump diz ter exigido que Filipinas comprem produtos agrícolas dos EUA e cancelem negócios com Brasil",
+   "veiculos": 31,
+   "veiculos_3h": 2,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Bolsonaro é internado após sentir dores abdominais",
+   "veiculos": 25,
+   "veiculos_3h": 3,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Lula revela articulação com Trump, Xi Jinping e Putin para discutir a paz e buscar saída para a guerra na Ucrânia",
+   "veiculos": 20,
+   "veiculos_3h": 2,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Bolsonaro está internado na UTI com abdômen agudo obstrutivo",
+   "veiculos": 18,
    "veiculos_3h": 4,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Jovens europeus protestam contra custo de vida e aumento de gastos militares",
+   "veiculos": 16,
+   "veiculos_3h": 4,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Palmeiras x Flamengo: onde assistir ao vivo ao jogo do Brasileirão",
+   "veiculos": 15,
+   "veiculos_3h": 3,
    "motivo": "fora: esporte (flamengo)"
   },
   {
-   "manchete": "Agência marítima relata ataques contra dois petroleiros no Estreito de Ormuz",
-   "veiculos": 8,
-   "veiculos_3h": 1,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Tati Machado anuncia nascimento do filho, Rafael, e exibe rostinho; veja",
-   "veiculos": 7,
-   "veiculos_3h": 7,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Fim de semana terá calorão e risco de temporais no RS; veja a previsão",
-   "veiculos": 7,
-   "veiculos_3h": 3,
+   "manchete": "Duas turistas são resgatadas após ficarem ilhadas em cânion na Chapada Diamantina",
+   "veiculos": 14,
+   "veiculos_3h": 8,
    "motivo": "sem editoria"
   }
  ]
