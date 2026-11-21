@@ -126,9 +126,14 @@ class StoryAutomatico(unittest.TestCase):
 
     def test_desligado(self):
         p.CONFIG['story_automatico'] = False
-        self.executar()
+        with patch.object(p.requests, 'post') as ntfy, patch.dict(p.os.environ, {'NTFY_TOPIC': 't'}):
+            self.executar()
+            self.executar()
         self.assertEqual(len(self.envios), 1)
         self.assertNotIn('story', self.post['publicacao'])
+        self.assertTrue(self.post['publicacao']['story_manual']['avisado'])
+        self.assertEqual(ntfy.call_count, 1)
+        self.assertEqual(ntfy.call_args.kwargs['json']['click'], self.post['publicacao']['permalink'])
 
     def test_ativado_por_padrao(self):
         del p.CONFIG['story_automatico']
