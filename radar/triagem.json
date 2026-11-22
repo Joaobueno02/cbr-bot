@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-22T09:59:06Z",
- "pauta_quando": "2026-11-22T09:59:05Z",
+ "quando": "2026-11-22T10:20:39Z",
+ "pauta_quando": "2026-11-22T10:20:39Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,22 +9,22 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 22,
+  "avaliados_agora": 5,
   "falhas_antes": null,
-  "pedidos_hoje": 3
+  "pedidos_hoje": 4
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 119,
+ "total_assuntos": 128,
  "novos_3h": 6,
- "esquentaram": 1,
+ "esquentaram": 2,
  "candidatos": [
   {
    "manchete": "Lula diz que projeto aprovado no Senado não é 'reforma fiscal', mas ajuste para Orçamento de 2027, e critica Faria Lima",
    "secoes": [
     "B"
    ],
-   "veiculos": 80,
-   "veiculos_3h": 9,
+   "veiculos": 81,
+   "veiculos_3h": 8,
    "na_pauta_desde": "2026-11-21T16:51:33Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/21/lula-diz-que-projeto-aprovado-no-senado-nao-e-reforma-fiscal-mas-ajuste-para-orcamento-de-2027-e-critica-faria-lima.ghtml",
    "editoria": "politica",
@@ -43,6 +43,31 @@
     "risco": "",
     "motivo": "Fala de Lula criticando a Faria Lima e o ajuste fiscal gera forte engajamento.",
     "soma": 6
+   }
+  },
+  {
+   "manchete": "Câmara dos Deputados convoca sessão para votar projeto de ajuste fiscal",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 7,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-22T09:59:05Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/22/camara-deve-votar-projeto-de-ajuste-fiscal-nesta-segunda.ghtml",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Convocação da Câmara para votar ajuste fiscal.",
+    "soma": 5
    }
   },
   {
@@ -74,31 +99,6 @@
    }
   },
   {
-   "manchete": "Câmara dos Deputados convoca sessão para votar projeto de ajuste fiscal",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 7,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-22T09:59:05Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/22/camara-deve-votar-projeto-de-ajuste-fiscal-nesta-segunda.ghtml",
-   "editoria": "politica",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Convocação da Câmara para votar ajuste fiscal.",
-    "soma": 5
-   }
-  },
-  {
    "manchete": "13º salário na conta: como decidir entre pagar dívidas, investir ou aproveitar as compras",
    "secoes": [
     "C-nacional"
@@ -126,49 +126,20 @@
    }
   },
   {
-   "manchete": "Documentos da PF acirram disputa no STF sobre relatoria do caso Master",
-   "secoes": [
-    "B",
-    "C-nacional"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-22T09:59:05Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/11/documentos-da-pf-acirram-disputa-no-stf-sobre-relatoria-do-caso-master.shtml",
-   "editoria": "politica",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "master"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 3,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Disputa no STF sobre caso Master afeta cúpula do poder.",
-    "soma": 4
-   }
-  },
-  {
    "manchete": "Ministros do STF x Master: o que acontece após a PF entregar 4 relatórios",
    "secoes": [
     "B"
    ],
-   "veiculos": 5,
+   "veiculos": 4,
    "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-22T09:59:05Z",
    "link": "https://noticias.uol.com.br/politica/ultimas-noticias/2026/11/22/master-e-ministros-do-stf-quais-os-proximos-passos.ghtm",
    "editoria": "politica",
-   "nota": 5,
+   "nota": 4,
    "esquentou": false,
    "lente": [
     "master"
    ],
-   "outras_manchetes": 1,
    "ia": {
     "editoria": "politica",
     "I": 2,
@@ -182,29 +153,29 @@
    }
   },
   {
-   "manchete": "Milhares de trabalhadores protestaram em Lisboa contra o aumento do custo de vida",
+   "manchete": "Documentos da PF acirram disputa no STF sobre relatoria do caso Master",
    "secoes": [
-    "B"
+    "C-nacional"
    ],
-   "veiculos": 5,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-21T22:25:38Z",
-   "link": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/manifestantes-marcham-em-lisboa-contra-aumento-no-custo-de-vida",
-   "editoria": "economia",
+   "veiculos": 4,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-22T09:59:05Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/11/documentos-da-pf-acirram-disputa-no-stf-sobre-relatoria-do-caso-master.shtml",
+   "editoria": "politica",
    "nota": 4,
    "esquentou": false,
    "lente": [
-    "trabalhador"
+    "master"
    ],
    "ia": {
-    "editoria": "america_latina",
+    "editoria": "politica",
     "I": 2,
     "V": 2,
-    "P": 2,
-    "formato": "feed",
+    "P": 3,
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Trabalhadores protestam em Lisboa contra custo de vida.",
+    "motivo": "Disputa no STF sobre caso Master afeta cúpula do poder.",
     "soma": 4
    }
   },
@@ -236,40 +207,13 @@
    }
   },
   {
-   "manchete": "Produção do MST não supre demanda de alimentos no Brasil mostram dados",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-22T09:59:05Z",
-   "link": "https://www.gazetadopovo.com.br/vida-e-cidadania/dados-oficiais-mostram-que-producao-do-mst-e-insuficiente-para-alimentar-o-brasil/",
-   "editoria": "roca",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [
-    "mst"
-   ],
-   "ia": {
-    "editoria": "roca",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Debate sobre produção de alimentos da reforma agrária.",
-    "soma": 4
-   }
-  },
-  {
    "manchete": "Bolsonaro segue em UTI em estado estável, mas sem previsão de alta, informa hospital",
    "secoes": [
     "B"
    ],
-   "veiculos": 29,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-20T22:09:16Z",
+   "veiculos": 68,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-22T10:20:39Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/21/bolsonaro-tem-obstrucao-intestinal-quadro-estavel-e-segue-sem-previsao-de-alta-diz-boletim-medico.ghtml",
    "editoria": "saude",
    "nota": 5,
@@ -288,27 +232,61 @@
     "motivo": "Atualização sobre estado de saúde e internação de Bolsonaro na UTI.",
     "soma": 4
    }
-  }
- ],
- "rebaixados": [
+  },
   {
-   "manchete": "Agressor havia bebido em 3 de cada 10 casos de violência atendidos pelo SUS em SP",
-   "veiculos": 4,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-22T09:59:05Z",
+   "manchete": "Força Nacional do SUS é acionada para atuar em Tupanciretã",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 17,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-21T22:25:38Z",
+   "link": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-11/forca-nacional-do-sus-avalia-instalar-posto-medico-em-tupancireta",
+   "editoria": "saude",
+   "nota": 5,
    "esquentou": false,
+   "lente": [
+    "sus"
+   ],
    "ia": {
     "editoria": "saude",
     "I": 2,
-    "V": 1,
-    "P": 2,
+    "V": 2,
+    "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Dados do SUS conectam violência e consumo de álcool.",
-    "soma": 3
+    "motivo": "Atuação da Força Nacional do SUS em atendimento de emergência.",
+    "soma": 4
    }
   },
+  {
+   "manchete": "Ministro de Lula vai a Tupanciretã após temporal no Rio Grande do Sul | #NewsSábado",
+   "secoes": [
+    "D-famosos"
+   ],
+   "veiculos": 16,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-21T08:22:12Z",
+   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE91UzlXWU1IcVZWaTVvakpKR0VJUU9lMFNiYU1PalcyU3ZhdGxWVWNuQ2dhUnZweFZNa0NqcUdtUFRjb1RyVDhxcTk2aXd0MjNiZ0FlVWxNd1Q?oc=5",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "esquentou": true,
+   "lente": [],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Visita de ministro após desastre natural afeta gestão pública.",
+    "soma": 4
+   }
+  }
+ ],
+ "rebaixados": [
   {
    "manchete": "PF deve concluir inquérito sobre 'A Turma' de Vorcaro nesta semana",
    "veiculos": 2,
@@ -364,20 +342,20 @@
    }
   },
   {
-   "manchete": "Unesp 2027: veja horários, o que levar e o que pode eliminar candidatos na 1ª fase no domingo",
-   "veiculos": 23,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-21T00:17:58Z",
+   "manchete": "Agressor havia bebido em 3 de cada 10 casos de violência atendidos pelo SUS em SP",
+   "veiculos": 4,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-22T09:59:05Z",
    "esquentou": false,
    "ia": {
-    "editoria": "educacao",
+    "editoria": "saude",
     "I": 2,
     "V": 1,
-    "P": 1,
+    "P": 2,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Vestibular da Unesp mobiliza milhares de estudantes.",
+    "motivo": "Dados do SUS conectam violência e consumo de álcool.",
     "soma": 3
    }
   },
@@ -436,6 +414,24 @@
    }
   },
   {
+   "manchete": "Vestibular Unesp 2027: veja horários, regras e o que levar na 1ª fase",
+   "veiculos": 20,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-22T10:20:39Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "educacao",
+    "I": 1,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Serviço utilitário sobre vestibular, sem grande rendimento político.",
+    "soma": 2
+   }
+  },
+  {
    "manchete": "Ex-candidata é condenada a pagar R$ 7,5 mil a Flávio Bolsonaro",
    "veiculos": 2,
    "veiculos_3h": 0,
@@ -454,8 +450,8 @@
    }
   },
   {
-   "manchete": "FBI’s Most Wanted Drug Lord ‘Chapo Isidro’ Captured in Mexico",
-   "veiculos": 41,
+   "manchete": "Mexico captures FBI-wanted cartel boss in military raid",
+   "veiculos": 28,
    "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-21T07:44:05Z",
    "esquentou": false,
@@ -467,7 +463,7 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Prisão de narcotraficante no México sem impacto direto no Brasil.",
+    "motivo": "Prisão de narcotraficante estrangeiro sem impacto direto no Brasil.",
     "soma": 1
    }
   }
@@ -476,63 +472,63 @@
  "descartados_mais_quentes": [
   {
    "manchete": "Japão x Colômbia: onde assistir ao vivo, horário e escalações da Copa do Mundo sub-17",
-   "veiculos": 59,
+   "veiculos": 54,
    "veiculos_3h": 20,
    "motivo": "fora: esporte (copa do mundo)"
   },
   {
-   "manchete": "Ataque do Irã atinge instalação industrial civil no Bahrein e provoca incêndio",
-   "veiculos": 11,
-   "veiculos_3h": 2,
+   "manchete": "PF não encontra registros de conversas entre Vorcaro e Mendonça, diz STF",
+   "veiculos": 30,
+   "veiculos_3h": 1,
+   "motivo": "repetido (20261120-1315-pf-mendonca-sem-contato)"
+  },
+  {
+   "manchete": "Jovens protestam na Europa contra custo de vida e militarização",
+   "veiculos": 17,
+   "veiculos_3h": 1,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Signos: confira seu horóscopo deste domingo (22)",
-   "veiculos": 10,
-   "veiculos_3h": 3,
-   "motivo": "fora: entretenimento (horoscopo)"
+   "manchete": "Drones ucranianos atingem cargueiro russo no Golfo da Finlândia; país reforça segurança e suspeita de material militar em navio",
+   "veiculos": 11,
+   "veiculos_3h": 2,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Ataque do Irã atinge instalação industrial civil no Bahrein e provoca incêndio",
+   "veiculos": 11,
+   "veiculos_3h": 1,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Brazil vs Ireland, FIFA U-17 World Cup 2026 LIVE Streaming info — When, where to watch BRA v IRL?",
+   "veiculos": 9,
+   "veiculos_3h": 2,
+   "motivo": "fora: entretenimento (streaming)"
   },
   {
    "manchete": "Chitãozinho & Xororó anunciam no Fantástico que vão se aposentar dos palcos",
-   "veiculos": 7,
-   "veiculos_3h": 3,
+   "veiculos": 8,
+   "veiculos_3h": 5,
    "motivo": "sem editoria"
   },
   {
    "manchete": "Carlincatura del sábado 21 de noviembre de 2026",
-   "veiculos": 7,
+   "veiculos": 8,
    "veiculos_3h": 2,
    "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Antonelli vence classificação mas Verstappen largará em 1º no GP de Las Vegas de F1",
+   "veiculos": 7,
+   "veiculos_3h": 2,
+   "motivo": "fora: esporte (f1)"
   },
   {
    "manchete": "Irán ataca bases estadounidenses en Bahréin tras escalada de tensiones",
    "veiculos": 6,
    "veiculos_3h": 1,
    "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Town in southern Brazil left reeling by supercell storm",
-   "veiculos": 5,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Fire at Indonesian candy factory leaves 3 dead and dozens of workers unaccounted for",
-   "veiculos": 4,
-   "veiculos_3h": 3,
-   "motivo": "fora: crime ou tragedia (dead)"
-  },
-  {
-   "manchete": "Incêndio em fábrica na Indonésia deixa três mortos e 36 desaparecidos até o momento; equipes fazem buscas",
-   "veiculos": 4,
-   "veiculos_3h": 2,
-   "motivo": "fora: crime ou tragedia (mortos)"
-  },
-  {
-   "manchete": "Chuva forte, ventos de 60 km/h e granizo: 18 estados e o DF estão sob alerta de tempestades",
-   "veiculos": 4,
-   "veiculos_3h": 1,
-   "motivo": "sem editoria"
   }
  ]
 }
