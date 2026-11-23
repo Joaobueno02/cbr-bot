@@ -1,63 +1,34 @@
 {
- "quando": "2026-11-23T16:10:01Z",
- "pauta_quando": "2026-11-23T16:10:01Z",
+ "quando": "2026-11-23T18:08:32Z",
+ "pauta_quando": "2026-11-23T18:08:31Z",
  "ok": true,
  "erro": null,
- "metodo": "regras + gemini",
+ "metodo": "regras",
  "ia": {
   "ia": "gemini",
-  "ok": true,
-  "erro": null,
-  "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 17,
-  "falhas_antes": "gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in",
-  "pedidos_hoje": 8
+  "ok": false,
+  "erro": "Gemini: gemini-3.8-flash: ReadTimeout | gemini-3.8-flash: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-3.5-flash: HTTP 503 This model is currently experiencing high de",
+  "modelo": null,
+  "avaliados_agora": 0,
+  "pedidos_hoje": 10
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 141,
- "novos_3h": 8,
+ "total_assuntos": 130,
+ "novos_3h": 11,
  "esquentaram": 5,
  "candidatos": [
-  {
-   "manchete": "Fim da escala 6x1: governo publica hoje primeira portaria com regras da nova jornada. Veja o que falta definir",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 20,
-   "veiculos_3h": 15,
-   "na_pauta_desde": "2026-11-22T23:40:06Z",
-   "link": "https://www.cartacapital.com.br/politica/fim-da-6x1-o-que-muda-com-a-primeira-portaria-do-governo-sobre-a-nova-jornada-de-trabalho/",
-   "editoria": "economia",
-   "nota": 7,
-   "esquentou": true,
-   "lente": [
-    "6x1",
-    "jornada"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 3,
-    "V": 3,
-    "P": 3,
-    "formato": "reels",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Governo publica portaria da nova jornada; alto impacto e viralização.",
-    "soma": 6
-   }
-  },
   {
    "manchete": "Ajuste fiscal do governo Lula vai para votação na Câmara dos Deputados nesta segunda-feira",
    "secoes": [
     "B"
    ],
-   "veiculos": 21,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-22T09:59:05Z",
-   "link": "https://www.gazetadopovo.com.br/republica/camara-vota-ajuste-fiscal-lula-nesta-segunda-ritmo-acelerado/",
+   "veiculos": 85,
+   "veiculos_3h": 29,
+   "na_pauta_desde": "2026-11-22T17:55:25Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/23/camara-vota-projeto-de-ajuste-fiscal-nesta-segunda-projecao-de-economia-e-de-r-50-bilhoes-em-2027.ghtml",
    "editoria": "politica",
    "nota": 5,
-   "esquentou": false,
+   "esquentou": true,
    "lente": [],
    "ia": {
     "editoria": "economia",
@@ -76,10 +47,10 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 47,
-   "veiculos_3h": 10,
+   "veiculos": 56,
+   "veiculos_3h": 24,
    "na_pauta_desde": "2026-11-22T23:40:06Z",
-   "link": "https://operamundi.uol.com.br/estados-unidos/democratas-irao-investigar-papel-da-casa-branca-na-fuga-de-flavio-bolsonaro-diz-deputada/",
+   "link": "https://www.gazetadopovo.com.br/mundo/flavio-bolsonaro-atribui-derrota-eleitoral-ao-sistema-e-ataca-moraes/",
    "editoria": "eleicoes",
    "nota": 6,
    "esquentou": true,
@@ -100,45 +71,50 @@
    }
   },
   {
-   "manchete": "Criança morre após ser atingida por disparo na Terra Indígena Ligeiro, em Charrua",
+   "manchete": "INSS começa pagamentos de aposentados e pensionistas de novembro, nesta terça-feira",
    "secoes": [
-    "B",
-    "D-terra"
+    "B"
    ],
    "veiculos": 24,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-22T17:55:25Z",
-   "link": "https://g1.globo.com/pe/caruaru-regiao/noticia/2026/11/23/suspeito-morre-apos-ser-baleado-durante-assalto-a-loterica-em-paranatama.ghtml",
-   "editoria": "roca",
-   "nota": 6,
+   "veiculos_3h": 8,
+   "na_pauta_desde": "2026-11-23T07:53:19Z",
+   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNSW0zVU1aQlVMQW1xODh4aFZOVEE5ZF83STFqUzA2Q0ExYTZ6TWhvSUtoWWtfZzZERUNwLWlHNlFrdERzR1BHS08tOVV1UXZIdXJWOEJkZi1La3hvUFVXUkZ6VHdZeUxKT2VhdjZ3UjlfQnQ2elIxUGJtWEFaZVRjcTJZRkJwQmZTaVM0UFgyVnBHOXlDRHlvUG1CUFI5MFBEUEU1dk1obVowQ1JQMkRUazNQNVQ5b0x1UUFUS2dZYmRUWGRZcWc?oc=5",
+   "editoria": "economia",
+   "nota": 7,
    "esquentou": false,
    "lente": [
-    "indigena"
+    "aposentad",
+    "inss"
+   ]
+  },
+  {
+   "manchete": "Relatórios da PF intensificam disputa no STF sobre caso Banco Master",
+   "secoes": [
+    "B"
    ],
-   "ia": {
-    "editoria": "gerais",
-    "I": 3,
-    "V": 3,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "Morte de criança",
-    "motivo": "Criança morre baleada em Terra Indígena no Rio Grande do Sul.",
-    "soma": 6
-   }
+   "veiculos": 9,
+   "veiculos_3h": 7,
+   "na_pauta_desde": "2026-11-23T18:08:31Z",
+   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPZkxjZDlGMjVoVGZhRXdOYTZseG9ocHpjRWxOVnQ1d3hya3RfRHBCTzdubGJldnVSMXNDY0tULXA5ODFnY1dNYkxSWUFOUHQxU2tELUVmcVdfZkQ2NjE3Nm96X0pUVVJ4ODVwczBibGs5aWEtZXNlTF93WFRvQ3BvZkR2WjFPRWN5WHhiVThiRnFGNzV0bkliNmQ0UEZhZXEzMVE?oc=5",
+   "editoria": "politica",
+   "nota": 7,
+   "esquentou": false,
+   "lente": [
+    "master",
+    "banco"
+   ]
   },
   {
    "manchete": "Fim da escala 6X1 deve impactar mais de 100 mil trabalhadores domésticos, estima instituto",
    "secoes": [
-    "B",
     "C-nacional"
    ],
    "veiculos": 4,
-   "veiculos_3h": 4,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-23T16:10:01Z",
    "link": "https://g1.globo.com/economia/noticia/2026/11/23/fim-da-escala-6x1-deve-beneficiar-mais-de-100-mil-trabalhadores-domesticos-estima-instituto.ghtml",
    "editoria": "economia",
-   "nota": 6,
+   "nota": 5,
    "esquentou": false,
    "lente": [
     "trabalhador",
@@ -161,7 +137,7 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 10,
+   "veiculos": 14,
    "veiculos_3h": 9,
    "na_pauta_desde": "2026-11-23T14:11:38Z",
    "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/justica-libera-r-28-bilhoes-em-atrasados-do-inss-veja-quem-recebe.shtml",
@@ -184,97 +160,47 @@
    }
   },
   {
-   "manchete": "INSS começa a pagar o mês de novembro nesta terça",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 10,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-23T07:53:19Z",
-   "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE01Zjk4eG1EVlRHN1hzVkRmZ0NrNFU5OXkzeFZiVWJtaWlKVkwyTTZWeDdQaDZ0bzJlbmpkRzVtYjdWbVJiaTFuZkdGZEh3M09IQ2NOQXZuZVlGenZGWkZOMmxYdDBqU1Z3NGpIZmVjeGRDZVFxLWZZc2JuTmk?oc=5",
-   "editoria": "economia",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "inss"
-   ],
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 2,
-    "P": 1,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Pagamento do INSS afeta milhões de aposentados.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "13º salário deve ser pago até segunda-feira (30); veja quem tem direito",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 8,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-23T07:53:19Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/13o-salario-deve-ser-pago-ate-segunda-feira-30-veja-quem-tem-direito.shtml",
-   "editoria": "economia",
-   "nota": 6,
-   "esquentou": true,
-   "lente": [
-    "salario",
-    "direito"
-   ],
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Prazo final para pagamento do 13º salário movimenta trabalhadores.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Gilmar Mendes cita caso Master, diz que STF é “poderoso”, mas fala em falta de “autocontenção” à Corte",
+   "manchete": "Charrua: Criança morre após ser atingida por disparo durante conflito na Terra Indígena Ligeiro",
    "secoes": [
     "B",
-    "D-america_latina"
+    "D-terra"
    ],
-   "veiculos": 12,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-22T23:40:06Z",
-   "link": "https://www.gazetadopovo.com.br/republica/gilmar-mendes-cita-caso-master-diz-que-stf-e-poderoso-mas-fala-em-falta-de-autocontencao-a-corte/",
-   "editoria": "america_latina",
-   "nota": 7,
+   "veiculos": 24,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-22T17:55:25Z",
+   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQTmJ2eFBpamx1dVY0Ykk2V0tNT1NhLTktcjF5Sl9LZnF2LWVSckc2Mi1jdUlVQ2FOUDBGMmN5Umo1V3FaY3BNeUN1SWxlU1oyX0dsNEVIdTZhX3NNWHE5VlEyYXFqeXFrbjlVUEtnSnZGellqMGw3cXd0T094WFdLM3FFNE0yblVIYlItODRIeXgyNEE5M1dFMnFfNDAtYjVZRG1HeE05VnRBLWdyOGNzRHdFeEg0bE82cS04c1pLejJ0OHVITlE?oc=5",
+   "editoria": "roca",
+   "nota": 6,
    "esquentou": false,
    "lente": [
-    "corte",
-    "master"
+    "indigena"
+   ]
+  },
+  {
+   "manchete": "Master: Relatório da PF sobre Vorcaro e Moraes omite contratos e 47 mensagens de bloco de notas",
+   "secoes": [
+    "C-nacional"
    ],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Gilmar Mendes fala sobre autocontenção do STF no caso Master.",
-    "soma": 4
-   }
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-23T18:08:31Z",
+   "link": "https://www.brasil247.com/brasil/pf-omite-contratos-e-47-mensagens-de-vorcaro-a-moraes-em-relatorio-ao-stf/",
+   "editoria": "politica",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "vorcaro",
+    "master"
+   ]
   },
   {
    "manchete": "Lula e STF apoiam Davi Alcolumbre na disputa pela presidência do Senado",
    "secoes": [
     "B"
    ],
-   "veiculos": 11,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-22T09:59:05Z",
+   "veiculos": 13,
+   "veiculos_3h": 7,
+   "na_pauta_desde": "2026-11-23T16:10:01Z",
    "link": "https://www.gazetadopovo.com.br/vida-e-cidadania/governo-lula-e-ministros-do-stf-articulam-apoio-para-davi-alcolumbre-no-senado/",
    "editoria": "politica",
    "nota": 5,
@@ -293,76 +219,150 @@
    }
   },
   {
-   "manchete": "Caminhoneiros do RN entram em greve após impasse sobre plano de saúde da categoria",
+   "manchete": "México será sede del Mundial Femenil 2031 junto con EU, Jamaica y Costa Rica",
    "secoes": [
-    "B"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-23T16:10:01Z",
-   "link": "https://g1.globo.com/rn/rio-grande-do-norte/noticia/2026/11/23/paralisacao-caminhoneiros-rn.ghtml",
-   "editoria": "saude",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "greve"
-   ],
-   "ia": {
-    "editoria": "roca",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Caminhoneiros entram em greve no RN por plano de saúde.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Video: 49ers leave Mexico City with dominant win over Vikings",
-   "secoes": [
+    "B",
+    "C-internacional",
     "D-america_latina"
    ],
-   "veiculos": 5,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-23T07:53:19Z",
-   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE93anJwbXVzVWY2eElFeFFfYjF2UXJvYVpOQ1RGX1pFT2RfQU5nXzJLdUJSTUItTV96LXBKVWRLTHhjZ1QzWXBoV1lKeHFqMFZIalRYMVppUkxDQnhDd3pncTA5UnZ3UQ?oc=5",
+   "veiculos": 15,
+   "veiculos_3h": 13,
+   "na_pauta_desde": "2026-11-23T16:10:01Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/esporte/2026/11/copa-feminina-de-2031-sera-nos-eua-mexico-costa-rica-e-jamaica.shtml",
    "editoria": "america_latina",
    "nota": 5,
    "esquentou": false,
-   "lente": [],
-   "outras_manchetes": 1
+   "lente": []
   },
   {
-   "manchete": "Autazes, Boca do Acre e Apuí lideram registros de queimadas e crimes ambientais no interior",
+   "manchete": "Em encontro com ministros do STF e Alcolumbre, Lula insiste em Messias mas pede opções para a corte, inclusive mulheres",
    "secoes": [
-    "C-pesquisa"
+    "B",
+    "C-nacional"
    ],
-   "veiculos": 3,
-   "veiculos_3h": 3,
+   "veiculos": 13,
+   "veiculos_3h": 10,
    "na_pauta_desde": "2026-11-23T16:10:01Z",
-   "link": "https://g1.globo.com/am/amazonas/noticia/2026/11/23/com-media-de-tres-registros-por-dia-amazonas-soma-572-crimes-ambientais-em-11-meses.ghtml",
-   "editoria": "gerais",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/colunas/monicabergamo/2026/11/lula-reafirma-messias-para-o-stf-em-jantar-com-gilmar-zanin-dino-alexandre-e-cupula-do-congresso.shtml",
+   "editoria": "politica",
    "nota": 5,
-   "esquentou": false,
+   "esquentou": true,
    "lente": [
-    "queimada"
+    "corte"
    ]
   },
   {
-   "manchete": "Boletim Focus: Banco Central traz notícia devastadora sobre inflação e faz o dólar disparar",
+   "manchete": "AGU se manifesta contra liminar de Dino sobre fim da escala 6x1",
    "secoes": [
+    "B",
     "C-nacional"
    ],
-   "veiculos": 5,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-23T16:10:01Z",
-   "link": "https://g1.globo.com/economia/noticia/2026/11/23/galipolo-evento-itau.ghtml",
+   "veiculos": 13,
+   "veiculos_3h": 9,
+   "na_pauta_desde": "2026-11-22T23:40:06Z",
+   "link": "https://www.infomoney.com.br/politica/agu-se-manifesta-contra-liminar-de-dino-sobre-fim-da-escala-6x1/",
    "editoria": "economia",
    "nota": 5,
    "esquentou": false,
    "lente": [
+    "6x1"
+   ]
+  },
+  {
+   "manchete": "SUS pode perder até R$ 10 bi de recursos obrigatórios por ano com ajuste fiscal, alertam entidades",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 9,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-11-23T16:10:01Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/equilibrioesaude/2026/11/sus-pode-perder-ate-r-10-bi-de-recursos-obrigatorios-por-ano-com-ajuste-fiscal-alertam-entidades.shtml",
+   "editoria": "economia",
+   "nota": 5,
+   "esquentou": true,
+   "lente": [
+    "sus"
+   ]
+  },
+  {
+   "manchete": "Lista ampliada do 50 Best tem seis brasileiros e dá pista dos melhores da América Latina",
+   "secoes": [
+    "B",
+    "C-internacional",
+    "D-america_latina"
+   ],
+   "veiculos": 6,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-23T16:10:01Z",
+   "link": "https://guia.folha.uol.com.br/restaurantes/2026/11/lista-ampliada-do-50-best-tem-seis-brasileiros-e-da-pista-dos-melhores-da-america-latina.shtml",
+   "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Mexico, China Agree to Create Working Group to Boost Trade",
+   "secoes": [
+    "B",
+    "C-internacional",
+    "D-america_latina"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-23T16:10:01Z",
+   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNMFdsYnMwQ0ROSmw0ZE5RZERyQThJTzVxdWRIbjNqVVlLS3Bub1RwUG9ELWt6aFQwcmpiOXpoN21Uel9QS0haOVV2N21vV1JtSkUxZ3lrZ1RraXhZM0dxcm1Vb1MzMk54TVoxdkthRnVOd2JOcmhSTlJMUlpic054ekZFWHVaa1NKb2lNYUtpWmpVUQ?oc=5",
+   "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": true,
+   "lente": []
+  },
+  {
+   "manchete": "Memorial da América Latina homenageia Olga, Prestes e Quilombo Saracura",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-23T18:08:31Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/colunas/painel/2026/11/memorial-da-america-latina-renomeia-espacos-internos-e-homenageia-lideres-comunistas.shtml",
+   "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Caso Master: Novo pede a Fachin afastamento cautelar de Andrei Rodrigues do comando da PF",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-23T18:08:31Z",
+   "link": "https://www.gazetadopovo.com.br/republica/novo-volta-a-pedir-afastamento-de-andrei-e-o-acusa-de-interferir-no-caso-master/",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "master"
+   ]
+  },
+  {
+   "manchete": "Banco Alimentar Contra a Fome de Santarém realiza campanha de recolha nos dias 28 e 29 de novembro",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-23T12:09:51Z",
+   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNa1JxRU42N0VPdGpIZmJPUWVONWs2Z20zWFVzRVlxc21qa1JTRjZOYjVSWEtrSW9NdS0zeWFNamJTcmVWTjM5ZURFRk5SeDA4U2dqTG56MDN1V1hYVVBRNHdKdm91V29iS2w1MjZhclVqNV9DNF84QmlQNm5aT0RiVjR5MHQ0dm9wT0VYdmk0bTB4clBKVGVUWFNRcFpMWm9aRmdHcmVWVW1fNHRERVFIM3p4NS1DR3JfaVhtUDNXdnJlYnFNRHV3?oc=5",
+   "editoria": "roca",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "fome",
     "banco"
    ]
   },
@@ -372,7 +372,7 @@
     "D-terra"
    ],
    "veiculos": 5,
-   "veiculos_3h": 1,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-23T14:11:38Z",
    "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPOFd3Sm1nU21pRkVvd2p1VW1jdmNmSDB3RXpMLWp4TU9TWHZWYTIyQVdyLXBhX2x4eWV0MTBNX05saHlZYjlZM3BDRE5WQ0FUZlJfMnFBZmJ3NEpKc3VScEhtU0l2TDY4NjR5bkZOLUVINEZoWVpSSjJQYTd1YjdiQjV2T0pXZ0l1dzZWekMxcUVodkF0MEd6UGIwT0JxMnRNWU9lNkV3RXg4dUUxSFljX19wYXlTT0czcnFDcjdPOWFwUXpvTTlmc1g0SV9KZ1hfUUFv?oc=5",
    "editoria": "roca",
@@ -383,72 +383,15 @@
    ]
   },
   {
-   "manchete": "Câmara antecipa votação de projeto de ajuste fiscal que pode impactar contas públicas em R$ 50 bilhões em 2027",
+   "manchete": "Mercado eleva previsão do dólar para R$ 5,55 e aumenta estimativa de inflação em 2026",
    "secoes": [
     "B"
    ],
-   "veiculos": 76,
-   "veiculos_3h": 43,
-   "na_pauta_desde": "2026-11-22T09:59:05Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/23/camara-vota-projeto-de-ajuste-fiscal-nesta-segunda-projecao-de-economia-e-de-r-50-bilhoes-em-2027.ghtml",
-   "editoria": "politica",
-   "nota": 4,
-   "esquentou": true,
-   "lente": []
-  },
-  {
-   "manchete": "Anvisa proíbe shampoo anticaspa para crianças",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 25,
-   "veiculos_3h": 21,
+   "veiculos": 20,
+   "veiculos_3h": 6,
    "na_pauta_desde": "2026-11-23T12:09:51Z",
-   "link": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/anvisa-manda-recolher-xampu-anticaspa-para-criancas",
-   "editoria": "saude",
-   "nota": 4,
-   "esquentou": true,
-   "lente": []
-  },
-  {
-   "manchete": "MPE defende rejeição de recurso de coligação de Paes que pede 2º turno no RJ",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 19,
-   "veiculos_3h": 8,
-   "na_pauta_desde": "2026-11-23T07:53:19Z",
-   "link": "https://www.gazetadopovo.com.br/brasil/mpe-pede-que-tse-rejeite-recurso-de-paes-por-segundo-turno-no-rj/",
-   "editoria": "eleicoes",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "f12026Q_X.pdf - Comvest - Unicamp",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 7,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-23T16:10:01Z",
-   "link": "https://tvtnews.com.br/unicamp-2027-libera-locais-de-prova-segunda-fase/",
-   "editoria": "educacao",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Israel barra deputada brasileira que participaria de missão na Palestina",
-   "secoes": [
-    "B",
-    "C-nacional"
-   ],
-   "veiculos": 5,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-23T16:10:01Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/colunas/monicabergamo/2026/11/israel-barra-deputada-brasileira-que-participaria-de-missao-na-palestina.shtml",
-   "editoria": "politica",
+   "link": "https://g1.globo.com/economia/noticia/2026/11/23/mercado-financeiro-eleva-estimativa-de-inflacao-em-2026-e-2027-e-projeta-corte-menor-dos-juros-no-ano-que-vem.ghtml",
+   "editoria": "economia",
    "nota": 4,
    "esquentou": false,
    "lente": []
@@ -456,29 +399,11 @@
  ],
  "rebaixados": [
   {
-   "manchete": "Caso Banco Master um ano de Compliance Zero e crises no STF",
-   "veiculos": 8,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-22T09:59:05Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 1,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Balanço de um ano do Caso Master e crises no STF.",
-    "soma": 3
-   }
-  },
-  {
    "manchete": "Anvisa aprova novo medicamento para tratamento de câncer de mama",
-   "veiculos": 6,
-   "veiculos_3h": 4,
+   "veiculos": 20,
+   "veiculos_3h": 15,
    "na_pauta_desde": "2026-11-23T16:10:01Z",
-   "esquentou": false,
+   "esquentou": true,
    "ia": {
     "editoria": "saude",
     "I": 2,
@@ -493,8 +418,8 @@
   },
   {
    "manchete": "Filha é condenada a pagar mais de R$ 70 mil por desviar dinheiro da mãe com deficiência que passava fome em MG",
-   "veiculos": 9,
-   "veiculos_3h": 3,
+   "veiculos": 10,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-23T07:53:19Z",
    "esquentou": true,
    "ia": {
@@ -510,29 +435,11 @@
    }
   },
   {
-   "manchete": "Temas da Unesp 2027: 1ª fase aborda terras raras, Venezuela, racismo e inteligência artificial",
-   "veiculos": 7,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-22T23:40:06Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "educacao",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Temas de vestibular sem impacto político direto.",
-    "soma": 2
-   }
-  },
-  {
    "manchete": "Damares pede a Fachin autorização para visitar Vorcaro na Papudinha",
-   "veiculos": 5,
-   "veiculos_3h": 5,
+   "veiculos": 15,
+   "veiculos_3h": 14,
    "na_pauta_desde": "2026-11-23T16:10:01Z",
-   "esquentou": false,
+   "esquentou": true,
    "ia": {
     "editoria": "politica",
     "I": 1,
@@ -546,157 +453,103 @@
    }
   },
   {
-   "manchete": "Bolsonaro passou noite sem dor e fez caminhada no hospital, diz Michelle; ex-presidente segue na UTI",
-   "veiculos": 24,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-22T18:03:59Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "gerais",
-    "I": 1,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Estado de saúde de Bolsonaro no hospital.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Director de la DEA ofrece condolencias por militares mexicanos muertos en captura del Chapo Isidro",
-   "veiculos": 7,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-22T18:03:59Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 0,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Declaração da DEA sobre militares mortos no México.",
-    "soma": 1
-   }
-  },
-  {
-   "manchete": "Aposentadoria terá novas exigências e regras em 2027 | Diário do Grande ABC - Notícias e informações",
-   "veiculos": 12,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-23T14:11:38Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": true,
-    "risco": "",
-    "motivo": "Regras de transição da previdência já cobertas.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Caminhoneiros do RN iniciam greve por tempo indeterminado nesta segunda-feira",
-   "veiculos": 7,
-   "veiculos_3h": 3,
+   "manchete": "Legacy key for 2031 and 2035 Women's World Cup says sports executive",
+   "veiculos": 20,
+   "veiculos_3h": 17,
    "na_pauta_desde": "2026-11-23T16:10:01Z",
    "esquentou": false,
    "ia": {
-    "editoria": "roca",
-    "I": 2,
-    "V": 2,
-    "P": 1,
+    "editoria": "fora",
+    "I": 0,
+    "V": 0,
+    "P": 0,
     "formato": "feed",
-    "repetido": true,
+    "repetido": false,
     "risco": "",
-    "motivo": "Caminhoneiros do RN iniciam greve; fato idêntico ao ID 3.",
-    "soma": 4
+    "motivo": "Esporte internacional sem impacto direto no Brasil.",
+    "soma": 0
    }
   },
   {
-   "manchete": "Brasil: Lula autoriza reconhecimento de terra indígena com 362 mil hectares - E-Global",
-   "veiculos": 3,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-22T17:55:25Z",
-   "esquentou": false,
+   "manchete": "Inscrições para concurso de prefeitura baiana com salários de R$ 3,2 mil acabam nesta segunda-feira",
+   "veiculos": 20,
+   "veiculos_3h": 8,
+   "na_pauta_desde": "2026-11-22T23:40:06Z",
+   "esquentou": true,
    "ia": {
-    "editoria": "roca",
-    "I": 2,
-    "V": 1,
-    "P": 1,
+    "editoria": "fora",
+    "I": 0,
+    "V": 0,
+    "P": 0,
     "formato": "feed",
-    "repetido": true,
+    "repetido": false,
     "risco": "",
-    "motivo": "Assunto idêntico a post já publicado sobre terra de Raoni.",
-    "soma": 3
+    "motivo": "Concurso municipal específico não tem relevância nacional.",
+    "soma": 0
    }
   }
  ],
  "obrigatorios": [],
  "descartados_mais_quentes": [
   {
-   "manchete": "Trump volta a defender restituição de Huang ao cargo de CEO da Nvidia",
-   "veiculos": 30,
-   "veiculos_3h": 29,
+   "manchete": "Bolsonaro segue internado na UTI em Brasília",
+   "veiculos": 89,
+   "veiculos_3h": 16,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Michelle diz que endoscopia de Bolsonaro tem resultado \"muito positivo\"",
-   "veiculos": 29,
-   "veiculos_3h": 8,
+   "manchete": "FT: Scott Bessent, agora, não se opõe ao retorno de Jensen Huang à Nvidia",
+   "veiculos": 48,
+   "veiculos_3h": 27,
    "motivo": "sem editoria"
-  },
-  {
-   "manchete": "COP31 termina sem acordo após impasse sobre combustíveis fósseis",
-   "veiculos": 23,
-   "veiculos_3h": 3,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Suposto ataque de drones atinge navio russo em porto na Líbia",
-   "veiculos": 21,
-   "veiculos_3h": 8,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "\"Uma operação exemplar\". Zelensky reivindica ataque a navios russos na Líbia. ONU pede investigação urgente",
-   "veiculos": 19,
-   "veiculos_3h": 6,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Governo federal reconhece calamidade em cidade do RS após temporal que deixou 5 mortos",
-   "veiculos": 16,
-   "veiculos_3h": 3,
-   "motivo": "fora: crime ou tragedia (mortos)"
   },
   {
    "manchete": "Centenas de escolas na Alemanha recebem ameaças de bomba por email com a frase \"A morte espera por ti\"",
-   "veiculos": 14,
-   "veiculos_3h": 9,
+   "veiculos": 19,
+   "veiculos_3h": 6,
    "motivo": "fora: crime ou tragedia (morte)"
   },
   {
-   "manchete": "Rayssa Leal disputa final da Copa do Mundo de Skate Street nesta madrugada; saiba onde assistir",
+   "manchete": "Minha Casa, Minha Vida concentra 58% dos lançamentos do 3º tri, aponta CBIC",
    "veiculos": 12,
-   "veiculos_3h": 5,
-   "motivo": "fora: esporte (copa do mundo)"
+   "veiculos_3h": 11,
+   "motivo": "sem editoria"
   },
   {
-   "manchete": "Alice Huang contatou espião chinês durante caso com ex-CEO da Nvidia, diz jornal",
+   "manchete": "Fluminense x Mirassol: onde assistir ao vivo e horário",
+   "veiculos": 12,
+   "veiculos_3h": 5,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Wall Street soars as Nvidia reinstates Huang, dollar jumps",
+   "veiculos": 11,
+   "veiculos_3h": 7,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Moraes manda Flávio ser notificado por edital sobre calúnia contra Lula",
    "veiculos": 10,
+   "veiculos_3h": 9,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Prédio na Vila Olímpia, em SP, é esvaziado após suspeita de bomba",
+   "veiculos": 9,
    "veiculos_3h": 8,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Bombardeios deixam seis mortos na região de Kiev",
-   "veiculos": 10,
-   "veiculos_3h": 3,
-   "motivo": "fora: crime ou tragedia (mortos)"
+   "manchete": "Brasil é o 4º mais feliz do mundo no trabalho; veja ranking e por que o país supera nações mais ricas",
+   "veiculos": 9,
+   "veiculos_3h": 4,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Defesa Civil emite alerta severo para chuvas na grande São Paulo",
+   "veiculos": 8,
+   "veiculos_3h": 4,
+   "motivo": "sem editoria"
   }
  ]
 }
