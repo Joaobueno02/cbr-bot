@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-24T20:14:51Z",
- "pauta_quando": "2026-11-24T20:14:47Z",
+ "quando": "2026-11-24T20:21:44Z",
+ "pauta_quando": "2026-11-24T20:21:41Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -8,41 +8,39 @@
   "ia": "gemini",
   "ok": true,
   "erro": null,
-  "modelo": "gemini-3.5-flash",
-  "avaliados_agora": 13,
-  "falhas_antes": "gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-3.8-flash: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-3.8-flash: HTTP 503 This model is currently experiencing high demand. Spikes in",
-  "pedidos_hoje": 22
+  "modelo": "gemini-3.5-flash-lite",
+  "avaliados_agora": 9,
+  "falhas_antes": null,
+  "pedidos_hoje": 23
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 170,
- "novos_3h": 10,
- "esquentaram": 5,
+ "total_assuntos": 162,
+ "novos_3h": 6,
+ "esquentaram": 7,
  "candidatos": [
   {
-   "manchete": "Fim da escala 6x1: governo anuncia fiscalização e multas; veja as novas regras - aRede",
+   "manchete": "Câmara aprova urgência de ajuste fiscal de até R$ 56 bilhões sob pressão do governo para acelerar votação",
    "secoes": [
     "A",
     "B"
    ],
-   "veiculos": 49,
-   "veiculos_3h": 11,
-   "na_pauta_desde": "2026-11-24T12:08:39Z",
-   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/confira-tudo-o-que-voce-precisa-saber-sobre-o-fim-da-escala-6x1.shtml",
-   "editoria": "economia",
-   "nota": 7,
+   "veiculos": 126,
+   "veiculos_3h": 60,
+   "na_pauta_desde": "2026-11-24T20:14:47Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/23/camara-aprova-projeto-de-ajuste-fiscal.ghtml",
+   "editoria": "politica",
+   "nota": 6,
    "esquentou": false,
-   "lente": [
-    "6x1"
-   ],
+   "lente": [],
    "ia": {
     "editoria": "economia",
     "I": 3,
     "V": 3,
-    "P": 2,
+    "P": 3,
     "formato": "reels",
     "repetido": false,
     "risco": "",
-    "motivo": "Fiscalização e multas da escala 5x2 são tema central de interesse da classe trabalhadora.",
+    "motivo": "Câmara aprova ajuste fiscal do governo; atinge contas públicas e gera forte debate.",
     "soma": 6
    }
   },
@@ -52,8 +50,8 @@
     "A",
     "B"
    ],
-   "veiculos": 47,
-   "veiculos_3h": 8,
+   "veiculos": 44,
+   "veiculos_3h": 7,
    "na_pauta_desde": "2026-11-24T05:33:00Z",
    "link": "https://tvtnews.com.br/brasil-testara-vacina-cancer-2027-ministerio-saude/",
    "editoria": "saude",
@@ -73,17 +71,45 @@
    }
   },
   {
+   "manchete": "Moraes chama Flávio de foragido e dá 15 dias para responder à denúncia contra Lula",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 39,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-24T20:08:16Z",
+   "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPUUVXdjBpa1hVTE1hQXV3bFgxcmhvYmJQaktZdUhncHN2dW1tR3lSMXBlS0F1d25SbU40UkxuZ2hYUEVNUEJCZU1salFieUVpRTFLVldTSHBTd0NZZC15SFJ3dVRtOWo0ZmI4NS1idWZpbXBlMHNVakhMSE5lblJNVzh2Zmc0S2tDQTctWTJ6c0s4TkVvWVZHM3ZNemRYcmJvcDlpcm5CNk1IeXFMd2d3NEJqaF9RZklGT0ctd3RTUXhyNGl2d3NvZ2NxZ0hINmhKMkw1UXJn?oc=5",
+   "editoria": "politica",
+   "nota": 9,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio",
+    "pl"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Moraes manda citar Flávio Bolsonaro por edital; alta repercussão e conflito político explícito.",
+    "soma": 6
+   }
+  },
+  {
    "manchete": "INSS começa a pagar 13º salário de aposentados e pensionistas nesta terça-feira",
    "secoes": [
-    "A",
-    "B"
+    "A"
    ],
-   "veiculos": 20,
-   "veiculos_3h": 7,
+   "veiculos": 14,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-24T16:09:26Z",
    "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPZUJXcXdHeC1VbVJNYmhzTzVFT2hScXpVOWJMV0FJUEpwckh6aGhNZ2lGNmZUdll4cFZqZ2tSY0hkOThrbUdNVFBqM0RuMVFqVGU2a0cxVDJzQ01pVGIwbWQtSl9CSjBDUzEwU1Z2Qm1BNkQzQVRRMVZwM1Fwek9mYlJXWlJVZjdOa1J2ZHp0QjBYaWx5eTN5TFlfOEhMZkFhbnhwWm5OYmtucUxiekJmVHRtdlpnWU02TjFOVXNacGEwdw?oc=5",
    "editoria": "economia",
-   "nota": 9,
+   "nota": 8,
    "esquentou": false,
    "lente": [
     "salario",
@@ -103,42 +129,14 @@
    }
   },
   {
-   "manchete": "Lula desinvitó a Milei a su jura y confirmó que su embajador no vuelve a la Argentina",
-   "secoes": [
-    "B",
-    "D-america_latina"
-   ],
-   "veiculos": 9,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-24T18:08:57Z",
-   "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPREMyNVUxWDY0MmFsWWZkeUluUm9fS0IxTW5BTE5ucVJfSHJtTS1LUEtKZkdBaXVadkpQU0J3eXVCbFpxaTZ1bnIzdHktdzdKT0tMYThaQ0N2N1JqcGg3YTdrenFlM3ZnTFJDV2U5LWF1WDdtMHRia1NYMzUtRWh0cE5MZW1LeVZ6a0stT0VpMm82SVB2M04wb3RTSFpGZDBGeFdpOEloZU1BYzdkcmhnbkt3Yl93eDF3Qk5VSk5kOFBLVENFaDktU0xSZDFzdlJNMVd4U3ptbEVVQmRNUWh0MXVn?oc=5",
-   "editoria": "america_latina",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "milei"
-   ],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 3,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Resposta diplomática firme do governo aos ataques da extrema-direita argentina.",
-    "soma": 5
-   }
-  },
-  {
    "manchete": "Entenda a operação que revelou esquema de lavagem de dinheiro do PCC",
    "secoes": [
     "B"
    ],
-   "veiculos": 46,
-   "veiculos_3h": 10,
+   "veiculos": 40,
+   "veiculos_3h": 8,
    "na_pauta_desde": "2026-11-24T12:08:39Z",
-   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://c-level.folha.uol.com.br/financas/2026/11/pf-faz-operacao-contra-suspeitos-de-movimentarem-r-4-bi-em-esquema-com-golpes-e-criptomoedas.shtml",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/quem-e-mc-ryan-o-funkeiro-paulista-alvo-de-operacao-da-pf-contra-lavagem-de-dinheiro.shtml",
    "editoria": "politica",
    "nota": 6,
    "esquentou": false,
@@ -158,35 +156,37 @@
    }
   },
   {
-   "manchete": "Argentina Economic Activity Declines 1.20% in September",
+   "manchete": "Milei não será convidado para cerimônia de posse de Lula",
    "secoes": [
     "B",
-    "C-internacional",
     "D-america_latina"
    ],
-   "veiculos": 5,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-24T20:08:16Z",
-   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQS3pvRTNZV0VHMXNjdl9zX0NyR0RMQi0tV09STVhlM0pOUkNmTEJER3hnNi1rYkNEbXlWa3RReHp3dWV4dHY5WkZMYjBnOGEtdHpOaG1sMEVxTXZPaGpKTWJMNmNycUgyd3RITHBXaUxCR201SmRyVHJmMWtGRFJHN3UxRTJCemMwdTZUdVFBdjNpcW5DdHIyUEsxNllLSXVja0w5LWQ1aFFfVkdmRG1GREk3QXA?oc=5",
+   "veiculos": 42,
+   "veiculos_3h": 38,
+   "na_pauta_desde": "2026-11-24T16:09:26Z",
+   "link": "https://tvtnews.com.br/lula-nao-convida-milei-posse-retira-embaixador/",
    "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [],
+   "nota": 6,
+   "esquentou": true,
+   "lente": [
+    "milei"
+   ],
    "ia": {
     "editoria": "america_latina",
     "I": 2,
     "V": 2,
     "P": 1,
-    "formato": "feed",
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Queda na atividade econômica expõe fracasso das políticas ultraliberais de Milei.",
+    "motivo": "Milei fora da posse de Lula; tensão diplomática regional com apelo para viralizar.",
     "soma": 4
    }
   },
   {
    "manchete": "Presidente da Colômbia acusa dissidentes das Farc de atentado que devastou cidade",
    "secoes": [
+    "B",
     "D-america_latina"
    ],
    "veiculos": 6,
@@ -210,51 +210,35 @@
    }
   },
   {
-   "manchete": "A treta dos presidentes: Lula tira Milei da lista de convidados da posse após crise diplomática",
+   "manchete": "PGR evita cravar prazo sobre relatórios do Caso Master",
    "secoes": [
-    "D-america_latina"
-   ],
-   "veiculos": 3,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-24T20:14:47Z",
-   "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNQkF2aWpseVBfd183ZjdMNXlueUdXejlmOHk0cnRrcEtBdTRjeXVnNzhRSzhjWEI1QjZROXJ4b25wZmx0NWFtWTBuQ1VpMmVwczBWbFcwRVNNdHItTGlTbHI1NHBfcGJGSlpnYVZhelQ4azdPZUNMQWtkZ01Xc0dZTVJISXRnZFUtU2hvSWpzRXVDdlcwRWlaUm9OMjFRODlveXFHaUJpbjU1YUMtT1VjaEZrX1JKVWpQRmRKRzB0cGY2azh5TUN4RWkyMXZEd3pDa0hUbzRVZzl1Wl9MbFdVcy1JMHo4dnRXUzM0?oc=5",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "milei"
-   ]
-  },
-  {
-   "manchete": "Região Sul tem alerta de grande perigo para tempestades nesta terça-feira (24)",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 15,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-23T20:09:08Z",
-   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/regiao-sul-tem-alerta-de-grande-perigo-para-tempestades-nesta-terca-feira-24.shtml",
-   "editoria": "educacao",
-   "nota": 5,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Alerj prepara votação de reajuste para governador, vice e secretários; salário de Ruas deve chegar a R$ 36 mil",
-   "secoes": [
-    "C-nacional"
+    "B"
    ],
    "veiculos": 5,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-24T20:14:47Z",
-   "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPV05aVWcycEdXdnpEMjhuVVh0cml4TXpCR04td0JZanpWaTRCaXN4R0RXSTBFMlREVlJVaHpTU3E2S2t1bC1EcWZ3R3gxejd6WUZlbGFHazVjS3gzcG1FTHVnLVF2NjM3WlR0bzJ1UXBuLVVQQ2Z3MjBaWlduV1RQZEdxSUFhSXdUWENTSmlkR0dPbFVKV29GaFdXak5IcW1QaWZiSlVqMkRINHV2Tkk2SUVmS0N2YlR6dVl2QzZLN1hjcmh6d2VfdXhaNWFtNWJJbjhmcExzWHZSZjhtR1ZSWEMwT0ZzWjBSWURXSWR0OTVldXPSAYICQVVfeXFMTWNWVTA0U3ZybDNWMkt2VUxtTVhtazI2cXVUdHZXdi11TlJjeDcxY0Iya1BBU2V5XzJtZVJILXdZWUVoLS1sMFdyQjdiS2F1cEFJNGtjSWRaeGZMaWVmYnJxMWJqRjNhdmR0OGFGU05wQk1rb1h0ME5ZaHJTcl85dzNWb1MyUXAyZ2RoYzNJajN3eVZyYUl2RVZ5bDQtX0IyS1ZyODlnU3h2VmhiRTdoVjJzTG00SkdTWkoySndWY0VCcEtYTXJFMGxBVU5wNlRnTkdMaV9sMk03SnNLUFFDRWMycmFWS0lndVpFcFg0VHd5TVZvU3NPamxlLUduSC1ZbU5n?oc=5",
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-23T18:08:31Z",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPa1RTV196TmFWcGtpWEs0NjBGRzkzb1lRTGdvWDdkeTBNNElUZm5kUVlwRS1JUXFmU3ZzdmVndHFPWVRBRmtkV3R6X1FtT2N6YWRNQThKMi1lMzhUWWpKWFZNZmVZZWRwS09LY2hQb1gtUnJzWG9nQUJGcnkxOWxObjFXWDhXeFZQRjlzaERveDlYQWlIXzdudw?oc=5",
    "editoria": "politica",
    "nota": 5,
    "esquentou": false,
    "lente": [
-    "salario",
-    "reajuste"
+    "master"
    ]
+  },
+  {
+   "manchete": "Martes, 24 de noviembre de 2025 (02:00 GMT)",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-24T06:09:41Z",
+   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQeW1xYnJxZ2FZTnZpR2s3MjhMSmZIdnpKblFzZWpzZmpyM0hfT29LbFhoTU1ZeDNRQlFDeXllLW9HMEhUQm9vQjRSU3VHS3hPZW1uZmU4MkxLeURXQ3dHbTU1MTI3QUNqZlA4M2ZScHZpeENvSUhjejlSQkhONXNLVS1wbFlsNnllUmRxZENzS05TcTN0TkE00gGyAUFVX3lxTE1mWGZGa2ZBM250VG16cXhQTER2aFNha0VTeTUzRnJGNmxiQ1hEcTg0cVlPRE5LenQyc0kwUWdxdUh4RkJZNFpwVm1PendiVmNKYVZYb2NEQlpESEItcVZoR1BKcHhRVEVFMzFEMHN0VHkybXd5VkdqTFhONThfeE5hUmliZDlSZHVianJZeG5MdTdFdWlWNkJkMWsyV2JIWFJiM0ZrekR4Qy0yaDNCU3h6U0E?oc=5",
+   "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": false,
+   "lente": []
   },
   {
    "manchete": "Bad Bunny e Roger Waters devem se apresentar na posse de Lula, diz jornal",
@@ -262,8 +246,8 @@
     "A",
     "B"
    ],
-   "veiculos": 86,
-   "veiculos_3h": 61,
+   "veiculos": 49,
+   "veiculos_3h": 23,
    "na_pauta_desde": "2026-11-24T12:08:39Z",
    "link": "https://g1.globo.com/mundo/noticia/2026/11/24/milei-desconvidado-posse-lula-diz-jornal.ghtml",
    "editoria": "gerais",
@@ -272,44 +256,43 @@
    "lente": []
   },
   {
-   "manchete": "Câmara aprova urgência de ajuste fiscal de até R$ 56 bilhões sob pressão do governo para acelerar votação",
+   "manchete": "Carla Zambelli pede redução de pena ao STF por tempo em que ficou presa na Itália",
    "secoes": [
     "B"
    ],
-   "veiculos": 141,
-   "veiculos_3h": 52,
-   "na_pauta_desde": "2026-11-24T20:14:47Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/23/camara-aprova-projeto-de-ajuste-fiscal.ghtml",
-   "editoria": "politica",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [],
-   "outras_manchetes": 1
-  },
-  {
-   "manchete": "Câmara tem votação do ajuste fiscal prevista para esta segunda-feira",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 53,
-   "veiculos_3h": 17,
-   "na_pauta_desde": "2026-11-24T20:14:47Z",
-   "link": "https://vermelho.org.br/2026/11/23/camara-aprova-proposta-de-ajuste-fiscal-do-governo-materia-segue-a-sancao/?utm_source=rss&utm_medium=rss&utm_campaign=camara-aprova-proposta-de-ajuste-fiscal-do-governo-materia-segue-a-sancao",
+   "veiculos": 20,
+   "veiculos_3h": 13,
+   "na_pauta_desde": "2026-11-23T18:08:31Z",
+   "link": "https://www.cartacapital.com.br/politica/defesa-de-zambelli-pede-ao-stf-abatimento-de-pena-por-prisao-na-italia/",
    "editoria": "politica",
    "nota": 4,
    "esquentou": false,
    "lente": []
   },
   {
-   "manchete": "Carla Zambelli pede redução de pena ao STF por tempo em que ficou presa na Itália",
+   "manchete": "Guimarães diz ter acordo para votar ajuste hoje na Câmara",
    "secoes": [
     "B"
    ],
-   "veiculos": 19,
+   "veiculos": 63,
    "veiculos_3h": 12,
-   "na_pauta_desde": "2026-11-23T18:08:31Z",
-   "link": "https://www.cartacapital.com.br/politica/defesa-de-zambelli-pede-ao-stf-abatimento-de-pena-por-prisao-na-italia/",
+   "na_pauta_desde": "2026-11-24T16:09:26Z",
+   "link": "https://g1.globo.com/politica/votacoes-no-congresso/noticia/2026/11/23/projeto-de-ajuste-fiscal-como-votaram-os-deputados-e-partidos.ghtml",
    "editoria": "politica",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "El Congreso de Brasil aprueba el paquete de ajuste fiscal del Gobierno de Lula para 2027",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 32,
+   "veiculos_3h": 8,
+   "na_pauta_desde": "2026-11-24T18:08:57Z",
+   "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOeWhvUUtvTU54dFVjcXB6UHBsQllGNDU0UDhjTEs0TnhWOVdlQkFaNTZPR0R2WERJTjNlbV9uZzdQdzV6VjlieC1qQmJnT0pZbmNYbVBZZDFZSDdsQXF4WGZGT1VCQkZzcUlvNWFCYkFEb01LWmxLVGU5MnB6dGZDeFNXVjV3SHBhWm1uLWQ0Y2ZpMmozcENCc2JlWVNDaWdKZ1FIclBUMEJvc2gtM0xMWEhub1laSndNSms1R2w0M2hCbGo5OUxjSjI4b2E2Rm1JMzRTYmdnaGnSAfMBQVVfeXFMTlNBaVNKMHhveVBJVFN1MnJTWVd1bUg0VUM2cXQzVjE3QjBrZXZ3MnczM1hpZEpUTThRd3paS0NDMjNUNTdHU0M4c0pIMkNlTUltUUZRLWhpc2xmQ0V4V0V3bGFyWUVqanJJWGdXQTd5UlNjcFZCOU5oMXpObGlsR0t5QnJFOTd4Rm9tcm1oZ2RSdC16TVVYWUU0Snd0SDEtVjBsTDZieTdaLVJ3S1NkZF9QeTFvaU8wV1gteDU4dnBzXy1PcDVjVDZNdGlqU2J5OE5WeGQzR0NFb1hfbFdpUG1ZNHR0TjI3QXlfaXlKMEVXaW1j?oc=5",
+   "editoria": "economia",
    "nota": 4,
    "esquentou": false,
    "lente": []
@@ -330,51 +313,52 @@
    "lente": []
   },
   {
+   "manchete": "Ministério do Trabalho publica portaria que regulamenta descansos da escala 5x2; entenda",
+   "secoes": [
+    "A",
+    "A",
+    "B"
+   ],
+   "veiculos": 20,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-24T12:08:39Z",
+   "link": "https://g1.globo.com/economia/noticia/2026/11/23/ministerio-do-trabalho-portaria-escala-5x2.ghtml",
+   "editoria": "gerais",
+   "nota": 4,
+   "esquentou": true,
+   "lente": []
+  },
+  {
+   "manchete": "Internacional x Vitória: onde assistir ao vivo e horário",
+   "secoes": [
+    "A",
+    "B"
+   ],
+   "veiculos": 19,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-24T05:33:00Z",
+   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPaGJBSExfOGpkVVN5aXhubC14aUZ1eGVsUTdvZFlBZ1BKamV6QTY4dVNxemNuUE5DMFlnR2hCNjVCSFlsSnF3ZmNZQWlxN0dfM0VaUDBSVFBnb0JBM0x6QWpBeDBONUlwX25QbUp0aDJPLVVCc3R3eWJDSl92MUxQTE9RZnExUi13WGh5c0xmTDBELXBEQ1FTZWx2VURIUQ?oc=5",
+   "editoria": "gerais",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
    "manchete": "Lula visita UFF nesta sexta-feira (27) para agradecer mobilização de estudantes em Niterói",
    "secoes": [
     "B"
    ],
    "veiculos": 11,
-   "veiculos_3h": 5,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-23T21:32:50Z",
-   "link": "https://www.metropoles.com/brasil/lula-vai-a-niteroi-rj-para-agradecer-jovens-por-vitoria-nas-eleicoes",
+   "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQSGxxZ3Y0Mzlxd2daTnpzV3l6UmFxLU1SQUlXN19GLUY2cDVuVHNTYWxCdFkwRS1Wc3lXN281NGlxa3NGTTJrNGYxY2tDRHVHbEEyczF2UmkxbFZ4YnRYSWpzaDF5ZTQ2dERGeWktSmxOb1ZTV0VoeFBCcV9wREtQcXRIM2UzZlNqT0xId0ZoMkY3TXdZWVNvU3pvZTB1OFZZSVE5UUdmN1hrV3VYd3VNeFFpZ0M2R0hsUlRmWldfQWszcVU3c0Q5dU4ydmg?oc=5",
    "editoria": "educacao",
    "nota": 4,
    "esquentou": false,
    "lente": []
   },
   {
-   "manchete": "El Congreso de Brasil aprueba el paquete de ajuste fiscal del Gobierno de Lula para 2027",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 24,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-24T18:08:57Z",
-   "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOeWhvUUtvTU54dFVjcXB6UHBsQllGNDU0UDhjTEs0TnhWOVdlQkFaNTZPR0R2WERJTjNlbV9uZzdQdzV6VjlieC1qQmJnT0pZbmNYbVBZZDFZSDdsQXF4WGZGT1VCQkZzcUlvNWFCYkFEb01LWmxLVGU5MnB6dGZDeFNXVjV3SHBhWm1uLWQ0Y2ZpMmozcENCc2JlWVNDaWdKZ1FIclBUMEJvc2gtM0xMWEhub1laSndNSms1R2w0M2hCbGo5OUxjSjI4b2E2Rm1JMzRTYmdnaGnSAfMBQVVfeXFMTlNBaVNKMHhveVBJVFN1MnJTWVd1bUg0VUM2cXQzVjE3QjBrZXZ3MnczM1hpZEpUTThRd3paS0NDMjNUNTdHU0M4c0pIMkNlTUltUUZRLWhpc2xmQ0V4V0V3bGFyWUVqanJJWGdXQTd5UlNjcFZCOU5oMXpObGlsR0t5QnJFOTd4Rm9tcm1oZ2RSdC16TVVYWUU0Snd0SDEtVjBsTDZieTdaLVJ3S1NkZF9QeTFvaU8wV1gteDU4dnBzXy1PcDVjVDZNdGlqU2J5OE5WeGQzR0NFb1hfbFdpUG1ZNHR0TjI3QXlfaXlKMEVXaW1j?oc=5",
-   "editoria": "economia",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Incubadora vai apoiar empreendimentos de afroturismo no país",
-   "secoes": [
-    "B",
-    "C-nacional",
-    "D-famosos"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-24T20:14:47Z",
-   "link": "https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-11/incubadora-vai-apoiar-empreendimentos-de-afroturismo-no-pais",
-   "editoria": "eleicoes",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Expectativa de vida em Cuba cai pela primeira vez em quase 80 anos, alerta OMS",
+   "manchete": "Argentina economic activity declines 1.20% in September",
    "secoes": [
     "B",
     "C-internacional",
@@ -382,8 +366,8 @@
    ],
    "veiculos": 4,
    "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-24T20:14:47Z",
-   "link": "https://g1.globo.com/mundo/noticia/2026/11/24/expectativa-de-vida-em-cuba-cai-pela-primeira-vez-em-quase-80-anos-alerta-oms.ghtml",
+   "na_pauta_desde": "2026-11-24T20:08:16Z",
+   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOdTVEWDlyRThDcGNxOWNxNDVfTFdEeVgxSjVCc201S0t1elN6cTRZQWlKTGkxVENtSDNySGZjazkxa2lfWXhmajVTZHFBYTBuRmpNLTIyVm5hcGZURHJ3UXRCVWVPMi1Bb3EyQzFVaXJkLUk4U0pWNnlzMW80LTdub21iUmlBZURQMERidFozaUZPZG5ETkFQaTFiZHVEbkdXSHJSNlNuY1M5WV91N2hTV3lZNTFjSEJMbWhSV3dJZFhBdw?oc=5",
    "editoria": "america_latina",
    "nota": 4,
    "esquentou": false,
@@ -401,6 +385,20 @@
    "editoria": "saude",
    "nota": 4,
    "esquentou": true,
+   "lente": []
+  },
+  {
+   "manchete": "Car bomb in Colombia injures at least 25 people on anniversary of peace deal",
+   "secoes": [
+    "C-internacional"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-24T20:21:41Z",
+   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOdkFtaFVHUXFMN1o5VExGN09fNmpSTFZEYjM5TkdiNXJhQWtmV01tZXZmMXRNTmhLa0ZEc2hlYk9xMl8yZ2ROUTd6Y2JlbWhwRXlqUTBUdGVtOGptUGFObHlIVmF0XzMyNGU4UDEwdkJZbG5WU3NCLVg2M0dqQ3RwUTlYV3dTZ1Jwd01BaWdkeG1rMjh0XzRVNHJiMFpsN1lPQ0N0MkMtVkstdG5vX3N6b1VNWEUxQVdLbFBUVFg3b1c5QQ?oc=5",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
    "lente": []
   }
  ],
@@ -424,24 +422,6 @@
    }
   },
   {
-   "manchete": "Venezuela revela una deuda de US$237.500 millones: buscan plan para resolver la situación",
-   "veiculos": 6,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-24T20:14:47Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 1,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Situação econômica da Venezuela diante da dívida externa e pressões internacionais.",
-    "soma": 3
-   }
-  },
-  {
    "manchete": "Colombia marks 10 years since FARC peace deal as De la Espriella threatens its future",
    "veiculos": 6,
    "veiculos_3h": 4,
@@ -461,8 +441,8 @@
   },
   {
    "manchete": "INSS inicia pagamento de novembro e do 13º de novos beneficiários; veja calendário",
-   "veiculos": 12,
-   "veiculos_3h": 4,
+   "veiculos": 20,
+   "veiculos_3h": 8,
    "na_pauta_desde": "2026-11-24T16:09:26Z",
    "esquentou": false,
    "ia": {
@@ -478,27 +458,9 @@
    }
   },
   {
-   "manchete": "Após derrota e fuga, Flávio Bolsonaro “derrete” nas redes sociais",
-   "veiculos": 3,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-24T14:09:57Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "eleicoes",
-    "I": 1,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Perda de engajamento de Flávio é relevante, mas com baixo impacto social direto.",
-    "soma": 3
-   }
-  },
-  {
    "manchete": "Caso Master: Kassio é relator da ação de Vorcaro contra relatoria de Fachin",
-   "veiculos": 27,
-   "veiculos_3h": 19,
+   "veiculos": 29,
+   "veiculos_3h": 20,
    "na_pauta_desde": "2026-11-24T16:09:26Z",
    "esquentou": true,
    "ia": {
@@ -510,6 +472,24 @@
     "repetido": false,
     "risco": "",
     "motivo": "Manobra burocrática da defesa no STF sobre o Caso Master tem alcance limitado.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Intelligence sharing offers a path to easing US-Mexico tensions, experts say",
+   "veiculos": 9,
+   "veiculos_3h": 9,
+   "na_pauta_desde": "2026-11-24T20:08:16Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Análise geopolítica pontual sobre EUA e México com baixo apelo local.",
     "soma": 2
    }
   },
@@ -532,10 +512,10 @@
    }
   },
   {
-   "manchete": "Intelligence sharing offers a path to easing US-Mexico tensions, experts say",
-   "veiculos": 8,
-   "veiculos_3h": 8,
-   "na_pauta_desde": "2026-11-24T20:08:16Z",
+   "manchete": "Venezuela reporta una deuda pública de más de 237.000 millones de dólares",
+   "veiculos": 6,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-24T20:14:47Z",
    "esquentou": false,
    "ia": {
     "editoria": "america_latina",
@@ -545,7 +525,7 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Análise geopolítica pontual sobre EUA e México com baixo apelo local.",
+    "motivo": "Dívida pública da Venezuela; baixo impacto direto no cotidiano do trabalhador brasileiro.",
     "soma": 2
    }
   },
@@ -568,20 +548,38 @@
    }
   },
   {
-   "manchete": "Pai de Vorcaro aponta omissão da Nelson Hungria e pede prisão domiciliar ao STF",
-   "veiculos": 9,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-24T16:09:26Z",
-   "esquentou": true,
+   "manchete": "Governo federal anuncia incubadora que apoiará até 50 iniciativas de afroturismo no país",
+   "veiculos": 5,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-24T20:14:47Z",
+   "esquentou": false,
    "ia": {
-    "editoria": "politica",
+    "editoria": "gerais",
     "I": 1,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Desdobramento secundário da defesa no Caso Master com apelo público restrito.",
+    "motivo": "Governo anuncia incubadora de afroturismo; iniciativa positiva mas de impacto restrito.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Expectativa de vida em Cuba cai pela primeira vez em quase 80 anos, alerta OMS",
+   "veiculos": 5,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-24T20:14:47Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "gerais",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Queda na expectativa de vida em Cuba; notícia internacional sem efeito direto no Brasil.",
     "soma": 2
    }
   }
@@ -593,8 +591,8 @@
     "A",
     "B"
    ],
-   "veiculos": 86,
-   "veiculos_3h": 61,
+   "veiculos": 49,
+   "veiculos_3h": 23,
    "na_pauta_desde": "2026-11-24T12:08:39Z",
    "link": "https://g1.globo.com/mundo/noticia/2026/11/24/milei-desconvidado-posse-lula-diz-jornal.ghtml",
    "editoria": "gerais",
@@ -632,8 +630,8 @@
     "A",
     "B"
    ],
-   "veiculos": 47,
-   "veiculos_3h": 8,
+   "veiculos": 44,
+   "veiculos_3h": 7,
    "na_pauta_desde": "2026-11-24T05:33:00Z",
    "link": "https://tvtnews.com.br/brasil-testara-vacina-cancer-2027-ministerio-saude/",
    "editoria": "saude",
@@ -666,11 +664,11 @@
    "triagem": "fora: crime ou tragedia (esfaque)"
   },
   {
-   "manchete": "Brasil terá novo streaming gratuito com filmes de vários países; veja como vai funcionar",
+   "manchete": "Brics anunciam streaming com filmes dos países do bloco",
    "secoes": [
     "A"
    ],
-   "veiculos": 3,
+   "veiculos": 2,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-24T18:08:57Z",
    "link": "https://operamundi.uol.com.br/cultura/brasil-anuncia-integracao-em-streaming-com-conteudo-de-paises-do-brics/",
@@ -709,7 +707,7 @@
     "A",
     "B"
    ],
-   "veiculos": 27,
+   "veiculos": 29,
    "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-24T05:33:00Z",
    "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/mendonca-manda-soltar-ex-numero-2-da-previdencia-e-mais-3-investigados-no-caso-do-inss.shtml",
@@ -781,14 +779,14 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Após derrota e fuga, Flávio Bolsonaro “derrete” nas redes sociais",
+   "manchete": "Moraes determina notificação de Flávio Bolsonaro por edital após denúncia da PGR",
    "secoes": [
     "A"
    ],
-   "veiculos": 3,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-24T14:09:57Z",
-   "link": "https://www.diariodocentrodomundo.com.br/lideres-evangelicos-vivem-crise-apos-derrota-de-flavio-bolsonaro/",
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-24T20:08:16Z",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOTHl6WUd1ZDR0QTRWQ0paSTQ5Q05ZcTBzczdOSzFPcTRoZjNKaUlxNTYzajl1MzJTZzVDSkVJNGdNNEVIM1VwU0tXSDdUS19VcW9LRGNaWlRXQkFINmxISXFKQWhBTUdGcFQxaVh4STJaZ25kc0VhbncxcGFKQ0VWc2tYdmRmQ0p6TlMxODl0T3FJZVhoZjczOWh4Y01Gc2RtZE5HUTFTZw?oc=5",
    "editoria": "eleicoes",
    "nota": 7,
    "parceiro": {
@@ -800,17 +798,17 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Em vitória de Lula, Câmara aprova ajuste fiscal sem mudanças",
+   "manchete": "Câmara aprova urgência de ajuste fiscal de até R$ 56 bilhões sob pressão do governo para acelerar votação",
    "secoes": [
     "A",
-    "A"
+    "B"
    ],
-   "veiculos": 6,
-   "veiculos_3h": 0,
+   "veiculos": 126,
+   "veiculos_3h": 60,
    "na_pauta_desde": "2026-11-24T20:14:47Z",
-   "link": "https://www.gazetadopovo.com.br/economia/camara-aprova-projeto-de-ajuste-fiscal-de-lula/",
-   "editoria": "eleicoes",
-   "nota": 4,
+   "link": "https://g1.globo.com/politica/noticia/2026/11/23/camara-aprova-projeto-de-ajuste-fiscal.ghtml",
+   "editoria": "politica",
+   "nota": 6,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-24T14:47:05Z",
@@ -860,14 +858,16 @@
   {
    "manchete": "Ministério do Trabalho publica portaria que regulamenta descansos da escala 5x2; entenda",
    "secoes": [
-    "A"
+    "A",
+    "A",
+    "B"
    ],
-   "veiculos": 2,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-24T18:08:57Z",
+   "veiculos": 20,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-24T12:08:39Z",
    "link": "https://g1.globo.com/economia/noticia/2026/11/23/ministerio-do-trabalho-portaria-escala-5x2.ghtml",
    "editoria": "gerais",
-   "nota": 2,
+   "nota": 4,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-24T15:12:20Z",
@@ -877,16 +877,35 @@
    "triagem": "candidato"
   },
   {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "politica",
+   "nota": 3,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-24T16:15:05Z",
+    "legenda": "Um projeto de lei apresentado na Câmara dos Deputados pretende garantir assistência jurídica especializada a policiais e outros agentes de segurança pública que",
+    "link": "https://www.instagram.com/p/DgIXGSrEgr0/"
+   },
+   "triagem": "candidato"
+  },
+  {
    "manchete": "Região Sul tem alerta de grande perigo para tempestades nesta terça-feira (24)",
    "secoes": [
     "A"
    ],
-   "veiculos": 15,
+   "veiculos": 12,
    "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-23T20:09:08Z",
    "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/regiao-sul-tem-alerta-de-grande-perigo-para-tempestades-nesta-terca-feira-24.shtml",
    "editoria": "educacao",
-   "nota": 5,
+   "nota": 4,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-24T17:15:04Z",
@@ -915,34 +934,14 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Fim da escala 6x1: governo anuncia fiscalização e multas; veja as novas regras - aRede",
-   "secoes": [
-    "A",
-    "B"
-   ],
-   "veiculos": 49,
-   "veiculos_3h": 11,
-   "na_pauta_desde": "2026-11-24T12:08:39Z",
-   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/confira-tudo-o-que-voce-precisa-saber-sobre-o-fim-da-escala-6x1.shtml",
-   "editoria": "economia",
-   "nota": 7,
-   "parceiro": {
-    "perfil": "brasilforadacaverna",
-    "quando": "2026-11-24T15:45:05Z",
-    "legenda": "O Ministério do Trabalho e Emprego publicou, nesta segunda-feira (23), uma portaria que estabelece regras complementares para a implementação da escala 5x2 e pr",
-    "link": "https://www.instagram.com/p/DgITqkYkQ2W/"
-   },
-   "triagem": "candidato"
-  },
-  {
-   "manchete": "Moraes determina citação de Flávio Bolsonaro por edital em processo por calúnia contra Lula",
+   "manchete": "Moraes chama Flávio de foragido e dá 15 dias para responder à denúncia contra Lula",
    "secoes": [
     "A"
    ],
-   "veiculos": 42,
-   "veiculos_3h": 1,
+   "veiculos": 39,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-24T20:08:16Z",
-   "link": "https://news.google.com/rss/articles/CBMiigJBVV95cUxOUV9NUklJbmVkaGM1MnUzUU4weTFsU2dfXzh0Y2NnUVptMnVsZi1XY0JXN05IY2RTcW5aN2dCMFdwYW1rU3ZqV2NjdHRCY2ZlSlJIWnl5LUQ4ekhud29BUWFYa3Bnb19naERIWkwtTUZQNUpXQ0F0ejNvQk02Rmlwd3cySFFhZUxNRlN0bG94XzRJbzNRcEliQlVnVERTNWVtazdaOG1rV0Z3aGhUMk9WTncxeVNLZERKdXJ1cm1vcEFVbEI4bzNFTi1QYkZtVy1YWjRGb1ZmT1h4RWlsNFB1bWNKb2JVaWZFSUNlWjI5QTI3Q1Y3dHh5SkRWZ2IxVFRtZ0JIVkYyWVpHQQ?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPUUVXdjBpa1hVTE1hQXV3bFgxcmhvYmJQaktZdUhncHN2dW1tR3lSMXBlS0F1d25SbU40UkxuZ2hYUEVNUEJCZU1salFieUVpRTFLVldTSHBTd0NZZC15SFJ3dVRtOWo0ZmI4NS1idWZpbXBlMHNVakhMSE5lblJNVzh2Zmc0S2tDQTctWTJ6c0s4TkVvWVZHM3ZNemRYcmJvcDlpcm5CNk1IeXFMd2d3NEJqaF9RZklGT0ctd3RTUXhyNGl2d3NvZ2NxZ0hINmhKMkw1UXJn?oc=5",
    "editoria": "politica",
    "nota": 9,
    "parceiro": {
@@ -973,15 +972,14 @@
    "triagem": "fora: entretenimento (album)"
   },
   {
-   "manchete": "Nvidia restituye a Jensen Huang como director ejecutivo solo 11 días después de su renuncia",
+   "manchete": "Can Jensen Huang Return to Nvidia?",
    "secoes": [
-    "A",
-    "B"
+    "A"
    ],
-   "veiculos": 20,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-23T16:10:01Z",
-   "link": "https://www.bbc.com/mundo/articles/cm4gnx691zp5o?at_medium=RSS&at_campaign=rss",
+   "veiculos": 15,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-23T21:32:50Z",
+   "link": "https://www.nytimes.com/2026/11/23/business/dealbook/jensen-huang-nvidia.html",
    "editoria": "gerais",
    "nota": 4,
    "parceiro": {
@@ -1012,16 +1010,17 @@
    "triagem": "candidato"
   },
   {
-   "manchete": null,
+   "manchete": "Internacional x Vitória: onde assistir ao vivo e horário",
    "secoes": [
-    "A"
+    "A",
+    "B"
    ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
+   "veiculos": 19,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-24T05:33:00Z",
+   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPaGJBSExfOGpkVVN5aXhubC14aUZ1eGVsUTdvZFlBZ1BKamV6QTY4dVNxemNuUE5DMFlnR2hCNjVCSFlsSnF3ZmNZQWlxN0dfM0VaUDBSVFBnb0JBM0x6QWpBeDBONUlwX25QbUp0aDJPLVVCc3R3eWJDSl92MUxQTE9RZnExUi13WGh5c0xmTDBELXBEQ1FTZWx2VURIUQ?oc=5",
    "editoria": "gerais",
-   "nota": 1,
+   "nota": 4,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-24T15:00:03Z",
@@ -1033,15 +1032,14 @@
   {
    "manchete": "INSS começa a pagar 13º salário de aposentados e pensionistas nesta terça-feira",
    "secoes": [
-    "A",
-    "B"
+    "A"
    ],
-   "veiculos": 20,
-   "veiculos_3h": 7,
+   "veiculos": 14,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-24T16:09:26Z",
    "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPZUJXcXdHeC1VbVJNYmhzTzVFT2hScXpVOWJMV0FJUEpwckh6aGhNZ2lGNmZUdll4cFZqZ2tSY0hkOThrbUdNVFBqM0RuMVFqVGU2a0cxVDJzQ01pVGIwbWQtSl9CSjBDUzEwU1Z2Qm1BNkQzQVRRMVZwM1Fwek9mYlJXWlJVZjdOa1J2ZHp0QjBYaWx5eTN5TFlfOEhMZkFhbnhwWm5OYmtucUxiekJmVHRtdlpnWU02TjFOVXNacGEwdw?oc=5",
    "editoria": "economia",
-   "nota": 9,
+   "nota": 8,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-24T12:45:05Z",
@@ -1108,16 +1106,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Governo Lula lança concessão de fazendas e imóveis históricos à iniciativa privada",
+   "manchete": null,
    "secoes": [
     "A"
    ],
-   "veiculos": 2,
+   "veiculos": 0,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-24T20:14:47Z",
-   "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOQ0doSlNwUjRSRGZzLU5Ndm12ZzZuVjRZcDdJQzVYdS1sQ2dJLVdkLUpSMU9UcHBObEVyb09NX2JXYVYyeGdCQ24zSjYtZDQwQ3g3M2o1VkVKWXY5MFFMZEdBVWdua1l5b3dkRTlxeXRLUFFVODluc0NxdHZ2dDJpQzE2aEY4Q0FfLVNFT0FEYlhWVHFXSmRYMUF5Y211M0VIMWZlZzhCcWtzRnBXNGg2bE1PT2o2enJtZ25YTGNTR2hwdTB3LVVDWWttNHM5Wk84RndVSWx2VmdHQQ?oc=5",
+   "na_pauta_desde": null,
+   "link": null,
    "editoria": "gerais",
-   "nota": 2,
+   "nota": 1,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-24T11:30:05Z",
@@ -1187,27 +1185,27 @@
  "descartados_mais_quentes": [
   {
    "manchete": "Jair Bolsonaro tem pneumonia e segue internado na UTI, apesar de melhora clínica",
-   "veiculos": 67,
-   "veiculos_3h": 31,
+   "veiculos": 64,
+   "veiculos_3h": 30,
    "motivo": "sem editoria"
   },
   {
    "manchete": "Jensen Huang regresa a Nvidia: Wall Street se dispara y Trump y Musk celebran su retorno",
-   "veiculos": 34,
-   "veiculos_3h": 4,
+   "veiculos": 37,
+   "veiculos_3h": 5,
    "motivo": "sem editoria"
   },
   {
    "manchete": "Nota de pesar pelo falecimento do jurista Fábio Konder Comparato",
-   "veiculos": 27,
-   "veiculos_3h": 11,
+   "veiculos": 28,
+   "veiculos_3h": 9,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Justiça italiana volta a julgar extradição de Carla Zambelli nesta terça (24/11)",
+   "manchete": "La Copa América 2028 volverá a jugarse en Estados Unidos y cambiará de formato",
    "veiculos": 26,
-   "veiculos_3h": 23,
-   "motivo": "sem editoria"
+   "veiculos_3h": 7,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
    "manchete": "Cinco mulheres foram mortas por hora em 2025, aponta ONU",
@@ -1222,28 +1220,28 @@
    "motivo": "fora: esporte (gremio)"
   },
   {
+   "manchete": "Julgamento sobre extradição de Zambelli na Itália é adiado de novo",
+   "veiculos": 17,
+   "veiculos_3h": 14,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Justiça italiana volta a julgar extradição de Carla Zambelli nesta terça (24/11)",
+   "veiculos": 17,
+   "veiculos_3h": 13,
+   "motivo": "sem editoria"
+  },
+  {
    "manchete": "Papa Francisco relatou em diário ter visto o 'diabo': 'Não esquecerei olhos ameaçadores'",
    "veiculos": 17,
-   "veiculos_3h": 4,
+   "veiculos_3h": 5,
    "motivo": "sem editoria"
   },
   {
    "manchete": "Governo Trump bloqueia na OMC queixa do Brasil contra tarifaço",
    "veiculos": 17,
-   "veiculos_3h": 4,
+   "veiculos_3h": 3,
    "motivo": "repetido (20261124-1315-eua-barram-omc)"
-  },
-  {
-   "manchete": "Oficial: La Copa América se jugará en Estados Unidos con participación de las selecciones de Concacaf",
-   "veiculos": 16,
-   "veiculos_3h": 5,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "La Copa América 2028 volverá a jugarse en Estados Unidos y cambiará de formato",
-   "veiculos": 14,
-   "veiculos_3h": 4,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
   }
  ]
 }
