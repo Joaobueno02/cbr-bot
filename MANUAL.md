@@ -232,6 +232,11 @@ faz a pessoa mandar o NOSSO post, e não o da Folha. Ângulos da CBR, em ordem d
 5. **o explicador**: a notícia é complicada e a cobertura está confusa (carrossel "Entenda").
 Sem ângulo próprio e sem fato novo, o assunto que todo mundo já deu há mais de 24 h fica de fora.
 
+**Mesma pessoa no mesmo dia (regra do João, 24/11/2026)**: o 2º post do dia sobre a mesma figura (ex.: Flávio
+Bolsonaro) só sai com **fato processual ou oficial novo**: decisão, citação, intimação, denúncia, depoimento, documento
+ou ato de governo. Fala nova sobre o mesmo assunto (entrevista, live, discurso que repete a tese) não basta e vai para a
+legenda do próximo post com fato. Em 23/11, os 2 posts do Flávio tiveram 5 e 6 de alcance.
+
 **Crescimento (regra do João, 15/11/2026; vale acima do resto da seção onde conflitar).** Os seguidores vieram de Reels
 com rosto e conflito publicados cedo (Janones 9.015 e jato do Flávio 14.780 de alcance, os dois às 7h30) e pararam
 quando o volume caiu para 2 ou 3 posts por dia e a pauta virou economia sem rosto (alcance médio de 23, contra 371 em
