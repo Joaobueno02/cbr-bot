@@ -100,7 +100,8 @@ O dono é o João. Ele acompanha cada post pela notificação e pede para parar 
    - **Monitor da BFC/Luz**: `radar/parceiros.json` é atualizado a cada 20 min (alertas.yml). Se a
      seção A parecer atrasada, leia direto o parceiros.json (posts de hoje, com legenda e link);
    - **Movimentos sociais** (seção A2 da pauta; `radar/movimentos.json`, lido às 12h30, 18h30 e 21h30, meia hora depois dos picos de postagem deles):
-     MST, MTST, CUT, UNE, Apib, Sleeping Giants, Greenpeace Brasil (lista em `config.json` >
+     MST, MTST, CUT, UNE, Apib, Sleeping Giants, Greenpeace Brasil e **Jones Manoel** (@jones.manoel, desde 24/11/2026,
+     pedido do João: está na mídia e notícia dele rende) (lista em `config.json` >
      `movimentos`). É pauta que não sai em jornal: post deles é **ponto de partida**, nunca fonte
      única; confirme com veículo profissional ou fonte oficial (seção 3). Perfil com "erro" no
      movimentos.json = @ errado ou conta não comercial: avise o João no dossiê;
@@ -263,8 +264,14 @@ Ordem de cada pauta, de cima para baixo: **achou a notícia → apurou → escol
   referência (`radar/estouraram.json`);
 - +1 se vai sair entre 7h e 13h; -1 se vai sair entre 20h e 23h.
 Os dois caminhos:
-- **Reels** (`"reels": true`, layout de hoje, com trilha): **5 pontos ou mais e foto específica** (nota 5 ou mais).
-- **Feed quadrado** (`"formato": "quadrado"`, 1080 × 1080, sem `reels`): **menos de 5 pontos, ou foto genérica**. Na arte
+- **Reels** (`"reels": true`, layout de hoje, com trilha): **5 pontos ou mais**, com qualquer foto que passe no filtro de
+  qualidade (retrato da pessoa do título serve; a nota de especificidade só escolhe a melhor foto, não decide o formato).
+- **Reels sempre (regra do João, 24/11/2026)**, qualquer que seja a conta: notícia que envolve o **governo americano**
+  (Trump, Casa Branca, Departamento de Estado, tarifas, sanções), **Flávio Bolsonaro**, **Lula**, **André Janones**,
+  **Jones Manoel** ou o **ajuste fiscal** (PLP 299/2026, "plano Moretti", corte de benefícios fiscais). Na conta, esses
+  nomes valem como nome conhecido (+3).
+- **Feed quadrado** (`"formato": "quadrado"`, 1080 × 1080, sem `reels`): **só a notícia com menos chance de viralizar**
+  (menos de 5 pontos e fora da lista acima), ou foto que não serve no quadro vertical mesmo depois de trocar. Na arte
   vão só o chapéu (vira tarja) e o título; **não escreva `subtitulo`**: o que seria subtítulo vai inteiro para a legenda.
   Título de até ~90 caracteres (3 linhas no máximo; a conferência reprova a 4ª). O Story sai sozinho com a arte no meio.
 Carrossel continua pela regra dele (abaixo) e errata continua no feed de 4:5. Grave a conta no resumo da rodada (ex.:
@@ -526,8 +533,9 @@ filtro de qualidade:
   (Agência Brasil, Agência Senado, Agência Câmara, Flickr do STF, do Planalto, de ministérios e governos); (3) busca na web
   com nome, lugar e data, e Wikimedia só com foto recente. Quando o `fotos.json` trouxer `especificidade` (nota, motivos e
   o que o Gemini viu), confirme abrindo as 3 melhores com Read; a decisão é sua.
-- **Sem foto específica depois das três ondas:** a pauta sai no feed quadrado (nunca no Reels) com a melhor foto genérica
-  de boa qualidade, e o resumo da rodada registra "foto genérica". Grave em `post.json` o campo `foto_especificidade`
+- **Sem foto específica depois das três ondas:** a pauta sai com a melhor foto de boa qualidade (de preferência o retrato
+  da pessoa do título) e o resumo da rodada registra "foto genérica". O formato segue o termômetro (seção 2): desde
+  24/11/2026 (regra do João) foto genérica **não** manda a pauta para o feed quadrado. Grave em `post.json` o campo `foto_especificidade`
   (`{"nota": N, "motivos": [...], "onda": 1|2|3}`). O dossiê das 23h conta quantas fotos do dia foram específicas e quantas
   genéricas, e em que onda cada uma foi achada.
 
