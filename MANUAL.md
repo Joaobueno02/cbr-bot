@@ -32,7 +32,11 @@ O dono é o João. Ele acompanha cada post pela notificação e pede para parar 
    - **registro de rodadas** (desde 04/11/2026, se existir `bot/registrar_rodada.py`): a rodada curta é
      gravada sozinha pelo `bot/rodada_curta.py`; no fim da rodada completa, rode
      `python bot/registrar_rodada.py --tipo completa --candidatos N --publicados N --descartados-antes N
-     --descartados-depois N --sites "dominio1,dominio2" --ia-ok true|false`. Nos dois casos, commit e push
+     --descartados-depois N --sites "dominio1,dominio2" --ia-ok true|false`, com um `--descarte "<manchete>"` para cada
+     candidato da triagem descartado na rodada (a manchete exatamente como o `rodada_curta.py` mostrou; desde 24/11/2026,
+     pedido do João). O `rodada_curta.py` não conta de novo, no mesmo dia, o que já foi descartado, salvo se ganhou
+     veículos (pelo menos 2 e 10%); essas manchetes aparecem como "já descartado hoje" e não pedem nova avaliação.
+     Pauta que você só adiou (ex.: esperando o resultado de uma votação) não vai em `--descarte`. Nos dois casos, commit e push
      só de `registro/rodadas.jsonl` (é gerado por script; o resto de `registro/` continua intocável). O
      dossiê das 23h conta rodadas curtas, descartes, sites bloqueados e quedas do Gemini por esse arquivo.
 1. `git pull`. Leia `registro/posts.jsonl` (o que já saiu) e a fila (`fila/*/post.json`).

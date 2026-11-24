@@ -8,6 +8,9 @@ Uso: python bot/rodada_curta.py            (janela padrão: 65 min)
 
 Saída: a primeira linha é "VEREDITO: CURTA" ou "VEREDITO: COMPLETA"; depois os motivos e, em poucas
 linhas, os itens que a rodada precisa olhar (candidatos novos, rebaixados/descartes quentes a conferir).
+Candidato descartado hoje por uma rodada completa (campo "descartes" de registro/rodadas.jsonl, gravado pelo
+bot/registrar_rodada.py --descarte) não conta como novo nem como "esquentou", a não ser que tenha ganhado
+veículos desde o descarte (pelo menos GANHO_MINIMO e 10%). Ele aparece numa linha "já descartado hoje".
 Na rodada curta grava uma linha em registro/rodadas.jsonl (bot/registrar_rodada.py); a rodada completa
 chama o bot/registrar_rodada.py no fim, com os números dela.
 """
@@ -22,6 +25,47 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent.parent
 BRT = timezone(timedelta(hours=-3))
 PENDENTES = {"renderizar", "renderizado", "erro_render", "erro_publicacao", "publicar"}
+GANHO_MINIMO = 2      # veículos novos que reabrem um candidato descartado hoje
+SEMELHANCA = 0.7      # parte das palavras em comum para dizer que é a mesma manchete
+
+
+def descartes_de_hoje(local: datetime) -> list[dict]:
+    """Manchetes descartadas hoje (Brasília) pelas rodadas completas, com os veículos na hora do descarte."""
+    from registrar_rodada import normalizar
+    hoje, saida = local.strftime("%Y-%m-%d"), []
+    try:
+        linhas = (RAIZ / "registro/rodadas.jsonl").read_text(encoding="utf-8").splitlines()
+    except Exception:
+        return saida
+    for ln in linhas:
+        try:
+            r = json.loads(ln)
+        except ValueError:
+            continue
+        if not str(r.get("hora_brasilia", "")).startswith(hoje):
+            continue
+        for d in r.get("descartes", []) or []:
+            saida.append({"palavras": set(normalizar(d.get("manchete", "")).split()),
+                          "veiculos": d.get("veiculos")})
+    return saida
+
+
+def ja_descartado(c: dict, descartes: list[dict]) -> bool:
+    """True se a manchete foi descartada hoje e não ganhou veículos que justifiquem reabrir."""
+    from registrar_rodada import normalizar
+    p = set(normalizar(c.get("manchete", "")).split())
+    if not p:
+        return False
+    for d in descartes:
+        q = d["palavras"]
+        if not q or len(p & q) / max(len(p), len(q)) < SEMELHANCA:
+            continue
+        antes, agora = d.get("veiculos"), c.get("veiculos")
+        if antes is None or agora is None:
+            return True
+        if agora - antes < max(GANHO_MINIMO, antes * 0.10):
+            return True
+    return False
 
 
 def iso(dt: datetime) -> str:
@@ -94,9 +138,22 @@ def main() -> None:
         ia = t.get("ia") or {}
         if isinstance(ia, dict) and ia.get("ok") is False:
             olhar.append(f"Gemini fora do ar ({ia.get('erro')}): dê você a nota aos candidatos")
-        novos = [c for c in t.get("candidatos", []) if (c.get("na_pauta_desde") or "") >= corte]
-        obrig = [c for c in t.get("obrigatorios", []) if (c.get("na_pauta_desde") or "") >= corte]
-        quentes = [c for c in t.get("candidatos", []) + t.get("obrigatorios", []) if c.get("esquentou")]
+        descartes = descartes_de_hoje(local)
+        repetidos: list[dict] = []
+
+        def filtrar(lista: list[dict]) -> list[dict]:
+            fica = []
+            for c in lista:
+                if ja_descartado(c, descartes):
+                    if c not in repetidos:
+                        repetidos.append(c)
+                else:
+                    fica.append(c)
+            return fica
+
+        novos = filtrar([c for c in t.get("candidatos", []) if (c.get("na_pauta_desde") or "") >= corte])
+        obrig = filtrar([c for c in t.get("obrigatorios", []) if (c.get("na_pauta_desde") or "") >= corte])
+        quentes = filtrar([c for c in t.get("candidatos", []) + t.get("obrigatorios", []) if c.get("esquentou")])
         if novos:
             motivos.append(f"{len(novos)} candidato(s) novo(s) na triagem")
         if obrig:
@@ -109,10 +166,13 @@ def main() -> None:
             par = (c.get("parceiro") or {}).get("perfil", "")
             olhar.append(f"- {(c.get('manchete') or '')[:110]} | {c.get('veiculos')} veíc. ({c.get('veiculos_3h')} em 3 h)"
                          f" | {nota}{' | ' + par if par else ''}")
+        for c in repetidos:
+            olhar.append(f"- já descartado hoje (sem veículos novos; ignore): {(c.get('manchete') or '')[:110]}"
+                         f" | {c.get('veiculos')} veíc.")
         # resgates possíveis: o Gemini ou a regra tiraram algo com muitos veículos nas últimas 3 h
-        resg = [c for c in t.get("rebaixados", [])
-                if (c.get("na_pauta_desde") or "") >= corte and c.get("veiculos_3h", 0) >= 3
-                and not (c.get("ia") or {}).get("repetido")]
+        resg = filtrar([c for c in t.get("rebaixados", [])
+                        if (c.get("na_pauta_desde") or "") >= corte and c.get("veiculos_3h", 0) >= 3
+                        and not (c.get("ia") or {}).get("repetido")])
         # descartes da regra não têm data de entrada: aparecem para conferir, mas não impedem a rodada curta
         desc = [c for c in t.get("descartados_mais_quentes", [])
                 if c.get("veiculos_3h", 0) >= 5 and "internacional" not in str(c.get("motivo", ""))
