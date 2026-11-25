@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-25T19:08:58Z",
- "pauta_quando": "2026-11-25T19:08:57Z",
+ "quando": "2026-11-25T19:26:40Z",
+ "pauta_quando": "2026-11-25T19:26:38Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,13 +9,13 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 21,
+  "avaliados_agora": 8,
   "falhas_antes": "gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in",
-  "pedidos_hoje": 18
+  "pedidos_hoje": 20
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 143,
- "novos_3h": 9,
+ "total_assuntos": 135,
+ "novos_3h": 11,
  "esquentaram": 5,
  "candidatos": [
   {
@@ -23,8 +23,8 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 76,
-   "veiculos_3h": 31,
+   "veiculos": 80,
+   "veiculos_3h": 35,
    "na_pauta_desde": "2026-11-24T16:09:26Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/24/ajuste-fiscal-horas-depois-de-aprovacao-na-camara-lula-sanciona-lei-que-preve-economia-de-ate-ate-r-56-bilhoes.ghtml",
    "editoria": "politica",
@@ -44,28 +44,30 @@
    }
   },
   {
-   "manchete": "Equipe econômica tem aval de Lula para envio de PEC e trabalha em novas medidas fiscais",
+   "manchete": "Trump prepara novo tarifaço contra 16 parceiros comerciais: Brasil fica de fora?",
    "secoes": [
     "B"
    ],
-   "veiculos": 21,
-   "veiculos_3h": 12,
-   "na_pauta_desde": "2026-11-25T12:09:21Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/25/lula-reune-ex-ministros-da-justica-para-discutir-nova-pasta-da-seguranca-publica.ghtml",
-   "editoria": "politica",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [],
+   "veiculos": 64,
+   "veiculos_3h": 28,
+   "na_pauta_desde": "2026-11-24T18:08:57Z",
+   "link": "https://www.gazetadopovo.com.br/mundo/trump-prepara-novo-tarifaco-que-vai-atingir-china-uniao-europeia-e-outros-paises-brasil-deve-ficar-de-fora/",
+   "editoria": "economia",
+   "nota": 5,
+   "esquentou": true,
+   "lente": [
+    "trump"
+   ],
    "ia": {
-    "editoria": "economia",
+    "editoria": "america_latina",
     "I": 3,
-    "V": 2,
+    "V": 3,
     "P": 2,
-    "formato": "carrossel",
+    "formato": "reels",
     "repetido": false,
     "risco": "",
-    "motivo": "Novas medidas de contenção fiscal em gestação com aval do governo federal.",
-    "soma": 5
+    "motivo": "Tarifaço de Trump afeta economia global e gera forte repercussão.",
+    "soma": 6
    }
   },
   {
@@ -75,8 +77,8 @@
     "B",
     "D-america_latina"
    ],
-   "veiculos": 64,
-   "veiculos_3h": 11,
+   "veiculos": 75,
+   "veiculos_3h": 16,
    "na_pauta_desde": "2026-11-24T16:09:26Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/24/brasil-decide-que-embaixador-brasileiro-na-argentina-nao-retornara-a-buenos-aires.ghtml",
    "editoria": "america_latina",
@@ -98,44 +100,41 @@
    }
   },
   {
-   "manchete": "Argentina entra em recessão técnica sob o governo de Javier Milei",
-   "secoes": [
-    "B",
-    "D-america_latina"
-   ],
-   "veiculos": 22,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-24T16:09:26Z",
-   "link": "https://www.cartacapital.com.br/mundo/argentina-de-milei-entra-em-recessao-tecnica-apos-dois-trimestres-de-retracao/",
-   "editoria": "america_latina",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "milei"
-   ],
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Argentina entra em recessão técnica sob Milei.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "PEC da imunidade de igrejas aguarda relator na CCJ do Senado",
+   "manchete": "Equipe econômica tem aval de Lula para envio de PEC e trabalha em novas medidas fiscais",
    "secoes": [
     "B"
    ],
-   "veiculos": 7,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-25T17:09:57Z",
-   "link": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/ccj-do-senado-aprova-pec-sobre-papel-da-uniao-no-financiamento-do-df",
+   "veiculos": 13,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-25T12:09:21Z",
+   "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxONU52VlRLemhtdzJLS1JDUjNlaXNqSmlsMHktbVEwaUk3cDN6NEU4MG1yaVRIdEtVdnJISm9XUEhtbEJsaDd6amcyNmhnN3YtTkhwZlp0c2xDSUp2LUNjd2tVRzdPc2tMaVUxdmMwZTBQaFEwTGVxeXN0aXpaWW1wQ1ppT3h5QlV4MzJPeGxMUXhvT1Y0amZDZjdhUFQ0MFUwNWZhV2hxeEd1Z1g3YTU1RWh1RW5kZjRBdGZjcjBfZ21qRVNXYndNRFFUbGRnQ1ZQVHhGcUN3a2w5UV94S1VHOERzLUIwanpxZDB0WVNDbw?oc=5",
    "editoria": "politica",
-   "nota": 5,
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Novas medidas de contenção fiscal em gestação com aval do governo federal.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Após Motta, Alcolumbre indica disposição para votar novo pacote fiscal do governo",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 12,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-11-25T19:26:38Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/25/lula-reune-ex-ministros-da-justica-para-discutir-nova-pasta-da-seguranca-publica.ghtml",
+   "editoria": "economia",
+   "nota": 4,
    "esquentou": false,
    "lente": [],
    "ia": {
@@ -143,10 +142,10 @@
     "I": 2,
     "V": 2,
     "P": 2,
-    "formato": "feed",
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Tramitação de proposta de isenção e privilégio fiscal para igrejas no Congresso.",
+    "motivo": "Negociação de pacote fiscal no Congresso afeta contas públicas.",
     "soma": 4
    }
   },
@@ -179,12 +178,39 @@
    }
   },
   {
+   "manchete": "Após oito meses estagnada, Argentina de Milei entra em recessão",
+   "secoes": [
+    "D-america_latina"
+   ],
+   "veiculos": 12,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-24T16:09:26Z",
+   "link": "https://www.cartacapital.com.br/mundo/argentina-de-milei-entra-em-recessao-tecnica-apos-dois-trimestres-de-retracao/",
+   "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "milei"
+   ],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Recessão na Argentina desmistifica a política econômica de Milei.",
+    "soma": 4
+   }
+  },
+  {
    "manchete": "Anvisa determina apreensão de suplementos vendidos na loja Four Fitness Suplementos",
    "secoes": [
     "B"
    ],
    "veiculos": 17,
-   "veiculos_3h": 10,
+   "veiculos_3h": 12,
    "na_pauta_desde": "2026-11-24T23:09:57Z",
    "link": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/anvisa-determina-apreensao-de-suplementos-alimentares-0",
    "editoria": "saude",
@@ -209,7 +235,7 @@
     "B",
     "C-nacional"
    ],
-   "veiculos": 10,
+   "veiculos": 11,
    "veiculos_3h": 8,
    "na_pauta_desde": "2026-11-25T17:09:57Z",
    "link": "https://g1.globo.com/politica/blog/andreia-sadi/post/2026/11/25/diretor-da-pf-diz-que-stf-e-pgr-ja-tem-todo-o-material-necessario-para-dar-encaminhamento-as-investigacoes-do-banco-master.ghtml",
@@ -238,8 +264,8 @@
     "B",
     "C-universidades"
    ],
-   "veiculos": 5,
-   "veiculos_3h": 5,
+   "veiculos": 6,
+   "veiculos_3h": 6,
    "na_pauta_desde": "2026-11-25T19:08:57Z",
    "link": "https://g1.globo.com/mg/centro-oeste/noticia/2026/11/25/paciente-com-mpox-foge-de-hospital-em-divinopolis-homem-e-procurado-pela-policia.ghtml",
    "editoria": "saude",
@@ -259,14 +285,15 @@
    }
   },
   {
-   "manchete": "PF mira esquema de ouro ilegal com movimentação de R$ 400 milhões; 4 pessoas são presas",
+   "manchete": "PF, Ibama e PRF fiscalizam garimpos e estaleiros de dragas em Rondônia",
    "secoes": [
-    "B"
+    "B",
+    "C-pesquisa"
    ],
-   "veiculos": 29,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-24T12:08:39Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://c-level.folha.uol.com.br/negocios/2026/11/operacao-contra-mineracao-ilegal-em-mg-tem-ex-gerente-da-anm-entre-os-alvos.shtml",
+   "veiculos": 6,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-25T19:08:57Z",
+   "link": "https://g1.globo.com/ro/rondonia/noticia/2026/11/25/pf-e-ibama-fiscalizam-areas-de-garimpo-e-estruturas-usadas-para-construir-dragas-no-rio-madeira-em-ro.ghtml",
    "editoria": "politica",
    "nota": 4,
    "esquentou": true,
@@ -279,57 +306,7 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "PF mira esquema de ouro ilegal.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Professores de SP recebem bônus de até R$ 25 mil em dezembro",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 13,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-25T12:09:21Z",
-   "link": "https://g1.globo.com/pi/piaui/trabalho-e-carreira/concursos/noticia/2026/11/25/prefeitura-processo-seletivo-inscricoes-gratuitas.ghtml",
-   "editoria": "educacao",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "educacao",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Professores de SP recebem bônus.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Em meio à alta do petróleo, governo deve prorrogar subvenção ao diesel por mais 30 dias, diz ministro",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 8,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-25T14:10:25Z",
-   "link": "https://g1.globo.com/economia/noticia/2026/11/25/em-meio-a-alta-do-petroleo-governo-deve-prorrogar-subvencao-ao-diesel-por-mais-30-dias-diz-ministro.ghtml",
-   "editoria": "politica",
-   "nota": 4,
-   "esquentou": true,
-   "lente": [],
-   "ia": {
-    "editoria": "economia",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Subvenção ao combustível impacta custos de transporte e inflação dos alimentos.",
+    "motivo": "Operação contra garimpo ilegal envolve órgãos federais.",
     "soma": 4
    }
   },
@@ -339,8 +316,8 @@
     "B",
     "C-nacional"
    ],
-   "veiculos": 3,
-   "veiculos_3h": 3,
+   "veiculos": 4,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-25T19:08:57Z",
    "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/colunas/painel/2026/11/coordenador-do-plano-de-governo-de-lula-diz-que-cortes-contrariam-pauta-que-venceu-eleicao.shtml",
    "editoria": "eleicoes",
@@ -362,94 +339,40 @@
    }
   },
   {
-   "manchete": "Brasil anuncia parceria com Universidade de Oxford para desenvolver vacina contra o câncer",
+   "manchete": "Javier Milei participará en la Cumbre del Mercosur en Uruguay y se cruzaría con Lula da Silva",
    "secoes": [
-    "B"
+    "B",
+    "C-internacional",
+    "D-america_latina"
    ],
-   "veiculos": 26,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-25T14:10:25Z",
-   "link": "https://iclnoticias.com.br/brasil-avanca-em-vacina-contra-o-cancer/",
-   "editoria": "saude",
-   "nota": 5,
+   "veiculos": 5,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-25T17:09:57Z",
+   "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOX0EwVmkxVEk4Z3ZFSTBBVG1LblNMS1FOUmhvU2JXYnFlM3ZJNElPbjh5NkM1ZUVXUS1xdl9Ra0lxZzZ5eldHcndxd2Uxc1lBUHFfV005TS0zLWhhdTg2SGNiNlZOdnJ0blFoVC0xVkZyYV9jTEd1dllKWUhQdzlNZFl4SWNhVGNWRmFzLUl5NlVOSnBDUnV0UzVuZEY5dUNyMHN0LTRITm5ucjl3M0JXZ21NTU90YnNHME1ZbHhBclBpN3h0dUNGR0p2NnhUSTlfTjV0cFp1bXdLSVFOYzJ0YXFUVjlvbXJ0cWdVc2t1d2_SAf8BQVVfeXFMT29FQWRCanZBYmpQajUyQV90RERNUHB0UVdYSEx6RXAzM3lUSTBjNnRaWjU4anlCcHl3bkFYd1ZVQTZZRWZZSHBCT2FUcXE5c2txajVCOFdpREhJX0Z6ZDZWSkotcUVFUFp2Z3FoajA5MVUzV3RLMWNfcWVhdUNlaG93YUphRGtBMWszdG9JRi1jRVN1d0EycXFoMThuVzh5NGJJOG1iZ2VKUDVuVVJQV2RUb3BBbTdIc3p2ZTA2ZHRyazRQUUlacE5uTHlTeUlXUHpSM2hlaENnZ2tXcE9WTW5HTWM3cm1ocGFhUW5CNWtlT2FMRUFlZXVFMHVCTFZn?oc=5",
+   "editoria": "america_latina",
+   "nota": 6,
    "esquentou": false,
-   "lente": [],
+   "lente": [
+    "milei"
+   ],
    "ia": {
-    "editoria": "saude",
+    "editoria": "america_latina",
     "I": 2,
     "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Parceria para vacina contra o câncer.",
+    "motivo": "Possível encontro entre Lula e Milei em cúpula regional em meio a tensões.",
     "soma": 4
    }
-  },
-  {
-   "manchete": "Haddad diz a Lula que não tem intenção de ser ministro",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 11,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-24T16:09:26Z",
-   "link": "https://www.metropoles.com/colunas/igor-gadelha/sem-haddad-camilo-desponta-como-franco-favorito-para-casa-civil-de-lula",
-   "editoria": "politica",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Rival pelo comando do Senado, Tereza Cristina se reúne com Alcolumbre",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 7,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-25T19:08:57Z",
-   "link": "https://noticias.uol.com.br/politica/ultimas-noticias/2026/11/25/rivais-pelo-comando-do-senado-alcolumbre-e-tereza-se-reunem.ghtm",
-   "editoria": "politica",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Mexico’s most powerful cartels adapt as arrests and leadership battles reshape their ranks",
-   "secoes": [
-    "B",
-    "C-internacional",
-    "D-america_latina"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-25T19:08:57Z",
-   "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNMGpvaDF0WnQ4QlVsZkhqM3VtMkFsQnRFa2ZNdnBDQlQweVBOd0xxQ3FaeFA3bUo2a0JIOWRXc2xIb0U3b0xtdlNTWUZjbzJoQTY3SzdXSFN4OHZ5YmZCeERWcjVxX3BITlJ6Zk1fZjBfaUprQ3B6azdBWjFVVng5T0FtT2VjaGg5RHc0VlFWbGRPNVQ3Y04xTU9rQ0NFdDM5VEdjN1pXWnc2UFVGNEJ1dndLM3kydk1jT1dPTEE2S1hUeUllV1NuWTRsQQ?oc=5",
-   "editoria": "america_latina",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
-  },
-  {
-   "manchete": "Alcolumbre diz que acordo de líderes pode permitir votação de PEC de ajuste fiscal ainda neste ano",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 15,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-25T19:08:57Z",
-   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/alcolumbre-diz-que-senado-pode-votar-novo-ajuste-fiscal-neste-ano-se-houver-apoio.shtml",
-   "editoria": "politica",
-   "nota": 4,
-   "esquentou": false,
-   "lente": []
   },
   {
    "manchete": "Anvisa proíbe venda e uso de água mineral Pura; veja quais embalagens foram afetadas",
    "secoes": [
     "B"
    ],
-   "veiculos": 14,
+   "veiculos": 13,
    "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-25T17:09:57Z",
    "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPSGRKMGVjZnpsTEdjMjBxLVlsczFrNkJOaXdMVDlvN1hQd1prQzBxTC16TGdJWS1rWHVwVVBSc2ZuQm5CZFNmMXFEUmxFM3AwR2w0M29wLTU5OHpiQnlOajRPbzRwT1VMeFV2UENXQU5BVXVzdC1QbG9lbjBEeXpHaGltM0FVME1zdS13X3NDMWdsY0FjUlU4SGptTTdJeENrT1NVcHpHSzRpM0pCUmZEU0dLQXl5RjJmczI3cmZJdXoyLWZ6dGRR?oc=5",
@@ -459,11 +382,25 @@
    "lente": []
   },
   {
-   "manchete": "Barroso defende indicação de mulher negra para o STF",
+   "manchete": "Anvisa determina apreensão de água mineral por falhas na fabricação",
    "secoes": [
     "B"
    ],
-   "veiculos": 7,
+   "veiculos": 10,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-25T17:09:57Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/anvisa-determina-apreensao-de-todos-os-lotes-de-agua-mineral-pura.shtml",
+   "editoria": "saude",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Barroso defende que Lula indique uma mulher negra para o STF",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 5,
    "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-24T22:09:03Z",
    "link": "https://jornalggn.com.br/noticia/lula-avalia-indicar-mulher-a-vaga-de-barroso-no-stf/",
@@ -471,13 +408,107 @@
    "nota": 4,
    "esquentou": false,
    "lente": []
+  },
+  {
+   "manchete": "Líder opositora Machado promete uma transição \"sem rancor\" na Venezuela",
+   "secoes": [
+    "B",
+    "C-internacional",
+    "D-america_latina"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-25T19:26:38Z",
+   "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNdHlPNUxWNloxWkZIU01IS0FBOU9aT01QeWlfS2xDbDNpU3RMOEIyLVN4N25zVjdCZ09ZVm5qb1J6U21iS2xkS2g4eDRiMHhlaXdOVmJpeVZiNkF2S3RuWGxyRnRWVGNySjFUR19TVW9fLVBOM21yUFR5dm5HU3gxUVhmaGFhUVhXb19NZl9vUE8wZmlQaDI0MlhnVDFHV3FwbkhnV281UWJzQ0I5NXpiSEQ4VWpET3VURHNhTE1hZkV0eDBROVFqdDFHSlZCUQ?oc=5",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Economia da Argentina entra em recessão técnica, estimam analistas",
+   "secoes": [
+    "D-america_latina"
+   ],
+   "veiculos": 14,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-24T16:09:26Z",
+   "link": "https://g1.globo.com/economia/noticia/2026/11/24/economia-da-argentina-encolhe-e-entra-em-recessao-tecnica-apontam-dados-preliminares.ghtml",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "CCJ do Senado dá aval para PEC sobre o Fundo Constitucional do DF",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 6,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-25T17:09:57Z",
+   "link": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/ccj-do-senado-aprova-pec-sobre-papel-da-uniao-no-financiamento-do-df",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "EE UU propone nuevos aranceles contra 14 socios comerciales, entre ellos China y la UE",
+   "secoes": [
+    "D-america_latina"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-25T14:10:25Z",
+   "link": "https://elpais.com/internacional/2026-11-25/ee-uu-anuncia-nuevos-aranceles-contra-14-socios-comerciales.html",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
   }
  ],
  "rebaixados": [
   {
-   "manchete": "Dívida externa da Venezuela chega a 242% do PIB do país",
-   "veiculos": 23,
+   "manchete": "Toma de rehenes en supermercado de Cartagena, Colombia; suspenden aterrizajes en aeropuerto",
+   "veiculos": 24,
    "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-24T18:08:57Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 2,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Caso policial internacional sem efeito direto no Brasil.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Rival pelo comando do Senado, Tereza Cristina se reúne com Alcolumbre",
+   "veiculos": 7,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-25T19:08:57Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "politica",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Bastidores da eleição para a presidência do Senado.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Dívida externa da Venezuela chega a 242% do PIB do país",
+   "veiculos": 28,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-24T16:09:26Z",
    "esquentou": false,
    "ia": {
@@ -489,6 +520,24 @@
     "repetido": false,
     "risco": "",
     "motivo": "Dívida externa da Venezuela.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "UFMT lança concurso para professores com salários de até R$ 14,2 mil",
+   "veiculos": 10,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-25T12:09:21Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "educacao",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Concurso público regional para docentes.",
     "soma": 2
    }
   },
@@ -511,42 +560,6 @@
    }
   },
   {
-   "manchete": "Morre aos 90 anos Fábio Konder Comparato, jurista dedicado à democracia e aos direitos humanos",
-   "veiculos": 12,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-25T19:08:57Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "gerais",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Falecimento do jurista Fábio Konder Comparato.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Javier Milei viaja hoy a Paraguay y podría cruzarse con Lula da Silva la semana próxima, en la cumbre del Mercosur",
-   "veiculos": 7,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-25T17:09:57Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Agenda de Milei e possível encontro com Lula.",
-    "soma": 2
-   }
-  },
-  {
    "manchete": "Seminário debate ações de combate à fome e garantia do direito à alimentação",
    "veiculos": 3,
    "veiculos_3h": 1,
@@ -565,27 +578,45 @@
    }
   },
   {
-   "manchete": "Governo de MT entrega 23 tratores e amplia apoio à agricultura familiar; veja vídeo",
-   "veiculos": 5,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-24T20:14:47Z",
+   "manchete": "Morre aos 90 anos Fábio Konder Comparato, jurista dedicado à democracia e aos direitos humanos",
+   "veiculos": 9,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-25T19:08:57Z",
    "esquentou": false,
    "ia": {
-    "editoria": "roca",
+    "editoria": "gerais",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Falecimento do jurista Fábio Konder Comparato.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "INSS passa a oferecer perícia médica e avaliação social em Santo Antônio do Descoberto (GO)",
+   "veiculos": 5,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-25T17:09:57Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "saude",
     "I": 1,
     "V": 1,
     "P": 0,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Governo de MT entrega tratores.",
+    "motivo": "Serviço do INSS local, baixo impacto nacional.",
     "soma": 2
    }
   },
   {
    "manchete": "Salvadoran migrant Kilmar Abrego Garcia leaves US for Spain",
    "veiculos": 7,
-   "veiculos_3h": 2,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-25T01:07:58Z",
    "esquentou": false,
    "ia": {
@@ -601,56 +632,20 @@
    }
   },
   {
-   "manchete": "PF diz que STF e PGR já têm todas as provas necessárias para avançar no caso Master",
-   "veiculos": 3,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-25T17:09:57Z",
+   "manchete": "Justiça do Trabalho mantém condenação da Volkswagen por escravizar trabalhador em fazenda no Pará",
+   "veiculos": 6,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-25T10:09:16Z",
    "esquentou": false,
    "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "feed",
-    "repetido": true,
-    "risco": "",
-    "motivo": "Mesma declaração da PF referente às provas do caso Banco Master.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Brasil profundiza el distanciamiento con Milei: Lula lo dejaría afuera de su asunción presidencial",
-   "veiculos": 29,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-24T18:08:57Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
+    "editoria": "roca",
     "I": 2,
     "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": true,
     "risco": "",
-    "motivo": "Mesmo fato da crise diplomática com Milei.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Governo Lula decide não enviar embaixador de volta à Argentina após novo ataque de Milei",
-   "veiculos": 9,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-24T16:09:26Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": true,
-    "risco": "",
-    "motivo": "Repete o tema da ausência de embaixador na Argentina.",
+    "motivo": "Volkswagen condenada por trabalho escravo.",
     "soma": 4
    }
   }
@@ -663,8 +658,8 @@
     "B",
     "D-america_latina"
    ],
-   "veiculos": 64,
-   "veiculos_3h": 11,
+   "veiculos": 75,
+   "veiculos_3h": 16,
    "na_pauta_desde": "2026-11-24T16:09:26Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/24/brasil-decide-que-embaixador-brasileiro-na-argentina-nao-retornara-a-buenos-aires.ghtml",
    "editoria": "america_latina",
@@ -756,11 +751,10 @@
   {
    "manchete": "Morre aos 90 anos Fábio Konder Comparato, jurista dedicado à democracia e aos direitos humanos",
    "secoes": [
-    "A",
-    "D-terra"
+    "A"
    ],
-   "veiculos": 12,
-   "veiculos_3h": 2,
+   "veiculos": 9,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-25T19:08:57Z",
    "link": "https://vermelho.org.br/2026/11/24/morre-aos-90-anos-fabio-konder-comparato-jurista-dedicado-a-democracia-e-aos-direitos-humanos/?utm_source=rss&utm_medium=rss&utm_campaign=morre-aos-90-anos-fabio-konder-comparato-jurista-dedicado-a-democracia-e-aos-direitos-humanos",
    "editoria": "roca",
@@ -795,40 +789,28 @@
  ],
  "descartados_mais_quentes": [
   {
-   "manchete": "Governo Trump deve anunciar novas tarifas sobre China, UE e outros países, diz jornal",
-   "veiculos": 62,
-   "veiculos_3h": 30,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
    "manchete": "Bolsonaro tem melhora em quadro de obstrução intestinal, mas segue sem previsão de alta",
-   "veiculos": 41,
+   "veiculos": 40,
    "veiculos_3h": 28,
    "motivo": "sem editoria"
   },
   {
    "manchete": "Moraes rejeita abater pena de Zambelli por tempo de prisão na Itália",
-   "veiculos": 38,
+   "veiculos": 40,
    "veiculos_3h": 2,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Posse de Lula terá Bad Bunny e Roger Waters; veja o que se sabe até agora",
+   "veiculos": 25,
+   "veiculos_3h": 5,
    "motivo": "sem editoria"
   },
   {
    "manchete": "24.11.2026 (Brasília-DF) Entrevista coletiva do pré-lançamento da Marca Brasil para a Copa Feminina de Futebol 2027, com a secretária Extraordinária da Copa do Mundo Feminina 2027, Juliana Agatte",
-   "veiculos": 22,
-   "veiculos_3h": 9,
+   "veiculos": 23,
+   "veiculos_3h": 8,
    "motivo": "fora: esporte (futebol)"
-  },
-  {
-   "manchete": "Bad Bunny e Roger Waters? Veja quem pode tocar na posse de Lula",
-   "veiculos": 19,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Gazeta Agora: relatório da PF omite mensagens secretas entre Vorcaro e Moraes",
-   "veiculos": 18,
-   "veiculos_3h": 4,
-   "motivo": "repetido (20261124-1415-pf-omite-moraes)"
   },
   {
    "manchete": "Real Madrid vs. PSV EN VIVO: sigue el minuto a minuto del partido de Champions League",
@@ -838,21 +820,33 @@
   },
   {
    "manchete": "Inscrições para concurso do IBGE com 27 mil vagas terminam nesta quarta; veja como participar",
-   "veiculos": 12,
-   "veiculos_3h": 2,
+   "veiculos": 11,
+   "veiculos_3h": 3,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "EDITAL Nº 08/2026 - CREDENCIAMENTO DOCENTE DO PROGRAMA DE PÓS-GRADUAÇÃO EM ARTES/ICA/UFPA",
-   "veiculos": 11,
+   "manchete": "ONU: 5 mulheres foram mortas por hora por parceiro ou parente em 2025",
+   "veiculos": 10,
    "veiculos_3h": 4,
    "motivo": "sem editoria"
   },
   {
+   "manchete": "Centrão prevê Flávio enfraquecido e Michelle fortalecida para 2030",
+   "veiculos": 10,
+   "veiculos_3h": 3,
+   "motivo": "sem editoria"
+  },
+  {
    "manchete": "Ataque aéreo israelense em Gaza mata diretor da segurança interna do Hamas",
-   "veiculos": 11,
+   "veiculos": 10,
    "veiculos_3h": 3,
    "motivo": "fora: crime ou tragedia (mata)"
+  },
+  {
+   "manchete": "Temporais deixam 3 mortos, 216 desabrigados e estragos no PR",
+   "veiculos": 9,
+   "veiculos_3h": 4,
+   "motivo": "fora: crime ou tragedia (mortos)"
   }
  ]
 }
