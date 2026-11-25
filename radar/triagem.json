@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-25T10:09:17Z",
- "pauta_quando": "2026-11-25T10:09:16Z",
+ "quando": "2026-11-25T12:09:22Z",
+ "pauta_quando": "2026-11-25T12:09:21Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -8,49 +8,125 @@
   "ia": "gemini",
   "ok": true,
   "erro": null,
-  "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 19,
-  "falhas_antes": null,
-  "pedidos_hoje": 4
+  "modelo": "gemini-3.5-flash",
+  "avaliados_agora": 15,
+  "falhas_antes": "gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-3.8-flash: HTTP 503 This model is currently experiencing high demand. Spikes in | gemini-3.8-flash: HTTP 503 This model is currently experiencing high demand. Spikes in",
+  "pedidos_hoje": 9
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 125,
- "novos_3h": 10,
- "esquentaram": 2,
+ "total_assuntos": 152,
+ "novos_3h": 8,
+ "esquentaram": 4,
  "candidatos": [
   {
-   "manchete": "Câmara aprova ajuste fiscal de Lula. Moraes se declara suspeito em ação dos EUA",
+   "manchete": "CNI entra com ação no STF contra decreto e portaria sobre escala 5x2",
    "secoes": [
     "B"
    ],
-   "veiculos": 202,
-   "veiculos_3h": 66,
-   "na_pauta_desde": "2026-11-24T05:33:00Z",
-   "link": "https://www.gazetadopovo.com.br/opiniao/bom-dia/camara-aprova-ajuste-fiscal-de-lula-moraes-se-declara-suspeito-em-acao-dos-eua/",
+   "veiculos": 22,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-11-25T03:35:41Z",
+   "link": "https://www.gazetadopovo.com.br/economia/cni-pede-suspensao-de-regras-do-governo-lula-para-escala-5x2/",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Ataque patronal via CNI contra a nova portaria de folgas.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Escala 5x2: ministro do Trabalho diz que regras para jornadas especiais devem ser publicadas até semana que vem",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 26,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-24T12:08:39Z",
+   "link": "https://jornalggn.com.br/economia/escala-5x2-regras-categorias-especiais/",
    "editoria": "politica",
    "nota": 4,
    "esquentou": false,
    "lente": [],
    "ia": {
-    "editoria": "politica",
+    "editoria": "economia",
     "I": 3,
     "V": 3,
-    "P": 3,
+    "P": 2,
     "formato": "reels",
     "repetido": false,
     "risco": "",
-    "motivo": "Aprovação de ajuste fiscal mobiliza grande volume de veículos.",
+    "motivo": "Anúncio de regras para a escala 5x2 é pauta prioritária para a classe trabalhadora.",
     "soma": 6
+   }
+  },
+  {
+   "manchete": "Anvisa proíbe venda de água mineral da marca Pura e determina apreensão de todos os lotes após inspeção sanitária",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 57,
+   "veiculos_3h": 13,
+   "na_pauta_desde": "2026-11-24T10:09:23Z",
+   "link": "https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/confira-a-partir-das-21h-desta-terca-24-o-resultado-do-concurso-3090-da-mega-sena.shtml",
+   "editoria": "saude",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "saude",
+    "I": 3,
+    "V": 3,
+    "P": 1,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Interdição de marca de água pela Anvisa é alerta de saúde pública com grande apelo.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Governo deve anunciar contenção de despesas no Orçamento mesmo após aprovação de ajuste fiscal",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 15,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-11-25T03:35:41Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/governo-lula-libera-r-34-bi-do-orcamento-apos-excluir-mais-despesas-da-meta-de-2026.shtml",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "orcamento"
+   ],
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Contenção de despesas no Orçamento ameaça investimentos sociais e serviços públicos essenciais.",
+    "soma": 5
    }
   },
   {
    "manchete": "Justiça do Trabalho mantém condenação da Volkswagen por escravizar trabalhador em fazenda no Pará",
    "secoes": [
-    "B",
     "D-terra"
    ],
-   "veiculos": 4,
-   "veiculos_3h": 2,
+   "veiculos": 3,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-25T10:09:16Z",
    "link": "https://reporterbrasil.org.br/2026/11/justica-do-trabalho-mantem-condenacao-da-volkswagen-por-escravizar-trabalhador-em-fazenda-no-para/",
    "editoria": "roca",
@@ -74,11 +150,10 @@
   {
    "manchete": "Desemprego depois dos 50 anos afeta pessoas licenciadas e com anos de experiência acumulados",
    "secoes": [
-    "B",
     "C-nacional"
    ],
-   "veiculos": 2,
-   "veiculos_3h": 2,
+   "veiculos": 3,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-25T10:09:16Z",
    "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOdGZjeEU5YlgwQ3ExV2hiSTRPVmhsN0ZwcW1aNm1MalRkTFlpdVd2aEVlNzloVmZ6MDNUT0MzaF9PQXI3RFNZcFJCMzJXOVdhMFZ6S05Gd2hEeUVhWkNKZV9obm40N2dVS3JNbDJ4eFZlV2cwRDJhQm9hQWEybl9ETU9keWVLalVCVklnampnR25Ta0V5VmxOMlh4OUpLWWlhWWdOUWVRNC1ra1RmLXVpaENobUZ1eG03dVBmVGhYSElJMUE2UFRnVUZyZXRpN0k?oc=5",
    "editoria": "economia",
@@ -100,42 +175,13 @@
    }
   },
   {
-   "manchete": "Trabalhador precisa de 84 horas de trabalho para comprar cesta básica em Rio Branco",
-   "secoes": [
-    "C-nacional",
-    "D-terra"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-25T10:09:16Z",
-   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPdU9Wd194Vjd1SmJpUHVFYnFCUlJpZHBYdjk4LUM2VXpLVEVYY0puQkYtRWJFdFVCSFBtQW9ZVmRfZ0U2dGpGRkZUMzJENWt6anBOeWJxRjEyTWxrVlZUVldvcHB6dUtUZ2NBMDIySXU0UWxPZ1o5X1hoaTZqNnFNcXMxcVJ6ZW82MDUyUUJtZWpRdzY1ODhfSWNfVnJUemc0eG9vTXJUamVNdDJtUENkUld2N2pJZHhiM1lQczlwLTdFM2M?oc=5",
-   "editoria": "roca",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "trabalhador",
-    "cesta basica"
-   ],
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Horas de trabalho necessárias para comprar cesta básica em Rio Branco.",
-    "soma": 5
-   }
-  },
-  {
    "manchete": "Lula desinvitó a Milei a su jura y confirmó que su embajador no vuelve a la Argentina",
    "secoes": [
     "B",
     "D-america_latina"
    ],
-   "veiculos": 39,
-   "veiculos_3h": 1,
+   "veiculos": 27,
+   "veiculos_3h": 5,
    "na_pauta_desde": "2026-11-24T18:08:57Z",
    "link": "https://www.nodal.am/2026/11/brasil-el-gobierno-de-lula-da-silva-retiro-definitivamente-a-su-embajador-en-buenos-aires-julio-bitelli-y-redujo-la-representacion-a-encargados-de-negocios/",
    "editoria": "america_latina",
@@ -157,12 +203,64 @@
    }
   },
   {
+   "manchete": "INSS inicia nesta terça pagamentos de novembro e libera parcela única do 13º para novos segurados",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 20,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-24T16:09:26Z",
+   "link": "https://www.infomoney.com.br/brasil/inss-vai-pagar-14-salario-em-2026-e-verdade-ou-boato/",
+   "editoria": "economia",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "inss"
+   ],
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Pagamento do 13º do INSS é de grande utilidade pública para aposentados e pensionistas.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Conservadores cristãos e classe D e E somam quase metade do eleitorado brasileiro, diz Quaest",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 12,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-24T16:09:26Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/24/segmentos-identitarios-quaest-2026.ghtml",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "esquentou": true,
+   "lente": [],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Perfil do eleitorado e tendências para o debate político.",
+    "soma": 4
+   }
+  },
+  {
    "manchete": "Kassio volta ao caso Master como relator de pedido de Vorcaro contra Fachin",
    "secoes": [
     "B"
    ],
-   "veiculos": 30,
-   "veiculos_3h": 4,
+   "veiculos": 33,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-24T10:09:23Z",
    "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/kassio-volta-ao-caso-master-apos-ser-sorteado-relator-de-pedido-de-vorcaro-contra-fachin.shtml",
    "editoria": "politica",
@@ -190,10 +288,10 @@
     "B",
     "D-america_latina"
    ],
-   "veiculos": 62,
-   "veiculos_3h": 4,
+   "veiculos": 78,
+   "veiculos_3h": 15,
    "na_pauta_desde": "2026-11-24T16:09:26Z",
-   "link": "https://tvtnews.com.br/lula-nao-convida-milei-posse-retira-embaixador/",
+   "link": "https://g1.globo.com/mundo/noticia/2026/11/24/milei-desconvidado-posse-lula-diz-jornal.ghtml",
    "editoria": "america_latina",
    "nota": 6,
    "esquentou": true,
@@ -213,154 +311,163 @@
    }
   },
   {
-   "manchete": "Major que estrangulou esposa foi beneficiado por reajuste na aposentadoria",
+   "manchete": "Presidente da Colômbia acusa dissidentes das Farc de atentado que devastou cidade",
    "secoes": [
-    "C-nacional"
+    "B",
+    "D-america_latina"
    ],
-   "veiculos": 2,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-25T10:09:16Z",
-   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQaDBoeVU4ZGpUeUEzUzlZcFRxY0IyRlB4V3pjaWZrSXlZRGJhNlZpYzk3ZlR6UGkxaEV0SlBHbzBISno1Z0FPWXVsYmZtbHdTRF9jRUROQTdMcEpTUFZBTG5XSjBvTU15aTgyTElFTEtNUGdwWWNURnBhTUtOdXpKbjk1UDlsNzA5eGhzVmJuTlU3Y1ZtN2lJNzlSS1AwN3RWSWtMYjRRYU5oVzNvVnBXbg?oc=5",
-   "editoria": "economia",
+   "veiculos": 9,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-24T05:33:00Z",
+   "link": "https://g1.globo.com/mundo/noticia/2026/11/24/presidente-da-colombia-acusa-dissidentes-das-farc-de-atentado-que-devastou-cidade.ghtml",
+   "editoria": "america_latina",
    "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "aposentad",
-    "reajuste"
-   ],
+   "esquentou": true,
+   "lente": [],
    "ia": {
-    "editoria": "gerais",
+    "editoria": "america_latina",
     "I": 2,
     "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
-    "risco": "",
-    "motivo": "Contradição: major agressor de esposa beneficiado por reajuste.",
+    "risco": "tragédia com vítimas",
+    "motivo": "Conflito político e atentado na Colômbia envolvendo o governo Petro e dissidências.",
     "soma": 4
    }
   },
   {
-   "manchete": "Norte e Nordeste dependem mais do SUS; em Boa Vista, 94% da população usa apenas a rede pública",
+   "manchete": "Lula indica que topa novas medidas fiscais por PEC, mas ainda discute 'timing' e alcance",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 10,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-25T12:09:21Z",
+   "link": "https://www.brasil247.com/brasilia/lula-reune-equipe-para-definir-escopo-do-ministerio-da-seguranca/",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Criminosos mantêm 25 reféns em supermercado na Colômbia; polícia é acionada",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-25T12:09:21Z",
+   "link": "https://www.rfi.fr/br/am%C3%A9ricas/20261125-opera%C3%A7%C3%A3o-policial-liberta-todos-os-ref%C3%A9ns-em-supermercado-de-cartagena-na-col%C3%B4mbia",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Empresário revistado em avião durante operação da PF: o que se sabe sobre os R$ 850 mil apreendidos no Piauí",
    "secoes": [
     "B",
     "C-nacional"
    ],
-   "veiculos": 4,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-25T10:09:16Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/equilibrioesaude/2026/11/norte-e-nordeste-dependem-mais-do-sus-em-boa-vista-94-da-populacao-usa-apenas-a-rede-publica.shtml",
-   "editoria": "saude",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [
-    "sus"
-   ]
-  },
-  {
-   "manchete": "REFORMA TRIBUTÁRIA: ALIMENTOS DA CESTA BÁSICA PODEM FICAR MAIS BARATOS EM 2027",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-25T10:09:16Z",
-   "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOWVc2OGlfUXJiZzNYcXNqT1JINzIwMDFERzhxYUREUHpxT2RONlFaRzRJQWFnR2o1dFJhUlQ4YnlIRHRTOVVlQ0RCbllYdG5IVFJORUYwVkY3NWpvU1FnLUV5cHBGb25IRHUySWJpb2U5U0JsOVJjazJhQmdmaFlabmZJU0QzQXhVVkdaeElLR210M1hHejFKVWZyY25BQ25VdUc3LXNTeVB1aGo0UzNDMER1ZHdKOE9RdHpfOXFFeGVJUjVLM2hDLVdOZEZlbGM?oc=5",
-   "editoria": "roca",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [
-    "cesta basica"
-   ]
-  },
-  {
-   "manchete": "Cultura do prato limpo ajuda a entender por que tanta gente come além da fome, e pesquisas mostram de onde vem o hábito",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-25T10:09:16Z",
-   "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQbGNUMkdKLUFubEdtRDVQbGNKd0c5am1NYlBycGk4WHk5RkdybDVOQTRXcWdacXZYekF4TjdMZE9YUnk0ZlN5dDgzdkp2X0hUZjlLNGtVYmloNmQteE8yVFIzRkRhVVpqNVVQNUZOWXE0VDVvREdIZjg1OThja19uS3Y2cERhdWJ4VXdPQm5nVFp3Q0JEQ1ZqM1FxTVhxX3FUcTlsNkdHbUpJWWlZVWptZ3dmMlgxYWlDUEdXLUI4dXl1THBZTnlDcmNVUkZaZ01EcmZ1SzNHUi1NSVlnUVpRV09VUGhEV3k5QW5Ybk1wdjR1cmJYUC1yYw?oc=5",
-   "editoria": "roca",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [
-    "fome"
-   ]
-  },
-  {
-   "manchete": "Justiça condena XP e assessoria por atraso em transferência de CDBs do Master que impediu cobertura do FGC",
-   "secoes": [
-    "C-nacional"
-   ],
-   "veiculos": 2,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-25T10:09:16Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/justica-condena-xp-e-assessoria-por-atraso-em-transferencia-de-cdbs-do-master-que-impediu-cobertura-do-fgc.shtml",
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-25T12:09:21Z",
+   "link": "https://g1.globo.com/pi/piaui/noticia/2026/11/25/empresario-pf-aviao-operacao.ghtml",
    "editoria": "politica",
-   "nota": 3,
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Brazil permanently recalls its ambassador to Buenos Aires amid ongoing bilateral crisis",
+   "secoes": [
+    "B",
+    "C-internacional",
+    "D-america_latina"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-25T12:09:21Z",
+   "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOak5DWnc0Z3NKQ1dhQ0p5eDZ3UkhDdm9RN3NhaFQxbFFtTUhvYXBDd1ZzOVh4eG9pRU1TYTctTjFZQ1lTMkw2X2owVVVGZkptczZVa3pDc2VqNXVFcGFSd0kwbThIbkdONjNPMmZSSmJEUnVWNHUybHN2X1VjM0lkYVFoelMtUmJibzU1d1l4NGVpUDZKOHc2c20xSGtVRUc5bEJnU096QUlHZ29KQTc4RVh3MEkzbndzX0ZyaEQzTlJSeVI3THJ2NVZfNXdSYmxBZUZMd3l4azBMUUU50gHwAUFVX3lxTFBrTU5VQVktZEw0RXFaOWVNMDRPUEd0WGx2Q2xLaWtKQWo0VVoyNnJCNnh6SHNPUjdBWTYzeVJsZU92S2xBQ2RvbEVyYy14cHRVUWU0dWxBQnNmLWZwZ0FVMElGaGJnaHVYdjNfaDF4N2tXc18xelVIS3F2S0RJNl8wRkZJLVhEMUh1Ym9leE1ncTNzdDhTOER4MjhvRlc2WDZJcURZRzc2bE5EdFpvMFFkUldiZU5EdG9HZGpPZWRRQzNLYkhPMnM2YmtlOXhyaFVDY0R5VnFRNzZYWTFqUlRZUDVsRVFMNWU3eDdKMnVzZw?oc=5",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Campinas adia licitação do transporte público para 2027 após decreto sobre escala 5x2",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-25T12:09:21Z",
+   "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQR2NXZHlmZnNabE92Qk9TcWhMSWE3RVhTR2NDeFJqbVZtSXc3MWVkS1pTTml0cTFuQjVBX1lXZDY0TXhJQTNnNkdHUHllZFZldFdiMFU3eUV3TnVPQ0xQTjhmdWdvYzUtZzFGUFZLaDBHYWpRS2wtbmhBRU1LLW9BbWVBQ2dxa21NcV9zODZrMzZnZ0U0SFh4Z09sRVJFYUhFQXd3cHMzSHo0eXRjUHA3allEb01WR3oybVNwZVd2SFhZUGdVLUk4ektJS292Y01YczN4bzZZaUJrZk5RUUM1TFFsWEPSAfMBQVVfeXFMTlFfQzZURWl1a0VINmNGeE5iM29CTktaaFR2cDZNODJzSjlQTmp5eWxaUjlSR2ljZTNVVDV3aUp2NUhpYTIxUlJ6WWV6V0YwRzZ5dDhGUi1CSmVyeGlWWUR4em1FdFJmT2NEMkQ4VEZlOEJhT3NGNHF6SHdyLThkQTQtOEllVzU4M0RZSGRlNWdtTzI0YzVnZmNqdFJkNmNIeExMMlRrYUQ0WGRNN3R5RlpaYmRyMGd3UTExSGRFcTBBT2w1QURFVkdKTzV5b1poeTg2TXh5MU8wRTdjRWw4ODQ0T0FsamdwVFBrTEhFajUzR05N?oc=5",
+   "editoria": "politica",
+   "nota": 4,
    "esquentou": false,
    "lente": [
-    "master"
+    "transporte publico"
    ]
   },
   {
-   "manchete": "CCBB abre exposição em Brasília com saberes tradicionais e experiências de saúde indígena",
+   "manchete": "Novas regras: Veja como serão as folgas com o fim da escala 6x1",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 8,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-24T12:08:39Z",
+   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/governo-publica-regra-que-evita-pagamento-extra-com-fim-da-escala-6x1-entenda.shtml",
+   "editoria": "economia",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "6x1"
+   ]
+  },
+  {
+   "manchete": "Fumaça de queimadas deixa qualidade do ar péssima em sete municípios do Amazonas",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 8,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-24T16:09:26Z",
+   "link": "https://g1.globo.com/am/amazonas/noticia/2026/11/25/manaus-tem-a-pior-qualidade-do-ar-do-pais-pelo-segundo-dia-seguido-interior-do-am-registra-nivel-pessimo.ghtml",
+   "editoria": "gerais",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "queimada"
+   ]
+  },
+  {
+   "manchete": "Grécia tem dia de greve para exigir aumentos salariais",
    "secoes": [
     "C-nacional"
    ],
-   "veiculos": 2,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-25T10:09:16Z",
-   "link": "https://g1.globo.com/df/distrito-federal/noticia/2026/11/25/ccbb-abre-exposicao-em-brasilia-com-saberes-tradicionais-e-experiencias-de-saude-indigena.ghtml",
-   "editoria": "saude",
+   "veiculos": 3,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-25T12:09:21Z",
+   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNRFJuTFpfMlZxR0ZXZnhZaTFuSnFKWDBRdGpoS21MNm56bzlfRHEyZ1YtaFk0d29ZQmJrS1UzdDlzWmdrajlOUlBnTUZiVGtsZHZ0c2M0OGtUM1RjUFlueklXUEVrVUVrX2UwRkMtNHNZV245U0g1TGttcm5iSzhqUHd4RjNMel9ja2VoUkJ5MXl6VWFNQUJVeExPUTFZdUdGWnNlb0NmcmU0LVpRRlJtaTRGd3FZQjFvdVE?oc=5",
+   "editoria": "economia",
    "nota": 3,
    "esquentou": false,
    "lente": [
-    "indigena"
-   ]
-  },
-  {
-   "manchete": "Como engenheiro teve Parkinson por respirar pó de grãos com agrotóxico por 20 anos",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-25T10:09:16Z",
-   "link": "https://reporterbrasil.org.br/2026/11/engenheiro-parkinson-respirar-po-graos-agrotoxico/",
-   "editoria": "roca",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [
-    "agrotoxic"
-   ],
-   "outras_manchetes": 1
-  },
-  {
-   "manchete": "Lula critica propaganda da Globo sobre fome e pede investigação de entidade",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-24T06:09:41Z",
-   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNQ2ZrM040eUVGcllROFJKX2p4Zzhpd1FiNFY0TmxuYzczNG1udXE1d01TSjdiRmdVcGpETUtTbjNPYTNrX1k2TmZldGE0OUVOMDRpQVFqb1pvQ0J0T1RjQmFDXy1sZDhMa2JFRFlZbGwyNTJfSFU5THBabHF2c09lMFd2cVFHdGxEdGJ3aUtFSEpra2dHbjh2MEJwdjRIWVU3UW0zRVJqOTU4UQ?oc=5",
-   "editoria": "roca",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [
-    "fome"
+    "greve"
    ]
   }
  ],
  "rebaixados": [
   {
-   "manchete": "Díaz-Canel recebe o diretor-geral da OMS e denuncia o impacto do bloqueio na saúde",
-   "veiculos": 13,
+   "manchete": "EUA pausam parceria militar no Equador após denúncias de violações dos direitos humanos",
+   "veiculos": 4,
    "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-24T23:09:57Z",
+   "na_pauta_desde": "2026-11-25T12:09:21Z",
    "esquentou": false,
    "ia": {
     "editoria": "america_latina",
@@ -370,140 +477,140 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Cuba e OMS discutem impactos do bloqueio econômico na saúde.",
+    "motivo": "Suspensão de cooperação militar dos EUA no Equador expõe denúncias de abusos governamentais.",
     "soma": 3
    }
   },
   {
-   "manchete": "Expectativa de vida em Cuba cai pela 1ª vez em quase 80 anos, alerta OMS",
-   "veiculos": 15,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-24T20:14:47Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 1,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Alerta da OMS sobre expectativa de vida em Cuba.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Anvisa proíbe venda da água mineral Pura por irregularidades na fabricação",
-   "veiculos": 45,
-   "veiculos_3h": 5,
-   "na_pauta_desde": "2026-11-24T10:09:23Z",
+   "manchete": "Fachin autoriza pai de Vorcaro a sair da prisão para exames",
+   "veiculos": 12,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-25T03:35:41Z",
    "esquentou": false,
    "ia": {
     "editoria": "gerais",
-    "I": 2,
-    "V": 1,
+    "I": 1,
+    "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Anvisa proíbe venda de água mineral por irregularidades.",
+    "motivo": "Desdobramento de investigação de elites sem apelo popular direto.",
     "soma": 3
    }
   },
   {
-   "manchete": "Lula visita UFF nesta sexta-feira (27) para agradecer mobilização de estudantes em Niterói",
-   "veiculos": 19,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-25T10:09:16Z",
+   "manchete": "PF faz operação contra lavagem de dinheiro com criptomoedas e R$ 4 bi são bloqueados; MC Ryan SP é alvo",
+   "veiculos": 16,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-24T12:08:39Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "gerais",
+    "I": 1,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "acusação de crime em investigação da PF",
+    "motivo": "Operação contra lavagem envolvendo famoso não afeta diretamente direitos dos trabalhadores.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Prefeito bolsonarista causa polêmica ao dizer a criança que não tirou foto com Lula: \"Sou hétero\"",
+   "veiculos": 12,
+   "veiculos_3h": 7,
+   "na_pauta_desde": "2026-11-25T03:35:41Z",
    "esquentou": false,
    "ia": {
     "editoria": "politica",
-    "I": 2,
-    "V": 1,
-    "P": 1,
+    "I": 1,
+    "V": 2,
+    "P": 0,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Visita de Lula à UFF para agradecer mobilização estudantil.",
+    "motivo": "Fala homofóbica de prefeito bolsonarista gera indignação, mas tem baixo impacto estrutural.",
     "soma": 3
    }
   },
   {
-   "manchete": "Venezuela reporta una deuda pública de más de 237.000 millones de dólares",
-   "veiculos": 10,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-24T20:14:47Z",
+   "manchete": "Alcolumbre ameaça anular voto do senador que quebrar sigilo de cédula na eleição do Senado",
+   "veiculos": 9,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-25T03:35:41Z",
    "esquentou": false,
    "ia": {
-    "editoria": "america_latina",
+    "editoria": "politica",
     "I": 1,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Dívida pública da Venezuela; baixo impacto direto no cotidiano do trabalhador brasileiro.",
+    "motivo": "Ameaça de anulação de voto em eleição interna do Senado tem baixo impacto social.",
     "soma": 2
    }
   },
   {
-   "manchete": "PL recua de candidatura própria e deve apoiar emedebista para presidir Câmara paulistana",
-   "veiculos": 2,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-25T10:09:16Z",
+   "manchete": "Um mês após derrota, Flávio aposta nos irmãos para romper isolamento político e quer Carlos como porta-voz no Senado",
+   "veiculos": 6,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-25T12:09:21Z",
    "esquentou": false,
    "ia": {
     "editoria": "politica",
     "I": 1,
-    "V": 0,
+    "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Movimentação partidária para presidência da Câmara municipal.",
-    "soma": 1
+    "motivo": "Estratégia familiar de Flávio Bolsonaro no Senado tem pouca relevância para a classe trabalhadora.",
+    "soma": 2
    }
   },
   {
-   "manchete": "Aos 21 anos, deputada federal Ana Elisa recebe Medalha Chiquinha Gonzaga na Câmara do Rio",
-   "veiculos": 5,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-25T03:46:13Z",
+   "manchete": "Defesa de Carla Zambelli pede ao STF abatimento de pena",
+   "veiculos": 40,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-25T03:35:41Z",
    "esquentou": false,
    "ia": {
-    "editoria": "politica",
+    "editoria": "gerais",
     "I": 1,
-    "V": 0,
-    "P": 1,
+    "V": 1,
+    "P": 0,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Homenagem a deputada federal jovem na Câmara.",
-    "soma": 1
+    "motivo": "Defesa de Carla Zambelli pede abatimento de pena no STF.",
+    "soma": 2
    }
   },
   {
-   "manchete": "Salvadoran migrant Kilmar Abrego Garcia leaves US for Spain",
-   "veiculos": 5,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-25T01:07:58Z",
+   "manchete": "UFMT abre concurso para contratação de professor",
+   "veiculos": 13,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-25T12:09:21Z",
    "esquentou": false,
    "ia": {
-    "editoria": "america_latina",
+    "editoria": "educacao",
     "I": 1,
-    "V": 0,
-    "P": 1,
+    "V": 1,
+    "P": 0,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Migrante salvadorenho deixa os EUA rumo à Espanha.",
-    "soma": 1
+    "motivo": "Abertura de concurso docente local tem impacto restrito e baixo apelo nacional.",
+    "soma": 2
    }
   },
   {
    "manchete": "Fim da escala 6x1: ministro recomenda que setores 'corram' para fechar acordo coletivo até dia 16 se quiserem escala diferente",
-   "veiculos": 18,
-   "veiculos_3h": 1,
+   "veiculos": 19,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-24T12:08:39Z",
    "esquentou": false,
    "ia": {
@@ -519,84 +626,218 @@
    }
   },
   {
-   "manchete": "Colombia president says 'all hostages rescued' from supermarket siege",
-   "veiculos": 15,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-24T18:08:57Z",
-   "esquentou": true,
+   "manchete": "Câmara aprova ajuste fiscal que pode gerar economia de até R$ 56 bilhões em 2027",
+   "veiculos": 29,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-24T05:33:00Z",
+   "esquentou": false,
    "ia": {
-    "editoria": "fora",
-    "I": 0,
-    "V": 0,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
+    "editoria": "economia",
+    "I": 3,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": true,
     "risco": "",
-    "motivo": "Crime comum em outro país, fora do foco editorial.",
-    "soma": 0
+    "motivo": "Fato já publicado anteriormente sobre a aprovação e envio do ajuste fiscal à sanção.",
+    "soma": 5
    }
   }
  ],
- "obrigatorios": [],
+ "obrigatorios": [
+  {
+   "manchete": "Governo Lula decide retirar embaixador brasileiro da Argentina",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-24T16:09:26Z",
+   "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/governo-lula-decide-nao-enviar-embaixador-de-volta-a-argentina-apos-novo-ataque-de-milei.shtml",
+   "editoria": "america_latina",
+   "nota": 6,
+   "parceiro": {
+    "perfil": "luzmanifesto",
+    "quando": "2026-11-25T10:25:32Z",
+    "legenda": "O governo Lula decidiu deixar Javier Milei fora da próxima posse presidencial e retirar definitivamente Julio Bitelli do cargo de embaixador na Argentina, segun",
+    "link": "https://www.instagram.com/p/DgKTnQtxWGb/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-25T10:00:08Z",
+    "legenda": "A aviação comercial brasileira atingiu um novo patamar histórico em 2026. Entre janeiro e outubro deste ano, mais de 85,7 milhões de passageiros viajaram em voo",
+    "link": "https://www.instagram.com/p/DgKQ-_niZDb/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Agroflorestas na Amazônia Armazenam até 219 Toneladas de Carbono por Hectare",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-24T10:09:23Z",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOY2NuQXhuNDAzQ2loRFVUSUxYclFFWmZXVjM0RWZDNWpCVzJ5V3FFazlBNkF2cWpyMnBDX1NNUVZzZ2pfS2xDY0J4QTJCcFd2LTlFcE5nTEEzVFZpTG1yV3BjdUVKN3Q0Vi03d0hXSDdlRkJfaWYzLWJwa0d6VnJMV21JdkZEMmxmalBiMUd2WDRXLTljUFFvQVFsbEgzeW1EN2pUSFR0QVQ4aTdFU0FHdjBtMy11TVBWcDNr?oc=5",
+   "editoria": "gerais",
+   "nota": 2,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-25T09:00:16Z",
+    "legenda": "Agroflorestas podem armazenar até 219 toneladas de carbono por hectare e apresentar temperaturas até 15°C menores, aponta pesquisa da Empresa Brasileira de Pesq",
+    "link": "https://www.instagram.com/p/DgKKIgejqWp/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Cleitinho mira fábrica da BYD em Minas após posse no governo",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-25T12:09:21Z",
+   "link": "https://www.congressoemfoco.com.br/noticia/131848/cleitinho-e-byd-avancam-em-negociacao-sobre-nova-fabrica-em-minas",
+   "editoria": "politica",
+   "nota": 3,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-25T03:01:06Z",
+    "legenda": "O governador eleito de Minas Gerais, Cleitinho Azevedo (Republicanos), avançou nas negociações com a montadora chinesa BYD para a instalação de uma fábrica de v",
+    "link": "https://www.instagram.com/reel/DgJg-xvBIkp/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-25T09:30:07Z",
+    "legenda": "Mais de um quarto dos répteis terrestres do mundo depende de habitats rochosos para sobreviver, mas esses ambientes permanecem amplamente negligenciados nas pol",
+    "link": "https://www.instagram.com/p/DgKNjEAiKz8/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Casa desaba na Vila Maria, em São Paulo, e fere mulher de 30 anos",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-25T12:09:21Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/casa-desaba-na-vila-maria-em-sao-paulo-e-fere-mulher-de-30-anos.shtml",
+   "editoria": "politica",
+   "nota": 3,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-25T11:00:11Z",
+    "legenda": "Uma operação coordenada pelo Ministério do Trabalho e Emprego (MTE) resgatou uma mulher de 59 anos submetida a condições análogas à escravidão por aproximadamen",
+    "link": "https://www.instagram.com/p/DgKX215jWpg/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-25T10:30:04Z",
+    "legenda": "Uma tempestade extrema de 129 milímetros em poucas horas provocou alagamentos repentinos em Colombo, capital comercial do Sri Lanka, no início de novembro. O ag",
+    "link": "https://www.instagram.com/p/DgKUaQujTLV/"
+   },
+   "triagem": "candidato"
+  }
+ ],
  "descartados_mais_quentes": [
   {
-   "manchete": "Justiça italiana volta a julgar extradição de Carla Zambelli nesta terça (24/11)",
-   "veiculos": 38,
-   "veiculos_3h": 2,
+   "manchete": "Jair Bolsonaro é diagnosticado com pneumonia e segue internado na UTI em Brasília",
+   "veiculos": 43,
+   "veiculos_3h": 4,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Congresso dos EUA pressiona Nvidia e governo Trump após retorno de Jensen Huang",
-   "veiculos": 23,
+   "manchete": "Trump prepara tarifaços contra China, UE e mais 14 países - União Europeia",
+   "veiculos": 40,
+   "veiculos_3h": 8,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
+  },
+  {
+   "manchete": "Relatório da PF deixa de fora mensagens e contratos de Vorcaro com família de Moraes",
+   "veiculos": 21,
+   "veiculos_3h": 4,
+   "motivo": "repetido (20261124-1415-pf-omite-moraes)"
+  },
+  {
+   "manchete": "Hamas afirma que Israel matou seu chefe de segurança interna em Gaza",
+   "veiculos": 18,
+   "veiculos_3h": 5,
+   "motivo": "fora: crime ou tragedia (matou)"
+  },
+  {
+   "manchete": "Aliado dos Bolsonaros deixa Departamento de Estado dos EUA",
+   "veiculos": 16,
    "veiculos_3h": 2,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Mega-Sena sorteia prêmio de R$ 65 milhões nesta terça-feira",
-   "veiculos": 16,
-   "veiculos_3h": 4,
-   "motivo": "fora: entretenimento (mega sena)"
-  },
-  {
-   "manchete": "Champions League hoje: veja os jogos e onde assistir ao vivo",
-   "veiculos": 15,
-   "veiculos_3h": 3,
-   "motivo": "fora: esporte (champions)"
-  },
-  {
-   "manchete": "Bruna Biancardi processa Luana Piovani por difamação após ser chamada de 'otária de carteira assinada', diz jornal",
+   "manchete": "Jensen Huang de retour à la tête de Nvidia, sous l’influence de Donald Trump",
    "veiculos": 14,
+   "veiculos_3h": 3,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Itaú Unibanco entra no Minha Casa, Minha Vida em meio a recorde histórico de lançamentos do programa",
+   "veiculos": 12,
    "veiculos_3h": 2,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Bad Bunny and Roger Waters Reportedly Set to Perform at Lula's Inauguration in Brasil, Tom Morello in Talks",
-   "veiculos": 14,
-   "veiculos_3h": 1,
+   "manchete": "Confiança do consumidor no Brasil recua a menor nível em 4 anos, diz FGV",
+   "veiculos": 10,
+   "veiculos_3h": 3,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "PT divulga nova 'Carta ao Povo Brasileiro' com prioridades para o Lula 4",
-   "veiculos": 13,
+   "manchete": "Chapecoense x Palmeiras hoje: horário, onde assistir, escalações e situação no Brasileirão",
+   "veiculos": 10,
    "veiculos_3h": 2,
-   "motivo": "sem editoria"
+   "motivo": "fora: esporte (palmeiras)"
   },
   {
-   "manchete": "Inmet emite alerta vermelho de grande perigo para tempestades no Sul do Brasil nesta terça-feira",
-   "veiculos": 9,
-   "veiculos_3h": 3,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "WhatsApp começa a liberar figurinhas com som; veja como funciona",
-   "veiculos": 6,
-   "veiculos_3h": 1,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Hugo Motta cobra de Lula maior presença do Centrão no novo governo",
-   "veiculos": 5,
-   "veiculos_3h": 3,
+   "manchete": "Justiça derruba decisão que suspendia parte das novas regras para vale-refeição e vale-alimentação",
+   "veiculos": 8,
+   "veiculos_3h": 5,
    "motivo": "sem editoria"
   }
  ]
