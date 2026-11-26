@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-26T10:09:06Z",
- "pauta_quando": "2026-11-26T10:09:05Z",
+ "quando": "2026-11-26T11:30:27Z",
+ "pauta_quando": "2026-11-26T11:30:26Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -10,65 +10,36 @@
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
   "avaliados_agora": 15,
-  "falhas_antes": "gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in",
-  "pedidos_hoje": 5
+  "falhas_antes": null,
+  "pedidos_hoje": 6
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 129,
- "novos_3h": 1,
- "esquentaram": 2,
+ "total_assuntos": 149,
+ "novos_3h": 7,
+ "esquentaram": 1,
  "candidatos": [
   {
-   "manchete": "Tarifaço de Trump: EUA propõem taxa de 10% sobre aviões brasileiros e aumento de imposto sobre açúcar",
+   "manchete": "EUA propõem nova leva de tarifas globais. Açúcar e aeronaves do Brasil entram na mira",
    "secoes": [
     "B"
    ],
-   "veiculos": 80,
-   "veiculos_3h": 15,
+   "veiculos": 74,
+   "veiculos_3h": 14,
    "na_pauta_desde": "2026-11-25T14:10:25Z",
-   "link": "https://g1.globo.com/economia/noticia/2026/11/25/eua-propoem-tarifas-mais-altas-sobre-importacoes-do-brasil.ghtml",
+   "link": "https://www.gazetadopovo.com.br/mundo/governo-trump-cogita-mais-tarifas-produtos-brasil/",
    "editoria": "economia",
-   "nota": 6,
+   "nota": 4,
    "esquentou": false,
-   "lente": [
-    "trump"
-   ],
+   "lente": [],
    "ia": {
     "editoria": "economia",
-    "I": 3,
-    "V": 3,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Tarifaço de Trump atinge aviação e açúcar brasileiros.",
-    "soma": 6
-   }
-  },
-  {
-   "manchete": "Trump deve anunciar novo pacote de tarifas contra parceiros; Brasil fica de fora",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 38,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-25T14:10:25Z",
-   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/eua-anunciam-novas-tarifas-de-ate-20-sobre-china-ue-e-mais-14-paises.shtml",
-   "editoria": "economia",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "trump"
-   ],
-   "ia": {
-    "editoria": "america_latina",
     "I": 3,
     "V": 3,
     "P": 2,
     "formato": "reels",
     "repetido": false,
     "risco": "",
-    "motivo": "Nova ofensiva comercial de Trump contra o Brasil gera alerta nacional.",
+    "motivo": "Novas tarifas dos EUA atingem diretamente a economia brasileira.",
     "soma": 6
    }
   },
@@ -77,12 +48,12 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 13,
-   "veiculos_3h": 2,
+   "veiculos": 15,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-25T17:09:57Z",
    "link": "https://www.congressoemfoco.com.br/noticia/131887/senado-aprova-projeto-que-torna-permanente-a-forca-nacional-do-sus",
    "editoria": "saude",
-   "nota": 4,
+   "nota": 5,
    "esquentou": true,
    "lente": [
     "sus"
@@ -100,12 +71,68 @@
    }
   },
   {
+   "manchete": "Relator do Orçamento de 2027 prevê R$ 57,5 bilhões em emendas e cortes na saúde e educação",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-26T02:29:45Z",
+   "link": "https://revistaforum.com.br/politica/relator-orcamento-cortes-universidades-farmacia-popular/",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "corte",
+    "orcamento"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 3,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Cortes na saúde e educação previstos no Orçamento.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Entenda o que é a Fictor, que tentou comprar o Master e é alvo de operação em SP",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 21,
+   "veiculos_3h": 20,
+   "na_pauta_desde": "2026-11-26T11:30:26Z",
+   "link": "https://c-level.folha.uol.com.br/negocios/2026/11/entenda-o-que-e-a-fictor-que-tentou-comprar-o-master-e-e-alvo-de-operacao-em-sp.shtml",
+   "editoria": "politica",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "master"
+   ],
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Operação policial sobre esquema financeiro e tentativa de compra de banco.",
+    "soma": 4
+   }
+  },
+  {
    "manchete": "Defesa de Vorcaro pede troca de Kassio na relatoria da ação contra Fachin",
    "secoes": [
     "B"
    ],
-   "veiculos": 23,
-   "veiculos_3h": 3,
+   "veiculos": 26,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-25T23:09:14Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/25/defesa-de-vorcaro-pede-troca-de-kassio-na-relatoria-da-acao-contra-fachin.ghtml",
    "editoria": "politica",
@@ -127,17 +154,72 @@
    }
   },
   {
-   "manchete": "PF mira esquema de ouro ilegal com movimentação de R$ 400 milhões; 4 pessoas são presas",
+   "manchete": "INSS: veja o que muda nas regras de aposentadoria em janeiro de 2027",
    "secoes": [
     "B"
    ],
-   "veiculos": 34,
+   "veiculos": 5,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-26T11:30:26Z",
+   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQYkh3XzFhSnV2OUdpY1liTDFMb2wxQm0yaVpiQ0oxY3ljQ25jdFJzRFN6MU1mRDJBdU5sY05WbkN6YzZYN0VlM1NBelNUYmhiUUlLZUs4dXNMMWlXeDBBeVo2UVJkTkhDa1Y2VWR2QzRZaEpNRDdoQTlRa0RUQjRMQ3NoNXFjdE1EYWZhUVJEYWg5Z1M0ZmtKNjR0Q1JVSXpXSlFN?oc=5",
+   "editoria": "economia",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "aposentad",
+    "inss"
+   ],
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 1,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Mudanças no INSS afetam diretamente o futuro de milhões de trabalhadores.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Governo Lula decide não enviar embaixador de volta à Argentina após novo ataque de Milei",
+   "secoes": [
+    "D-america_latina"
+   ],
+   "veiculos": 26,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-26T01:09:20Z",
+   "link": "https://www.gazetadopovo.com.br/republica/amorim-sinaliza-milei-nao-sera-convidado-posse-lula-janeiro/",
+   "editoria": "america_latina",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "milei"
+   ],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Crise diplomática entre Brasil e Argentina sob o governo Milei.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Operação investiga esquema de ouro ilegal com R$ 400 milhões",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 18,
    "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-25T12:09:21Z",
-   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://c-level.folha.uol.com.br/negocios/2026/11/operacao-contra-mineracao-ilegal-em-mg-tem-ex-gerente-da-anm-entre-os-alvos.shtml",
+   "link": "https://g1.globo.com/ba/bahia/noticia/2026/11/26/alemao-suspeito-de-violencia-domestica-e-preso-na-bahia.ghtml",
    "editoria": "politica",
    "nota": 4,
-   "esquentou": true,
+   "esquentou": false,
    "lente": [],
    "ia": {
     "editoria": "gerais",
@@ -147,7 +229,7 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "PF mira esquema de ouro ilegal.",
+    "motivo": "Esquema milionário de ouro ilegal na mira da PF.",
     "soma": 4
    }
   },
@@ -156,7 +238,7 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 23,
+   "veiculos": 25,
    "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-25T21:09:13Z",
    "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOc3FqdXc5UENSYVEtSXEzQVFNZmNlUjJ0eC0tYjJpUUVhQTR6eF8xUnpZbUxLUklGZTJRR0g0MnNYTlloNmEyTFVPZWFKeWlmdW5fZFQ2bV93cmcyLUtVdHN0Nnc4QlhtUWZsblgxN3JDeGdBQ2hWRmxHUG9ZSDFXY0k3QnBpTzRtU2lnblM4dEJJLXlzSVpsOEJpbVdyR09TQUF6SEYzUkk5c0FDMV9uWHBSWUlBWktKQjJHT3hFRHhXMXRSX1lnTzE1Z1hYcWQxS3dhVFh4QWoyakJERXFzS2tqU0Fwckp3b2JMdll2LTRaNUtkbVRDN2d6dkVNS1hDOHfSAZACQVVfeXFMT0owMlBJMmhTTWRZTDE5MG8tT2VNWnZ0N1hGRXBLcEt4Nl81aXZjSXB4ZnJIRnRQQnNZYjVFXzVlN1lHblJFeEk3ZEc0LVVyWEF3REhMOGRKLUdLcHlMWEt0dXNmOEJmLTlIeHpZX3luN01YSXNFdDdFRkR1bHFqSWk3V0x3azlYSDloNEl0eFhNbUEzSlMycXpkWnZBdDlDbHhwcmZ2eTFFdGdndU5OSUxnb2U2Y3I1WFJvQWxHYzE2X2g5VUxaeTMtTDNGY3B2dnNmazRMZGV0V0o4TFhkOTRpMmpJdnNaYmhWTnFiWkZyMnNfeGx1bDMxSmhqNHpYXzl6Rk9zbUlPX21idktxRXM?oc=5",
@@ -177,111 +259,136 @@
    }
   },
   {
-   "manchete": "Comissão aprova exigência de Filosofia e Sociologia no ensino médio",
+   "manchete": "PF faz operação contra mineração ilegal e autoriza bloqueio de R$ 2 bilhões",
    "secoes": [
     "B"
    ],
-   "veiculos": 15,
+   "veiculos": 9,
    "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-25T23:09:14Z",
-   "link": "https://www.congressoemfoco.com.br/noticia/131882/comissao-aprova-exigencia-de-filosofia-e-sociologia-no-ensino-medio",
-   "editoria": "educacao",
+   "na_pauta_desde": "2026-11-26T11:30:26Z",
+   "link": "https://www.metropoles.com/colunas/mirelle-pinheiro/pf-investiga-desvio-na-educacao-do-pa-justica-bloqueia-r-28-milhoes",
+   "editoria": "politica",
    "nota": 4,
    "esquentou": false,
    "lente": [],
    "ia": {
-    "editoria": "educacao",
+    "editoria": "gerais",
     "I": 2,
     "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Aprovação de Filosofia e Sociologia no ensino médio defende humanidades.",
+    "motivo": "Operação da PF bloqueia bilhões em esquema de mineração ilegal.",
     "soma": 4
    }
   },
   {
-   "manchete": "14º salário do INSS em 2026 não foi aprovado; veja quem recebe o 13º",
+   "manchete": "Assentamento do MST recebe concessão de terras em Castro - BNT",
    "secoes": [
-    "B"
-   ],
-   "veiculos": 8,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-26T02:55:27Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/inss-libera-13o-a-26-mi-de-segurados-em-novembro-e-dezembro-veja-quem-recebe.shtml",
-   "editoria": "economia",
-   "nota": 6,
-   "esquentou": false,
-   "lente": [
-    "salario",
-    "inss"
-   ],
-   "ia": {
-    "editoria": "economia",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Esclarece boato sobre 14º salário e reforça regras do 13º para aposentados.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Está difícil contratar, e governo não ajuda com Bolsa Família, diz CEO de fabricante de calçados Usaflex",
-   "secoes": [
-    "B",
-    "C-nacional"
+    "D-terra"
    ],
    "veiculos": 3,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-25T19:08:57Z",
+   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9sa0hkSlkxOGc1R1dXNXRWclJXLURnVUdlSGFaYmhtRUVKWUdwOGRHb3Q3cDZ4LW1nSGQ2Mi1tcUlSYnU3Y0ZnYWNMSWZDbWljaDg1N3JOVTZUSnl4NHZuX1ZPU0pWWllnSGZ4V0pUdWRzY1hq?oc=5",
+   "editoria": "roca",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "mst"
+   ]
+  },
+  {
+   "manchete": "Nunes Marques se “desimpediu” e deu voto decisivo em caso favorável a interesses de Vorcaro",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 2,
    "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-26T10:09:05Z",
-   "link": "https://c-level.folha.uol.com.br/c-level-entrevista/2026/11/esta-dificil-contratar-e-governo-nao-ajuda-com-bolsa-familia-diz-ceo-de-fabricante-de-calcados-usaflex.shtml",
-   "editoria": "economia",
+   "na_pauta_desde": "2026-11-26T11:30:26Z",
+   "link": "https://www.diariodocentrodomundo.com.br/pf-fachin-mensagens-nunes-marques-master-vorcaro/",
+   "editoria": "eleicoes",
    "nota": 3,
    "esquentou": false,
    "lente": [
-    "bolsa familia"
+    "vorcaro"
+   ]
+  },
+  {
+   "manchete": "Contrato previa cobrar dívida de helicóptero se Vorcaro entrasse em crise",
+   "secoes": [
+    "C-nacional"
    ],
-   "ia": {
-    "editoria": "economia",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "CEO culpa Bolsa Família por escassez de mão de obra barata.",
-    "soma": 4
-   }
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-26T11:30:26Z",
+   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQQk81dXhYZ2ZhWUhiX2YydUVpWkdadVItbG1EbnZrQW1hZHhsZGZpVlotQjBZQU9VLVhkMXhhUlpXSDUxdTVJX3A3MmVqQTV4MXYyTlpZOE5KVVhFLV9zQnRVM0EySTR6dG8xTUFjY01mU2xQZHQwVkxaaWdSQUN6Ykw1cGxsQllXMXhvLU44aWpMLTFMSWhJcGpnYmJEMmxpQTlsTUpwUDJRQko5TDJCUmxpZm41dFJPRWdLMkVaNXhCSU90?oc=5",
+   "editoria": "politica",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "vorcaro"
+   ]
+  },
+  {
+   "manchete": "Lindbergh Farias (PT) denuncia cortes de R$ 123 milhões em universidades e institutos federais no Orçamento; veja fala – Blog Jair Sampaio",
+   "secoes": [
+    "C-universidades"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-26T11:30:26Z",
+   "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPVTVidzljMVRqUEVYdm9vNkthbTVsa0JLYmJQUEd6aTBZWTJ1MW9lUUpBcEFJWE1pM2Q1N25UbDEzMFg5VkhvX0pRcktEZ2NtdU01VlI3aEFJeDJFbkhpR0pRUVh6TXlYTnRDeF9lYndsSy1LZm00RmZoLXZTa2NOT2tIT3diNm84eTBzdGtiZjBoZU50Q3BPN3czTk5IaVBCRHc0UmZGVjZCU2lGUUtlWDJxNGtsV0RXZHpjWDRnT0pLZEs5M3RFR1pZdm9Tdw?oc=5",
+   "editoria": "politica",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "corte",
+    "orcamento"
+   ]
+  },
+  {
+   "manchete": "Fazenda de Cascavel ocupada pelo MST durante governo Requião gera condenação milionária ao Paraná",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-26T11:30:26Z",
+   "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQaGZIMVRpcExPOEg5eXk2MUloZ3hxUjh2V3ZXMXgtN2l0bS1mSGctaTdZeThtVk5scDhmSmpsZHoyTXJqZDBqZTZBekxVanFUUmlYRVB6UmxxWTNSazIxMFM2Mk9iekNBcWFNOS05emJxa0R5RjdiRFdJMUdVcm0zck04SE9tQmRmdFYyS3diNHVxRGFXMlNhNDA1UXpNaVdMNWFWWG4wLVF3TUtBZkYybmhaUUg4SnY4Qnc1SW1YVmVsd3FYM3RpbHlQSE8?oc=5",
+   "editoria": "roca",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "mst"
+   ]
   }
  ],
  "rebaixados": [
   {
-   "manchete": "Acrimat repudia demarcação da Terra Indígena Kapôt Nhnore e alerta para prejuízo de R$ 110 milhões na economia regional",
+   "manchete": "O nome defendido por aliados de Lula para o STF",
    "veiculos": 5,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-25T21:09:13Z",
-   "esquentou": true,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-26T11:30:26Z",
+   "esquentou": false,
    "ia": {
-    "editoria": "roca",
+    "editoria": "politica",
     "I": 2,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Setor patronal rural ataca demarcação de terra indígena no Xingu.",
+    "motivo": "Negociações e disputas em torno de vaga no STF.",
     "soma": 3
    }
   },
   {
-   "manchete": "Pacientes de Oiapoque passam a ter consultas virtuais com especialistas pelo SUS",
-   "veiculos": 2,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-26T10:09:05Z",
+   "manchete": "Paraíba registra aumento de 66% no registro de exames na retina pelo SUS, aponta pesquisa",
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-26T11:30:26Z",
    "esquentou": false,
    "ia": {
     "editoria": "saude",
@@ -291,13 +398,31 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Expansão de atendimento especializado via SUS em região de fronteira.",
+    "motivo": "Aumento no atendimento de exames pelo SUS na Paraíba.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "PF e CGU combatem mineração ilegal e lavagem de dinheiro em Minas Gerais — Polícia Federal",
+   "veiculos": 13,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-25T12:09:21Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Operação da PF e CGU contra mineração ilegal.",
     "soma": 3
    }
   },
   {
    "manchete": "Ao Brasil, Paraguai promete restituir fundos da Itaipu no banco Ueno",
-   "veiculos": 14,
+   "veiculos": 12,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-25T21:09:13Z",
    "esquentou": true,
@@ -314,8 +439,26 @@
    }
   },
   {
+   "manchete": "Acrimat repudia demarcação da Terra Indígena Kapôt Nhnore e alerta para prejuízo de R$ 110 milhões na economia regional",
+   "veiculos": 6,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-25T21:09:13Z",
+   "esquentou": true,
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Setor patronal rural ataca demarcação de terra indígena no Xingu.",
+    "soma": 3
+   }
+  },
+  {
    "manchete": "CI analisa incentivo a biocombustível produzido pela agricultura familiar",
-   "veiculos": 3,
+   "veiculos": 4,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-25T23:09:14Z",
    "esquentou": false,
@@ -334,7 +477,7 @@
   {
    "manchete": "Ala de Valdemar admite que PL deve romper com Hugo Motta e teme 'anos de seca' na Câmara",
    "veiculos": 3,
-   "veiculos_3h": 1,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-26T10:09:05Z",
    "esquentou": false,
    "ia": {
@@ -346,6 +489,24 @@
     "repetido": false,
     "risco": "",
     "motivo": "Crise e rearranjo de forças na base do PL na Câmara.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Tarifa de água do Samae em Blumenau terá reajuste de 6,657%",
+   "veiculos": 5,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-26T11:30:26Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 1,
+    "P": 0,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Reajuste na tarifa de água em Blumenau.",
     "soma": 3
    }
   },
@@ -368,137 +529,83 @@
    }
   },
   {
-   "manchete": "Otoni tenta presentear Cabo Gilberto com \"peru do Lula\" no plenário",
-   "veiculos": 6,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-25T23:09:14Z",
+   "manchete": "Gobierno De la Espriella no continuará con gestiones para ingresar a los BRICS: Cancillería",
+   "veiculos": 9,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-26T01:09:20Z",
    "esquentou": true,
    "ia": {
-    "editoria": "politica",
+    "editoria": "america_latina",
     "I": 1,
     "V": 1,
-    "P": 0,
+    "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Baixo clero usa ironia barata com 'peru do Lula' no plenário.",
+    "motivo": "Colômbia recua sobre entrada nos BRICS.",
     "soma": 2
-   }
-  },
-  {
-   "manchete": "Unesp abre inscrições para ingresso via nota do Enem 2027",
-   "veiculos": 5,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-26T10:09:05Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "educacao",
-    "I": 1,
-    "V": 0,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Abertura de inscrições via Enem para universidade paulista.",
-    "soma": 1
-   }
-  },
-  {
-   "manchete": "Proteção a mulheres e crianças e combate à fome pautam Pequeno Expediente da CMM",
-   "veiculos": 1,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-26T10:09:05Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "gerais",
-    "I": 1,
-    "V": 0,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Pauta de debates sobre combate à fome em câmara municipal.",
-    "soma": 1
-   }
-  },
-  {
-   "manchete": "Real hoy: precio y a cuánto cotiza este miércoles 25 de noviembre de 2026",
-   "veiculos": 9,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-25T12:09:21Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "fora",
-    "I": 0,
-    "V": 0,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Cotapénio de moeda estrangeira sem relevância direta para o Brasil.",
-    "soma": 0
    }
   }
  ],
  "obrigatorios": [],
  "descartados_mais_quentes": [
   {
-   "manchete": "Haddad sinaliza que não pretende assumir ministério no quarto mandato de Lula",
-   "veiculos": 42,
-   "veiculos_3h": 3,
+   "manchete": "Haddad vai ficar fora do 1º escalão do novo governo Lula",
+   "veiculos": 65,
+   "veiculos_3h": 18,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Jair Bolsonaro tem pneunomia e segue internado",
-   "veiculos": 35,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Haddad acerta com Lula que não ocupará ministério; Camilo ganha força para Casa Civil",
-   "veiculos": 31,
+   "manchete": "Jair Bolsonaro tem melhora clínica, mas segue sem previsão de alta",
+   "veiculos": 39,
    "veiculos_3h": 6,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Lula reúne ministros e prepara nova etapa de medidas fiscais",
-   "veiculos": 25,
-   "veiculos_3h": 3,
-   "motivo": "sem editoria"
-  },
-  {
    "manchete": "PGR denuncia Gustavo Gayer por desvio de cota parlamentar",
-   "veiculos": 24,
-   "veiculos_3h": 3,
+   "veiculos": 35,
+   "veiculos_3h": 13,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Andy Taylor, guitarrista do Duran Duran, morre aos 65 anos",
-   "veiculos": 20,
+   "manchete": "Haddad acerta com Lula que não ocupará ministério; Camilo ganha força para Casa Civil",
+   "veiculos": 32,
+   "veiculos_3h": 5,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Governo lança marca e jingle para divulgar Copa do Mundo Feminina de 2027",
+   "veiculos": 23,
+   "veiculos_3h": 2,
+   "motivo": "fora: esporte (copa do mundo)"
+  },
+  {
+   "manchete": "Andy Taylor, guitarrista do Duran Duran, morre aos 65 anos de câncer",
+   "veiculos": 18,
    "veiculos_3h": 3,
    "motivo": "fora: crime ou tragedia (morre)"
   },
   {
-   "manchete": "Novo pacote de Lula vai mirar emendas, gastos tributários e supersalários, diz chefe da secretaria-geral",
-   "veiculos": 16,
-   "veiculos_3h": 3,
+   "manchete": "Aliados veem perda de articulação de Flávio Bolsonaro após fuga para os EUA",
+   "veiculos": 13,
+   "veiculos_3h": 7,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Trump e chefe da Otan pedem que Rússia evite ampliar guerra na Ucrânia",
+   "manchete": "Miss Universo 2026: Jennifer Barreto, de Porto Rico, faz história como a primeira mãe a vencer o concurso; Brasil fica no top 30",
    "veiculos": 12,
-   "veiculos_3h": 3,
-   "motivo": "fora: internacional sem Brasil nem América Latina"
-  },
-  {
-   "manchete": "Aliados veem perda de articulação de Flávio Bolsonaro após fuga para os EUA",
-   "veiculos": 9,
    "veiculos_3h": 2,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Confira o resultado da Dupla-Sena 3036 de hoje, quarta-feira, 25/11; prêmio é de R$ 15,3 milhões",
-   "veiculos": 8,
+   "manchete": "Jogos de quarta-feira na TV: veja onde assistir e horário das partidas desta quarta (25)",
+   "veiculos": 12,
+   "veiculos_3h": 2,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Lotomania 3003 hoje (quarta, 25/11) pode pagar R$ 2,8 milhões",
+   "veiculos": 11,
    "veiculos_3h": 2,
    "motivo": "sem editoria"
   }
