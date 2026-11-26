@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-26T13:08:58Z",
- "pauta_quando": "2026-11-26T13:08:57Z",
+ "quando": "2026-11-26T15:10:35Z",
+ "pauta_quando": "2026-11-26T15:10:33Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,226 +9,147 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 14,
-  "falhas_antes": null,
-  "pedidos_hoje": 7
+  "avaliados_agora": 19,
+  "falhas_antes": "gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in",
+  "pedidos_hoje": 9
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 140,
- "novos_3h": 10,
- "esquentaram": 1,
+ "total_assuntos": 144,
+ "novos_3h": 9,
+ "esquentaram": 2,
  "candidatos": [
   {
-   "manchete": "EUA propõem nova leva de tarifas globais. Açúcar e aeronaves do Brasil entram na mira",
+   "manchete": "Flávio Bolsonaro deixa dívida de R$ 5,5 milhões com marqueteiro após fuga para os EUA",
    "secoes": [
     "B"
    ],
-   "veiculos": 58,
-   "veiculos_3h": 11,
-   "na_pauta_desde": "2026-11-25T14:10:25Z",
-   "link": "https://www.gazetadopovo.com.br/mundo/governo-trump-cogita-mais-tarifas-produtos-brasil/",
+   "veiculos": 35,
+   "veiculos_3h": 19,
+   "na_pauta_desde": "2026-11-26T10:09:05Z",
+   "link": "https://www.intercept.com.br/2026/11/25/flavio-bolsonaro-deixa-divida-milhoes-marqueteiro-apos-fuga-eua/",
    "editoria": "economia",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 3,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Flávio Bolsonaro deixa dívida milionária com marqueteiro.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "IPCA-15: prévia da inflação sobe 0,22% em novembro, puxada por alimentos",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 20,
+   "veiculos_3h": 18,
+   "na_pauta_desde": "2026-11-25T14:10:25Z",
+   "link": "https://g1.globo.com/economia/noticia/2026/11/26/ipca-15-previa-da-inflacao-novembro.ghtml",
+   "editoria": "economia",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "IPCA-15 sobe em novembro puxado por alimentos.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "PGR denuncia Gustavo Gayer por desvio de cota parlamentar",
+   "secoes": [
+    "A",
+    "B"
+   ],
+   "veiculos": 46,
+   "veiculos_3h": 8,
+   "na_pauta_desde": "2026-11-26T01:09:20Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/25/pgr-denuncia-deputado-gustavo-gayer-ao-stf-por-esquema-de-desvio-de-cota-parlamentar-na-camara.ghtml",
+   "editoria": "politica",
+   "nota": 6,
+   "esquentou": true,
+   "lente": [],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 3,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "PGR denuncia Gustavo Gayer por desvio de cota.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Matrículas no ensino superior batem recorde de 10,6 milhões no Brasil; um em cada quatro jovens de 18 a 24 anos está na graduação",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 9,
+   "veiculos_3h": 8,
+   "na_pauta_desde": "2026-11-26T15:10:33Z",
+   "link": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-11/brasil-atinge-recorde-de-106-milhoes-de-matriculas-no-ensino-superior",
+   "editoria": "educacao",
    "nota": 4,
    "esquentou": false,
    "lente": [],
-   "outras_manchetes": 1,
    "ia": {
-    "editoria": "economia",
+    "editoria": "educacao",
     "I": 3,
-    "V": 3,
+    "V": 2,
     "P": 2,
-    "formato": "reels",
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Novas tarifas dos EUA atingem diretamente a economia brasileira.",
-    "soma": 6
+    "motivo": "Matrículas no ensino superior batem recorde.",
+    "soma": 5
    }
   },
   {
-   "manchete": "Haddad sinaliza a Lula que deve ficar fora do novo governo",
+   "manchete": "Brasil atinge recorde de alunos no ensino superior e mais pretos, pardos e indígenas nas federais pela 1ª vez",
    "secoes": [
     "B",
-    "D-america_latina"
-   ],
-   "veiculos": 39,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-26T01:09:20Z",
-   "link": "https://g1.globo.com/politica/blog/gerson-camarotti/post/2026/11/25/haddad-sinaliza-a-lula-que-deve-ficar-fora-do-novo-governo.ghtml",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "politica",
-    "I": 3,
-    "V": 3,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Saída de Haddad do governo movimenta o cenário político nacional.",
-    "soma": 6
-   }
-  },
-  {
-   "manchete": "PF mira 'piratas do minério' em MG, e Justiça autoriza bloqueio de até R$ 2 bilhões em operação; 8 pessoas foram presas",
-   "secoes": [
-    "B",
-    "D-terra"
-   ],
-   "veiculos": 45,
-   "veiculos_3h": 41,
-   "na_pauta_desde": "2026-11-26T11:30:26Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://c-level.folha.uol.com.br/financas/2026/11/operacao-mira-grupo-fictor-que-tentou-comprar-o-master-com-bloqueio-de-ate-r-43-bilhoes.shtml",
-   "editoria": "politica",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 3,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Operação contra garimpo ilegal afeta meio ambiente e gera grande repercussão.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Equipe de Lula não descarta convocação do Congresso em janeiro, no recesso, para aprovar PEC da 2ª etapa do ajuste fiscal",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 15,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-25T12:09:21Z",
-   "link": "https://g1.globo.com/politica/blog/valdo-cruz/post/2026/11/25/equipe-de-lula-nao-descarta-convocacao-do-congresso-em-janeiro-no-recesso-para-aprovar-pec-da-2a-etapa-do-ajuste-fiscal.ghtml",
-   "editoria": "politica",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "politica",
-    "I": 3,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Convocação do Congresso afeta contas públicas e ajuste fiscal.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Aposentados do INSS podem ganhar 14º salário após novo projeto de lei; proposta abrange 24 milhões de benefícios",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-25T21:09:13Z",
-   "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQeFNXTFNHcExMSkVDeTJXbFN2WFFQT1dzeWw1NXdRUm16ZHNSRzIzeVBqN3NXdGtUSDVPZzBiaVRUelNabVMxM1dLUWZyUUFlTEhGMHFfV2R1MHhEMzB5LVZ2OHNtRFRSUXNESlVhYmpwcEF6elh6OU9BUXB6SWNnc29B?oc=5",
-   "editoria": "economia",
-   "nota": 7,
-   "esquentou": false,
-   "lente": [
-    "salario",
-    "aposentad",
-    "inss"
-   ],
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Projeto de 14º salário afeta milhões de aposentados.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Defesa de Vorcaro pede troca de Kassio na relatoria da ação contra Fachin",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 31,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-25T23:09:14Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/25/defesa-de-vorcaro-pede-troca-de-kassio-na-relatoria-da-acao-contra-fachin.ghtml",
-   "editoria": "politica",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "vorcaro"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Disputa interna no STF envolve defesa de Vorcaro e relatoria de ação.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "INSS: veja o que muda nas regras de aposentadoria em janeiro de 2027",
-   "secoes": [
-    "B"
+    "C-nacional"
    ],
    "veiculos": 6,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-26T11:30:26Z",
-   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQYkh3XzFhSnV2OUdpY1liTDFMb2wxQm0yaVpiQ0oxY3ljQ25jdFJzRFN6MU1mRDJBdU5sY05WbkN6YzZYN0VlM1NBelNUYmhiUUlLZUs4dXNMMWlXeDBBeVo2UVJkTkhDa1Y2VWR2QzRZaEpNRDdoQTlRa0RUQjRMQ3NoNXFjdE1EYWZhUVJEYWg5Z1M0ZmtKNjR0Q1JVSXpXSlFN?oc=5",
-   "editoria": "economia",
-   "nota": 7,
+   "veiculos_3h": 6,
+   "na_pauta_desde": "2026-11-26T15:10:33Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/educacao/2026/11/brasil-atinge-recorde-de-alunos-no-ensino-superior-e-mais-pretos-pardos-e-indigenas-nas-federais-pela-1a-vez.shtml",
+   "editoria": "educacao",
+   "nota": 5,
    "esquentou": false,
    "lente": [
-    "aposentad",
-    "inss"
+    "indigena"
    ],
    "ia": {
-    "editoria": "economia",
+    "editoria": "educacao",
     "I": 3,
-    "V": 1,
+    "V": 2,
     "P": 2,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Mudanças no INSS afetam diretamente o futuro de milhões de trabalhadores.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Lula deve anunciar ministros antes de viagem para Uruguai",
-   "secoes": [
-    "B",
-    "D-america_latina"
-   ],
-   "veiculos": 31,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-25T12:09:21Z",
-   "link": "https://g1.globo.com/politica/noticia/2026/11/25/lula-reune-ex-ministros-da-justica-para-discutir-nova-pasta-da-seguranca-publica.ghtml",
-   "editoria": "america_latina",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Anúncio iminente de ministros gera expectativa institucional.",
-    "soma": 4
+    "motivo": "Recorde de pretos, pardos e indígenas nas federais.",
+    "soma": 5
    }
   },
   {
@@ -236,10 +157,10 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 28,
+   "veiculos": 27,
    "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-25T21:09:13Z",
-   "link": "https://www.poder360.com.br/poder-justica/eleicoes-no-rj-stf-marca-julgamento-para-4-de-dezembro/",
+   "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOc3FqdXc5UENSYVEtSXEzQVFNZmNlUjJ0eC0tYjJpUUVhQTR6eF8xUnpZbUxLUklGZTJRR0g0MnNYTlloNmEyTFVPZWFKeWlmdW5fZFQ2bV93cmcyLUtVdHN0Nnc4QlhtUWZsblgxN3JDeGdBQ2hWRmxHUG9ZSDFXY0k3QnBpTzRtU2lnblM4dEJJLXlzSVpsOEJpbVdyR09TQUF6SEYzUkk5c0FDMV9uWHBSWUlBWktKQjJHT3hFRHhXMXRSX1lnTzE1Z1hYcWQxS3dhVFh4QWoyakJERXFzS2tqU0Fwckp3b2JMdll2LTRaNUtkbVRDN2d6dkVNS1hDOHfSAZACQVVfeXFMT0owMlBJMmhTTWRZTDE5MG8tT2VNWnZ0N1hGRXBLcEt4Nl81aXZjSXB4ZnJIRnRQQnNZYjVFXzVlN1lHblJFeEk3ZEc0LVVyWEF3REhMOGRKLUdLcHlMWEt0dXNmOEJmLTlIeHpZX3luN01YSXNFdDdFRkR1bHFqSWk3V0x3azlYSDloNEl0eFhNbUEzSlMycXpkWnZBdDlDbHhwcmZ2eTFFdGdndU5OSUxnb2U2Y3I1WFJvQWxHYzE2X2g5VUxaeTMtTDNGY3B2dnNmazRMZGV0V0o4TFhkOTRpMmpJdnNaYmhWTnFiWkZyMnNfeGx1bDMxSmhqNHpYXzl6Rk9zbUlPX21idktxRXM?oc=5",
    "editoria": "eleicoes",
    "nota": 5,
    "esquentou": false,
@@ -257,259 +178,290 @@
    }
   },
   {
-   "manchete": "Anvisa determina apreensão de medicamentos falsificados e proíbe anabolizantes e suplementos; veja marcas",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 20,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-25T17:09:57Z",
-   "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNQzNLcHQwTkh0QUpLTnJsTXc2VUtPWFhob210MUFWX0luMmFzQXJXYXFLYTdGS2xTenVIYUtUTEJ1bVJhaFM2ODQ4aW9heVphWTZ5dkYwSUNwTjJSczhBWFY5aHRWUlpfc1lHZzgtZFFNOGQ2UUJXNVl2d2FIY3FOWWVuMWV3cTM0QTZaaHpJX3FUNXd0NWgzLXpoa19TUU1QTXJUWjN5XzA0TWRDRERPaUFFR1I4dFJXNllXVWVraXh0RTVvUnc5UldTbXJuSVl0dFhmUXczci1xVmtnbTdfWjNjXzRxVzg?oc=5",
-   "editoria": "saude",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "saude",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Apreensão de remédios falsificados pela Anvisa afeta a saúde pública.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Contrato previa cobrar dívida de helicóptero se Vorcaro entrasse em crise",
+   "manchete": "El Gobierno de Milei ahora dice que no pone en duda el resultado de la elección que ganó Lula en Brasil",
    "secoes": [
     "B",
-    "C-nacional"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-26T11:30:26Z",
-   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQQk81dXhYZ2ZhWUhiX2YydUVpWkdadVItbG1EbnZrQW1hZHhsZGZpVlotQjBZQU9VLVhkMXhhUlpXSDUxdTVJX3A3MmVqQTV4MXYyTlpZOE5KVVhFLV9zQnRVM0EySTR6dG8xTUFjY01mU2xQZHQwVkxaaWdSQUN6Ykw1cGxsQllXMXhvLU44aWpMLTFMSWhJcGpnYmJEMmxpQTlsTUpwUDJRQko5TDJCUmxpZm41dFJPRWdLMkVaNXhCSU90?oc=5",
-   "editoria": "politica",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "vorcaro"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Novos desdobramentos de esquemas investigados envolvendo figuras conhecidas.",
-    "soma": 4
-   }
-  },
-  {
-   "manchete": "Governo da Colômbia anuncia interrupção no processo de adesão ao BRICS",
-   "secoes": [
     "C-internacional",
     "D-america_latina"
    ],
-   "veiculos": 6,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-26T10:09:05Z",
-   "link": "https://operamundi.uol.com.br/america-latina/colombia-anuncia-interrupcao-no-processo-de-adesao-ao-brics/",
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-26T15:10:33Z",
+   "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQZTZqZl9kWUx1R0hnVmZKeERyamQyWW11a2FVVHhCLWFCb0JiMWJUeEpNWUtDVm5zV1dBZlprYlNfZlFOSXF4d0RNd1NBd1BkWDVwdk9KSHh3eXAxSTVMVmo0Rmw0VzkwQzBrQUV1TENEbEoyVGxtMGhDcklxRk5UdGRRemFGeXZWOVFHVHlGXzhERE1fdC0tSTNvRTBDbnFRUFBoUzR0RGRXMzVwNEc5TWU5TUlhQWU3cWp2NFliNmZGQXpaWlB0T3R0a3l1TTg3cjI3OGdOdkFPNzRJRUdUM3ZB0gH8AUFVX3lxTFBTUC1BMUd5TG93YVpPdGc1emxOUkNrNjN0OFRHdUM0bTVzVm1OVXFfS1Fsdkk4UzRqX0ZYQUJib2RzaFc0ZUgtTUstSXA1eEZRU0FndVlyRV9FQVZFVThKMWNMNGhXb1ZLRXZXQzZ4YzBXdzR3YnFoNFZ6ZlkwQjAtbk5hX3ZVZU54bnZwd3pTWWE4dnhLVXNwYzNpcXNwSEh4bHhKbzVlVTY4a3FlT3U0YnVoaEJ4Z08wM2FXSUlGUHVwcWI0MlFoNEFIeExPYjB4T01BYzdxcXJJTV9kUXRTV1k0WEs5WEIzaFp4RjlOT19YMjNNOGJJSWJOOA?oc=5",
    "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "milei"
+   ],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Governo de Milei recua sobre eleição de Lula.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Lula estende o tapete vermelho para Cleitinho, governador eleito de Minas Gerais, nesta quinta",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 7,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-25T12:09:21Z",
+   "link": "https://www.congressoemfoco.com.br/noticia/131913/lula-recebe-governador-eleito-cleitinho-azevedo-nesta-quinta",
+   "editoria": "politica",
    "nota": 4,
    "esquentou": false,
    "lente": []
   },
   {
-   "manchete": "[VÍDEO]: Nelter faz severas críticas a Styvenson e indaga se o senador é contra a produção de ouro e acrescenta: pior é a fome",
+   "manchete": "Navio com 7 mil toneladas de diesel afunda perto da ilha de Ibiza",
    "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 2,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-26T13:08:57Z",
-   "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNekdsbkxyX3NVclpzQWRuMlNNSGtEVENBRG8xLVZiNWYxWnRQQ2xxdmZUTlVvaWZTb2tuUlF5eENEckRBWW1FRXVXV2hPTGtPYjBWczR1a2RGTlBMbXNNZHhpQVh6V0h2Yk51Wk1oZnNqVVQwTHlLYmpLbk9FVThtZHJjRy16djU2S1Z1bl9GMlVsVUswZjM0RkNDWDBiZ0lvQk55MGIwOXhxOU54UkFKNV9nbmlRRXhBVllTSXF3RGxCdG5pYlRMdXJsVVlQaG9xeURCdmJjbmg1MVJwWWYxbVg2RzdpLUxy?oc=5",
-   "editoria": "roca",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "fome"
-   ]
-  },
-  {
-   "manchete": "Tomate sobe mais de 9% e mantém cesta básica acima de R$ 600 na capital do Acre",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 2,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-26T13:08:57Z",
-   "link": "https://g1.globo.com/ac/acre/noticia/2026/11/26/tomate-sobe-mais-de-9percent-e-mantem-cesta-basica-acima-de-r-600-na-capital-do-acre.ghtml",
-   "editoria": "roca",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "cesta basica"
-   ]
-  },
-  {
-   "manchete": "Gigante dos automóveis é condenada a pagar R$ 1 milhão para funcionário submetido a trabalho escravo em fazenda por duas décadas",
-   "secoes": [
-    "D-terra"
+    "B",
+    "C-internacional"
    ],
    "veiculos": 6,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-25T10:09:16Z",
-   "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQZ3pMbWpZeWc5YjVkNUZlMDNNSXc5dXFiTjNnVVlQQ08zYUlmMGdsRzJFUWpDN01VNTYyY3g2RGtxb1dOY1ZKZno2bkR6TVBFQUROcWdWNWFhaWlkOWcxYlR2Vk9XbW96YV90Ql9JLVR6R1ZsSzM5WmRpa1k4NlV4OThUdXBCUFJPSVRHR1ZXRjFIX0JZVTB3bHVCQXl4NFhlaWNSYWhud2EyenZSWVl1X1VBZi1yV2dpeU94OXJLa3BtcHRkMDh5bzVTUVEzbWRaYUwtb0REZnNkSHRGVG0xdk96NTZvczdJRURNUk1oZUFvZ2lHWUsxWFhULWJxZk5lMTZz?oc=5",
-   "editoria": "roca",
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-26T13:08:57Z",
+   "link": "https://g1.globo.com/mundo/noticia/2026/11/26/navio-com-oleo-afunda-perto-de-ibiza-na-espanha-e-deixa-morto-equipes-tenta-evitar-mare-negra.ghtml",
+   "editoria": "economia",
    "nota": 4,
-   "esquentou": true,
+   "esquentou": false,
    "lente": []
   },
   {
-   "manchete": "Escola de Gastronomia Autossustentável ganha Prêmio Pacto Contra a Fome 2026",
+   "manchete": "Entenda acusação de estupro de advogada contra Janones; deputado nega crime",
    "secoes": [
-    "D-terra"
+    "B"
    ],
-   "veiculos": 2,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-26T13:08:57Z",
-   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQXy1ITUczczUwSFdyYTFlMTB1YU01M3pLUXhhMWQ1YU5HUE55SWh4QUt0d1hIS2NfN2lZQ2FabGhtMlF2a1E5a2FYZlVXZTBxOWJaT2M4TGlZV3I0LThRNGNWcE53ZmUwZEYtWGtkV3hLbWZSM0hHY0cxcFJSWjBSU2VLWmlyUWpOUnRTbjNubXBsZENiVzR5alBWMk92RFRnMnRrQzVR?oc=5",
-   "editoria": "roca",
+   "veiculos": 15,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-25T19:08:57Z",
+   "link": "https://noticias.uol.com.br/politica/ultimas-noticias/2026/11/26/entenda-acusacao-estupro-janones.ghtm",
+   "editoria": "politica",
    "nota": 4,
    "esquentou": false,
-   "lente": [
-    "fome"
-   ]
+   "lente": []
   },
   {
-   "manchete": "Obras da Ponte Salvador-Itaparica são paralisadas por trabalhadores",
+   "manchete": "Confederações empresariais pedem ao STF o adiamento da reforma tributária",
    "secoes": [
-    "C-nacional"
+    "B"
    ],
-   "veiculos": 2,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-26T13:08:57Z",
-   "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQRTBLS3FXRmhJeUZQTC02T2dnWWd1MG5GTDZSWHpFb0tIYVBCS19DdjFUbFdNcklvSl92a0tNQXpWaWxHemJoRXg5Ump2OFk4NThSeXI5WjJ3SFAyVUx0bTQwU1ZjdFVzXy1JTzNNUE9VbW9oS2tKYlNRWXAtNmRnQ2NKbmJlVFJKREFlU0Fzc0pEbUMtd2VBYWU5UWw3SzRkYWxBRERSbDRmNEZIZ2pjMm1n?oc=5",
-   "editoria": "economia",
-   "nota": 3,
+   "veiculos": 5,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-26T02:29:45Z",
+   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/confederacoes-empresariais-pedem-ao-stf-o-adiamento-da-reforma-tributaria.shtml",
+   "editoria": "politica",
+   "nota": 4,
    "esquentou": false,
-   "lente": [
-    "trabalhador"
-   ]
+   "lente": []
   },
   {
    "manchete": "Michelle diz que Bolsonaro \"podia ajudar um pouquinho, mastigando bem os alimentos\"",
    "secoes": [
-    "C-nacional"
+    "B"
    ],
-   "veiculos": 2,
-   "veiculos_3h": 2,
+   "veiculos": 4,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-26T13:08:57Z",
    "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOLVNSMVVMMUxVeC04YlFvbnVzQmhRTXlvMGZMdkt4cHE3alRaVVpCS2h6MFA1a2V5d1pZWmV1ZkhBdG03R2Q3YzVDYXNuOWdzbDVLUlZkRjhkNkwyNnAxbEI5RkVodWphbzVld0Z1RFNCS2liVkYwZllTWGFzRTFiUjV3Rkp6bEk?oc=5",
    "editoria": "roca",
-   "nota": 3,
+   "nota": 4,
    "esquentou": false,
    "lente": [
     "bolsonar"
    ]
   },
   {
-   "manchete": "INSS libera 13º a 2,6 mi de segurados em novembro e dezembro; veja quem recebe",
+   "manchete": "Justiça internacional define no sábado (28) disputa entre Argentina e UK sobre petróleo nas Malvinas",
    "secoes": [
-    "C-nacional"
+    "C-nacional",
+    "D-america_latina"
    ],
-   "veiculos": 4,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-26T02:55:27Z",
-   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/inss-libera-13o-a-26-mi-de-segurados-em-novembro-e-dezembro-veja-quem-recebe.shtml",
-   "editoria": "economia",
-   "nota": 3,
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-26T15:10:33Z",
+   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNUmN6Wi1mamFPZXJVY2twS0dtWlNrd3QwN25WTDRzQzJ2eklCdVRjWTR1dzBmcEp6LVJCV2tSbXJDalhxeHoyLWRZUlE3UmtmWUFWUU44RmFpWHRSOWxOZUUxVTEtNXhJbGFGLUV6Y1paWnhfcW5fbEt1ZExJUGFBTTNrYUJhTXpJRTc3b2liX295WkZFbGh4QnIwYU95MkRQYzdxU2wtNzZ1dXJRWGNCVtIBtAFBVV95cUxOQVViakdnMjVBUGhWOWlRdGpPSVZQUXZ1YkpTbmNaRk5vNnRnaUdmaWQyZUc5SUZQRVFMeW5obHdodXNrQ0ppQUJkVEhkdkl1NmxkSTNpX3ZKTkQtSmtNbXYxTWZ2Z0V0b2FFSjc5RFpFZ2NvS3lTRDNhbjYyeDNyakRmakdPdzY2SlBaUTVxMldFZ1pYbTY4RmVxclNhc2l2QjhsaGFlUGg0cndmSTU2VGxwN1o?oc=5",
+   "editoria": "america_latina",
+   "nota": 4,
    "esquentou": false,
-   "lente": [
-    "inss"
-   ]
+   "lente": []
   },
   {
-   "manchete": "Quando será o quinto dia útil de dezembro de 2026? Veja data para pagamentos dos salários",
+   "manchete": "Trump usa tarifas para pressionar asiáticos a fecharem acordos, dizem analistas",
    "secoes": [
     "C-nacional"
    ],
    "veiculos": 3,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-26T10:09:05Z",
-   "link": "https://g1.globo.com/trabalho-e-carreira/noticia/2026/11/26/quando-sera-o-quinto-dia-util-de-dezembro-de-2026-veja-data-para-pagamentos-dos-salarios.ghtml",
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-26T15:10:33Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/trump-usa-tarifas-para-pressionar-asiaticos-a-fecharem-acordos-dizem-analistas.shtml",
    "editoria": "economia",
-   "nota": 3,
+   "nota": 4,
    "esquentou": false,
    "lente": [
-    "salario"
+    "trump"
+   ]
+  },
+  {
+   "manchete": "Edmundo González confirma seu iminente retorno à Venezuela após mais de dois anos de exílio na Espanha",
+   "secoes": [
+    "C-internacional",
+    "D-america_latina"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-26T15:10:33Z",
+   "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQckdpbjkyQ21Fd3MxYzF6bVJEUm5sSTdJWEM2TXBQMnBxZnhXNjg0SGJtTXR3VVhLZ3lEY0dtMlQ5bUhRbEhHcVJjQU12RTJQSDdibm5SWlhVQXJXR3dwUVh5eF8zSmlSaEw0bGVaQjMtbkRGMHJfV3loMHJ0bDJlX0xkYmpHU05fTWpNd1RVejU5Q0dyZ2ZCLTRralNmWFdLSEIxekc5Q0pUUFZORnJIVXZURnJhSTRCNTM3OF9OSVNQOVM4OHpiUU5TSkdBancwazFWTGMwSdIB3AFBVV95cUxPbEFfeUlRX2RBcjQzNkJBbkZGbUN2TDJGWmJzaXk1S3pZdWtQSU43V29SOUc5QzBPZHNzejNwcFQwUG81RlRreUwtWWFYRmFIeDIwaEl4dUgwUno4b2YzTkxnYUh4MDlLajI2SXZldDNELVpZWHFPSml0N3l1WFdFb2wyMjVuaF9XOVVud0Myelk2Um95MDhjZjRoLXh1VkVPSTBIQlJjcUFPaGEyZlY1c2UtUlFJTFVvNUNCRDEtc1M1YTZfM0ZCVzI5VmUwS3NVbUxZYnBsc3hpbEFO?oc=5",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "María Corina Machado promete que Edmundo González estará \"pronto\" de regreso en Venezuela - EFE",
+   "secoes": [
+    "D-america_latina"
+   ],
+   "veiculos": 7,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-25T19:26:38Z",
+   "link": "https://elpais.com/america/2026-11-25/maria-corina-machado-asegura-que-edmundo-gonzalez-regresara-pronto-a-venezuela.html",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": true,
+   "lente": []
+  },
+  {
+   "manchete": "Volkswagen terá de pagar R$ 2 milhões por trabalho escravo nos anos 80",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-25T10:09:16Z",
+   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNOC1tSkx3VkJ6Y0gwS2d6ZmN1ZE9hN0tNRjBfNmRhRkU2TXFKdUVLTE9xWks5eVlVNTA5aTE2bTJtMVFrUng2Q28yeHRPdkE5UGdNeE1DUFJFa0QtRWdNcmpHMVZESlF0SnJjLXBTQkVXNG52VDhRN1VtME1HaU9uR3YwMF9RMDN1SkxLN0ppUjhQWmFSQzJ0dk4wWXJ4elBXcXpJVHY5SUtKbmh1Sko0?oc=5",
+   "editoria": "roca",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "Protesto de motoristas por salário paralisa transporte escolar e deixa 4,5 mil alunos sem aula em Maceió",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-26T15:10:33Z",
+   "link": "https://g1.globo.com/al/alagoas/noticia/2026/11/26/protesto-de-motoristas-por-salario-paralisa-transporte-escolar-e-deixa-45-mil-alunos-sem-aula-em-maceio.ghtml",
+   "editoria": "economia",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "salario",
+    "protesto"
+   ]
+  },
+  {
+   "manchete": "Banco Alimentar faz nova campanha de recolha de alimentos no fim de semana",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-26T11:30:26Z",
+   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNXzJMbDNMTFQyUkhNZXpZVkplYjBDUFNXa19SbHE4bmQwejJ3WFRNNmhLSndrb0IwM2ZnX3g0SjRhd3NUeUt0U1dleXdsandYVGw5WmU1QjR4VXgwVTNRN0xtQjZHQXBSQm5fOERxZDQwc1NoNHNBS3BnQ28zSDJ6eXNLS2xUWVdvWUlSeDV2bWQ1X25oR0lES0xWYUp3bmpWY3laNENUMkNaZlZnSVNuNldsb9IBrgFBVV95cUxPM3ZhMEszZDdxdjZ0QVNBbEt5UEJHdmxVVGJUaTZ5OXNXUGFVSFVWMHFhMDBvQjJYeFE5eF9FRWtnNEl0WFp3VnR3SWMyLWo2aXd3VDlSODFzTVM0cDdLNXF1UnpaV0hUQldNN2x0dkxScDVnTjBwcXRyakFfak5QUGtBYzNVbk1IOWNQcnFNUXVHWUp5V0QySEtJaF9PN0hubmo5aTRBSjNobDVNQlE?oc=5",
+   "editoria": "roca",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "banco"
+   ]
+  },
+  {
+   "manchete": "Dois homens são presos com 540 kg de agrotóxicos transportados como fertilizantes",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-25T19:08:57Z",
+   "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQNW5ha0I3NmYwSm1BbTdlT25MV2EyMWJJTVNucmdxdlhaS3FnTDV0czdCbElUTVdkSE5UTXNsdjhaUThHN1hTZEc4M2p5MzRwbFBiVk5GRVZQVUxZU0paTmp5em5MMENYUEV0NmhvZnhoakZzeU5xUzJMay1PNHl2X3pHSjdoWFFRVHBPLU5zQ3IxS3NZb0llZlF1YmNuWWh1Ni1TbF9DMDV6TXNFLVJ2U3dmN0t4NjFHUXJqVm5YYjRNTzlVOS1NMHlvZzVOVHp5N2lENlV6TQ?oc=5",
+   "editoria": "roca",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "agrotoxic"
    ]
   }
  ],
  "rebaixados": [
   {
-   "manchete": "INCC-M sobe 0,30% em novembro e inflação da construção civil alcança 6,77% em 12 meses",
-   "veiculos": 14,
-   "veiculos_3h": 13,
-   "na_pauta_desde": "2026-11-25T14:10:25Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "economia",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Inflação da construção civil afeta custo de vida e moradia.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "O nome defendido por aliados de Lula para o STF",
-   "veiculos": 9,
-   "veiculos_3h": 7,
+   "manchete": "Operação da PF, Receita e MPF combate garimpo ilegal em Mato Grosso",
+   "veiculos": 8,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-26T11:30:26Z",
    "esquentou": false,
    "ia": {
-    "editoria": "politica",
+    "editoria": "gerais",
     "I": 2,
     "V": 1,
-    "P": 1,
+    "P": 2,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Negociações e disputas em torno de vaga no STF.",
+    "motivo": "Operação combate garimpo ilegal em Mato Grosso.",
     "soma": 3
    }
   },
   {
-   "manchete": "Senado: CAS aprova projeto que amplia mamografia no SUS e leva o texto ao Plenário",
-   "veiculos": 15,
+   "manchete": "Governo do Brasil anuncia R$ 120 milhões para ampliar pesquisas clínicas e acelerar o desenvolvimento de novos tratamentos para o SUS — Ministério da Saúde",
+   "veiculos": 6,
    "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-25T17:09:57Z",
+   "na_pauta_desde": "2026-11-26T15:10:33Z",
    "esquentou": false,
    "ia": {
     "editoria": "saude",
     "I": 2,
     "V": 1,
-    "P": 1,
+    "P": 2,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Ampliação de mamografia no SUS é conquista importante para direitos.",
+    "motivo": "Governo anuncia R$ 120 milhões para pesquisas no SUS.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Câmara aprova inclusão de dados sobre raça ou cor nos prontuários do SUS - CUT",
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-25T21:09:13Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "saude",
+    "I": 2,
+    "V": 1,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Câmara aprova dados de raça em prontuários do SUS.",
     "soma": 3
    }
   },
   {
    "manchete": "Sabesp desmente fake news sobre a qualidade da água; confira",
-   "veiculos": 17,
-   "veiculos_3h": 2,
+   "veiculos": 19,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-25T19:26:38Z",
    "esquentou": true,
    "ia": {
@@ -525,9 +477,27 @@
    }
   },
   {
+   "manchete": "Otoni tenta presentear Cabo Gilberto com \"peru do Lula\" no plenário",
+   "veiculos": 17,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-25T23:09:14Z",
+   "esquentou": true,
+   "ia": {
+    "editoria": "politica",
+    "I": 1,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Deputados tentam provocação com 'peru do Lula'.",
+    "soma": 3
+   }
+  },
+  {
    "manchete": "Deputado leva peru à tribuna e provoca líder da oposição ao comparar preços do governo Lula e Bolsonaro",
-   "veiculos": 4,
-   "veiculos_3h": 2,
+   "veiculos": 6,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-26T01:09:20Z",
    "esquentou": false,
    "ia": {
@@ -544,8 +514,8 @@
   },
   {
    "manchete": "Ao Brasil, Paraguai promete restituir fundos da Itaipu no banco Ueno",
-   "veiculos": 14,
-   "veiculos_3h": 1,
+   "veiculos": 17,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-25T21:09:13Z",
    "esquentou": true,
    "ia": {
@@ -562,8 +532,8 @@
   },
   {
    "manchete": "Acrimat repudia demarcação da Terra Indígena Kapôt Nhnore e alerta para prejuízo de R$ 110 milhões na economia regional",
-   "veiculos": 6,
-   "veiculos_3h": 1,
+   "veiculos": 7,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-25T21:09:13Z",
    "esquentou": true,
    "ia": {
@@ -579,120 +549,294 @@
    }
   },
   {
-   "manchete": "CI analisa incentivo a biocombustível produzido pela agricultura familiar",
-   "veiculos": 4,
-   "veiculos_3h": 0,
+   "manchete": "O dilema de Nunes Marques ao analisar pedido de Vorcaro contra Fachin",
+   "veiculos": 28,
+   "veiculos_3h": 5,
    "na_pauta_desde": "2026-11-25T23:09:14Z",
    "esquentou": false,
    "ia": {
-    "editoria": "roca",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Incentivo a biocombustível da agricultura familiar interessa ao setor popular.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Ala de Valdemar admite que PL deve romper com Hugo Motta e teme 'anos de seca' na Câmara",
-   "veiculos": 3,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-26T10:09:05Z",
-   "esquentou": false,
-   "ia": {
     "editoria": "politica",
-    "I": 2,
+    "I": 1,
+    "V": 1,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Dilema de Nunes Marques sobre pedido de Vorcaro.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Fachin mantém prisão de operador técnico do grupo \"Os Meninos\", de Vorcaro",
+   "veiculos": 7,
+   "veiculos_3h": 7,
+   "na_pauta_desde": "2026-11-26T15:10:33Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "gerais",
+    "I": 1,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Crise e rearranjo de forças na base do PL na Câmara.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Tarifa de água do Samae em Blumenau terá reajuste de 6,657%",
-   "veiculos": 6,
-   "veiculos_3h": 3,
-   "na_pauta_desde": "2026-11-26T11:30:26Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "economia",
-    "I": 2,
-    "V": 1,
-    "P": 0,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Reajuste na tarifa de água em Blumenau.",
-    "soma": 3
+    "motivo": "Fachin mantém prisão de operador do grupo Vorcaro.",
+    "soma": 2
    }
   }
  ],
- "obrigatorios": [],
- "descartados_mais_quentes": [
+ "obrigatorios": [
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 3,
+   "parceiro": {
+    "perfil": "luzmanifesto",
+    "quando": "2026-11-26T10:36:35Z",
+    "legenda": "Enquanto o desmatamento avança, as cidades ficam cada vez mais quentes. E existe uma solução que a natureza já oferece: preservar as árvores. A vegetação ajuda ",
+    "link": "https://www.instagram.com/p/DgM5uXLh7ke/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Confaz aprova alíquotas do ICMS sobre combustíveis para 2027",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-26T15:10:33Z",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPYkFDNTBaMm4xbnhiTkhlcWkzSGNLUVBFQzJrdG1tQjlxTkdvZERqSXhZTWRpb2xfWWt3NEJOcTBqMjRla0Y5Mm9sTGNlUmxGUUw3ajZIc1hIUDgtWkpmeG54V0FfU0lHS0hiRGFWSkQwME80YlRMOUZBVS1xUHh3STFwM3N0TUxRTEtmeFAzUkZrSFI2S0I4dFpUOE5tWXVzYjRESjR0bXBUbmpxZ04yaVZHZjdfeEx1WkJj?oc=5",
+   "editoria": "economia",
+   "nota": 4,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-26T11:46:32Z",
+    "legenda": "O preço da gasolina, do diesel e do gás de cozinha deverá subir a partir de 1º de fevereiro de 2027, quando entra em vigor o novo reajuste do ICMS aprovado pelo",
+    "link": "https://www.instagram.com/p/DgNBzYFhHnp/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-26T12:28:30Z",
+    "legenda": "Quase metade dos feminicídios registrados no Paraná entre janeiro de 2024 e agosto de 2026 recebeu a classificação de crime “passional”, segundo levantamento da",
+    "link": "https://www.instagram.com/p/DgNGwhzDpZi/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": "Conab divulga nesta quinta-feira o 11º Boletim Prohort 2026",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-25T19:08:57Z",
+   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOSXpoemxRZV9oUlB3dlZZYlFERmJfOVltYzN5M0E0c3NTeUJQOURWNWhKcV9IZGZJUmtRRXBCS3hsbThPekRFTE1pRlBPYlQzeXVOSWduT3NKejd1OWozUmZCbjJkT2FSSVBfRFZzVEtHSVVsSUtlcEdnTk1Pc0w0T3hqTGFJSjJITFRQRzlKQTBIanRiMHdMQzhad1o3elJ5?oc=5",
+   "editoria": null,
+   "nota": null,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-26T12:46:04Z",
+    "legenda": "O cantor e compositor Chico César - oficialchicocesar lança nesta quinta-feira (26) o álbum “Fofo” nas plataformas de streaming, sete meses depois de disponibil",
+    "link": "https://www.instagram.com/p/DgNIw1vhxLK/"
+   },
+   "triagem": "fora: entretenimento (streaming)"
+  },
   {
    "manchete": "PGR denuncia Gustavo Gayer por desvio de cota parlamentar",
-   "veiculos": 40,
-   "veiculos_3h": 16,
-   "motivo": "sem editoria"
+   "secoes": [
+    "A",
+    "B"
+   ],
+   "veiculos": 46,
+   "veiculos_3h": 8,
+   "na_pauta_desde": "2026-11-26T01:09:20Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/25/pgr-denuncia-deputado-gustavo-gayer-ao-stf-por-esquema-de-desvio-de-cota-parlamentar-na-camara.ghtml",
+   "editoria": "politica",
+   "nota": 6,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-26T10:45:01Z",
+    "legenda": "A Procuradoria-Geral da República (PGR) denunciou nesta quarta-feira (25) ao Supremo Tribunal Federal (STF) o deputado federal e senador eleito Gustavo Gayer (P",
+    "link": "https://www.instagram.com/p/DgM65tmB0Dv/"
+   },
+   "triagem": "candidato"
   },
   {
-   "manchete": "Bolsonaro segue estável na UTI e sem previsão de alta, diz boletim médico",
-   "veiculos": 34,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
+   "manchete": "Governo Lula avalia impacto de novas taxas propostas por Trump a aviões e açúcar e traça estratégias",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-26T15:10:33Z",
+   "link": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxOSEEwbm8xSHBrNGl6RThSdzRobS1CZm1hQzdpM1ZoY0hkN20xWUZUalVWVVBQQ2hOYXBwY0FmTjlZWFVGazBCNnp1UFY3X3AyZDZPd2hKc2lZVVdSWklqdUItT212QXE5Q3RISjZFNUpRdXhDRXY5WmNIUlNzOF9POFBJVnFkUHhYcTNjMHNqZFpMTzF1S0c2YTFxZnZSSkNucGRkaERyWDhPQ2FJMkZrR1hCQWI0X1pXMFRzRzUtMWhzN192X0l2NC1QejUxajB4MDVaNGlSaVF5TF9oWmJwYzVfdmJZY2w4dUExMEd6Y3Bmb0F2WUhhTlZqWE5kVk3SAf8BQVVfeXFMTkhBMG5vMUhwazRpekU4Unc0aG0tQmZtYUM3aTNWaGNIZDdtMVlGVGpVVlVQUENoTmFwcGNBZk45WVhVRmswQjZ6dVBWN19wMmQ2T3doSnNpWVVXUlpJanVCLU9tdkFxOUN0SEo2RTVKUXV4Q0V2OVpjSFJTczhfTzhQSVZxZFB4WHEzYzBzamRaTE8xdUtHNmExcWZ2UkpDbnBkZGhEclg4T0NhSTJGa0dYQkFiNF9aVzBUc0c1LTFoczdfdl9JdjQtUHo1MWoweDA1WjRpUmlReUxfaFpicGM1X3ZiWWNsOHVBMTBHemNwZm9BdllIYU5WalhOZFZN?oc=5",
+   "editoria": "economia",
+   "nota": 4,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-26T13:02:42Z",
+    "legenda": "O governo do presidente Luiz Inácio Lula da Silva (PT) manifestou indignação diante da proposta dos Estados Unidos de impor novas tarifas sobre produtos brasile",
+    "link": "https://www.instagram.com/p/DgNKrAKDsy1/"
+   },
+   "triagem": "candidato"
   },
+  {
+   "manchete": "Câmara aprova inclusão de dados sobre raça ou cor nos prontuários do SUS - CUT",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-25T21:09:13Z",
+   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQREFZQlpHLWI4Qm1sNVlsXzhIUlJNSE1IZTlDTHRRanBDOFR3eFBudzNVSmRjRW1IOFVNam5WNk5jMnlvcjZNVmpJWDdjeGlBeVZFWExId3BuT2djZWNwTGtjWnVuZHIwZ3BMMGtGbkZlQ2FQa2NtTC1GY0U0Ql9VdERwZVB3T25hRjNlN0E2d0lzMklmMmt0aWp3RGZjRWRqczJFTGR6VjJIcEdibkE?oc=5",
+   "editoria": "politica",
+   "nota": 5,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-26T03:00:07Z",
+    "legenda": "A Câmara dos Deputados aprovou, na terça-feira (24), projeto de lei que determina a inclusão de dados sobre raça ou cor nos prontuários do Sistema Único de Saúd",
+    "link": "https://www.instagram.com/p/DgMFtmRDEHz/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 2,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-26T09:30:05Z",
+    "legenda": "A terceira seca severa impulsionada pelo fenômeno El Niño desde 2015 levou os rios de Roraima, no extremo norte da Amazônia brasileira, a níveis críticos. Segun",
+    "link": "https://www.instagram.com/p/DgMyVxMDUhK/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": "gerais",
+   "nota": 1,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-26T10:00:01Z",
+    "legenda": "O festival global de música eletrônica ONE LIFE faz sua estreia no Brasil neste sábado, 28 de novembro, na Arena Pinheiros, em São Paulo. Idealizado pelo DJ e p",
+    "link": "https://www.instagram.com/p/DgM14KApWjF/"
+   },
+   "triagem": "candidato"
+  },
+  {
+   "manchete": null,
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "link": null,
+   "editoria": null,
+   "nota": null,
+   "parceiro": {
+    "perfil": "brasilforadacaverna",
+    "quando": "2026-11-26T09:00:03Z",
+    "legenda": "O rapper Coruja (também conhecido como Coruja BC1) lançou seu terceiro e mais ambicioso álbum de estúdio, O Que Não Digo Também É Meu. Produzido integralmente p",
+    "link": "https://www.instagram.com/p/DgLWMD2hzVl/"
+   },
+   "triagem": "fora: entretenimento (album)"
+  }
+ ],
+ "descartados_mais_quentes": [
   {
    "manchete": "Governo Trump propõe novas tarifas de até 20% sobre China, UE e mais 12 países",
-   "veiculos": 29,
-   "veiculos_3h": 4,
+   "veiculos": 85,
+   "veiculos_3h": 28,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Governo realiza mobilização para divulgar a marca da Copa do Mundo Feminina 2027",
-   "veiculos": 29,
-   "veiculos_3h": 2,
-   "motivo": "fora: esporte (copa do mundo)"
+   "manchete": "Polícia faz operação contra Grupo Fictor, que tentou comprar Banco Master; Justiça determina bloqueio de até R$ 4,3 bilhões",
+   "veiculos": 45,
+   "veiculos_3h": 20,
+   "motivo": "repetido (20261126-0915-fictor-bloqueio)"
   },
   {
-   "manchete": "Aliados veem perda de influência de Flávio Bolsonaro após fuga para os EUA",
-   "veiculos": 23,
-   "veiculos_3h": 14,
+   "manchete": "Os bastidores da reunião com Lula que pode ter selado o destino de Haddad fora do próximo governo",
+   "veiculos": 39,
+   "veiculos_3h": 10,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Uerj e rede pública estadual suspendem aulas após alerta de temporal com raios e rajadas de vento no estado",
-   "veiculos": 17,
+   "manchete": "Champions League hoje: veja os jogos desta quarta e onde assistir ao vivo",
+   "veiculos": 18,
    "veiculos_3h": 3,
-   "motivo": "sem editoria"
+   "motivo": "fora: esporte (champions)"
   },
   {
-   "manchete": "Lotomania 3003 hoje (quarta, 25/11) pode pagar R$ 2,8 milhões",
-   "veiculos": 15,
-   "veiculos_3h": 7,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Luiz Carlos Trabuco, do Bradesco, entra na lista de cotados para o Ministério da Fazenda",
-   "veiculos": 15,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Nikolas cobra apuração de denúncia de estupro contra Janones",
+   "manchete": "Polícia Civil do ES prende David, jogador do Vasco, em investigação de suposta tentativa de homicídio, tráfico e coação",
    "veiculos": 14,
-   "veiculos_3h": 2,
-   "motivo": "fora: crime ou tragedia (estupr)"
+   "veiculos_3h": 13,
+   "motivo": "sem editoria"
   },
   {
-   "manchete": "Moraes autoriza Débora do Batom a ir a evento do filho",
-   "veiculos": 13,
+   "manchete": "BC determina redução de limite do cartão para quem usa rotativo frequente",
+   "veiculos": 14,
+   "veiculos_3h": 6,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "O banqueiro cotado para assumir a Fazenda no Lula 4",
+   "veiculos": 12,
+   "veiculos_3h": 5,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Piratas da Mineração: entenda como agiam os grupos que movimentaram R$ 2 bi em Minas com extração ilegal",
+   "veiculos": 12,
    "veiculos_3h": 4,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Dólar cai 1,59% e fecha a R$ 5,8168 com apostas em Trabuco na Fazenda",
+   "veiculos": 8,
+   "veiculos_3h": 6,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Presidente do Conselho do Bradesco, Trabuco passa a ser cotado para comandar o Ministério da Fazenda",
+   "veiculos": 8,
+   "veiculos_3h": 5,
    "motivo": "sem editoria"
   }
  ]
