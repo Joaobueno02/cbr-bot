@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-27T10:10:11Z",
- "pauta_quando": "2026-11-27T10:10:10Z",
+ "quando": "2026-11-27T11:02:15Z",
+ "pauta_quando": "2026-11-27T11:02:14Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,22 +9,47 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 22,
-  "falhas_antes": null,
-  "pedidos_hoje": 5
+  "avaliados_agora": 15,
+  "falhas_antes": "gemini-3.5-flash-lite: HTTP 503 This model is currently experiencing high demand. Spikes in",
+  "pedidos_hoje": 7
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 130,
- "novos_3h": 5,
+ "total_assuntos": 133,
+ "novos_3h": 10,
  "esquentaram": 1,
  "candidatos": [
+  {
+   "manchete": "Tarifaço: China, Brasil e União Europeia criticam nova rodada de tarifas proposta pelos EUA",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 31,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-26T10:09:05Z",
+   "link": "https://g1.globo.com/economia/noticia/2026/11/26/china-brasil-e-uniao-europeia-reagem-a-novas-tarifas-anunciadas-por-trump.ghtml",
+   "editoria": "economia",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Críticas globais ao protecionismo e tarifas dos EUA.",
+    "soma": 6
+   }
+  },
   {
    "manchete": "Presidente do STF diz que piso nacional dos professores e reajuste serão votados nesta quinta-feira",
    "secoes": [
     "B"
    ],
-   "veiculos": 27,
-   "veiculos_3h": 4,
+   "veiculos": 23,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-27T02:18:27Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/26/stf-decide-que-aplicacao-piso-nacional-de-professores-depende-de-lei-aprovada-em-estados-e-municipios.ghtml",
    "editoria": "politica",
@@ -47,13 +72,42 @@
    }
   },
   {
+   "manchete": "Aposentadoria vai mudar em 2027; veja regras e o que fazer agora no Meu INSS",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-27T11:02:14Z",
+   "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNX1Q4UXBIaVFINTZzc25HLWdSVFhXOTV5dmR5Z1lIc0FBSjg4UHZLTWRuaGljdmJfbEptVkxuM0lNbFhZV3hVYXVoRzEtbFUzdXZEdmpQemVPZHJodDdSNS1fUFRVdTNqY3FlTVkxcU1zaldKeGc2cmxsaFlrQlZhRjNYWkJYVldNTTlUbzJGSzJnUDlERWhEMFQ1WGNDYlQ2d2RfTHM1TG9tMEktUndKeUxhNnZPdU10LUwtWkVZYnZhME9TTURJRUpmY3djNHdic3lZX0FHMNIB1wFBVV95cUxNX1Q4UXBIaVFINTZzc25HLWdSVFhXOTV5dmR5Z1lIc0FBSjg4UHZLTWRuaGljdmJfbEptVkxuM0lNbFhZV3hVYXVoRzEtbFUzdXZEdmpQemVPZHJodDdSNS1fUFRVdTNqY3FlTVkxcU1zaldKeGc2cmxsaFlrQlZhRjNYWkJYVldNTTlUbzJGSzJnUDlERWhEMFQ1WGNDYlQ2d2RfTHM1TG9tMEktUndKeUxhNnZPdU10LUwtWkVZYnZhME9TTURJRUpmY3djNHdic3lZX0FHMA?oc=5",
+   "editoria": "economia",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "aposentad",
+    "inss"
+   ],
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Mudanças na aposentadoria afetam diretamente os trabalhadores.",
+    "soma": 5
+   }
+  },
+  {
    "manchete": "Ibovespa dispara 6% e dólar cai a R$ 5,74, com expectativa de Trabuco como ministro da Fazenda",
    "secoes": [
     "B"
    ],
-   "veiculos": 47,
-   "veiculos_3h": 13,
-   "na_pauta_desde": "2026-11-26T01:09:20Z",
+   "veiculos": 20,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-27T11:02:14Z",
    "link": "https://g1.globo.com/economia/noticia/2026/11/26/dolar-ibovespa.ghtml",
    "editoria": "politica",
    "nota": 5,
@@ -74,55 +128,31 @@
    }
   },
   {
-   "manchete": "Deputado do PT pede ao STF bloqueio de R$ 79,3 milhões em emendas de Flávio Bolsonaro",
+   "manchete": "Conflitos e El Niño agravam a fome no mundo, alerta ONU",
    "secoes": [
-    "B"
+    "B",
+    "C-nacional",
+    "D-terra"
    ],
-   "veiculos": 43,
-   "veiculos_3h": 7,
-   "na_pauta_desde": "2026-11-26T10:09:05Z",
-   "link": "https://redir.folha.com.br/redir/online/colunas/monicabergamo/rss091/*https://www1.folha.uol.com.br/colunas/monicabergamo/2026/11/deputado-do-pt-pede-ao-stf-bloqueio-de-r-793-milhoes-em-emendas-de-flavio-bolsonaro.shtml",
-   "editoria": "politica",
-   "nota": 7,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 2,
-    "V": 3,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Deputado pede bloqueio de emendas de Flávio Bolsonaro no STF.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Governo Lula reage a novas tarifas propostas pelos EUA e diz que Brasil não cederá a ameaças",
-   "secoes": [
-    "B"
-   ],
-   "veiculos": 18,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-26T10:09:05Z",
-   "link": "https://jornalggn.com.br/economia/brasil-diz-que-nao-cedera-a-ameacas-apos-trump-propor-tarifas-para-aeronaves-e-acucar-brasileiro/",
-   "editoria": "economia",
+   "veiculos": 3,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-27T10:10:10Z",
+   "link": "https://noticias.uol.com.br/ultimas-noticias/afp/2026/11/27/conflitos-e-el-nino-agravam-a-fome-no-mundo-alerta-onu.htm",
+   "editoria": "roca",
    "nota": 4,
    "esquentou": false,
-   "lente": [],
+   "lente": [
+    "fome"
+   ],
    "ia": {
-    "editoria": "economia",
+    "editoria": "roca",
     "I": 3,
     "V": 2,
     "P": 2,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Governo Lula reage a novas tarifas propostas pelos EUA.",
+    "motivo": "Alerta da ONU sobre agravamento da fome mundial.",
     "soma": 5
    }
   },
@@ -132,7 +162,7 @@
     "C-nacional"
    ],
    "veiculos": 4,
-   "veiculos_3h": 1,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-27T10:10:10Z",
    "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/equilibrioesaude/2026/11/paciente-do-sus-com-linfoma-tem-sobrevida-menor-mesmo-com-quimioterapia-igual-a-da-rede-privada.shtml",
    "editoria": "saude",
@@ -154,67 +184,67 @@
    }
   },
   {
-   "manchete": "Fome pode agravar-se em 16 regiões do mundo. ONU alerta para risco de catástrofe",
+   "manchete": "Cesta básica chega a R$ 622 em Rio Branco, e tomate lidera aumento dos alimentos",
    "secoes": [
     "D-terra"
    ],
-   "veiculos": 1,
+   "veiculos": 5,
    "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-27T10:10:10Z",
-   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOcGtwZk1Sd1NYbUtVUTI5aVBXT1huLWxHbE9aSGZ2NzRkS3lvWElyQXJERE9PNVlQNjBYOWNrN1pvSERObmlaU0tUN1FjWmU3UFltNGFNa19jTXdCSVotbkZNSEZ5aF9COUZIODJFRUxrWTNqT2NtTHFLQU5rZWVNMUsxdUdkRXhsZXA3Z1ZnTjBhdTFwNTBaWFhHT1BnRGVHTE9qS08yQzhwQ2JtdlF0eWlUeEt0SGU4aGh3LWpRTS1hSno50gHKAUFVX3lxTE1udi1panV2Q2w5SGZOSVpZc1ZnMnljOEN2VEpwbXpqUEZqa1V0b01zeWlKaEt4YjgzRXJLTDhUM2VLVU5XcnAxVENzdTRIelpkV3dpUUVjcDczdGxRNGhaVktSb09YR2lURTBHLXVQclNnaFFvcnk0WjNHY3JUN2JtUUtaaDZmQVN1OFBqMWJ5RHh0OGhYLXJvT2l4OEcwRXFKX1BfZV95ZW5vcW1WQklFUzQ4bDUyTXNxcDV6YjFWQzBPbmRrbzhyVVE?oc=5",
+   "na_pauta_desde": "2026-11-26T20:33:43Z",
+   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNQklpcW1tMVFES2FSSkQtTEVfcXlQaDg4OFh2LTIyMlVKTzVZd0tfOUFQOVd2RklKS3FwWWUtMzB1Q05QUWFNQ3NFMHVUaHlRYUVXWnY1cnh5czZ5N01INVdLRjE3TzBVdnZTY2cyeXVTaW9GcWNTc181V3FsZFh0cGZOU0ExTDd6?oc=5",
    "editoria": "roca",
-   "nota": 3,
+   "nota": 5,
    "esquentou": false,
    "lente": [
-    "fome"
+    "cesta basica"
    ],
    "ia": {
-    "editoria": "roca",
-    "I": 3,
-    "V": 2,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "ONU alerta que fome pode agravar-se globalmente.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Criança de 3 anos é morta com tiro na cabeça em terra indígena no Rio Grande do Sul; PF investiga",
-   "secoes": [
-    "D-terra"
-   ],
-   "veiculos": 1,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-27T10:10:10Z",
-   "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNeHliV0JsZmQ4cmh0SXZGM2Vodk5zVVBKX3c4TzRBLUV0Yk90SjNvaGEweHJsVWdOUmNrMVJtU3c5MGNkZHZEd0RtNDMwTE44dVFyeHR5SjlsQ3JjdUJzMUVSbzJxaWMyQlRqckJoclN3czljdkUtX01yRVBNUkVfbE9NYWxZckVIMUlJXzU0Q0Z4T2NNbUVtdDhOVnNVR1N6b3o3OVRNSlAwNWt6WXR4dmpaeS1FSHI2SXZiTkFCQmh3dHE4aWhTUTUya1F2NzEyUlYxTFBBWFVHSkk?oc=5",
-   "editoria": "roca",
-   "nota": 3,
-   "esquentou": false,
-   "lente": [
-    "indigena"
-   ],
-   "ia": {
-    "editoria": "roca",
+    "editoria": "economia",
     "I": 3,
     "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
-    "risco": "Tragédia com vítimas",
-    "motivo": "Criança de 3 anos morta em terra indígena no RS.",
+    "risco": "",
+    "motivo": "Inflação dos alimentos pesa no bolso de quem trabalha.",
     "soma": 5
+   }
+  },
+  {
+   "manchete": "Espanha encerra campanha eleitoral; Sánchez tenta frear a direita e a extrema direita",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-27T10:10:10Z",
+   "link": "https://g1.globo.com/mundo/noticia/2026/11/27/espanha-encerra-campanha-eleitoral-sanchez-tenta-frear-direita-e-extrema-direita.ghtml",
+   "editoria": "eleicoes",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "extrema direita"
+   ],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Eleições na Espanha com disputa contra a extrema-direita.",
+    "soma": 4
    }
   },
   {
    "manchete": "Cotado para Ministério da Segurança, Alckmin viu PCC se expandir e violência policial bater recorde em SP",
    "secoes": [
-    "B",
     "C-nacional"
    ],
    "veiculos": 2,
-   "veiculos_3h": 2,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-27T10:10:10Z",
    "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/cotado-para-ministerio-da-seguranca-alckmin-viu-pcc-se-expandir-e-violencia-policial-bater-recorde-em-sp.shtml",
    "editoria": "gerais",
@@ -237,15 +267,68 @@
    }
   },
   {
+   "manchete": "Flávio Bolsonaro sobre escolha de Trabuco para a Fazenda: 'estelionato eleitoral'",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 15,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-27T00:08:32Z",
+   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNQTdSZXZKZUV1YmstN0duczViRTZhbVJWekRQSVNIWldIazlpeDU5WF9US01aYkd6TW82ZHNsWE9QTDNBWWRQZFJCdFRZVE5UYzZvS2pfb3ZUc2kwQ3lxc0xxUWN3MlN0a0IyOVpNUGVqNDNCRkdwZHFtX1lodmVPd2l4OG5NV1hFRjVaaVV6RkJVNS04UzM2WTBDeHVuOUVFcjlGSTd5OW0zQmRJRnk5VjJRME1LX1YtMXJ3Sl9RVW5Za3M?oc=5",
+   "editoria": "eleicoes",
+   "nota": 7,
+   "esquentou": false,
+   "lente": [
+    "bolsonar",
+    "flavio"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Flávio critica nomeação para a Fazenda, gerando conflito político.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Os dois nomes que Dino apresentou a Lula para vaga no STF",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-27T10:10:10Z",
+   "link": "https://revistaforum.com.br/politica/lula-consulta-carmen-lucia-sobre-nomes-de-mulheres-para-o-stf/",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Indicação para vaga no STF gera disputa nos bastidores.",
+    "soma": 4
+   }
+  },
+  {
    "manchete": "Brasil excluye a Milei de la lista de invitados a la posesión de Lula",
    "secoes": [
     "B",
     "D-america_latina"
    ],
-   "veiculos": 16,
+   "veiculos": 17,
    "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-27T02:08:24Z",
-   "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPZmQ1aEl2cXdiSGpxSmdvaHZ0N3V4NTBMMVpGZzA0dDJEaTRRWFJTaEpoYzN2N3g2OFRWd0I2cjRNYnd0a0tOSTZRN0o0NURaN01kREgyMnBoT091TlFqT1g2VlEwWVlVZHhFNlE2Q21ia21DVWZOTDE3LUVyMEh2MnhMblFSZ1pUWlptMi1fX1UtSjJxakx2amVfT0pkY1V2aTNjSkpUMzdLVE1qSWFQejNRd0pXNzNrNXhhSHBjbEp5UnB4b1ExaFZUd3VUQdIBzgFBVV95cUxPZmQ1aEl2cXdiSGpxSmdvaHZ0N3V4NTBMMVpGZzA0dDJEaTRRWFJTaEpoYzN2N3g2OFRWd0I2cjRNYnd0a0tOSTZRN0o0NURaN01kREgyMnBoT091TlFqT1g2VlEwWVlVZHhFNlE2Q21ia21DVWZOTDE3LUVyMEh2MnhMblFSZ1pUWlptMi1fX1UtSjJxakx2amVfT0pkY1V2aTNjSkpUMzdLVE1qSWFQejNRd0pXNzNrNXhhSHBjbEp5UnB4b1ExaFZUd3VUQQ?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNZ3BkY3Etcm0xOTdpNlpRUUIxdEp2Y0I3c01XX0NJNk9LWGNkaHJ2a3FrZXU1VC1nT2NobFJRMWFmdlVZQ0x2TWJUaDRtTU9BQXVsQXE0bUNhSmZzR3prd1VHXzBCLUZRT3diLTNFWmtpeDBBcmc1Z0w4Vm1JY3dJRG16ZENGcVdvdV9Db2tac0VINUtQVHdWQkxoalY4TUlXOGNqelhvOS1FcXl4Ym1UNmhvSXJZTmE4OFhj0gHAAUFVX3lxTE5oOGdaQ3FfY1cyN3hlQkljQ0ZWSzBHcW9ZQUtIbmpNd2tYOE44U3JaSC05UDBTQ19fd2dKcE5mdkRVN1p1bV95Y2NhdE9TVzFJQmtxZmV6VzlTWC1uN0JaZ18ta1Y1YTlQRTNOYmM2U2FqOUtUNjgtR0VlNWE5MnIteXdpdkxWSjVxeE0xQ3BuZWVuSEFxV1BpZnlic29tQkNaU0l3OWtyeUhSNnZ3TERFZ0FlTGh1ZzFVM1Jod0NfcQ?oc=5",
    "editoria": "america_latina",
    "nota": 6,
    "esquentou": false,
@@ -253,41 +336,42 @@
     "milei"
    ],
    "ia": {
-    "editoria": "america_latina",
+    "editoria": "politica",
     "I": 2,
     "V": 2,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Brasil exclui Milei da lista de convidados para posse de Lula.",
+    "motivo": "Brasil exclui Milei de posse; desdobramento diplomático.",
     "soma": 4
    }
   },
   {
-   "manchete": "Argentina's Milei not invited to Lula inauguration amid tensions",
+   "manchete": "ONU alerta para piora da fome em 16 países nos próximos seis meses",
    "secoes": [
-    "D-america_latina"
+    "C-nacional",
+    "D-terra"
    ],
-   "veiculos": 6,
+   "veiculos": 2,
    "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-27T00:08:32Z",
-   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNS0VTcHRyamZZbUtOZThLTkw2WFpIZGs0Yy0xTEI2MWc0a2FZelBuUzNvWjJhdFZuQnJNa1pVYmcxR0NRZHhLUm5XdjVYTDRyV0Ywc0ItQmFtYjBmVTF2NUFKMWMtaU95YWNCT3hYZ2dLWVJHRkJnZnZmbld4TlozX2JvalozLUl4WVQtdnhpcy14dGF3RWRmcVNjMkF3LXVLdjQ2NVQydFBrWmtWS2xUQlByUE8?oc=5",
-   "editoria": "america_latina",
-   "nota": 5,
+   "na_pauta_desde": "2026-11-27T11:02:14Z",
+   "link": "https://noticias.uol.com.br/internacional/ultimas-noticias/2026/11/27/onu-alerta-para-piora-da-fome-em-16-paises-nos-proximos-seis-meses.ghtm",
+   "editoria": "roca",
+   "nota": 4,
    "esquentou": false,
    "lente": [
-    "milei"
+    "fome"
    ],
    "ia": {
-    "editoria": "america_latina",
-    "I": 2,
-    "V": 2,
+    "editoria": "roca",
+    "I": 3,
+    "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Milei não é convocado para a posse de Lula.",
+    "motivo": "Alerta da ONU sobre piora da fome.",
     "soma": 4
    }
   },
@@ -317,24 +401,58 @@
     "motivo": "Declaração da escritora Naomi Klein sobre bilionários.",
     "soma": 4
    }
+  },
+  {
+   "manchete": "Desmatamento e fogo transformam a Amazônia em vilã do clima",
+   "secoes": [
+    "C-pesquisa"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-27T11:02:14Z",
+   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOQUlyNWxPZ25KbGtlN3ZKWnhDUGtDSS1NV09LRlRPRndKcGtCY2U4SE9IcHlwLXJQU1dPTDdJZXAyTlRERnkzbHRMN1BHSXExUmdJeHlVcUM0YkV1a3NFSFh6REtoMURxUnB4eWFwZEg0SjZyM09VQjZFaUt2THJGd21fcTFoalBFTVFVa2poc2s2akVEcGRORGZnWTVqMEhESndyekQ5ZWZPaTZwNDhvaTRFNy0?oc=5",
+   "editoria": "gerais",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "desmatamento"
+   ]
   }
  ],
  "rebaixados": [
   {
-   "manchete": "Master vendeu ao BRB ao menos R$ 218 milhões em créditos negociados também com outros credores, diz liquidante",
-   "veiculos": 2,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-27T10:10:10Z",
+   "manchete": "STF mantém restrições para concessão de porte de arma a guardas municipais",
+   "veiculos": 16,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-26T22:09:33Z",
    "esquentou": false,
    "ia": {
-    "editoria": "gerais",
+    "editoria": "politica",
     "I": 2,
     "V": 1,
-    "P": 2,
+    "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Desdobramentos do caso Banco Master e BRB.",
+    "motivo": "Decisão do STF sobre porte de armas para guardas.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "13º salário deve injetar R$ 5,15 bilhões na economia da Paraíba em 2026; veja dicas para usar o recurso",
+   "veiculos": 4,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-26T15:10:33Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Impacto econômico do 13º salário regional.",
     "soma": 3
    }
   },
@@ -357,11 +475,29 @@
    }
   },
   {
+   "manchete": "Reforma electoral: los 8 cambios que incluye el proyecto además de la suspensión de las PASO",
+   "veiculos": 25,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-26T11:30:26Z",
+   "esquentou": true,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Reforma eleitoral internacional sem impacto direto no Brasil.",
+    "soma": 2
+   }
+  },
+  {
    "manchete": "Venezuela revogará lei que torna opositores inelegíveis para sempre (chefe do Parlamento)",
-   "veiculos": 11,
+   "veiculos": 9,
    "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-26T22:09:33Z",
-   "esquentou": true,
+   "esquentou": false,
    "ia": {
     "editoria": "america_latina",
     "I": 1,
@@ -375,10 +511,10 @@
    }
   },
   {
-   "manchete": "La suspensión de las PASO y la señal de debilidad del Gobierno",
-   "veiculos": 31,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-26T11:30:26Z",
+   "manchete": "Elecciones en España 2026: dónde ver y a qué hora es este jueves el debate a cuatro entre Sánchez, Feijóo, Abascal y Colau",
+   "veiculos": 7,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-27T02:18:27Z",
    "esquentou": true,
    "ia": {
     "editoria": "america_latina",
@@ -388,33 +524,15 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Suspensão das PASO na Argentina e debate sobre o governo.",
+    "motivo": "Debate eleitoral na Espanha.",
     "soma": 2
    }
   },
   {
-   "manchete": "Senado da Argentina vota suspensão de primárias que pode favorecer Milei em 2027",
-   "veiculos": 13,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-26T20:33:43Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Senado argentino vota suspensão de primárias.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "Mauro Vieira se reúne com novo presidente do Paraguai após impeachment de Santiago Peña",
-   "veiculos": 11,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-26T11:30:26Z",
+   "manchete": "Lisandro Alonso cuestiona concepto de libertad de Milei en su nueva película",
+   "veiculos": 2,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-27T11:02:14Z",
    "esquentou": false,
    "ia": {
     "editoria": "america_latina",
@@ -424,50 +542,32 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Diplomacia regional após mudança no Paraguai.",
+    "motivo": "Crítica cultural ao governo Milei.",
     "soma": 2
    }
   },
   {
-   "manchete": "Empresa de Richarlison se declara integrante de 'povos e comunidades tradicionais' em pedido para regularizar imóvel em ilha de Angra",
-   "veiculos": 5,
+   "manchete": "Trump declara apoio à decisão do Iraque de enviar de tropas para fora do país",
+   "veiculos": 1,
    "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-26T19:08:52Z",
+   "na_pauta_desde": "2026-11-27T11:02:14Z",
    "esquentou": false,
    "ia": {
-    "editoria": "gerais",
+    "editoria": "america_latina",
     "I": 1,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Empresa de jogador busca regularizar imóvel em Angra.",
+    "motivo": "Movimentação de tropas no Iraque apoiada pelos EUA.",
     "soma": 2
-   }
-  },
-  {
-   "manchete": "EUA abrem canal de denúncia contra cartéis no México, que critica ingerência",
-   "veiculos": 9,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-26T19:08:52Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 0,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "EUA criam canal de denúncia no México.",
-    "soma": 1
    }
   },
   {
    "manchete": "EXCLUSIVE: US pushed Venezuela, Iraq to consider leaving OPEC, sources say",
-   "veiculos": 13,
-   "veiculos_3h": 7,
+   "veiculos": 14,
+   "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-27T10:10:10Z",
    "esquentou": false,
    "ia": {
@@ -483,85 +583,85 @@
    }
   },
   {
-   "manchete": "Espanha encerra campanha eleitoral; Sánchez tenta frear a direita e a extrema direita",
-   "veiculos": 4,
-   "veiculos_3h": 2,
+   "manchete": "Marc Márquez choca mundo do motociclismo e anuncia aposentadoria após 10º título mundial",
+   "veiculos": 8,
+   "veiculos_3h": 8,
    "na_pauta_desde": "2026-11-27T10:10:10Z",
    "esquentou": false,
    "ia": {
     "editoria": "fora",
     "I": 0,
-    "V": 1,
+    "V": 0,
     "P": 0,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Eleições na Espanha.",
-    "soma": 1
+    "motivo": "Esporte, fora do escopo político-social.",
+    "soma": 0
    }
   }
  ],
  "obrigatorios": [],
  "descartados_mais_quentes": [
   {
-   "manchete": "Luiz Carlos Trabuco - ICL Notícias",
-   "veiculos": 107,
-   "veiculos_3h": 24,
+   "manchete": "Quem é Luiz Carlos Trabuco, executivo sondado para Fazenda do Lula 4",
+   "veiculos": 92,
+   "veiculos_3h": 14,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Bolsonaro apresenta melhora e inicia dieta líquida, mas segue na UTI, diz boletim",
-   "veiculos": 34,
-   "veiculos_3h": 5,
+   "manchete": "PT resiste ao nome de Trabuco para o Ministério da Fazenda",
+   "veiculos": 64,
+   "veiculos_3h": 21,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Brasil atinge recorde de alunos no ensino superior e mais pretos, pardos e indígenas nas federais pela 1ª vez",
-   "veiculos": 30,
-   "veiculos_3h": 1,
-   "motivo": "repetido (20261126-1215-federais-ppi-maioria)"
+   "manchete": "Aliados defendem Alckmin no Ministério da Segurança Pública",
+   "veiculos": 33,
+   "veiculos_3h": 2,
+   "motivo": "sem editoria"
   },
   {
    "manchete": "Macron chama carne brasileira de “dopada” e comemora veto pela União Europeia",
-   "veiculos": 30,
-   "veiculos_3h": 1,
+   "veiculos": 31,
+   "veiculos_3h": 5,
    "motivo": "repetido (20261126-1715-macron-carne-dopada)"
   },
   {
-   "manchete": "InfoGripe: casos de Covid-19 seguem aumentando no Brasil",
-   "veiculos": 17,
-   "veiculos_3h": 1,
+   "manchete": "Dos EUA, Flávio Bolsonaro indica R$ 79,3 milhões em emendas que priorizam o Rio",
+   "veiculos": 22,
+   "veiculos_3h": 7,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Zambelli pede a Fachin anulação de condenação por invasão ao CNJ",
-   "veiculos": 13,
-   "veiculos_3h": 1,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Internacional x RB Bragantino: onde assistir ao vivo, horário e prováveis escalações pela 37ª rodada da Série A",
-   "veiculos": 11,
+   "manchete": "Camilo Santana ganha força para assumir a Casa Civil após Haddad ficar fora do governo",
+   "veiculos": 16,
    "veiculos_3h": 2,
-   "motivo": "fora: entretenimento (serie)"
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Tempestade solar pode provocar perturbação na Terra até sexta-feira; veja o que esperar no Brasil",
+   "veiculos": 16,
+   "veiculos_3h": 2,
+   "motivo": "sem editoria"
   },
   {
    "manchete": "Confira o resultado da Lotofácil, concurso 3839, desta quinta-feira (26/11); prêmio é de R$ 2,0 milhões",
-   "veiculos": 8,
+   "veiculos": 10,
    "veiculos_3h": 3,
    "motivo": "fora: entretenimento (lotofacil)"
   },
   {
-   "manchete": "Reação do Brasil a declarações de Macron sobre carne brasileira repercute na França",
+   "manchete": "Cinco personalidades que marcaram 2026",
    "veiculos": 7,
-   "veiculos_3h": 3,
+   "veiculos_3h": 2,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Confira os falecimentos desta sexta-feira (27) em Apucarana",
-   "veiculos": 7,
-   "veiculos_3h": 3,
-   "motivo": "sem editoria"
+   "manchete": "Costa Rica impede entrada de relatora da ONU que acusa Israel de genocídio",
+   "veiculos": 6,
+   "veiculos_3h": 4,
+   "motivo": "fora: internacional sem Brasil nem América Latina"
   }
  ]
 }
