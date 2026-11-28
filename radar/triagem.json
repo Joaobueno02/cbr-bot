@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-28T02:12:16Z",
- "pauta_quando": "2026-11-28T02:12:13Z",
+ "quando": "2026-11-28T02:48:28Z",
+ "pauta_quando": "2026-11-28T02:48:26Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,22 +9,54 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 9,
+  "avaliados_agora": 13,
   "falhas_antes": null,
-  "pedidos_hoje": 3
+  "pedidos_hoje": 4
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 162,
- "novos_3h": 5,
- "esquentaram": 1,
+ "total_assuntos": 166,
+ "novos_3h": 8,
+ "esquentaram": 2,
  "candidatos": [
+  {
+   "manchete": "Mônica Bergamo: Deputado do PT pede ao STF bloqueio de R$ 79,3 milhões em emendas de Flávio Bolsonaro",
+   "secoes": [
+    "A",
+    "A",
+    "B"
+   ],
+   "veiculos": 48,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-26T22:09:33Z",
+   "link": "https://www.congressoemfoco.com.br/noticia/131964/dino-suspende-emendas-de-flavio-bolsonaro-e-cobra-explicacao-do-senado",
+   "editoria": "politica",
+   "nota": 9,
+   "esquentou": true,
+   "lente": [
+    "bolsonar",
+    "flavio",
+    "pl",
+    "orcamento"
+   ],
+   "ia": {
+    "editoria": "gerais",
+    "I": 3,
+    "V": 3,
+    "P": 3,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "STF suspende emendas de Flávio Bolsonaro, alto impacto e viral.",
+    "soma": 6
+   }
+  },
   {
    "manchete": "Fachin prorroga inquérito contra Flávio Bolsonaro por Dark Horse",
    "secoes": [
     "A",
     "B"
    ],
-   "veiculos": 53,
+   "veiculos": 43,
    "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-27T15:09:29Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/27/fachin-prorroga-inquerito-sobre-dark-horse-por-60-dias.ghtml",
@@ -53,13 +85,13 @@
    "secoes": [
     "B"
    ],
-   "veiculos": 30,
-   "veiculos_3h": 4,
+   "veiculos": 36,
+   "veiculos_3h": 5,
    "na_pauta_desde": "2026-11-27T13:12:02Z",
    "link": "https://g1.globo.com/economia/noticia/2026/11/27/ibge-familias-mais-pobres-gastam-mais-da-metade-do-orcamento-com-moradia-e-alimentacao.ghtml",
    "editoria": "politica",
    "nota": 6,
-   "esquentou": false,
+   "esquentou": true,
    "lente": [
     "moradia",
     "orcamento"
@@ -69,37 +101,35 @@
     "I": 3,
     "V": 3,
     "P": 2,
-    "formato": "reels",
+    "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "IBGE mostra peso da moradia e comida para pobres.",
+    "motivo": "IBGE mostra que pobres gastam mais da metade com moradia e comida.",
     "soma": 6
    }
   },
   {
-   "manchete": "Para show com Shakira, Balneário Camboriú cede praia a grupo bilionário por R$ 114,68 por m²",
+   "manchete": "Lula elige a un banquero como ministro de Economía y rebotaron fuerte los mercados",
    "secoes": [
     "B"
    ],
-   "veiculos": 5,
+   "veiculos": 37,
    "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-28T00:09:32Z",
-   "link": "https://g1.globo.com/sc/santa-catarina/noticia/2026/11/27/uso-praia-balneario-camboriu-show-shakira-investigado-mp.ghtml",
-   "editoria": "economia",
-   "nota": 5,
-   "esquentou": true,
-   "lente": [
-    "bilionari"
-   ],
+   "na_pauta_desde": "2026-11-27T00:08:32Z",
+   "link": "https://elpais.com/america/2026-11-27/lula-elige-al-primer-ministro-de-su-proximo-gabinete-un-banquero-para-dirigir-hacienda.html",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
    "ia": {
-    "editoria": "gerais",
+    "editoria": "economia",
     "I": 3,
     "V": 3,
     "P": 2,
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Privatização de espaço público para bilionários revolta trabalhadores e gera engajamento.",
+    "motivo": "Repercussão da escolha de banqueiro para Economia por Lula.",
     "soma": 6
    }
   },
@@ -128,62 +158,6 @@
     "repetido": false,
     "risco": "",
     "motivo": "Ocupação do MST contra crimes ambientais mobiliza o campo.",
-    "soma": 6
-   }
-  },
-  {
-   "manchete": "Trabuco aceita convite de Lula para comandar o Ministério da Fazenda",
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 7,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-28T00:09:32Z",
-   "link": "https://www.gazetadopovo.com.br/cafe-com-a-gazeta/trabuco-aceita-convite-de-lula-para-comandar-o-ministerio-da-fazenda/",
-   "editoria": "politica",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "politica",
-    "I": 3,
-    "V": 3,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Alckmin cotado para ministro da Segurança Pública por Lula.",
-    "soma": 6
-   }
-  },
-  {
-   "manchete": "Mônica Bergamo: Deputado do PT pede ao STF bloqueio de R$ 79,3 milhões em emendas de Flávio Bolsonaro",
-   "secoes": [
-    "A",
-    "A"
-   ],
-   "veiculos": 4,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-28T02:10:59Z",
-   "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPU01yeUk2QTRidmdJVmlEVW1PejJmWEdsYWRGdEFDRk91bUVGbnRKcnZvdkFDZFRrTmIteHRFWVNUUjdianBqOXFYanBlbGJPdHQyeHhJaGJBdTAtN21fTU4xUjRFX2ViTzZvZzBZbXpVbmVrSnJVLWhXV1N6MWc5TzJPT2s5d2h1aFRXWnU3Vm1ESlBXR0dJS2FISkNOOHBVMDBCaTRjSi1GbmFxcGhBaHhMckk1aERoREo5YW5KUXdyc3o3Z0l6Q2VFT19OR2pOQVF2OC15TTM1bTlwOUd6cXoyUQ?oc=5",
-   "editoria": "politica",
-   "nota": 7,
-   "esquentou": false,
-   "lente": [
-    "bolsonar",
-    "flavio",
-    "pl",
-    "orcamento"
-   ],
-   "ia": {
-    "editoria": "politica",
-    "I": 3,
-    "V": 3,
-    "P": 2,
-    "formato": "carrossel",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Flávio Dino suspende emendas de Flávio Bolsonaro no Orçamento de 2027.",
     "soma": 6
    }
   },
@@ -222,7 +196,7 @@
     "C-nacional"
    ],
    "veiculos": 13,
-   "veiculos_3h": 9,
+   "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-28T02:10:59Z",
    "link": "https://g1.globo.com/economia/noticia/2026/11/27/conta-de-luz-aneel-mantem-bandeira-tarifaria-verde-em-dezembro.ghtml",
    "editoria": "economia",
@@ -244,271 +218,14 @@
    }
   },
   {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "economia",
-   "nota": 5,
-   "esquentou": false,
-   "lente": [
-    "trabalhador",
-    "salario"
-   ],
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Prazo do décimo terceiro afeta o bolso de todos os trabalhadores formais.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "politica",
-   "nota": 4,
-   "esquentou": false,
-   "lente": [
-    "racismo"
-   ],
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Prazo do décimo terceiro afeta o bolso de todos os trabalhadores formais.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 2,
-   "esquentou": false,
-   "lente": [
-    "pl"
-   ],
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Prazo do décimo terceiro afeta o bolso de todos os trabalhadores formais.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "politica",
-   "nota": 2,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Prazo do décimo terceiro afeta o bolso de todos os trabalhadores formais.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "politica",
-   "nota": 2,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Prazo do décimo terceiro afeta o bolso de todos os trabalhadores formais.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Prazo do décimo terceiro afeta o bolso de todos os trabalhadores formais.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Prazo do décimo terceiro afeta o bolso de todos os trabalhadores formais.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Prazo do décimo terceiro afeta o bolso de todos os trabalhadores formais.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Prazo do décimo terceiro afeta o bolso de todos os trabalhadores formais.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": null,
-   "secoes": [
-    "A"
-   ],
-   "veiculos": 0,
-   "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
-   "esquentou": false,
-   "lente": [],
-   "ia": {
-    "editoria": "economia",
-    "I": 3,
-    "V": 2,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Prazo do décimo terceiro afeta o bolso de todos os trabalhadores formais.",
-    "soma": 5
-   }
-  },
-  {
-   "manchete": "Após Trabuco, Lula define Camilo Santana como chefe da Casa Civil",
+   "manchete": "Lula escolhe Camilo Santana para Casa Civil",
    "secoes": [
     "A",
     "B"
    ],
-   "veiculos": 45,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-28T02:10:59Z",
+   "veiculos": 64,
+   "veiculos_3h": 9,
+   "na_pauta_desde": "2026-11-27T02:18:27Z",
    "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/lula-define-camilo-santana-para-comandar-casa-civil-dizem-aliados.shtml",
    "editoria": "politica",
    "nota": 5,
@@ -522,12 +239,92 @@
     "formato": "carrossel",
     "repetido": false,
     "risco": "",
-    "motivo": "Troca de ministério importante com grande repercussão na mídia.",
+    "motivo": "Lula escolhe Camilo Santana para a Casa Civil.",
     "soma": 4
    }
   },
   {
-   "manchete": "Servidores bloqueiam entradas da Câmara de Campinas e impedem início de sessão para votar reforma da previdência",
+   "manchete": "Kassio atendeu a 68% dos pedidos de Flávio no TSE, e Estela Aranha, a 67% dos de Lula",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-28T02:10:59Z",
+   "link": "https://www1.folha.uol.com.br/poder/2026/11/kassio-atendeu-a-68-dos-pedidos-de-flavio-no-tse-e-estela-aranha-a-67-dos-de-lula.shtml",
+   "editoria": "eleicoes",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "flavio"
+   ],
+   "ia": {
+    "editoria": "eleicoes",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Levantamento de decisões de ministros no TSE.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Marinha abre investigação sobre denúncia de estupro contra tenente durante viagem de navio-escola pela Europa",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-28T02:10:59Z",
+   "link": "https://www.metropoles.com/brasil/marinha-apura-denuncia-de-estupro-contra-tenente-durante-viagem-de-formacao",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "inquerito"
+   ],
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "Acusação de crime sem conclusão oficial da investigação",
+    "motivo": "Marinha abre investigação sobre denúncia de estupro em navio-escola.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Zambelli pede que STF anule condenação por ataque hacker ao sistema no CNJ",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 17,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-27T17:09:52Z",
+   "link": "https://www.cartacapital.com.br/justica/zambelli-pede-que-stf-anule-a-condenacao-por-invasao-hacker-ao-cnj/",
+   "editoria": "politica",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [],
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Carla Zambelli pede anulação de condenação no STF.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Reforma da Previdência Campinas: protesto de servidores atrasa sessão",
    "secoes": [
     "B"
    ],
@@ -535,8 +332,35 @@
    "veiculos_3h": 4,
    "na_pauta_desde": "2026-11-27T19:11:44Z",
    "link": "https://g1.globo.com/sp/campinas-regiao/noticia/2026/11/27/camara-de-campinas-convoca-tres-reunioes-extraordinarias-remotas-no-domingo-para-votar-reforma-da-previdencia.ghtml",
+   "editoria": "economia",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "protesto"
+   ],
+   "ia": {
+    "editoria": "roca",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Protesto de servidores municipais contra reforma da previdência em Campinas.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Trabuco, futuro ministro da Fazenda, sempre se esquivou de críticas ao governo Lula",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 17,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-27T11:02:14Z",
+   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/colunas/painelsa/2026/11/trabuco-futuro-ministro-da-fazenda-sempre-se-esquivou-de-criticas-ao-governo-lula.shtml",
    "editoria": "politica",
-   "nota": 4,
+   "nota": 5,
    "esquentou": false,
    "lente": [],
    "ia": {
@@ -547,52 +371,152 @@
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Servidores bloqueiam Câmara de Campinas contra reforma da previdência.",
+    "motivo": "Discussão sobre Alckmin na Segurança Pública.",
     "soma": 4
    }
+  },
+  {
+   "manchete": "Aposentados podem perder o direito de vender seu precatório",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 5,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-28T02:10:59Z",
+   "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPQThUSlBOT01nY3ZJcTdWZ0tfUGpwMU1SLVR3b2FFR1BHNHNZQkhvWjg4RkJTVVZJeWZSMVlzZ09UWGl3QmVHZjVjYlYtWG5DYTFBZkFOLUhZTk1SM2JFVXNaRWxYQk1WWlRMS2NmemExYU5VVnF5d1hBd3c4cWZrdUNMTUg1blpUQS13Z1hubFJyVlBSMGNJeUNpQ29OVmZUSWFZMXpxU3ZheFZ6ZzNxUzNUVkxsQ29xeDhTSk1YSi1QeEFSQjhOOG9ISkVTNHp0cmtLOW930gHWAUFVX3lxTE9BOFRKUE5PTWdjdklxN1ZnS19QanAxTVItVHdvYUVHUEc0c1lCSG9aODhGQlNVVkl5ZlIxWXNnT1RYaXdCZUdmNWNiVi1YbkNhMUFmQU4tSFlOTVIzYkVVc1pFbFhCTVZaVExLY2Z6YTFhTlVWcXl3WEF3dzhxZmt1Q0xNSDVuWlRBLXdnWG5sUnJWUFIwY0l5Q2lDb05WZlRJYVkxenFTdmF4VnpnM3FTM1RWTGxDb3F4OFNKTVhKLVB4QVJCOE44b0hKRVM0enRya0s5b3c?oc=5",
+   "editoria": "economia",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "direito",
+    "aposentad"
+   ],
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Aposentados podem perder o direito de vender seu precatório.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Queimadas elevam fumaça e afetam saúde no Amazonas -",
+   "secoes": [
+    "A"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-27T20:03:44Z",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQZmk4RHFFV3ZManctaGlObjJJdnpYblZsR0lXN2FwSVZ4aU5ZeDNud1c2OEh6YWk0R0FTOUxPcWE4Z3Q3RW9xaFpIZGllNHNhV2dZdjhNZUFWTW1CSklFeldHTzNBa25rVU43aTRDYUdoZWJqbzFzX3F5N0RrLWJ5N0tMWm8yaTFGLXRuYzN4c9IBlwFBVV95cUxNSDg3QVpFZ3VGcHdTdHNCVWRYcFZwUVAyelZiQjVUM2NpYUM4ZHEyT1dSMlhsNGhQclFiV1RXQmxjQ3pVTENhR0IyMWduYXU0czVuMW5DcG1hZEZqaGhkNDdKcUJJYTRYaGFaakJNOWNWbnl1b0xFaldzTDJLSVp4WUI3ZDREV0VwRW5lRXYwRFVqUXp6SFBB?oc=5",
+   "editoria": "gerais",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "incendio",
+    "queimada"
+   ],
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Queimadas na Amazônia cobrem cidades e afetam saúde da população.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "China pressiona Colômbia após visita de delegação de deputados a Taiwan",
+   "secoes": [
+    "B",
+    "C-internacional",
+    "D-america_latina"
+   ],
+   "veiculos": 4,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-28T02:10:59Z",
+   "link": "https://www1.folha.uol.com.br/colunas/igor-patrick/2026/11/china-pressiona-colombia-apos-visita-de-delegacao-de-deputados-a-taiwan.shtml",
+   "editoria": "america_latina",
+   "nota": 4,
+   "esquentou": false,
+   "lente": []
+  },
+  {
+   "manchete": "MST lança a pedra fundamental da primeira fábrica de tratores para a agricultura familiar e camponesa",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-27T19:11:44Z",
+   "link": "https://mst.org.br/2026/11/27/mst-lanca-a-pedra-fundamental-da-primeira-fabrica-de-tratores-para-a-agricultura-familiar-e-camponesa/",
+   "editoria": "roca",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "mst"
+   ]
+  },
+  {
+   "manchete": "MST de Brasil convierte su feria agroecológica en un acto de solidaridad con Cuba",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-28T02:10:59Z",
+   "link": "https://www.prensa-latina.cu/2026/11/27/llaman-en-francia-a-reforzar-la-solidaridad-con-cuba/",
+   "editoria": "roca",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "mst"
+   ]
+  },
+  {
+   "manchete": "Em Belém, Wellington Dias destaca integração de políticas públicas no combate à fome",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-28T02:10:59Z",
+   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOZzJvSld2OXhmcEFla09JUGoyaXFQTno3S01rdFhfZjZmR2JGUTI4VURkRU5FTEI0S2ZDTzliMk1WM2tnaGlvWjZWTkNmVDlfUFF6QVI5ZmRPTE9VYXNVX2RSRHhIa1JHTjVSUC13dHdZV093RV9RM1VNWU1semdOemU0NFFfUEVqSUhHNk9QckE4bU40NWRXb1NBcS05aThPaGFwNkJNSWJSQVFFbi1OdzZmSGkySkZCdUVlaUZTV3c?oc=5",
+   "editoria": "roca",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "fome"
+   ]
+  },
+  {
+   "manchete": "Cianeto avança no garimpo de ouro e expõe novos riscos em terra indígena de MT, alerta WWF - HiperNotícias",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-28T02:10:59Z",
+   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQb3BRQ1JuV1FLVXFORHJRUnIzNmNwSkwyS293WFZiTW9FLWdoekV3R25RTTdFS1FSLTkyb2ZmbUtSNkdoZ29Cd2dJVFNVcm82dHE1NDdPd3NLUWpGVW5jZi1JcVloRW1KZjIxU1MyVG1PU0VOOXNiY3h4N0lfZm54UzFDOVJlTy1keWRWLW5oMzg2RFhRWWJzTGR1cHBfVmlOR2kyaUg1UURIcGtVcUpDNjk2bTVrVjliZzBlZWRlbklHQTlyREE?oc=5",
+   "editoria": "roca",
+   "nota": 4,
+   "esquentou": false,
+   "lente": [
+    "indigena"
+   ]
   }
  ],
  "rebaixados": [
   {
-   "manchete": "O Picasso do caso Master e a lavagem de dinheiro na arte",
-   "veiculos": 2,
-   "veiculos_3h": 2,
-   "na_pauta_desde": "2026-11-28T02:12:13Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "gerais",
-    "I": 2,
-    "V": 1,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Desdobramento de esquema financeiro, mas com pouca repercussão imediata.",
-    "soma": 3
-   }
-  },
-  {
-   "manchete": "Fome pode agravar-se em 16 regiões do mundo. ONU alerta para risco de catástrofe",
-   "veiculos": 12,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-27T10:10:10Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "roca",
-    "I": 2,
-    "V": 1,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Alerta global da ONU sobre avanço da fome mundial.",
-    "soma": 3
-   }
-  },
-  {
    "manchete": "Mapa participa da regulamentação do Programa Nacional de Pesquisa e Inovação para a Agricultura Familiar e a Agroecologia",
-   "veiculos": 6,
-   "veiculos_3h": 0,
+   "veiculos": 7,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-28T02:10:59Z",
    "esquentou": false,
    "ia": {
@@ -608,9 +532,27 @@
    }
   },
   {
+   "manchete": "O que muda com a suspensão das eleições primárias na Argentina",
+   "veiculos": 17,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-26T20:33:43Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 1,
+    "P": 2,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Mudanças com a suspensão das eleições primárias na Argentina.",
+    "soma": 3
+   }
+  },
+  {
    "manchete": "Fachin libera R$ 316 milhões da liquidação do Master ao BRB",
-   "veiculos": 30,
-   "veiculos_3h": 29,
+   "veiculos": 27,
+   "veiculos_3h": 23,
    "na_pauta_desde": "2026-11-28T02:10:59Z",
    "esquentou": false,
    "ia": {
@@ -626,26 +568,8 @@
    }
   },
   {
-   "manchete": "Enem 2026: resultados dos pedidos de reaplicação estão disponíveis",
-   "veiculos": 32,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-27T17:09:52Z",
-   "esquentou": true,
-   "ia": {
-    "editoria": "educacao",
-    "I": 2,
-    "V": 1,
-    "P": 1,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Informação útil para estudantes sobre resultados de reaplicação.",
-    "soma": 3
-   }
-  },
-  {
    "manchete": "Ministério da Saúde promove Dia D de combate à dengue e lança campanha de prevenção às arboviroses",
-   "veiculos": 4,
+   "veiculos": 5,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-27T19:11:44Z",
    "esquentou": false,
@@ -662,75 +586,111 @@
    }
   },
   {
-   "manchete": "Governador de direita do RS escolhe cover de Elvis Presley para ser secretário",
-   "veiculos": 5,
+   "manchete": null,
+   "veiculos": 0,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-27T20:03:44Z",
+   "na_pauta_desde": null,
    "esquentou": false,
    "ia": {
-    "editoria": "politica",
-    "I": 1,
-    "V": 2,
+    "editoria": "economia",
+    "I": 2,
+    "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Nomeação curiosa gera engajamento e críticas à gestão estadual da direita.",
+    "motivo": "Prazo para pagamento do décimo terceiro salário.",
     "soma": 3
    }
   },
   {
-   "manchete": "Senado argentino aprova reforma que suspende primárias e pode favorecer Milei",
-   "veiculos": 8,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-26T20:33:43Z",
+   "manchete": null,
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
    "esquentou": false,
    "ia": {
-    "editoria": "america_latina",
-    "I": 1,
-    "V": 1,
-    "P": 2,
-    "formato": "feed",
-    "repetido": false,
-    "risco": "",
-    "motivo": "Reforma eleitoral na Argentina afeta o cenário político regional.",
-    "soma": 2
-   }
-  },
-  {
-   "manchete": "PGN 2027: Senado lo aprueba con varios cambios y lo remite a Diputados",
-   "veiculos": 25,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-27T19:11:44Z",
-   "esquentou": false,
-   "ia": {
-    "editoria": "america_latina",
-    "I": 1,
+    "editoria": "economia",
+    "I": 2,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Assunto internacional fora do foco principal do público brasileiro.",
-    "soma": 2
+    "motivo": "Prazo para pagamento do décimo terceiro salário.",
+    "soma": 3
    }
   },
   {
-   "manchete": "Brasil quer aproximar Mercosul de mercados do Caribe e América Central",
-   "veiculos": 14,
-   "veiculos_3h": 4,
-   "na_pauta_desde": "2026-11-28T02:10:59Z",
+   "manchete": null,
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
    "esquentou": false,
    "ia": {
-    "editoria": "america_latina",
-    "I": 1,
+    "editoria": "economia",
+    "I": 2,
     "V": 1,
     "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Brasil quer aproximar Mercosul de mercados do Caribe e América Central.",
-    "soma": 2
+    "motivo": "Prazo para pagamento do décimo terceiro salário.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": null,
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "esquentou": false,
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Prazo para pagamento do décimo terceiro salário.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": null,
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "esquentou": false,
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Prazo para pagamento do décimo terceiro salário.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": null,
+   "veiculos": 0,
+   "veiculos_3h": 0,
+   "na_pauta_desde": null,
+   "esquentou": false,
+   "ia": {
+    "editoria": "economia",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Prazo para pagamento do décimo terceiro salário.",
+    "soma": 3
    }
   }
  ],
@@ -758,14 +718,15 @@
    "manchete": "Mônica Bergamo: Deputado do PT pede ao STF bloqueio de R$ 79,3 milhões em emendas de Flávio Bolsonaro",
    "secoes": [
     "A",
-    "A"
+    "A",
+    "B"
    ],
-   "veiculos": 4,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-28T02:10:59Z",
-   "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPU01yeUk2QTRidmdJVmlEVW1PejJmWEdsYWRGdEFDRk91bUVGbnRKcnZvdkFDZFRrTmIteHRFWVNUUjdianBqOXFYanBlbGJPdHQyeHhJaGJBdTAtN21fTU4xUjRFX2ViTzZvZzBZbXpVbmVrSnJVLWhXV1N6MWc5TzJPT2s5d2h1aFRXWnU3Vm1ESlBXR0dJS2FISkNOOHBVMDBCaTRjSi1GbmFxcGhBaHhMckk1aERoREo5YW5KUXdyc3o3Z0l6Q2VFT19OR2pOQVF2OC15TTM1bTlwOUd6cXoyUQ?oc=5",
+   "veiculos": 48,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-26T22:09:33Z",
+   "link": "https://www.congressoemfoco.com.br/noticia/131964/dino-suspende-emendas-de-flavio-bolsonaro-e-cobra-explicacao-do-senado",
    "editoria": "politica",
-   "nota": 7,
+   "nota": 9,
    "parceiro": {
     "perfil": "luzmanifesto",
     "quando": "2026-11-27T19:51:53Z",
@@ -779,7 +740,7 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 5,
+   "veiculos": 6,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-26T22:09:33Z",
    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNWVFQTGljOTdNUlFVVVdLVzlCUWcyeEpENWo5YWtYQUczZFNDMkFIOEJMTk5FazhBTG9JMUd2ZHp1QlhHZkEwS3dpM3Q2TTlfU2p1TVNtXzRVaXN2UHNTdTZqRGp2UTJYRC0wa2FvdF82MHFNSVZUVXZiN0lpdnlmSExnNFZXaFgtVk9PaFpzb0w2RTRCTjRSMlNCOUpGekRTaWVqZUVRbVVRQdIBrwFBVV95cUxNU1RTU2pYMmtURnlTaGNzTlI0LWdTY3phVHhiV1I4aTl4UjhHeTUzRW9ES1N0ajhCbUtta2EzNDhodmhHbkV5SHJYczVKSEFmUnotVnNGUGliSmYxX3JfTmM2UjNzVDdPdWdtUUgwNTV6bUZSaHNJLUxONlRVdVNNOUVaMDFaZjI5eHZoMVZLQ2NPdDRlcGc0LURieWtGcURWeHA2SlpDMU1MRkFvSFRN?oc=5",
@@ -794,16 +755,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Nexus/Seta: 64% da população projetam boicotes do Congresso a Lula",
+   "manchete": "Lula tem mais aprovação que desaprovação, e otimismo lidera para novo mandato, revela pesquisa",
    "secoes": [
     "A"
    ],
-   "veiculos": 3,
+   "veiculos": 2,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-28T02:10:59Z",
-   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQUXRBS3V2RWlZRUZsbTVQN1hLSVdlaUl6NUZLdG9yVXNVQWhrQi11bHFpR3VENDRnQjRBWlRfMHVwN09KTkFwWERrMEpjeHhrQnhkQlNZdHhZMFRmVlNCeG1GUGRuaS1yQy1VZXZ5MzZFM3Y2TXRONjl1Y1RQZHBnZnRCNnE2YmFVUFlPWHVybTE0UUNEMDJ3bG5VNUxkMUprQmlPMFVR?oc=5",
-   "editoria": "politica",
-   "nota": 3,
+   "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNTGRUZVBrN3NzRTJuZEFSbXpnTU1VQldoTWFPWVVTMFhEWFpDV3cyTUlkQjRGb1JHQjdhZVBoNDlQMUJvQ202b0JxTmJZamtJaEw0UFpaSzlNNEY3aW14bXFyS3RTY0pkUEhhRmRFS2hNY2EwRzBRTExvblRRM2szSzhQTXA3RjIyMUtZ?oc=5",
+   "editoria": "gerais",
+   "nota": 2,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-27T19:30:04Z",
@@ -855,12 +816,12 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 6,
+   "veiculos": 4,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-27T10:10:10Z",
    "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOME0yTHljU3VncjhfQS1ySHZrMEhTTkgxd2dhR1FwTHZfMDdPLXhaMFdEejRDQW1BQXFVRTdwWjlwbm9ZMVMyM3lVczg5aWFpRFlfRVlFYlVvVmVOdzdtY1h2VGFsVDhyQ2pqcEJfSlhMLWc1Vzg3NVA5Ui1XS0VUNGhzSGphSTJDWDNyeGdLam0tWnowbUxhdWRlaGtOZUtUVXF2VjRwc1plRW9ubFl3eGkzdG5hMVhSdVVQTkJLSTU5ZzAtSzBKNjZxX2RWUQ?oc=5",
    "editoria": "politica",
-   "nota": 4,
+   "nota": 3,
    "parceiro": {
     "perfil": "luzmanifesto",
     "quando": "2026-11-27T13:03:11Z",
@@ -908,16 +869,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Governador de direita do RS escolhe cover de Elvis Presley para ser secretário",
+   "manchete": "Ex-prefeito de Farroupilha é nomeado para secretaria no governo do Rio Grande do Sul",
    "secoes": [
     "A"
    ],
-   "veiculos": 5,
+   "veiculos": 1,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-27T20:03:44Z",
-   "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQajV2amxmT3VzU29seDZmenQ1Q0FiUDNfalhhTkxDb016TXVRV2tiUnRHWUxfZGU4OFNxWXRsdzdJYUExcHdLck5zanZrRkpZbWM4SE5GWkc0NllDTzFBTG5uMmt1bzhxS2tKYllvSEkwLXJTV2pKdEk5d0NURmhGam1Fd1RYSlIzNWlBd1VQemF1SU9fWEpEVmg3TzVhM1FFckZjY1ktQmYweVFla05SSEFOdG9IRV91VGxGajB0bzE0cG9aalBDZnhn0gHPAUFVX3lxTE1kb28tNmFjLTdVdEdMOW1PaDFMdnZ3UjQ3NGFxejQyOFk0b25XZGpGaWFRaTU2R0Z2akVKdEFqOVdjbU51eUNXNEZmU3JxMDUySXBiQ2RmLVY1ZWNaV2IyNWRmSTJ3c3MzUHV2Y2xYMlNsTklyMVZHTmdkWDAyc1ZmclVpM0RIRnFZaklvR2Q1TzFHZ09QTXpaSGQyTEppZ1Y1MFhlM2Fvbm9Fa0VFaElZWUppTjdYaFU5ajl1WUhoX1plUnhxMTlPVWJ1dDQtVQ?oc=5",
+   "na_pauta_desde": "2026-11-28T02:48:26Z",
+   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNSF9ybHRRaUxPejFoZllaWXEwX25ZWVJRSmVGMHJ0RWNBcTB0UG5ObzVBc2V1RUp5bWZLMG1uUGJKUzFyN2pHaGxSbUZMNEw2a2VsSm11aHgwekVtay10SGNxR09pRHhlcFViZ0RCakU0bXY4WTlrRFkyMHhzTFNhd0dxd0NoRElfWnpTSlA5aWZRT25Uem0yNjJnaGxVeHNDQ3B0Q25WWXpSVzFHV0JsQk1lZVphSXBUQjB3cEpnbGo?oc=5",
    "editoria": "politica",
-   "nota": 6,
+   "nota": 3,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-27T17:45:06Z",
@@ -950,12 +911,12 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 4,
+   "veiculos": 5,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-28T02:10:59Z",
    "link": "https://www.metropoles.com/brasil/marinha-apura-denuncia-de-estupro-contra-tenente-durante-viagem-de-formacao",
    "editoria": "politica",
-   "nota": 4,
+   "nota": 5,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-27T20:45:03Z",
@@ -965,16 +926,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Trabuco aceita convite de Lula para comandar o Ministério da Fazenda",
+   "manchete": "Trabuco, futuro ministro da Fazenda, sempre se esquivou de críticas ao governo Lula",
    "secoes": [
     "A"
    ],
-   "veiculos": 7,
+   "veiculos": 17,
    "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-28T00:09:32Z",
-   "link": "https://www.gazetadopovo.com.br/cafe-com-a-gazeta/trabuco-aceita-convite-de-lula-para-comandar-o-ministerio-da-fazenda/",
+   "na_pauta_desde": "2026-11-27T11:02:14Z",
+   "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/colunas/painelsa/2026/11/trabuco-futuro-ministro-da-fazenda-sempre-se-esquivou-de-criticas-ao-governo-lula.shtml",
    "editoria": "politica",
-   "nota": 4,
+   "nota": 5,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-27T18:45:05Z",
@@ -988,7 +949,7 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 2,
+   "veiculos": 3,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-27T15:09:29Z",
    "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNNlh5QWRxdFN2Mk9WRkpVM21yRUE2NERGeUVnRnhURlp2aDRWaWViVkR6alBxM0szX3ptOW5UU3NjMDJTdmEwVXdoam5NdXYxS1RkOVBBTTZaMTFLVXE1Z2xPOG1RczJkNkYtc2UtWGhTYnVoTmV4YVAza09QdE5qZXJudTNaWnphSFJtMG9DUDBDbkptTWl3MWRIVUxkZE9LR3A3N2JrVlJ4SDZUMXh3RHdQOA?oc=5",
@@ -1003,14 +964,14 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Após Trabuco, Lula define Camilo Santana como chefe da Casa Civil",
+   "manchete": "Lula escolhe Camilo Santana para Casa Civil",
    "secoes": [
     "A",
     "B"
    ],
-   "veiculos": 45,
-   "veiculos_3h": 6,
-   "na_pauta_desde": "2026-11-28T02:10:59Z",
+   "veiculos": 64,
+   "veiculos_3h": 9,
+   "na_pauta_desde": "2026-11-27T02:18:27Z",
    "link": "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/poder/2026/11/lula-define-camilo-santana-para-comandar-casa-civil-dizem-aliados.shtml",
    "editoria": "politica",
    "nota": 5,
@@ -1064,10 +1025,11 @@
    "manchete": "Mapa participa da regulamentação do Programa Nacional de Pesquisa e Inovação para a Agricultura Familiar e a Agroecologia",
    "secoes": [
     "A",
+    "B",
     "D-terra"
    ],
-   "veiculos": 6,
-   "veiculos_3h": 0,
+   "veiculos": 7,
+   "veiculos_3h": 2,
    "na_pauta_desde": "2026-11-28T02:10:59Z",
    "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOWm5MRHd4cFVWeE5GZ1JBcGducU9wT0JMYUdHQnJDcjlRUkc3REpIdHZkcnJMYlEwQS1fNk9ULTVnbkRPM0c4dXM2bmxqUkw0MFc1ZjZtbjNWaEJLN2VQMUgyNGUyX0duSkl4cWRvSmQ2S0U3TVBkNjhSTHBveWlmOGNTNnBCZEpudl91czQ1N2lPM0ZHX0NSam5MdkxOSXA3blNVc1ZfLTNnY3BpWWhyVFMyUGNlV2VSWXhld0hiYWZkajBOR0poM3RveWRSUUlSeXRxNFhUWUsxNy11c1V0ZA?oc=5",
    "editoria": "roca",
@@ -1104,7 +1066,7 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 7,
+   "veiculos": 9,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-27T17:09:52Z",
    "link": "https://g1.globo.com/economia/noticia/2026/11/27/contas-do-governo-tem-superavit-de-r-52-bilhoes-em-outubro-melhor-saldo-para-o-mes-em-dez-anos.ghtml",
@@ -1138,16 +1100,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": null,
+   "manchete": "Brasil vê nova tarifa dos EUA como tentativa de controlar regulação das big techs",
    "secoes": [
     "A"
    ],
-   "veiculos": 0,
+   "veiculos": 1,
    "veiculos_3h": 0,
-   "na_pauta_desde": null,
-   "link": null,
-   "editoria": "gerais",
-   "nota": 1,
+   "na_pauta_desde": "2026-11-28T02:48:26Z",
+   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQODJ6N0J0SVMxRTBkWkhtN2hOX0c4TllkalNMOVctdmdDN2ZoR3VaT2hFa0lUdHVyLXZlSzBJTXA4ZEg0S0xoNTJpLVdOZWU0ZnpPSTllejJFZGlmM1BiTWFMUGJTZW4tOGYtUlZJQl96VUE0eXRadFpOVnkwX0ZhcEtsQzNSN19UeUd2N0ZJakNlckZiNEtmX0JETmdieXVtMGMwT3pFWGJCZnM?oc=5",
+   "editoria": "economia",
+   "nota": 2,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-28T01:55:50Z",
@@ -1176,15 +1138,15 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Taxa de desocupação é de 5,1% e taxa de subutilização é de 12,7% no trimestre encerrado em outubro - Agência de Notícias",
+   "manchete": "Agenda do dia: Dados de desemprego do IBGE de outubro são destaque",
    "secoes": [
     "A"
    ],
-   "veiculos": 15,
+   "veiculos": 3,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-27T13:12:02Z",
-   "link": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxOemtTTEh5b2NsbDN4SFY3TnU2T2ZXWGpzRThPc1hyZHdQNWotdDRqbkFSTFVlbWpvOVJnR0J0U3JaalB5NjRWQjlNUDdtREFOT2pfWnVJNDJvNlRiQ242UGFfY2I5bDJGTVhfdGZvVGJITER5SnFWNkVfZnNiT0lfU3NxeF9HOFplVWFnMm0yek9jdHFzM0NlREctVkxVLXlZWk9VU25lQW5kVHVrejF0ZUExd3pZVDB4Zy1ReGtKeTdyWUxZb1NuaG9nN1liOGRYUUs1ZFlmZHREaEp2aUQxSWZMeXM1VERLdDNLVTNzejRLeE9yVkkxSThiQnBJWF9Ra2Z4UVBNczhnZjI5VkxnamQwTmJIQUk2UHNib0RQdE0xNTJaUGJWandRd0lOclpWQWNoUk5pMVQ?oc=5",
-   "editoria": "gerais",
+   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPZ1FJSXlEZFNFLWdLYTNfMlVheGZIYmYzU3dpblJKX21zTTd0ZEZLT0FKWW56WVdYbXZzQlRpV3BzcjZPVlBjNkdjUG1STEVuWWRYeFJJRVhycU50V1E5SlYtX1I1am1pQ3d0SGFIWk5ucmJVeUVjQnYtaTY5bU9Gek1qaFpDc2ZfdlRWYktvLWNNUGR6WjlQR1VGTXprRngxNmtuaHd1TEc3bU1mMGhXSEpFMl9sSFhfQ0k5SF84dXc?oc=5",
+   "editoria": "economia",
    "nota": 4,
    "parceiro": {
     "perfil": "brasilforadacaverna",
@@ -1195,16 +1157,16 @@
    "triagem": "candidato"
   },
   {
-   "manchete": "Felipe diz a Mau Mau que não tem como confiar nele: confira resumo de Quem Ama Cuida nesta sexta-feira, 27/11",
+   "manchete": "A Agência Nacional de Vigilância Sanitária (Anvisa) determinou nesta sexta-feira (27) a proibição da venda, fabricação, distribuição, propaganda e uso de 7 suplementos alimentares da marca Muwiz, além do recolhimento de todos os lotes. Segundo o órgão",
    "secoes": [
     "A"
    ],
-   "veiculos": 3,
-   "veiculos_3h": 2,
+   "veiculos": 8,
+   "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-28T02:10:59Z",
-   "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQbS02R1pLbkZweFR1Q2FEdkdxcl95SUxOVWh0TGw1dUtkVDdCMDhycGRvX2lSMmtJTG1lNml6WlFNdkNrUGFHcHNLMzJJTUlPZzBCTmJFNDN2SlRnVzU5QVRFRDh0MWdwOVc0THJ6NHB4UUNoeVkyeU80SUZfd2VuOEZHZFptaGxtby1vQ0JpNFlXOGlNakc2ekZoM3otTGlVdUZjaGVyNDM5TGZyQUlWS25KZ3d2eXBOSHg1U2Vpby0yWWo1LVBVVHVnUkNVQWhMNjA0RjlQdENYUQ?oc=5",
-   "editoria": "gerais",
-   "nota": 2,
+   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1POGpxd1JNQTQwZXlhVUk5bDl6Z0JnazhfbTBJMW41MkpnWUp3aXhwSUNZUUtzZ2w1N2E1eS1yVUlXVkNmTjZNUGZqeUxZcE00ZXc?oc=5",
+   "editoria": "saude",
+   "nota": 4,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-27T19:45:04Z",
@@ -1221,7 +1183,7 @@
    "veiculos": 1,
    "veiculos_3h": 0,
    "na_pauta_desde": "2026-11-28T02:10:59Z",
-   "link": "https://www.diariodocentrodomundo.com.br/edilene-lobo-e-a-preferida-de-lula-para-o-stf/",
+   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQWS1CaHpvVGptWUpVVkFJR1l2UTdab2ZnblFlLU81OWI2NFFoY19VSlFFTDhUekZJSnlfSkRKZFMyQnRGUmpNUk43N3JPZ2pVZzBTY2paY1habGtzdG5uWHg3emdEdkdkVy1sRFZCeXJ4aV9VQ3Fua0RNSmc0ajVKeXc5ZUIxSmhrRVBBcThsTng?oc=5",
    "editoria": "politica",
    "nota": 3,
    "parceiro": {
@@ -1238,7 +1200,7 @@
     "A",
     "B"
    ],
-   "veiculos": 53,
+   "veiculos": 43,
    "veiculos_3h": 3,
    "na_pauta_desde": "2026-11-27T15:09:29Z",
    "link": "https://g1.globo.com/politica/noticia/2026/11/27/fachin-prorroga-inquerito-sobre-dark-horse-por-60-dias.ghtml",
@@ -1255,11 +1217,10 @@
   {
    "manchete": "Expectativa de vida ao nascer bate recorde no Brasil e chega à marca de 76,9 anos",
    "secoes": [
-    "A",
-    "B"
+    "A"
    ],
-   "veiculos": 26,
-   "veiculos_3h": 3,
+   "veiculos": 23,
+   "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-27T13:12:02Z",
    "link": "https://g1.globo.com/economia/noticia/2026/11/27/expectativa-de-vida-no-brasil-sobe-para-769-anos-em-2025-diz-ibge.ghtml",
    "editoria": null,
@@ -1277,12 +1238,12 @@
    "secoes": [
     "A"
    ],
-   "veiculos": 4,
+   "veiculos": 5,
    "veiculos_3h": 1,
    "na_pauta_desde": "2026-11-27T19:11:44Z",
    "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNVF9Od0VFbU5QRElKSVh6ZGxKcjk1NEhybWdOVDNRcHZIaUQ4dGRPV2F2dHp1TTlUZnR1RlRuOHlYUWRaT3NWNW0wODc0aXdGM09EdzFDZUtKbmhjQVk4Ukl0dC1XMktVTmFzRThkS2t1N00wMFQyNkNYcE5jNmx0Vy10ZVBxLWpxSUVYTTdSNElVWVhZVmx1S2lKSldrbVZmc0dLUWZvcEM3c3AwaG50NlJTVjhVQmRtbms1OXFoaE90bThFMl9RUTRScXlkMk5kX3MtWFNpSGg2M3Zia0htU0JHOWk5X3NmS2M0RnhhOEc5Qk0?oc=5",
    "editoria": "saude",
-   "nota": 5,
+   "nota": 6,
    "parceiro": {
     "perfil": "brasilforadacaverna",
     "quando": "2026-11-27T20:30:07Z",
@@ -1370,64 +1331,64 @@
  ],
  "descartados_mais_quentes": [
   {
-   "manchete": "Nome de Trabuco para Fazenda é bem recebido no BC e no governo Lula",
-   "veiculos": 205,
-   "veiculos_3h": 61,
+   "manchete": "Veja dez desafios para Luiz Carlos Trabuco na Fazenda do governo Lula 4",
+   "veiculos": 81,
+   "veiculos_3h": 8,
    "motivo": "sem editoria"
   },
   {
    "manchete": "Flávio Bolsonaro tenta ditar ritmo da direita 1 mês após fuga aos EUA, mas vê liderança abalada",
-   "veiculos": 83,
-   "veiculos_3h": 11,
+   "veiculos": 40,
+   "veiculos_3h": 6,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "OMS monitora nova variante da Covid-19 no Brasil",
-   "veiculos": 34,
+   "manchete": "Trabuco na Fazenda e acenos do governo aliviam Bolsa e dólar após pressão",
+   "veiculos": 40,
    "veiculos_3h": 3,
    "motivo": "sem editoria"
   },
   {
+   "manchete": "Desemprego fica em 5,1% até outubro e repete menor número da série, diz IBGE",
+   "veiculos": 33,
+   "veiculos_3h": 4,
+   "motivo": "fora: entretenimento (serie)"
+  },
+  {
    "manchete": "Acusado de matar mulher na UFMT é condenado a 50 anos e 4 meses de prisão em regime fechado",
-   "veiculos": 30,
+   "veiculos": 29,
    "veiculos_3h": 2,
    "motivo": "fora: crime ou tragedia (matar)"
   },
   {
+   "manchete": "OMS monitora nova variante da Covid-19 que já circula em vários estados do Brasil e no Distrito Federal",
+   "veiculos": 28,
+   "veiculos_3h": 3,
+   "motivo": "sem editoria"
+  },
+  {
    "manchete": "Expectativa de vida ao nascer bate recorde no Brasil e chega à marca de 76,9 anos",
-   "veiculos": 26,
-   "veiculos_3h": 3,
+   "veiculos": 23,
+   "veiculos_3h": 1,
    "motivo": "fora: entretenimento (serie)"
   },
   {
-   "manchete": "Desemprego fica em 5,1% até outubro e repete menor número da série, diz IBGE",
-   "veiculos": 21,
-   "veiculos_3h": 3,
-   "motivo": "fora: entretenimento (serie)"
-  },
-  {
-   "manchete": "Jogos hoje (27/11/26) ao vivo de futebol: onde assistir e horário",
-   "veiculos": 12,
-   "veiculos_3h": 2,
-   "motivo": "fora: esporte (futebol)"
-  },
-  {
-   "manchete": "Putin promete modernizar Marinha enquanto Rússia inaugura submarino nuclear",
-   "veiculos": 11,
+   "manchete": "\"É como ser amigo de Hitler na 2ª Guerra\", diz Zelensky sobre Trump e Putin",
+   "veiculos": 23,
    "veiculos_3h": 2,
    "motivo": "fora: internacional sem Brasil nem América Latina"
   },
   {
-   "manchete": "Moraes autoriza Mauro Cid a se mudar para o Rio de Janeiro",
-   "veiculos": 11,
-   "veiculos_3h": 2,
+   "manchete": "Lula diz que 'não pode gastar dinheiro à toa', mas não vai cortar do pobre",
+   "veiculos": 22,
+   "veiculos_3h": 3,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Jogadora brasileira presa na Rússia: advogados dizem temer pela vida de Letícia Villar; 'Demora pode ser fatal'",
-   "veiculos": 11,
-   "veiculos_3h": 2,
-   "motivo": "fora: esporte (jogadora)"
+   "manchete": "Lula revela visita a FHC e lamenta doença de antigo adversário: 'Não vive'",
+   "veiculos": 13,
+   "veiculos_3h": 4,
+   "motivo": "sem editoria"
   }
  ]
 }
