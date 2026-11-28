@@ -7,6 +7,11 @@ origem (og:image, srcset, img...) e a página de onde veio. Nas candidatas com 1
 (candidatas/NN-feed.jpg e NN-story.jpg), respeitando "foto_posicao" do pedido. Também salva miniaturas
 fila/<id>/candidatas/NN.jpg (600 px) para conferir o conteúdo da foto. Com "grande": N no
 pedido, guarda também as N maiores em até 1600 px (NN-grande.jpg), para protótipos de design.
+
+Versão maior (pedido do João, 24/11/2026): quando a imagem achada é pequena para o quadrado ou o story, o sondar
+tenta sozinho o endereço da mesma foto sem o redimensionamento (WordPress "-1068x712", Drupal "styles/<estilo>/public",
+Thumbor "/fit-in/800x600/", parâmetros "w=", "width=", "resize=") e fica com a maior que abrir. A avaliação mede também
+a ampliação no feed quadrado (1080x1080), com prévia NN-quadrado.jpg.
 """
 from __future__ import annotations
 
@@ -26,7 +31,9 @@ UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/141.0 Safari/537.36")
 MAX_POR_PAGINA = 20
 # área aproximada da foto na arte (estimativa: o render ajusta pelo tamanho do texto)
-AREAS = {"feed": (1080, 880), "story": (1080, 960)}
+AREAS = {"feed": (1080, 880), "story": (1080, 960), "quadrado": (1080, 1080)}
+PEQUENA = (1600, 1080)    # abaixo disso (largura ou altura) tenta a versão maior da mesma foto
+MAX_VARIANTES = 4
 LIMITE_NITIDEZ = 120      # mesmo corte do bot/conferir_design.py
 LIMITE_AMPLIACAO = 1.15   # acima disso o conferir_design dá grave
 
@@ -73,6 +80,36 @@ def avaliar(im: Image.Image, pasta: Path, i: int, pos: tuple[float, float]) -> d
         prev.save(pasta / arq, quality=80)
         av["previas"][nome] = arq
     return av
+
+
+def variantes_maiores(url: str) -> list[str]:
+    """Endereços prováveis da mesma foto sem redimensionamento, do mais provável ao menos."""
+    from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
+    saida: list[str] = []
+
+    def add(u: str) -> None:
+        if u and u != url and u not in saida:
+            saida.append(u)
+
+    partes = urlsplit(url)
+    caminho = partes.path
+    # WordPress e afins: foto-1068x712.jpg -> foto.jpg ; foto-scaled.jpg fica (já é a grande)
+    add(urlunsplit(partes._replace(path=re.sub(r"-\d{2,4}x\d{2,4}(?=\.(?:jpe?g|png|webp)$)", "", caminho, flags=re.I))))
+    # Drupal (Agência Brasil, gov.br): /styles/<estilo>/public/ -> /
+    add(urlunsplit(partes._replace(path=re.sub(r"/styles/[^/]+/public/", "/", caminho), query="")))
+    # Thumbor/CDNs: /fit-in/800x600/ , /800x0/ , /filters:.../
+    sem = re.sub(r"/(?:fit-in/)?\d{2,4}x\d{1,4}/", "/", caminho)
+    sem = re.sub(r"/filters:[^/]+/", "/", sem)
+    add(urlunsplit(partes._replace(path=sem)))
+    # Parâmetros de tamanho na query: troca por 2000 ou tira
+    q = parse_qsl(partes.query, keep_blank_values=True)
+    tam = {"w", "width", "h", "height", "resize", "fit", "size", "quality", "crop", "ims", "imwidth"}
+    if any(k.lower() in tam for k, _ in q):
+        grande = [(k, "2000" if k.lower() in ("w", "width", "imwidth") else v) for k, v in q
+                  if k.lower() not in ("h", "height", "resize", "fit", "crop", "size", "ims")]
+        add(urlunsplit(partes._replace(query=urlencode(grande))))
+        add(urlunsplit(partes._replace(query=urlencode([(k, v) for k, v in q if k.lower() not in tam]))))
+    return saida[:MAX_VARIANTES]
 
 
 class Coletor(HTMLParser):
@@ -153,6 +190,17 @@ def sondar(pasta: Path) -> None:
             vistos.add(cand)
             m = medir(cand, url)
             n += 1
+            if m and (m["largura"] < PEQUENA[0] or m["altura"] < PEQUENA[1]):
+                for alt in variantes_maiores(cand):
+                    if alt in vistos:
+                        continue
+                    vistos.add(alt)
+                    g = medir(alt, url)
+                    if g and g["largura"] * g["altura"] > m["largura"] * m["altura"] * 1.2:
+                        g["versao_menor"] = cand
+                        m = g
+                        if m["largura"] >= PEQUENA[0] and m["altura"] >= PEQUENA[1]:
+                            break
             if m and m["largura"] >= 400:
                 m.update(origem=origem, pagina=url)
                 resultados.append(m)
