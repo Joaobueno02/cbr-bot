@@ -1,6 +1,6 @@
 {
- "quando": "2026-11-28T12:11:11Z",
- "pauta_quando": "2026-11-28T12:11:11Z",
+ "quando": "2026-11-28T14:09:41Z",
+ "pauta_quando": "2026-11-28T14:09:40Z",
  "ok": true,
  "erro": null,
  "metodo": "regras + gemini",
@@ -9,114 +9,629 @@
   "ok": true,
   "erro": null,
   "modelo": "gemini-3.5-flash-lite",
-  "avaliados_agora": 2,
+  "avaliados_agora": 21,
   "falhas_antes": null,
-  "pedidos_hoje": 7
+  "pedidos_hoje": 8
  },
  "regra": "1) Regras (sem IA) tiram o que está fora dos eixos e o repetido; 2) o Gemini dá a nota I/V/P em `ia` (sugestão, avalia só a manchete); 3) a nota final é do Claude. `rebaixados` = o Gemini achou fraco/fora/repetido; `descartados_mais_quentes` = a regra tirou. Os dois erram: confira. `esquentou` = ganhou muitos veículos desde que entrou. Obrigatórios = BFC/Luz/movimentos de hoje. Pré-apuração dos 3 primeiros em radar/pre_apuracao.json.",
- "total_assuntos": 70,
- "novos_3h": 0,
- "esquentaram": 0,
- "candidatos": [],
- "rebaixados": [
+ "total_assuntos": 136,
+ "novos_3h": 11,
+ "esquentaram": 1,
+ "candidatos": [
   {
-   "manchete": "Racismo algorítmico é falha estrutural, não técnica, afirmam pesquisadoras",
-   "veiculos": 2,
-   "veiculos_3h": 0,
-   "na_pauta_desde": "2026-11-28T10:08:31Z",
+   "manchete": "Ministério da Saúde revoga portaria que reduzia repasses para o pagamento do piso da Enfermagem",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-28T14:09:40Z",
+   "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQdzJ5SFRnRHhMZ2FpTlZJVWxIYVlDaDNsYmhSNEJLQkdiaXlQd25GSmJHNzdhWGhPRDRTeEdtMTRjS0FQQ3NXVFJ6cTU4Nmd5RjNrY2l0cElVQjZ3a2pDNmg1VVh1TS1PUHNMRHdPbjJsZDhTcW5aOWFmM2ZiQUdMR1JxMEg1b09Ic1lkZVdkRUFvSnpab2JkY0cwUkJxQWZIVTJqYXNsMFJPOXRwQndmQzB6RlFiSkE2UUZrdWpB?oc=5",
+   "editoria": "saude",
+   "nota": 4,
    "esquentou": false,
+   "lente": [
+    "piso"
+   ],
+   "ia": {
+    "editoria": "saude",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "reels",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Ministério da Saúde revoga portaria que reduzia repasses do piso da Enfermagem.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "IBGE: famílias mais pobres gastam mais da metade do orçamento com moradia e alimentação",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 20,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-27T13:12:02Z",
+   "link": "https://g1.globo.com/economia/noticia/2026/11/27/ibge-familias-mais-pobres-gastam-mais-da-metade-do-orcamento-com-moradia-e-alimentacao.ghtml",
+   "editoria": "politica",
+   "nota": 6,
+   "esquentou": false,
+   "lente": [
+    "moradia",
+    "orcamento"
+   ],
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 3,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "IBGE mostra que pobres gastam mais da metade com moradia e comida.",
+    "soma": 6
+   }
+  },
+  {
+   "manchete": "Cesta básica, combustível e infraestrutura: veja como ajuste fiscal pode afetar seu bolso",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-28T10:54:57Z",
+   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPTWFiZjdPa19jSjNGUDRDd2hIblQyMkNLNlJUM00za3ZfYmhGenZvck9xN0FzME94OFNrdi1Gakp1cmxRb1VvVFJDazhWZVNOdEtRZnNDaG51Q1RxbHhhVUVzeDZSM3hldzlDY1JFbHZDOWJJTG15SjkyTEQyemZqb01oUk1KYnN5R3I0Q1JNNU56REpQMTBieWlmRm9aTDhscnkwRzMyeUs3by1uYTYyUDhTaTVrOFc4WDdMR0s0eGNXa2hU0gHMAUFVX3lxTE5xbldaSmwxYklhNzBRODJnaklRb2dwa0M5V3VTMUxHX1VSWFlqTUhPUWVoTF80bGtmWEVya0dVanhkVjJSN2RfTUlpMTFxS1psWmk0U1licEd4aEx1eEktcS1pRlk0TENKWWprZUZYZy00akdCNFJrMlc3T0ZYRkJfSnQ2YVNNeWlfT3QtNnZvUDVMOXd5TlpzVW9xdVY3TEU2T2M3anAzelZlek1CUlc5NWNlakQxTkswSGY5ZEI4LTBrTTVUeGt5b3dzRw?oc=5",
+   "editoria": "roca",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "cesta basica"
+   ],
+   "ia": {
+    "editoria": "economia",
+    "I": 3,
+    "V": 2,
+    "P": 3,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Explica impacto do ajuste fiscal na vida e no bolso do trabalhador.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Dois trabalhadores morrem após laje de obra desabar na Praia do Patacho, em AL",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 7,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-27T15:09:29Z",
+   "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPbFRuTEFFVTlld1FUMm5lU0pJR3AwM25hTVBtbVFGTXM1SEFrbnB1aTZZMEZYM1NfT1B6c0p1SXhEdm1FekJ2SXp4ZWhweUdGV3RxV2VhN3pnT0dib1c2T3d3aWlWTFpwZG9pam5hdFNPRFdzVnd4a1J6Yi1XaDMyMFVpcFpFWkQ3RDlzWXJ3cVpYUHhTLWJWcmdobjB3cGQ0TVZRQ0hMYy14R2RSb1NLQURUekNEaml6NnppQ0ZUSm1ibnBKOWJXR0FIbEhUaG91QVVFRE5Yc9IB5gFBVV95cUxQMFJxTkZLV1h1WjdKUEMtTDVMYmlLejNZVWh1ZjlMQ09nMXVxclFfdTBoM0FON05lMlR6ZloyZ21CNUlQUTZwMS16TUZDUmV4U0dKUFZScDJ2Yldsakd4a1Zld2F2ZGI4QUtWbldEaERHMUowNXFINVpLY2lJRkpTSDNjQWlicmlOdVpJTUxSNHl1Q3RkQ2dsbGJuczBETGlrWndqVkctejVoNHNDelFJUU9KNTV5ZUMwUUh3Z2Z1aTB6SkdKcjRnV1JmY1lXRTR3dURHa1VXZ1pyNW5ZRUNWX2dPN0FCUQ?oc=5",
+   "editoria": "economia",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "trabalhador"
+   ],
    "ia": {
     "editoria": "gerais",
+    "I": 3,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "Tragédia com vítimas",
+    "motivo": "Morte de dois trabalhadores após desabamento de laje em obra.",
+    "soma": 5
+   }
+  },
+  {
+   "manchete": "Fachin libera R$ 316 milhões da liquidação do Master ao BRB",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 42,
+   "veiculos_3h": 9,
+   "na_pauta_desde": "2026-11-28T02:10:59Z",
+   "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://c-level.folha.uol.com.br/financas/2026/11/fachin-ordena-devolucao-de-r-316-mi-ao-brb-por-carteiras-de-credito-compradas-do-master.shtml",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": true,
+   "lente": [
+    "master"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Fachin libera milhões da liquidação do Banco Master ao BRB.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Senado de Argentina otorga media sanción a la reforma electoral impulsada por Javier Milei que suspende las elecciones primarias",
+   "secoes": [
+    "B",
+    "D-america_latina"
+   ],
+   "veiculos": 14,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-27T19:11:44Z",
+   "link": "https://ladiaria.com.uy/mundo/articulo/2026/11/la-camara-de-diputados-argentina-dio-media-sancion-al-presupuesto-2027-y-aumento-los-recursos-para-las-universidades/",
+   "editoria": "america_latina",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "milei"
+   ],
+   "ia": {
+    "editoria": "america_latina",
+    "I": 2,
+    "V": 2,
+    "P": 2,
+    "formato": "carrossel",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Senado argentino aprova meia-sancão de reforma eleitoral que suspende primárias.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Fachin prorroga inquérito sobre 'Dark Horse' por 60 dias",
+   "secoes": [
+    "B"
+   ],
+   "veiculos": 55,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-27T15:09:29Z",
+   "link": "https://g1.globo.com/politica/noticia/2026/11/27/fachin-prorroga-inquerito-sobre-dark-horse-por-60-dias.ghtml",
+   "editoria": "politica",
+   "nota": 5,
+   "esquentou": false,
+   "lente": [
+    "inquerito"
+   ],
+   "ia": {
+    "editoria": "politica",
+    "I": 2,
+    "V": 2,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Fachin prorroga inquérito da Operação Dark Horse por 60 dias.",
+    "soma": 4
+   }
+  },
+  {
+   "manchete": "Senado aprova formalização da Força Nacional do SUS para atuar em emergências; veja como funciona",
+   "secoes": [
+    "B",
+    "C-nacional"
+   ],
+   "veiculos": 3,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-28T14:09:40Z",
+   "link": "https://vermelho.org.br/2026/11/28/aprovado-no-senado-pl-que-cria-a-forca-nacional-do-sus-vai-a-sancao-de-lula/?utm_source=rss&utm_medium=rss&utm_campaign=aprovado-no-senado-pl-que-cria-a-forca-nacional-do-sus-vai-a-sancao-de-lula",
+   "editoria": "politica",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "sus"
+   ]
+  },
+  {
+   "manchete": "Como é interior do apartamento de Karoline Lima, com aluguel de R$ 140 mil",
+   "secoes": [
+    "C-nacional"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-28T14:09:40Z",
+   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPWVVyMUJiR3lFMVFuaTJlT1ZfOHhIdEphSFdENjE2c1J2MFdFSUtDLUxZMXZzc0lIRVlhTlNKRUtoOHpTeGFkY0g0dDF5VFEzNFNXdmZsa0E0MnBDRG9sdUF3X25TWC1Pek5OWl82YndkU2Q3dWpCTG8tMFIxeGxmRkVGdGJ6Z2UycmNVWi1BcXQ2NnlEQWh6a2RjWjlEbVRMNEhzcENRQXVhWnlyWWJiR3pZUQ?oc=5",
+   "editoria": "economia",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "aluguel"
+   ]
+  },
+  {
+   "manchete": "Governo do Brasil extingue mais de 630 incêndios florestais no Amazonas e Pará",
+   "secoes": [
+    "C-pesquisa"
+   ],
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-28T14:09:40Z",
+   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxORkxQUUgzVFFocTh3UnVtN2F2ZUU3X0FvckRsaHc4c2ZhNXNCbUZxM0lZRjAzRzItVTNydmkySk1mRHJudzRlMG1jWGtMRTkwalIzeEVTZmN3QW1kaDJsd1ZWTWFCS1R1NjBucjZGb1ZCWkg4OV92TmhnWDEtQW55ZDdtNktFeFhzZGE5M21IT1RlYUdreHMtX0k4X3kybFBhWW04NXVEYkF0cU53TVdjQTBOX3BiT2xDTkk2Q1IzdmVqZw?oc=5",
+   "editoria": "gerais",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "incendio"
+   ]
+  },
+  {
+   "manchete": "Liderança indígena cobra Lula por ações contra queimadas e critica escolha de banqueiro para Ministério da Fazenda",
+   "secoes": [
+    "C-pesquisa"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-28T14:09:40Z",
+   "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNWVA1dF9vY1VVSGplRUI2N3hCTmlrakdycUFyRENxNkh3V3pOdEhhamJXVGdpMEoyQ1VZUTBRcFpaYTVTZUpxZmFQNHd3SWwzUUdDQmZrcGVlV3BlbEI4akpOa2NWMGhLX081cm1KQndUdUJIeUo4Q1VjZWJXQTNzazVwNlZ3V0V5NjZieGZpdTl4NXlSODgyQTdMa2RxelFhUXg2ODN4R3ZFU0Z2aFJvYTMwUWFxX0RoNjRRQm5kdDRCWjY5M1RxMy1zWFVLRnRxV2VFc3h2SUZLRjd6a0o0ZnpRRFZVZHc?oc=5",
+   "editoria": "gerais",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "indigena",
+    "queimada"
+   ]
+  },
+  {
+   "manchete": "A luta pela retirada de uma estação de esgoto de terra indígena em Aracruz",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-28T14:09:40Z",
+   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPTXBKRW1fU3lMT1ZzWXFvc3dCRVh2UGtLdFlJbkhVaGxsXzcxaGZIV1BJQTU4V1BQS3hjUl9Qem5PNGNpU29qTTdzSHduVG5zWE1ZYm1ncG03M25CSTZUdUJXNTNpLVo0amJoczNNM0RxcDVlQVY3RXpxam9qT1FkaDdlQU0zbHhkOEdfaWFGNlRNWF9VRnlGLU9rVDdWc2JOS1NOdnJOVGtKWXNtRk0wYjl4aHdRXzZU?oc=5",
+   "editoria": "roca",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "indigena"
+   ]
+  },
+  {
+   "manchete": "Prefeita classifica demarcação de terra indígena como 'catástrofe' e cita êxodo de moradores",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-28T14:09:40Z",
+   "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNYWJHVjA5LVFvdFFxUV90YXZTVlllQXZJTW9weW5NUVdNMzFxNWs0NWVYeGRfT2ttd1g0OEdJdGltWU9nZllRYThUdVJqdTNPVG9ndk16WVVLLVpWemwzUng0STJiVEpnU0RJSlVNVjhDem9GM1dRdzBhdEJhN1pleWltM1R5RTh6Skt5NjZfWVZWQWtWSl9aaW1jaGt4MXl1Q3JFbmZDLW9KTUR6Q0N6TG9va0RpVW5vYnB4S2M0eEhHb1pZMk83c2hlU0haRlJlTGpZcG9IeDN1bndjWUJYcTROaFdMbmNpMi1v?oc=5",
+   "editoria": "roca",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "indigena"
+   ]
+  },
+  {
+   "manchete": "Vitória nas urnas é o «começo de uma nova etapa», afirma MST",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-28T14:09:40Z",
+   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPdWtDMlJtU0VxSjEtRFlUaWpPbjZOSURta0swdTJpODlpWmZudGNtc01kbnpHM0dNbC0yeXRNS3I3NzZma2RVVjZXU2hjWTk1aUFpblNHdGdGYXVOS1VJOUFJRUkwVVRON1R5dTV6XzdKTVVUSW9Rel9YZXBicUNqM0hxLUstTllTMEJIVFVpMUpQNWpmS2tXTC1zZmRwdw?oc=5",
+   "editoria": "roca",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "mst"
+   ]
+  },
+  {
+   "manchete": "Dormir mal com frequência pode dificultar o controle da fome?",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-28T14:09:40Z",
+   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOUmgzSlVoOHhUcmVxNV9nNzlWbU43dDIzYUlKOG9DNmdUVDAxb25xc3hMY09tYWlQMmxYLUpDU1pJcUZUY2ZkbHF6bXlqeC1qSUdGN3VtUGdVa0xDUVZnMzVSV0JxTEhjaEdfSWRwb19jcWFubjRkSTRNSUlQZ0VSNll2WXFHQ2lEQjlHdEtxckxKWFFCRFJmbkhqamlscWd5N3p2MA?oc=5",
+   "editoria": "roca",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "fome"
+   ]
+  },
+  {
+   "manchete": "El Niño ameaça próxima colheita e pode agravar a fome em Moçambique",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-28T10:08:31Z",
+   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOLVNOdmNKaEIyd2JEdWItd081dWxfM2ZNaTVZQS1RS3FPdElxaGZ2SFozcE5zNHQycFdrZ0JMbzZZb01kZmVyN2tHVDEzQWplZTA2QjlibVc5YVRUeVlrQjFwaDVnMThUZ2s5OFBzSlZZbFBiWTFyOEg4amNrWUNfY09lckJZMnhyM3lYbjlUTUR1M05tV3ZFUml5cGlVTHZ0WWc?oc=5",
+   "editoria": "roca",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "fome"
+   ]
+  },
+  {
+   "manchete": "Cesta básica interrompe sequência de altas, mas permanece acima de R$ 1 mil",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-28T14:09:40Z",
+   "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOYnVFMjctS1hxVGRaTHdVVjJPT0VmdkdpUmxLOURhSm9saFVld2Z4NEhmYjBuWWlYWEk5Y3MxNU00MUdVanAxcFZ2N01zck5CRWtPUWM1ZEFRc0tDb3BtbE1RajNya3RYY1YxS2w4UUdlSlYtdVlZRUJZNC1yc0oyYkItaDZDY0VoeXZMYjVkRnI5NDZxc200UUgzYVo4bFRDbGs4T1Y1bzhJTF9uVG9kX3k2UzdMN18yTFh0SUpfeE5jbk80QzJSSWswbGk?oc=5",
+   "editoria": "roca",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "cesta basica"
+   ]
+  },
+  {
+   "manchete": "Mãe Bernadete: a fé como resistência e defesa do território quilombola - Massa",
+   "secoes": [
+    "D-terra"
+   ],
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-28T14:09:40Z",
+   "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOVUpfakJ3MWV4QXQzS3ViQ21vaWlGN3NaWUpWWWVWQXBHbXpaa05EY1ZDbW1YcFpmUzZwZ0c3WTkzYzlmZUtkSXhwbXpwcGQ3am5yVHF1Sm5DR1BVa2xFSGRFVHVsQW1fUTlfV3VPUnNkZXBzVWkyWmNWb2ZGeXd5ZlRiSUwxNDRVTlJWelNJRnpCZ3VKSFoxRG4wUTFpQWUzdm5BOE9CM2xZS0FBV2ozWmlR0gG6AUFVX3lxTE1vcGRxZWFPU3pnN0ZnUkRvV2ZEMzhLY2JxR3I5cDRvNnZhRGU4ZlVZdnlObERjQ3llMTFjdGdyUy1EY1VRd3Z1Q1BVY0VSak1CMHpiT3BxUFQ5dzlua050dE5jQUlrQ1MxNjFNTFdmQ0d3V05YTGRteXg1eHB3bkxXRGpSSEcxZTNqalVnV0FDREZVdVRsMDBZMkpNd2pUUWR2T01VSnVUZTBoc1B5eDdsXzBJbUY0ZXh2QQ?oc=5",
+   "editoria": "roca",
+   "nota": 3,
+   "esquentou": false,
+   "lente": [
+    "quilombola"
+   ]
+  }
+ ],
+ "rebaixados": [
+  {
+   "manchete": "Caso Master: Fachin definirá rito sobre relatórios da PF após PGR enviar parecer, mas julgamento em plenário deve ficar para 2027",
+   "veiculos": 5,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-27T15:09:29Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "politica",
     "I": 2,
     "V": 1,
     "P": 2,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Discussão relevante sobre tecnologia e discriminação estrutural.",
+    "motivo": "Caso Master: Fachin definirá rito sobre relatórios da PF.",
     "soma": 3
    }
   },
   {
-   "manchete": "Ola de calor dispara demanda eléctrica en Panamá",
-   "veiculos": 1,
-   "veiculos_3h": 1,
-   "na_pauta_desde": "2026-11-28T12:11:11Z",
+   "manchete": "UN-backed court rejects Argentina’s bid to block Falkland Islands oilfield",
+   "veiculos": 36,
+   "veiculos_3h": 36,
+   "na_pauta_desde": "2026-11-28T14:09:40Z",
    "esquentou": false,
    "ia": {
-    "editoria": "fora",
-    "I": 0,
-    "V": 0,
-    "P": 0,
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 2,
+    "P": 1,
     "formato": "feed",
     "repetido": false,
     "risco": "",
-    "motivo": "Crise energética no Panamá sem efeito direto no Brasil.",
-    "soma": 0
+    "motivo": "Tribunal internacional rejeita pedido da Argentina sobre petróleo nas Malvinas.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Enem 2026: resultados dos pedidos de reaplicação estão disponíveis",
+   "veiculos": 44,
+   "veiculos_3h": 5,
+   "na_pauta_desde": "2026-11-27T17:09:52Z",
+   "esquentou": true,
+   "ia": {
+    "editoria": "educacao",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Informação útil para estudantes sobre resultados de reaplicação.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Incêndio em prédio no Bom Retiro deixa oito feridos na região central de São Paulo",
+   "veiculos": 5,
+   "veiculos_3h": 4,
+   "na_pauta_desde": "2026-11-28T14:09:40Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "gerais",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "Tragédia com vítimas",
+    "motivo": "Incêndio em prédio no Bom Retiro deixa feridos em SP.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "Ministério da Saúde promove Dia D de combate à dengue e lança campanha de prevenção às arboviroses",
+   "veiculos": 12,
+   "veiculos_3h": 2,
+   "na_pauta_desde": "2026-11-27T19:11:44Z",
+   "esquentou": true,
+   "ia": {
+    "editoria": "saude",
+    "I": 2,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Ação de saúde pública preventiva importante para o SUS.",
+    "soma": 3
+   }
+  },
+  {
+   "manchete": "El Tribunal del Mar define si acepta el reclamo argentino para frenar la explotación petrolera en las Malvinas",
+   "veiculos": 10,
+   "veiculos_3h": 9,
+   "na_pauta_desde": "2026-11-28T14:09:40Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "america_latina",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Tribunal do Mar avalia reclamação argentina sobre petróleo nas Malvinas.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Lula faz live com Janones e cinco estudantes neste sábado, às 11h",
+   "veiculos": 7,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-28T02:48:26Z",
+   "esquentou": true,
+   "ia": {
+    "editoria": "politica",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Lula faz live com Janones e estudantes.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Lei municipal garante projetos gratuitos de moradia regularizada para famílias de baixa renda em Sinop",
+   "veiculos": 3,
+   "veiculos_3h": 3,
+   "na_pauta_desde": "2026-11-28T14:09:40Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "politica",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Lei municipal garante projetos de moradia regularizada em Sinop.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Ministro da Assistência Social elogia políticas de combate à fome no Pará",
+   "veiculos": 2,
+   "veiculos_3h": 1,
+   "na_pauta_desde": "2026-11-28T14:09:40Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "roca",
+    "I": 1,
+    "V": 1,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Ministro elogia políticas de combate à fome no Pará.",
+    "soma": 2
+   }
+  },
+  {
+   "manchete": "Comitê da Baía da Ilha Grande promove ação de educação ambiental em escola quilombola de Paraty",
+   "veiculos": 1,
+   "veiculos_3h": 0,
+   "na_pauta_desde": "2026-11-28T10:54:57Z",
+   "esquentou": false,
+   "ia": {
+    "editoria": "gerais",
+    "I": 1,
+    "V": 0,
+    "P": 1,
+    "formato": "feed",
+    "repetido": false,
+    "risco": "",
+    "motivo": "Ação de educação ambiental em escola quilombola.",
+    "soma": 1
    }
   }
  ],
  "obrigatorios": [],
  "descartados_mais_quentes": [
   {
-   "manchete": "Sete mortos no Afeganistão em explosão acidental perto de uma escola",
-   "veiculos": 7,
+   "manchete": "Cotado para Casa Civil, Camilo vê escolha de Trabuco como \"acertada\"",
+   "veiculos": 84,
+   "veiculos_3h": 10,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "ANÁLISE: escolha de Trabuco para a Fazenda resolve uma das principais incógnitas na montagem do novo governo Lula",
+   "veiculos": 56,
+   "veiculos_3h": 10,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Michelle Bolsonaro relata melhora do ex-presidente Jair Bolsonaro",
+   "veiculos": 55,
+   "veiculos_3h": 6,
+   "motivo": "sem editoria"
+  },
+  {
+   "manchete": "Desemprego no Brasil fica em 5,1% e iguala a menor taxa da série histórica",
+   "veiculos": 52,
+   "veiculos_3h": 4,
+   "motivo": "fora: entretenimento (serie)"
+  },
+  {
+   "manchete": "Quién es Luiz Carlos Trabuco, el filósofo que estará al frente de la economía de Brasil en el cuarto mandato de Lula",
+   "veiculos": 45,
    "veiculos_3h": 5,
-   "motivo": "fora: crime ou tragedia (mortos)"
-  },
-  {
-   "manchete": "Fundação FHC lamenta fala de Lula que chamou ex-presidente de 'morto-vivo'",
-   "veiculos": 4,
-   "veiculos_3h": 2,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Linha 17-Ouro de SP é totalmente paralisada por falta de energia elétrica",
-   "veiculos": 3,
-   "veiculos_3h": 2,
+   "manchete": "Lula relata visita a FHC e comenta diagnóstico de demência do ex-presidente: \"Morto-vivo\"",
+   "veiculos": 26,
+   "veiculos_3h": 8,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Evangélicas fazem faxina solidária em casas de mulheres doentes",
-   "veiculos": 3,
-   "veiculos_3h": 2,
+   "manchete": "Prohíben ingreso a Costa Rica de Francesa Albanesa, relatora ONU para territorios palestinos",
+   "veiculos": 22,
+   "veiculos_3h": 3,
    "motivo": "sem editoria"
   },
   {
-   "manchete": "Posse de Lula deve ter controle de ônibus na chegada ao DF",
-   "veiculos": 3,
-   "veiculos_3h": 1,
-   "motivo": "sem editoria"
+   "manchete": "Palmeiras y Estudiantes, frente a frente por el título de la Copa Libertadores 2026",
+   "veiculos": 20,
+   "veiculos_3h": 6,
+   "motivo": "fora: esporte (palmeiras)"
   },
   {
-   "manchete": "Taiwan realiza eleições locais com disputa acirrada pela prefeitura da capital Taipé",
-   "veiculos": 3,
-   "veiculos_3h": 1,
-   "motivo": "sem editoria"
+   "manchete": "Jogadora brasileira presa na Rússia: advogados dizem temer pela vida de Letícia Villar; 'Demora pode ser fatal'",
+   "veiculos": 17,
+   "veiculos_3h": 4,
+   "motivo": "fora: esporte (jogadora)"
   },
   {
    "manchete": "Ataque israelense mata dois vigias ligado ao Médicos Sem Fronteiras em Gaza",
-   "veiculos": 3,
-   "veiculos_3h": 1,
+   "veiculos": 13,
+   "veiculos_3h": 6,
    "motivo": "fora: crime ou tragedia (mata)"
-  },
-  {
-   "manchete": "Lula deve receber homenagem da esquerda uruguaia em Montevidéu",
-   "veiculos": 2,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "Bradesco, sob Trabuco, levou banco privado à favela, lembra fundador do G10 Favelas",
-   "veiculos": 2,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
-  },
-  {
-   "manchete": "'Jurassic Park' faz decolar popularidade de dinos, diz pesquisa",
-   "veiculos": 2,
-   "veiculos_3h": 2,
-   "motivo": "sem editoria"
   }
  ]
 }
